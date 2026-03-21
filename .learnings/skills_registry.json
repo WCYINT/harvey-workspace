@@ -1,0 +1,262 @@
+{
+  "skills": {
+    "academic-deep-research": {
+      "category": "academic",
+      "status": "ready",
+      "first_seen": "2026-03-07T17:25:03.445147",
+      "uses": 0
+    },
+    "academic-deep-research-1": {
+      "category": "academic",
+      "status": "ready",
+      "first_seen": "2026-03-07T17:25:03.445150",
+      "uses": 0
+    },
+    "academic-research": {
+      "category": "academic",
+      "status": "ready",
+      "first_seen": "2026-03-07T17:25:03.445152",
+      "uses": 0
+    },
+    "academic-writing": {
+      "category": "academic",
+      "status": "ready",
+      "first_seen": "2026-03-07T17:25:03.445153",
+      "uses": 0
+    },
+    "agent-browser": {
+      "category": "dev",
+      "status": "ready",
+      "first_seen": "2026-03-07T17:25:03.445155",
+      "uses": 0
+    },
+    "arxiv-1": {
+      "category": "academic",
+      "status": "ready",
+      "first_seen": "2026-03-07T17:25:03.445156",
+      "uses": 0
+    },
+    "brainstorming": {
+      "category": "productivity",
+      "status": "ready",
+      "first_seen": "2026-03-07T17:25:03.445157",
+      "uses": 0
+    },
+    "business-writing": {
+      "category": "business",
+      "status": "ready",
+      "first_seen": "2026-03-07T17:25:03.445158",
+      "uses": 0
+    },
+    "data-analysis": {
+      "category": "business",
+      "status": "ready",
+      "first_seen": "2026-03-07T17:25:03.445160",
+      "uses": 0
+    },
+    "decision-trees": {
+      "category": "business",
+      "status": "ready",
+      "first_seen": "2026-03-07T17:25:03.445161",
+      "uses": 0
+    },
+    "deepwiki": {
+      "category": "search",
+      "status": "ready",
+      "first_seen": "2026-03-07T17:25:03.445162",
+      "uses": 0
+    },
+    "evolver": {
+      "category": "improvement",
+      "status": "ready",
+      "first_seen": "2026-03-07T17:25:03.445163",
+      "uses": 0
+    },
+    "exa-plus": {
+      "category": "search",
+      "status": "ready",
+      "first_seen": "2026-03-07T17:25:03.445165",
+      "uses": 0
+    },
+    "exa-web-search-free": {
+      "category": "search",
+      "status": "ready",
+      "first_seen": "2026-03-07T17:25:03.445166",
+      "uses": 0
+    },
+    "find-skills": {
+      "category": "productivity",
+      "status": "ready",
+      "first_seen": "2026-03-07T17:25:03.445167",
+      "uses": 0
+    },
+    "free-ride-1": {
+      "category": "productivity",
+      "status": "ready",
+      "first_seen": "2026-03-07T17:25:03.445168",
+      "uses": 0
+    },
+    "get-tldr": {
+      "category": "search",
+      "status": "ready",
+      "first_seen": "2026-03-07T17:25:03.445170",
+      "uses": 0
+    },
+    "github": {
+      "category": "dev",
+      "status": "ready",
+      "first_seen": "2026-03-07T17:25:03.445171",
+      "uses": 0
+    },
+    "himalaya": {
+      "category": "integration",
+      "status": "ready",
+      "first_seen": "2026-03-07T17:25:03.445172",
+      "uses": 0
+    },
+    "humanizer-zh": {
+      "category": "dev",
+      "status": "ready",
+      "first_seen": "2026-03-07T17:25:03.445173",
+      "uses": 0
+    },
+    "market-research": {
+      "category": "business",
+      "status": "ready",
+      "first_seen": "2026-03-07T17:25:03.445174",
+      "uses": 0
+    },
+    "mba": {
+      "category": "academic",
+      "status": "ready",
+      "first_seen": "2026-03-07T17:25:03.445175",
+      "uses": 0
+    },
+    "mba-thesis": {
+      "category": "academic",
+      "status": "ready",
+      "first_seen": "2026-03-07T17:25:03.445177",
+      "uses": 0
+    },
+    "md2pdf-weasyprint": {
+      "category": "dev",
+      "status": "ready",
+      "first_seen": "2026-03-07T17:25:03.445178",
+      "uses": 0
+    },
+    "miniflux-news": {
+      "category": "search",
+      "status": "ready",
+      "first_seen": "2026-03-07T17:25:03.445179",
+      "uses": 0
+    },
+    "openclaw-agent-optimize": {
+      "category": "improvement",
+      "status": "ready",
+      "first_seen": "2026-03-07T17:25:03.445180",
+      "uses": 0
+    },
+    "paper-parse": {
+      "category": "academic",
+      "status": "ready",
+      "first_seen": "2026-03-07T17:25:03.445181",
+      "uses": 0
+    },
+    "paper-recommendation-1": {
+      "category": "academic",
+      "status": "ready",
+      "first_seen": "2026-03-07T17:25:03.445182",
+      "uses": 0
+    },
+    "pdf-extract": {
+      "category": "dev",
+      "status": "ready",
+      "first_seen": "2026-03-07T17:25:03.445184",
+      "uses": 0
+    },
+    "pdf-to-structured": {
+      "category": "dev",
+      "status": "ready",
+      "first_seen": "2026-03-07T17:25:03.445185",
+      "uses": 0
+    },
+    "personal-assistant": {
+      "category": "productivity",
+      "status": "ready",
+      "first_seen": "2026-03-07T17:25:03.445186",
+      "uses": 0
+    },
+    "powerpoint-pptx": {
+      "category": "dev",
+      "status": "ready",
+      "first_seen": "2026-03-07T17:25:03.445187",
+      "uses": 0
+    },
+    "proactive-agent": {
+      "category": "agent",
+      "status": "ready",
+      "first_seen": "2026-03-07T17:25:03.445188",
+      "uses": 0
+    },
+    "proactive-agent-3.1.0": {
+      "category": "agent",
+      "status": "ready",
+      "first_seen": "2026-03-07T17:25:03.445190",
+      "uses": 0
+    },
+    "research-paper-writer": {
+      "category": "academic",
+      "status": "ready",
+      "first_seen": "2026-03-07T17:25:03.445191",
+      "uses": 0
+    },
+    "resume-builder": {
+      "category": "business",
+      "status": "ready",
+      "first_seen": "2026-03-07T17:25:03.445192",
+      "uses": 0
+    },
+    "rollback-manager": {
+      "category": "improvement",
+      "status": "ready",
+      "first_seen": "2026-03-07T17:25:03.445193",
+      "uses": 0
+    },
+    "self-improving-agent": {
+      "category": "improvement",
+      "status": "ready",
+      "first_seen": "2026-03-07T17:25:03.445194",
+      "uses": 0
+    },
+    "summarize": {
+      "category": "integration",
+      "status": "ready",
+      "first_seen": "2026-03-07T17:25:03.445195",
+      "uses": 0
+    },
+    "tavily-search": {
+      "category": "search",
+      "status": "ready",
+      "first_seen": "2026-03-07T17:25:03.445196",
+      "uses": 0
+    },
+    "technews": {
+      "category": "search",
+      "status": "ready",
+      "first_seen": "2026-03-07T17:25:03.445198",
+      "uses": 0
+    }
+  },
+  "categories": {
+    "academic": 10,
+    "dev": 7,
+    "productivity": 4,
+    "business": 5,
+    "search": 7,
+    "improvement": 4,
+    "integration": 2,
+    "agent": 2
+  },
+  "total_skills": 41,
+  "registered_at": "2026-03-07T17:25:03.445137"
+}

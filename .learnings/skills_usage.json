@@ -1,0 +1,740 @@
+{
+  "skills": {
+    "academic-research": {
+      "count": 2,
+      "first_used": "2026-03-07T17:13:45.225843",
+      "contexts": [
+        "User requested paper search",
+        "User requested paper search"
+      ],
+      "last_used": "2026-03-07T17:13:49.296020"
+    },
+    "brainstorming": {
+      "count": 2,
+      "first_used": "2026-03-07T17:13:45.226999",
+      "contexts": [
+        "Planning new feature",
+        "Planning new feature"
+      ],
+      "last_used": "2026-03-07T17:13:49.296320"
+    },
+    "self-improving-agent": {
+      "count": 2,
+      "first_used": "2026-03-07T17:13:45.227748",
+      "contexts": [
+        "Feedback from email",
+        "Feedback from email"
+      ],
+      "last_used": "2026-03-07T17:13:49.296511"
+    },
+    "awesome-ai-research-writing": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "AI-assisted academic research writing, translation, and polishing"
+    },
+    "deep-research-pro": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "Multi-source deep research agent with DuckDuckGo search"
+    },
+    "clawddocs": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "文档处理技能",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:01:56.891032"
+    },
+    "slack": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "Slack消息集成",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:01:56.891049"
+    },
+    "trello": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "Trello项目管理",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:01:56.891052"
+    },
+    "openclaw-github-assistant": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "GitHub助手",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:01:56.891055"
+    },
+    "moltguard": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "Molt数据保护",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:01:56.891058"
+    },
+    "arxiv-watcher": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "arXiv论文监控",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:01:56.891060"
+    },
+    "mba-thesis-advisor": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "MBA论文指导",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:01:56.891062"
+    },
+    "literature-review": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "文献综述",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:01:56.891065"
+    },
+    "academic-writing-refiner": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "学术写作精修",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:01:56.891067"
+    },
+    "arxivkb": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "arXiv知识库",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:01:56.891069"
+    },
+    "paper-digest": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "论文摘要生成",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:01:56.891072"
+    },
+    "zeelin-academic-paper": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "学术论文助手",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:01:56.891074"
+    },
+    "zeelin-liberal-arts-paper": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "文科论文助手",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:01:56.891076"
+    },
+    "latex-writer": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "LaTeX文档生成",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:01:56.891078"
+    },
+    "paper-assistant": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "论文写作助手",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:01:56.891080"
+    },
+    "paper-writing-workflow": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "论文写作工作流",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:01:56.891083"
+    },
+    "research-paper-writer-pro": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "专业论文写作",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:01:56.891085"
+    },
+    "model-usage": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "AI模型使用管理",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726024"
+    },
+    "code-review": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "代码审查",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726041"
+    },
+    "python": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "Python编程",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726045"
+    },
+    "clean-code": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "代码整洁规范",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726048"
+    },
+    "web-search-pro": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "专业网页搜索",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726051"
+    },
+    "pr-reviewer": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "PR审查",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726053"
+    },
+    "codex-quota": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "Codex配额管理",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726056"
+    },
+    "claude-code": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "Claude Code助手",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726062"
+    },
+    "claude-code-usage": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "Claude Code使用分析",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726065"
+    },
+    "claude-optimised": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "Claude优化配置",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726067"
+    },
+    "opencode-acp-control": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "OpenCode控制",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726070"
+    },
+    "git-notes-memory": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "Git笔记记忆",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726072"
+    },
+    "coder-workspaces": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "编码工作空间",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726074"
+    },
+    "agentlens": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "Agent透镜",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726077"
+    },
+    "read-github": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "GitHub阅读助手",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726079"
+    },
+    "agentic-coding": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "Agentic编程",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726083"
+    },
+    "codebuddy-code": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "Codebuddy代码",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726086"
+    },
+    "receiving-code-review": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "接收代码审查",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726088"
+    },
+    "codebuddy-cli": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "Codebuddy CLI",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726090"
+    },
+    "ios": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "iOS开发",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726093"
+    },
+    "pdf-generator": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "PDF生成器",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726096"
+    },
+    "codex-orchestration": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "Codex编排",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726099"
+    },
+    "writing-plans": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "写作计划",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726101"
+    },
+    "easy-opencode": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "简易OpenCode",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726103"
+    },
+    "arxiv-skill-extractor": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "ArXiv技能提取",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726106"
+    },
+    "create-cli": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "创建CLI工具",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726108"
+    },
+    "deploy-on-render": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "Render部署",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726110"
+    },
+    "ucm": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "UCM管理",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726112"
+    },
+    "three-minds": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "三思维考",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726115"
+    },
+    "tencent-meeting-skill": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "腾讯会议",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726117"
+    },
+    "code-share": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "代码分享",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726119"
+    },
+    "aiml-llm-reasoning": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "AI/ML推理",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726121"
+    },
+    "popup": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "弹窗管理",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726124"
+    },
+    "regex-patterns": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "正则表达式",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726126"
+    },
+    "agentmail-integration": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "Agent邮件集成",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726128"
+    },
+    "task-status": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "任务状态",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726131"
+    },
+    "postiz": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "Postiz工具",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726133"
+    },
+    "imap-smtp-email": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "邮件IMAP/SMTP",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726135"
+    },
+    "ontology": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "本体知识图谱",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726137"
+    },
+    "self-improving": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "自我改进",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726140"
+    },
+    "nano-banana-pro": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "Nano Banana Pro图像",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726142"
+    },
+    "openai-whisper": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "OpenAI Whisper语音",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726144"
+    },
+    "sag": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "SAG语音",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726147"
+    },
+    "markdown-convert": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "Markdown转换",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726149"
+    },
+    "proactive-agent-lite": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "主动Agent精简版",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726151"
+    },
+    "agent-autonomy-kit": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "Agent自主工具包",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726153"
+    },
+    "prompt-engineering-expert": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "提示词工程专家",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726156"
+    },
+    "self-reflection": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "自我反思",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726158"
+    },
+    "agent-orchestrator": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "Agent编排器",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726160"
+    },
+    "cellcog": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "CellCog工具",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726163"
+    },
+    "local-whisper": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "本地Whisper",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726165"
+    },
+    "image-ocr": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "图像OCR识别",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726167"
+    },
+    "reflect-learn": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "反思学习",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726169"
+    },
+    "agent-council": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "Agent委员会",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726172"
+    },
+    "openclaw-mcp-plugin": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "OpenClaw MCP插件",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726174"
+    },
+    "mcp-skill": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "MCP技能",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726176"
+    },
+    "hippocampus-memory": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "海马记忆",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726179"
+    },
+    "clawvault": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "ClawVault安全",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726181"
+    },
+    "qwen-image": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "通义千问图像",
+      "status": "installed",
+      "installed_date": "2026-03-19T22:59:09.726183"
+    }
+  },
+  "categories": {
+    "academic": 24,
+    "search": 2,
+    "productivity": 5,
+    "research": 0,
+    "coding": 20,
+    "ai": 10,
+    "memory": 3
+  },
+  "total_uses": 6,
+  "last_update": "2026-03-19T22:59:09.726188"
+}

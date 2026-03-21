@@ -1,0 +1,38 @@
+{
+  "generated_at": "2026-03-03T03:03:57.461785+00:00",
+  "location": "云端测试",
+  "date": "2026-03-03",
+  "weekday": "Tuesday",
+  "sections": [
+    {
+      "title": "🌅 Good Morning!",
+      "content": "Start your day with focus and intention.",
+      "type": "motivation"
+    },
+    {
+      "title": "🌡 Weather Check",
+      "content": "Check the weather in 云端测试 before heading out. Plan your day accordingly.",
+      "type": "weather"
+    },
+    {
+      "title": "🎯 Today's Focus",
+      "content": "Top 3 priorities:\n1. _______________________________________\n2. _______________________________________\n3. _______________________________________\n\nTip: Start with the hardest task first.",
+      "type": "priorities"
+    },
+    {
+      "title": "✅ Daily Habits",
+      "content": "Today's habits:\n□ Morning routine (exercise, meditation, journal)\n□ Hydration goals (8 glasses)\n□ Learning time (30 min reading/course)\n□ Evening review (what went well?)",
+      "type": "habits"
+    },
+    {
+      "title": "💚 Self-Care",
+      "content": "Remember:\n• Take breaks and rest your eyes\n• Step away from screens for 5 min/hour\n• Stay hydrated\n• End work at a reasonable time",
+      "type": "selfcare"
+    },
+    {
+      "title": "🌙 Evening Review",
+      "content": "Before bed:\n1. What did I accomplish today?\n2. What am I grateful for?\n3. What could I have done better?\n4. Tomorrow's top priority?",
+      "type": "reflection"
+    }
+  ]
+}

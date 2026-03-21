@@ -1,0 +1,64 @@
+{
+  "skill_workflows": [
+    {
+      "name": "Academic Research Pipeline",
+      "description": "Complete academic research workflow from paper discovery to writing",
+      "triggers": ["academic research", "literature review", "research paper"],
+      "steps": [
+        {"skill": "academic-research", "action": "search_papers", "description": "Search academic papers"},
+        {"skill": "paper-parse", "action": "deep_analysis", "description": "Parse and analyze papers"},
+        {"skill": "academic-writing", "action": "write", "description": "Write academic content"}
+      ]
+    },
+    {
+      "name": "Market Intelligence",
+      "description": "End-to-end market research and analysis",
+      "triggers": ["market research", "competitive analysis", "industry report"],
+      "steps": [
+        {"skill": "market-research", "action": "gather_data", "description": "Gather market data"},
+        {"skill": "data-analysis", "action": "analyze", "description": "Statistical analysis"},
+        {"skill": "business-writing", "action": "write_report", "description": "Write business report"}
+      ]
+    },
+    {
+      "name": "Tech News Digest",
+      "description": "Fetch and summarize tech news",
+      "triggers": ["tech news", "technology update", "news digest"],
+      "steps": [
+        {"skill": "miniflux-news", "action": "fetch", "description": "Fetch RSS news"},
+        {"skill": "get-tldr", "action": "summarize", "description": "Summarize articles"}
+      ]
+    },
+    {
+      "name": "Document Conversion",
+      "description": "Convert documents between formats",
+      "triggers": ["convert document", "pdf to", "markdown to pdf"],
+      "steps": [
+        {"skill": "pdf-extract", "action": "extract", "description": "Extract PDF text"},
+        {"skill": "md2pdf-weasyprint", "action": "convert", "description": "Convert to PDF"}
+      ]
+    },
+    {
+      "name": "Self-Improvement Loop",
+      "description": "Continuous improvement through feedback",
+      "triggers": ["improve", "learn from", "feedback"],
+      "steps": [
+        {"skill": "self-improving-agent", "action": "capture", "description": "Capture learning"},
+        {"skill": "humanizer-zh", "action": "refine", "description": "Refine output"}
+      ]
+    }
+  ],
+  "category_priorities": {
+    "academic": 1,
+    "business": 2,
+    "dev": 3,
+    "search": 4,
+    "productivity": 5,
+    "improvement": 0
+  },
+  "auto_load_skills": [
+    "brainstorming",
+    "find-skills",
+    "self-improving-agent"
+  ]
+}

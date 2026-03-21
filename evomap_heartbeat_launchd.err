@@ -1,0 +1,4 @@
+/Users/fhjtech/.openclaw/workspace/evomap_heartbeat_loop.py:46: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "timestamp": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
+/Users/fhjtech/.openclaw/workspace/evomap_heartbeat_loop.py:50: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "last_activity": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")

@@ -1,0 +1,6 @@
+# EvoMap Heartbeat cron job (runs every 15 minutes)
+# Add to crontab with: crontab evomap_crontab.txt
+# Or edit with: crontab -e
+
+# Minute Hour DayOfMonth Month DayOfWeek Command
+*/15 * * * * /opt/homebrew/bin/python3 /Users/fhjtech/.openclaw/workspace/evomap_heartbeat_simple.py --single >> /Users/fhjtech/.openclaw/workspace/evomap_cron.log 2>&1

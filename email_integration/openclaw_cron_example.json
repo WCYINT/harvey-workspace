@@ -1,0 +1,35 @@
+{
+  "cron": {
+    "email_feedback_processor": {
+      "schedule": "*/30 * * * *",
+      "description": "Process feedback emails every 30 minutes",
+      "command": "cd /Users/fhjtech/.openclaw/workspace/email_integration && python3 learning_integration.py --action process",
+      "enabled": true,
+      "notifyOnSuccess": false,
+      "notifyOnFailure": true
+    },
+    "daily_learning_report": {
+      "schedule": "0 9 * * *",
+      "description": "Send daily learning report at 9 AM",
+      "command": "cd /Users/fhjtech/.openclaw/workspace/email_integration && python3 learning_integration.py --action report",
+      "enabled": true,
+      "notifyOnSuccess": true,
+      "notifyOnFailure": true
+    },
+    "weekly_summary_report": {
+      "schedule": "0 9 * * 1",
+      "description": "Send weekly summary every Monday at 9 AM",
+      "command": "cd /Users/fhjtech/.openclaw/workspace/email_integration && python3 -c \"from learning_integration import LearningEmailIntegrator; i = LearningEmailIntegrator(); i.send_daily_report()\"",
+      "enabled": true,
+      "notifyOnSuccess": true,
+      "notifyOnFailure": true
+    }
+  },
+  "notes": [
+    "To enable these cron jobs in OpenClaw:",
+    "1. Copy this configuration to your OpenClaw cron settings",
+    "2. Ensure Python and required modules are available",
+    "3. Test each command manually first",
+    "4. Monitor logs in /tmp/havery_email.log"
+  ]
+}

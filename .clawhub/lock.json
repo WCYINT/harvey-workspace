@@ -1,0 +1,481 @@
+{
+  "version": 1,
+  "skills": {
+    "mba": {
+      "version": "1.0.0",
+      "installedAt": 1772990349695
+    },
+    "research-paper-writer": {
+      "version": "0.1.0",
+      "installedAt": 1771333225996
+    },
+    "openclaw-agent-optimize": {
+      "version": "1.0.9",
+      "installedAt": 1771335811797
+    },
+    "exa-web-search-free": {
+      "version": "1.0.1",
+      "installedAt": 1772209446741
+    },
+    "exa-plus": {
+      "version": "1.0.0",
+      "installedAt": 1772209564482
+    },
+    "deepwiki": {
+      "version": "1.0.0",
+      "installedAt": 1772209575849
+    },
+    "technews": {
+      "version": "1.0.0",
+      "installedAt": 1772209588707
+    },
+    "miniflux-news": {
+      "version": "0.1.0",
+      "installedAt": 1772209617193
+    },
+    "get-tldr": {
+      "version": "1.0.0",
+      "installedAt": 1772209648411
+    },
+    "decision-trees": {
+      "version": "1.0.1",
+      "installedAt": 1772209661109
+    },
+    "resume-builder": {
+      "version": "1.0.0",
+      "installedAt": 1772209686365
+    },
+    "pdf-extract": {
+      "version": "1.0.0",
+      "installedAt": 1772209722857
+    },
+    "pdf-to-structured": {
+      "version": "2.0.0",
+      "installedAt": 1772209787152
+    },
+    "academic-deep-research": {
+      "version": "1.0.0",
+      "installedAt": 1772993112984
+    },
+    "market-research": {
+      "version": "1.0.0",
+      "installedAt": 1772209843428
+    },
+    "academic-writing": {
+      "version": "1.0.0",
+      "installedAt": 1772993043952
+    },
+    "business-writing": {
+      "version": "0.1.0",
+      "installedAt": 1772209933364
+    },
+    "data-analysis": {
+      "version": "1.0.0",
+      "installedAt": 1772210006100
+    },
+    "swift-expert": {
+      "version": "0.1.0",
+      "installedAt": 1772941683622
+    },
+    "apple-developer-toolkit": {
+      "version": "1.260308.2",
+      "installedAt": 1772942116229
+    },
+    "browser-automation": {
+      "version": "1.0.1",
+      "installedAt": 1772988909618
+    },
+    "fast-browser-use": {
+      "version": "1.0.5",
+      "installedAt": 1772959220030
+    },
+    "browser-use": {
+      "version": "1.0.2",
+      "installedAt": 1772960771215
+    },
+    "selenium-browser-skill": {
+      "version": "0.1.1",
+      "installedAt": 1772964490933
+    },
+    "puppeteer": {
+      "version": "1.0.0",
+      "installedAt": 1772966288086
+    },
+    "playwright": {
+      "version": "1.0.2",
+      "installedAt": 1772971029383
+    },
+    "academic-mentor": {
+      "version": "1.0.0",
+      "installedAt": 1773003421467
+    },
+    "peer-reviewer": {
+      "version": "1.0.0",
+      "installedAt": 1773003378007
+    },
+    "literature-review": {
+      "version": "1.2.0",
+      "installedAt": 1773006903932
+    },
+    "academic-researcher": {
+      "version": "1.0.0",
+      "installedAt": 1773032172145
+    },
+    "xmind-skill": {
+      "version": "0.1.1",
+      "installedAt": 1773063268573
+    },
+    "amap-lbs-skill": {
+      "version": "1.0.0",
+      "installedAt": 1773572143026
+    },
+    "using-superpowers": {
+      "version": "0.1.0",
+      "installedAt": 1773572483816
+    },
+    "executing-plans": {
+      "version": "0.1.0",
+      "installedAt": 1773572832491
+    },
+    "copywriting": {
+      "version": "0.1.0",
+      "installedAt": 1773572850217
+    },
+    "writing-plans": {
+      "version": "0.1.0",
+      "installedAt": 1773572894094
+    },
+    "content-strategy": {
+      "version": "0.1.0",
+      "installedAt": 1773572912173
+    },
+    "next-best-practices": {
+      "version": "0.1.0",
+      "installedAt": 1773573303672
+    },
+    "claude-code": {
+      "version": "1.0.0",
+      "installedAt": 1773579250626
+    },
+    "cli-anything": {
+      "version": "0.1.0",
+      "installedAt": 1773807307400
+    },
+    "agency-agents": {
+      "version": "1.0.2",
+      "installedAt": 1773900195016
+    },
+    "scrapling-web-scraper": {
+      "version": "1.0.0",
+      "installedAt": 1773926121229
+    },
+    "awesome-ai-research-writing": {
+      "version": "1.0.0",
+      "installedAt": 1773927198496
+    },
+    "deep-research-pro": {
+      "version": "1.0.2",
+      "installedAt": 1773927213406
+    },
+    "auto-updater": {
+      "version": "1.0.0",
+      "installedAt": 1773928192994
+    },
+    "mcporter": {
+      "version": "1.0.0",
+      "installedAt": 1773928193981
+    },
+    "clawddocs": {
+      "version": "1.2.2",
+      "installedAt": 1773928848072
+    },
+    "slack": {
+      "version": "1.0.0",
+      "installedAt": 1773928849012
+    },
+    "trello": {
+      "version": "1.0.0",
+      "installedAt": 1773928850012
+    },
+    "openclaw-github-assistant": {
+      "version": "2.0.1",
+      "installedAt": 1773928851025
+    },
+    "moltguard": {
+      "version": "6.6.17",
+      "installedAt": 1773928852053
+    },
+    "arxiv-watcher": {
+      "version": "1.0.0",
+      "installedAt": 1773928853357
+    },
+    "mba-thesis-advisor": {
+      "version": "1.0.0",
+      "installedAt": 1773928854945
+    },
+    "academic-writing-refiner": {
+      "version": "1.0.0",
+      "installedAt": 1773928858478
+    },
+    "arxivkb": {
+      "version": "1.0.1",
+      "installedAt": 1773928859959
+    },
+    "paper-digest": {
+      "version": "0.0.2",
+      "installedAt": 1773928861185
+    },
+    "zeelin-academic-paper": {
+      "version": "1.0.1",
+      "installedAt": 1773928862584
+    },
+    "zeelin-liberal-arts-paper": {
+      "version": "1.0.1",
+      "installedAt": 1773928864180
+    },
+    "latex-writer": {
+      "version": "1.0.0",
+      "installedAt": 1773928865682
+    },
+    "paper-assistant": {
+      "version": "1.0.0",
+      "installedAt": 1773928866945
+    },
+    "paper-writing-workflow": {
+      "version": "1.0.0",
+      "installedAt": 1773928868264
+    },
+    "research-paper-writer-pro": {
+      "version": "1.0.0",
+      "installedAt": 1773928869454
+    },
+    "model-usage": {
+      "version": "1.0.0",
+      "installedAt": 1773932229295
+    },
+    "code-review": {
+      "version": "1.0.0",
+      "installedAt": 1773932230696
+    },
+    "python": {
+      "version": "",
+      "installedAt": 1773932233233
+    },
+    "clean-code": {
+      "version": "1.0.0",
+      "installedAt": 1773932234631
+    },
+    "web-search-pro": {
+      "version": "2.1.4",
+      "installedAt": 1773932235965
+    },
+    "pr-reviewer": {
+      "version": "1.0.1",
+      "installedAt": 1773932237316
+    },
+    "codex-quota": {
+      "version": "1.2.2",
+      "installedAt": 1773932238650
+    },
+    "claude-code-usage": {
+      "version": "1.2.0",
+      "installedAt": 1773932240760
+    },
+    "claude-optimised": {
+      "version": "1.0.1",
+      "installedAt": 1773932241983
+    },
+    "opencode-acp-control": {
+      "version": "1.0.2",
+      "installedAt": 1773932244743
+    },
+    "git-notes-memory": {
+      "version": "1.0.0",
+      "installedAt": 1773932246056
+    },
+    "coder-workspaces": {
+      "version": "1.5.5",
+      "installedAt": 1773932247305
+    },
+    "agentlens": {
+      "version": "1.0.0",
+      "installedAt": 1773932248529
+    },
+    "read-github": {
+      "version": "1.0.1",
+      "installedAt": 1773932249861
+    },
+    "agentic-coding": {
+      "version": "1.0.0",
+      "installedAt": 1773932251107
+    },
+    "codebuddy-code": {
+      "version": "1.0.1",
+      "installedAt": 1773932252312
+    },
+    "receiving-code-review": {
+      "version": "0.1.0",
+      "installedAt": 1773932254088
+    },
+    "codebuddy-cli": {
+      "version": "1.0.0",
+      "installedAt": 1773932255417
+    },
+    "ios": {
+      "version": "1.0.0",
+      "installedAt": 1773932256706
+    },
+    "pdf-generator": {
+      "version": "1.0.1",
+      "installedAt": 1773932258431
+    },
+    "codex-orchestration": {
+      "version": "2.0.0",
+      "installedAt": 1773932259654
+    },
+    "easy-opencode": {
+      "version": "1.1.1",
+      "installedAt": 1773932261744
+    },
+    "arxiv-skill-extractor": {
+      "version": "1.0.0",
+      "installedAt": 1773932263247
+    },
+    "create-cli": {
+      "version": "1.0.0",
+      "installedAt": 1773932264787
+    },
+    "deploy-on-render": {
+      "version": "3.0.0",
+      "installedAt": 1773932266624
+    },
+    "ucm": {
+      "version": "1.1.1",
+      "installedAt": 1773932268086
+    },
+    "three-minds": {
+      "version": "0.1.0",
+      "installedAt": 1773932269446
+    },
+    "tencent-meeting-skill": {
+      "version": "1.0.0",
+      "installedAt": 1773932270823
+    },
+    "code-share": {
+      "version": "0.2.0",
+      "installedAt": 1773932272033
+    },
+    "aiml-llm-reasoning": {
+      "version": "1.0.1",
+      "installedAt": 1773932273483
+    },
+    "popup": {
+      "version": "1.0.0",
+      "installedAt": 1773932275290
+    },
+    "regex-patterns": {
+      "version": "1.0.0",
+      "installedAt": 1773932276707
+    },
+    "agentmail-integration": {
+      "version": "1.1.0",
+      "installedAt": 1773932277938
+    },
+    "task-status": {
+      "version": "1.0.0",
+      "installedAt": 1773932280477
+    },
+    "postiz": {
+      "version": "1.0.12",
+      "installedAt": 1773932281924
+    },
+    "imap-smtp-email": {
+      "version": "0.0.10",
+      "installedAt": 1773932283274
+    },
+    "ontology": {
+      "version": "0.1.2",
+      "installedAt": 1773932284310
+    },
+    "self-improving": {
+      "version": "1.2.16",
+      "installedAt": 1773932285526
+    },
+    "nano-banana-pro": {
+      "version": "1.0.1",
+      "installedAt": 1773932286601
+    },
+    "openai-whisper": {
+      "version": "1.0.0",
+      "installedAt": 1773932287571
+    },
+    "sag": {
+      "version": "",
+      "installedAt": 1773932289817
+    },
+    "markdown-convert": {
+      "version": "1.0.0",
+      "installedAt": 1773932292162
+    },
+    "proactive-agent-lite": {
+      "version": "1.0.0",
+      "installedAt": 1773932293558
+    },
+    "agent-autonomy-kit": {
+      "version": "1.0.0",
+      "installedAt": 1773932294837
+    },
+    "prompt-engineering-expert": {
+      "version": "1.0.0",
+      "installedAt": 1773932296267
+    },
+    "self-reflection": {
+      "version": "1.1.1",
+      "installedAt": 1773932297440
+    },
+    "agent-orchestrator": {
+      "version": "0.1.0",
+      "installedAt": 1773932298664
+    },
+    "cellcog": {
+      "version": "1.0.21",
+      "installedAt": 1773932299950
+    },
+    "local-whisper": {
+      "version": "1.0.0",
+      "installedAt": 1773932301318
+    },
+    "image-ocr": {
+      "version": "1.0.0",
+      "installedAt": 1773932302451
+    },
+    "reflect-learn": {
+      "version": "2.1.0",
+      "installedAt": 1773932304342
+    },
+    "agent-council": {
+      "version": "1.0.0",
+      "installedAt": 1773932307109
+    },
+    "openclaw-mcp-plugin": {
+      "version": "0.1.1",
+      "installedAt": 1773932308301
+    },
+    "mcp-skill": {
+      "version": "1.0.0",
+      "installedAt": 1773932309493
+    },
+    "hippocampus-memory": {
+      "version": "3.8.6",
+      "installedAt": 1773932310802
+    },
+    "clawvault": {
+      "version": "2.5.13",
+      "installedAt": 1773932311973
+    },
+    "qwen-image": {
+      "version": "1.0.0",
+      "installedAt": 1773932313204
+    }
+  }
+}
