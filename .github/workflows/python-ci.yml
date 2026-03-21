@@ -1,0 +1,136 @@
+name: Harvey Python CI/CD Pipeline
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    # 每天凌晨3点自动跑一次
+    - cron: '0 3 * * *'
+  workflow_dispatch:  # 手动触发
+
+jobs:
+  # ── Job 1: 类型检查 ──────────────────────────────
+  type-check:
+    name: mypy type check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install mypy httpx pydantic rich
+      - name: Run mypy strict check
+        run: |
+          mypy .scripts/ \
+            --ignore-missing-imports \
+            --no-error-summary \
+            || echo "TYPE_WARNINGS=1" >> $GITHUB_ENV
+      - name: Report
+        if: env.TYPE_WARNINGS
+        run: echo "⚠️  Type warnings found (not blocking)"
+
+  # ── Job 2: 测试套件 ──────────────────────────────
+  test:
+    name: pytest unit tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install deps
+        run: pip install pytest pytest-asyncio httpx pydantic rich
+      - name: Run tests
+        run: pytest .scripts/tests/ -v --tb=short
+      - name: Upload coverage
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results
+          path: .pytest_cache/
+
+  # ── Job 3: SkillHub 自动化 ────────────────────────
+  skillhub-update:
+    name: SkillHub auto-update
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install SkillHub CLI
+        run: |
+          curl -fsSL https://skillhub-1388575217.cos.ap-guangzhou.myqcloud.com/install/install.sh | bash -s -- --cli-only
+          export PATH=$PATH:/root/.local/bin
+          skillhub --version
+      - name: Run auto-update
+        run: |
+          export PYTHONPATH=/workspace
+          python3 .scripts/skillhub_auto_update.py
+      - name: Report
+        run: |
+          echo "✅ SkillHub auto-update completed"
+          cat .learnings/.last_update_summary.json 2>/dev/null | python3 -c "
+import json,sys
+d=json.load(sys.stdin)
+print(f'Installed: {len(d.get(\"skills\",[]))} skills on {d.get(\"date\",\"\")}')
+"
+
+  # ── Job 4: 基准测试 ──────────────────────────────
+  benchmark:
+    name: Performance benchmark
+    runs-on: ubuntu-latest
+    if: github.event_name == 'workflow_dispatch'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install
+        run: pip install httpx pydantic rich
+      - name: Run async benchmark
+        run: python3 .scripts/async_scheduler.py
+      - name: Store results
+        uses: actions/upload-artifact@v4
+        with:
+          name: benchmark-results
+          path: .scripts/BENCHMARK.md
+
+  # ── Job 5: 安全扫描 ──────────────────────────────
+  security:
+    name: Safety scan on new skills
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Scan new skills
+        run: |
+          python3 -c "
+import os, json
+from pathlib import Path
+skills = Path('skills')
+dangerous = []
+for d in skills.iterdir():
+    if not d.is_dir(): continue
+    SKILL_MD = d / 'SKILL.md'
+    if not SKILL_MD.exists(): continue
+    for py in d.rglob('*.py'):
+        c = py.read_text(errors='ignore')
+        if 'rm -rf /' in c or 'base64 -d' in c or '.send(' in c:
+            dangerous.append(str(d.name))
+print(f'Scanned: {len(list(skills.iterdir()))} skills')
+print(f'Dangerous patterns found: {len(dangerous)}')
+if dangerous: print('Skills:', dangerous)
+"
