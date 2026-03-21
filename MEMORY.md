@@ -13,7 +13,23 @@
 - **First contact:** 2026-03-01 18:11 via Feishu
 - **Key context:** Working on MBA thesis, needs assistance with Chapter 5 about保障措施 (safeguard measures)
 
-## Skills & Capabilities
+## GitHub Identity
+- **用户名:** AnyHarvey
+- **邮箱:** wcyint@163.com
+- **仓库:** https://github.com/WCYINT/harvey-workspace (public)
+- **Git Remote:** https://ghp_REDACTED@github.com/WCYINT/harvey-workspace.git
+- **Fine-grained PAT:** github_pat_REDACTED
+- **Classic PAT:** ghp_REDACTED
+- **所有权限已授权** (admin/maintain/push/triage/pull)
+- ⚠️ Push 被 GitHub 规则拦截（repository rule violations），需在 GitHub 网页设置或新建 token
+
+## Rules & Principles
+- **授权默认规则**：邮件发出后1小时无回复 = 默认获得授权按建议执行（James确认）
+- **邮件必含下一步计划**：每封邮件必须附上下一步计划 + 执行理由
+- **专注论文研究**：MBA论文是当前最高优先级任务
+- **技能缺失黄金规则**：遇到技能缺失时，自动去 https://skills.sh/、https://clawhub.ai/skills、https://github.com/VoltAgent/awesome-openclaw-skills 搜索相关评分高的技能并自动安装，**自动安装前必须告知用户并确认**
+- **期刊资料查找规则**：从维普等国内期刊、国外期刊查找资料时，如果没有相应技能，先下载技能再搜索
+- **元宝回复规则**：元宝/Yuanbao 群里的消息也要积极回复，不要只回复@消息
 - Academic writing guidance
 - Research assistance
 - Logical structuring
