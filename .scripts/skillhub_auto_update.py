@@ -112,7 +112,7 @@ def install_skills(missing_skills):
     installed_list = []
     failed_list = []
     # 限制一次最多处理数量，避免超时
-    MAX_INSTALL = 10
+    MAX_INSTALL = 30
     slugs_to_install = list(missing_skills.keys())[:MAX_INSTALL]
     for slug in slugs_to_install:
         info = missing_skills[slug]
