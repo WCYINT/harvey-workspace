@@ -92,9 +92,15 @@ async def root():
 
 @app.get("/health", response_model=HealthResponse)
 async def health_check():
-    """健康检查"""
+    """健康检查（从 SQLAlchemy DB 读取真实数据）"""
     try:
-        total = len(list(SKILLS_DIR.iterdir())) if SKILLS_DIR.exists() else 0
+        from skill_db import get_session, SkillRepo
+        session = get_session()
+        try:
+            repo = SkillRepo(session)
+            total = repo.get_stats()["total_skills"]
+        finally:
+            session.close()
     except:
         total = 0
     return HealthResponse(
@@ -112,26 +118,24 @@ async def list_skills(
     category: Optional[str] = Query(None, description="按类别过滤"),
     limit: int = Query(50, ge=1, le=500),
 ):
-    """列出所有已安装技能"""
+    """列出所有已安装技能（从 SQLAlchemy 读取）"""
+    from skill_db import get_session, SkillRepo
+    session = get_session()
     try:
-        with open(SKILLS_DB) as f:
-            import json
-            data = json.load(f)
-    except:
-        return []
-
-    skills = []
-    for slug, info in data.get("skills", {}).items():
-        if category and info.get("category") != category:
-            continue
-        skills.append(SkillInfo(
-            slug=slug,
-            category=info.get("category", "unknown"),
-            description=info.get("description", ""),
-            status=info.get("status", "active"),
-            installed_date=info.get("installed_date"),
-        ))
-    return skills[:limit]
+        repo = SkillRepo(session)
+        skills_orm = repo.get_all(category=category, limit=limit)
+        return [
+            SkillInfo(
+                slug=s.slug,
+                category=s.category,
+                description=s.description,
+                status=s.status,
+                installed_date=s.installed_date,
+            )
+            for s in skills_orm
+        ]
+    finally:
+        session.close()
 
 
 @app.post("/tasks/submit", response_model=TaskStatus)
