@@ -49,12 +49,11 @@ def get_im_messages(token, chat_id, page_size=MAX_MESSAGES_PER_CHECK):
 
 def send_text_message(token, receive_id, receive_id_type, content):
     """发送文本消息"""
-    url = "https://open.feishu.cn/open-apis/im/v1/messages"
+    url = f"https://open.feishu.cn/open-apis/im/v1/messages?receive_id_type={receive_id_type}"
     payload = {
         "receive_id": receive_id,
         "msg_type": "text",
-        "content": json.dumps({"text": content}),
-        "receive_id_type": receive_id_type
+        "content": json.dumps({"text": content})
     }
     data = json.dumps(payload).encode()
     headers = {

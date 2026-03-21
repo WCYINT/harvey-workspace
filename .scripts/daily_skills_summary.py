@@ -1,77 +1,122 @@
 #!/usr/bin/env python3
 """
 每日技能更新总结脚本
-每天6:00和18:00执行，向James汇报
+每天6:00和18:00执行，通过Feishu API直接发送给James
 """
 
 import subprocess
 import json
-from datetime import datetime, timedelta
+import os
+import sys
+import urllib.request
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-SKILLS_DIR = Path("/Users/fhjtech/.openclaw/workspace/skills")
-SKILLS_DB = Path("/Users/fhjtech/.openclaw/workspace/.learnings/skills_usage.json")
+SKILLS_DIR  = Path("/Users/fhjtech/.openclaw/workspace/skills")
+SKILLS_DB   = Path("/Users/fhjtech/.openclaw/workspace/.learnings/skills_usage.json")
 SUMMARY_FILE = Path("/Users/fhjtech/.openclaw/workspace/.learnings/daily_skills_summary.md")
 
+# ── Feishu 推送配置 ──────────────────────────────
+APP_ID     = "cli_a90c7258f9b85bef"
+APP_SECRET = "Kv6kG5ggU2TP9Ocw5CHSucu1B1t26J7t"
+USER_OPEN_ID = "ou_7bc224841d2a1064cf5a7fbf67824227"
+
+# ── Feishu API ──────────────────────────────────
+def get_tenant_access_token():
+    url = "https://open.feishu.cn/open-apis/auth/v3/tenant_access_token/internal"
+    payload = json.dumps({"app_id": APP_ID, "app_secret": APP_SECRET}).encode()
+    req = urllib.request.Request(url, data=payload,
+                                 headers={"Content-Type": "application/json"}, method="POST")
+    with urllib.request.urlopen(req, timeout=10) as resp:
+        data = json.load(resp)
+    if data.get("code") != 0:
+        raise Exception(f"Token failed: {data}")
+    return data["tenant_access_token"]
+
+def send_text_message(token, receive_id, receive_id_type, content):
+    url = f"https://open.feishu.cn/open-apis/im/v1/messages?receive_id_type={receive_id_type}"
+    payload = {
+        "receive_id": receive_id,
+        "msg_type": "text",
+        "content": json.dumps({"text": content})
+    }
+    data = json.dumps(payload).encode()
+    headers = {"Authorization": f"Bearer {token}", "Content-Type": "application/json"}
+    req = urllib.request.Request(url, data=data, headers=headers, method="POST")
+    with urllib.request.urlopen(req, timeout=10) as resp:
+        return json.load(resp)
+
+# ── 技能统计 ────────────────────────────────────
 def get_recently_installed():
-    """获取最近安装的技能"""
     try:
         with open(SKILLS_DB, 'r') as f:
             data = json.load(f)
     except:
         return []
-    
+
     today = datetime.now().date()
     recent = []
-    
     for name, info in data.get("skills", {}).items():
         if info.get("status") == "auto-installed":
             installed_date = info.get("installed_date", "")
             if str(today) in installed_date or str(today - timedelta(days=1)) in installed_date:
                 recent.append((name, info.get("description", "")))
-    
     return recent
 
+def count_skills():
+    try:
+        return len(list(SKILLS_DIR.iterdir()))
+    except:
+        return 0
+
 def generate_summary():
-    """生成总结"""
     recent = get_recently_installed()
-    total = len(list(SKILLS_DIR.iterdir()))
-    
-    summary = f"""## 每日技能更新总结
+    total  = count_skills()
+    now    = datetime.now(timezone(timedelta(hours=8)))
 
-**时间**: {datetime.now().strftime("%Y-%m-%d %H:%M")}
-**当前技能总数**: {total}
+    lines = [
+        f"📊 **每日技能更新总结**",
+        f"🕗 时间：{now.strftime('%Y-%m-%d %H:%M')}",
+        f"📦 当前技能总数：{total}",
+        ""
+    ]
 
-"""
-    
     if recent:
-        summary += "### 🆕 今日新安装技能\n\n"
+        lines.append("🆕 **今日新安装技能**：")
         for name, desc in recent:
-            summary += f"- **{name}**: {desc}\n"
-        summary += "\n### 💡 使用建议\n\n"
+            lines.append(f"  • {name}：{desc}")
+        lines.append("")
+        lines.append("💡 **使用建议**：")
         for name, desc in recent[:5]:
-            summary += f"- {name}: 适用于{desc}\n"
+            lines.append(f"  • {name} → {desc}")
     else:
-        summary += "### ℹ️ 今日无新技能安装\n\n"
-        summary += "技能库已保持最新状态。\n"
-    
-    return summary
+        lines.append("ℹ️ 今日无新技能安装，技能库已保持最新状态。")
 
-def save_summary():
-    """保存总结"""
-    summary = generate_summary()
+    return "\n".join(lines)
+
+def save_summary_md(text):
     with open(SUMMARY_FILE, 'w') as f:
-        f.write(summary)
-    return summary
-
-def send_notification(summary):
-    """发送飞书通知（通过OpenClaw message）"""
-    # 这里通过print输出，由OpenClaw捕获并发送
-    print(f"📊 每日技能总结\n{summary}")
+        f.write(text)
 
 def main():
-    summary = save_summary()
-    send_notification(summary)
+    summary = generate_summary()
+    save_summary_md(summary)
+
+    try:
+        token = get_tenant_access_token()
+        result = send_text_message(token, USER_OPEN_ID, "open_id", summary)
+        if result.get("code") == 0:
+            print(f"[{datetime.now()}] [OK] Feishu message sent successfully")
+            print(summary)
+        else:
+            print(f"[{datetime.now()}] [ERROR] Feishu API error: {result}")
+            print("[FALLBACK] Summary content:")
+            print(summary)
+    except Exception as e:
+        print(f"[{datetime.now()}] [ERROR] Failed to send Feishu message: {e}")
+        print("[FALLBACK] Summary content:")
+        print(summary)
+
     print("=== Daily Summary Completed ===")
 
 if __name__ == "__main__":
