@@ -23,7 +23,7 @@ BOT_OPEN_ID  = "ou_d34cd8fa5140ad55ff08887fefe76401"  # Harvey bot
 BOT_APP_ID   = "cli_a90c7258f9b85bef"                  # Harvey bot app_id
 
 STATE_FILE  = os.path.join(os.path.dirname(__file__), ".feishu_reminder_state.json")
-REMINDER_THRESHOLD_SEC = 30   # 机器人发消息后等待用户回复的秒数
+REMINDER_THRESHOLD_SEC = 120   # 机器人发消息后等待用户回复的秒数（从30秒调至120秒，减少误提醒）
 MAX_MESSAGES_PER_CHECK = 5   # 每次最多检查几条消息
 
 # ── Feishu API 工具 ───────────────────────────────────
