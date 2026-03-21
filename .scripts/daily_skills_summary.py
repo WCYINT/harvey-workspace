@@ -135,6 +135,13 @@ def generate_report(new_skills, total):
             {skills_html}
         </table>
         <hr>
+        <h3>📋 下一步计划</h3>
+        <ul>
+            <li>继续从四大来源发现新技能，重点关注学术研究、数据分析类别</li>
+            <li>测试 cnki-exp-search-automation 与 academic-writing 技能组合</li>
+        </ul>
+        <p><em>理由：配合 MBA 论文研究，知网检索 + 学术写作技能组合优先级最高</em></p>
+        <hr>
         <p style="color:#888;font-size:12px">
             由 Harvey 自动生成 | SkillHub 六大步骤自动更新系统<br>
             如需查看详情请访问 OpenClaw 工作目录
@@ -146,6 +153,13 @@ def generate_report(new_skills, total):
         <p><b>今日新安装：</b>0 个技能</p>
         <p><b>技能库总数：</b>{total} 个</p>
         <p>ℹ️ 今日无新技能安装，技能库已保持最新状态。</p>
+        <hr>
+        <h3>📋 下一步计划</h3>
+        <ul>
+            <li>继续从四大来源发现新技能</li>
+            <li>测试 cnki-exp-search-automation 与 academic-writing 技能组合</li>
+        </ul>
+        <p><em>理由：知网检索是论文研究的关键工具，需尽快验证功能可用性</em></p>
         <hr>
         <p style="color:#888;font-size:12px">
             由 Harvey 自动生成 | SkillHub 六大步骤自动更新系统

@@ -133,13 +133,13 @@ class AsyncScheduler:
                 progress.advance(overall)
                 return result
 
-            results: list[TaskResult] = await asyncio.gather(
+            raw_results: list[TaskResult | BaseException] = await asyncio.gather(
                 *[_run_with_progress(cfg) for cfg in tasks],
                 return_exceptions=True,
             )
 
         # 整理结果
-        for i, result in enumerate(results):
+        for i, result in enumerate(raw_results):
             if isinstance(result, Exception):
                 result = TaskResult(
                     task_id=tasks[i].task_id,
