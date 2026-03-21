@@ -12,9 +12,11 @@ import urllib.request
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-SKILLS_DIR  = Path("/Users/fhjtech/.openclaw/workspace/skills")
-SKILLS_DB   = Path("/Users/fhjtech/.openclaw/workspace/.learnings/skills_usage.json")
+SKILLS_DIR   = Path("/Users/fhjtech/.openclaw/workspace/skills")
+SKILLS_DB    = Path("/Users/fhjtech/.openclaw/workspace/.learnings/skills_usage.json")
 SUMMARY_FILE = Path("/Users/fhjtech/.openclaw/workspace/.learnings/daily_skills_summary.md")
+LOG_MARKER   = Path("/Users/fhjtech/.openclaw/workspace/.learnings/.last_update_summary.json")
+TZ_CST       = timezone(timedelta(hours=8))
 
 # ── Feishu 推送配置 ──────────────────────────────
 APP_ID     = "cli_a90c7258f9b85bef"
@@ -48,13 +50,25 @@ def send_text_message(token, receive_id, receive_id_type, content):
 
 # ── 技能统计 ────────────────────────────────────
 def get_recently_installed():
+    """优先从上次自动更新的摘要文件读取，其次从数据库读取"""
+    # 优先读自动更新写入的摘要
+    try:
+        with open(LOG_MARKER, 'r') as f:
+            summary = json.load(f)
+        today_str = datetime.now(TZ_CST).strftime("%Y-%m-%d")
+        if summary.get("date") == today_str:
+            return [(s["slug"], s["description"]) for s in summary.get("skills", [])]
+    except:
+        pass
+
+    # 回退：从数据库读取
     try:
         with open(SKILLS_DB, 'r') as f:
             data = json.load(f)
     except:
         return []
 
-    today = datetime.now().date()
+    today = datetime.now(TZ_CST).date()
     recent = []
     for name, info in data.get("skills", {}).items():
         if info.get("status") == "auto-installed":
