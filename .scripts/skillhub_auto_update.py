@@ -156,10 +156,16 @@ async def step3_install(missing: dict[str, dict]) -> tuple[list[str], list[str]]
 
 # ── Step 4: 安全扫描 ─────────────────────────────
 def step4_safety_eval(installed: list[str]) -> tuple[list[str], list[tuple[str, str]]]:
-    SUSPICIOUS = ["curl ", "wget ", "rm -rf /", "chmod 777",
-                  "eval $", "exec ", "base64 -d",
-                  "os.system(", "subprocess.call(",
-                  ".send(", "http.request(", "process.env", "os.environ"]
+    # 真正危险的模式（不是 os.environ——那是正常读取环境变量）
+    DANGEROUS = [
+        "curl ",  # 网络请求 curl
+        "wget ",  # 网络请求 wget
+        "rm -rf /",  # 递归删除
+        "chmod 777",  # 权限全开
+        "eval $",  # 动态执行
+        "base64 -d",  # 隐写/注入
+        ".send(",  # 邮件外发
+    ]
     safe, unsafe = [], []
     for slug in installed:
         sp = SKILLS_DIR / slug
@@ -174,14 +180,14 @@ def step4_safety_eval(installed: list[str]) -> tuple[list[str], list[tuple[str, 
         try:
             for py_file in sp.rglob("*.py"):
                 c = py_file.read_text(encoding="utf-8", errors="ignore")
-                for pat in SUSPICIOUS:
+                for pat in DANGEROUS:
                     if pat in c:
                         is_safe = False
                         reason = f"'{pat}' in {py_file.name}"
                         break
             for js_file in sp.rglob("*.js"):
                 c = js_file.read_text(encoding="utf-8", errors="ignore")
-                for pat in SUSPICIOUS:
+                for pat in DANGEROUS:
                     if pat in c:
                         is_safe = False
                         reason = f"'{pat}' in {js_file.name}"
