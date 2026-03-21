@@ -43,3 +43,1069 @@
 [2026-03-21 06:00:01] === Starting SkillHub Auto-Update ===
 [2026-03-21 06:00:01] Currently installed: 154 skills
 [2026-03-21 06:02:58] === Completed: No new skills needed ===
+[2026-03-21 09:00:01] === Starting SkillHub Auto-Update ===
+[2026-03-21 09:00:01] Currently installed: 154 skills
+[2026-03-21 09:03:24] === Completed: No new skills needed ===
+[2026-03-21 09:00:01] === Starting SkillHub Auto-Update ===
+[2026-03-21 09:00:01] Currently installed: 154 skills
+[2026-03-21 09:03:24] === Completed: No new skills needed ===
+[2026-03-21 11:18:47] === SkillHub Auto-Update Started ===
+[2026-03-21 11:18:56] [Step1] Fetched 523 skills from 14 categories
+[2026-03-21 11:18:56] [Step2] Installed: 153, Missing from hub: 497
+[2026-03-21 11:18:56] [Step3] Installing: parallel-ai-research
+[2026-03-21 11:18:58] [Step3] OK: parallel-ai-research
+[2026-03-21 11:18:58] [Step3] Installing: 开展开放式主题研究，构建动态 Markdown 文档，支持交互与深度研究模式。
+[2026-03-21 11:18:59] [Step3] FAIL: 开展开放式主题研究，构建动态 Markdown 文档，支持交互与深度研究模式。 -> info: "开展开放式主题研究，构建动态 Markdown 文档，支持交互与深度研究模式。" not in index, and remote search has no exact slug ma
+[2026-03-21 11:18:59] [Step3] Installing: 遵循IEEE/ACM格式标准撰写结构规范、引用严谨的学术研究论文。适用于撰写研究论文、学术论文或会议论文的场景。
+[2026-03-21 11:19:00] [Step3] FAIL: 遵循IEEE/ACM格式标准撰写结构规范、引用严谨的学术研究论文。适用于撰写研究论文、学术论文或会议论文的场景。 -> info: "遵循IEEE/ACM格式标准撰写结构规范、引用严谨的学术研究论文。适用于撰写研究论文、学术论文或会议论文的场景。" not in index, and remote search has
+[2026-03-21 11:19:00] [Step3] Installing: research-cog
+[2026-03-21 11:19:02] [Step3] OK: research-cog
+[2026-03-21 11:19:02] [Step3] Installing: DeepResearch Bench 排名第一（2026年2月）。基于 CellCog 的深度研究智能体，支持市场研究、竞争分析、股票分析、投资研究及带引用的学术研究。
+[2026-03-21 11:19:03] [Step3] FAIL: DeepResearch Bench 排名第一（2026年2月）。基于 CellCog 的深度研究智能体，支持市场研究、竞争分析、股票分析、投资研究及带引用的学术研究。 -> info: "DeepResearch Bench 排名第一（2026年2月）。基于 CellCog 的深度研究智能体，支持市场研究、竞争分析、股票分析、投资研究及带引用的学术研究。" not in 
+[2026-03-21 11:19:03] [Step3] Installing: research-engine
+[2026-03-21 11:19:04] [Step3] OK: research-engine
+[2026-03-21 11:19:04] [Step3] Installing: 自动化多源信息收集与趋势分析，生成结构化研究报告并制定阶段性开发计划，助力技术探索与规划。
+[2026-03-21 11:19:06] [Step3] FAIL: 自动化多源信息收集与趋势分析，生成结构化研究报告并制定阶段性开发计划，助力技术探索与规划。 -> info: "自动化多源信息收集与趋势分析，生成结构化研究报告并制定阶段性开发计划，助力技术探索与规划。" not in index, and remote search has no exact s
+[2026-03-21 11:19:06] [Step3] Installing: research-tracker
+[2026-03-21 11:19:07] [Step3] OK: research-tracker
+[2026-03-21 11:19:07] [Step3] Installing: 基于SQLite管理自主AI研究项目，实现状态日志、指令队列、智能体协调与进度监控。
+[2026-03-21 11:19:09] [Step3] FAIL: 基于SQLite管理自主AI研究项目，实现状态日志、指令队列、智能体协调与进度监控。 -> info: "基于SQLite管理自主AI研究项目，实现状态日志、指令队列、智能体协调与进度监控。" not in index, and remote search has no exact slug
+[2026-03-21 11:19:09] [Step3] Installing: research-company
+[2026-03-21 11:19:11] [Step3] OK: research-company
+[2026-03-21 11:19:11] [Step3] Reached max install limit (10), deferring rest
+[2026-03-21 11:19:11] [Step3] Installed 5/497 skills
+[2026-03-21 11:19:11] [Step5] Safe: 5, Unsafe: 0
+[2026-03-21 11:19:11] [Step6] DB updated, 5 skills ready for daily report
+[2026-03-21 11:19:11] === Done: 5 safe, 0 unsafe, 5 failed ===
+[2026-03-21 11:19:46] === SkillHub Auto-Update Started ===
+[2026-03-21 11:19:55] [Step1] Fetched 292 skills from 14 categories
+[2026-03-21 11:19:55] [Step2] Installed: 158, Missing from hub: 260
+[2026-03-21 11:19:55] [Step3] Installing: -
+[2026-03-21 11:19:55] [Step3] FAIL: - -> info: "-" not in index, and remote search has no exact slug match; try direct download by slug
+info:
+[2026-03-21 11:19:55] [Step3] Installing: DeepResearch
+[2026-03-21 11:19:57] [Step3] FAIL: DeepResearch -> info: "DeepResearch" not in index, and remote search has no exact slug match; try direct download by
+[2026-03-21 11:19:57] [Step3] Installing: research-library
+[2026-03-21 11:19:58] [Step3] OK: research-library
+[2026-03-21 11:19:58] [Step3] Installing: research-to-wechat
+[2026-03-21 11:20:00] [Step3] OK: research-to-wechat
+[2026-03-21 11:20:00] [Step3] Installing: research-web-publisher
+[2026-03-21 11:20:01] [Step3] OK: research-web-publisher
+[2026-03-21 11:20:01] [Step3] Installing: gemini-deep-research
+[2026-03-21 11:20:03] [Step3] OK: gemini-deep-research
+[2026-03-21 11:20:03] [Step3] Installing: deepresearch-conversation
+[2026-03-21 11:20:04] [Step3] OK: deepresearch-conversation
+[2026-03-21 11:20:04] [Step3] Installing: competitive-intelligence-market-research
+[2026-03-21 11:20:06] [Step3] OK: competitive-intelligence-market-research
+[2026-03-21 11:20:06] [Step3] Installing: B2B
+[2026-03-21 11:20:08] [Step3] OK: B2B
+[2026-03-21 11:20:08] [Step3] Installing: deepresearchwork
+[2026-03-21 11:20:09] [Step3] OK: deepresearchwork
+[2026-03-21 11:20:09] [Step3] Installed 8/260 skills
+[2026-03-21 11:20:09] [Step4] UNSAFE: research-to-wechat has pattern 'curl ' in fetch_wechat_article.py
+[2026-03-21 11:20:09] [Step5] Safe: 7, Unsafe: 1
+[2026-03-21 11:20:09] [Step6] DB updated, 7 skills ready for daily report
+[2026-03-21 11:20:09] === Done: 7 safe, 1 unsafe, 2 failed ===
+[2026-03-21 12:00:01] === SkillHub Auto-Update Started ===
+[2026-03-21 12:00:35] [Step1] 共获取 712 个技能，来自 7 大类别
+[2026-03-21 12:00:35] [Step2] 已安装: 166 | 缺失: 677
+[2026-03-21 12:00:35] [Step3] Installing: -
+[2026-03-21 12:00:36] [Step3] FAIL: - -> info: "-" not in index, and remote search has no exact slug match; try direct download by slug
+info: "-" not in index/re
+[2026-03-21 12:00:36] [Step3] Installing: agentmail
+[2026-03-21 12:00:37] [Step3] OK: agentmail
+[2026-03-21 12:00:37] [Step3] Installing: agent-memory
+[2026-03-21 12:00:39] [Step3] OK: agent-memory
+[2026-03-21 12:00:39] [Step3] Installing: agent-team-orchestration
+[2026-03-21 12:00:40] [Step3] OK: agent-team-orchestration
+[2026-03-21 12:00:40] [Step3] Installing: MANDATORY
+[2026-03-21 12:00:42] [Step3] FAIL: MANDATORY -> info: "MANDATORY" not in index, and remote search has no exact slug match; try direct download by slug
+info: "MANDATORY"
+[2026-03-21 12:00:42] [Step3] Installing: agent-browser-core
+[2026-03-21 12:00:43] [Step3] OK: agent-browser-core
+[2026-03-21 12:00:43] [Step3] Installing: agent-directory
+[2026-03-21 12:00:45] [Step3] OK: agent-directory
+[2026-03-21 12:00:45] [Step3] Installing: agent-builder
+[2026-03-21 12:00:48] [Step3] OK: agent-builder
+[2026-03-21 12:00:48] [Step3] Installing: agentarxiv
+[2026-03-21 12:00:50] [Step3] OK: agentarxiv
+[2026-03-21 12:00:50] [Step3] Installing: agent-church
+[2026-03-21 12:00:51] [Step3] OK: agent-church
+[2026-03-21 12:00:51] [Step3] Installing: agent-chronicle
+[2026-03-21 12:00:53] [Step3] OK: agent-chronicle
+[2026-03-21 12:00:53] [Step3] Installing: agents-manager
+[2026-03-21 12:00:55] [Step3] OK: agents-manager
+[2026-03-21 12:00:55] [Step3] Installing: Use
+[2026-03-21 12:00:56] [Step3] FAIL: Use -> info: "Use" not in index, and remote search has no exact slug match; try direct download by slug
+info: "Use" not in inde
+[2026-03-21 12:00:56] [Step3] Installing: agentgram
+[2026-03-21 12:00:57] [Step3] OK: agentgram
+[2026-03-21 12:00:57] [Step3] Installing: agent-selfie
+[2026-03-21 12:00:59] [Step3] OK: agent-selfie
+[2026-03-21 12:00:59] [Step3] Installing: agentmemory
+[2026-03-21 12:01:00] [Step3] OK: agentmemory
+[2026-03-21 12:01:00] [Step3] Installing: agent-reach
+[2026-03-21 12:01:02] [Step3] OK: agent-reach
+[2026-03-21 12:01:02] [Step3] Installing: ai-ppt-generator
+[2026-03-21 12:01:03] [Step3] OK: ai-ppt-generator
+[2026-03-21 12:01:03] [Step3] Installing: ai-web-automation
+[2026-03-21 12:01:04] [Step3] OK: ai-web-automation
+[2026-03-21 12:01:04] [Step3] Installing: ai-news-collectors
+[2026-03-21 12:01:06] [Step3] OK: ai-news-collectors
+[2026-03-21 12:01:06] [Step3] Installing: AI
+[2026-03-21 12:01:08] [Step3] OK: AI
+[2026-03-21 12:01:08] [Step3] Installing: ai-agent-helper
+[2026-03-21 12:01:10] [Step3] OK: ai-agent-helper
+[2026-03-21 12:01:10] [Step3] Installing: ai-research-scraper
+[2026-03-21 12:01:12] [Step3] OK: ai-research-scraper
+[2026-03-21 12:01:12] [Step3] Installing: ai-humanizer-cn
+[2026-03-21 12:01:14] [Step3] OK: ai-humanizer-cn
+[2026-03-21 12:01:14] [Step3] Installing: baidu-search
+[2026-03-21 12:01:15] [Step3] OK: baidu-search
+[2026-03-21 12:01:15] [Step3] Installing: ai-writing-assistant-cn-v1-1
+[2026-03-21 12:01:16] [Step3] OK: ai-writing-assistant-cn-v1-1
+[2026-03-21 12:01:16] [Step3] Installing: ai-research-to-obsidian
+[2026-03-21 12:01:18] [Step3] OK: ai-research-to-obsidian
+[2026-03-21 12:01:18] [Step3] Installing: ai-chatbot-v2
+[2026-03-21 12:01:20] [Step3] OK: ai-chatbot-v2
+[2026-03-21 12:01:20] [Step3] Installing: ai-employee-skill
+[2026-03-21 12:01:21] [Step3] OK: ai-employee-skill
+[2026-03-21 12:01:21] [Step3] Installing: ai-newsletter-toolkit
+[2026-03-21 12:01:23] [Step3] OK: ai-newsletter-toolkit
+[2026-03-21 12:01:23] [Step3] Installing: ai-employee-team
+[2026-03-21 12:01:24] [Step3] OK: ai-employee-team
+[2026-03-21 12:01:24] [Step3] Installing: humanize-ai-text
+[2026-03-21 12:01:26] [Step3] OK: humanize-ai-text
+[2026-03-21 12:01:26] [Step3] Installing: image-generation
+[2026-03-21 12:01:28] [Step3] OK: image-generation
+[2026-03-21 12:01:28] [Step3] Installing: gmail
+[2026-03-21 12:01:29] [Step3] OK: gmail
+[2026-03-21 12:01:29] [Step3] Installing: Gmail
+[2026-03-21 12:01:30] [Step3] FAIL: Gmail -> info: "Gmail" not in index, and remote search has no exact slug match; try direct download by slug
+info: "Gmail" not in 
+[2026-03-21 12:01:30] [Step3] Installing: autonomous-agent
+[2026-03-21 12:01:32] [Step3] OK: autonomous-agent
+[2026-03-21 12:01:32] [Step3] Installing: CornerStone
+[2026-03-21 12:01:33] [Step3] FAIL: CornerStone -> info: "CornerStone" not in index, and remote search has no exact slug match; try direct download by slug
+info: "CornerSt
+[2026-03-21 12:01:33] [Step3] Installing: autonomous-skill-orchestrator
+[2026-03-21 12:01:35] [Step3] OK: autonomous-skill-orchestrator
+[2026-03-21 12:01:35] [Step3] Installing: autonomous-feature-planner
+[2026-03-21 12:01:36] [Step3] OK: autonomous-feature-planner
+[2026-03-21 12:01:36] [Step3] Installing: autonomous-execution
+[2026-03-21 12:01:38] [Step3] OK: autonomous-execution
+[2026-03-21 12:01:38] [Step3] Installing: autonomous-tasks
+[2026-03-21 12:01:40] [Step3] OK: autonomous-tasks
+[2026-03-21 12:01:40] [Step3] Installing: Self-driven
+[2026-03-21 12:01:41] [Step3] OK: Self-driven
+[2026-03-21 12:01:41] [Step3] Installing: autonomous-commerce
+[2026-03-21 12:01:43] [Step3] OK: autonomous-commerce
+[2026-03-21 12:01:43] [Step3] Installing: autonomous-research
+[2026-03-21 12:01:45] [Step3] OK: autonomous-research
+[2026-03-21 12:01:45] [Step3] Installing: btc15-autonomous-market
+[2026-03-21 12:01:46] [Step3] OK: btc15-autonomous-market
+[2026-03-21 12:01:46] [Step3] Installing: ralph-mode
+[2026-03-21 12:01:48] [Step3] OK: ralph-mode
+[2026-03-21 12:01:48] [Step3] Installing: global-agent-node-with-real-time-context-streaming-mission-form-autonomous-network-status-awaiting-peers
+[2026-03-21 12:01:51] [Step3] OK: global-agent-node-with-real-time-context-streaming-mission-form-autonomous-network-status-awaiting-peers
+[2026-03-21 12:01:51] [Step3] Installing: denario-skill
+[2026-03-21 12:01:53] [Step3] OK: denario-skill
+[2026-03-21 12:01:53] [Step3] Installing: base-trader
+[2026-03-21 12:01:54] [Step3] OK: base-trader
+[2026-03-21 12:01:54] [Step3] Installing: nft-skill
+[2026-03-21 12:01:56] [Step3] OK: nft-skill
+[2026-03-21 12:01:56] [Step3] Installing: polymarket-agent
+[2026-03-21 12:01:58] [Step3] OK: polymarket-agent
+[2026-03-21 12:01:58] [Step3] Installing: web-deploy-github
+[2026-03-21 12:02:00] [Step3] OK: web-deploy-github
+[2026-03-21 12:02:00] [Step3] Installing: polyclaw
+[2026-03-21 12:02:02] [Step3] OK: polyclaw
+[2026-03-21 12:02:02] [Step3] Installing: ralph-loops
+[2026-03-21 12:02:04] [Step3] OK: ralph-loops
+[2026-03-21 12:02:04] [Step3] Installing: agentic-paper-digest-skill
+[2026-03-21 12:02:05] [Step3] OK: agentic-paper-digest-skill
+[2026-03-21 12:02:05] [Step3] Installing: agentic-ai-gold
+[2026-03-21 12:02:07] [Step3] OK: agentic-ai-gold
+[2026-03-21 12:02:07] [Step3] Installing: agentic-calling
+[2026-03-21 12:02:09] [Step3] OK: agentic-calling
+[2026-03-21 12:02:09] [Step3] Installing: agentic-spicy-food
+[2026-03-21 12:02:11] [Step3] OK: agentic-spicy-food
+[2026-03-21 12:02:11] [Step3] Installing: Brand-specific
+[2026-03-21 12:02:12] [Step3] FAIL: Brand-specific -> info: "Brand-specific" not in index, and remote search has no exact slug match; try direct download by slug
+info: "Brand
+[2026-03-21 12:02:12] [Step3] Installing: agentic-commerce
+[2026-03-21 12:02:14] [Step3] OK: agentic-commerce
+[2026-03-21 12:02:14] [Step3] Installing: agentic-workflow-automation
+[2026-03-21 12:02:16] [Step3] OK: agentic-workflow-automation
+[2026-03-21 12:02:16] [Step3] Installing: agentic-browser
+[2026-03-21 12:02:18] [Step3] OK: agentic-browser
+[2026-03-21 12:02:18] [Step3] Installing: agentic-x402
+[2026-03-21 12:02:20] [Step3] OK: agentic-x402
+[2026-03-21 12:02:20] [Step3] Installing: agentic-browser-0-1-2
+[2026-03-21 12:02:22] [Step3] OK: agentic-browser-0-1-2
+[2026-03-21 12:02:22] [Step3] Installing: Navigate
+[2026-03-21 12:00:01] === SkillHub Auto-Update Started ===
+[2026-03-21 12:00:35] [Step1] 共获取 712 个技能，来自 7 大类别
+[2026-03-21 12:00:35] [Step2] 已安装: 166 | 缺失: 677
+[2026-03-21 12:00:35] [Step3] Installing: -
+[2026-03-21 12:00:36] [Step3] FAIL: - -> info: "-" not in index, and remote search has no exact slug match; try direct download by slug
+info: "-" not in index/re
+[2026-03-21 12:00:36] [Step3] Installing: agentmail
+[2026-03-21 12:00:37] [Step3] OK: agentmail
+[2026-03-21 12:00:37] [Step3] Installing: agent-memory
+[2026-03-21 12:00:39] [Step3] OK: agent-memory
+[2026-03-21 12:00:39] [Step3] Installing: agent-team-orchestration
+[2026-03-21 12:00:40] [Step3] OK: agent-team-orchestration
+[2026-03-21 12:00:40] [Step3] Installing: MANDATORY
+[2026-03-21 12:00:42] [Step3] FAIL: MANDATORY -> info: "MANDATORY" not in index, and remote search has no exact slug match; try direct download by slug
+info: "MANDATORY"
+[2026-03-21 12:00:42] [Step3] Installing: agent-browser-core
+[2026-03-21 12:00:43] [Step3] OK: agent-browser-core
+[2026-03-21 12:00:43] [Step3] Installing: agent-directory
+[2026-03-21 12:00:45] [Step3] OK: agent-directory
+[2026-03-21 12:00:45] [Step3] Installing: agent-builder
+[2026-03-21 12:00:48] [Step3] OK: agent-builder
+[2026-03-21 12:00:48] [Step3] Installing: agentarxiv
+[2026-03-21 12:00:50] [Step3] OK: agentarxiv
+[2026-03-21 12:00:50] [Step3] Installing: agent-church
+[2026-03-21 12:00:51] [Step3] OK: agent-church
+[2026-03-21 12:00:51] [Step3] Installing: agent-chronicle
+[2026-03-21 12:00:53] [Step3] OK: agent-chronicle
+[2026-03-21 12:00:53] [Step3] Installing: agents-manager
+[2026-03-21 12:00:55] [Step3] OK: agents-manager
+[2026-03-21 12:00:55] [Step3] Installing: Use
+[2026-03-21 12:00:56] [Step3] FAIL: Use -> info: "Use" not in index, and remote search has no exact slug match; try direct download by slug
+info: "Use" not in inde
+[2026-03-21 12:00:56] [Step3] Installing: agentgram
+[2026-03-21 12:00:57] [Step3] OK: agentgram
+[2026-03-21 12:00:57] [Step3] Installing: agent-selfie
+[2026-03-21 12:00:59] [Step3] OK: agent-selfie
+[2026-03-21 12:00:59] [Step3] Installing: agentmemory
+[2026-03-21 12:01:00] [Step3] OK: agentmemory
+[2026-03-21 12:01:00] [Step3] Installing: agent-reach
+[2026-03-21 12:01:02] [Step3] OK: agent-reach
+[2026-03-21 12:01:02] [Step3] Installing: ai-ppt-generator
+[2026-03-21 12:01:03] [Step3] OK: ai-ppt-generator
+[2026-03-21 12:01:03] [Step3] Installing: ai-web-automation
+[2026-03-21 12:01:04] [Step3] OK: ai-web-automation
+[2026-03-21 12:01:04] [Step3] Installing: ai-news-collectors
+[2026-03-21 12:01:06] [Step3] OK: ai-news-collectors
+[2026-03-21 12:01:06] [Step3] Installing: AI
+[2026-03-21 12:01:08] [Step3] OK: AI
+[2026-03-21 12:01:08] [Step3] Installing: ai-agent-helper
+[2026-03-21 12:01:10] [Step3] OK: ai-agent-helper
+[2026-03-21 12:01:10] [Step3] Installing: ai-research-scraper
+[2026-03-21 12:01:12] [Step3] OK: ai-research-scraper
+[2026-03-21 12:01:12] [Step3] Installing: ai-humanizer-cn
+[2026-03-21 12:01:14] [Step3] OK: ai-humanizer-cn
+[2026-03-21 12:01:14] [Step3] Installing: baidu-search
+[2026-03-21 12:01:15] [Step3] OK: baidu-search
+[2026-03-21 12:01:15] [Step3] Installing: ai-writing-assistant-cn-v1-1
+[2026-03-21 12:01:16] [Step3] OK: ai-writing-assistant-cn-v1-1
+[2026-03-21 12:01:16] [Step3] Installing: ai-research-to-obsidian
+[2026-03-21 12:01:18] [Step3] OK: ai-research-to-obsidian
+[2026-03-21 12:01:18] [Step3] Installing: ai-chatbot-v2
+[2026-03-21 12:01:20] [Step3] OK: ai-chatbot-v2
+[2026-03-21 12:01:20] [Step3] Installing: ai-employee-skill
+[2026-03-21 12:01:21] [Step3] OK: ai-employee-skill
+[2026-03-21 12:01:21] [Step3] Installing: ai-newsletter-toolkit
+[2026-03-21 12:01:23] [Step3] OK: ai-newsletter-toolkit
+[2026-03-21 12:01:23] [Step3] Installing: ai-employee-team
+[2026-03-21 12:01:24] [Step3] OK: ai-employee-team
+[2026-03-21 12:01:24] [Step3] Installing: humanize-ai-text
+[2026-03-21 12:01:26] [Step3] OK: humanize-ai-text
+[2026-03-21 12:01:26] [Step3] Installing: image-generation
+[2026-03-21 12:01:28] [Step3] OK: image-generation
+[2026-03-21 12:01:28] [Step3] Installing: gmail
+[2026-03-21 12:01:29] [Step3] OK: gmail
+[2026-03-21 12:01:29] [Step3] Installing: Gmail
+[2026-03-21 12:01:30] [Step3] FAIL: Gmail -> info: "Gmail" not in index, and remote search has no exact slug match; try direct download by slug
+info: "Gmail" not in 
+[2026-03-21 12:01:30] [Step3] Installing: autonomous-agent
+[2026-03-21 12:01:32] [Step3] OK: autonomous-agent
+[2026-03-21 12:01:32] [Step3] Installing: CornerStone
+[2026-03-21 12:01:33] [Step3] FAIL: CornerStone -> info: "CornerStone" not in index, and remote search has no exact slug match; try direct download by slug
+info: "CornerSt
+[2026-03-21 12:01:33] [Step3] Installing: autonomous-skill-orchestrator
+[2026-03-21 12:01:35] [Step3] OK: autonomous-skill-orchestrator
+[2026-03-21 12:01:35] [Step3] Installing: autonomous-feature-planner
+[2026-03-21 12:01:36] [Step3] OK: autonomous-feature-planner
+[2026-03-21 12:01:36] [Step3] Installing: autonomous-execution
+[2026-03-21 12:01:38] [Step3] OK: autonomous-execution
+[2026-03-21 12:01:38] [Step3] Installing: autonomous-tasks
+[2026-03-21 12:01:40] [Step3] OK: autonomous-tasks
+[2026-03-21 12:01:40] [Step3] Installing: Self-driven
+[2026-03-21 12:01:41] [Step3] OK: Self-driven
+[2026-03-21 12:01:41] [Step3] Installing: autonomous-commerce
+[2026-03-21 12:01:43] [Step3] OK: autonomous-commerce
+[2026-03-21 12:01:43] [Step3] Installing: autonomous-research
+[2026-03-21 12:01:45] [Step3] OK: autonomous-research
+[2026-03-21 12:01:45] [Step3] Installing: btc15-autonomous-market
+[2026-03-21 12:01:46] [Step3] OK: btc15-autonomous-market
+[2026-03-21 12:01:46] [Step3] Installing: ralph-mode
+[2026-03-21 12:01:48] [Step3] OK: ralph-mode
+[2026-03-21 12:01:48] [Step3] Installing: global-agent-node-with-real-time-context-streaming-mission-form-autonomous-network-status-awaiting-peers
+[2026-03-21 12:01:51] [Step3] OK: global-agent-node-with-real-time-context-streaming-mission-form-autonomous-network-status-awaiting-peers
+[2026-03-21 12:01:51] [Step3] Installing: denario-skill
+[2026-03-21 12:01:53] [Step3] OK: denario-skill
+[2026-03-21 12:01:53] [Step3] Installing: base-trader
+[2026-03-21 12:01:54] [Step3] OK: base-trader
+[2026-03-21 12:01:54] [Step3] Installing: nft-skill
+[2026-03-21 12:01:56] [Step3] OK: nft-skill
+[2026-03-21 12:01:56] [Step3] Installing: polymarket-agent
+[2026-03-21 12:01:58] [Step3] OK: polymarket-agent
+[2026-03-21 12:01:58] [Step3] Installing: web-deploy-github
+[2026-03-21 12:02:00] [Step3] OK: web-deploy-github
+[2026-03-21 12:02:00] [Step3] Installing: polyclaw
+[2026-03-21 12:02:02] [Step3] OK: polyclaw
+[2026-03-21 12:02:02] [Step3] Installing: ralph-loops
+[2026-03-21 12:02:04] [Step3] OK: ralph-loops
+[2026-03-21 12:02:04] [Step3] Installing: agentic-paper-digest-skill
+[2026-03-21 12:02:05] [Step3] OK: agentic-paper-digest-skill
+[2026-03-21 12:02:05] [Step3] Installing: agentic-ai-gold
+[2026-03-21 12:02:07] [Step3] OK: agentic-ai-gold
+[2026-03-21 12:02:07] [Step3] Installing: agentic-calling
+[2026-03-21 12:02:09] [Step3] OK: agentic-calling
+[2026-03-21 12:02:09] [Step3] Installing: agentic-spicy-food
+[2026-03-21 12:02:11] [Step3] OK: agentic-spicy-food
+[2026-03-21 12:02:11] [Step3] Installing: Brand-specific
+[2026-03-21 12:02:12] [Step3] FAIL: Brand-specific -> info: "Brand-specific" not in index, and remote search has no exact slug match; try direct download by slug
+info: "Brand
+[2026-03-21 12:02:12] [Step3] Installing: agentic-commerce
+[2026-03-21 12:02:14] [Step3] OK: agentic-commerce
+[2026-03-21 12:02:14] [Step3] Installing: agentic-workflow-automation
+[2026-03-21 12:02:16] [Step3] OK: agentic-workflow-automation
+[2026-03-21 12:02:16] [Step3] Installing: agentic-browser
+[2026-03-21 12:02:18] [Step3] OK: agentic-browser
+[2026-03-21 12:02:18] [Step3] Installing: agentic-x402
+[2026-03-21 12:02:20] [Step3] OK: agentic-x402
+[2026-03-21 12:02:20] [Step3] Installing: agentic-browser-0-1-2
+[2026-03-21 12:02:22] [Step3] OK: agentic-browser-0-1-2
+[2026-03-21 12:02:22] [Step3] Installing: Navigate
+[2026-03-21 12:02:23] [Step3] FAIL: Navigate -> info: "Navigate" not in index, and remote search has no exact slug match; try direct download by slug
+info: "Navigate" n
+[2026-03-21 12:02:23] [Step3] Installing: browse
+[2026-03-21 12:02:24] [Step3] OK: browse
+[2026-03-21 12:02:24] [Step3] Installing: agenticcreed-signup-lead
+[2026-03-21 12:02:26] [Step3] OK: agenticcreed-signup-lead
+[2026-03-21 12:02:26] [Step3] Installing: agentic-money
+[2026-03-21 12:02:29] [Step3] OK: agentic-money
+[2026-03-21 12:02:29] [Step3] Installing: agentic-commerce-relay
+[2026-03-21 12:02:30] [Step3] OK: agentic-commerce-relay
+[2026-03-21 12:02:30] [Step3] Installing: agentic-mcp-server-builder
+[2026-03-21 12:02:32] [Step3] OK: agentic-mcp-server-builder
+[2026-03-21 12:02:32] [Step3] Installing: agenticmail
+[2026-03-21 12:02:33] [Step3] OK: agenticmail
+[2026-03-21 12:02:33] [Step3] Installing: agentic-security-audit
+[2026-03-21 12:02:35] [Step3] OK: agentic-security-audit
+[2026-03-21 12:02:35] [Step3] Installing: agentic-powered-memecoin-trader
+[2026-03-21 12:02:37] [Step3] OK: agentic-powered-memecoin-trader
+[2026-03-21 12:02:37] [Step3] Installing: agentic-commerce-forthecult
+[2026-03-21 12:02:39] [Step3] OK: agentic-commerce-forthecult
+[2026-03-21 12:02:39] [Step3] Installing: agenticstreet
+[2026-03-21 12:02:40] [Step3] OK: agenticstreet
+[2026-03-21 12:02:40] [Step3] Installing: agentic-letters
+[2026-03-21 12:02:42] [Step3] OK: agentic-letters
+[2026-03-21 12:02:42] [Step3] Installing: gpt
+[2026-03-21 12:02:44] [Step3] OK: gpt
+[2026-03-21 12:02:44] [Step3] Installing: Gpt
+[2026-03-21 12:02:45] [Step3] FAIL: Gpt -> info: "Gpt" not in index, and remote search has no exact slug match; try direct download by slug
+info: "Gpt" not in inde
+[2026-03-21 12:02:45] [Step3] Installing: gpt-analyzer
+[2026-03-21 12:02:46] [Step3] OK: gpt-analyzer
+[2026-03-21 12:02:46] [Step3] Installing: gpt-chat
+[2026-03-21 12:02:48] [Step3] OK: gpt-chat
+[2026-03-21 12:02:48] [Step3] Installing: elite-longterm-memory
+[2026-03-21 12:02:49] [Step3] OK: elite-longterm-memory
+[2026-03-21 12:02:49] [Step3] Installing: chatgpt-apps
+[2026-03-21 12:02:50] [Step3] OK: chatgpt-apps
+[2026-03-21 12:02:50] [Step3] Installing: chatgpt-exporter-ultimate
+[2026-03-21 12:02:52] [Step3] OK: chatgpt-exporter-ultimate
+[2026-03-21 12:02:52] [Step3] Installing: poyo-gpt-image-1-5
+[2026-03-21 12:02:54] [Step3] OK: poyo-gpt-image-1-5
+[2026-03-21 12:02:54] [Step3] Installing: poyo-gpt-4o-image
+[2026-03-21 12:02:56] [Step3] OK: poyo-gpt-4o-image
+[2026-03-21 12:02:56] [Step3] Installing: openclaw-aisa-llm-gateway
+[2026-03-21 12:02:57] [Step3] OK: openclaw-aisa-llm-gateway
+[2026-03-21 12:02:57] [Step3] Installing: chatgpt-import
+[2026-03-21 12:02:59] [Step3] OK: chatgpt-import
+[2026-03-21 12:02:59] [Step3] Installing: openclaw-aisa-affordable-llm-model-tokens
+[2026-03-21 12:03:01] [Step3] OK: openclaw-aisa-affordable-llm-model-tokens
+[2026-03-21 12:03:01] [Step3] Installing: openclaw-aisa-llm-router
+[2026-03-21 12:03:04] [Step3] OK: openclaw-aisa-llm-router
+[2026-03-21 12:03:04] [Step3] Installing: creative-toolkit
+[2026-03-21 12:03:07] [Step3] OK: creative-toolkit
+[2026-03-21 12:03:07] [Step3] Installing: add-newcli-provider
+[2026-03-21 12:03:08] [Step3] OK: add-newcli-provider
+[2026-03-21 12:03:08] [Step3] Installing: evoweb-ai
+[2026-03-21 12:03:10] [Step3] OK: evoweb-ai
+[2026-03-21 12:03:10] [Step3] Installing: igpt-email-ask
+[2026-03-21 12:03:12] [Step3] OK: igpt-email-ask
+[2026-03-21 12:03:12] [Step3] Installing: ai-pdf-builder
+[2026-03-21 12:03:14] [Step3] OK: ai-pdf-builder
+[2026-03-21 12:03:14] [Step3] Installing: kagi-fastgpt
+[2026-03-21 12:03:16] [Step3] OK: kagi-fastgpt
+[2026-03-21 12:03:16] [Step3] Installing: llmwhisperer
+[2026-03-21 12:03:19] [Step3] OK: llmwhisperer
+[2026-03-21 12:03:19] [Step3] Installing: llm-supervisor
+[2026-03-21 12:03:22] [Step3] OK: llm-supervisor
+[2026-03-21 12:03:22] [Step3] Installing: llmrouter
+[2026-03-21 12:03:24] [Step3] OK: llmrouter
+[2026-03-21 12:03:24] [Step3] Installing: llm-wallet
+[2026-03-21 12:03:26] [Step3] OK: llm-wallet
+[2026-03-21 12:03:26] [Step3] Installing: llmfit
+[2026-03-21 12:03:28] [Step3] OK: llmfit
+[2026-03-21 12:03:28] [Step3] 安装完成: 92 成功 / 8 失败
+[2026-03-21 12:03:28] [Step4] UNSAFE: agentmail -> pattern '.send(' in send_email.py
+[2026-03-21 12:03:28] [Step4] UNSAFE: agent-selfie -> pattern 'os.environ' in selfie.py
+[2026-03-21 12:03:28] [Step4] UNSAFE: autonomous-agent -> pattern 'process.env' in signPayment.js
+[2026-03-21 12:03:28] [Step4] UNSAFE: autonomous-commerce -> pattern 'process.env' in escrow-integration.js
+[2026-03-21 12:03:28] [Step4] UNSAFE: denario-skill -> pattern 'os.environ' in test_paper.py
+[2026-03-21 12:03:28] [Step4] UNSAFE: nft-skill -> pattern 'process.env' in listNFT.js
+[2026-03-21 12:03:28] [Step4] UNSAFE: agentic-x402 -> pattern 'process.env' in x402.js
+[2026-03-21 12:03:28] [Step4] UNSAFE: agentic-letters -> pattern 'os.environ' in agentic_letters.py
+[2026-03-21 12:03:28] [Step4] UNSAFE: gpt-chat -> pattern 'process.env' in test-key.js
+[2026-03-21 12:03:28] [Step4] UNSAFE: elite-longterm-memory -> pattern 'process.env' in elite-memory.js
+[2026-03-21 12:03:28] [Step4] UNSAFE: openclaw-aisa-llm-gateway -> pattern 'os.environ' in llm_router_client.py
+[2026-03-21 12:03:28] [Step4] UNSAFE: chatgpt-import -> pattern 'os.environ' in bulk_embed.py
+[2026-03-21 12:03:28] [Step4] UNSAFE: openclaw-aisa-affordable-llm-model-tokens -> pattern 'os.environ' in llm_router_client.py
+[2026-03-21 12:03:28] [Step4] UNSAFE: openclaw-aisa-llm-router -> pattern 'os.environ' in llm_router_client.py
+[2026-03-21 12:03:28] [Step4] 安全通过: 78 | 危险: 14
+[2026-03-21 12:03:28] [Step5] OK: agent-memory integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: agent-team-orchestration integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: agent-browser-core integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: agent-directory integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: agent-builder integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: agentarxiv integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: agent-church integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: agent-chronicle integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: agents-manager integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: agentgram integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: agentmemory integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: agent-reach integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: ai-ppt-generator integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: ai-web-automation integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: ai-news-collectors integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: AI integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: ai-agent-helper integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: ai-research-scraper integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: ai-humanizer-cn integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: baidu-search integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: ai-writing-assistant-cn-v1-1 integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: ai-research-to-obsidian integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: ai-chatbot-v2 integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: ai-employee-skill integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: ai-newsletter-toolkit integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: ai-employee-team integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: humanize-ai-text integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: image-generation integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: gmail integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: autonomous-skill-orchestrator integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: autonomous-feature-planner integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: autonomous-execution integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: autonomous-tasks integrated and verified
+[2026-03-21 12:02:23] [Step3] FAIL: Navigate -> info: "Navigate" not in index, and remote search has no exact slug match; try direct download by slug
+info: "Navigate" n
+[2026-03-21 12:02:23] [Step3] Installing: browse
+[2026-03-21 12:02:24] [Step3] OK: browse
+[2026-03-21 12:02:24] [Step3] Installing: agenticcreed-signup-lead
+[2026-03-21 12:02:26] [Step3] OK: agenticcreed-signup-lead
+[2026-03-21 12:02:26] [Step3] Installing: agentic-money
+[2026-03-21 12:02:29] [Step3] OK: agentic-money
+[2026-03-21 12:02:29] [Step3] Installing: agentic-commerce-relay
+[2026-03-21 12:02:30] [Step3] OK: agentic-commerce-relay
+[2026-03-21 12:02:30] [Step3] Installing: agentic-mcp-server-builder
+[2026-03-21 12:02:32] [Step3] OK: agentic-mcp-server-builder
+[2026-03-21 12:02:32] [Step3] Installing: agenticmail
+[2026-03-21 12:02:33] [Step3] OK: agenticmail
+[2026-03-21 12:02:33] [Step3] Installing: agentic-security-audit
+[2026-03-21 12:02:35] [Step3] OK: agentic-security-audit
+[2026-03-21 12:02:35] [Step3] Installing: agentic-powered-memecoin-trader
+[2026-03-21 12:02:37] [Step3] OK: agentic-powered-memecoin-trader
+[2026-03-21 12:02:37] [Step3] Installing: agentic-commerce-forthecult
+[2026-03-21 12:02:39] [Step3] OK: agentic-commerce-forthecult
+[2026-03-21 12:02:39] [Step3] Installing: agenticstreet
+[2026-03-21 12:02:40] [Step3] OK: agenticstreet
+[2026-03-21 12:02:40] [Step3] Installing: agentic-letters
+[2026-03-21 12:02:42] [Step3] OK: agentic-letters
+[2026-03-21 12:02:42] [Step3] Installing: gpt
+[2026-03-21 12:02:44] [Step3] OK: gpt
+[2026-03-21 12:02:44] [Step3] Installing: Gpt
+[2026-03-21 12:02:45] [Step3] FAIL: Gpt -> info: "Gpt" not in index, and remote search has no exact slug match; try direct download by slug
+info: "Gpt" not in inde
+[2026-03-21 12:02:45] [Step3] Installing: gpt-analyzer
+[2026-03-21 12:02:46] [Step3] OK: gpt-analyzer
+[2026-03-21 12:02:46] [Step3] Installing: gpt-chat
+[2026-03-21 12:02:48] [Step3] OK: gpt-chat
+[2026-03-21 12:02:48] [Step3] Installing: elite-longterm-memory
+[2026-03-21 12:02:49] [Step3] OK: elite-longterm-memory
+[2026-03-21 12:02:49] [Step3] Installing: chatgpt-apps
+[2026-03-21 12:02:50] [Step3] OK: chatgpt-apps
+[2026-03-21 12:02:50] [Step3] Installing: chatgpt-exporter-ultimate
+[2026-03-21 12:02:52] [Step3] OK: chatgpt-exporter-ultimate
+[2026-03-21 12:02:52] [Step3] Installing: poyo-gpt-image-1-5
+[2026-03-21 12:02:54] [Step3] OK: poyo-gpt-image-1-5
+[2026-03-21 12:02:54] [Step3] Installing: poyo-gpt-4o-image
+[2026-03-21 12:02:56] [Step3] OK: poyo-gpt-4o-image
+[2026-03-21 12:02:56] [Step3] Installing: openclaw-aisa-llm-gateway
+[2026-03-21 12:02:57] [Step3] OK: openclaw-aisa-llm-gateway
+[2026-03-21 12:02:57] [Step3] Installing: chatgpt-import
+[2026-03-21 12:02:59] [Step3] OK: chatgpt-import
+[2026-03-21 12:02:59] [Step3] Installing: openclaw-aisa-affordable-llm-model-tokens
+[2026-03-21 12:03:01] [Step3] OK: openclaw-aisa-affordable-llm-model-tokens
+[2026-03-21 12:03:01] [Step3] Installing: openclaw-aisa-llm-router
+[2026-03-21 12:03:04] [Step3] OK: openclaw-aisa-llm-router
+[2026-03-21 12:03:04] [Step3] Installing: creative-toolkit
+[2026-03-21 12:03:07] [Step3] OK: creative-toolkit
+[2026-03-21 12:03:07] [Step3] Installing: add-newcli-provider
+[2026-03-21 12:03:08] [Step3] OK: add-newcli-provider
+[2026-03-21 12:03:08] [Step3] Installing: evoweb-ai
+[2026-03-21 12:03:10] [Step3] OK: evoweb-ai
+[2026-03-21 12:03:10] [Step3] Installing: igpt-email-ask
+[2026-03-21 12:03:12] [Step3] OK: igpt-email-ask
+[2026-03-21 12:03:12] [Step3] Installing: ai-pdf-builder
+[2026-03-21 12:03:14] [Step3] OK: ai-pdf-builder
+[2026-03-21 12:03:14] [Step3] Installing: kagi-fastgpt
+[2026-03-21 12:03:16] [Step3] OK: kagi-fastgpt
+[2026-03-21 12:03:16] [Step3] Installing: llmwhisperer
+[2026-03-21 12:03:19] [Step3] OK: llmwhisperer
+[2026-03-21 12:03:19] [Step3] Installing: llm-supervisor
+[2026-03-21 12:03:22] [Step3] OK: llm-supervisor
+[2026-03-21 12:03:22] [Step3] Installing: llmrouter
+[2026-03-21 12:03:24] [Step3] OK: llmrouter
+[2026-03-21 12:03:24] [Step3] Installing: llm-wallet
+[2026-03-21 12:03:26] [Step3] OK: llm-wallet
+[2026-03-21 12:03:26] [Step3] Installing: llmfit
+[2026-03-21 12:03:28] [Step3] OK: llmfit
+[2026-03-21 12:03:28] [Step3] 安装完成: 92 成功 / 8 失败
+[2026-03-21 12:03:28] [Step4] UNSAFE: agentmail -> pattern '.send(' in send_email.py
+[2026-03-21 12:03:28] [Step4] UNSAFE: agent-selfie -> pattern 'os.environ' in selfie.py
+[2026-03-21 12:03:28] [Step4] UNSAFE: autonomous-agent -> pattern 'process.env' in signPayment.js
+[2026-03-21 12:03:28] [Step4] UNSAFE: autonomous-commerce -> pattern 'process.env' in escrow-integration.js
+[2026-03-21 12:03:28] [Step4] UNSAFE: denario-skill -> pattern 'os.environ' in test_paper.py
+[2026-03-21 12:03:28] [Step4] UNSAFE: nft-skill -> pattern 'process.env' in listNFT.js
+[2026-03-21 12:03:28] [Step4] UNSAFE: agentic-x402 -> pattern 'process.env' in x402.js
+[2026-03-21 12:03:28] [Step4] UNSAFE: agentic-letters -> pattern 'os.environ' in agentic_letters.py
+[2026-03-21 12:03:28] [Step4] UNSAFE: gpt-chat -> pattern 'process.env' in test-key.js
+[2026-03-21 12:03:28] [Step4] UNSAFE: elite-longterm-memory -> pattern 'process.env' in elite-memory.js
+[2026-03-21 12:03:28] [Step4] UNSAFE: openclaw-aisa-llm-gateway -> pattern 'os.environ' in llm_router_client.py
+[2026-03-21 12:03:28] [Step4] UNSAFE: chatgpt-import -> pattern 'os.environ' in bulk_embed.py
+[2026-03-21 12:03:28] [Step4] UNSAFE: openclaw-aisa-affordable-llm-model-tokens -> pattern 'os.environ' in llm_router_client.py
+[2026-03-21 12:03:28] [Step4] UNSAFE: openclaw-aisa-llm-router -> pattern 'os.environ' in llm_router_client.py
+[2026-03-21 12:03:28] [Step4] 安全通过: 78 | 危险: 14
+[2026-03-21 12:03:28] [Step5] OK: agent-memory integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: agent-team-orchestration integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: agent-browser-core integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: agent-directory integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: agent-builder integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: agentarxiv integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: agent-church integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: agent-chronicle integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: agents-manager integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: agentgram integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: agentmemory integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: agent-reach integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: ai-ppt-generator integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: ai-web-automation integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: ai-news-collectors integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: AI integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: ai-agent-helper integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: ai-research-scraper integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: ai-humanizer-cn integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: baidu-search integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: ai-writing-assistant-cn-v1-1 integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: ai-research-to-obsidian integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: ai-chatbot-v2 integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: ai-employee-skill integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: ai-newsletter-toolkit integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: ai-employee-team integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: humanize-ai-text integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: image-generation integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: gmail integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: autonomous-skill-orchestrator integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: autonomous-feature-planner integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: autonomous-execution integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: autonomous-tasks integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: Self-driven integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: autonomous-research integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: btc15-autonomous-market integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: ralph-mode integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: global-agent-node-with-real-time-context-streaming-mission-form-autonomous-network-status-awaiting-peers integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: base-trader integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: polymarket-agent integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: web-deploy-github integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: polyclaw integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: ralph-loops integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: agentic-paper-digest-skill integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: agentic-ai-gold integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: agentic-calling integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: agentic-spicy-food integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: agentic-commerce integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: agentic-workflow-automation integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: agentic-browser integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: agentic-browser-0-1-2 integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: browse integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: agenticcreed-signup-lead integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: agentic-money integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: agentic-commerce-relay integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: agentic-mcp-server-builder integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: agenticmail integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: agentic-security-audit integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: agentic-powered-memecoin-trader integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: agentic-commerce-forthecult integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: agenticstreet integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: gpt integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: gpt-analyzer integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: chatgpt-apps integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: chatgpt-exporter-ultimate integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: poyo-gpt-image-1-5 integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: poyo-gpt-4o-image integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: creative-toolkit integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: add-newcli-provider integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: evoweb-ai integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: igpt-email-ask integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: ai-pdf-builder integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: kagi-fastgpt integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: llmwhisperer integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: llm-supervisor integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: llmrouter integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: llm-wallet integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: llmfit integrated and verified
+[2026-03-21 12:03:28] [Step5] 集成成功: 78 | 失败撤销: 0
+[2026-03-21 12:03:28] [Step6] 完成: 78 个技能已集成
+[2026-03-21 12:03:28] === 完成: 集成78 | 安全78 | 安装92 | 失败8 ===
+[2026-03-21 12:03:28] [Step5] OK: Self-driven integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: autonomous-research integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: btc15-autonomous-market integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: ralph-mode integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: global-agent-node-with-real-time-context-streaming-mission-form-autonomous-network-status-awaiting-peers integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: base-trader integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: polymarket-agent integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: web-deploy-github integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: polyclaw integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: ralph-loops integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: agentic-paper-digest-skill integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: agentic-ai-gold integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: agentic-calling integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: agentic-spicy-food integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: agentic-commerce integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: agentic-workflow-automation integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: agentic-browser integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: agentic-browser-0-1-2 integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: browse integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: agenticcreed-signup-lead integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: agentic-money integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: agentic-commerce-relay integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: agentic-mcp-server-builder integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: agenticmail integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: agentic-security-audit integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: agentic-powered-memecoin-trader integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: agentic-commerce-forthecult integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: agenticstreet integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: gpt integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: gpt-analyzer integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: chatgpt-apps integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: chatgpt-exporter-ultimate integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: poyo-gpt-image-1-5 integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: poyo-gpt-4o-image integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: creative-toolkit integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: add-newcli-provider integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: evoweb-ai integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: igpt-email-ask integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: ai-pdf-builder integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: kagi-fastgpt integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: llmwhisperer integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: llm-supervisor integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: llmrouter integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: llm-wallet integrated and verified
+[2026-03-21 12:03:28] [Step5] OK: llmfit integrated and verified
+[2026-03-21 12:03:28] [Step5] 集成成功: 78 | 失败撤销: 0
+[2026-03-21 12:03:28] [Step6] 完成: 78 个技能已集成
+[2026-03-21 12:03:28] === 完成: 集成78 | 安全78 | 安装92 | 失败8 ===
+[2026-03-21 21:39:03] === SkillHub Auto-Update (async) Started ===
+[2026-03-21 21:39:07] [Step1] 并发获取 725 个技能
+[2026-03-21 21:39:07] [Step2] 已安装: 259 | 缺失: 617
+[2026-03-21 21:39:09] [Step3] FAIL(info: "-" not in index, and remote search has no exact slug ): -
+[2026-03-21 21:39:09] [Step3] FAIL(info: "Use" not in index, and remote search has no exact slu): Use
+[2026-03-21 21:39:09] [Step3] FAIL(info: "CornerStone" not in index, and remote search has no e): CornerStone
+[2026-03-21 21:39:09] [Step3] FAIL(info: "MANDATORY" not in index, and remote search has no exa): MANDATORY
+[2026-03-21 21:39:09] [Step3] OK: free-ride
+[2026-03-21 21:39:09] [Step3] OK: agentguard
+[2026-03-21 21:39:10] [Step3] FAIL(info: "Gmail" not in index, and remote search has no exact s): Gmail
+[2026-03-21 21:39:11] [Step3] OK: ai-ppt-generate
+[2026-03-21 21:39:11] [Step3] OK: mailchimp
+[2026-03-21 21:39:11] [Step3] OK: openai-image-gen
+[2026-03-21 21:39:11] [Step3] OK: agent-browser-stagehand
+[2026-03-21 21:39:11] [Step3] OK: agent-commerce-engine
+[2026-03-21 21:39:11] [Step3] OK: ai-persona-os
+[2026-03-21 21:39:11] [Step3] OK: Airtable
+[2026-03-21 21:39:11] [Step3] FAIL(info: "airtable" not in index, using remote registry exact m): airtable
+[2026-03-21 21:39:11] [Step3] OK: agentwallet
+[2026-03-21 21:39:11] [Step3] OK: agent-config
+[2026-03-21 21:39:11] [Step3] OK: agent-browser-2
+[2026-03-21 21:39:11] [Step3] OK: ai-drama-prompt-factory
+[2026-03-21 21:39:11] [Step3] OK: agent-browser-clawdbot
+[2026-03-21 21:39:11] [Step3] FAIL(info: "Brand-specific" not in index, and remote search has n): Brand-specific
+[2026-03-21 21:39:11] [Step3] FAIL(info: "Navigate" not in index, and remote search has no exac): Navigate
+[2026-03-21 21:39:11] [Step3] OK: codeconductor
+[2026-03-21 21:39:11] [Step3] OK: autonomous-pm
+[2026-03-21 21:39:11] [Step3] OK: autonomous-skill
+[2026-03-21 21:39:11] [Step3] OK: autonomous-task-runner
+[2026-03-21 21:39:11] [Step3] FAIL(info: "Gpt" not in index, and remote search has no exact slu): Gpt
+[2026-03-21 21:39:12] [Step3] OK: openclaw-aisa-llm-image-video
+[2026-03-21 21:39:13] [Step3] OK: coding-agent-backup
+[2026-03-21 21:39:13] [Step3] OK: coding-pm
+[2026-03-21 21:39:13] [Step3] OK: coding-2
+[2026-03-21 21:39:13] [Step3] OK: llm-data-automation
+[2026-03-21 21:39:13] [Step3] OK: coding
+[2026-03-21 21:39:14] [Step3] OK: llm-paper-review-generator
+[2026-03-21 21:39:14] [Step3] OK: coding-1-0-3
+[2026-03-21 21:39:14] [Step3] OK: llms-txt-generator
+[2026-03-21 21:39:14] [Step3] OK: shellmates
+[2026-03-21 21:39:14] [Step3] OK: markdown-converter
+[2026-03-21 21:39:14] [Step3] OK: llmcouncil-router
+[2026-03-21 21:39:14] [Step3] OK: skirmish
+[2026-03-21 21:39:14] [Step3] OK: llm-evaluator-pro
+[2026-03-21 21:39:14] [Step3] OK: aisa-llm-router-skill
+[2026-03-21 21:39:14] [Step3] OK: coding-as-dressing
+[2026-03-21 21:39:14] [Step3] OK: coding-agent-orchestrator
+[2026-03-21 21:39:14] [Step3] OK: llm-video-generator
+[2026-03-21 21:39:14] [Step3] OK: tavily
+[2026-03-21 21:39:14] [Step3] OK: toughcoding
+[2026-03-21 21:39:14] [Step3] OK: coding-lead
+[2026-03-21 21:39:14] [Step3] OK: coding-assistant
+[2026-03-21 21:39:14] [Step3] OK: coding-philosophy
+[2026-03-21 21:39:15] [Step3] OK: kilocli-coding-agent
+[2026-03-21 21:39:15] [Step3] OK: minimax-coding-plan-usage
+[2026-03-21 21:39:15] [Step3] OK: opencode-controller
+[2026-03-21 21:39:15] [Step3] OK: vibe-coding
+[2026-03-21 21:39:15] [Step3] OK: noir-developer
+[2026-03-21 21:39:15] [Step3] OK: book-web-developer
+[2026-03-21 21:39:15] [Step3] OK: game-developer-skill
+[2026-03-21 21:39:16] [Step3] OK: encoding-formats
+[2026-03-21 21:39:16] [Step3] OK: trend-watcher
+[2026-03-21 21:39:17] [Step3] OK: Remotion
+[2026-03-21 21:39:17] [Step3] OK: openclaw-kirocli-coding-agent
+[2026-03-21 21:39:17] [Step3] OK: developer
+[2026-03-21 21:39:17] [Step3] OK: developer-agent
+[2026-03-21 21:39:17] [Step3] OK: SQL
+[2026-03-21 21:39:17] [Step3] OK: google-play
+[2026-03-21 21:39:17] [Step3] OK: megaeth-ai-developer-skills
+[2026-03-21 21:39:17] [Step3] OK: cli-developer
+[2026-03-21 21:39:17] [Step3] OK: developer-interview-simulator
+[2026-03-21 21:39:17] [Step3] OK: developer-utils
+[2026-03-21 21:39:17] [Step3] OK: php-full-stack-developer
+[2026-03-21 21:39:17] [Step3] OK: developer-docs-framework
+[2026-03-21 21:39:18] [Step3] OK: fullstack-developer
+[2026-03-21 21:39:18] [Step3] OK: openai-docs
+[2026-03-21 21:39:18] [Step3] OK: megaeth
+[2026-03-21 21:39:18] [Step3] OK: scrapesense-developer
+[2026-03-21 21:39:18] [Step3] OK: remotion-video-toolkit
+[2026-03-21 21:39:18] [Step3] OK: android-3d-developer
+[2026-03-21 21:39:18] [Step3] OK: sql-toolkit
+[2026-03-21 21:39:18] [Step3] OK: prd
+[2026-03-21 21:39:18] [Step3] OK: sysadmin-toolbox
+[2026-03-21 21:39:18] [Step3] OK: skill-creator
+[2026-03-21 21:39:18] [Step3] OK: security-audit-toolkit
+[2026-03-21 21:39:18] [Step3] OK: automation-workflows
+[2026-03-21 21:39:19] [Step3] OK: tavily-tool
+[2026-03-21 21:39:19] [Step3] OK: pdf-tools
+[2026-03-21 21:39:19] [Step3] OK: wechat-toolkit
+[2026-03-21 21:39:20] [Step3] OK: clickup-api
+[2026-03-21 21:39:20] [Step3] OK: accessibility-toolkit
+[2026-03-21 21:39:20] [Step3] OK: pdf
+[2026-03-21 21:39:20] [Step3] FAIL(info: "EvoMap" not in index, and remote search has no exact ): EvoMap
+[2026-03-21 21:39:20] [Step3] OK: notion-api
+[2026-03-21 21:39:20] [Step3] OK: portable-tools
+[2026-03-21 21:39:20] [Step3] OK: product-manager-toolkit
+[2026-03-21 21:39:20] [Step3] OK: evomap-tools
+[2026-03-21 21:39:20] [Step3] OK: nodetool
+[2026-03-21 21:39:20] [Step3] OK: discord
+[2026-03-21 21:39:21] [Step3] OK: clippy
+[2026-03-21 21:39:21] [Step3] OK: ClickUp
+[2026-03-21 21:39:21] [Step3] OK: chrome-devtools-mcp
+[2026-03-21 21:39:21] [Step3] OK: Chrome
+[2026-03-21 21:39:21] [Step3] 安装完成: 90 成功 / 10 失败
+[2026-03-21 21:39:21] [Step4] UNSAFE: openai-image-gen -> 'os.environ' in gen.py
+[2026-03-21 21:39:21] [Step4] UNSAFE: free-ride -> 'os.environ' in main.py
+[2026-03-21 21:39:21] [Step4] WARN: codeconductor 无 SKILL.md
+[2026-03-21 21:39:21] [Step4] UNSAFE: llm-evaluator-pro -> 'os.environ' in evaluator.py
+[2026-03-21 21:39:21] [Step4] UNSAFE: llm-video-generator -> 'os.environ' in video_gen.py
+[2026-03-21 21:39:21] [Step4] UNSAFE: aisa-llm-router-skill -> 'os.environ' in llm_router_client.py
+[2026-03-21 21:39:21] [Step4] UNSAFE: openclaw-aisa-llm-image-video -> 'os.environ' in media_gen_client.py
+[2026-03-21 21:39:21] [Step4] UNSAFE: tavily-tool -> 'process.env' in tavily_search.js
+[2026-03-21 21:39:21] [Step4] UNSAFE: wechat-toolkit -> 'process.env' in download.js
+[2026-03-21 21:39:21] [Step4] 安全通过: 82 | 危险: 8
+[2026-03-21 21:39:21] [Step5] OK: agent-browser-clawdbot
+[2026-03-21 21:39:21] [Step5] OK: agent-browser-stagehand
+[2026-03-21 21:39:21] [Step5] OK: agentwallet
+[2026-03-21 21:39:21] [Step5] OK: agent-browser-2
+[2026-03-21 21:39:21] [Step5] OK: agent-config
+[2026-03-21 21:39:21] [Step5] OK: agent-commerce-engine
+[2026-03-21 21:39:21] [Step5] OK: agentguard
+[2026-03-21 21:39:21] [Step5] OK: ai-persona-os
+[2026-03-21 21:39:21] [Step5] OK: Airtable
+[2026-03-21 21:39:21] [Step5] OK: ai-ppt-generate
+[2026-03-21 21:39:21] [Step5] OK: ai-drama-prompt-factory
+[2026-03-21 21:39:21] [Step5] OK: mailchimp
+[2026-03-21 21:39:21] [Step5] OK: autonomous-task-runner
+[2026-03-21 21:39:21] [Step5] OK: autonomous-skill
+[2026-03-21 21:39:21] [Step5] OK: autonomous-pm
+[2026-03-21 21:39:21] [Step5] FAIL: codeconductor -> [Errno 2] No such file or directory: '/Users/fhjtech/.openclaw/workspace/skills/codeconductor/SKILL.md'，撤销
+[2026-03-21 21:39:21] [Step5] OK: llm-data-automation
+[2026-03-21 21:39:21] [Step5] OK: llmcouncil-router
+[2026-03-21 21:39:21] [Step5] OK: llms-txt-generator
+[2026-03-21 21:39:21] [Step5] OK: llm-paper-review-generator
+[2026-03-21 21:39:21] [Step5] OK: skirmish
+[2026-03-21 21:39:21] [Step5] OK: markdown-converter
+[2026-03-21 21:39:21] [Step5] OK: tavily
+[2026-03-21 21:39:21] [Step5] OK: shellmates
+[2026-03-21 21:39:21] [Step5] OK: coding
+[2026-03-21 21:39:21] [Step5] OK: coding-as-dressing
+[2026-03-21 21:39:21] [Step5] OK: coding-agent-backup
+[2026-03-21 21:39:21] [Step5] OK: coding-lead
+[2026-03-21 21:39:21] [Step5] OK: coding-2
+[2026-03-21 21:39:21] [Step5] OK: coding-philosophy
+[2026-03-21 21:39:21] [Step5] OK: coding-pm
+[2026-03-21 21:39:21] [Step5] OK: coding-assistant
+[2026-03-21 21:39:21] [Step5] OK: coding-1-0-3
+[2026-03-21 21:39:21] [Step5] OK: coding-agent-orchestrator
+[2026-03-21 21:39:21] [Step5] OK: toughcoding
+[2026-03-21 21:39:21] [Step5] OK: kilocli-coding-agent
+[2026-03-21 21:39:21] [Step5] OK: minimax-coding-plan-usage
+[2026-03-21 21:39:21] [Step5] OK: encoding-formats
+[2026-03-21 21:39:21] [Step5] OK: opencode-controller
+[2026-03-21 21:39:21] [Step5] OK: openclaw-kirocli-coding-agent
+[2026-03-21 21:39:21] [Step5] OK: vibe-coding
+[2026-03-21 21:39:21] [Step5] OK: developer
+[2026-03-21 21:39:21] [Step5] OK: developer-agent
+[2026-03-21 21:39:21] [Step5] OK: developer-docs-framework
+[2026-03-21 21:39:21] [Step5] OK: developer-interview-simulator
+[2026-03-21 21:39:21] [Step5] OK: developer-utils
+[2026-03-21 21:39:21] [Step5] OK: cli-developer
+[2026-03-21 21:39:21] [Step5] OK: php-full-stack-developer
+[2026-03-21 21:39:21] [Step5] OK: noir-developer
+[2026-03-21 21:39:21] [Step5] OK: megaeth-ai-developer-skills
+[2026-03-21 21:39:21] [Step5] OK: book-web-developer
+[2026-03-21 21:39:21] [Step5] OK: google-play
+[2026-03-21 21:39:21] [Step5] OK: openai-docs
+[2026-03-21 21:39:21] [Step5] OK: fullstack-developer
+[2026-03-21 21:39:21] [Step5] OK: game-developer-skill
+[2026-03-21 21:39:21] [Step5] OK: megaeth
+[2026-03-21 21:39:21] [Step5] OK: trend-watcher
+[2026-03-21 21:39:21] [Step5] OK: android-3d-developer
+[2026-03-21 21:39:21] [Step5] OK: scrapesense-developer
+[2026-03-21 21:39:21] [Step5] OK: prd
+[2026-03-21 21:39:21] [Step5] OK: remotion-video-toolkit
+[2026-03-21 21:39:21] [Step5] OK: Remotion
+[2026-03-21 21:39:21] [Step5] OK: sql-toolkit
+[2026-03-21 21:39:21] [Step5] OK: SQL
+[2026-03-21 21:39:21] [Step5] OK: security-audit-toolkit
+[2026-03-21 21:39:21] [Step5] OK: sysadmin-toolbox
+[2026-03-21 21:39:21] [Step5] OK: skill-creator
+[2026-03-21 21:39:21] [Step5] OK: automation-workflows
+[2026-03-21 21:39:21] [Step5] OK: pdf-tools
+[2026-03-21 21:39:21] [Step5] OK: accessibility-toolkit
+[2026-03-21 21:39:21] [Step5] OK: portable-tools
+[2026-03-21 21:39:21] [Step5] OK: nodetool
+[2026-03-21 21:39:21] [Step5] OK: product-manager-toolkit
+[2026-03-21 21:39:21] [Step5] OK: evomap-tools
+[2026-03-21 21:39:21] [Step5] OK: notion-api
+[2026-03-21 21:39:21] [Step5] OK: discord
+[2026-03-21 21:39:21] [Step5] OK: pdf
+[2026-03-21 21:39:21] [Step5] OK: chrome-devtools-mcp
+[2026-03-21 21:39:21] [Step5] OK: Chrome
+[2026-03-21 21:39:21] [Step5] OK: clickup-api
+[2026-03-21 21:39:21] [Step5] OK: ClickUp
+[2026-03-21 21:39:21] [Step5] OK: clippy
+[2026-03-21 21:39:21] [Step5] 集成成功: 81 | 撤销: 1
+[2026-03-21 21:39:21] [Step6] 完成，81 个技能已集成
+[2026-03-21 21:39:21] === 完成: 集成81 | 安全82 | 安装90 | 失败10 ===
+[2026-03-21 22:06:59] === SkillHub Auto-Update (async) Started ===
+[2026-03-21 22:07:02] [Step1] 并发获取 728 个技能
+[2026-03-21 22:07:02] [Step2] 已安装: 348 | 缺失: 538
+[2026-03-21 22:07:03] [Step3] FAIL(info: "-" not in index, and remote search has no exact slug ): -
+[2026-03-21 22:07:04] [Step3] FAIL(info: "Use" not in index, and remote search has no exact slu): Use
+[2026-03-21 22:07:04] [Step3] FAIL(info: "For" not in index, and remote search has no exact slu): For
+[2026-03-21 22:07:04] [Step3] OK: ai-picture-book
+[2026-03-21 22:07:04] [Step3] OK: zoho-mail
+[2026-03-21 22:07:04] [Step3] OK: agent-tinman
+[2026-03-21 22:07:04] [Step3] OK: Zoho
+[2026-03-21 22:07:04] [Step3] FAIL(info: "Brand-specific" not in index, and remote search has n): Brand-specific
+[2026-03-21 22:07:05] [Step3] FAIL(info: "Requires" not in index, and remote search has no exac): Requires
+[2026-03-21 22:07:05] [Step3] OK: agent-content-pipeline
+[2026-03-21 22:07:05] [Step3] FAIL(info: "MANDATORY" not in index, and remote search has no exa): MANDATORY
+[2026-03-21 22:07:05] [Step3] FAIL(info: "airtable" not in index, using remote registry exact m): airtable
+[2026-03-21 22:07:05] [Step3] FAIL(info: "Gmail" not in index, and remote search has no exact s): Gmail
+[2026-03-21 22:07:05] [Step3] OK: Microsoft
+[2026-03-21 22:07:05] [Step3] FAIL(info: "CornerStone" not in index, and remote search has no e): CornerStone
+[2026-03-21 22:07:05] [Step3] OK: ai-news-zh
+[2026-03-21 22:07:06] [Step3] OK: ai-skill-scanner
+[2026-03-21 22:07:06] [Step3] OK: agentledger
+[2026-03-21 22:07:06] [Step3] OK: codeconductor
+[2026-03-21 22:07:06] [Step3] OK: x-ai
+[2026-03-21 22:07:06] [Step3] OK: ai-writing-humanizer
+[2026-03-21 22:07:06] [Step3] OK: airoomltd-global-finance-data-platform
+[2026-03-21 22:07:06] [Step3] OK: clickup-mcp
+[2026-03-21 22:07:06] [Step3] FAIL(info: "Gpt" not in index, and remote search has no exact slu): Gpt
+[2026-03-21 22:07:06] [Step3] OK: sonoscli
+[2026-03-21 22:07:06] [Step3] FAIL(info: "Navigate" not in index, and remote search has no exac): Navigate
+[2026-03-21 22:07:07] [Step3] FAIL(info: "Google" not in index, and remote search has no exact ): Google
+[2026-03-21 22:07:07] [Step3] FAIL(info: "EvoMap" not in index, and remote search has no exact ): EvoMap
+[2026-03-21 22:07:07] [Step3] OK: gcalcli-calendar
+[2026-03-21 22:07:07] [Step3] OK: gog
+[2026-03-21 22:07:07] [Step3] OK: clicksend
+[2026-03-21 22:07:07] [Step3] FAIL(info: "ClickSend" not in index, and remote search has no exa): ClickSend
+[2026-03-21 22:07:08] [Step3] OK: video-frames
+[2026-03-21 22:07:08] [Step3] OK: clickfunnels
+[2026-03-21 22:07:08] [Step3] OK: clipboard
+[2026-03-21 22:07:08] [Step3] FAIL(info: "ClickFunnels" not in index, and remote search has no ): ClickFunnels
+[2026-03-21 22:07:08] [Step3] OK: gogcli
+[2026-03-21 22:07:09] [Step3] FAIL(info: "BluOS" not in index, and remote search has no exact s): BluOS
+[2026-03-21 22:07:09] [Step3] OK: video-cog
+[2026-03-21 22:07:09] [Step3] OK: blucli
+[2026-03-21 22:07:09] [Step3] OK: ordercli
+[2026-03-21 22:07:09] [Step3] OK: yahoo-finance-cli
+[2026-03-21 22:07:09] [Step3] FAIL(info: "NotebookLM" not in index, and remote search has no ex): NotebookLM
+[2026-03-21 22:07:09] [Step3] OK: tiangong-notebooklm-cli
+[2026-03-21 22:07:10] [Step3] OK: ai-video-gen
+[2026-03-21 22:07:10] [Step3] FAIL(info: "inflated" not in index, and remote search has no exac): inflated
+[2026-03-21 22:07:10] [Step3] OK: humanizer
+[2026-03-21 22:07:10] [Step3] OK: text
+[2026-03-21 22:07:10] [Step3] OK: video-generator-seedance
+[2026-03-21 22:07:10] [Step3] OK: stagehand-browser-cli
+[2026-03-21 22:07:11] [Step3] OK: accli
+[2026-03-21 22:07:11] [Step3] FAIL(info: "Billions" not in index, and remote search has no exac): Billions
+[2026-03-21 22:07:11] [Step3] OK: ffmpeg-video-editor
+[2026-03-21 22:07:11] [Step3] OK: video-transcript-downloader
+[2026-03-21 22:07:11] [Step3] OK: google-slides
+[2026-03-21 22:07:11] [Step3] OK: video-subtitles
+[2026-03-21 22:07:11] [Step3] OK: verified-agent-identity
+[2026-03-21 22:07:11] [Step3] FAIL(info: "comprehensive" not in index, and remote search has no): comprehensive
+[2026-03-21 22:07:11] [Step3] OK: debug-checklist
+[2026-03-21 22:07:12] [Step3] OK: ppt-generator
+[2026-03-21 22:07:13] [Step3] OK: demo-video
+[2026-03-21 22:07:13] [Step3] OK: ui-debug-methodology
+[2026-03-21 22:07:13] [Step3] OK: cron-scheduling
+[2026-03-21 22:07:13] [Step3] OK: slides-cog
+[2026-03-21 22:07:13] [Step3] OK: ui-ux-design
+[2026-03-21 22:07:13] [Step3] OK: whatsapp-styling-guide
+[2026-03-21 22:07:13] [Step3] OK: upload-post
+[2026-03-21 22:07:14] [Step3] OK: debug
+[2026-03-21 22:07:14] [Step3] OK: debug-pro
+[2026-03-21 22:07:14] [Step3] OK: debug-methodology
+[2026-03-21 22:07:14] [Step3] OK: debugging-r-environment-and-dependencies
+[2026-03-21 22:07:14] [Step3] OK: debug-detective
+[2026-03-21 22:07:14] [Step3] OK: container-debug
+[2026-03-21 22:07:14] [Step3] OK: Docker
+[2026-03-21 22:07:14] [Step3] OK: docker-essentials
+[2026-03-21 22:07:14] [Step3] OK: n8n
+[2026-03-21 22:07:15] [Step3] OK: productivity-skill
+[2026-03-21 22:07:15] [Step3] OK: runesleo-systematic-debugging
+[2026-03-21 22:07:15] [Step3] OK: confucius-debug
+[2026-03-21 22:07:15] [Step3] FAIL(info: "docker" not in index, using remote registry exact mat): docker
+[2026-03-21 22:07:15] [Step3] OK: todoist
+[2026-03-21 22:07:15] [Step3] OK: oracle
+[2026-03-21 22:07:16] [Step3] OK: moltpixel
+[2026-03-21 22:07:16] [Step3] OK: rescuetime
+[2026-03-21 22:07:16] [Step3] OK: api-dev
+[2026-03-21 22:07:16] [Step3] OK: openclaw-mcp-debugger
+[2026-03-21 22:07:16] [Step3] OK: oura-analytics
+[2026-03-21 22:07:16] [Step3] OK: code-mentor
+[2026-03-21 22:07:16] [Step3] OK: productivity
+[2026-03-21 22:07:16] [Step3] OK: afrexai-productivity-system
+[2026-03-21 22:07:16] [Step3] OK: productivity-tracker
+[2026-03-21 22:07:17] [Step3] OK: 13-day-sprint-method
+[2026-03-21 22:07:17] [Step3] OK: focus-deep-work
+[2026-03-21 22:07:17] [Step3] OK: ai-productivity-audit
+[2026-03-21 22:07:17] [Step3] OK: blog-writer
+[2026-03-21 22:07:17] [Step3] OK: pndr
+[2026-03-21 22:07:17] [Step3] OK: gitai-skill
+[2026-03-21 22:07:17] [Step3] OK: daily-rhythm
+[2026-03-21 22:07:17] [Step3] OK: flowmind
+[2026-03-21 22:07:17] [Step3] OK: Oura
+[2026-03-21 22:07:17] [Step3] 安装完成: 79 成功 / 21 失败
+[2026-03-21 22:07:17] [Step4] UNSAFE: agent-tinman -> 'chmod 777' in tinman_runner.py
+[2026-03-21 22:07:17] [Step4] WARN: codeconductor 无 SKILL.md
+[2026-03-21 22:07:17] [Step4] UNSAFE: demo-video -> '.send(' in record-demo.js
+[2026-03-21 22:07:17] [Step4] 安全通过: 77 | 危险: 2
+[2026-03-21 22:07:17] [Step5] OK: agent-content-pipeline
+[2026-03-21 22:07:17] [Step5] OK: agentledger
+[2026-03-21 22:07:17] [Step5] OK: ai-picture-book
+[2026-03-21 22:07:17] [Step5] OK: ai-skill-scanner
+[2026-03-21 22:07:17] [Step5] OK: ai-news-zh
+[2026-03-21 22:07:17] [Step5] OK: ai-writing-humanizer
+[2026-03-21 22:07:17] [Step5] OK: zoho-mail
+[2026-03-21 22:07:17] [Step5] OK: Zoho
+[2026-03-21 22:07:17] [Step5] OK: airoomltd-global-finance-data-platform
+[2026-03-21 22:07:17] [Step5] OK: x-ai
+[2026-03-21 22:07:17] [Step5] FAIL: codeconductor -> [Errno 2] No such file or directory: '/Users/fhjtech/.openclaw/workspace/skills/codeconductor/SKILL.md'，撤销
+[2026-03-21 22:07:17] [Step5] OK: Microsoft
+[2026-03-21 22:07:17] [Step5] OK: clicksend
+[2026-03-21 22:07:17] [Step5] OK: clickfunnels
+[2026-03-21 22:07:17] [Step5] OK: clickup-mcp
+[2026-03-21 22:07:17] [Step5] OK: clipboard
+[2026-03-21 22:07:17] [Step5] OK: sonoscli
+[2026-03-21 22:07:17] [Step5] OK: gcalcli-calendar
+[2026-03-21 22:07:17] [Step5] OK: gog
+[2026-03-21 22:07:17] [Step5] OK: gogcli
+[2026-03-21 22:07:17] [Step5] OK: blucli
+[2026-03-21 22:07:17] [Step5] OK: ordercli
+[2026-03-21 22:07:17] [Step5] OK: yahoo-finance-cli
+[2026-03-21 22:07:17] [Step5] OK: tiangong-notebooklm-cli
+[2026-03-21 22:07:17] [Step5] OK: stagehand-browser-cli
+[2026-03-21 22:07:17] [Step5] OK: accli
+[2026-03-21 22:07:17] [Step5] OK: video-generator-seedance
+[2026-03-21 22:07:17] [Step5] OK: video-frames
+[2026-03-21 22:07:17] [Step5] OK: google-slides
+[2026-03-21 22:07:17] [Step5] OK: video-transcript-downloader
+[2026-03-21 22:07:17] [Step5] OK: ffmpeg-video-editor
+[2026-03-21 22:07:17] [Step5] OK: verified-agent-identity
+[2026-03-21 22:07:17] [Step5] OK: video-subtitles
+[2026-03-21 22:07:17] [Step5] OK: ppt-generator
+[2026-03-21 22:07:17] [Step5] OK: video-cog
+[2026-03-21 22:07:17] [Step5] OK: ai-video-gen
+[2026-03-21 22:07:17] [Step5] OK: humanizer
+[2026-03-21 22:07:17] [Step5] OK: text
+[2026-03-21 22:07:17] [Step5] OK: slides-cog
+[2026-03-21 22:07:17] [Step5] OK: ui-ux-design
+[2026-03-21 22:07:17] [Step5] OK: whatsapp-styling-guide
+[2026-03-21 22:07:17] [Step5] OK: upload-post
+[2026-03-21 22:07:17] [Step5] OK: debug
+[2026-03-21 22:07:17] [Step5] OK: debug-pro
+[2026-03-21 22:07:17] [Step5] OK: debug-checklist
+[2026-03-21 22:07:17] [Step5] OK: debug-methodology
+[2026-03-21 22:07:17] [Step5] OK: debugging-r-environment-and-dependencies
+[2026-03-21 22:07:17] [Step5] OK: debug-detective
+[2026-03-21 22:07:17] [Step5] OK: container-debug
+[2026-03-21 22:07:17] [Step5] OK: docker-essentials
+[2026-03-21 22:07:17] [Step5] OK: Docker
+[2026-03-21 22:07:17] [Step5] OK: runesleo-systematic-debugging
+[2026-03-21 22:07:17] [Step5] OK: n8n
+[2026-03-21 22:07:17] [Step5] OK: confucius-debug
+[2026-03-21 22:07:17] [Step5] OK: ui-debug-methodology
+[2026-03-21 22:07:17] [Step5] OK: oracle
+[2026-03-21 22:07:17] [Step5] OK: cron-scheduling
+[2026-03-21 22:07:17] [Step5] OK: api-dev
+[2026-03-21 22:07:17] [Step5] OK: openclaw-mcp-debugger
+[2026-03-21 22:07:17] [Step5] OK: code-mentor
+[2026-03-21 22:07:17] [Step5] OK: productivity
+[2026-03-21 22:07:17] [Step5] OK: productivity-skill
+[2026-03-21 22:07:17] [Step5] OK: afrexai-productivity-system
+[2026-03-21 22:07:17] [Step5] OK: productivity-tracker
+[2026-03-21 22:07:17] [Step5] OK: todoist
+[2026-03-21 22:07:17] [Step5] OK: ai-productivity-audit
+[2026-03-21 22:07:17] [Step5] OK: 13-day-sprint-method
+[2026-03-21 22:07:17] [Step5] OK: focus-deep-work
+[2026-03-21 22:07:17] [Step5] OK: blog-writer
+[2026-03-21 22:07:17] [Step5] OK: rescuetime
+[2026-03-21 22:07:17] [Step5] OK: flowmind
+[2026-03-21 22:07:17] [Step5] OK: moltpixel
+[2026-03-21 22:07:17] [Step5] OK: pndr
+[2026-03-21 22:07:17] [Step5] OK: gitai-skill
+[2026-03-21 22:07:17] [Step5] OK: daily-rhythm
+[2026-03-21 22:07:17] [Step5] OK: oura-analytics
+[2026-03-21 22:07:17] [Step5] OK: Oura
+[2026-03-21 22:07:17] [Step5] 集成成功: 76 | 撤销: 1
+[2026-03-21 22:07:17] [Step6] 完成，76 个技能已集成
+[2026-03-21 22:07:17] === 完成: 集成76 | 安全77 | 安装79 | 失败21 ===

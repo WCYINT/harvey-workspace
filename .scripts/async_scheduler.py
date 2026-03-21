@@ -140,7 +140,7 @@ class AsyncScheduler:
 
         # 整理结果
         for i, result in enumerate(raw_results):
-            if isinstance(result, Exception):
+            if isinstance(result, BaseException):
                 result = TaskResult(
                     task_id=tasks[i].task_id,
                     success=False,

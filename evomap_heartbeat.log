@@ -3325,3 +3325,128 @@
 [2026-03-21 08:10:05] HTTP Error: 401 Unauthorized
 [2026-03-21 08:10:05] Heartbeat failed. Will retry in 5.0 minutes.
 [2026-03-21 08:15:05] Waiting 15.0 minutes...
+[2026-03-21 08:30:05] Heartbeat #178
+[2026-03-21 08:30:05] Sending heartbeat heartbeat_1774053005_9c56be85
+[2026-03-21 08:30:06] HTTP Error: 401 Unauthorized
+[2026-03-21 08:30:06] Heartbeat failed. Will retry in 5.0 minutes.
+[2026-03-21 08:35:06] Waiting 15.0 minutes...
+[2026-03-21 08:50:07] Heartbeat #179
+[2026-03-21 08:50:07] Sending heartbeat heartbeat_1774054207_86f4d823
+[2026-03-21 08:50:07] HTTP Error: 401 Unauthorized
+[2026-03-21 08:50:07] Heartbeat failed. Will retry in 5.0 minutes.
+[2026-03-21 08:55:08] Waiting 15.0 minutes...
+[2026-03-21 09:10:08] Heartbeat #180
+[2026-03-21 09:10:08] Sending heartbeat heartbeat_1774055408_bd86be3f
+[2026-03-21 09:10:09] HTTP Error: 401 Unauthorized
+[2026-03-21 09:10:09] Heartbeat failed. Will retry in 5.0 minutes.
+[2026-03-21 09:15:09] Waiting 15.0 minutes...
+[2026-03-21 09:30:09] Heartbeat #181
+[2026-03-21 09:30:09] Sending heartbeat heartbeat_1774056609_9c4d98b6
+[2026-03-21 09:30:11] HTTP Error: 401 Unauthorized
+[2026-03-21 09:30:11] Heartbeat failed. Will retry in 5.0 minutes.
+[2026-03-21 09:35:11] Waiting 15.0 minutes...
+[2026-03-21 09:50:11] Heartbeat #182
+[2026-03-21 09:50:11] Sending heartbeat heartbeat_1774057811_8bb8e1ee
+[2026-03-21 09:50:12] HTTP Error: 401 Unauthorized
+[2026-03-21 09:50:12] Heartbeat failed. Will retry in 5.0 minutes.
+[2026-03-21 09:55:12] Waiting 15.0 minutes...
+[2026-03-21 10:10:12] Heartbeat #183
+[2026-03-21 10:10:12] Sending heartbeat heartbeat_1774059012_93328f34
+[2026-03-21 10:10:14] HTTP Error: 401 Unauthorized
+[2026-03-21 10:10:14] Heartbeat failed. Will retry in 5.0 minutes.
+[2026-03-21 10:15:14] Waiting 15.0 minutes...
+[2026-03-21 10:30:14] Heartbeat #184
+[2026-03-21 10:30:14] Sending heartbeat heartbeat_1774060214_e2889ea6
+[2026-03-21 10:30:16] HTTP Error: 401 Unauthorized
+[2026-03-21 10:30:16] Heartbeat failed. Will retry in 5.0 minutes.
+[2026-03-21 10:35:16] Waiting 15.0 minutes...
+[2026-03-21 10:50:16] Heartbeat #185
+[2026-03-21 10:50:16] Sending heartbeat heartbeat_1774061416_271a1488
+[2026-03-21 10:50:17] HTTP Error: 401 Unauthorized
+[2026-03-21 10:50:17] Heartbeat failed. Will retry in 5.0 minutes.
+[2026-03-21 10:55:18] Waiting 15.0 minutes...
+[2026-03-21 11:18:07] Heartbeat #186
+[2026-03-21 11:18:07] Sending heartbeat heartbeat_1774063087_495ef8db
+[2026-03-21 11:18:10] HTTP Error: 401 Unauthorized
+[2026-03-21 11:18:10] Heartbeat failed. Will retry in 5.0 minutes.
+[2026-03-21 11:23:10] Waiting 15.0 minutes...
+[2026-03-21 11:38:10] Heartbeat #187
+[2026-03-21 11:38:10] Sending heartbeat heartbeat_1774064290_1175b8cd
+[2026-03-21 11:38:12] HTTP Error: 401 Unauthorized
+[2026-03-21 11:38:12] Heartbeat failed. Will retry in 5.0 minutes.
+[2026-03-21 11:43:12] Waiting 15.0 minutes...
+[2026-03-21 11:58:12] Heartbeat #188
+[2026-03-21 11:58:12] Sending heartbeat heartbeat_1774065492_f9c863f4
+[2026-03-21 11:58:14] HTTP Error: 401 Unauthorized
+[2026-03-21 11:58:14] Heartbeat failed. Will retry in 5.0 minutes.
+[2026-03-21 12:03:14] Waiting 15.0 minutes...
+[2026-03-21 12:18:14] Heartbeat #189
+[2026-03-21 12:18:14] Sending heartbeat heartbeat_1774066694_426e88a4
+[2026-03-21 12:18:15] HTTP Error: 401 Unauthorized
+[2026-03-21 12:18:15] Heartbeat failed. Will retry in 5.0 minutes.
+[2026-03-21 12:23:15] Waiting 15.0 minutes...
+[2026-03-21 12:38:16] Heartbeat #190
+[2026-03-21 12:38:16] Sending heartbeat heartbeat_1774067896_730aabe9
+[2026-03-21 12:38:17] HTTP Error: 401 Unauthorized
+[2026-03-21 12:38:17] Heartbeat failed. Will retry in 5.0 minutes.
+[2026-03-21 12:43:17] Waiting 15.0 minutes...
+[2026-03-21 12:58:18] Heartbeat #191
+[2026-03-21 12:58:18] Sending heartbeat heartbeat_1774069098_c222e707
+[2026-03-21 12:58:25] HTTP Error: 401 Unauthorized
+[2026-03-21 12:58:25] Heartbeat failed. Will retry in 5.0 minutes.
+[2026-03-21 13:03:25] Waiting 15.0 minutes...
+[2026-03-21 13:18:26] Heartbeat #192
+[2026-03-21 13:18:26] Sending heartbeat heartbeat_1774070306_14d8c8b9
+[2026-03-21 13:18:29] HTTP Error: 401 Unauthorized
+[2026-03-21 13:18:29] Heartbeat failed. Will retry in 5.0 minutes.
+[2026-03-21 13:23:30] Waiting 15.0 minutes...
+[2026-03-21 13:44:00] Heartbeat #193
+[2026-03-21 13:44:01] Sending heartbeat heartbeat_1774071841_1a627b04
+[2026-03-21 13:44:03] HTTP Error: 401 Unauthorized
+[2026-03-21 13:44:03] Heartbeat failed. Will retry in 5.0 minutes.
+[2026-03-21 13:49:03] Waiting 15.0 minutes...
+[2026-03-21 14:04:03] Heartbeat #194
+[2026-03-21 14:04:04] Sending heartbeat heartbeat_1774073044_f68872b4
+[2026-03-21 14:04:05] HTTP Error: 401 Unauthorized
+[2026-03-21 14:04:05] Heartbeat failed. Will retry in 5.0 minutes.
+[2026-03-21 14:09:05] Waiting 15.0 minutes...
+[2026-03-21 17:12:39] Heartbeat #195
+[2026-03-21 17:12:39] Sending heartbeat heartbeat_1774084359_2d3d5773
+[2026-03-21 17:12:40] HTTP Error: 401 Unauthorized
+[2026-03-21 17:12:40] Heartbeat failed. Will retry in 5.0 minutes.
+[2026-03-21 18:06:16] Waiting 15.0 minutes...
+[2026-03-21 19:04:49] Heartbeat #196
+[2026-03-21 19:04:49] Sending heartbeat heartbeat_1774091089_7fdd8394
+[2026-03-21 19:04:50] HTTP Error: 401 Unauthorized
+[2026-03-21 19:04:50] Heartbeat failed. Will retry in 5.0 minutes.
+[2026-03-21 19:09:50] Waiting 15.0 minutes...
+[2026-03-21 19:24:50] Heartbeat #197
+[2026-03-21 19:24:50] Sending heartbeat heartbeat_1774092290_45bf09c7
+[2026-03-21 19:24:51] HTTP Error: 401 Unauthorized
+[2026-03-21 19:24:51] Heartbeat failed. Will retry in 5.0 minutes.
+[2026-03-21 19:29:51] Waiting 15.0 minutes...
+[2026-03-21 19:44:51] Heartbeat #198
+[2026-03-21 19:44:51] Sending heartbeat heartbeat_1774093491_81bc5523
+[2026-03-21 19:44:52] HTTP Error: 401 Unauthorized
+[2026-03-21 19:44:52] Heartbeat failed. Will retry in 5.0 minutes.
+[2026-03-21 19:49:52] Waiting 15.0 minutes...
+[2026-03-21 20:04:52] Heartbeat #199
+[2026-03-21 20:04:52] Sending heartbeat heartbeat_1774094692_8d5bde70
+[2026-03-21 20:04:53] HTTP Error: 401 Unauthorized
+[2026-03-21 20:04:53] Heartbeat failed. Will retry in 5.0 minutes.
+[2026-03-21 20:09:53] Waiting 15.0 minutes...
+[2026-03-21 21:09:21] Heartbeat #200
+[2026-03-21 21:09:21] Sending heartbeat heartbeat_1774098561_ea3d366d
+[2026-03-21 21:09:22] HTTP Error: 401 Unauthorized
+[2026-03-21 21:09:22] Heartbeat failed. Will retry in 5.0 minutes.
+[2026-03-21 21:29:55] Waiting 15.0 minutes...
+[2026-03-21 21:44:55] Heartbeat #201
+[2026-03-21 21:44:55] Sending heartbeat heartbeat_1774100695_c3baf4ea
+[2026-03-21 21:44:56] HTTP Error: 401 Unauthorized
+[2026-03-21 21:44:56] Heartbeat failed. Will retry in 5.0 minutes.
+[2026-03-21 21:49:57] Waiting 15.0 minutes...
+[2026-03-21 22:04:57] Heartbeat #202
+[2026-03-21 22:04:57] Sending heartbeat heartbeat_1774101897_9398f1f2
+[2026-03-21 22:04:59] HTTP Error: 401 Unauthorized
+[2026-03-21 22:04:59] Heartbeat failed. Will retry in 5.0 minutes.
+[2026-03-21 22:09:59] Waiting 15.0 minutes...

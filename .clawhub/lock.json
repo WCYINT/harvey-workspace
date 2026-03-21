@@ -476,6 +476,792 @@
     "qwen-image": {
       "version": "1.0.0",
       "installedAt": 1773932313204
+    },
+    "parallel-ai-research": {
+      "version": "1.1.0",
+      "installedAt": 1774063137994
+    },
+    "research-cog": {
+      "version": "1.0.3",
+      "installedAt": 1774063142179
+    },
+    "research-engine": {
+      "version": "1.0.0",
+      "installedAt": 1774063144865
+    },
+    "research-tracker": {
+      "version": "0.1.0",
+      "installedAt": 1774063147645
+    },
+    "research-company": {
+      "version": "1.0.0",
+      "installedAt": 1774063151177
+    },
+    "research-library": {
+      "version": "0.1.0",
+      "installedAt": 1774063198853
+    },
+    "research-to-wechat": {
+      "version": "0.4.2",
+      "installedAt": 1774063200124
+    },
+    "research-web-publisher": {
+      "version": "1.0.0",
+      "installedAt": 1774063201545
+    },
+    "gemini-deep-research": {
+      "version": "1.0.0",
+      "installedAt": 1774063202954
+    },
+    "deepresearch-conversation": {
+      "version": "1.1.2",
+      "installedAt": 1774063204621
+    },
+    "competitive-intelligence-market-research": {
+      "version": "1.0.0",
+      "installedAt": 1774063206472
+    },
+    "B2B": {
+      "version": "",
+      "installedAt": 1774063208325
+    },
+    "deepresearchwork": {
+      "version": "1.0.0",
+      "installedAt": 1774063209659
+    },
+    "agentmail": {
+      "version": "1.1.1",
+      "installedAt": 1774065637786
+    },
+    "agent-memory": {
+      "version": "1.0.0",
+      "installedAt": 1774065639397
+    },
+    "agent-team-orchestration": {
+      "version": "1.0.0",
+      "installedAt": 1774065640902
+    },
+    "agent-browser-core": {
+      "version": "1.0.1",
+      "installedAt": 1774065643809
+    },
+    "agent-directory": {
+      "version": "1.2.0",
+      "installedAt": 1774065645511
+    },
+    "agent-builder": {
+      "version": "1.0.0",
+      "installedAt": 1774065648163
+    },
+    "agentarxiv": {
+      "version": "1.0.9",
+      "installedAt": 1774065650024
+    },
+    "agent-church": {
+      "version": "1.2.0",
+      "installedAt": 1774065651893
+    },
+    "agent-chronicle": {
+      "version": "0.6.2",
+      "installedAt": 1774065653365
+    },
+    "agents-manager": {
+      "version": "1.0.2",
+      "installedAt": 1774065655006
+    },
+    "agentgram": {
+      "version": "2.5.0",
+      "installedAt": 1774065657448
+    },
+    "agent-selfie": {
+      "version": "1.2.1",
+      "installedAt": 1774065659120
+    },
+    "agentmemory": {
+      "version": "1.3.0",
+      "installedAt": 1774065660696
+    },
+    "agent-reach": {
+      "version": "1.1.0",
+      "installedAt": 1774065662304
+    },
+    "ai-ppt-generator": {
+      "version": "1.1.2",
+      "installedAt": 1774065663456
+    },
+    "ai-web-automation": {
+      "version": "1.0.0",
+      "installedAt": 1774065664962
+    },
+    "ai-news-collectors": {
+      "version": "1.0.0",
+      "installedAt": 1774065666529
+    },
+    "AI": {
+      "version": "",
+      "installedAt": 1774065667993
+    },
+    "ai-agent-helper": {
+      "version": "1.0.0",
+      "installedAt": 1774065670223
+    },
+    "ai-research-scraper": {
+      "version": "1.8.14",
+      "installedAt": 1774065672437
+    },
+    "ai-humanizer-cn": {
+      "version": "3.1.0",
+      "installedAt": 1774065673984
+    },
+    "baidu-search": {
+      "version": "1.1.0",
+      "installedAt": 1774065675127
+    },
+    "ai-writing-assistant-cn-v1-1": {
+      "version": "1.1.0",
+      "installedAt": 1774065676689
+    },
+    "ai-research-to-obsidian": {
+      "version": "1.0.0",
+      "installedAt": 1774065678152
+    },
+    "ai-chatbot-v2": {
+      "version": "1.0.0",
+      "installedAt": 1774065680011
+    },
+    "ai-employee-skill": {
+      "version": "1.0.0",
+      "installedAt": 1774065681802
+    },
+    "ai-newsletter-toolkit": {
+      "version": "1.1.0",
+      "installedAt": 1774065683216
+    },
+    "ai-employee-team": {
+      "version": "1.0.1",
+      "installedAt": 1774065684594
+    },
+    "humanize-ai-text": {
+      "version": "1.0.1",
+      "installedAt": 1774065686099
+    },
+    "image-generation": {
+      "version": "1.0.3",
+      "installedAt": 1774065688015
+    },
+    "gmail": {
+      "version": "1.0.6",
+      "installedAt": 1774065689138
+    },
+    "autonomous-agent": {
+      "version": "2.1.1",
+      "installedAt": 1774065692195
+    },
+    "autonomous-skill-orchestrator": {
+      "version": "1.2.0",
+      "installedAt": 1774065695316
+    },
+    "autonomous-feature-planner": {
+      "version": "1.0.1",
+      "installedAt": 1774065696746
+    },
+    "autonomous-execution": {
+      "version": "1.1.0",
+      "installedAt": 1774065698424
+    },
+    "autonomous-tasks": {
+      "version": "10.3.1",
+      "installedAt": 1774065700013
+    },
+    "Self-driven": {
+      "version": "",
+      "installedAt": 1774065701476
+    },
+    "autonomous-commerce": {
+      "version": "1.0.0",
+      "installedAt": 1774065703270
+    },
+    "autonomous-research": {
+      "version": "1.0.0",
+      "installedAt": 1774065705474
+    },
+    "btc15-autonomous-market": {
+      "version": "1.1.1",
+      "installedAt": 1774065706970
+    },
+    "ralph-mode": {
+      "version": "1.2.0",
+      "installedAt": 1774065708482
+    },
+    "global-agent-node-with-real-time-context-streaming-mission-form-autonomous-network-status-awaiting-peers": {
+      "version": "0.0.1",
+      "installedAt": 1774065711151
+    },
+    "denario-skill": {
+      "version": "1.0.0",
+      "installedAt": 1774065713126
+    },
+    "base-trader": {
+      "version": "1.1.1",
+      "installedAt": 1774065714812
+    },
+    "nft-skill": {
+      "version": "1.0.0",
+      "installedAt": 1774065716898
+    },
+    "polymarket-agent": {
+      "version": "1.0.2",
+      "installedAt": 1774065718913
+    },
+    "web-deploy-github": {
+      "version": "1.0.0",
+      "installedAt": 1774065720575
+    },
+    "polyclaw": {
+      "version": "1.0.2",
+      "installedAt": 1774065722473
+    },
+    "ralph-loops": {
+      "version": "1.0.2",
+      "installedAt": 1774065724277
+    },
+    "agentic-paper-digest-skill": {
+      "version": "0.3.3",
+      "installedAt": 1774065725650
+    },
+    "agentic-ai-gold": {
+      "version": "4.0.0",
+      "installedAt": 1774065727539
+    },
+    "agentic-calling": {
+      "version": "0.1.0",
+      "installedAt": 1774065729930
+    },
+    "agentic-spicy-food": {
+      "version": "1.9.1",
+      "installedAt": 1774065731591
+    },
+    "agentic-commerce": {
+      "version": "1.0.1",
+      "installedAt": 1774065734221
+    },
+    "agentic-workflow-automation": {
+      "version": "0.1.0",
+      "installedAt": 1774065736091
+    },
+    "agentic-browser": {
+      "version": "0.1.5",
+      "installedAt": 1774065738692
+    },
+    "agentic-x402": {
+      "version": "0.2.6",
+      "installedAt": 1774065740468
+    },
+    "agentic-browser-0-1-2": {
+      "version": "1.0.0",
+      "installedAt": 1774065742211
+    },
+    "browse": {
+      "version": "2.0.2",
+      "installedAt": 1774065744863
+    },
+    "agenticcreed-signup-lead": {
+      "version": "1.0.1",
+      "installedAt": 1774065746426
+    },
+    "agentic-money": {
+      "version": "1.0.0",
+      "installedAt": 1774065749132
+    },
+    "agentic-commerce-relay": {
+      "version": "0.1.0",
+      "installedAt": 1774065750922
+    },
+    "agentic-mcp-server-builder": {
+      "version": "0.1.0",
+      "installedAt": 1774065752339
+    },
+    "agenticmail": {
+      "version": "0.5.50",
+      "installedAt": 1774065753758
+    },
+    "agentic-security-audit": {
+      "version": "1.0.0",
+      "installedAt": 1774065755166
+    },
+    "agentic-powered-memecoin-trader": {
+      "version": "0.1.0",
+      "installedAt": 1774065757333
+    },
+    "agentic-commerce-forthecult": {
+      "version": "1.0.5",
+      "installedAt": 1774065759111
+    },
+    "agenticstreet": {
+      "version": "1.0.3",
+      "installedAt": 1774065760632
+    },
+    "agentic-letters": {
+      "version": "1.1.2",
+      "installedAt": 1774065762528
+    },
+    "gpt": {
+      "version": "1.0.6",
+      "installedAt": 1774065764228
+    },
+    "gpt-analyzer": {
+      "version": "1.0.0",
+      "installedAt": 1774065766692
+    },
+    "gpt-chat": {
+      "version": "1.0.0",
+      "installedAt": 1774065768075
+    },
+    "elite-longterm-memory": {
+      "version": "1.2.3",
+      "installedAt": 1774065769225
+    },
+    "chatgpt-apps": {
+      "version": "0.1.1",
+      "installedAt": 1774065770686
+    },
+    "chatgpt-exporter-ultimate": {
+      "version": "1.3.1",
+      "installedAt": 1774065772587
+    },
+    "poyo-gpt-image-1-5": {
+      "version": "1.0.0",
+      "installedAt": 1774065774582
+    },
+    "poyo-gpt-4o-image": {
+      "version": "1.0.0",
+      "installedAt": 1774065776047
+    },
+    "openclaw-aisa-llm-gateway": {
+      "version": "1.0.0",
+      "installedAt": 1774065777486
+    },
+    "chatgpt-import": {
+      "version": "1.0.2",
+      "installedAt": 1774065779155
+    },
+    "openclaw-aisa-affordable-llm-model-tokens": {
+      "version": "1.0.1",
+      "installedAt": 1774065781242
+    },
+    "openclaw-aisa-llm-router": {
+      "version": "1.0.0",
+      "installedAt": 1774065784668
+    },
+    "creative-toolkit": {
+      "version": "1.0.15",
+      "installedAt": 1774065787045
+    },
+    "add-newcli-provider": {
+      "version": "3.2.0",
+      "installedAt": 1774065788810
+    },
+    "evoweb-ai": {
+      "version": "1.0.10",
+      "installedAt": 1774065790243
+    },
+    "igpt-email-ask": {
+      "version": "1.0.0",
+      "installedAt": 1774065792244
+    },
+    "ai-pdf-builder": {
+      "version": "1.2.3",
+      "installedAt": 1774065794452
+    },
+    "kagi-fastgpt": {
+      "version": "1.0.0",
+      "installedAt": 1774065796761
+    },
+    "llmwhisperer": {
+      "version": "0.0.7",
+      "installedAt": 1774065799574
+    },
+    "llm-supervisor": {
+      "version": "0.3.0",
+      "installedAt": 1774065802355
+    },
+    "llmrouter": {
+      "version": "0.1.1",
+      "installedAt": 1774065804049
+    },
+    "llm-wallet": {
+      "version": "1.0.0",
+      "installedAt": 1774065806681
+    },
+    "llmfit": {
+      "version": "0.2.2",
+      "installedAt": 1774065808498
+    },
+    "cnki-exp-search-automation": {
+      "version": "0.2.0",
+      "installedAt": 1774093692934
+    },
+    "free-ride": {
+      "version": "1.0.4",
+      "installedAt": 1774100349212
+    },
+    "agentguard": {
+      "version": "1.0.0",
+      "installedAt": 1774100349486
+    },
+    "ai-ppt-generate": {
+      "version": "1.0.0",
+      "installedAt": 1774100351154
+    },
+    "mailchimp": {
+      "version": "1.0.3",
+      "installedAt": 1774100351164
+    },
+    "openai-image-gen": {
+      "version": "1.0.1",
+      "installedAt": 1774100351181
+    },
+    "agent-browser-stagehand": {
+      "version": "1.0.0",
+      "installedAt": 1774100351183
+    },
+    "agent-commerce-engine": {
+      "version": "1.7.1",
+      "installedAt": 1774100351210
+    },
+    "ai-persona-os": {
+      "version": "1.6.2",
+      "installedAt": 1774100351229
+    },
+    "Airtable": {
+      "version": "",
+      "installedAt": 1774100351241
+    },
+    "agentwallet": {
+      "version": "1.0.70",
+      "installedAt": 1774100351244
+    },
+    "agent-browser-2": {
+      "version": "0.1.0",
+      "installedAt": 1774100351257
+    },
+    "agent-config": {
+      "version": "1.0.0",
+      "installedAt": 1774100351263
+    },
+    "ai-drama-prompt-factory": {
+      "version": "1.0.0",
+      "installedAt": 1774100351304
+    },
+    "agent-browser-clawdbot": {
+      "version": "0.1.0",
+      "installedAt": 1774100351478
+    },
+    "codeconductor": {
+      "version": "1.0.1",
+      "installedAt": 1774100351803
+    },
+    "autonomous-pm": {
+      "version": "1.0.0",
+      "installedAt": 1774100351860
+    },
+    "autonomous-skill": {
+      "version": "0.1.0",
+      "installedAt": 1774100351905
+    },
+    "autonomous-task-runner": {
+      "version": "2.1.0",
+      "installedAt": 1774100351917
+    },
+    "openclaw-aisa-llm-image-video": {
+      "version": "1.0.0",
+      "installedAt": 1774100352817
+    },
+    "coding-agent-backup": {
+      "version": "1.0.0",
+      "installedAt": 1774100353052
+    },
+    "coding-pm": {
+      "version": "0.4.2",
+      "installedAt": 1774100353160
+    },
+    "coding-2": {
+      "version": "0.1.0",
+      "installedAt": 1774100353161
+    },
+    "llm-data-automation": {
+      "version": "2.1.0",
+      "installedAt": 1774100353598
+    },
+    "coding": {
+      "version": "1.0.3",
+      "installedAt": 1774100353714
+    },
+    "llm-paper-review-generator": {
+      "version": "0.0.2",
+      "installedAt": 1774100354045
+    },
+    "coding-1-0-3": {
+      "version": "1.0.0",
+      "installedAt": 1774100354086
+    },
+    "llms-txt-generator": {
+      "version": "0.1.0",
+      "installedAt": 1774100354123
+    },
+    "shellmates": {
+      "version": "1.0.0",
+      "installedAt": 1774100354175
+    },
+    "markdown-converter": {
+      "version": "1.0.0",
+      "installedAt": 1774100354193
+    },
+    "llmcouncil-router": {
+      "version": "1.0.0",
+      "installedAt": 1774100354205
+    },
+    "skirmish": {
+      "version": "1.0.0",
+      "installedAt": 1774100354222
+    },
+    "llm-evaluator-pro": {
+      "version": "1.0.0",
+      "installedAt": 1774100354242
+    },
+    "aisa-llm-router-skill": {
+      "version": "1.0.0",
+      "installedAt": 1774100354247
+    },
+    "coding-as-dressing": {
+      "version": "1.0.0",
+      "installedAt": 1774100354255
+    },
+    "coding-agent-orchestrator": {
+      "version": "1.0.1",
+      "installedAt": 1774100354269
+    },
+    "llm-video-generator": {
+      "version": "1.0.1",
+      "installedAt": 1774100354270
+    },
+    "tavily": {
+      "version": "1.0.0",
+      "installedAt": 1774100354324
+    },
+    "toughcoding": {
+      "version": "1.0.2",
+      "installedAt": 1774100354434
+    },
+    "coding-lead": {
+      "version": "1.0.30",
+      "installedAt": 1774100354446
+    },
+    "coding-assistant": {
+      "version": "1.0.0",
+      "installedAt": 1774100354569
+    },
+    "coding-philosophy": {
+      "version": "1.1.1",
+      "installedAt": 1774100354587
+    },
+    "kilocli-coding-agent": {
+      "version": "0.0.9",
+      "installedAt": 1774100355006
+    },
+    "minimax-coding-plan-usage": {
+      "version": "1.0.0",
+      "installedAt": 1774100355271
+    },
+    "opencode-controller": {
+      "version": "1.0.0",
+      "installedAt": 1774100355308
+    },
+    "vibe-coding": {
+      "version": "1.0.0",
+      "installedAt": 1774100355383
+    },
+    "noir-developer": {
+      "version": "0.1.0",
+      "installedAt": 1774100355492
+    },
+    "book-web-developer": {
+      "version": "1.0.1",
+      "installedAt": 1774100355561
+    },
+    "game-developer-skill": {
+      "version": "1.0.0",
+      "installedAt": 1774100355772
+    },
+    "encoding-formats": {
+      "version": "1.0.0",
+      "installedAt": 1774100356200
+    },
+    "trend-watcher": {
+      "version": "1.0.1",
+      "installedAt": 1774100356537
+    },
+    "Remotion": {
+      "version": "",
+      "installedAt": 1774100357043
+    },
+    "openclaw-kirocli-coding-agent": {
+      "version": "1.5.0",
+      "installedAt": 1774100357280
+    },
+    "developer": {
+      "version": "1.0.0",
+      "installedAt": 1774100357676
+    },
+    "developer-agent": {
+      "version": "1.0.0",
+      "installedAt": 1774100357754
+    },
+    "SQL": {
+      "version": "",
+      "installedAt": 1774100357795
+    },
+    "google-play": {
+      "version": "1.0.3",
+      "installedAt": 1774100357823
+    },
+    "megaeth-ai-developer-skills": {
+      "version": "0.1.0",
+      "installedAt": 1774100357844
+    },
+    "cli-developer": {
+      "version": "0.1.0",
+      "installedAt": 1774100357922
+    },
+    "developer-interview-simulator": {
+      "version": "1.0.2",
+      "installedAt": 1774100357923
+    },
+    "developer-utils": {
+      "version": "1.0.2",
+      "installedAt": 1774100357923
+    },
+    "php-full-stack-developer": {
+      "version": "0.1.0",
+      "installedAt": 1774100357952
+    },
+    "developer-docs-framework": {
+      "version": "1.0.1",
+      "installedAt": 1774100357957
+    },
+    "fullstack-developer": {
+      "version": "1.0.0",
+      "installedAt": 1774100357968
+    },
+    "openai-docs": {
+      "version": "1.0.0",
+      "installedAt": 1774100358008
+    },
+    "megaeth": {
+      "version": "1.0.0",
+      "installedAt": 1774100358325
+    },
+    "scrapesense-developer": {
+      "version": "1.0.1",
+      "installedAt": 1774100358441
+    },
+    "remotion-video-toolkit": {
+      "version": "1.4.0",
+      "installedAt": 1774100358460
+    },
+    "android-3d-developer": {
+      "version": "0.1.0",
+      "installedAt": 1774100358507
+    },
+    "sql-toolkit": {
+      "version": "1.0.0",
+      "installedAt": 1774100358573
+    },
+    "prd": {
+      "version": "2.0.5",
+      "installedAt": 1774100358577
+    },
+    "sysadmin-toolbox": {
+      "version": "1.1.0",
+      "installedAt": 1774100358647
+    },
+    "skill-creator": {
+      "version": "0.1.0",
+      "installedAt": 1774100358732
+    },
+    "security-audit-toolkit": {
+      "version": "1.0.0",
+      "installedAt": 1774100358745
+    },
+    "automation-workflows": {
+      "version": "0.1.0",
+      "installedAt": 1774100358809
+    },
+    "tavily-tool": {
+      "version": "0.1.1",
+      "installedAt": 1774100359045
+    },
+    "pdf-tools": {
+      "version": "0.1.0",
+      "installedAt": 1774100359238
+    },
+    "wechat-toolkit": {
+      "version": "1.0.1",
+      "installedAt": 1774100359559
+    },
+    "clickup-api": {
+      "version": "1.0.3",
+      "installedAt": 1774100360024
+    },
+    "accessibility-toolkit": {
+      "version": "1.0.0",
+      "installedAt": 1774100360137
+    },
+    "pdf": {
+      "version": "0.1.0",
+      "installedAt": 1774100360347
+    },
+    "notion-api": {
+      "version": "1.1.0",
+      "installedAt": 1774100360638
+    },
+    "portable-tools": {
+      "version": "1.2.0",
+      "installedAt": 1774100360700
+    },
+    "product-manager-toolkit": {
+      "version": "2.1.1",
+      "installedAt": 1774100360741
+    },
+    "nodetool": {
+      "version": "0.6.3",
+      "installedAt": 1774100360845
+    },
+    "discord": {
+      "version": "1.0.1",
+      "installedAt": 1774100360857
+    },
+    "ClickUp": {
+      "version": "",
+      "installedAt": 1774100361172
+    },
+    "chrome-devtools-mcp": {
+      "version": "1.0.0",
+      "installedAt": 1774100361223
+    },
+    "Chrome": {
+      "version": "",
+      "installedAt": 1774100361236
+    },
+    "ai-picture-book": {
+      "version": "1.1.0",
+      "installedAt": 1774102024243
+    },
+    "zoho-mail": {
+      "version": "1.0.4",
+      "installedAt": 1774102024433
     }
   }
+}
+
 }

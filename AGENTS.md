@@ -285,15 +285,28 @@ This is a starting point. Add your own conventions, style, and rules as you figu
 ## 技能自动更新规则（永久生效）
 
 每3小时自动执行以下6步：
-1. 从SkillHub查寻每个类别收藏量最高的100个技能，建立清单
-2. 对比自己的技能库，确认未安装的技能
-3. 下载并安装未安装的技能
+1. 从四大来源查询技能：SkillHub、ClawHub、VoltAgent、Skills.sh
+2. 对比技能库，确认未安装的技能
+3. 下载并安装未安装的技能（每次最多15个）
 4. 测试这些技能并评估其安全性
-5. 安装测试合格的技能
+5. 安装测试合格的技能，验证系统集成
 6. 每天早上6点、晚上6点总结发给James安装了哪些新技能以及使用场景
 
+**四大技能来源：**
+| 来源 | 地址 | 说明 |
+|------|------|------|
+| SkillHub | skillhub.tencent.com | 国内加速，1000+技能 |
+| ClawHub | clawhub.ai | 国际社区，500+技能 |
+| VoltAgent | github.com/VoltAgent/awesome-openclaw-skills | 精选列表 |
+| Skills.sh | skills.sh | 趋势发现，89k+技能 |
+
 **Crontab配置：**
-- `skillhub_auto_update.py`：每3小时执行
+- `skillhub_auto_update.py`：每3小时执行（0 */3 * * *）
 - `daily_skills_summary.py`：每天6:00和18:00执行
 
 **SkillHub商店：** /Users/fhjtech/.local/bin/skillhub
+**ClawHub CLI：** /opt/homebrew/bin/clawhub
+
+**邮件配置：**
+- 发送方: wcyint@163.com
+- 接收方: wcyint@163.com

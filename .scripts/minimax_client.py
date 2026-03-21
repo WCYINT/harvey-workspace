@@ -132,7 +132,7 @@ def embed(text: str, model: str = "emb-01") -> list[float]:
 # ── 模型状态查询 ─────────────────────────────────
 def usage() -> dict:
     """查询当前 API 使用量"""
-    payload = {}
+    payload: dict = {}
     result = _post("/v1/query/tokens", payload)
     return result
 
