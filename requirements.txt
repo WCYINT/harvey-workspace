@@ -8,9 +8,5 @@ rich==13.9.4
 pytest==9.0.2
 pytest-asyncio==0.24.0
 mypy==1.15.2
-
-# Email
 pyzmail36==1.0.4
-
-# Utilities
 python-dotenv==1.0.1
