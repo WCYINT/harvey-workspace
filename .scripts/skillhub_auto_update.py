@@ -50,7 +50,7 @@ EMAIL_PASSWORD  = "NDdE6mZyTMifExXL"
 EMAIL_SMTP_HOST = "smtp.163.com"
 EMAIL_SMTP_PORT = 465
 
-MAX_INSTALL = 30  # 每次最多安装数量（避免超时）
+MAX_INSTALL = 100  # 每次最多安装数量（James确认）
 
 TZ_CST = timezone(timedelta(hours=8))
 
