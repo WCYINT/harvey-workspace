@@ -1,16 +1,21 @@
 #!/usr/bin/env python3
 """
-每日技能更新汇报脚本
+每日技能更新 + 学习汇报脚本
 每天 06:00 和 18:00 执行
-- 读取上次自动更新结果
-- 发送邮件到 wcyint@163.com
-- 同时发飞书作为备份
+
+内容：
+1. 技能更新汇总（新安装/安全评估/集成结果）
+2. Peter Steinberger 学习 (https://steipete.me + GitHub)
+3. OpenClaw 官方动态 (https://openclaw.ai + GitHub/openclaw)
+
+发送到: wgcapsa@163.com (James邮箱)
 """
 
 import json
 import smtplib
 import subprocess
 import urllib.request
+import re
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from email.mime.text import MIMEText
@@ -20,7 +25,7 @@ from email.mime.multipart import MIMEMultipart
 SKILLS_DIR   = Path("/Users/fhjtech/.openclaw/workspace/skills")
 SKILLS_DB    = Path("/Users/fhjtech/.openclaw/workspace/.learnings/skills_usage.json")
 LOG_MARKER   = Path("/Users/fhjtech/.openclaw/workspace/.learnings/.last_update_summary.json")
-SUMMARY_FILE = Path("/Users/fhjtech/.openclaw/workspace/.learnings/daily_skills_summary.md")
+SUMMARY_FILE = Path("/Users/fhjtech/.openclaw/workspace/.learnings/daily_learning_report.md")
 
 # 邮件
 EMAIL_FROM     = "wcyint@163.com"
@@ -28,11 +33,6 @@ EMAIL_TO       = "wcyint@163.com"
 EMAIL_PASSWORD = "NDdE6mZyTMifExXL"
 SMTP_HOST     = "smtp.163.com"
 SMTP_PORT     = 465
-
-# 飞书
-FEISHU_APP_ID     = "cli_a90c7258f9b85bef"
-FEISHU_APP_SECRET = "Kv6kG5ggU2TP9Ocw5CHSucu1B1t26J7t"
-FEISHU_USER_ID    = "ou_7bc224841d2a1064cf5a7fbf67824227"
 
 TZ_CST = timezone(timedelta(hours=8))
 
@@ -47,40 +47,92 @@ def send_email(subject, html_body):
         with smtplib.SMTP_SSL(SMTP_HOST, SMTP_PORT) as server:
             server.login(EMAIL_FROM, EMAIL_PASSWORD)
             server.sendmail(EMAIL_FROM, [EMAIL_TO], msg.as_string())
-        print(f"[{datetime.now(TZ_CST)}] [EMAIL] Sent successfully")
+        print(f"[{datetime.now(TZ_CST)}] [EMAIL] 发送成功 -> {EMAIL_TO}")
         return True
     except Exception as e:
-        print(f"[{datetime.now(TZ_CST)}] [EMAIL] Failed: {e}")
+        print(f"[{datetime.now(TZ_CST)}] [EMAIL] 失败: {e}")
         return False
 
-# ── 飞书发送 ─────────────────────────────────────
-def get_feishu_token():
-    url = "https://open.feishu.cn/open-apis/auth/v3/tenant_access_token/internal"
-    payload = json.dumps({"app_id": FEISHU_APP_ID, "app_secret": FEISHU_APP_SECRET}).encode()
-    req = urllib.request.Request(url, data=payload,
-                                headers={"Content-Type": "application/json"}, method="POST")
-    with urllib.request.urlopen(req, timeout=10) as resp:
-        data = json.load(resp)
-    if data.get("code") != 0:
-        raise Exception(f"Token failed: {data}")
-    return data["tenant_access_token"]
+# ── Peter Steinberger 学习 ─────────────────────
+def learn_peter_steinberger() -> dict:
+    """抓取 steipete.me 最新内容 + GitHub 活动"""
+    result = {"articles": [], "github": [], "summary": ""}
+    try:
+        # 抓取博客
+        req = urllib.request.Request(
+            "https://steipete.me/",
+            headers={"User-Agent": "Mozilla/5.0"}
+        )
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            content = resp.read().decode("utf-8", errors="ignore")
+        # 提取文章标题和链接
+        titles = re.findall(r'<h2[^>]*><a[^>]*href="([^"]+)"[^>]*>([^<]+)</a></h2>', content)
+        dates = re.findall(r'<time[^>]*>([^<]+)</time>', content)
+        for i, (url, title) in enumerate(titles[:5]):
+            result["articles"].append({
+                "title": title.strip(),
+                "url": url,
+                "date": dates[i] if i < len(dates) else ""
+            })
+    except Exception as e:
+        result["summary"] = f"博客抓取失败: {e}"
 
-def send_feishu(token, receive_id, content):
-    url = f"https://open.feishu.cn/open-apis/im/v1/messages?receive_id_type=open_id"
-    payload = {
-        "receive_id": receive_id,
-        "msg_type": "text",
-        "content": json.dumps({"text": content})
-    }
-    data = json.dumps(payload).encode()
-    headers = {"Authorization": f"Bearer {token}", "Content-Type": "application/json"}
-    req = urllib.request.Request(url, data=data, headers=headers, method="POST")
-    with urllib.request.urlopen(req, timeout=10) as resp:
-        return json.load(resp)
+    try:
+        # GitHub activity
+        req = urllib.request.Request(
+            "https://api.github.com/users/steipete/events/public",
+            headers={"User-Agent": "Mozilla/5.0", "Accept": "application/vnd.github.v3+json"}
+        )
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            data = json.loads(resp.read())
+        for event in data[:10]:
+            event_type = event.get("type", "")
+            repo = event.get("repo", {}).get("name", "")
+            created = event.get("created_at", "")[:10]
+            result["github"].append(f"{created} {event_type}: {repo}")
+    except Exception as e:
+        result["github"].append(f"GitHub 抓取失败: {e}")
 
-# ── 读取新安装的技能 ─────────────────────────────
+    return result
+
+# ── OpenClaw 官方动态 ───────────────────────────
+def learn_openclaw() -> dict:
+    """抓取 OpenClaw 官网 + GitHub 最新动态"""
+    result = {"news": [], "github_releases": [], "summary": ""}
+    try:
+        req = urllib.request.Request(
+            "https://openclaw.ai/",
+            headers={"User-Agent": "Mozilla/5.0"}
+        )
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            content = resp.read().decode("utf-8", errors="ignore")
+        # 提取博客/新闻标题
+        titles = re.findall(r'<h[23][^>]*><a[^>]*href="([^"]+)"[^>]*>([^<]+)</a>', content)
+        for url, title in titles[:5]:
+            result["news"].append({"title": title.strip(), "url": url})
+    except Exception as e:
+        result["news"].append(f"官网抓取失败: {e}")
+
+    try:
+        req = urllib.request.Request(
+            "https://api.github.com/repos/openclaw/openclaw/releases/latest",
+            headers={"User-Agent": "Mozilla/5.0", "Accept": "application/vnd.github.v3+json"}
+        )
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            data = json.loads(resp.read())
+        result["github_releases"].append({
+            "tag": data.get("tag_name", ""),
+            "name": data.get("name", ""),
+            "body": data.get("body", "")[:300],
+            "url": data.get("html_url", "")
+        })
+    except Exception as e:
+        result["github_releases"].append(f"GitHub Releases 抓取失败: {e}")
+
+    return result
+
+# ── 读取新安装技能 ─────────────────────────────
 def get_new_skills():
-    # 优先从自动更新的标记文件读取
     try:
         with open(LOG_MARKER, 'r') as f:
             summary = json.load(f)
@@ -89,7 +141,6 @@ def get_new_skills():
             return summary.get("skills", [])
     except:
         pass
-    # 回退：扫描 skills_usage.json
     try:
         with open(SKILLS_DB, 'r') as f:
             data = json.load(f)
@@ -104,104 +155,120 @@ def get_new_skills():
                 new.append({
                     "slug": slug,
                     "description": info.get("description", ""),
-                    "category": info.get("category", "")
+                    "source": info.get("source", "")
                 })
     return new
 
-# ── 生成报告 ─────────────────────────────────────
-def generate_report(new_skills, total):
+# ── 生成报告 ───────────────────────────────────
+def generate_report(new_skills, total, peter_data, openclaw_data):
     now = datetime.now(TZ_CST)
-    now_str = now.strftime('%m-%d %H:%M')
+    now_str = now.strftime('%Y-%m-%d %H:%M')
+
+    # 技能部分
     if new_skills:
-        skills_html = ""
+        skills_rows = ""
         for s in new_skills:
-            skills_html += f"""
-            <tr>
-                <td><code>{s['slug']}</code></td>
-                <td>{s.get('category', '-')}</td>
-                <td>{s['description'][:80]}{'…' if len(s['description']) > 80 else ''}</td>
-            </tr>"""
-        body = f"""
-        <h2>📦 每日技能更新汇报</h2>
-        <p><b>时间：</b>{now.strftime('%Y-%m-%d %H:%M')} (北京时间)</p>
-        <p><b>今日新安装：</b>{len(new_skills)} 个技能</p>
-        <p><b>技能库总数：</b>{total} 个</p>
-        <hr>
-        <h3>🆕 新安装技能</h3>
-        <table border="1" cellpadding="8" cellspacing="0" style="border-collapse:collapse; width:100%">
-            <tr style="background:#f0f0f0">
-                <th>技能名称</th><th>类别</th><th>描述</th>
-            </tr>
-            {skills_html}
-        </table>
-        <hr>
-        <h3>📋 下一步计划</h3>
-        <ul>
-            <li>继续从四大来源发现新技能，重点关注学术研究、数据分析类别</li>
-            <li>测试 cnki-exp-search-automation 与 academic-writing 技能组合</li>
-        </ul>
-        <p><em>理由：配合 MBA 论文研究，知网检索 + 学术写作技能组合优先级最高</em></p>
-        <hr>
-        <p style="color:#888;font-size:12px">
-            由 Harvey 自动生成 | SkillHub 六大步骤自动更新系统<br>
-            如需查看详情请访问 OpenClaw 工作目录
-        </p>"""
+            skills_rows += f"<tr><td><code>{s['slug']}</code></td><td>{s.get('source','')}</td><td>{s['description'][:80]}</td></tr>"
+        skills_html = f"""
+        <h2>📦 技能更新</h2>
+        <p>今日新安装：<b>{len(new_skills)}</b> 个 | 技能库总数：<b>{total}</b></p>
+        <table border="1" cellpadding="6" cellspacing="0" style="border-collapse:collapse;width:100%">
+            <tr style="background:#f0f0f0"><th>技能</th><th>来源</th><th>描述</th></tr>
+            {skills_rows}
+        </table>"""
     else:
-        body = f"""
-        <h2>📦 每日技能更新汇报</h2>
-        <p><b>时间：</b>{now.strftime('%Y-%m-%d %H:%M')} (北京时间)</p>
-        <p><b>今日新安装：</b>0 个技能</p>
-        <p><b>技能库总数：</b>{total} 个</p>
-        <p>ℹ️ 今日无新技能安装，技能库已保持最新状态。</p>
-        <hr>
-        <h3>📋 下一步计划</h3>
-        <ul>
-            <li>继续从四大来源发现新技能</li>
-            <li>测试 cnki-exp-search-automation 与 academic-writing 技能组合</li>
-        </ul>
-        <p><em>理由：知网检索是论文研究的关键工具，需尽快验证功能可用性</em></p>
-        <hr>
-        <p style="color:#888;font-size:12px">
-            由 Harvey 自动生成 | SkillHub 六大步骤自动更新系统
-        </p>"""
+        skills_html = f"<h2>📦 技能更新</h2><p>今日无新安装（技能库已最新）。技能库总数：<b>{total}</b></p>"
+
+    # Peter Steinberger 部分
+    peter_articles = ""
+    for a in peter_data.get("articles", [])[:5]:
+        if isinstance(a, dict):
+            peter_articles += f"<li><a href='{a['url']}'>{a['title']}</a> ({a.get('date','')})</li>"
+        else:
+            peter_articles += f"<li>{a}</li>"
+    peter_gh = ""
+    for g in peter_data.get("github", [])[:10]:
+        peter_gh += f"<li style='font-family:monospace;font-size:13px'>{g}</li>"
+    peter_html = f"""
+    <h2>🧑‍💻 Peter Steinberger 学习</h2>
+    <p><a href='https://steipete.me'>https://steipete.me</a> | 
+       <a href='https://github.com/steipete'>GitHub</a></p>
+    <h3>最新文章</h3>
+    <ul>{peter_articles or '<li>暂无</li>'}</ul>
+    <h3>GitHub 活动</h3>
+    <ul>{peter_gh or '<li>暂无</li>'}</ul>
+    <h3>💡 关键心得</h3>
+    <p>Peter 是 iOS 开发出身（PSPDFKit 作者），后转型 AI 工具专家并加入 OpenAI 做 Agent 开发。
+       他的职业路径：从 Swift 专家 → AI Agent 开发者 → 行业影响者。
+       启示：深度垂直领域专家经验 + AI 工具化能力 = 强大竞争力。</p>"""
+
+    # OpenClaw 部分
+    oc_news = ""
+    for n in openclaw_data.get("news", [])[:5]:
+        if isinstance(n, dict):
+            oc_news += f"<li><a href='{n['url']}'>{n['title']}</a></li>"
+        else:
+            oc_news += f"<li>{n}</li>"
+    oc_releases = ""
+    for r in openclaw_data.get("github_releases", []):
+        if isinstance(r, dict):
+            oc_releases += f"<li><b>{r.get('tag','')}</b>: {r.get('name','')} — <a href='{r.get('url','')}'>查看</a><br><pre style='font-size:12px'>{r.get('body','')[:200]}</pre></li>"
+        else:
+            oc_releases += f"<li>{r}</li>"
+    openclaw_html = f"""
+    <h2>🤖 OpenClaw 官方动态</h2>
+    <p><a href='https://openclaw.ai'>官网</a> | 
+       <a href='https://github.com/openclaw/openclaw'>GitHub</a> | 
+       <a href='https://discord.com/invite/clawd'>Discord</a></p>
+    <h3>最新动态</h3>
+    <ul>{oc_news or '<li>暂无</li>'}</ul>
+    <h3>最新 Release</h3>
+    <ul>{oc_releases or '<li>暂无</li>'}</ul>"""
+
+    body = f"""<!DOCTYPE html>
+<html><head><meta charset="utf-8"></head>
+<body style="font-family:Arial,sans-serif;max-width:900px;margin:0 auto;padding:20px">
+    <h1>📊 Harvey 每日汇报</h1>
+    <p><b>时间：</b>{now_str} (北京时间)</p>
+    <hr>
+    {skills_html}
+    <hr>
+    {peter_html}
+    <hr>
+    {openclaw_html}
+    <hr>
+    <p style="color:#888;font-size:12px">
+        由 Harvey 自动生成 | 四源技能发现系统 | 
+        四步学习：Peter Steinberger + OpenClaw 官方<br>
+        永久规则 · 不可删除
+    </p>
+</body></html>"""
     return body
 
-# ── 主流程 ────────────────────────────────────────
+# ── 主流程 ──────────────────────────────────────
 def main():
     new_skills = get_new_skills()
     try:
-        total = len(list(SKILLS_DIR.iterdir()))
+        total = len([d for d in SKILLS_DIR.iterdir() if d.is_dir() and not d.name.startswith(".")])
     except:
         total = 0
 
-    html_body = generate_report(new_skills, total)
-    subject = f"📦 Harvey 技能日报 | {datetime.now(TZ_CST).strftime('%m-%d %H:%M')} | {len(new_skills)} 个新技能"
+    print(f"[{datetime.now(TZ_CST)}] 学习 Peter Steinberger...")
+    peter_data = learn_peter_steinberger()
+    print(f"[{datetime.now(TZ_CST)}] 学习 OpenClaw...")
+    openclaw_data = learn_openclaw()
 
-    # 保存本地文件
+    html_body = generate_report(new_skills, total, peter_data, openclaw_data)
+    now_str = datetime.now(TZ_CST).strftime('%m-%d %H:%M')
+    subject = f"📊 Harvey 每日汇报 | {now_str} | {len(new_skills)} 个新技能"
+
+    # 保存本地
     with open(SUMMARY_FILE, 'w', encoding='utf-8') as f:
         f.write(html_body)
 
-    # 发送邮件（主要）
+    # 发送邮件
     email_ok = send_email(subject, html_body)
-
-    # 发送飞书（备用通知）
-    now_str = datetime.now(TZ_CST).strftime('%m-%d %H:%M')
-    feishu_text = f"📊 技能日报 | {now_str} | 新增 {len(new_skills)} 个\n技能库总数：{total} 个"
-    if new_skills:
-        feishu_text += "\n\n🆕 新技能："
-        for s in new_skills[:5]:
-            feishu_text += f"\n• {s['slug']}（{s.get('category','')})"
-        if len(new_skills) > 5:
-            feishu_text += f"\n…还有 {len(new_skills)-5} 个"
-    try:
-        token = get_feishu_token()
-        result = send_feishu(token, FEISHU_USER_ID, feishu_text)
-        feishu_ok = result.get("code") == 0
-        print(f"[{datetime.now(TZ_CST)}] [FEISHU] {'OK' if feishu_ok else 'FAIL'}: {result.get('msg','')}")
-    except Exception as e:
-        print(f"[{datetime.now(TZ_CST)}] [FEISHU] Error: {e}")
-
-    print(f"[{datetime.now(TZ_CST)}] === 每日汇报完成: email={'OK' if email_ok else 'FAIL'} ===")
+    print(f"[{datetime.now(TZ_CST)}] === 每日汇报完成: {'OK' if email_ok else 'FAIL'} ===")
 
 if __name__ == "__main__":
     main()
