@@ -40,3 +40,9 @@ Cannot fix gateway session state from workspace. Ensure each cron run uses a fre
 - 尝试 SSL(465) 和 TLS(587) 均失败
 - 可能原因: 163授权码过期或需重新生成
 **建议**: James需要到163邮箱设置重新生成SMTP授权码
+
+**改进** (2026-03-24 06:04): 已增强 `daily_skills_summary.py` 的错误处理：
+1. 详细的SMTP 535错误诊断信息
+2. 邮件失败时自动归档报告到本地
+3. 指数退避重试机制
+4. 专用错误日志 `/Users/fhjtech/.openclaw/logs/smtp_errors.log`

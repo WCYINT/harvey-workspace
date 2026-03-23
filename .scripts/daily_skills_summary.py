@@ -37,21 +37,94 @@ SMTP_PORT     = 465
 TZ_CST = timezone(timedelta(hours=8))
 
 # ── 邮件发送 ─────────────────────────────────────
-def send_email(subject, html_body):
+ARCHIVE_DIR = Path("/Users/fhjtech/.openclaw/logs/report_archives")
+ARCHIVE_DIR.mkdir(parents=True, exist_ok=True)
+
+def archive_report(subject: str, html_body: str) -> str:
+    """Save report locally when email fails"""
+    timestamp = datetime.now(TZ_CST).strftime("%Y%m%d_%H%M%S")
+    filename = f"daily_report_{timestamp}.html"
+    filepath = ARCHIVE_DIR / filename
+    
+    full_html = f"""<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>{subject}</title></head>
+<body style="font-family:Arial,sans-serif;max-width:900px;margin:0 auto;padding:20px">
+<h1>📊 Harvey 每日汇报 (Archived)</h1>
+<p><b>原定发送时间：</b>{datetime.now(TZ_CST).strftime('%Y-%m-%d %H:%M')} (Asia/Shanghai)</p>
+<p><b>邮件发送状态：</b>❌ 失败 (已归档到本地)</p>
+<hr>
+{html_body}
+<hr>
+<p style="color:#888;font-size:12px">归档路径: {filepath}</p>
+</body></html>"""
+    
+    filepath.write_text(full_html, encoding="utf-8")
+    return str(filepath)
+
+def send_email_with_retry(subject, html_body, max_retries=3) -> None:
+    """Send email with exponential backoff retry"""
     msg = MIMEMultipart("alternative")
     msg["Subject"] = subject
     msg["From"] = EMAIL_FROM
     msg["To"] = EMAIL_TO
     msg.attach(MIMEText(html_body, "html", "utf-8"))
-    try:
-        with smtplib.SMTP_SSL(SMTP_HOST, SMTP_PORT) as server:
-            server.login(EMAIL_FROM, EMAIL_PASSWORD)
-            server.sendmail(EMAIL_FROM, [EMAIL_TO], msg.as_string())
-        print(f"[{datetime.now(TZ_CST)}] [EMAIL] 发送成功 -> {EMAIL_TO}")
-        return True
-    except Exception as e:
-        print(f"[{datetime.now(TZ_CST)}] [EMAIL] 失败: {e}")
-        return False
+    
+    last_error = None
+    for attempt in range(1, max_retries + 1):
+        try:
+            with smtplib.SMTP_SSL(SMTP_HOST, SMTP_PORT, timeout=30) as server:
+                server.login(EMAIL_FROM, EMAIL_PASSWORD)
+                server.sendmail(EMAIL_FROM, [EMAIL_TO], msg.as_string())
+            print(f"[{datetime.now(TZ_CST)}] [EMAIL] 发送成功 -> {EMAIL_TO} (attempt {attempt})")
+            return True
+        except smtplib.SMTPAuthenticationError as e:
+            last_error = f"SMTP Auth failed (535): {e}"
+            # Don't retry auth errors - they won't succeed
+            break
+        except Exception as e:
+            last_error = str(e)
+            if attempt < max_retries:
+                wait_time = 2 ** attempt  # Exponential backoff: 2s, 4s, 8s
+                print(f"[{datetime.now(TZ_CST)}] [EMAIL] Attempt {attempt} failed, retrying in {wait_time}s...")
+                import time
+                time.sleep(wait_time)
+    
+    # All retries exhausted or auth error - archive locally
+    archive_path = archive_report(subject, html_body)
+    error_msg = f"[{datetime.now(TZ_CST)}] [EMAIL] 失败 (archived to {archive_path}): {last_error}"
+    print(error_msg)
+    
+    # Log detailed diagnostics for SMTP auth issues
+    if "535" in str(last_error) or "authentication" in str(last_error).lower():
+        diag_msg = f"""
+[{datetime.now(TZ_CST)}] [EMAIL-DIAGNOSTICS] SMTP Authentication Failed (535)
+  - Error: {last_error}
+  - Server: {SMTP_HOST}:{SMTP_PORT} (SSL)
+  - From: {EMAIL_FROM}
+  - To: {EMAIL_TO}
+  - Possible causes:
+    1. Authorization code expired (163.com codes expire after ~6-12 months)
+    2. Account security settings changed
+    3. Too many failed login attempts triggered temporary lockout
+  - Resolution steps:
+    1. Log into 163.com webmail
+    2. Go to Settings -> POP3/SMTP/IMAP
+    3. Disable then re-enable SMTP
+    4. Generate NEW authorization code (授权码)
+    5. Update EMAIL_PASSWORD in daily_skills_summary.py
+  - Archived report saved to: {archive_path}
+"""
+        print(diag_msg)
+        # Also write to a dedicated error log
+        error_log = Path("/Users/fhjtech/.openclaw/logs/smtp_errors.log")
+        with open(error_log, "a") as f:
+            f.write(diag_msg)
+    
+    return False
+
+def send_email(subject, html_body) -> None:
+    """Backward-compatible wrapper"""
+    return send_email_with_retry(subject, html_body)
 
 # ── Peter Steinberger 学习 ─────────────────────
 def learn_peter_steinberger() -> dict:
@@ -132,7 +205,7 @@ def learn_openclaw() -> dict:
     return result
 
 # ── 读取新安装技能 ─────────────────────────────
-def get_new_skills():
+def get_new_skills() -> None:
     try:
         with open(LOG_MARKER, 'r') as f:
             summary = json.load(f)
@@ -160,7 +233,7 @@ def get_new_skills():
     return new
 
 # ── 生成报告 ───────────────────────────────────
-def generate_report(new_skills, total, peter_data, openclaw_data):
+def generate_report(new_skills, total, peter_data, openclaw_data) -> None:
     now = datetime.now(TZ_CST)
     now_str = now.strftime('%Y-%m-%d %H:%M')
 
@@ -256,7 +329,7 @@ def generate_report(new_skills, total, peter_data, openclaw_data):
     return body
 
 # ── 主流程 ──────────────────────────────────────
-def main():
+def main() -> None:
     new_skills = get_new_skills()
     try:
         total = len([d for d in SKILLS_DIR.iterdir() if d.is_dir() and not d.name.startswith(".")])

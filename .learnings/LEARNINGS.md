@@ -61,6 +61,51 @@ After OpenClaw upgrade to 2026.3.22, gateway logs showed repeating plugin load f
 
 ---
 
+## [LRN-20260324-SMTP] best_practice
+
+**Logged**: 2026-03-24T06:04:00+08:00
+**Priority**: high
+**Status**: resolved
+**Area**: infra
+
+### Summary
+Enhanced `daily_skills_summary.py` with robust error handling for SMTP failures including local archiving, retry logic, and detailed diagnostics.
+
+### Problem
+- Daily skill reports were failing with `(535, b'Error: authentication failed')` for ~8 hours
+- No local backup of reports when email failed - data was lost
+- No diagnostics to help identify root cause
+- Basic error handling with single attempt only
+
+### Solution
+1. **Local Report Archiving**: Automatically save HTML reports to `/Users/fhjtech/.openclaw/logs/report_archives/` when email fails
+2. **Exponential Backoff Retry**: 3 attempts with 2s, 4s, 8s delays between retries
+3. **Detailed SMTP Diagnostics**: Specific guidance for 535 auth errors including:
+   - Error type and server details
+   - Possible causes (expired auth code, security settings, lockout)
+   - Step-by-step resolution instructions
+4. **Dedicated Error Log**: Write diagnostics to `/Users/fhjtech/.openclaw/logs/smtp_errors.log`
+
+### Code Changes
+- Replaced simple `send_email()` with `send_email_with_retry()`
+- Added `archive_report()` function for local backup
+- Added `ARCHIVE_DIR` constant for archive location
+- Enhanced error handling with specific SMTP error type detection
+
+### Prevention
+**Decision principle (smtp-resilience)**: Any email-dependent script must:
+1. Archive content locally before attempting email send
+2. Implement retry logic with exponential backoff
+3. Provide detailed, actionable error diagnostics
+4. Never lose data due to delivery failures
+
+### Metadata
+- Source: proactive_review, cron:ai-twice-hourly-deep
+- Related: ERRORS.md (163 SMTP authentication failure)
+- Files modified: .scripts/daily_skills_summary.py
+
+---
+
 ## [LRN-20260324-JITI] correction
 
 **Logged**: 2026-03-24T04:53:00+08:00
