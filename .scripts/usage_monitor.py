@@ -19,7 +19,7 @@ MINIMAX_EMAIL = "18620362529"
 MINIMAX_PASSWORD = "WG17sjjlove"
 THRESHOLD_REMAINING_PCT = 5  # 可用次数低于总量5%时告警
 
-def get_minimax_cookies():
+def get_minimax_cookies() -> None:
     """使用 Playwright 登录 MiniMax 获取 cookies"""
     try:
         from playwright.sync_api import sync_playwright
@@ -48,7 +48,7 @@ def get_minimax_cookies():
             browser.close()
             return None
 
-def get_usage_from_api(cookie_str):
+def get_usage_from_api(cookie_str) -> None:
     """调用 MiniMax API 获取 usage 数据"""
     group_id = "2030122951646389213"
     url = f'https://www.minimaxi.com/v1/api/openplatform/coding_plan/remains?GroupId={group_id}'
@@ -79,7 +79,7 @@ def get_usage_from_api(cookie_str):
     
     return None
 
-def main():
+def main() -> None:
     now = datetime.now(TZ_CST)
     now_str = now.strftime("%m-%d %H:%M")
     
@@ -139,3 +139,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+__all__ = ['get_minimax_cookies', 'get_usage_from_api', 'main']

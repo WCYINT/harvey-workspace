@@ -716,6 +716,22 @@
     "assimilate-mcp": {
       "version": "1.0.0",
       "installedAt": 1774296008384
+    },
+    "claude-code-skill": {
+      "version": "0.2.0",
+      "installedAt": 1774299606938
+    },
+    "clawd-coach": {
+      "version": "1.0.0",
+      "installedAt": 1774299607842
+    },
+    "clawd-modifier": {
+      "version": "1.0.0",
+      "installedAt": 1774299607955
+    },
+    "claude-connect": {
+      "version": "1.1.0",
+      "installedAt": 1774299608153
     }
   }
 }

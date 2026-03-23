@@ -13768,6 +13768,54 @@
       "installed_date": "2026-03-24",
       "version": "",
       "source": "voltagent"
+    },
+    "claude-code-skill": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "claude-code-skill",
+      "category": "voltagent",
+      "status": "auto-installed",
+      "installed_date": "2026-03-24",
+      "version": "",
+      "source": "voltagent"
+    },
+    "claude-connect": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "claude-connect",
+      "category": "voltagent",
+      "status": "auto-installed",
+      "installed_date": "2026-03-24",
+      "version": "",
+      "source": "voltagent"
+    },
+    "clawd-coach": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "clawd-coach",
+      "category": "voltagent",
+      "status": "auto-installed",
+      "installed_date": "2026-03-24",
+      "version": "",
+      "source": "voltagent"
+    },
+    "clawd-modifier": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "clawd-modifier",
+      "category": "voltagent",
+      "status": "auto-installed",
+      "installed_date": "2026-03-24",
+      "version": "",
+      "source": "voltagent"
     }
   },
   "categories": {

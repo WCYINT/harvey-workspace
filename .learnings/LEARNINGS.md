@@ -28,6 +28,72 @@ When a learning is promoted to a skill, add these fields:
 
 ---
 
+## [LRN-20260324-JITI] correction
+
+**Logged**: 2026-03-24T04:53:00+08:00
+**Priority**: critical
+**Status**: resolved
+**Area**: infra
+
+### Summary
+Gateway plugin loading failures after OpenClaw 2026.3.22 upgrade caused by stale jiti cache. Fixed by clearing `/tmp/jiti/` and signaling gateway restart.
+
+### Details
+After OpenClaw upgrade to 2026.3.22, gateway logs showed repeating plugin load failures:
+```
+[plugins] memory-lancedb-pro failed to load: Error: Cannot find module 'openclaw/plugin-sdk'
+[plugins] openclaw-plugin-yuanbao failed to load: Error: Cannot find module 'openclaw/plugin-sdk'
+```
+
+**Root cause**: The jiti cache at `/tmp/jiti/` contained stale compiled TypeScript from the previous OpenClaw version. After the upgrade, the cached module paths no longer matched, causing "Cannot find module" errors.
+
+**Fix**:
+1. Cleared jiti cache: `rm -rf /tmp/jiti/`
+2. Signaled gateway process (PID 93793) to restart via SIGTERM
+3. Gateway restarted and reloaded plugins with fresh jiti cache
+
+### Prevention
+**Decision principle (jiti-cache-invalidation)**: After ANY OpenClaw upgrade or plugin modification, ALWAYS clear `/tmp/jiti/` before restarting the gateway. jiti caches compiled TypeScript and will silently load stale code if not cleared, causing obscure module resolution errors.
+
+### Metadata
+- Source: proactive_review
+- See Also: gateway.err.log, LanceDB Memory Iron Rules Rule 5
+
+---
+
+## [LRN-20260324-JITI] correction
+
+**Logged**: 2026-03-24T04:53:00+08:00
+**Priority**: critical
+**Status**: resolved
+**Area**: infra
+
+### Summary
+Gateway plugin loading failures after OpenClaw 2026.3.22 upgrade caused by stale jiti cache. Fixed by clearing `/tmp/jiti/` and signaling gateway restart.
+
+### Details
+After OpenClaw upgrade to 2026.3.22, gateway logs showed repeating plugin load failures:
+```
+[plugins] memory-lancedb-pro failed to load: Error: Cannot find module 'openclaw/plugin-sdk'
+[plugins] openclaw-plugin-yuanbao failed to load: Error: Cannot find module 'openclaw/plugin-sdk'
+```
+
+**Root cause**: The jiti cache at `/tmp/jiti/` contained stale compiled TypeScript from the previous OpenClaw version. After the upgrade, the cached module paths no longer matched, causing "Cannot find module" errors.
+
+**Fix**:
+1. Cleared jiti cache: `rm -rf /tmp/jiti/`
+2. Signaled gateway process (PID 93793) to restart via SIGTERM
+3. Gateway restarted and reloaded plugins with fresh jiti cache
+
+### Prevention
+**Decision principle (jiti-cache-invalidation)**: After ANY OpenClaw upgrade or plugin modification, ALWAYS clear `/tmp/jiti/` before restarting the gateway. jiti caches compiled TypeScript and will silently load stale code if not cleared, causing obscure module resolution errors.
+
+### Metadata
+- Source: proactive_review
+- See Also: gateway.err.log, LanceDB Memory Iron Rules Rule 5
+
+---
+
 ## [LRN-20260324-PROACTIVE] best_practice
 
 **Logged**: 2026-03-24T03:56:00+08:00

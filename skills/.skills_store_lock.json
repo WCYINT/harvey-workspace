@@ -366,6 +366,30 @@
       "zip_url": "https://lightmake.site/api/v1/download?slug=assimilate-mcp",
       "source": "skillhub",
       "version": "1.0.0"
+    },
+    "claude-code-skill": {
+      "name": "Claude Code Agent",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=claude-code-skill",
+      "source": "skillhub",
+      "version": "0.2.0"
+    },
+    "clawd-coach": {
+      "name": "Coach Skill",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=clawd-coach",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "clawd-modifier": {
+      "name": "Clawd Modifier",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=clawd-modifier",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "claude-connect": {
+      "name": "Claude Connect",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=claude-connect",
+      "source": "skillhub",
+      "version": "1.1.0"
     }
   }
 }

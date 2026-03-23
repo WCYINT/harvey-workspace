@@ -2,28 +2,23 @@
   "date": "2026-03-24",
   "skills": [
     {
-      "slug": "ai-agent-tools",
-      "description": "Ai Agent Tools",
-      "source": "skillhub"
-    },
-    {
-      "slug": "assimilate-mcp",
-      "description": "assimilate-mcp",
+      "slug": "claude-code-skill",
+      "description": "claude-code-skill",
       "source": "voltagent"
     },
     {
-      "slug": "birthday-reminder",
-      "description": "birthday-reminder",
+      "slug": "claude-connect",
+      "description": "claude-connect",
       "source": "voltagent"
     },
     {
-      "slug": "bluebubbles",
-      "description": "bluebubbles",
+      "slug": "clawd-coach",
+      "description": "clawd-coach",
       "source": "voltagent"
     },
     {
-      "slug": "captchas-openclaw",
-      "description": "captchas-openclaw",
+      "slug": "clawd-modifier",
+      "description": "clawd-modifier",
       "source": "voltagent"
     }
   ]
