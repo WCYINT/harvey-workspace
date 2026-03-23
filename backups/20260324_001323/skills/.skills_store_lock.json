@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "skills": {
+    "clawdbot-macos-build": {
+      "name": "clawdbot-macos-build",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=clawdbot-macos-build",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "apple-remind-me": {
+      "name": "Apple Reminder",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=apple-remind-me",
+      "source": "skillhub",
+      "version": "1.0.1"
+    },
+    "clawdbot-skill-voice-wake-say": {
+      "name": "Voice Wake Say TTS Responses (Native)",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=clawdbot-skill-voice-wake-say",
+      "source": "skillhub",
+      "version": "0.1.0"
+    },
+    "apple-find-my-local": {
+      "name": "Find My",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=apple-find-my-local",
+      "source": "skillhub",
+      "version": "1.0.2"
+    },
+    "apple-health-skill": {
+      "name": "Apple Health Skill",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=apple-health-skill",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "drafts": {
+      "name": "Drafts CLI",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=drafts",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "appletv": {
+      "name": "Apple TV",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=appletv",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "ai-task-hub": {
+      "name": "Ai Task Hub",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=ai-task-hub",
+      "source": "skillhub",
+      "version": "3.2.10"
+    }
+  }
+}

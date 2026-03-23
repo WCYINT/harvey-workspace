@@ -1,0 +1,60 @@
+{
+  "date": "2026-03-24",
+  "skills": [
+    {
+      "slug": "ai-prompt-optimizer-cn",
+      "description": "Ai Prompt Optimizer Cn",
+      "source": "skillhub"
+    },
+    {
+      "slug": "ai-task-hub",
+      "description": "Ai Task Hub",
+      "source": "skillhub"
+    },
+    {
+      "slug": "apple-find-my-local",
+      "description": "apple-find-my-local",
+      "source": "voltagent"
+    },
+    {
+      "slug": "apple-health-skill",
+      "description": "apple-health-skill",
+      "source": "voltagent"
+    },
+    {
+      "slug": "apple-mail-search",
+      "description": "apple-mail-search",
+      "source": "voltagent"
+    },
+    {
+      "slug": "apple-remind-me",
+      "description": "apple-remind-me",
+      "source": "voltagent"
+    },
+    {
+      "slug": "apple-search-ads-skill",
+      "description": "apple-search-ads-skill",
+      "source": "voltagent"
+    },
+    {
+      "slug": "appletv",
+      "description": "appletv",
+      "source": "voltagent"
+    },
+    {
+      "slug": "clawdbot-macos-build",
+      "description": "clawdbot-macos-build",
+      "source": "voltagent"
+    },
+    {
+      "slug": "clawdbot-skill-voice-wake-say",
+      "description": "clawdbot-skill-voice-wake-say",
+      "source": "voltagent"
+    },
+    {
+      "slug": "drafts",
+      "description": "drafts",
+      "source": "voltagent"
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+# Learning: structural_pattern_matching
+# Example: match ... case ...
+

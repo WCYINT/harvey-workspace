@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.hjtech.skill-discovery</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/opt/homebrew/bin/python3</string>
+        <string>/Users/fhjtech/.openclaw/workspace/.scripts/skillhub_auto_update.py</string>
+    </array>
+    <key>StartInterval</key>
+    <integer>5400</integer>  <!-- 90 minutes = 5400 seconds -->
+    <key>RunAtLoad</key>
+    <true/>
+    <key>StandardOutPath</key>
+    <string>/Users/fhjtech/.openclaw/logs/skill_discovery.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/fhjtech/.openclaw/logs/skill_discovery.err</string>
+    <key>KeepAlive</key>
+    <false/>
+</dict>
+</plist>

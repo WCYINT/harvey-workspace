@@ -1,0 +1,53 @@
+[2026-03-23 08:56:39] ERROR: Failed to get status
+[2026-03-23 08:57:09] ERROR: Failed to parse usage from status
+[2026-03-23 08:59:31] ERROR: Failed to get usage
+[2026-03-23 09:08:13] Usage: 94% | Threshold: 95% | Action: NORMAL
+[2026-03-23 09:09:10] Usage: 67% (3043/4500) | 50mins left | NORMAL
+[2026-03-23 09:10:32] ERROR: Failed to parse usage from status
+[2026-03-23 09:12:21] Usage: 66% (2978/4500) | 47mins left | NORMAL
+[2026-03-23 09:17:10] Usage: 65% (2925/4500) | 42mins left | NORMAL
+[03-23 09:42] Usage: 62% (2827/4500) | 17mins left | NORMAL
+[03-23 09:43] Usage: 62% (2821/4500) | 16mins left | NORMAL
+[2026-03-23 10:43:01] Usage: 96%🔴 | 256mins left | 🔴 REDUCE
+[2026-03-23 10:43:01] Actions: 降低请求频率 | 使用缓存减少重复查询 | 减少调试输出
+[2026-03-23 10:43:45] Usage: 96%🔴 | 255mins left | 🔴 REDUCE
+[2026-03-23 10:43:45] Actions: 降低请求频率 | 使用缓存减少重复查询 | 减少调试输出
+[2026-03-23 11:09:06] Usage: 95%🔴 | 230mins left | 🔴 REDUCE
+[2026-03-23 11:09:06] Actions: 降低请求频率 | 使用缓存减少重复查询 | 减少调试输出
+[03-23 11:20] Cached: 96%
+[03-23 11:22] ERROR: Cannot parse usage
+[03-23 11:27] ERROR: Cannot parse usage
+[03-23 11:34] ERROR: Failed to get status
+[03-23 11:59] ERROR: Failed to get status
+[03-23 12:24] ERROR: Failed to get status
+[03-23 12:49] ERROR: Failed to get status
+[03-23 13:14] ERROR: Failed to get status
+[03-23 13:39] ERROR: Failed to get status
+[03-23 14:04] ERROR: Failed to get status
+[03-23 14:29] ERROR: Failed to get status
+[03-23 14:54] ERROR: Failed to get status
+[03-23 15:19] ERROR: Failed to get status
+[03-23 15:44] ERROR: Failed to get status
+[03-23 16:09] ERROR: Failed to get status
+[03-23 16:34] ERROR: Failed to get status
+[03-23 16:59] ERROR: Failed to get status
+[03-23 17:24] ERROR: Failed to get status
+[03-23 17:49] ERROR: Failed to get status
+[03-23 18:14] ERROR: Failed to get status
+[03-23 18:39] ERROR: Failed to get status
+[03-23 19:04] ERROR: Failed to get status
+[03-23 19:29] ERROR: Failed to get status
+[03-23 19:54] ERROR: Failed to get status
+[03-23 20:19] ERROR: Failed to get status
+[03-23 20:44] ERROR: Failed to get status
+[03-23 21:09] ERROR: Failed to get status
+[03-23 21:34] ERROR: Failed to get status
+[03-23 21:59] ERROR: Failed to get status
+[03-23 22:24] ERROR: Failed to get status
+[03-23 22:49] ERROR: Failed to get status
+[03-23 23:14] ERROR: Failed to get status
+[03-23 23:39] ERROR: Failed to get status
+[03-24 00:04] ERROR: Failed to get status
+[03-24 00:29] ERROR: Failed to get status
+[03-24 00:54] ERROR: Failed to get status
+[03-24 01:19] ERROR: Failed to get status

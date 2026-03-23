@@ -188,11 +188,36 @@ def main():
 
             if not has_user_reply:
                 ts = datetime.fromtimestamp(create_time, tz=tz_cst).strftime("%H:%M:%S")
-                reminder_text = (
-                    f"📬 您好！我在 {ts} 发送了一条消息，"
-                    f"还没有收到您的回复。如果您看到了我的消息，请忽略此提醒。\n"
-                    f"如果没有看到，欢迎随时告诉我！"
-                )
+                
+                # 获取消息内容
+                msg_content = ""
+                try:
+                    content_obj = latest_bot_msg.get("content", "{}")
+                    content_data = json.loads(content_obj)
+                    if latest_bot_msg.get("msg_type") == "text":
+                        msg_content = content_data.get("text", "")[:200]  # 最多显示200字
+                    elif latest_bot_msg.get("msg_type") == "post":
+                        # 富文本消息
+                        post_content = content_data.get("zh_cn", {}).get("content", [])
+                        for section in post_content:
+                            for tag in section:
+                                if tag.get("tag") == "text":
+                                    msg_content += tag.get("text", "")
+                        msg_content = msg_content[:200]
+                except:
+                    msg_content = ""
+                
+                if msg_content:
+                    reminder_text = (
+                        f"📬 您好！我在 {ts} 发送了一条消息还没有收到您的回复。\n"
+                        f"内容：{msg_content}\n\n"
+                        f"如果您看到了请忽略此提醒，如果没有看到欢迎随时告诉我！"
+                    )
+                else:
+                    reminder_text = (
+                        f"📬 您好！我在 {ts} 发送了一条消息还没有收到您的回复。"
+                        f"如果您看到了请忽略此提醒，如果没有看到欢迎随时告诉我！"
+                    )
                 try:
                     result = send_text_message(token, USER_OPEN_ID, "open_id", reminder_text)
                     if result.get("code") == 0:

@@ -1,0 +1,15 @@
+{
+  "timestamp": "2026-03-24T03:46:15.040892+08:00",
+  "role": "Engineer",
+  "data": {
+    "role": "Engineer",
+    "skills_needed": [
+      "quality_management",
+      "lean_six_sigma",
+      "statistical_analysis",
+      "automotive_systems",
+      "supply_chain_quality"
+    ],
+    "reasoning": "质量改进需系统方法论+数据驱动+产品知识，以实现可量化的改进成果"
+  }
+}

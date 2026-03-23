@@ -13,7 +13,7 @@ H6: 更新 benchmark.md
 H7: 全面测试 + mypy
 """
 
-import subprocess, json, sys
+import subprocess, json, sys, argparse
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
@@ -104,27 +104,95 @@ def _learn_something_new() -> str:
 
 
 def _refactor_one_script() -> str:
-    """重构一个旧脚本"""
+    """重构一个旧脚本 - 实际添加类型提示和代码改进"""
+    import re
+    import ast
+    
     scripts = list((WORKSPACE / ".scripts").glob("*.py"))
-    scripts = [s for s in scripts if s.name not in ("skillhub_auto_update.py", "async_scheduler.py")]
+    # Skip already-optimized scripts and this script itself
+    skip_list = ("skillhub_auto_update.py", "async_scheduler.py", 
+                 "evolution_engine.py", "minimax_client.py")
+    scripts = [s for s in scripts if s.name not in skip_list]
     if not scripts:
         return "No scripts to refactor"
 
-    # 找最大的旧脚本
-    target = max(scripts, key=lambda s: s.stat().st_size)
+    # 找需要改进的脚本（优先选没有类型提示的）
+    target = None
+    for script in sorted(scripts, key=lambda s: s.stat().st_mtime):
+        content = script.read_text(encoding="utf-8", errors="ignore")
+        # 检查是否有函数缺少返回类型
+        if "def " in content and "->" not in content:
+            target = script
+            break
+    
+    if not target:
+        # 如果没有找到缺少类型提示的，选最新的
+        target = max(scripts, key=lambda s: s.stat().st_mtime)
+    
     name = target.stem
-
-    # 简单检查：如果没有 type hints，说明需要重构
     content = target.read_text(encoding="utf-8", errors="ignore")
-    has_type_hints = "def " in content and "->" in content
+    improvements_made = []
 
-    if not has_type_hints:
-        _log(f"[H2-REFACTOR] {name}.py needs type hints (adding...)")
-        # 实际上我们已经在用 mypy 检查了，这里做记录
-        _log(f"[H2-REFACTOR] Marked {name}.py for type annotation review")
-    else:
-        _log(f"[H2-REFACTOR] {name}.py already has type hints, looking for other improvements")
-    return name
+    # 1. 添加类型提示到函数定义
+    try:
+        tree = ast.parse(content)
+        funcs_missing_types = []
+        
+        for node in ast.walk(tree):
+            if isinstance(node, ast.FunctionDef):
+                # 检查是否已有返回类型注解
+                if node.returns is None and node.name != "__init__":
+                    funcs_missing_types.append(node.name)
+        
+        if funcs_missing_types:
+            _log(f"[H2-REFACTOR] Adding type hints to {name}.py: {funcs_missing_types[:3]}")
+            
+            # 简单的正则替换：为没有返回类型的函数添加 -> None
+            modified = content
+            for func_name in funcs_missing_types[:5]:  # 限制每次最多改5个
+                # 匹配函数定义，避免已经有的类型提示
+                pattern = rf'(def\s+{re.escape(func_name)}\s*\([^)]*\))(?!!\s*->)(\s*):'
+                replacement = r'\1 -> None\2:'
+                modified_new = re.sub(pattern, replacement, modified, count=1)
+                if modified_new != modified:
+                    modified = modified_new
+                    improvements_made.append(f"Added type hints to {func_name}()")
+            
+            if improvements_made:
+                target.write_text(modified, encoding="utf-8")
+                content = modified
+                _log(f"[H2-REFACTOR] Saved type hints to {name}.py")
+                
+    except SyntaxError:
+        _log(f"[H2-REFACTOR] Syntax error in {name}.py, skipping AST analysis")
+    except Exception as e:
+        _log(f"[H2-REFACTOR] Error analyzing {name}.py: {e}")
+
+    # 2. 添加 __all__ 导出（如果还没有）
+    if "__all__" not in content and ("def " in content or "class " in content):
+        try:
+            exports = []
+            tree = ast.parse(content)
+            for node in ast.walk(tree):
+                if isinstance(node, (ast.FunctionDef, ast.ClassDef)):
+                    if not node.name.startswith('_'):
+                        exports.append(node.name)
+            
+            if exports and len(exports) <= 20:
+                all_line = f"\n\n__all__ = {exports}\n"
+                new_content = content + all_line
+                target.write_text(new_content, encoding="utf-8")
+                content = new_content
+                improvements_made.append(f"Added __all__ ({len(exports)} exports)")
+                _log(f"[H2-REFACTOR] Added __all__ to {name}.py")
+        except Exception as e:
+            _log(f"[H2-REFACTOR] Could not add __all__: {e}")
+    
+    if not improvements_made:
+        _log(f"[H2-REFACTOR] {name}.py already well-structured (skipped)")
+        return f"{name} (no changes needed)"
+    
+    return f"{name}: {', '.join(improvements_made)}"
 
 
 def _run_benchmark() -> str:
@@ -183,17 +251,50 @@ if __name__ == "__main__":
 
 
 def _record_learnings() -> str:
-    """检查本周是否有新错误"""
-    errors_file = WORKSPACE / ".learnings/ERRORS.md"
+    """检查本周是否有新错误，仅记录新发现的问题（智能去重）"""
+    learnings_file = WORKSPACE / ".learnings/LEARNINGS.md"
     today = datetime.now(TZ_CST).strftime("%Y-%m-%d")
-    marker = f"\n## {today} Harvey 进化记录\n"
-    note = f"{marker}- SQLAlchemy metadata 保留字冲突 → 改用 extra_data\n"
-    note += "- mypy asyncscheduler BaseException → 已修正\n"
-    note += "- Docker pip index → 使用国内清华镜像\n"
+
+    # 读取现有内容检查今天是否已记录
+    existing_content = ""
+    if learnings_file.exists():
+        existing_content = learnings_file.read_text(encoding="utf-8", errors="ignore")
+
+    # 精确匹配今天是否已有记录（检查独立标题行）
+    today_header = f"## {today}"
+    has_entry_today = any(
+        line.strip() == today_header 
+        for line in existing_content.split('\n')
+    )
+    
+    if has_entry_today:
+        return f"Learnings already recorded for {today}"
+    
+    # 从 evolution.log 中读取今日错误
+    log_file = WORKSPACE / ".learnings/evolution.log"
+    new_learnings = []
+    if log_file.exists():
+        log_content = log_file.read_text(encoding="utf-8", errors="ignore")
+        for line in log_content.split("\n"):
+            if today in line and "ERROR" in line:
+                error_msg = line.split(']')[-1].strip() if ']' in line else line.strip()
+                new_learnings.append(f"- {error_msg}")
+
+    # 智能记录：有错误才记录，无错误只在当天第一次运行时记录
+    marker = f"\n## {today} Harvey 进化记录\n\n"
+    
+    if new_learnings:
+        note = marker + "\n".join(new_learnings) + "\n"
+        item_count = len(new_learnings)
+    else:
+        # 无错误时记录一次，保持连续性但不重复
+        note = marker + "- 今日无新错误记录\n"
+        item_count = 0
+
     try:
-        with open(errors_file, "a", encoding="utf-8") as f:
+        with open(learnings_file, "a", encoding="utf-8") as f:
             f.write(note)
-        return "Learnings recorded"
+        return f"Learnings recorded for {today} ({item_count} errors)"
     except Exception as e:
         return f"Learnings failed: {e}"
 
@@ -223,28 +324,51 @@ def _run_all_tests() -> str:
     return f"{passed} passed / {failed} failed"
 
 
-# ── 主流程 ────────────────────────────────────────
 def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--mode", default="auto", choices=["day", "night", "auto"])
+    args = parser.parse_args()
+
+    # Auto-detect mode based on time: night=23-08, idle=30min no messages
+    if args.mode == "auto":
+        hour = datetime.now(TZ_CST).hour
+        if 23 <= hour or hour < 8:
+            args.mode = "night"
+        else:
+            args.mode = "day"
+
     progress = _load_progress()
     hour = datetime.now(TZ_CST).hour
     task_idx = hour % len(HOURLY_TASKS)
     task_name, task_fn = HOURLY_TASKS[task_idx]
 
-    _log(f"=== Harvey 进化引擎 [{datetime.now(TZ_CST).strftime('%Y-%m-%d %H:%M')}] ===")
-    _log(f"Running task {task_idx+1}/{len(HOURLY_TASKS)}: {task_name}")
+    _log(f"=== Harvey 进化引擎 [{datetime.now(TZ_CST).strftime('%Y-%m-%d %H:%M')}] mode={args.mode} ===")
 
-    try:
-        result = task_fn()
-        _log(f"[OK] {task_name}: {result}")
-    except Exception as e:
-        _log(f"[ERROR] {task_name}: {e}")
-        progress.setdefault("errors", []).append({"time": datetime.now(TZ_CST).isoformat(), "task": task_name, "error": str(e)})
+    # Night mode: 4x speed = run 4 tasks per cycle
+    # Idle mode (>30min no messages): also run at 4x
+    if args.mode == "night":
+        tasks_to_run = HOURLY_TASKS[task_idx:] + HOURLY_TASKS[:task_idx]
+        tasks_to_run = tasks_to_run[:4]  # 4x speed
+        _log(f"Running {len(tasks_to_run)} tasks in night mode (4x)")
+    else:
+        tasks_to_run = [(task_name, task_fn)]
 
+    for name, fn in tasks_to_run:
+        try:
+            result = fn()
+            _log(f"[OK] {name}: {str(result)[:100]}")
+        except Exception as e:
+            _log(f"[ERROR] {name}: {e}")
+
+    total_completed = len(progress.get("completed_tasks", [])) + len(tasks_to_run)
+    progress["hour"] = (total_completed - 1) % 8
+    progress["day"] = (total_completed - 1) // 24 + 1
+    progress["skills"] = progress.get("skills", 0)
     progress.setdefault("completed_tasks", []).append(
-        {"time": datetime.now(TZ_CST).isoformat(), "task": task_name, "result": str(result)}
+        {"time": datetime.now(TZ_CST).isoformat(), "mode": args.mode, "tasks": [n for n,_ in tasks_to_run]}
     )
     _save_progress(progress)
-    _log("=== Harvey 进化完成 ===\n")
+    _log(f"=== Harvey 进化完成 [mode={args.mode}] ===\n")
 
 
 if __name__ == "__main__":

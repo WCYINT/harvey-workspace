@@ -1,0 +1,577 @@
+{
+  "version": 1,
+  "jobs": [
+    {
+      "id": "email-monitor",
+      "name": "Email Feedback Monitor",
+      "description": "Check inbox for feedback emails every 30 minutes",
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 */3 * * *",
+        "staggerMs": 300000
+      },
+      "enabled": true,
+      "env": {
+        "PYTHONPATH": "/Users/fhjtech/.openclaw/workspace/email_integration",
+        "PATH": "/usr/local/bin:/usr/bin:/bin:/opt/homebrew/bin"
+      },
+      "state": {
+        "nextRunAtMs": 1774292655277,
+        "lastRunAtMs": 1774281855296,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 6062,
+        "lastDeliveryStatus": "not-requested",
+        "consecutiveErrors": 0
+      },
+      "wakeMode": "now",
+      "payload": {
+        "kind": "systemEvent",
+        "text": "cd /Users/fhjtech/.openclaw/workspace/email_integration && /usr/bin/env python3 learning_integration.py --action process"
+      },
+      "sessionTarget": "main",
+      "updatedAtMs": 1774281861358
+    },
+    {
+      "id": "daily-report",
+      "name": "Daily Learning Report",
+      "description": "Send daily learning report at 9:00 AM",
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 9 * * *"
+      },
+      "enabled": true,
+      "env": {
+        "PYTHONPATH": "/Users/fhjtech/.openclaw/workspace/email_integration",
+        "PATH": "/usr/local/bin:/usr/bin:/bin:/opt/homebrew/bin"
+      },
+      "state": {
+        "nextRunAtMs": 1774314000000,
+        "lastRunAtMs": 1774227606698,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 120191,
+        "lastDeliveryStatus": "not-requested",
+        "consecutiveErrors": 0
+      },
+      "wakeMode": "now",
+      "payload": {
+        "kind": "systemEvent",
+        "text": "cd /Users/fhjtech/.openclaw/workspace/email_integration && /usr/bin/env python3 learning_integration.py --action report"
+      },
+      "sessionTarget": "main",
+      "updatedAtMs": 1774227726889
+    },
+    {
+      "id": "d4e678ad-93f0-47c9-8d41-1f0b5abd49a3",
+      "name": "Peter Steinberger 博客更新",
+      "enabled": false,
+      "createdAtMs": 1772946216427,
+      "updatedAtMs": 1774108015857,
+      "schedule": {
+        "kind": "every",
+        "everyMs": 259200000,
+        "anchorMs": 1772946216427
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "访问 https://steipete.me 查看最新博客文章，列出最近5篇新文章的标题和发布日期",
+        "timeoutSeconds": 120
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "feishu",
+        "to": "ou_7bc224841d2a1064cf5a7fbf67824227"
+      },
+      "state": {
+        "lastRunAtMs": 1773984111906,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 10105,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 4,
+        "lastError": "Delivering to Feishu requires target <chatId|user:openId|chat:chatId>"
+      }
+    },
+    {
+      "id": "feishu-delivery-check",
+      "name": "Feishu Message Delivery Check",
+      "description": "检查机器人发送的消息是否有用户回复，若无则在30秒后发送提醒",
+      "schedule": {
+        "kind": "cron",
+        "expr": "*/2 * * * *"
+      },
+      "enabled": true,
+      "env": {
+        "PYTHONPATH": "/Users/fhjtech/.openclaw/workspace/email_integration",
+        "PATH": "/usr/local/bin:/usr/bin:/bin:/opt/homebrew/bin"
+      },
+      "state": {
+        "nextRunAtMs": 1774282440000,
+        "lastRunAtMs": 1774282320115,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 7558,
+        "lastDeliveryStatus": "not-requested",
+        "consecutiveErrors": 0
+      },
+      "wakeMode": "now",
+      "payload": {
+        "kind": "systemEvent",
+        "text": "cd /Users/fhjtech/.openclaw/workspace/email_integration && /opt/homebrew/bin/python3 feishu_delivery_check.py"
+      },
+      "sessionTarget": "main",
+      "updatedAtMs": 1774282327673
+    },
+    {
+      "id": "daily-skills-summary-6am",
+      "name": "每日技能总结 06:00",
+      "description": "每天早上6点向James汇报技能更新情况",
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 6 * * *"
+      },
+      "enabled": true,
+      "env": {
+        "PYTHONPATH": "/Users/fhjtech/.openclaw/workspace",
+        "PATH": "/usr/local/bin:/usr/bin:/bin:/opt/homebrew/bin"
+      },
+      "state": {
+        "nextRunAtMs": 1774303200000,
+        "lastRunAtMs": 1774217218751,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 17135,
+        "lastDeliveryStatus": "not-requested",
+        "consecutiveErrors": 0
+      },
+      "wakeMode": "now",
+      "payload": {
+        "kind": "systemEvent",
+        "text": "cd /Users/fhjtech/.openclaw/workspace && /opt/homebrew/bin/python3 .scripts/daily_skills_summary.py"
+      },
+      "sessionTarget": "main",
+      "updatedAtMs": 1774217235886
+    },
+    {
+      "id": "daily-skills-summary-6pm",
+      "name": "每日技能总结 18:00",
+      "description": "每天傍晚6点向James汇报技能更新情况",
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 18 * * *"
+      },
+      "enabled": true,
+      "env": {
+        "PYTHONPATH": "/Users/fhjtech/.openclaw/workspace",
+        "PATH": "/usr/local/bin:/usr/bin:/bin:/opt/homebrew/bin"
+      },
+      "state": {
+        "nextRunAtMs": 1774346400000,
+        "lastRunAtMs": 1774260008892,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 12232,
+        "lastDeliveryStatus": "not-requested",
+        "consecutiveErrors": 0
+      },
+      "wakeMode": "now",
+      "payload": {
+        "kind": "systemEvent",
+        "text": "cd /Users/fhjtech/.openclaw/workspace && /opt/homebrew/bin/python3 .scripts/daily_skills_summary.py"
+      },
+      "sessionTarget": "main",
+      "updatedAtMs": 1774260021124
+    },
+    {
+      "id": "skillhub-auto-update",
+      "name": "SkillHub 技能自动更新",
+      "description": "每3小时从SkillHub获取各分类Top100技能，自动安装测试并评估安全性",
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 */3 * * *",
+        "staggerMs": 300000
+      },
+      "enabled": true,
+      "env": {
+        "PYTHONPATH": "/Users/fhjtech/.openclaw/workspace",
+        "PATH": "/usr/local/bin:/usr/bin:/bin:/opt/homebrew/bin"
+      },
+      "state": {
+        "nextRunAtMs": 1774292552856,
+        "lastRunAtMs": 1774281752897,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 37732,
+        "lastDeliveryDeliveryStatus": "not-requested",
+        "consecutiveErrors": 0,
+        "lastDeliveryStatus": "not-requested"
+      },
+      "wakeMode": "now",
+      "payload": {
+        "kind": "systemEvent",
+        "text": "cd /Users/fhjtech/.openclaw/workspace && /opt/homebrew/bin/python3 .scripts/skillhub_auto_update.py"
+      },
+      "sessionTarget": "main",
+      "updatedAtMs": 1774281790629
+    },
+    {
+      "id": "self-health-check",
+      "name": "Harvey 自我健康检查",
+      "description": "每5分钟检查Gateway存活+caffeinate保活+宕机自动重启",
+      "schedule": {
+        "kind": "cron",
+        "expr": "*/5 * * * *"
+      },
+      "enabled": true,
+      "env": {
+        "PYTHONPATH": "/Users/fhjtech/.openclaw/workspace",
+        "PATH": "/usr/local/bin:/usr/bin:/bin:/opt/homebrew/bin"
+      },
+      "state": {
+        "nextRunAtMs": 1774282500000,
+        "lastRunAtMs": 1774282207408,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 4579,
+        "lastDeliveryStatus": "not-requested",
+        "consecutiveErrors": 0
+      },
+      "wakeMode": "now",
+      "payload": {
+        "kind": "systemEvent",
+        "text": "/opt/homebrew/bin/python3 /Users/fhjtech/.openclaw/workspace/.scripts/self_health_check.py"
+      },
+      "sessionTarget": "main",
+      "updatedAtMs": 1774282211987
+    },
+    {
+      "id": "harvey-evolution-hourly",
+      "name": "Harvey Python 进化引擎",
+      "description": "每小时自动进化：学习/重构/benchmark/测试/整理learnings",
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 * * * *",
+        "staggerMs": 300000
+      },
+      "enabled": true,
+      "env": {
+        "PYTHONPATH": "/Users/fhjtech/.openclaw/workspace",
+        "PATH": "/usr/local/bin:/usr/bin:/bin:/opt/homebrew/bin"
+      },
+      "state": {
+        "nextRunAtMs": 1774285306635,
+        "lastRunAtMs": 1774281706650,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 12495,
+        "lastDeliveryStatus": "not-requested",
+        "consecutiveErrors": 0
+      },
+      "wakeMode": "now",
+      "payload": {
+        "kind": "systemEvent",
+        "text": "/opt/homebrew/bin/python3 /Users/fhjtech/.openclaw/workspace/.scripts/evolution_engine.py"
+      },
+      "sessionTarget": "main",
+      "updatedAtMs": 1774281719145
+    },
+    {
+      "id": "harvey-evolution-night",
+      "name": "Harvey Night Evolution (4x)",
+      "description": "夜间进化：23:00-08:00每15分钟一次",
+      "schedule": {
+        "kind": "cron",
+        "expr": "*/15 23-23,0-7 * * *"
+      },
+      "enabled": true,
+      "wakeMode": "now",
+      "payload": {
+        "kind": "systemEvent",
+        "text": "cd /Users/fhjtech/.openclaw/workspace && /opt/homebrew/bin/python3 .scripts/evolution_engine.py --mode night"
+      },
+      "sessionTarget": "main",
+      "state": {
+        "nextRunAtMs": 1774282500000,
+        "lastRunAtMs": 1774281614993,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "consecutiveErrors": 0,
+        "lastDurationMs": 11755,
+        "lastDeliveryStatus": "not-requested"
+      },
+      "updatedAtMs": 1774281626748
+    },
+    {
+      "id": "ai-hourly-proactive",
+      "name": "Harvey AI 主动进化引擎",
+      "description": "每小时AI主动工作：分析代码改进机会、审查日志、处理邮件反馈、整理learnings",
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 * * * *",
+        "staggerMs": 0
+      },
+      "enabled": true,
+      "env": {
+        "PYTHONPATH": "/Users/fhjtech/.openclaw/workspace",
+        "PATH": "/usr/local/bin:/usr/bin:/bin:/opt/homebrew/bin"
+      },
+      "state": {
+        "nextRunAtMs": 1774282834113,
+        "lastRunAtMs": 1774278959516,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 274597,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 34,
+        "lastError": "Delivering to Feishu requires target <chatId|user:openId|chat:chatId>"
+      },
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "你是Harvey，James的AI助手。请执行以下主动工作（不需要通知James，除非发现重要问题）：\n\n1. 读取 ~/.openclaw/workspace/.learnings/ERRORS.md 和 LEARNINGS.md，分析最近错误和教训\n2. 读取 ~/.openclaw/logs/ 目录下的最新日志文件，找出问题或改进点\n3. 检查 ~/.openclaw/workspace/.scripts/ 目录下的Python代码，寻找可改进的地方（类型提示、错误处理、性能）\n4. 读取 ~/.openclaw/workspace/.learnings/evolution_progress.json 了解进化进度\n5. 读取 ~/.openclaw/workspace/.learnings/skill_updates.log 了解最近技能更新\n\n然后对发现的最有价值的问题执行修复（比如改进一个脚本、重构一段代码、更新learnings）。只做最有价值的1件事。",
+        "timeoutSeconds": 300
+      },
+      "sessionTarget": "isolated",
+      "delivery": {
+        "mode": "quiet",
+        "channel": "feishu"
+      },
+      "updatedAtMs": 1774279234113
+    },
+    {
+      "id": "ai-quarterly-review",
+      "name": "Harvey 每5分钟快速检查",
+      "description": "每5分钟AI快速扫描：日志、错误文件、learnings，必要时采取行动",
+      "schedule": {
+        "kind": "cron",
+        "expr": "*/5 * * * *"
+      },
+      "enabled": true,
+      "env": {
+        "PYTHONPATH": "/Users/fhjtech/.openclaw/workspace",
+        "PATH": "/usr/local/bin:/usr/bin:/bin:/opt/homebrew/bin"
+      },
+      "state": {
+        "nextRunAtMs": 1774283732800,
+        "lastRunAtMs": 1774280084172,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 48628,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 36,
+        "lastError": "Delivering to Feishu requires target <chatId|user:openId|chat:chatId>"
+      },
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "你是Harvey，James的AI助手。请执行快速检查：\n\n1. 读取 ~/.openclaw/logs/health_check.log 查看最近健康状态\n2. 读取 ~/.openclaw/workspace/.learnings/ERRORS.md 查看最近记录的错误\n3. 检查 ~/.openclaw/workspace/.learnings/evolution.log 查看进化引擎状态\n\n如果发现任何问题（Gateway宕机、错误累积、进化停滞），尝试自动修复。如果一切正常，不需要通知James。",
+        "timeoutSeconds": 120
+      },
+      "sessionTarget": "isolated",
+      "delivery": {
+        "mode": "quiet",
+        "channel": "feishu"
+      },
+      "updatedAtMs": 1774280132800
+    },
+    {
+      "id": "ai-email-insights",
+      "name": "Harvey 邮件洞察引擎",
+      "description": "每10分钟分析邮件反馈，为James提炼可执行的洞察",
+      "schedule": {
+        "kind": "cron",
+        "expr": "*/10 * * * *"
+      },
+      "enabled": true,
+      "env": {
+        "PYTHONPATH": "/Users/fhjtech/.openclaw/workspace/email_integration",
+        "PATH": "/usr/local/bin:/usr/bin:/bin:/opt/homebrew/bin"
+      },
+      "state": {
+        "nextRunAtMs": 1774284486718,
+        "lastRunAtMs": 1774280754148,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 132570,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 36,
+        "lastError": "Delivering to Feishu requires target <chatId|user:openId|chat:chatId>"
+      },
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "你是Harvey，James的AI助手。请分析邮件反馈：\n\n1. 检查 ~/.openclaw/workspace/email_integration/ 目录下的邮件处理状态\n2. 读取 ~/.openclaw/workspace/.learnings/ 目录下的 learnings 相关文件\n3. 如果发现需要James关注的重要反馈，通过飞书通知（发送给 ou_7bc224841d2a1064cf5a7fbf67824227）；否则静默处理。\n\n重要原则：不要过度打扰James，只有真正需要他关注的内容才发送通知。",
+        "timeoutSeconds": 180
+      },
+      "sessionTarget": "isolated",
+      "delivery": {
+        "mode": "quiet",
+        "channel": "feishu"
+      },
+      "updatedAtMs": 1774280886718
+    },
+    {
+      "id": "ai-twice-hourly-deep",
+      "name": "Harvey 每30分钟深度分析",
+      "description": "每30分钟深度分析：代码审查、learnings整理、错误预防",
+      "schedule": {
+        "kind": "cron",
+        "expr": "5,35 * * * *"
+      },
+      "enabled": true,
+      "env": {
+        "PYTHONPATH": "/Users/fhjtech/.openclaw/workspace",
+        "PATH": "/usr/local/bin:/usr/bin:/bin:/opt/homebrew/bin"
+      },
+      "state": {
+        "nextRunAtMs": 1774283498526,
+        "lastRunAtMs": 1774279658449,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 240077,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 35,
+        "lastErrorReason": "timeout",
+        "lastError": "cron: job execution timed out"
+      },
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "你是Harvey，James的AI助手。请执行深度分析工作：\n\n1. 读取 ~/.openclaw/workspace/.learnings/ 下的所有文件，分析趋势和模式\n2. 检查 ~/.openclaw/logs/ 目录下的日志，寻找反复出现的错误或警告\n3. 审查 ~/.openclaw/workspace/.scripts/ 目录下的Python代码，寻找2-3个可改进的点\n4. 读取 ~/.openclaw/workspace/.learnings/evolution_progress.json\n\n对发现的最有价值的问题执行修复。只做最有价值的1件事。静默执行，不需要通知James。",
+        "timeoutSeconds": 240
+      },
+      "sessionTarget": "isolated",
+      "delivery": {
+        "mode": "quiet",
+        "channel": "feishu"
+      },
+      "updatedAtMs": 1774279898526
+    },
+    {
+      "id": "ai-every-5-min-code",
+      "name": "Harvey 每5分钟代码扫描",
+      "description": "每5分钟快速扫描代码改进机会",
+      "schedule": {
+        "kind": "cron",
+        "expr": "1,6,11,16,21,26,31,36,41,46,51,56 * * * *"
+      },
+      "enabled": true,
+      "env": {
+        "PYTHONPATH": "/Users/fhjtech/.openclaw/workspace",
+        "PATH": "/usr/local/bin:/usr/bin:/bin:/opt/homebrew/bin"
+      },
+      "state": {
+        "nextRunAtMs": 1774283628838,
+        "lastRunAtMs": 1774279938782,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 90056,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 36,
+        "lastErrorReason": "timeout",
+        "lastError": "cron: job execution timed out"
+      },
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "你是Harvey，James的AI助手。执行高频代码扫描：\n\n1. 读取 ~/.openclaw/workspace/.learnings/ERRORS.md 查看最新错误\n2. 检查 ~/.openclaw/workspace/.scripts/ 中最新修改的文件，寻找改进机会\n3. 读取 ~/.openclaw/workspace/.learnings/evolution.log 了解进化状态\n\n如果发现可快速修复的问题，立即修复（只改1处最关键的）。否则静默退出。",
+        "timeoutSeconds": 90
+      },
+      "sessionTarget": "isolated",
+      "delivery": {
+        "mode": "quiet",
+        "channel": "feishu"
+      },
+      "updatedAtMs": 1774280028838
+    },
+    {
+      "id": "minimax-usage-monitor",
+      "name": "MiniMax API 使用监控",
+      "description": "每30分钟自动查询MiniMax Token Plan使用率并发送报告",
+      "schedule": {
+        "kind": "cron",
+        "expr": "*/30 * * * *"
+      },
+      "enabled": true,
+      "env": {
+        "PYTHONPATH": "/Users/fhjtech/.openclaw/workspace",
+        "PATH": "/usr/local/bin:/usr/bin:/bin:/opt/homebrew/bin"
+      },
+      "state": {
+        "lastRunAtMs": 1774280132800,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "consecutiveErrors": 12,
+        "nextRunAtMs": 1774283738248,
+        "lastDurationMs": 5448,
+        "lastDeliveryStatus": "unknown",
+        "lastError": "Delivering to Feishu requires target <chatId|user:openId|chat:chatId>"
+      },
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "你是Harvey的监控agent。请执行以下步骤：\n\n1. 调用 session_status 工具获取当前 MiniMax usage 数据（格式：📊 Usage: 5h XX% left）\n2. 解析 usage 百分比\n3. 如果 usage >= 95%：\n   - 发送邮件到 wcyint@163.com，主题：\"⚠️ MiniMax API 使用率告警\"\n   - 内容：\"当前使用率：XX%，请减少API调用\"\n4. 如果 usage < 95%：\n   - 静默退出，不发送任何通知\n\n回复 DONE 当任务完成。",
+        "timeoutSeconds": 55,
+        "model": "minimax/MiniMax-M2.7"
+      },
+      "sessionTarget": "isolated",
+      "updatedAtMs": 1774280138248,
+      "delivery": {
+        "mode": "quiet",
+        "channel": "feishu"
+      }
+    },
+    {
+      "id": "28ff0654-f1f8-4a12-a5fc-99463c1e2cfa",
+      "name": "ML/LLM技能专项提升",
+      "description": "每90分钟：gstack多角色讨论→4平台并行搜索→对比安装→测试→PDCA优化→邮件报告",
+      "enabled": true,
+      "createdAtMs": 1774242944948,
+      "updatedAtMs": 1774281654068,
+      "schedule": {
+        "kind": "cron",
+        "expr": "*/15 * * * *",
+        "staggerMs": 0
+      },
+      "sessionTarget": "main",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "systemEvent",
+        "text": "cd /Users/fhjtech/.openclaw/workspace && /opt/homebrew/bin/python3 .scripts/ml_skills_upgrader.py"
+      },
+      "state": {
+        "nextRunAtMs": 1774282500000,
+        "lastRunAtMs": 1774281626748,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 27320,
+        "lastDeliveryStatus": "not-requested",
+        "consecutiveErrors": 0
+      }
+    },
+    {
+      "id": "bf285b0e-6127-403f-953f-229693d6a2bc",
+      "name": "Harvey-NightReview",
+      "description": "每晚22:00: Yuanbao向Frank和赛虎发送深度追问邮件，帮助反思自我迭代进化",
+      "enabled": true,
+      "createdAtMs": 1774275858994,
+      "updatedAtMs": 1774275858994,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 22 * * *"
+      },
+      "sessionTarget": "main",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "systemEvent",
+        "text": "cd /Users/fhjtech/.openclaw/workspace && /opt/homebrew/bin/python3 .scripts/night_review_questions.py"
+      },
+      "state": {
+        "nextRunAtMs": 1774360800000
+      }
+    }
+  ]
+}

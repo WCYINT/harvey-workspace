@@ -1,0 +1,8 @@
+# MiniMax Usage Monitor - every 30 minutes (检测usage >= 95% 则减少API消耗)
+*/30 * * * * /opt/homebrew/bin/python3 /Users/fhjtech/.openclaw/workspace/.scripts/usage_monitor.py >> /Users/fhjtech/.openclaw/logs/usage_monitor.log 2>&1
+
+# Skill discovery - every 90 minutes (四源: SkillHub+ClawHub+VoltAgent+Skills.sh)
+*/90 * * * * /opt/homebrew/bin/python3 /Users/fhjtech/.openclaw/workspace/.scripts/skillhub_auto_update.py >> /Users/fhjtech/.openclaw/logs/skill_discovery.log 2>&1
+
+# Daily learning summary - 6:00 and 18:00 (Peter Steinberger + OpenClaw)
+0 6,18 * * * /opt/homebrew/bin/python3 /Users/fhjtech/.openclaw/workspace/.scripts/daily_skills_summary.py >> /Users/fhjtech/.openclaw/logs/daily_summary.log 2>&1

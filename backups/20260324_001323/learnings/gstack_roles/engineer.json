@@ -1,0 +1,16 @@
+{
+  "timestamp": "2026-03-23T22:34:33.230871+08:00",
+  "role": "Engineer",
+  "data": {
+    "role": "Engineer",
+    "skills_needed": [
+      "quality-mgmt-systems",
+      "statistical-process-control",
+      "problem-solving-8d",
+      "hev-powertrain-knowledge",
+      "data-analysis",
+      "project-management"
+    ],
+    "reasoning": "插电混动车型质量改进需融合质量工程方法与新能源技术理解，强调数据驱动的改进闭环"
+  }
+}

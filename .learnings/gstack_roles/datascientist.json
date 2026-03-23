@@ -1,0 +1,16 @@
+{
+  "timestamp": "2026-03-24T03:46:15.041462+08:00",
+  "role": "DataScientist",
+  "data": {
+    "role": "DataScientist",
+    "skills_needed": [
+      "stat-modeling",
+      "data-analysis",
+      "quality-ctrl",
+      "six-sigma",
+      "exp-design",
+      "ml-basics"
+    ],
+    "reasoning": "These competencies provide the statistical rigor and analytical depth required to diagnose quality issues and quantify improvements for C company's plug‑in hybrid Y model."
+  }
+}

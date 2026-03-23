@@ -1,419 +1,371 @@
 {
   "version": 1,
   "skills": {
-    "codeconductor": {
-      "name": "CodeConductor.ai",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=codeconductor",
+    "clawdbot-macos-build": {
+      "name": "clawdbot-macos-build",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=clawdbot-macos-build",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "apple-remind-me": {
+      "name": "Apple Reminder",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=apple-remind-me",
       "source": "skillhub",
       "version": "1.0.1"
     },
-    "x-ai": {
-      "name": "xAI / Grok",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=x-ai",
-      "source": "skillhub",
-      "version": "1.0.2"
-    },
-    "ai-writing-humanizer": {
-      "name": "Ai Writing Humanizer",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=ai-writing-humanizer",
+    "clawdbot-skill-voice-wake-say": {
+      "name": "Voice Wake Say TTS Responses (Native)",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=clawdbot-skill-voice-wake-say",
       "source": "skillhub",
       "version": "0.1.0"
     },
-    "airoomltd-global-finance-data-platform": {
-      "name": "全球金融数据平台airoom ltd global finance data platform",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=airoomltd-global-finance-data-platform",
-      "source": "skillhub",
-      "version": "1.0.0"
-    },
-    "clickup-mcp": {
-      "name": "ClickUp MCP",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=clickup-mcp",
-      "source": "skillhub",
-      "version": "1.0.0"
-    },
-    "sonoscli": {
-      "name": "Sonoscli",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=sonoscli",
-      "source": "skillhub",
-      "version": "1.0.0"
-    },
-    "gcalcli-calendar": {
-      "name": "Google Calendar (via gcalcli)",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=gcalcli-calendar",
-      "source": "skillhub",
-      "version": "3.0.0"
-    },
-    "clicksend": {
-      "name": "ClickSend",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=clicksend",
+    "apple-find-my-local": {
+      "name": "Find My",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=apple-find-my-local",
       "source": "skillhub",
       "version": "1.0.2"
     },
-    "gog": {
-      "name": "Gog",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=gog",
+    "apple-health-skill": {
+      "name": "Apple Health Skill",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=apple-health-skill",
       "source": "skillhub",
       "version": "1.0.0"
     },
-    "video-frames": {
-      "name": "Video Frames",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=video-frames",
+    "drafts": {
+      "name": "Drafts CLI",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=drafts",
       "source": "skillhub",
       "version": "1.0.0"
     },
-    "clickfunnels": {
-      "name": "ClickFunnels",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=clickfunnels",
-      "source": "skillhub",
-      "version": "1.0.2"
-    },
-    "clipboard": {
-      "name": "Clipboard",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=clipboard",
+    "appletv": {
+      "name": "Apple TV",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=appletv",
       "source": "skillhub",
       "version": "1.0.0"
     },
-    "gogcli": {
-      "name": "gogcli - Google Workspace CLI",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=gogcli",
+    "ai-task-hub": {
+      "name": "Ai Task Hub",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=ai-task-hub",
+      "source": "skillhub",
+      "version": "3.2.10"
+    },
+    "healthkit-sync": {
+      "name": "HealthKit Sync",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=healthkit-sync",
       "source": "skillhub",
       "version": "1.0.0"
     },
-    "video-cog": {
-      "name": "video-cog",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=video-cog",
-      "source": "skillhub",
-      "version": "1.0.3"
-    },
-    "blucli": {
-      "name": "Blucli",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=blucli",
+    "hergunmac": {
+      "name": "HerGünMaç - Football Prediction Engine",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=hergunmac",
       "source": "skillhub",
       "version": "1.0.0"
     },
-    "ordercli": {
-      "name": "Ordercli",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=ordercli",
-      "source": "skillhub",
-      "version": "1.0.0"
-    },
-    "yahoo-finance-cli": {
-      "name": "Yahoo Finance CLI",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=yahoo-finance-cli",
-      "source": "skillhub",
-      "version": "1.0.0"
-    },
-    "tiangong-notebooklm-cli": {
-      "name": "NotebookLM CLI",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=tiangong-notebooklm-cli",
-      "source": "skillhub",
-      "version": "0.1.1"
-    },
-    "ai-video-gen": {
-      "name": "Ai Video Gen",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=ai-video-gen",
-      "source": "skillhub",
-      "version": "1.0.0"
-    },
-    "humanizer": {
-      "name": "Humanizer",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=humanizer",
-      "source": "skillhub",
-      "version": "1.0.0"
-    },
-    "text": {
-      "name": "text",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=text",
-      "source": "skillhub",
-      "version": ""
-    },
-    "video-generator-seedance": {
-      "name": "video-generator-seedance",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=video-generator-seedance",
-      "source": "skillhub",
-      "version": "1.0.1"
-    },
-    "stagehand-browser-cli": {
-      "name": "Stagehand Browser CLI",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=stagehand-browser-cli",
-      "source": "skillhub",
-      "version": "1.0.0"
-    },
-    "accli": {
-      "name": "Apple Calendar CLI",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=accli",
-      "source": "skillhub",
-      "version": "1.0.0"
-    },
-    "ffmpeg-video-editor": {
-      "name": "ffmpeg-video-editor",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=ffmpeg-video-editor",
-      "source": "skillhub",
-      "version": "1.0.0"
-    },
-    "video-transcript-downloader": {
-      "name": "Video Transcript Downloader",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=video-transcript-downloader",
-      "source": "skillhub",
-      "version": "1.0.0"
-    },
-    "google-slides": {
-      "name": "Google Slides",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=google-slides",
-      "source": "skillhub",
-      "version": "1.0.3"
-    },
-    "video-subtitles": {
-      "name": "Video Subtitles",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=video-subtitles",
-      "source": "skillhub",
-      "version": "1.0.0"
-    },
-    "verified-agent-identity": {
-      "name": "Verified Agent Identity",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=verified-agent-identity",
-      "source": "skillhub",
-      "version": "0.0.15"
-    },
-    "debug-checklist": {
-      "name": "Debug Checklist - 系统化 Debug 检查清单",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=debug-checklist",
-      "source": "skillhub",
-      "version": "1.0.0"
-    },
-    "ppt-generator": {
-      "name": "description: 将用户讲稿一键生成乔布斯风极简科技感竖屏HTML演示稿。当用户需要生成PPT、演示文稿、Slides、幻灯片，或要求科技风/极简风/乔布斯风格的演示时触发此技能。输出为单个可直接运行的HTML文件。",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=ppt-generator",
-      "source": "skillhub",
-      "version": "1.0.0"
-    },
-    "demo-video": {
-      "name": "Demo Video Creator",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=demo-video",
-      "source": "skillhub",
-      "version": "1.0.0"
-    },
-    "ui-debug-methodology": {
-      "name": "ui-debug-methodology",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=ui-debug-methodology",
-      "source": "skillhub",
-      "version": "1.0.0"
-    },
-    "cron-scheduling": {
-      "name": "Cron & Scheduling",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=cron-scheduling",
-      "source": "skillhub",
-      "version": "1.0.0"
-    },
-    "slides-cog": {
-      "name": "slides-cog",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=slides-cog",
-      "source": "skillhub",
-      "version": "1.0.5"
-    },
-    "ui-ux-design": {
-      "name": "UI/UX Design Guide",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=ui-ux-design",
-      "source": "skillhub",
-      "version": "1.0.0"
-    },
-    "whatsapp-styling-guide": {
-      "name": "WhatsApp Styler",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=whatsapp-styling-guide",
-      "source": "skillhub",
-      "version": "1.0.0"
-    },
-    "upload-post": {
-      "name": "Upload Videos🎥, Photos📸 & Text🖊️ to TikTok, Instagram, YouTube, X, LinkedIn, Facebook, Threads, Pinterest, Reddit & Bluesky via Upload-Post API",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=upload-post",
-      "source": "skillhub",
-      "version": "1.0.0"
-    },
-    "debug": {
-      "name": "Debug",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=debug",
+    "data-analysis-pro": {
+      "name": "data analysis pro",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=data-analysis-pro",
       "source": "skillhub",
       "version": "1.0.4"
     },
-    "debug-pro": {
-      "name": "Debug Pro",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=debug-pro",
+    "fzf-fuzzy-finder": {
+      "name": "Fzf Fuzzy Finder",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=fzf-fuzzy-finder",
       "source": "skillhub",
       "version": "1.0.0"
     },
-    "debug-methodology": {
-      "name": "Debug Methodology",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=debug-methodology",
+    "findmy-location": {
+      "name": "Find My Location",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=findmy-location",
       "source": "skillhub",
-      "version": "1.2.0"
+      "version": "1.1.1"
     },
-    "debugging-r-environment-and-dependencies": {
-      "name": "Debugging R Environment And Dependencies",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=debugging-r-environment-and-dependencies",
-      "source": "skillhub",
-      "version": "0.1.0"
-    },
-    "debug-detective": {
-      "name": "debug detective",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=debug-detective",
-      "source": "skillhub",
-      "version": "1.0.0"
-    },
-    "container-debug": {
-      "name": "Container Debug",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=container-debug",
-      "source": "skillhub",
-      "version": "1.0.0"
-    },
-    "Docker": {
-      "name": "Docker",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=Docker",
-      "source": "skillhub",
-      "version": ""
-    },
-    "docker-essentials": {
-      "name": "Docker Essentials",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=docker-essentials",
-      "source": "skillhub",
-      "version": "1.0.0"
-    },
-    "n8n": {
-      "name": "n8n",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=n8n",
-      "source": "skillhub",
-      "version": "2.0.0"
-    },
-    "runesleo-systematic-debugging": {
-      "name": "Systematic Debugging",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=runesleo-systematic-debugging",
-      "source": "skillhub",
-      "version": "3.0.0"
-    },
-    "productivity-skill": {
-      "name": "productivity skill(yewubin)",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=productivity-skill",
-      "source": "skillhub",
-      "version": "2.7.0"
-    },
-    "confucius-debug": {
-      "name": "Confucius Debug",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=confucius-debug",
-      "source": "skillhub",
-      "version": "2.0.2"
-    },
-    "todoist": {
-      "name": "Todoist",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=todoist",
-      "source": "skillhub",
-      "version": "0.2.1"
-    },
-    "oracle": {
-      "name": "Oracle",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=oracle",
+    "get-focus-mode": {
+      "name": "Get Focus Mode",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=get-focus-mode",
       "source": "skillhub",
       "version": "1.0.1"
     },
-    "moltpixel": {
-      "name": "Moltpixel",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=moltpixel",
+    "agent-browser-tekken": {
+      "name": "Agent Browser",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=agent-browser-tekken",
       "source": "skillhub",
-      "version": "1.5.0"
+      "version": "0.8.6"
     },
-    "rescuetime": {
-      "name": "RescueTime",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=rescuetime",
-      "source": "skillhub",
-      "version": "1.0.0"
-    },
-    "api-dev": {
-      "name": "API Development",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=api-dev",
+    "aicash-miner": {
+      "name": "AICash Miner",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=aicash-miner",
       "source": "skillhub",
       "version": "1.0.0"
     },
-    "openclaw-mcp-debugger": {
-      "name": "OpenClaw MCP Debugger",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=openclaw-mcp-debugger",
+    "ai-quant-trader": {
+      "name": "Ai Quant Trader",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=ai-quant-trader",
       "source": "skillhub",
       "version": "1.0.0"
     },
-    "oura-analytics": {
-      "name": "Oura Ring Analytics",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=oura-analytics",
-      "source": "skillhub",
-      "version": "1.0.0"
-    },
-    "code-mentor": {
-      "name": "Code Mentor",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=code-mentor",
-      "source": "skillhub",
-      "version": "1.0.2"
-    },
-    "productivity": {
-      "name": "Productivity",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=productivity",
-      "source": "skillhub",
-      "version": "1.0.4"
-    },
-    "afrexai-productivity-system": {
-      "name": "Productivity Operating System",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=afrexai-productivity-system",
-      "source": "skillhub",
-      "version": "1.0.0"
-    },
-    "productivity-tracker": {
-      "name": "Productivity Tracker",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=productivity-tracker",
-      "source": "skillhub",
-      "version": "2.0.0"
-    },
-    "focus-deep-work": {
-      "name": "Focus Deep Work",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=focus-deep-work",
-      "source": "skillhub",
-      "version": "1.0.0"
-    },
-    "ai-productivity-audit": {
-      "name": "Ai Productivity Audit",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=ai-productivity-audit",
+    "ai-learning-planner-cn": {
+      "name": "Ai Learning Planner Cn",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=ai-learning-planner-cn",
       "source": "skillhub",
       "version": "1.1.0"
     },
-    "blog-writer": {
-      "name": "Blog Writer",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=blog-writer",
-      "source": "skillhub",
-      "version": "0.1.0"
-    },
-    "pndr": {
-      "name": "Pndr",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=pndr",
-      "source": "skillhub",
-      "version": "1.0.20260202"
-    },
-    "gitai-skill": {
-      "name": "Gitai - Git Commit Automation",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=gitai-skill",
+    "ai-phone-calls-steponeai": {
+      "name": "ai-phone-calls-steponeai",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=ai-phone-calls-steponeai",
       "source": "skillhub",
       "version": "1.0.2"
     },
-    "flowmind": {
-      "name": "FlowMind",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=flowmind",
+    "mac-notes-agent": {
+      "name": "Mac Notes Agent",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=mac-notes-agent",
       "source": "skillhub",
-      "version": "1.0.2"
+      "version": "1.1.0"
     },
-    "daily-rhythm": {
-      "name": "Daily Rhythm",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=daily-rhythm",
+    "ai-economic-tracker": {
+      "name": "AI Economic Tracker",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=ai-economic-tracker",
+      "source": "skillhub",
+      "version": "1.0.1"
+    },
+    "homebrew": {
+      "name": "Homebrew Package Manager",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=homebrew",
+      "source": "skillhub",
+      "version": "1.0.1"
+    },
+    "aisa-financial-data": {
+      "name": "AIsa Financial Data",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=aisa-financial-data",
       "source": "skillhub",
       "version": "1.0.0"
     },
-    "Oura": {
-      "name": "Oura",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=Oura",
+    "managing-apple-notes": {
+      "name": "Manage Apple Notes",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=managing-apple-notes",
+      "source": "skillhub",
+      "version": "1.0.1"
+    },
+    "meow-finder": {
+      "name": "Meow Finder",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=meow-finder",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "icloud-findmy": {
+      "name": "iCloud Find My",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=icloud-findmy",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "ics-import-on-iphone": {
+      "name": "Import ICS on iPhone",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=ics-import-on-iphone",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "inkjet": {
+      "name": "InkJet - Bluetooth Thermal Printer",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=inkjet",
+      "source": "skillhub",
+      "version": "1.0.2"
+    },
+    "adspirer-ads-agent": {
+      "name": "Adspirer Ads Agent",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=adspirer-ads-agent",
+      "source": "skillhub",
+      "version": "1.5.0"
+    },
+    "action-suggester": {
+      "name": "Action Suggester",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=action-suggester",
+      "source": "skillhub",
+      "version": "1.0.5"
+    },
+    "agent-casino": {
+      "name": "Agent Casino",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=agent-casino",
+      "source": "skillhub",
+      "version": "2.0.1"
+    },
+    "mh-apple-reminders": {
+      "name": "MH apple-reminders",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=mh-apple-reminders",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "aclawdemy": {
+      "name": "Aclawdemy: A platform for agents to research together",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=aclawdemy",
+      "source": "skillhub",
+      "version": "1.0.1"
+    },
+    "academic-writer": {
+      "name": "Academic Writer",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=academic-writer",
+      "source": "skillhub",
+      "version": "0.1.0"
+    },
+    "advanced-skill-creator": {
+      "name": "advanced-skill-creator",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=advanced-skill-creator",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "ai-voice-cloning": {
+      "name": "Ai Voice Cloning",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=ai-voice-cloning",
+      "source": "skillhub",
+      "version": "0.1.5"
+    },
+    "throwly-mcp": {
+      "name": "AI Agent Marketplace: throwly-mcp",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=throwly-mcp",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "agent-lightning": {
+      "name": "Agent Lightning",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=agent-lightning",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "ai-conversation-summary": {
+      "name": "Conversation Summary",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=ai-conversation-summary",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "data-enricher": {
+      "name": "Data Enricher",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=data-enricher",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "ai-sdk-ui": {
+      "name": "Ai Sdk Ui",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=ai-sdk-ui",
+      "source": "skillhub",
+      "version": "0.1.0"
+    },
+    "web-content-fetcher": {
+      "name": "Web Content Fetcher",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=web-content-fetcher",
+      "source": "skillhub",
+      "version": "1.0.1"
+    },
+    "database-designer": {
+      "name": "Database Designer",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=database-designer",
+      "source": "skillhub",
+      "version": "2.1.1"
+    },
+    "dating": {
+      "name": "AI Agent Dating — Match, Chat & Build Relationships",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=dating",
+      "source": "skillhub",
+      "version": "1.4.1"
+    },
+    "agentmail-kessler": {
+      "name": "AgentMail (Enhanced)",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=agentmail-kessler",
+      "source": "skillhub",
+      "version": "1.1.0"
+    },
+    "Twilio": {
+      "name": "Twilio",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=Twilio",
       "source": "skillhub",
       "version": ""
+    },
+    "twilio-api": {
+      "name": "Twilio",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=twilio-api",
+      "source": "skillhub",
+      "version": "1.0.2"
+    },
+    "ahmed": {
+      "name": "Spotify",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=ahmed",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "agnxi-search-skill": {
+      "name": "Agent Skills Search",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=agnxi-search-skill",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "ai-review": {
+      "name": "AI-review",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=ai-review",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "agile-toolkit": {
+      "name": "Agile Toolkit",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=agile-toolkit",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "agentx-news": {
+      "name": "Agentx News",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=agentx-news",
+      "source": "skillhub",
+      "version": "1.0.1"
+    },
+    "ai-researcher": {
+      "name": "AI Researcher",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=ai-researcher",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "airbnb": {
+      "name": "Airbnb",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=airbnb",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "openclaw-free-web-search": {
+      "name": "Free Web Search v4.0",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=openclaw-free-web-search",
+      "source": "skillhub",
+      "version": "4.0.0"
+    },
+    "xquik-x-twitter-scraper": {
+      "name": "x-twitter-scraper",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=xquik-x-twitter-scraper",
+      "source": "skillhub",
+      "version": "1.7.0"
+    },
+    "adhd-assistant": {
+      "name": "ADHD Assistant",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=adhd-assistant",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "birthday-reminder": {
+      "name": "Birthday Reminder",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=birthday-reminder",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "captchas-openclaw": {
+      "name": "CAPTCHAS OpenClaw",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=captchas-openclaw",
+      "source": "skillhub",
+      "version": "1.0.1"
+    },
+    "ai-agent-tools": {
+      "name": "Ai Agent Tools",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=ai-agent-tools",
+      "source": "skillhub",
+      "version": "0.1.0"
+    },
+    "assimilate-mcp": {
+      "name": "Assimilate MCP",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=assimilate-mcp",
+      "source": "skillhub",
+      "version": "1.0.0"
     }
   }
 }
