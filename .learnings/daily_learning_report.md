@@ -2,14 +2,14 @@
 <html><head><meta charset="utf-8"></head>
 <body style="font-family:Arial,sans-serif;max-width:900px;margin:0 auto;padding:20px">
     <h1>📊 Harvey 每日汇报</h1>
-    <p><b>时间：</b>2026-03-24 04:18 (北京时间)</p>
+    <p><b>时间：</b>2026-03-24 05:18 (北京时间)</p>
     <hr>
     
         <h2>📦 技能更新</h2>
-        <p>今日新安装：<b>5</b> 个 | 技能库总数：<b>1363</b></p>
+        <p>今日新安装：<b>4</b> 个 | 技能库总数：<b>1367</b></p>
         <table border="1" cellpadding="6" cellspacing="0" style="border-collapse:collapse;width:100%">
             <tr style="background:#f0f0f0"><th>技能</th><th>来源</th><th>描述</th></tr>
-            <tr><td><code>ai-agent-tools</code></td><td>skillhub</td><td>Ai Agent Tools</td></tr><tr><td><code>assimilate-mcp</code></td><td>voltagent</td><td>assimilate-mcp</td></tr><tr><td><code>birthday-reminder</code></td><td>voltagent</td><td>birthday-reminder</td></tr><tr><td><code>bluebubbles</code></td><td>voltagent</td><td>bluebubbles</td></tr><tr><td><code>captchas-openclaw</code></td><td>voltagent</td><td>captchas-openclaw</td></tr>
+            <tr><td><code>claude-code-skill</code></td><td>voltagent</td><td>claude-code-skill</td></tr><tr><td><code>claude-connect</code></td><td>voltagent</td><td>claude-connect</td></tr><tr><td><code>clawd-coach</code></td><td>voltagent</td><td>clawd-coach</td></tr><tr><td><code>clawd-modifier</code></td><td>voltagent</td><td>clawd-modifier</td></tr>
         </table>
     <hr>
     

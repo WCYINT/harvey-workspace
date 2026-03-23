@@ -1,6 +1,6 @@
 {
   "day": 4,
-  "hour": 5,
+  "hour": 0,
   "skills": 0,
   "completed_tasks": [
     {
@@ -654,6 +654,36 @@
     },
     {
       "time": "2026-03-24T05:04:24.994322+08:00",
+      "mode": "night",
+      "tasks": [
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-03-24T05:15:16.333841+08:00",
+      "mode": "night",
+      "tasks": [
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-03-24T05:30:22.086055+08:00",
+      "mode": "night",
+      "tasks": [
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-03-24T05:45:16.544837+08:00",
       "mode": "night",
       "tasks": [
         "Report",

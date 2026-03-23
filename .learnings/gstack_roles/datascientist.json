@@ -1,16 +1,15 @@
 {
-  "timestamp": "2026-03-24T03:46:15.041462+08:00",
+  "timestamp": "2026-03-24T05:37:11.505178+08:00",
   "role": "DataScientist",
   "data": {
     "role": "DataScientist",
     "skills_needed": [
-      "stat-modeling",
-      "data-analysis",
-      "quality-ctrl",
+      "stat-analysis",
+      "regression",
+      "doe",
       "six-sigma",
-      "exp-design",
-      "ml-basics"
+      "data-viz"
     ],
-    "reasoning": "These competencies provide the statistical rigor and analytical depth required to diagnose quality issues and quantify improvements for C company's plug‑in hybrid Y model."
+    "reasoning": "Statistical analysis and modeling are essential for diagnosing root causes, designing experiments, and quantifying improvements for C company's plug‑in hybrid Y model quality."
   }
 }
