@@ -2,34 +2,9 @@
   "date": "2026-03-24",
   "skills": [
     {
-      "slug": "uapi-get-ai-translate-languages",
-      "description": "UAPI AI翻译配置 接口  (3.283)",
-      "source": "clawhub"
-    },
-    {
-      "slug": "taizi-coding",
-      "description": "Coding  (3.230)",
-      "source": "clawhub"
-    },
-    {
-      "slug": "icd-coding",
-      "description": "ICD-Coding  (3.188)",
-      "source": "clawhub"
-    },
-    {
-      "slug": "coding-custom",
-      "description": "Coding Custom  (3.158)",
-      "source": "clawhub"
-    },
-    {
-      "slug": "csharp-developer",
-      "description": "Csharp Developer  (3.328)",
-      "source": "clawhub"
-    },
-    {
-      "slug": "wpf-developer",
-      "description": "wpf-developer  (3.270)",
-      "source": "clawhub"
+      "slug": "ai-video-cinematography",
+      "description": "ai视频人物真实性方法论",
+      "source": "skillhub"
     }
   ]
 }

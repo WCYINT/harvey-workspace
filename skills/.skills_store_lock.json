@@ -420,6 +420,12 @@
       "zip_url": "https://lightmake.site/api/v1/download?slug=ai-drama-review",
       "source": "skillhub",
       "version": "0.1.1"
+    },
+    "ai-video-cinematography": {
+      "name": "ai视频人物真实性方法论",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=ai-video-cinematography",
+      "source": "skillhub",
+      "version": "1.0.0"
     }
   }
 }

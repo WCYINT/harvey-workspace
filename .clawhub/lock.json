@@ -776,6 +776,10 @@
     "icd-coding": {
       "version": "1.3.4",
       "installedAt": 1774303422008
+    },
+    "ai-video-cinematography": {
+      "version": "1.0.0",
+      "installedAt": 1774304646567
     }
   }
 }
