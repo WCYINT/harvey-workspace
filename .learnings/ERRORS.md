@@ -31,3 +31,12 @@ Cannot fix gateway session state from workspace. Ensure each cron run uses a fre
 
 ---
 
+
+## 2026-03-24 06:00 - 163 SMTP认证失败
+**问题**: daily_skills_summary.py 和 email_integration 发送邮件均失败
+**错误**: `(535, b'Error: authentication failed')`
+**排查**:
+- 授权码 NDdE6mZyTMifExXL 在 TOOLS.md 中记录
+- 尝试 SSL(465) 和 TLS(587) 均失败
+- 可能原因: 163授权码过期或需重新生成
+**建议**: James需要到163邮箱设置重新生成SMTP授权码

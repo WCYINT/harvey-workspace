@@ -2,24 +2,34 @@
   "date": "2026-03-24",
   "skills": [
     {
-      "slug": "claude-code-skill",
-      "description": "claude-code-skill",
-      "source": "voltagent"
+      "slug": "uapi-get-ai-translate-languages",
+      "description": "UAPI AI翻译配置 接口  (3.283)",
+      "source": "clawhub"
     },
     {
-      "slug": "claude-connect",
-      "description": "claude-connect",
-      "source": "voltagent"
+      "slug": "taizi-coding",
+      "description": "Coding  (3.230)",
+      "source": "clawhub"
     },
     {
-      "slug": "clawd-coach",
-      "description": "clawd-coach",
-      "source": "voltagent"
+      "slug": "icd-coding",
+      "description": "ICD-Coding  (3.188)",
+      "source": "clawhub"
     },
     {
-      "slug": "clawd-modifier",
-      "description": "clawd-modifier",
-      "source": "voltagent"
+      "slug": "coding-custom",
+      "description": "Coding Custom  (3.158)",
+      "source": "clawhub"
+    },
+    {
+      "slug": "csharp-developer",
+      "description": "Csharp Developer  (3.328)",
+      "source": "clawhub"
+    },
+    {
+      "slug": "wpf-developer",
+      "description": "wpf-developer  (3.270)",
+      "source": "clawhub"
     }
   ]
 }

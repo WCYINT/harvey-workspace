@@ -390,6 +390,36 @@
       "zip_url": "https://lightmake.site/api/v1/download?slug=claude-connect",
       "source": "skillhub",
       "version": "1.1.0"
+    },
+    "ai-data-analysis": {
+      "name": "AI Data Analysis",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=ai-data-analysis",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "ai-ugc": {
+      "name": "AI UGC",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=ai-ugc",
+      "source": "skillhub",
+      "version": "0.0.4"
+    },
+    "ai-daily": {
+      "name": "Ai Daily",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=ai-daily",
+      "source": "skillhub",
+      "version": "0.1.0"
+    },
+    "ai-writing-assistant-cn": {
+      "name": "Ai Writing Assistant Cn",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=ai-writing-assistant-cn",
+      "source": "skillhub",
+      "version": "1.1.0"
+    },
+    "ai-drama-review": {
+      "name": "Ai Drama Review",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=ai-drama-review",
+      "source": "skillhub",
+      "version": "0.1.1"
     }
   }
 }
