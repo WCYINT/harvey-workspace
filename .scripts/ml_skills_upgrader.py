@@ -529,6 +529,20 @@ def send_report(to_install_count: int, to_upgrade_count: int, safe: list, unsafe
 
 # ── 主流程 ──────────────────────────────────────
 async def main():
+    # ── 90分钟间隔检查（最先检查，避免不必要的资源消耗）─────────────────────────
+    LOG_MARKER.parent.mkdir(parents=True, exist_ok=True)
+    try:
+        last_run = json.loads(LOG_MARKER.read_text())
+        last_ts = datetime.fromisoformat(last_run["timestamp"])
+        now_ts = datetime.now(TZ_CST)
+        elapsed_minutes = (now_ts - last_ts).total_seconds() / 60
+        if elapsed_minutes < 90:
+            log(f"[跳过] 距离上次执行仅{int(elapsed_minutes)}分钟，待{int(90-elapsed_minutes)}分钟后执行")
+            return
+        log(f"[间隔检查] 距离上次执行{int(elapsed_minutes)}分钟，执行任务")
+    except:
+        pass  # 首次运行或无记录，继续执行
+
     # ── 增量检查：是否有新技能可用 ────────────────────
     # 快速扫描4平台，不安装只检查是否有新增
     log("[增量检查] 快速扫描4平台是否有新技能...")
@@ -537,23 +551,11 @@ async def main():
     new_count = sum(1 for slug in quick_skills if slug not in installed)
     log(f"[增量检查] 当前已安装{len(installed)}个，扫描到{new_count}个新技能可安装")
 
-    # ── 90分钟间隔检查 ──────────────────────────
-    LOG_MARKER.parent.mkdir(parents=True, exist_ok=True)
-    try:
-        last_run = json.loads(LOG_MARKER.read_text())
-        last_ts = datetime.fromisoformat(last_run["timestamp"])
-        now_ts = datetime.now(TZ_CST)
-        elapsed_minutes = (now_ts - last_ts).total_seconds() / 60
-        if elapsed_minutes < 90:
-            log(f"[跳过] 距离上次执行仅{int(elapsed_minutes)}分钟，新技能{new_count}个，待{int(90-elapsed_minutes)}分钟后执行")
-            return
-        log(f"[间隔检查] 距离上次执行{int(elapsed_minutes)}分钟，执行任务")
-    except:
-        pass
-
     # ── 事件驱动判断：新技能>=3才执行，否则跳过 ──────
     if new_count < 3:
         log(f"[跳过] 新技能仅{new_count}个（<3），不触发完整流程")
+        # 更新标记文件，记录本次检查时间，避免下次重复检查
+        LOG_MARKER.write_text(json.dumps({"timestamp": datetime.now(TZ_CST).isoformat(), "new_skills": new_count}))
         return
 
     LOG_MARKER.write_text(json.dumps({"timestamp": datetime.now(TZ_CST).isoformat(), "new_skills": new_count}))

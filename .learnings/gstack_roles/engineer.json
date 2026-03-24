@@ -1,15 +1,16 @@
 {
-  "timestamp": "2026-03-24T15:52:53.295189+08:00",
+  "timestamp": "2026-03-24T22:29:13.359561+08:00",
   "role": "Engineer",
   "data": {
     "role": "Engineer",
     "skills_needed": [
-      "six_sigma_quality",
-      "nev_powertrain",
-      "data_analysis",
-      "dfmea",
-      "supplier_qm"
+      "quality-management-system",
+      "automotive-powertrain-knowledge",
+      "statistical-data-analysis",
+      "lean-six-sigma",
+      "supplier-quality-control",
+      "project-management"
     ],
-    "reasoning": "插电混动车型质量改进需融合新能源汽车技术理解与六西格玛方法论，重点通过DFMEA识别设计缺陷并用数据分析驱动供应商质量管理"
+    "reasoning": "插电混动车型质量改进需融合传统汽车质量体系与新能源特殊技术要求，涵盖设计-制造-供应链全链路的数据驱动改进能力"
   }
 }

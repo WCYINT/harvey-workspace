@@ -40,6 +40,123 @@ TZ_CST = timezone(timedelta(hours=8))
 ARCHIVE_DIR = Path("/Users/fhjtech/.openclaw/logs/report_archives")
 ARCHIVE_DIR.mkdir(parents=True, exist_ok=True)
 
+# SMTP Health Check State
+SMTP_HEALTH_LOG = Path("/Users/fhjtech/.openclaw/logs/smtp_health.json")
+
+def check_smtp_health() -> dict:
+    """Proactive SMTP health check - returns status without sending actual email"""
+    result = {
+        "timestamp": datetime.now(TZ_CST).isoformat(),
+        "status": "unknown",
+        "latency_ms": 0,
+        "auth_test": False,
+        "error": None,
+        "recommendation": None
+    }
+    
+    import socket
+    start_time = datetime.now()
+    
+    try:
+        # Test TCP connection first
+        sock = socket.create_connection((SMTP_HOST, SMTP_PORT), timeout=10)
+        sock.close()
+        
+        # Test SMTP connection and auth
+        with smtplib.SMTP_SSL(SMTP_HOST, SMTP_PORT, timeout=10) as server:
+            server.ehlo()
+            # Try login - this will fail with 535 if auth code expired
+            try:
+                server.login(EMAIL_FROM, EMAIL_PASSWORD)
+                result["auth_test"] = True
+                result["status"] = "healthy"
+            except smtplib.SMTPAuthenticationError as e:
+                result["status"] = "auth_failed"
+                result["error"] = f"SMTP 535 Auth Failed: {e}"
+                result["recommendation"] = "AUTH_CODE_EXPIRED"
+                
+    except socket.timeout:
+        result["status"] = "timeout"
+        result["error"] = f"Connection to {SMTP_HOST}:{SMTP_PORT} timed out"
+        result["recommendation"] = "CHECK_NETWORK"
+    except Exception as e:
+        result["status"] = "error"
+        result["error"] = str(e)
+        result["recommendation"] = "CHECK_CONFIG"
+    
+    result["latency_ms"] = int((datetime.now() - start_time).total_seconds() * 1000)
+    
+    # Save health state
+    try:
+        health_history = []
+        if SMTP_HEALTH_LOG.exists():
+            with open(SMTP_HEALTH_LOG) as f:
+                health_history = json.load(f)
+        health_history.append(result)
+        # Keep last 100 entries
+        health_history = health_history[-100:]
+        with open(SMTP_HEALTH_LOG, "w") as f:
+            json.dump(health_history, f, indent=2)
+    except Exception as e:
+        print(f"[HEALTH] Failed to save health log: {e}")
+    
+    return result
+
+def get_smtp_health_summary() -> str:
+    """Get a summary of SMTP health for inclusion in reports"""
+    if not SMTP_HEALTH_LOG.exists():
+        return "<p>⚠️ No SMTP health data available yet</p>"
+    
+    try:
+        with open(SMTP_HEALTH_LOG) as f:
+            history = json.load(f)
+        
+        if not history:
+            return "<p>⚠️ No SMTP health history</p>"
+        
+        # Get last 24 hours of checks
+        recent = [h for h in history if 
+                 (datetime.now(TZ_CST) - datetime.fromisoformat(h["timestamp"])).total_seconds() < 86400]
+        
+        if not recent:
+            return "<p>⚠️ No recent SMTP health checks (last 24h)</p>"
+        
+        # Calculate stats
+        healthy = sum(1 for h in recent if h["status"] == "healthy")
+        auth_failures = sum(1 for h in recent if h["status"] == "auth_failed")
+        
+        latest = recent[-1]
+        status_color = "✅" if latest["status"] == "healthy" else "❌"
+        status_text = "健康" if latest["status"] == "healthy" else latest["status"]
+        
+        html = f"""
+        <h4>{status_color} SMTP 健康状态 (最近24小时)</h4>
+        <ul>
+            <li>检查次数: {len(recent)} 次</li>
+            <li>健康/成功: {healthy} 次 ({100*healthy//len(recent)}%)</li>
+            <li>认证失败: {auth_failures} 次</li>
+            <li>最新状态: <b>{status_text}</b> (延迟: {latest.get('latency_ms', 'N/A')}ms)</li>
+        </ul>
+        """
+        
+        if latest["status"] == "auth_failed":
+            html += """
+            <p style="color:#c00"><b>⚠️ 认证失败 - 授权码可能已过期</b></p>
+            <p>请按以下步骤修复：</p>
+            <ol>
+                <li>登录 163.com 邮箱</li>
+                <li>进入设置 -> POP3/SMTP/IMAP</li>
+                <li>关闭 SMTP，重新开启</li>
+                <li>生成新的授权码</li>
+                <li>更新 daily_skills_summary.py 中的 EMAIL_PASSWORD</li>
+            </ol>
+            """
+        
+        return html
+        
+    except Exception as e:
+        return f"<p>⚠️ Error reading SMTP health: {e}</p>"
+
 def archive_report(subject: str, html_body: str) -> str:
     """Save report locally when email fails"""
     timestamp = datetime.now(TZ_CST).strftime("%Y%m%d_%H%M%S")

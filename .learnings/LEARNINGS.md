@@ -621,4 +621,9 @@ Performed comprehensive proactive review of critical automation systems:
 
 ## 2026-03-24 Harvey 进化记录
 
+- 03:56 Fixed: Cleared stale `__pycache__/evolution_engine*` to resolve `NameError: name 'os' is not defined`. Root cause was stale bytecode from before LRN-20260324-OSIMPORT fix was applied. Verified fix: `import evolution_engine` succeeds with os available.
+- 19:14 Deep analysis cron: Analyzed learnings, logs, scripts. Found and fixed stale bytecode issue. Evolution engine should now save progress correctly.
+
+## 2026-03-24 Harvey 进化记录
+
 - Failed to save progress: name 'os' is not defined

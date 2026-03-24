@@ -765,3 +765,335 @@ Error: S): data_anomaly_detector (clawhub)
 [2026-03-24 15:53:29] [Step4] 安装FAIL(info: "alicloud_data_analytics_dataanalysisgbi" not in index): alicloud_data_analytics_dataanalysisgbi (skillhub)
 [2026-03-24 15:53:29] [Step4] 安装/升级完成: 0 成功 / 8 失败
 [2026-03-24 15:53:29] [Step4] 无新安装，中止
+[2026-03-24 15:56:28] [增量检查] 快速扫描4平台是否有新技能...
+[2026-03-24 15:56:28] [Step2] 启动4个agent并行搜索...
+[2026-03-24 15:56:59] [Step2] 四平台搜索完成，获取 29 个技能
+[2026-03-24 15:56:59] [增量检查] 当前已安装1430个，扫描到28个新技能可安装
+[2026-03-24 15:56:59] [跳过] 距离上次执行仅4分钟，新技能28个，待85分钟后执行
+[2026-03-24 16:00:54] [增量检查] 快速扫描4平台是否有新技能...
+[2026-03-24 16:00:54] [Step2] 启动4个agent并行搜索...
+[2026-03-24 16:15:10] [增量检查] 快速扫描4平台是否有新技能...
+[2026-03-24 16:15:10] [Step2] 启动4个agent并行搜索...
+[2026-03-24 16:15:12] [Step2] 四平台搜索完成，获取 41 个技能
+[2026-03-24 16:15:12] [增量检查] 当前已安装1432个，扫描到33个新技能可安装
+[2026-03-24 16:15:12] [跳过] 距离上次执行仅22分钟，新技能33个，待67分钟后执行
+[2026-03-24 16:30:48] [增量检查] 快速扫描4平台是否有新技能...
+[2026-03-24 16:30:48] [Step2] 启动4个agent并行搜索...
+[2026-03-24 16:30:53] [Step2] 四平台搜索完成，获取 22 个技能
+[2026-03-24 16:30:53] [增量检查] 当前已安装1432个，扫描到14个新技能可安装
+[2026-03-24 16:30:53] [跳过] 距离上次执行仅38分钟，新技能14个，待51分钟后执行
+[2026-03-24 16:45:10] [增量检查] 快速扫描4平台是否有新技能...
+[2026-03-24 16:45:10] [Step2] 启动4个agent并行搜索...
+[2026-03-24 16:45:41] [Step2] 四平台搜索完成，获取 28 个技能
+[2026-03-24 16:45:41] [增量检查] 当前已安装1432个，扫描到27个新技能可安装
+[2026-03-24 16:45:41] [跳过] 距离上次执行仅53分钟，新技能27个，待36分钟后执行
+[2026-03-24 17:00:45] [增量检查] 快速扫描4平台是否有新技能...
+[2026-03-24 17:00:45] [Step2] 启动4个agent并行搜索...
+[2026-03-24 17:00:51] [Step2] 四平台搜索完成，获取 22 个技能
+[2026-03-24 17:00:51] [增量检查] 当前已安装1432个，扫描到14个新技能可安装
+[2026-03-24 17:00:51] [跳过] 距离上次执行仅68分钟，新技能14个，待21分钟后执行
+[2026-03-24 18:32:01] [增量检查] 快速扫描4平台是否有新技能...
+[2026-03-24 18:32:01] [Step2] 启动4个agent并行搜索...
+[2026-03-24 18:32:07] [Step2] 四平台搜索完成，获取 43 个技能
+[2026-03-24 18:32:07] [增量检查] 当前已安装1434个，扫描到35个新技能可安装
+[2026-03-24 18:32:07] [间隔检查] 距离上次执行159分钟，执行任务
+[2026-03-24 18:32:07] [角色文件] 找到3个历史角色讨论，可作为参考
+[2026-03-24 18:32:07] === ML/LLM技能专项提升任务 Started ===
+[2026-03-24 18:32:07] [Step1] 启动 gstack 多角色讨论（3角色并发）...
+[2026-03-24 18:32:28] [Step1] CEO角色完成，技能: ['quality-mgmt', 'data-analytics', 'lean-six-sigma', 'project-mgmt', 'cost-benefit']
+[2026-03-24 18:32:50] [Step1] DataScientist角色完成，技能: ['statistical_analysis', 'regression_modeling', 'design_of_experiments', 'data_wrangling', 'visualization']
+[2026-03-24 18:32:50] [Step1] gstack三角色讨论完成，技能优先级: ['quality-mgmt', 'data-analytics', 'lean-six-sigma', 'project-mgmt', 'cost-benefit', 'quality-management', 'automotive-engineering', 'data-analysis', 'process-improvement', 'statistics']
+[2026-03-24 18:32:50] [角色文件] 已写入 ceo.json
+[2026-03-24 18:32:50] [角色文件] 已写入 engineer.json
+[2026-03-24 18:32:50] [角色文件] 已写入 datascientist.json
+[2026-03-24 18:32:50] [Step2] 启动4个agent并行搜索...
+[2026-03-24 18:33:06] [Step2] 四平台搜索完成，获取 13 个技能
+[2026-03-24 18:33:07] [Step3] 已安装: 1434 | 待新装: 13 | 待升级: 0 | 已最新: 0
+[2026-03-24 18:33:07] [决策节点] 邮件发送失败: (535, b'Error: authentication failed')
+[2026-03-24 18:33:08] [决策节点] Feishu 提醒已发送，继续自动安装
+[2026-03-24 18:33:09] [Step4] 安装FAIL(info: "You" not in index, and remote search has no exact slu): You (skillhub)
+[2026-03-24 18:33:09] [Step4] 安装FAIL(info: "_" not in index, and remote search has no exact slug ): _ (skillhub)
+[2026-03-24 18:33:09] [Step4] 安装FAIL(info: "数据分析与可视化。支持数据库查询、报告生成、表格自动化，将原始数据转化为清晰可执行的洞察。" not in): 数据分析与可视化。支持数据库查询、报告生成、表格自动化，将原始数据转化为清晰可执行的洞察。 (skillhub)
+[2026-03-24 18:33:09] [Step4] 安装FAIL(info: "记录学习经验、错误与修正，实现持续改进。使用时机：(1)" not in index, and remot): 记录学习经验、错误与修正，实现持续改进。使用时机：(1) (skillhub)
+[2026-03-24 18:33:09] [Step4] 安装FAIL(info: "通过OpenAPI_SDK管理阿里云DataAnalysisGBI，支持资源生命周期操作、配置变更及状态查): 通过OpenAPI_SDK管理阿里云DataAnalysisGBI，支持资源生命周期操作、配置变更及状态查询。 (skillhub)
+[2026-03-24 18:33:09] [Step4] 安装FAIL(info: "data_analysis" not in index, and remote search has no): data_analysis (skillhub)
+[2026-03-24 18:33:09] [Step4] 安装FAIL(info: "alicloud_data_analytics_dataanalysisgbi" not in index): alicloud_data_analytics_dataanalysisgbi (skillhub)
+[2026-03-24 18:33:09] [Step4] 安装FAIL(info: "self_improving_agent" not in index, and remote search): self_improving_agent (skillhub)
+[2026-03-24 18:33:10] [Step4] 安装FAIL(- Resolving afrexai_cac_optimizer
+✖ Skill not found
+Error: S): afrexai_cac_optimizer (clawhub)
+[2026-03-24 18:33:10] [Step4] 安装FAIL(- Resolving break_even_calculator_ecommerce
+✖ Skill not foun): break_even_calculator_ecommerce (clawhub)
+[2026-03-24 18:33:10] [Step4] 安装FAIL(- Resolving afrexai_cloud_cost_audit
+✖ Skill not found
+Error): afrexai_cloud_cost_audit (clawhub)
+[2026-03-24 18:33:10] [Step4] 安装FAIL(- Resolving sovereign_aws_cost_optimizer
+✖ Skill not found
+E): sovereign_aws_cost_optimizer (clawhub)
+[2026-03-24 18:33:10] [Step4] 安装FAIL(- Resolving cwicr_cost_calculator
+✖ Skill not found
+Error: S): cwicr_cost_calculator (clawhub)
+[2026-03-24 18:33:10] [Step4] 安装/升级完成: 0 成功 / 13 失败
+[2026-03-24 18:33:10] [Step4] 无新安装，中止
+[2026-03-24 18:49:39] [增量检查] 快速扫描4平台是否有新技能...
+[2026-03-24 18:49:39] [Step2] 启动4个agent并行搜索...
+[2026-03-24 18:50:10] [Step2] 四平台搜索完成，获取 32 个技能
+[2026-03-24 18:50:10] [增量检查] 当前已安装1434个，扫描到31个新技能可安装
+[2026-03-24 18:50:10] [跳过] 距离上次执行仅18分钟，新技能31个，待71分钟后执行
+[2026-03-24 19:13:31] [增量检查] 快速扫描4平台是否有新技能...
+[2026-03-24 19:13:31] [Step2] 启动4个agent并行搜索...
+[2026-03-24 19:13:37] [Step2] 四平台搜索完成，获取 42 个技能
+[2026-03-24 19:13:37] [增量检查] 当前已安装1441个，扫描到34个新技能可安装
+[2026-03-24 19:13:37] [跳过] 距离上次执行仅41分钟，新技能34个，待48分钟后执行
+[2026-03-24 19:21:26] [增量检查] 快速扫描4平台是否有新技能...
+[2026-03-24 19:21:26] [Step2] 启动4个agent并行搜索...
+[2026-03-24 19:21:42] [Step2] 四平台搜索完成，获取 32 个技能
+[2026-03-24 19:21:42] [增量检查] 当前已安装1441个，扫描到31个新技能可安装
+[2026-03-24 19:21:42] [跳过] 距离上次执行仅49分钟，新技能31个，待40分钟后执行
+[2026-03-24 19:45:09] [增量检查] 快速扫描4平台是否有新技能...
+[2026-03-24 19:45:09] [Step2] 启动4个agent并行搜索...
+[2026-03-24 19:45:27] [Step2] 四平台搜索完成，获取 33 个技能
+[2026-03-24 19:45:27] [增量检查] 当前已安装1441个，扫描到32个新技能可安装
+[2026-03-24 19:45:27] [跳过] 距离上次执行仅73分钟，新技能32个，待16分钟后执行
+[2026-03-24 20:00:49] [增量检查] 快速扫描4平台是否有新技能...
+[2026-03-24 20:00:49] [Step2] 启动4个agent并行搜索...
+[2026-03-24 20:00:54] [Step2] 四平台搜索完成，获取 22 个技能
+[2026-03-24 20:00:54] [增量检查] 当前已安装1456个，扫描到14个新技能可安装
+[2026-03-24 20:00:54] [跳过] 距离上次执行仅88分钟，新技能14个，待1分钟后执行
+[2026-03-24 20:15:28] [增量检查] 快速扫描4平台是否有新技能...
+[2026-03-24 20:15:28] [Step2] 启动4个agent并行搜索...
+[2026-03-24 20:15:31] [Step2] 四平台搜索完成，获取 43 个技能
+[2026-03-24 20:15:31] [增量检查] 当前已安装1456个，扫描到35个新技能可安装
+[2026-03-24 20:15:31] [间隔检查] 距离上次执行103分钟，执行任务
+[2026-03-24 20:15:31] [角色文件] 找到3个历史角色讨论，可作为参考
+[2026-03-24 20:15:31] === ML/LLM技能专项提升任务 Started ===
+[2026-03-24 20:15:31] [Step1] 启动 gstack 多角色讨论（3角色并发）...
+[2026-03-24 20:15:51] [Step1] CEO角色完成，技能: ['quality-management', 'lean-six-sigma', 'data-analytics', 'project-management', 'cost-engineering']
+[2026-03-24 20:16:21] [Step1] DataScientist角色完成，技能: ['statistical-analysis', 'regression-modeling', 'experimental-design', 'data-visualization', 'quality-management']
+[2026-03-24 20:16:21] [Step1] gstack三角色讨论完成，技能优先级: ['quality-management', 'lean-six-sigma', 'data-analytics', 'project-management', 'cost-engineering', 'quality-engineering', 'hybrid-powertrain', 'fmea-analysis', 'spc-data-analysis', 'supplier-quality']
+[2026-03-24 20:16:21] [角色文件] 已写入 ceo.json
+[2026-03-24 20:16:21] [角色文件] 已写入 engineer.json
+[2026-03-24 20:16:21] [角色文件] 已写入 datascientist.json
+[2026-03-24 20:16:21] [Step2] 启动4个agent并行搜索...
+[2026-03-24 20:16:24] [Step2] 四平台搜索完成，获取 48 个技能
+[2026-03-24 20:16:24] [Step3] 已安装: 1456 | 待新装: 38 | 待升级: 0 | 已最新: 10
+[2026-03-24 20:16:24] [决策节点] 邮件发送失败: (535, b'Error: authentication failed')
+[2026-03-24 20:16:25] [决策节点] Feishu 提醒已发送，继续自动安装
+[2026-03-24 20:16:26] [Step4] 安装FAIL(info: "You" not in index, and remote search has no exact slu): You (skillhub)
+[2026-03-24 20:16:26] [Step4] 安装FAIL(info: "_" not in index, and remote search has no exact slug ): _ (skillhub)
+[2026-03-24 20:16:26] [Step4] 安装FAIL(info: "ADHD工程师多项目并行管理专家，擅长超专注引导、减少情境切换及温和提醒。" not in index, ): ADHD工程师多项目并行管理专家，擅长超专注引导、减少情境切换及温和提醒。 (skillhub)
+[2026-03-24 20:16:27] [Step4] 安装FAIL(info: "alicloud_data_analytics_dataanalysisgbi" not in index): alicloud_data_analytics_dataanalysisgbi (skillhub)
+[2026-03-24 20:16:27] [Step4] 安装FAIL(info: "project_management_guru_adhd" not in index, and remot): project_management_guru_adhd (skillhub)
+[2026-03-24 20:16:27] [Step4] 安装FAIL(info: "通过OpenAPI_SDK管理阿里云DataAnalysisGBI，支持资源生命周期操作、配置变更及状态查): 通过OpenAPI_SDK管理阿里云DataAnalysisGBI，支持资源生命周期操作、配置变更及状态查询。 (skillhub)
+[2026-03-24 20:16:27] [Step4] 安装FAIL(info: "self_improving_agent" not in index, and remote search): self_improving_agent (skillhub)
+[2026-03-24 20:16:27] [Step4] 安装FAIL(info: "记录学习经验、错误与修正，实现持续改进。使用时机：(1)" not in index, and remot): 记录学习经验、错误与修正，实现持续改进。使用时机：(1) (skillhub)
+[2026-03-24 20:16:30] [Step4] 安装FAIL(- Resolving capa_officer
+✖ Skill not found
+Error: Skill not ): capa_officer (clawhub)
+[2026-03-24 20:16:30] [Step4] 安装FAIL(- Resolving risk_management_specialist
+✖ Skill not found
+Err): risk_management_specialist (clawhub)
+[2026-03-24 20:16:30] [Step4] 安装FAIL(- Resolving data_analysis
+✖ Skill not found
+Error: Skill not): data_analysis (clawhub)
+[2026-03-24 20:16:30] [Step4] 安装FAIL(- Resolving data_analytics
+✖ Skill not found
+Error: Skill no): data_analytics (clawhub)
+[2026-03-24 20:16:30] [Step4] 安装FAIL(- Resolving uplo_data_analytics
+✖ Skill not found
+Error: Ski): uplo_data_analytics (clawhub)
+[2026-03-24 20:16:30] [Step4] 安装FAIL(- Resolving quality_manager_qmr
+✖ Skill not found
+Error: Ski): quality_manager_qmr (clawhub)
+[2026-03-24 20:16:30] [Step4] 安装FAIL(- Resolving agent_spectrum
+✖ Skill not found
+Error: Skill no): agent_spectrum (clawhub)
+[2026-03-24 20:16:30] [Step4] 安装FAIL(- Resolving ai_agent_team_manager
+✖ Skill not found
+Error: S): ai_agent_team_manager (clawhub)
+[2026-03-24 20:16:30] [Step4] 安装FAIL(- Resolving testing_workflow
+✖ Skill not found
+Error: Skill ): testing_workflow (clawhub)
+[2026-03-24 20:16:30] [Step4] 安装FAIL(- Resolving datafast_analytics
+✖ Skill not found
+Error: Skil): datafast_analytics (clawhub)
+[2026-03-24 20:16:30] [Step4] 安装FAIL(- Resolving afrexai_data_governance
+✖ Skill not found
+Error:): afrexai_data_governance (clawhub)
+[2026-03-24 20:16:30] [Step4] 安装FAIL(- Resolving project_management_2
+✖ Skill not found
+Error: Sk): project_management_2 (clawhub)
+[2026-03-24 20:16:30] [Step4] 安装FAIL(- Resolving afrexai_pricing_strategy
+✖ Skill not found
+Error): afrexai_pricing_strategy (clawhub)
+[2026-03-24 20:16:30] [Step4] 安装FAIL(- Resolving open_construction_estimate
+✖ Skill not found
+Err): open_construction_estimate (clawhub)
+[2026-03-24 20:16:30] [Step4] 安装FAIL(- Resolving autonomous_pm
+✖ Skill not found
+Error: Skill not): autonomous_pm (clawhub)
+[2026-03-24 20:16:31] [Step4] 安装FAIL(- Resolving cwicr_cost_calculator
+✖ Skill not found
+Error: S): cwicr_cost_calculator (clawhub)
+[2026-03-24 20:16:31] [Step4] 安装FAIL(- Resolving project_management_governance
+✖ Skill not found
+): project_management_governance (clawhub)
+[2026-03-24 20:16:31] [Step4] 安装FAIL(Error: Already installed: /Users/fhjtech/.openclaw/workspace): analyze (clawhub)
+[2026-03-24 20:16:31] [Step4] 安装FAIL(- Resolving afrexai_construction_estimator
+✖ Skill not found): afrexai_construction_estimator (clawhub)
+[2026-03-24 20:16:31] [Step4] 安装FAIL(info: "agentaudit-skill" not in index, and remote search has): agentaudit-skill (voltagent)
+[2026-03-24 20:16:31] [Step4] 安装FAIL(info: "Web & Frontend Development" not in index, and remote ): Web & Frontend Development (voltagent)
+[2026-03-24 20:16:31] [Step4] 安装FAIL(info: "agentaudit" not in index, and remote search has no ex): agentaudit (voltagent)
+[2026-03-24 20:16:31] [Step4] 安装FAIL(- Resolving prompt_engineering_expert
+✖ Skill not found
+Erro): prompt_engineering_expert (clawhub)
+[2026-03-24 20:16:31] [Step4] 安装FAIL(- Resolving auto_estimate_generator
+✖ Skill not found
+Error:): auto_estimate_generator (clawhub)
+[2026-03-24 20:16:31] [Step4] 安装FAIL(- Resolving sre_engineer
+✖ Skill not found
+Error: Skill not ): sre_engineer (clawhub)
+[2026-03-24 20:16:31] [Step4] 安装FAIL(- Resolving pre_mortem_analyst
+✖ Skill not found
+Error: Skil): pre_mortem_analyst (clawhub)
+[2026-03-24 20:16:31] [Step4] 安装FAIL(- Resolving content_quality_auditor
+✖ Skill not found
+Error:): content_quality_auditor (clawhub)
+[2026-03-24 20:16:32] [Step4] 安装FAIL(- Resolving forge
+Error: Use --force to install suspicious s): forge (clawhub)
+[2026-03-24 20:16:32] [Step4] 安装FAIL(- Resolving interview_analysis
+✖ Skill not found
+Error: Skil): interview_analysis (clawhub)
+[2026-03-24 20:16:32] [Step4] 安装OK: engineering (clawhub)
+[2026-03-24 20:16:32] [Step4] 安装/升级完成: 1 成功 / 37 失败
+[2026-03-24 20:16:32] [Step5] 测试通过: 1 | 不合格: 0
+[2026-03-24 20:16:32] [Step6] 执行PDCA八分法优化...
+[2026-03-24 20:16:32] [Step6] PDCA八分法完成，1个技能通过集成测试
+[2026-03-24 20:16:33] [邮件] 发送失败: (535, b'Error: authentication failed')
+[2026-03-24 20:16:33] === 完成: 安装1 | 测试通过1 | 退回0 ===
+[2026-03-24 22:28:18] [增量检查] 快速扫描4平台是否有新技能...
+[2026-03-24 22:28:18] [Step2] 启动4个agent并行搜索...
+[2026-03-24 22:28:35] [Step2] 四平台搜索完成，获取 41 个技能
+[2026-03-24 22:28:35] [增量检查] 当前已安装1462个，扫描到33个新技能可安装
+[2026-03-24 22:28:35] [角色文件] 找到3个历史角色讨论，可作为参考
+[2026-03-24 22:28:35] === ML/LLM技能专项提升任务 Started ===
+[2026-03-24 22:28:35] [Step1] 启动 gstack 多角色讨论（3角色并发）...
+[2026-03-24 22:28:55] [Step1] CEO角色完成，技能: ['lean-six-sigma', 'data-analytics', 'project-management', 'strategic-planning']
+[2026-03-24 22:29:13] [Step1] DataScientist角色完成，技能: ['statistical-analysis', 'regression-modeling', 'six-sigma', 'data-visualization']
+[2026-03-24 22:29:13] [Step1] gstack三角色讨论完成，技能优先级: ['lean-six-sigma', 'project-management', 'data-analytics', 'strategic-planning', 'quality-management-system', 'automotive-powertrain-knowledge', 'statistical-data-analysis', 'supplier-quality-control', 'statistical-analysis', 'regression-modeling']
+[2026-03-24 22:29:13] [角色文件] 已写入 ceo.json
+[2026-03-24 22:29:13] [角色文件] 已写入 engineer.json
+[2026-03-24 22:29:13] [角色文件] 已写入 datascientist.json
+[2026-03-24 22:29:13] [Step2] 启动4个agent并行搜索...
+[2026-03-24 22:29:31] [Step2] 四平台搜索完成，获取 44 个技能
+[2026-03-24 22:29:31] [Step3] 已安装: 1462 | 待新装: 41 | 待升级: 0 | 已最新: 3
+[2026-03-24 22:29:31] [决策节点] 邮件发送失败: (535, b'Error: authentication failed')
+[2026-03-24 22:29:32] [决策节点] Feishu 提醒已发送，继续自动安装
+[2026-03-24 22:29:34] [Step4] 安装FAIL(info: "_" not in index, and remote search has no exact slug ): _ (skillhub)
+[2026-03-24 22:29:34] [Step4] 安装FAIL(info: "You" not in index, and remote search has no exact slu): You (skillhub)
+[2026-03-24 22:29:34] [Step4] 安装FAIL(info: "self_improving_agent" not in index, and remote search): self_improving_agent (skillhub)
+[2026-03-24 22:29:34] [Step4] 安装FAIL(info: "通过OpenAPI_SDK管理阿里云DataAnalysisGBI，支持资源生命周期操作、配置变更及状态查): 通过OpenAPI_SDK管理阿里云DataAnalysisGBI，支持资源生命周期操作、配置变更及状态查询。 (skillhub)
+[2026-03-24 22:29:34] [Step4] 安装FAIL(info: "记录学习经验、错误与修正，实现持续改进。使用时机：(1)" not in index, and remot): 记录学习经验、错误与修正，实现持续改进。使用时机：(1) (skillhub)
+[2026-03-24 22:29:34] [Step4] 安装FAIL(info: "project_management_guru_adhd" not in index, and remot): project_management_guru_adhd (skillhub)
+[2026-03-24 22:29:34] [Step4] 安装FAIL(info: "alicloud_data_analytics_dataanalysisgbi" not in index): alicloud_data_analytics_dataanalysisgbi (skillhub)
+[2026-03-24 22:29:34] [Step4] 安装FAIL(info: "ADHD工程师多项目并行管理专家，擅长超专注引导、减少情境切换及温和提醒。" not in index, ): ADHD工程师多项目并行管理专家，擅长超专注引导、减少情境切换及温和提醒。 (skillhub)
+[2026-03-24 22:29:36] [Step4] 安装FAIL(- Resolving agent_spectrum
+✖ Skill not found
+Error: Skill no): agent_spectrum (clawhub)
+[2026-03-24 22:29:36] [Step4] 安装FAIL(- Resolving project_management_governance
+✖ Skill not found
+): project_management_governance (clawhub)
+[2026-03-24 22:29:36] [Step4] 安装FAIL(- Resolving afrexai_data_governance
+✖ Skill not found
+Error:): afrexai_data_governance (clawhub)
+[2026-03-24 22:29:36] [Step4] 安装FAIL(- Resolving project_management_2
+✖ Skill not found
+Error: Sk): project_management_2 (clawhub)
+[2026-03-24 22:29:36] [Step4] 安装FAIL(- Resolving data_analytics
+✖ Skill not found
+Error: Skill no): data_analytics (clawhub)
+[2026-03-24 22:29:36] [Step4] 安装FAIL(- Resolving uplo_data_analytics
+✖ Skill not found
+Error: Ski): uplo_data_analytics (clawhub)
+[2026-03-24 22:29:36] [Step4] 安装FAIL(- Resolving project_router
+✖ Skill not found
+Error: Skill no): project_router (clawhub)
+[2026-03-24 22:29:37] [Step4] 安装FAIL(- Resolving autonomous_pm
+✖ Skill not found
+Error: Skill not): autonomous_pm (clawhub)
+[2026-03-24 22:29:37] [Step4] 安装FAIL(- Resolving openmath_open_theorem
+✖ Skill not found
+Error: S): openmath_open_theorem (clawhub)
+[2026-03-24 22:29:37] [Step4] 安装FAIL(- Resolving datafast_analytics
+✖ Skill not found
+Error: Skil): datafast_analytics (clawhub)
+[2026-03-24 22:29:37] [Step4] 安装FAIL(- Resolving afrexai_swot_analyzer
+✖ Skill not found
+Error: S): afrexai_swot_analyzer (clawhub)
+[2026-03-24 22:29:37] [Step4] 安装FAIL(- Resolving teamo_strategy
+✖ Skill not found
+Error: Skill no): teamo_strategy (clawhub)
+[2026-03-24 22:29:37] [Step4] 安装OK: plan (clawhub)
+[2026-03-24 22:29:37] [Step4] 安装FAIL(- Resolving risk_management_specialist
+✖ Skill not found
+Err): risk_management_specialist (clawhub)
+[2026-03-24 22:29:37] [Step4] 安装FAIL(- Resolving quality_manager_qms_iso13485
+✖ Skill not found
+E): quality_manager_qms_iso13485 (clawhub)
+[2026-03-24 22:29:37] [Step4] 安装FAIL(- Resolving code_planning_agent
+✖ Skill not found
+Error: Ski): code_planning_agent (clawhub)
+[2026-03-24 22:29:37] [Step4] 安装FAIL(- Resolving quality_documentation_manager
+✖ Skill not found
+): quality_documentation_manager (clawhub)
+[2026-03-24 22:29:37] [Step4] 安装FAIL(- Resolving quality_manager_qmr
+✖ Skill not found
+Error: Ski): quality_manager_qmr (clawhub)
+[2026-03-24 22:29:37] [Step4] 安装FAIL(- Resolving mspot_generator
+✖ Skill not found
+Error: Skill n): mspot_generator (clawhub)
+[2026-03-24 22:29:38] [Step4] 安装FAIL(- Resolving knowbster
+Error: Use --force to install suspicio): knowbster (clawhub)
+[2026-03-24 22:29:38] [Step4] 安装FAIL(- Resolving auto_dealer_marketing
+✖ Skill not found
+Error: S): auto_dealer_marketing (clawhub)
+[2026-03-24 22:29:38] [Step4] 安装FAIL(- Resolving capa_officer
+✖ Skill not found
+Error: Skill not ): capa_officer (clawhub)
+[2026-03-24 22:29:38] [Step4] 安装FAIL(- Resolving agent_knowledge
+✖ Skill not found
+Error: Skill n): agent_knowledge (clawhub)
+[2026-03-24 22:29:38] [Step4] 安装FAIL(- Resolving afrexai_knowledge_management
+✖ Skill not found
+E): afrexai_knowledge_management (clawhub)
+[2026-03-24 22:29:38] [Step4] 安装FAIL(- Resolving knowledge_answer
+✖ Skill not found
+Error: Skill ): knowledge_answer (clawhub)
+[2026-03-24 22:29:38] [Step4] 安装FAIL(- Resolving us_stock_analysis
+✖ Skill not found
+Error: Skill): us_stock_analysis (clawhub)
+[2026-03-24 22:29:39] [Step4] 安装FAIL(- Resolving data_analyst_pro
+✖ Skill not found
+Error: Skill ): data_analyst_pro (clawhub)
+[2026-03-24 22:29:39] [Step4] 安装FAIL(- Resolving data_anomaly_detector
+✖ Skill not found
+Error: S): data_anomaly_detector (clawhub)
+[2026-03-24 22:29:39] [Step4] 安装FAIL(- Resolving afrexai_inventory_supply_chain
+✖ Skill not found): afrexai_inventory_supply_chain (clawhub)
+[2026-03-24 22:29:40] [Step4] 安装FAIL(- Resolving forge
+Error: Use --force to install suspicious s): forge (clawhub)
+[2026-03-24 22:29:42] [Step4] 安装FAIL(- Resolving grc_agent_soc2_quality_review
+✖ Skill not found
+): grc_agent_soc2_quality_review (clawhub)
+[2026-03-24 22:29:42] [Step4] 安装FAIL(- Resolving data_analysis
+✖ Skill not found
+Error: Skill not): data_analysis (clawhub)
+[2026-03-24 22:29:42] [Step4] 安装FAIL(- Resolving quality_driven_dev
+✖ Skill not found
+Error: Skil): quality_driven_dev (clawhub)
+[2026-03-24 22:29:42] [Step4] 安装/升级完成: 1 成功 / 40 失败
+[2026-03-24 22:29:42] [Step5] 测试通过: 1 | 不合格: 0
+[2026-03-24 22:29:42] [Step6] 执行PDCA八分法优化...
+[2026-03-24 22:29:42] [Step6] PDCA八分法完成，1个技能通过集成测试
+[2026-03-24 22:29:43] [邮件] 发送失败: (535, b'Error: authentication failed')
+[2026-03-24 22:29:43] === 完成: 安装1 | 测试通过1 | 退回0 ===

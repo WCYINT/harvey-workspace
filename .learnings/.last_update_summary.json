@@ -1,19 +1,39 @@
 {
-  "date": "2026-03-24",
+  "date": "2026-03-25",
   "skills": [
     {
-      "slug": "security-group-auditor",
-      "description": "Security Group Auditor",
+      "slug": "agenthc-market-intelligence",
+      "description": "Stock Market Intelligence",
       "source": "skillhub"
     },
     {
-      "slug": "security-news",
-      "description": "Security News",
+      "slug": "agent-browser-0-2-0",
+      "description": "Agent Browser 0.2.0",
       "source": "skillhub"
     },
     {
-      "slug": "security-guard",
-      "description": "Security Guard",
+      "slug": "ai-twitter-daily",
+      "description": "AI Twitter Daily",
+      "source": "skillhub"
+    },
+    {
+      "slug": "ai-ethics",
+      "description": "AI Ethics",
+      "source": "skillhub"
+    },
+    {
+      "slug": "aicone",
+      "description": "aiclone",
+      "source": "skillhub"
+    },
+    {
+      "slug": "airdrop-alert",
+      "description": "Airdrop Alert",
+      "source": "skillhub"
+    },
+    {
+      "slug": "aigohotel-mcp",
+      "description": "aigohotel-mcp",
       "source": "skillhub"
     }
   ]

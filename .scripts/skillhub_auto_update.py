@@ -295,45 +295,6 @@ def _is_valid_slug(slug: str, _learned_rejections: set[str] = None) -> bool:
     # All validation passed - slug looks valid
     return True
 
-def _is_valid_slug(slug: str) -> bool:
-    """Proactive validation: reject obviously invalid slugs before they get processed.
-    
-    Uses positive pattern matching to only accept valid-looking slugs,
-    rather than maintaining an ever-growing blacklist.
-    """
-    if not slug or slug in INVALID_SLUGS:
-        return False
-    
-    # Must contain at least one alphabetic character
-    if not re.search(r"[a-zA-Z]", slug):
-        return False
-    
-    # Reject pure numeric/hyphen strings
-    if re.match(r"^[\d-]+$", slug):
-        return False
-    
-    # PROACTIVE: Reject common English words (2-8 chars, all lowercase, no numbers/hyphens)
-    # These are almost never valid skill slugs
-    if re.match(r"^[a-z]{2,8}$", slug) and slug.lower() in {
-        "use", "for", "and", "the", "into", "with", "from", "into",
-        "add", "new", "get", "set", "run", "use", "all", "any",
-        "can", "may", "via", "per", "now", "old", "way", "how",
-    }:
-        return False
-    
-    # PROACTIVE: Reject descriptive phrases with common connecting words
-    if any(word in slug.lower() for word in ["comprehensive", "troubleshooting", "auto-detect", 
-                                              "multi-platform", "auto-invoked", "manager"]):
-        return False
-    
-    # PROACTIVE: Reject service/brand names that are commonly parsed incorrectly
-    if slug.lower() in {"google", "gmail", "notion", "docker", "github", "slack", 
-                        "discord", "telegram", "whatsapp", "airtable", "gumroad",
-                        "clawhub", "skillhub", "voltagent"}:
-        return False
-    
-    return True
-
 def _parse_skillhub_output(stdout: str, source: str) -> list[dict]:
     skills = []
     for line in stdout.strip().split("\n"):

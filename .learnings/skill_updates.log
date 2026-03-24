@@ -5561,3 +5561,2750 @@ Error: Use --force to inst): agent-stealth-scraper (clawhub)
 [2026-03-24 15:51:41] [Step6] 完成，3 个技能已集成
 [2026-03-24 15:51:44] [邮件] 发送失败: (535, b'Error: authentication failed')
 [2026-03-24 15:51:44] === 完成: 集成3 | 安全3 | 安装4 ===
+[2026-03-24 16:00:00] === 四源技能自动更新 Started ===
+[2026-03-24 16:00:02] [VoltAgent] Success on attempt 1
+[2026-03-24 16:00:03] [Step1] 四源获取 1087 个技能
+[2026-03-24 16:00:03] [Step2] 已安装: 1430 | 缺失: 517
+[2026-03-24 16:00:06] [Step3] FAIL(info: "Use" not in index, and remote search has no exact slu): Use (skillhub)
+[2026-03-24 16:00:06] [Step3] FAIL(info: "For" not in index, and remote search has no exact slu): For (skillhub)
+[2026-03-24 16:00:06] [Step3] FAIL(info: "Box" not in index, and remote search has no exact slu): Box (skillhub)
+[2026-03-24 16:00:06] [Step3] FAIL(info: "Requires" not in index, and remote search has no exac): Requires (skillhub)
+[2026-03-24 16:00:06] [Step3] FAIL(info: "MANDATORY" not in index, and remote search has no exa): MANDATORY (skillhub)
+[2026-03-24 16:00:06] [Step3] FAIL(info: "abaddon" not in index, and remote search has no exact): abaddon (voltagent)
+[2026-03-24 16:00:06] [Step3] FAIL(info: "EvoMap" not in index, and remote search has no exact ): EvoMap (skillhub)
+[2026-03-24 16:00:06] [Step3] FAIL(info: "CornerStone" not in index, and remote search has no e): CornerStone (skillhub)
+[2026-03-24 16:00:06] [Step3] FAIL(info: "Self-healing" not in index, and remote search has no ): Self-healing (skillhub)
+[2026-03-24 16:00:06] [Step3] FAIL(info: "Ad" not in index, and remote search has no exact slug): Ad (skillhub)
+[2026-03-24 16:00:06] [Step3] FAIL(info: "alex-session-wrap-up" not in index, and remote search): alex-session-wrap-up (voltagent)
+[2026-03-24 16:00:06] [Step3] FAIL(info: "inflated" not in index, and remote search has no exac): inflated (skillhub)
+[2026-03-24 16:00:06] [Step3] FAIL(info: "arc-skill-gitops" not in index, and remote search has): arc-skill-gitops (voltagent)
+[2026-03-24 16:00:06] [Step3] OK: ai-songwriter (skillhub)
+[2026-03-24 16:00:06] [Step3] OK: aiml-music-generator (skillhub)
+[2026-03-24 16:00:06] [Step3] 安装完成: 2 成功 / 13 失败
+[2026-03-24 16:00:06] [Step4] 安全通过: 2 | 危险: 0
+[2026-03-24 16:00:06] [Step5] OK: aiml-music-generator
+[2026-03-24 16:00:06] [Step5] OK: ai-songwriter
+[2026-03-24 16:00:06] [Step5] 集成成功: 2 | 撤销: 0
+[2026-03-24 16:00:06] [Step6] 完成，2 个技能已集成
+[2026-03-24 16:00:07] [邮件] 发送失败: (535, b'Error: authentication failed')
+[2026-03-24 16:00:07] === 完成: 集成2 | 安全2 | 安装2 ===
+[2026-03-24 16:56:47] === 四源技能自动更新 Started ===
+[2026-03-24 16:57:08] [VoltAgent] Timeout on attempt 1: The read operation timed out... Retrying in 2s
+[2026-03-24 16:57:10] [VoltAgent] Success on attempt 2
+[2026-03-24 16:57:10] [Step1] 四源获取 1094 个技能
+[2026-03-24 16:57:11] [Step2] 已安装: 1432 | 缺失: 516
+[2026-03-24 16:57:12] [Step3] FAIL(info: "Use" not in index, and remote search has no exact slu): Use (skillhub)
+[2026-03-24 16:57:12] [Step3] FAIL(info: "For" not in index, and remote search has no exact slu): For (skillhub)
+[2026-03-24 16:57:12] [Step3] FAIL(info: "Box" not in index, and remote search has no exact slu): Box (skillhub)
+[2026-03-24 16:57:12] [Step3] FAIL(info: "Ad" not in index, and remote search has no exact slug): Ad (skillhub)
+[2026-03-24 16:57:12] [Step3] FAIL(info: "Requires" not in index, and remote search has no exac): Requires (skillhub)
+[2026-03-24 16:57:12] [Step3] FAIL(info: "Jeffrey" not in index, and remote search has no exact): Jeffrey (skillhub)
+[2026-03-24 16:57:12] [Step3] FAIL(info: "acestep-simplemv" not in index, and remote search has): acestep-simplemv (voltagent)
+[2026-03-24 16:57:12] [Step3] FAIL(info: "inflated" not in index, and remote search has no exac): inflated (skillhub)
+[2026-03-24 16:57:12] [Step3] FAIL(info: "Self-healing" not in index, and remote search has no ): Self-healing (skillhub)
+[2026-03-24 16:57:12] [Step3] FAIL(info: "alex-session-wrap-up" not in index, and remote search): alex-session-wrap-up (voltagent)
+[2026-03-24 16:57:12] [Step3] FAIL(info: "EvoMap" not in index, and remote search has no exact ): EvoMap (skillhub)
+[2026-03-24 16:57:12] [Step3] FAIL(info: "arc-skill-gitops" not in index, and remote search has): arc-skill-gitops (voltagent)
+[2026-03-24 16:57:12] [Step3] FAIL(info: "CornerStone" not in index, and remote search has no e): CornerStone (skillhub)
+[2026-03-24 16:57:12] [Step3] FAIL(info: "MANDATORY" not in index, and remote search has no exa): MANDATORY (skillhub)
+[2026-03-24 16:57:12] [Step3] FAIL(info: "abaddon" not in index, and remote search has no exact): abaddon (voltagent)
+[2026-03-24 16:57:12] [Step3] 安装完成: 0 成功 / 15 失败
+[2026-03-24 16:57:12] [Step3] 无新安装，中止
+[2026-03-24 17:00:00] === 四源技能自动更新 Started ===
+[2026-03-24 17:00:21] [VoltAgent] Timeout on attempt 1: The read operation timed out... Retrying in 2s
+[2026-03-24 17:00:44] [VoltAgent] Timeout on attempt 2: The read operation timed out... Retrying in 4s
+[2026-03-24 17:01:08] [VoltAgent] Failed after 3 attempts: The read operation timed out
+[2026-03-24 17:01:08] [Step1] 四源获取 357 个技能
+[2026-03-24 17:01:08] [Step2] 已安装: 1432 | 缺失: 11
+[2026-03-24 17:01:10] [Step3] FAIL(info: "Box" not in index, and remote search has no exact slu): Box (skillhub)
+[2026-03-24 17:01:10] [Step3] FAIL(info: "Ad" not in index, and remote search has no exact slug): Ad (skillhub)
+[2026-03-24 17:01:10] [Step3] FAIL(info: "Use" not in index, and remote search has no exact slu): Use (skillhub)
+[2026-03-24 17:01:10] [Step3] FAIL(info: "For" not in index, and remote search has no exact slu): For (skillhub)
+[2026-03-24 17:01:10] [Step3] FAIL(info: "inflated" not in index, and remote search has no exac): inflated (skillhub)
+[2026-03-24 17:01:10] [Step3] FAIL(info: "CornerStone" not in index, and remote search has no e): CornerStone (skillhub)
+[2026-03-24 17:01:10] [Step3] FAIL(info: "Self-healing" not in index, and remote search has no ): Self-healing (skillhub)
+[2026-03-24 17:01:10] [Step3] FAIL(info: "EvoMap" not in index, and remote search has no exact ): EvoMap (skillhub)
+[2026-03-24 17:01:10] [Step3] FAIL(info: "MANDATORY" not in index, and remote search has no exa): MANDATORY (skillhub)
+[2026-03-24 17:01:10] [Step3] FAIL(info: "Jeffrey" not in index, and remote search has no exact): Jeffrey (skillhub)
+[2026-03-24 17:01:11] [Step3] FAIL(info: "Requires" not in index, and remote search has no exac): Requires (skillhub)
+[2026-03-24 17:01:11] [Step3] 安装完成: 0 成功 / 11 失败
+[2026-03-24 17:01:11] [Step3] 无新安装，中止
+[2026-03-24 18:00:00] === 四源技能自动更新 Started ===
+[2026-03-24 18:00:02] [VoltAgent] Success on attempt 1
+[2026-03-24 18:00:03] [Step1] 四源获取 1094 个技能
+[2026-03-24 18:00:03] [Step2] 已安装: 1432 | 缺失: 517
+[2026-03-24 18:00:05] [Step3] FAIL(info: "Use" not in index, and remote search has no exact slu): Use (skillhub)
+[2026-03-24 18:00:05] [Step3] FAIL(info: "For" not in index, and remote search has no exact slu): For (skillhub)
+[2026-03-24 18:00:05] [Step3] FAIL(info: "Ad" not in index, and remote search has no exact slug): Ad (skillhub)
+[2026-03-24 18:00:05] [Step3] FAIL(info: "Box" not in index, and remote search has no exact slu): Box (skillhub)
+[2026-03-24 18:00:05] [Step3] FAIL(info: "inflated" not in index, and remote search has no exac): inflated (skillhub)
+[2026-03-24 18:00:05] [Step3] FAIL(info: "CornerStone" not in index, and remote search has no e): CornerStone (skillhub)
+[2026-03-24 18:00:05] [Step3] FAIL(info: "Self-healing" not in index, and remote search has no ): Self-healing (skillhub)
+[2026-03-24 18:00:05] [Step3] FAIL(info: "arc-skill-gitops" not in index, and remote search has): arc-skill-gitops (voltagent)
+[2026-03-24 18:00:05] [Step3] FAIL(info: "Jeffrey" not in index, and remote search has no exact): Jeffrey (skillhub)
+[2026-03-24 18:00:05] [Step3] FAIL(info: "alex-session-wrap-up" not in index, and remote search): alex-session-wrap-up (voltagent)
+[2026-03-24 18:00:05] [Step3] FAIL(info: "MANDATORY" not in index, and remote search has no exa): MANDATORY (skillhub)
+[2026-03-24 18:00:05] [Step3] FAIL(info: "EvoMap" not in index, and remote search has no exact ): EvoMap (skillhub)
+[2026-03-24 18:00:05] [Step3] FAIL(info: "abaddon" not in index, and remote search has no exact): abaddon (voltagent)
+[2026-03-24 18:00:05] [Step3] FAIL(info: "Requires" not in index, and remote search has no exac): Requires (skillhub)
+[2026-03-24 18:00:06] [Step3] OK: agentpayy (skillhub)
+[2026-03-24 18:00:06] [Step3] 安装完成: 1 成功 / 14 失败
+[2026-03-24 18:00:06] [Step4] 安全通过: 1 | 危险: 0
+[2026-03-24 18:00:06] [Step5] OK: agentpayy
+[2026-03-24 18:00:06] [Step5] 集成成功: 1 | 撤销: 0
+[2026-03-24 18:00:06] [Step6] 完成，1 个技能已集成
+[2026-03-24 18:00:06] [邮件] 发送失败: (535, b'Error: authentication failed')
+[2026-03-24 18:00:06] === 完成: 集成1 | 安全1 | 安装1 ===
+[2026-03-24 18:10:01] === 四源技能自动更新 Started ===
+[2026-03-24 18:10:03] [VoltAgent] Success on attempt 1
+[2026-03-24 18:10:09] [Step1] 四源获取 1143 个技能
+[2026-03-24 18:10:09] [Step2] 已安装: 1433 | 缺失: 548
+[2026-03-24 18:10:10] [Step3] FAIL(info: "Use" not in index, and remote search has no exact slu): Use (skillhub)
+[2026-03-24 18:10:10] [Step3] FAIL(info: "MANDATORY" not in index, and remote search has no exa): MANDATORY (skillhub)
+[2026-03-24 18:10:10] [Step3] FAIL(info: "For" not in index, and remote search has no exact slu): For (skillhub)
+[2026-03-24 18:10:10] [Step3] FAIL(info: "Ad" not in index, and remote search has no exact slug): Ad (skillhub)
+[2026-03-24 18:10:10] [Step3] FAIL(info: "Box" not in index, and remote search has no exact slu): Box (skillhub)
+[2026-03-24 18:10:10] [Step3] FAIL(info: "Self-healing" not in index, and remote search has no ): Self-healing (skillhub)
+[2026-03-24 18:10:10] [Step3] FAIL(info: "inflated" not in index, and remote search has no exac): inflated (skillhub)
+[2026-03-24 18:10:10] [Step3] FAIL(info: "Jeffrey" not in index, and remote search has no exact): Jeffrey (skillhub)
+[2026-03-24 18:10:10] [Step3] FAIL(info: "EvoMap" not in index, and remote search has no exact ): EvoMap (skillhub)
+[2026-03-24 18:10:10] [Step3] FAIL(info: "CornerStone" not in index, and remote search has no e): CornerStone (skillhub)
+[2026-03-24 18:10:10] [Step3] FAIL(info: "Requires" not in index, and remote search has no exac): Requires (skillhub)
+[2026-03-24 18:10:11] [Step3] OK: content-production (skillhub)
+[2026-03-24 18:10:11] [Step3] FAIL(- Resolving agent-stealth-scraper
+Error: Use --force to inst): agent-stealth-scraper (clawhub)
+[2026-03-24 18:10:11] [Step3] FAIL(- Resolving agent-team
+Error: Use --force to install suspici): agent-team (clawhub)
+[2026-03-24 18:10:11] [Step3] FAIL(- Resolving agent-proxy-guardian
+Error: Use --force to insta): agent-proxy-guardian (clawhub)
+[2026-03-24 18:10:11] [Step3] 安装完成: 1 成功 / 14 失败
+[2026-03-24 18:10:11] [Step4] 安全通过: 1 | 危险: 0
+[2026-03-24 18:10:11] [Step5] OK: content-production
+[2026-03-24 18:10:11] [Step5] 集成成功: 1 | 撤销: 0
+[2026-03-24 18:10:11] [Step6] 完成，1 个技能已集成
+[2026-03-24 18:10:12] [邮件] 发送失败: (535, b'Error: authentication failed')
+[2026-03-24 18:10:12] === 完成: 集成1 | 安全1 | 安装1 ===
+[2026-03-24 18:27:12] === 四源技能自动更新 Started ===
+[2026-03-24 18:27:33] [VoltAgent] Timeout on attempt 1: <urlopen error _ssl.c:1063: The handshake operatio... Retrying in 2s
+[2026-03-24 18:27:38] [VoltAgent] Success on attempt 2
+[2026-03-24 18:27:38] [Step1] 四源获取 1083 个技能
+[2026-03-24 18:27:38] [Step2] 已安装: 1434 | 缺失: 516
+[2026-03-24 18:27:39] [Step3] FAIL(info: "For" not in index, and remote search has no exact slu): For (skillhub)
+[2026-03-24 18:27:39] [Step3] FAIL(info: "Use" not in index, and remote search has no exact slu): Use (skillhub)
+[2026-03-24 18:27:39] [Step3] FAIL(info: "Ad" not in index, and remote search has no exact slug): Ad (skillhub)
+[2026-03-24 18:27:39] [Step3] FAIL(info: "arc-skill-gitops" not in index, and remote search has): arc-skill-gitops (voltagent)
+[2026-03-24 18:27:39] [Step3] FAIL(info: "Requires" not in index, and remote search has no exac): Requires (skillhub)
+[2026-03-24 18:27:39] [Step3] FAIL(info: "Jeffrey" not in index, and remote search has no exact): Jeffrey (skillhub)
+[2026-03-24 18:27:39] [Step3] FAIL(info: "Self-healing" not in index, and remote search has no ): Self-healing (skillhub)
+[2026-03-24 18:27:39] [Step3] FAIL(info: "MANDATORY" not in index, and remote search has no exa): MANDATORY (skillhub)
+[2026-03-24 18:27:39] [Step3] FAIL(info: "CornerStone" not in index, and remote search has no e): CornerStone (skillhub)
+[2026-03-24 18:27:39] [Step3] FAIL(info: "inflated" not in index, and remote search has no exac): inflated (skillhub)
+[2026-03-24 18:27:39] [Step3] FAIL(info: "Box" not in index, and remote search has no exact slu): Box (skillhub)
+[2026-03-24 18:27:39] [Step3] FAIL(info: "EvoMap" not in index, and remote search has no exact ): EvoMap (skillhub)
+[2026-03-24 18:27:39] [Step3] FAIL(info: "abaddon" not in index, and remote search has no exact): abaddon (voltagent)
+[2026-03-24 18:27:39] [Step3] FAIL(info: "acestep-simplemv" not in index, and remote search has): acestep-simplemv (voltagent)
+[2026-03-24 18:27:39] [Step3] FAIL(info: "alex-session-wrap-up" not in index, and remote search): alex-session-wrap-up (voltagent)
+[2026-03-24 18:27:39] [Step3] 安装完成: 0 成功 / 15 失败
+[2026-03-24 18:27:39] [Step3] 无新安装，中止
+[2026-03-24 19:00:01] === 四源技能自动更新 Started ===
+[2026-03-24 19:00:02] [VoltAgent] Success on attempt 1
+[2026-03-24 19:00:04] [Step1] 四源获取 1086 个技能
+[2026-03-24 19:00:04] [Step2] 已安装: 1434 | 缺失: 523
+[2026-03-24 19:00:05] [Step3] FAIL(info: "Use" not in index, and remote search has no exact slu): Use (skillhub)
+[2026-03-24 19:00:05] [Step3] FAIL(info: "Ad" not in index, and remote search has no exact slug): Ad (skillhub)
+[2026-03-24 19:00:06] [Step3] FAIL(info: "Self-healing" not in index, and remote search has no ): Self-healing (skillhub)
+[2026-03-24 19:00:06] [Step3] FAIL(info: "CornerStone" not in index, and remote search has no e): CornerStone (skillhub)
+[2026-03-24 19:00:06] [Step3] FAIL(info: "inflated" not in index, and remote search has no exac): inflated (skillhub)
+[2026-03-24 19:00:06] [Step3] FAIL(info: "Jeffrey" not in index, and remote search has no exact): Jeffrey (skillhub)
+[2026-03-24 19:00:06] [Step3] FAIL(info: "MANDATORY" not in index, and remote search has no exa): MANDATORY (skillhub)
+[2026-03-24 19:00:06] [Step3] FAIL(info: "EvoMap" not in index, and remote search has no exact ): EvoMap (skillhub)
+[2026-03-24 19:00:06] [Step3] OK: analysis (skillhub)
+[2026-03-24 19:00:06] [Step3] OK: db (skillhub)
+[2026-03-24 19:00:06] [Step3] OK: data-type-classifier (skillhub)
+[2026-03-24 19:00:06] [Step3] OK: data-evolution-analysis (skillhub)
+[2026-03-24 19:00:06] [Step3] OK: workflow-patterns (skillhub)
+[2026-03-24 19:00:06] [Step3] OK: data-profiler (skillhub)
+[2026-03-24 19:00:07] [Step3] OK: data-silo-detection (skillhub)
+[2026-03-24 19:00:07] [Step3] 安装完成: 7 成功 / 8 失败
+[2026-03-24 19:00:07] [Step4] 安全通过: 7 | 危险: 0
+[2026-03-24 19:00:07] [Step5] OK: workflow-patterns
+[2026-03-24 19:00:07] [Step5] OK: data-evolution-analysis
+[2026-03-24 19:00:07] [Step5] OK: data-profiler
+[2026-03-24 19:00:07] [Step5] OK: data-type-classifier
+[2026-03-24 19:00:07] [Step5] OK: data-silo-detection
+[2026-03-24 19:00:07] [Step5] OK: db
+[2026-03-24 19:00:07] [Step5] OK: analysis
+[2026-03-24 19:00:07] [Step5] 集成成功: 7 | 撤销: 0
+[2026-03-24 19:00:07] [Step6] 完成，7 个技能已集成
+[2026-03-24 19:00:08] [邮件] 发送失败: (535, b'Error: authentication failed')
+[2026-03-24 19:00:08] === 完成: 集成7 | 安全7 | 安装7 ===
+[2026-03-24 19:57:40] === 四源技能自动更新 Started ===
+[2026-03-24 19:57:41] [VoltAgent] Success on attempt 1
+[2026-03-24 19:57:42] [Step1] 四源获取 1086 个技能
+[2026-03-24 19:57:42] [Step2] 已安装: 1441 | 缺失: 522
+[2026-03-24 19:57:43] [Step3] FAIL(info: "Use" not in index, and remote search has no exact slu): Use (skillhub)
+[2026-03-24 19:57:43] [Step3] FAIL(info: "Ad" not in index, and remote search has no exact slug): Ad (skillhub)
+[2026-03-24 19:57:43] [Step3] FAIL(info: "For" not in index, and remote search has no exact slu): For (skillhub)
+[2026-03-24 19:57:43] [Step3] FAIL(info: "inflated" not in index, and remote search has no exac): inflated (skillhub)
+[2026-03-24 19:57:43] [Step3] FAIL(info: "Jeffrey" not in index, and remote search has no exact): Jeffrey (skillhub)
+[2026-03-24 19:57:43] [Step3] FAIL(info: "MANDATORY" not in index, and remote search has no exa): MANDATORY (skillhub)
+[2026-03-24 19:57:43] [Step3] FAIL(info: "Self-healing" not in index, and remote search has no ): Self-healing (skillhub)
+[2026-03-24 19:57:43] [Step3] FAIL(info: "CornerStone" not in index, and remote search has no e): CornerStone (skillhub)
+[2026-03-24 19:57:43] [Step3] OK: ai-podcast (skillhub)
+[2026-03-24 19:57:43] [Step3] OK: ai-fitness-coach-cn (skillhub)
+[2026-03-24 19:57:43] [Step3] OK: ai-potential-driver (skillhub)
+[2026-03-24 19:57:43] [Step3] OK: ai-trends-reporter (skillhub)
+[2026-03-24 19:57:43] [Step3] OK: interview-analysis (skillhub)
+[2026-03-24 19:57:43] [Step3] OK: ai-asset-gen (skillhub)
+[2026-03-24 19:57:43] [Step3] OK: ai-news-workflow (skillhub)
+[2026-03-24 19:57:43] [Step3] 安装完成: 7 成功 / 8 失败
+[2026-03-24 19:57:43] [Step4] 安全通过: 7 | 危险: 0
+[2026-03-24 19:57:43] [Step5] OK: ai-podcast
+[2026-03-24 19:57:43] [Step5] OK: ai-trends-reporter
+[2026-03-24 19:57:43] [Step5] OK: ai-asset-gen
+[2026-03-24 19:57:43] [Step5] OK: ai-fitness-coach-cn
+[2026-03-24 19:57:43] [Step5] OK: ai-news-workflow
+[2026-03-24 19:57:43] [Step5] OK: ai-potential-driver
+[2026-03-24 19:57:43] [Step5] OK: interview-analysis
+[2026-03-24 19:57:43] [Step5] 集成成功: 7 | 撤销: 0
+[2026-03-24 19:57:43] [Step6] 完成，7 个技能已集成
+[2026-03-24 19:57:44] [邮件] 发送失败: (535, b'Error: authentication failed')
+[2026-03-24 19:57:44] === 完成: 集成7 | 安全7 | 安装7 ===
+[2026-03-24 20:00:01] === 四源技能自动更新 Started ===
+[2026-03-24 20:00:24] [VoltAgent] Success on attempt 1
+[2026-03-24 20:00:24] [Step1] 四源获取 1086 个技能
+[2026-03-24 20:00:25] [Step2] 已安装: 1448 | 缺失: 523
+[2026-03-24 20:00:27] [Step3] FAIL(info: "For" not in index, and remote search has no exact slu): For (skillhub)
+[2026-03-24 20:00:27] [Step3] FAIL(info: "Use" not in index, and remote search has no exact slu): Use (skillhub)
+[2026-03-24 20:00:27] [Step3] FAIL(info: "inflated" not in index, and remote search has no exac): inflated (skillhub)
+[2026-03-24 20:00:27] [Step3] FAIL(info: "Jeffrey" not in index, and remote search has no exact): Jeffrey (skillhub)
+[2026-03-24 20:00:27] [Step3] FAIL(info: "Requires" not in index, and remote search has no exac): Requires (skillhub)
+[2026-03-24 20:00:27] [Step3] FAIL(info: "CornerStone" not in index, and remote search has no e): CornerStone (skillhub)
+[2026-03-24 20:00:27] [Step3] OK: ai-real-estate-cn (skillhub)
+[2026-03-24 20:00:27] [Step3] OK: agent-learner (skillhub)
+[2026-03-24 20:00:27] [Step3] FAIL(info: "MANDATORY" not in index, and remote search has no exa): MANDATORY (skillhub)
+[2026-03-24 20:00:27] [Step3] OK: ai-transformation-sprint (skillhub)
+[2026-03-24 20:00:27] [Step3] OK: baidu-scholar-search-skill (skillhub)
+[2026-03-24 20:00:27] [Step3] OK: ai-news-simple (skillhub)
+[2026-03-24 20:00:27] [Step3] OK: ai-income-agent (skillhub)
+[2026-03-24 20:00:27] [Step3] OK: agent-batch-guard (skillhub)
+[2026-03-24 20:00:27] [Step3] OK: agent-ops-framework (skillhub)
+[2026-03-24 20:00:27] [Step3] 安装完成: 8 成功 / 7 失败
+[2026-03-24 20:00:27] [Step4] 安全通过: 8 | 危险: 0
+[2026-03-24 20:00:27] [Step5] OK: agent-learner
+[2026-03-24 20:00:27] [Step5] OK: agent-ops-framework
+[2026-03-24 20:00:27] [Step5] OK: agent-batch-guard
+[2026-03-24 20:00:27] [Step5] OK: ai-real-estate-cn
+[2026-03-24 20:00:27] [Step5] OK: ai-news-simple
+[2026-03-24 20:00:27] [Step5] OK: ai-transformation-sprint
+[2026-03-24 20:00:27] [Step5] OK: ai-income-agent
+[2026-03-24 20:00:27] [Step5] OK: baidu-scholar-search-skill
+[2026-03-24 20:00:27] [Step5] 集成成功: 8 | 撤销: 0
+[2026-03-24 20:00:27] [Step6] 完成，8 个技能已集成
+[2026-03-24 20:00:29] [邮件] 发送失败: (535, b'Error: authentication failed')
+[2026-03-24 20:00:29] === 完成: 集成8 | 安全8 | 安装8 ===
+[2026-03-24 21:00:01] === 四源技能自动更新 Started ===
+[2026-03-24 21:00:03] [VoltAgent] Success on attempt 1
+[2026-03-24 21:00:04] [Step1] 四源获取 1085 个技能
+[2026-03-24 21:00:04] [Step2] 已安装: 1457 | 缺失: 516
+[2026-03-24 21:00:06] [Step3] FAIL(info: "Use" not in index, and remote search has no exact slu): Use (skillhub)
+[2026-03-24 21:00:06] [Step3] FAIL(info: "For" not in index, and remote search has no exact slu): For (skillhub)
+[2026-03-24 21:00:06] [Step3] FAIL(info: "Ad" not in index, and remote search has no exact slug): Ad (skillhub)
+[2026-03-24 21:00:06] [Step3] FAIL(info: "CornerStone" not in index, and remote search has no e): CornerStone (skillhub)
+[2026-03-24 21:00:06] [Step3] FAIL(info: "Box" not in index, and remote search has no exact slu): Box (skillhub)
+[2026-03-24 21:00:06] [Step3] FAIL(info: "arc-skill-gitops" not in index, and remote search has): arc-skill-gitops (voltagent)
+[2026-03-24 21:00:06] [Step3] FAIL(info: "inflated" not in index, and remote search has no exac): inflated (skillhub)
+[2026-03-24 21:00:06] [Step3] FAIL(info: "Requires" not in index, and remote search has no exac): Requires (skillhub)
+[2026-03-24 21:00:06] [Step3] FAIL(info: "abaddon" not in index, and remote search has no exact): abaddon (voltagent)
+[2026-03-24 21:00:06] [Step3] FAIL(info: "alex-session-wrap-up" not in index, and remote search): alex-session-wrap-up (voltagent)
+[2026-03-24 21:00:06] [Step3] OK: airweave (skillhub)
+[2026-03-24 21:00:06] [Step3] OK: security-guardian (skillhub)
+[2026-03-24 21:00:06] [Step3] OK: content-factory (skillhub)
+[2026-03-24 21:00:06] [Step3] OK: notion-api-automation (skillhub)
+[2026-03-24 21:00:06] [Step3] FAIL(info: "MANDATORY" not in index, and remote search has no exa): MANDATORY (skillhub)
+[2026-03-24 21:00:06] [Step3] 安装完成: 4 成功 / 11 失败
+[2026-03-24 21:00:06] [Step4] 安全通过: 4 | 危险: 0
+[2026-03-24 21:00:06] [Step5] OK: airweave
+[2026-03-24 21:00:06] [Step5] OK: notion-api-automation
+[2026-03-24 21:00:06] [Step5] OK: content-factory
+[2026-03-24 21:00:06] [Step5] OK: security-guardian
+[2026-03-24 21:00:06] [Step5] 集成成功: 4 | 撤销: 0
+[2026-03-24 21:00:06] [Step6] 完成，4 个技能已集成
+[2026-03-24 21:00:07] [邮件] 发送失败: (535, b'Error: authentication failed')
+[2026-03-24 21:00:07] === 完成: 集成4 | 安全4 | 安装4 ===
+[2026-03-24 21:27:44] === 四源技能自动更新 Started ===
+[2026-03-24 21:27:45] [VoltAgent] Success on attempt 1
+[2026-03-24 21:27:47] [Step1] 四源获取 1080 个技能
+[2026-03-24 21:27:47] [Step2] 已安装: 1461 | 缺失: 512
+[2026-03-24 21:27:48] [Step3] FAIL(info: "For" not in index, and remote search has no exact slu): For (skillhub)
+[2026-03-24 21:27:48] [Step3] FAIL(info: "Ad" not in index, and remote search has no exact slug): Ad (skillhub)
+[2026-03-24 21:27:48] [Step3] FAIL(info: "Use" not in index, and remote search has no exact slu): Use (skillhub)
+[2026-03-24 21:27:48] [Step3] FAIL(info: "Box" not in index, and remote search has no exact slu): Box (skillhub)
+[2026-03-24 21:27:48] [Step3] FAIL(info: "Requires" not in index, and remote search has no exac): Requires (skillhub)
+[2026-03-24 21:27:48] [Step3] FAIL(info: "MANDATORY" not in index, and remote search has no exa): MANDATORY (skillhub)
+[2026-03-24 21:27:48] [Step3] FAIL(info: "alex-session-wrap-up" not in index, and remote search): alex-session-wrap-up (voltagent)
+[2026-03-24 21:27:48] [Step3] FAIL(info: "acestep-simplemv" not in index, and remote search has): acestep-simplemv (voltagent)
+[2026-03-24 21:27:48] [Step3] FAIL(info: "adblock-dns" not in index, and remote search has no e): adblock-dns (voltagent)
+[2026-03-24 21:27:48] [Step3] FAIL(info: "CornerStone" not in index, and remote search has no e): CornerStone (skillhub)
+[2026-03-24 21:27:48] [Step3] FAIL(info: "add-top-openrouter-models" not in index, and remote s): add-top-openrouter-models (voltagent)
+[2026-03-24 21:27:48] [Step3] FAIL(info: "active-maintenance" not in index, and remote search h): active-maintenance (voltagent)
+[2026-03-24 21:27:48] [Step3] FAIL(info: "arc-skill-gitops" not in index, and remote search has): arc-skill-gitops (voltagent)
+[2026-03-24 21:27:48] [Step3] FAIL(info: "inflated" not in index, and remote search has no exac): inflated (skillhub)
+[2026-03-24 21:27:48] [Step3] FAIL(info: "abaddon" not in index, and remote search has no exact): abaddon (voltagent)
+[2026-03-24 21:27:48] [Step3] 安装完成: 0 成功 / 15 失败
+[2026-03-24 21:27:48] [Step3] 无新安装，中止
+[2026-03-24 22:00:01] === 四源技能自动更新 Started ===
+[2026-03-24 22:00:03] [VoltAgent] Success on attempt 1
+[2026-03-24 22:00:04] [Step1] 四源获取 1087 个技能
+[2026-03-24 22:00:04] [Step2] 已安装: 1461 | 缺失: 515
+[2026-03-24 22:00:06] [Step3] FAIL(info: "Box" not in index, and remote search has no exact slu): Box (skillhub)
+[2026-03-24 22:00:06] [Step3] FAIL(info: "Use" not in index, and remote search has no exact slu): Use (skillhub)
+[2026-03-24 22:00:06] [Step3] FAIL(info: "Ad" not in index, and remote search has no exact slug): Ad (skillhub)
+[2026-03-24 22:00:06] [Step3] FAIL(info: "CornerStone" not in index, and remote search has no e): CornerStone (skillhub)
+[2026-03-24 22:00:06] [Step3] FAIL(info: "For" not in index, and remote search has no exact slu): For (skillhub)
+[2026-03-24 22:00:06] [Step3] FAIL(info: "Requires" not in index, and remote search has no exac): Requires (skillhub)
+[2026-03-24 22:00:06] [Step3] FAIL(info: "Brand-specific" not in index, and remote search has n): Brand-specific (skillhub)
+[2026-03-24 22:00:06] [Step3] FAIL(info: "MANDATORY" not in index, and remote search has no exa): MANDATORY (skillhub)
+[2026-03-24 22:00:06] [Step3] FAIL(info: "Jeffrey" not in index, and remote search has no exact): Jeffrey (skillhub)
+[2026-03-24 22:00:06] [Step3] FAIL(info: "abaddon" not in index, and remote search has no exact): abaddon (voltagent)
+[2026-03-24 22:00:06] [Step3] FAIL(info: "arc-skill-gitops" not in index, and remote search has): arc-skill-gitops (voltagent)
+[2026-03-24 22:00:06] [Step3] FAIL(info: "alex-session-wrap-up" not in index, and remote search): alex-session-wrap-up (voltagent)
+[2026-03-24 22:00:06] [Step3] FAIL(info: "acestep-simplemv" not in index, and remote search has): acestep-simplemv (voltagent)
+[2026-03-24 22:00:06] [Step3] FAIL(info: "inflated" not in index, and remote search has no exac): inflated (skillhub)
+[2026-03-24 22:00:07] [Step3] OK: aiml-image-video (skillhub)
+[2026-03-24 22:00:07] [Step3] 安装完成: 1 成功 / 14 失败
+[2026-03-24 22:00:07] [Step4] 安全通过: 1 | 危险: 0
+[2026-03-24 22:00:07] [Step5] OK: aiml-image-video
+[2026-03-24 22:00:07] [Step5] 集成成功: 1 | 撤销: 0
+[2026-03-24 22:00:07] [Step6] 完成，1 个技能已集成
+[2026-03-24 22:00:07] [邮件] 发送失败: (535, b'Error: authentication failed')
+[2026-03-24 22:00:07] === 完成: 集成1 | 安全1 | 安装1 ===
+[2026-03-24 22:57:48] === 四源技能自动更新 Started ===
+[2026-03-24 22:58:10] [VoltAgent] Timeout on attempt 1: The read operation timed out... Retrying in 2s
+[2026-03-24 22:58:13] [VoltAgent] Success on attempt 2
+[2026-03-24 22:58:13] [Step1] 四源获取 1091 个技能
+[2026-03-24 22:58:13] [Step2] 已安装: 1463 | 缺失: 515
+[2026-03-24 22:58:14] [Step3] FAIL(info: "Use" not in index, and remote search has no exact slu): Use (skillhub)
+[2026-03-24 22:58:14] [Step3] FAIL(info: "For" not in index, and remote search has no exact slu): For (skillhub)
+[2026-03-24 22:58:14] [Step3] FAIL(info: "Ad" not in index, and remote search has no exact slug): Ad (skillhub)
+[2026-03-24 22:58:14] [Step3] FAIL(info: "Box" not in index, and remote search has no exact slu): Box (skillhub)
+[2026-03-24 22:58:14] [Step3] FAIL(info: "content3" not in index, using remote registry exact m): content3 (skillhub)
+[2026-03-24 22:58:14] [Step3] FAIL(info: "Jeffrey" not in index, and remote search has no exact): Jeffrey (skillhub)
+[2026-03-24 22:58:14] [Step3] FAIL(info: "MANDATORY" not in index, and remote search has no exa): MANDATORY (skillhub)
+[2026-03-24 22:58:15] [Step3] FAIL(info: "Requires" not in index, and remote search has no exac): Requires (skillhub)
+[2026-03-24 22:58:15] [Step3] FAIL(info: "acestep-simplemv" not in index, and remote search has): acestep-simplemv (voltagent)
+[2026-03-24 22:58:15] [Step3] FAIL(info: "CornerStone" not in index, and remote search has no e): CornerStone (skillhub)
+[2026-03-24 22:58:15] [Step3] FAIL(info: "inflated" not in index, and remote search has no exac): inflated (skillhub)
+[2026-03-24 22:58:15] [Step3] FAIL(info: "arc-skill-gitops" not in index, and remote search has): arc-skill-gitops (voltagent)
+[2026-03-24 22:58:15] [Step3] FAIL(info: "alex-session-wrap-up" not in index, and remote search): alex-session-wrap-up (voltagent)
+[2026-03-24 22:58:15] [Step3] FAIL(info: "abaddon" not in index, and remote search has no exact): abaddon (voltagent)
+[2026-03-24 22:58:15] [Step3] OK: aisa-market-skill (skillhub)
+[2026-03-24 22:58:15] [Step3] 安装完成: 1 成功 / 14 失败
+[2026-03-24 22:58:15] [Step4] 安全通过: 1 | 危险: 0
+[2026-03-24 22:58:15] [Step5] OK: aisa-market-skill
+[2026-03-24 22:58:15] [Step5] 集成成功: 1 | 撤销: 0
+[2026-03-24 22:58:15] [Step6] 完成，1 个技能已集成
+[2026-03-24 22:58:15] [邮件] 发送失败: (535, b'Error: authentication failed')
+[2026-03-24 22:58:15] === 完成: 集成1 | 安全1 | 安装1 ===
+[2026-03-24 23:00:01] === 四源技能自动更新 Started ===
+[2026-03-24 23:00:43] [VoltAgent] Timeout on attempt 1: The read operation timed out... Retrying in 2s
+[2026-03-24 23:01:05] [VoltAgent] Timeout on attempt 2: The read operation timed out... Retrying in 4s
+[2026-03-24 23:01:52] [VoltAgent] Success on attempt 3
+[2026-03-24 23:01:52] [Step1] 四源获取 762 个技能
+[2026-03-24 23:01:52] [Step2] 已安装: 1464 | 缺失: 504
+[2026-03-24 23:01:54] [Step3] FAIL(info: "acestep-simplemv" not in index, and remote search has): acestep-simplemv (voltagent)
+[2026-03-24 23:01:54] [Step3] FAIL(info: "adblock-dns" not in index, and remote search has no e): adblock-dns (voltagent)
+[2026-03-24 23:01:54] [Step3] FAIL(info: "active-maintenance" not in index, and remote search h): active-maintenance (voltagent)
+[2026-03-24 23:01:54] [Step3] FAIL(info: "agent-topology-visualizer" not in index, and remote s): agent-topology-visualizer (voltagent)
+[2026-03-24 23:01:54] [Step3] FAIL(info: "agent-dispatch" not in index, and remote search has n): agent-dispatch (voltagent)
+[2026-03-24 23:01:54] [Step3] FAIL(info: "arc-skill-gitops" not in index, and remote search has): arc-skill-gitops (voltagent)
+[2026-03-24 23:01:54] [Step3] FAIL(info: "agentaudit" not in index, and remote search has no ex): agentaudit (voltagent)
+[2026-03-24 23:01:54] [Step3] FAIL(info: "agentic-devops" not in index, and remote search has n): agentic-devops (voltagent)
+[2026-03-24 23:01:54] [Step3] FAIL(info: "agent-chat-ux-v1-4-0" not in index, and remote search): agent-chat-ux-v1-4-0 (voltagent)
+[2026-03-24 23:01:54] [Step3] FAIL(info: "ai-persona-engine" not in index, and remote search ha): ai-persona-engine (voltagent)
+[2026-03-24 23:01:54] [Step3] FAIL(info: "accounting-workflows" not in index, and remote search): accounting-workflows (voltagent)
+[2026-03-24 23:01:54] [Step3] FAIL(info: "abaddon" not in index, and remote search has no exact): abaddon (voltagent)
+[2026-03-24 23:01:54] [Step3] FAIL(info: "add-top-openrouter-models" not in index, and remote s): add-top-openrouter-models (voltagent)
+[2026-03-24 23:01:54] [Step3] FAIL(info: "agentaudit-skill" not in index, and remote search has): agentaudit-skill (voltagent)
+[2026-03-24 23:01:54] [Step3] FAIL(info: "alex-session-wrap-up" not in index, and remote search): alex-session-wrap-up (voltagent)
+[2026-03-24 23:01:54] [Step3] 安装完成: 0 成功 / 15 失败
+[2026-03-24 23:01:54] [Step3] 无新安装，中止
+[2026-03-25 00:00:02] === 四源技能自动更新 Started ===
+[2026-03-25 00:00:23] [VoltAgent] Timeout on attempt 1: The read operation timed out... Retrying in 2s
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected 'Comprehensive': Descriptive phrase pattern 'comprehensive'
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected 'gmail': Brand/service name
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected 'Gmail': Brand/service name
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected 'OpenClaw': Brand/service name
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected 'pr-commit-workflow': Descriptive phrase pattern 'pr-?commit'
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected 'into': Common English word
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected 'Docker': Brand/service name
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected 'Asana': Brand/service name
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected 'SQL': File extension pattern
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected 'slack': Brand/service name
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected 'pdf': File extension pattern
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected 'discord': Brand/service name
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected 'agent-team-orchestration': Descriptive phrase pattern 'agent-?team'
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected 'OpenClaw': Brand/service name
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected 'Use': Common English word
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected 'Use': Common English word
+[2026-03-25 00:00:23] [SlugValidation] Rejected 'For': Common English word
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected 'Use': Common English word
+[2026-03-25 00:00:23] [SlugValidation] Rejected 'For': Common English word
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected 'box': Brand/service name
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected 'Use': Common English word
+[2026-03-25 00:00:23] [SlugValidation] Rejected 'For': Common English word
+[2026-03-25 00:00:23] [SlugValidation] Rejected 'Box': Brand/service name
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected 'agent-team-orchestration': Descriptive phrase pattern 'agent-?team'
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected 'agent-builder': Descriptive phrase pattern 'agent-?builder'
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected 'Use': Common English word
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected 'Multi-platform': Descriptive phrase pattern 'multi-?platform'
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected 'content3': Descriptive phrase pattern 'content\d+'
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected 'Content3': Descriptive phrase pattern 'content\d+'
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected 'notion': Brand/service name
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected 'Notion': Brand/service name
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected 'comprehensive': Descriptive phrase pattern 'comprehensive'
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:23] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:00:26] [VoltAgent] Success on attempt 2
+[2026-03-25 00:00:26] [SlugValidation] Rejected 'agent-team-orchestration': Descriptive phrase pattern 'agent-?team'
+[2026-03-25 00:00:26] [SlugValidation] Rejected 'alex-session-wrap-up': Descriptive phrase pattern 'session-?wrap'
+[2026-03-25 00:00:26] [SlugValidation] Rejected 'arc-skill-gitops': Descriptive phrase pattern 'skill-?gitops'
+[2026-03-25 00:00:26] [SlugValidation] Rejected 'airtable-automation': Descriptive phrase pattern 'airtable'
+[2026-03-25 00:00:26] [SlugValidation] Rejected 'airtable-participants': Descriptive phrase pattern 'airtable'
+[2026-03-25 00:00:26] [SlugValidation] Rejected 'agent-spawner': Descriptive phrase pattern 'spawn'
+[2026-03-25 00:00:26] [SlugValidation] Rejected '12306': No alphabetic characters
+[2026-03-25 00:00:26] [SlugValidation] Rejected '1': No alphabetic characters
+[2026-03-25 00:00:26] [SlugValidation] Rejected 'agent-builder': Descriptive phrase pattern 'agent-?builder'
+[2026-03-25 00:00:26] [SlugValidation] Rejected 'a-share-short-decision': Descriptive phrase pattern 'decision'
+[2026-03-25 00:00:26] [SlugValidation] Rejected 'asana': Brand/service name
+[2026-03-25 00:00:26] [SlugValidation] Rejected 'canva': Brand/service name
+[2026-03-25 00:00:26] [SlugValidation] Rejected 'toolguard-daemon-control': Descriptive phrase pattern 'daemon-?control'
+[2026-03-25 00:00:26] [SlugValidation] Rejected 'agent-team-kit': Descriptive phrase pattern 'agent-?team'
+[2026-03-25 00:00:26] [SlugValidation] Rejected 'confluence': Brand/service name
+[2026-03-25 00:00:26] [Step1] 四源获取 1078 个技能
+[2026-03-25 00:00:26] [Step2] 已安装: 1464 | 缺失: 511
+[2026-03-25 00:00:28] [Step3] FAIL(info: "Ad" not in index, and remote search has no exact slug): Ad (skillhub)
+[2026-03-25 00:00:28] [Step3] FAIL(info: "add-top-openrouter-models" not in index, and remote s): add-top-openrouter-models (voltagent)
+[2026-03-25 00:00:29] [Step3] FAIL(info: "abaddon" not in index, and remote search has no exact): abaddon (voltagent)
+[2026-03-25 00:00:29] [Step3] FAIL(info: "active-maintenance" not in index, and remote search h): active-maintenance (voltagent)
+[2026-03-25 00:00:29] [Step3] FAIL(info: "agent-chat-ux-v1-4-0" not in index, and remote search): agent-chat-ux-v1-4-0 (voltagent)
+[2026-03-25 00:00:29] [Step3] FAIL(info: "agentaudit" not in index, and remote search has no ex): agentaudit (voltagent)
+[2026-03-25 00:00:29] [Step3] FAIL(info: "CornerStone" not in index, and remote search has no e): CornerStone (skillhub)
+[2026-03-25 00:00:29] [Step3] FAIL(info: "agentaudit-skill" not in index, and remote search has): agentaudit-skill (voltagent)
+[2026-03-25 00:00:29] [Step3] FAIL(info: "adblock-dns" not in index, and remote search has no e): adblock-dns (voltagent)
+[2026-03-25 00:00:29] [Step3] FAIL(info: "inflated" not in index, and remote search has no exac): inflated (skillhub)
+[2026-03-25 00:00:29] [Step3] FAIL(info: "MANDATORY" not in index, and remote search has no exa): MANDATORY (skillhub)
+[2026-03-25 00:00:29] [Step3] FAIL(info: "acestep-simplemv" not in index, and remote search has): acestep-simplemv (voltagent)
+[2026-03-25 00:00:29] [Step3] FAIL(info: "Jeffrey" not in index, and remote search has no exact): Jeffrey (skillhub)
+[2026-03-25 00:00:29] [Step3] FAIL(info: "Requires" not in index, and remote search has no exac): Requires (skillhub)
+[2026-03-25 00:00:29] [Step3] OK: ai-3d-generator (skillhub)
+[2026-03-25 00:00:29] [Step3] 安装完成: 1 成功 / 14 失败
+[2026-03-25 00:00:29] [Step4] 安全通过: 1 | 危险: 0
+[2026-03-25 00:00:29] [Step5] OK: ai-3d-generator
+[2026-03-25 00:00:29] [Step5] 集成成功: 1 | 撤销: 0
+[2026-03-25 00:00:29] [Step6] 完成，1 个技能已集成
+[2026-03-25 00:00:30] [邮件] 发送失败: (535, b'Error: authentication failed')
+[2026-03-25 00:00:30] === 完成: 集成1 | 安全1 | 安装1 ===
+[2026-03-25 00:28:16] === 四源技能自动更新 Started ===
+[2026-03-25 00:28:37] [VoltAgent] Timeout on attempt 1: The read operation timed out... Retrying in 2s
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected 'agent-team-orchestration': Descriptive phrase pattern 'agent-?team'
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected 'agent-builder': Descriptive phrase pattern 'agent-?builder'
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected 'and': Common English word
+[2026-03-25 00:28:37] [SlugValidation] Rejected 'and': Common English word
+[2026-03-25 00:28:37] [SlugValidation] Rejected 'Use': Common English word
+[2026-03-25 00:28:37] [SlugValidation] Rejected 'troubleshooting': Descriptive phrase pattern 'troubleshooting'
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected 'pr-commit-workflow': Descriptive phrase pattern 'pr-?commit'
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected 'into': Common English word
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected 'Docker': Brand/service name
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected 'Asana': Brand/service name
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected 'notion': Brand/service name
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected 'Notion': Brand/service name
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected 'Multi-platform': Descriptive phrase pattern 'multi-?platform'
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected 'content3': Descriptive phrase pattern 'content\d+'
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected 'Content3': Descriptive phrase pattern 'content\d+'
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected 'gmail': Brand/service name
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected 'Gmail': Brand/service name
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected 'Use': Common English word
+[2026-03-25 00:28:37] [SlugValidation] Rejected 'For': Common English word
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected 'Comprehensive': Descriptive phrase pattern 'comprehensive'
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected 'SQL': File extension pattern
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected 'slack': Brand/service name
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected 'pdf': File extension pattern
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected 'discord': Brand/service name
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected 'OpenClaw': Brand/service name
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected 'comprehensive': Descriptive phrase pattern 'comprehensive'
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected 'agent-team-orchestration': Descriptive phrase pattern 'agent-?team'
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected 'OpenClaw': Brand/service name
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected 'Use': Common English word
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected 'Use': Common English word
+[2026-03-25 00:28:37] [SlugValidation] Rejected 'For': Common English word
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected 'Use': Common English word
+[2026-03-25 00:28:37] [SlugValidation] Rejected 'For': Common English word
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected 'box': Brand/service name
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected 'Use': Common English word
+[2026-03-25 00:28:37] [SlugValidation] Rejected 'For': Common English word
+[2026-03-25 00:28:37] [SlugValidation] Rejected 'Box': Brand/service name
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:37] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 00:28:59] [VoltAgent] Timeout on attempt 2: The read operation timed out... Retrying in 4s
+[2026-03-25 00:29:24] [VoltAgent] Failed after 3 attempts: The read operation timed out
+[2026-03-25 00:29:24] [Step1] 四源获取 348 个技能
+[2026-03-25 00:29:24] [Step2] 已安装: 1465 | 缺失: 6
+[2026-03-25 00:29:26] [Step3] FAIL(info: "Ad" not in index, and remote search has no exact slug): Ad (skillhub)
+[2026-03-25 00:29:26] [Step3] FAIL(info: "inflated" not in index, and remote search has no exac): inflated (skillhub)
+[2026-03-25 00:29:26] [Step3] FAIL(info: "Requires" not in index, and remote search has no exac): Requires (skillhub)
+[2026-03-25 00:29:26] [Step3] FAIL(info: "MANDATORY" not in index, and remote search has no exa): MANDATORY (skillhub)
+[2026-03-25 00:29:26] [Step3] FAIL(info: "Jeffrey" not in index, and remote search has no exact): Jeffrey (skillhub)
+[2026-03-25 00:29:26] [Step3] FAIL(info: "CornerStone" not in index, and remote search has no e): CornerStone (skillhub)
+[2026-03-25 00:29:26] [Step3] 安装完成: 0 成功 / 6 失败
+[2026-03-25 00:29:26] [Step3] 无新安装，中止
+[2026-03-25 01:00:01] === 四源技能自动更新 Started ===
+[2026-03-25 01:00:02] [VoltAgent] Success on attempt 1
+[2026-03-25 01:00:02] [SlugValidation] Rejected 'agent-team-orchestration': Descriptive phrase pattern 'agent-?team'
+[2026-03-25 01:00:02] [SlugValidation] Rejected 'alex-session-wrap-up': Descriptive phrase pattern 'session-?wrap'
+[2026-03-25 01:00:02] [SlugValidation] Rejected 'arc-skill-gitops': Descriptive phrase pattern 'skill-?gitops'
+[2026-03-25 01:00:02] [SlugValidation] Rejected 'airtable-automation': Descriptive phrase pattern 'airtable'
+[2026-03-25 01:00:02] [SlugValidation] Rejected 'airtable-participants': Descriptive phrase pattern 'airtable'
+[2026-03-25 01:00:02] [SlugValidation] Rejected 'agent-spawner': Descriptive phrase pattern 'spawn'
+[2026-03-25 01:00:02] [SlugValidation] Rejected '12306': No alphabetic characters
+[2026-03-25 01:00:02] [SlugValidation] Rejected '1': No alphabetic characters
+[2026-03-25 01:00:02] [SlugValidation] Rejected 'agent-builder': Descriptive phrase pattern 'agent-?builder'
+[2026-03-25 01:00:02] [SlugValidation] Rejected 'a-share-short-decision': Descriptive phrase pattern 'decision'
+[2026-03-25 01:00:02] [SlugValidation] Rejected 'asana': Brand/service name
+[2026-03-25 01:00:02] [SlugValidation] Rejected 'canva': Brand/service name
+[2026-03-25 01:00:02] [SlugValidation] Rejected 'toolguard-daemon-control': Descriptive phrase pattern 'daemon-?control'
+[2026-03-25 01:00:02] [SlugValidation] Rejected 'agent-team-kit': Descriptive phrase pattern 'agent-?team'
+[2026-03-25 01:00:02] [SlugValidation] Rejected 'confluence': Brand/service name
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected 'agent-team-orchestration': Descriptive phrase pattern 'agent-?team'
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected 'Multi-platform': Descriptive phrase pattern 'multi-?platform'
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected 'content3': Descriptive phrase pattern 'content\d+'
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected 'Content3': Descriptive phrase pattern 'content\d+'
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected 'notion': Brand/service name
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected 'Notion': Brand/service name
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected 'SQL': File extension pattern
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected 'slack': Brand/service name
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected 'pdf': File extension pattern
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected 'discord': Brand/service name
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected 'OpenClaw': Brand/service name
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:03] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected 'gmail': Brand/service name
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected 'Gmail': Brand/service name
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected 'Use': Common English word
+[2026-03-25 01:00:04] [SlugValidation] Rejected 'For': Common English word
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected 'box': Brand/service name
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected 'Use': Common English word
+[2026-03-25 01:00:04] [SlugValidation] Rejected 'For': Common English word
+[2026-03-25 01:00:04] [SlugValidation] Rejected 'Box': Brand/service name
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected 'Comprehensive': Descriptive phrase pattern 'comprehensive'
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected 'pr-commit-workflow': Descriptive phrase pattern 'pr-?commit'
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected 'into': Common English word
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected 'Docker': Brand/service name
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected 'Asana': Brand/service name
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected 'agent-team-orchestration': Descriptive phrase pattern 'agent-?team'
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected 'OpenClaw': Brand/service name
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected 'Use': Common English word
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected 'Use': Common English word
+[2026-03-25 01:00:04] [SlugValidation] Rejected 'For': Common English word
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected 'comprehensive': Descriptive phrase pattern 'comprehensive'
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [SlugValidation] Rejected '-': Exception case
+[2026-03-25 01:00:04] [Step1] 四源获取 1080 个技能
+[2026-03-25 01:00:04] [Step2] 已安装: 1465 | 缺失: 516
+[2026-03-25 01:00:06] [Step3] FAIL(info: "MANDATORY" not in index, and remote search has no exa): MANDATORY (skillhub)
+[2026-03-25 01:00:06] [Step3] FAIL(info: "Ad" not in index, and remote search has no exact slug): Ad (skillhub)
+[2026-03-25 01:00:06] [Step3] FAIL(info: "CornerStone" not in index, and remote search has no e): CornerStone (skillhub)
+[2026-03-25 01:00:06] [Step3] FAIL(info: "Jeffrey" not in index, and remote search has no exact): Jeffrey (skillhub)
+[2026-03-25 01:00:06] [Step3] FAIL(info: "acestep-simplemv" not in index, and remote search has): acestep-simplemv (voltagent)
+[2026-03-25 01:00:06] [Step3] FAIL(info: "Requires" not in index, and remote search has no exac): Requires (skillhub)
+[2026-03-25 01:00:06] [Step3] FAIL(info: "inflated" not in index, and remote search has no exac): inflated (skillhub)
+[2026-03-25 01:00:06] [Step3] FAIL(info: "abaddon" not in index, and remote search has no exact): abaddon (voltagent)
+[2026-03-25 01:00:06] [Step3] OK: agenthc-market-intelligence (skillhub)
+[2026-03-25 01:00:06] [Step3] OK: ai-twitter-daily (skillhub)
+[2026-03-25 01:00:06] [Step3] OK: ai-ethics (skillhub)
+[2026-03-25 01:00:06] [Step3] OK: aigohotel-mcp (skillhub)
+[2026-03-25 01:00:06] [Step3] OK: agent-browser-0-2-0 (skillhub)
+[2026-03-25 01:00:06] [Step3] OK: aicone (skillhub)
+[2026-03-25 01:00:06] [Step3] OK: airdrop-alert (skillhub)
+[2026-03-25 01:00:06] [Step3] 安装完成: 7 成功 / 8 失败
+[2026-03-25 01:00:06] [Step4] 安全通过: 7 | 危险: 0
+[2026-03-25 01:00:06] [Step5] OK: agenthc-market-intelligence
+[2026-03-25 01:00:06] [Step5] OK: agent-browser-0-2-0
+[2026-03-25 01:00:06] [Step5] OK: ai-twitter-daily
+[2026-03-25 01:00:06] [Step5] OK: ai-ethics
+[2026-03-25 01:00:06] [Step5] OK: aicone
+[2026-03-25 01:00:06] [Step5] OK: airdrop-alert
+[2026-03-25 01:00:06] [Step5] OK: aigohotel-mcp
+[2026-03-25 01:00:06] [Step5] 集成成功: 7 | 撤销: 0
+[2026-03-25 01:00:06] [Step6] 完成，7 个技能已集成
+[2026-03-25 01:00:07] [邮件] 发送失败: (535, b'Error: authentication failed')
+[2026-03-25 01:00:07] === 完成: 集成7 | 安全7 | 安装7 ===

@@ -13,7 +13,7 @@ H6: 更新 benchmark.md
 H7: 全面测试 + mypy
 """
 
-import subprocess, json, sys, argparse, os, os
+import subprocess, json, sys, argparse, os
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
