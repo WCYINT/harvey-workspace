@@ -1,15 +1,14 @@
 {
-  "timestamp": "2026-03-24T08:49:09.462236+08:00",
+  "timestamp": "2026-03-24T12:04:04.419879+08:00",
   "role": "Engineer",
   "data": {
     "role": "Engineer",
     "skills_needed": [
-      "quality-management",
-      "data-analysis",
-      "project-management",
-      "lean-six-sigma",
-      "vehicle-electrification"
+      "process_improvement",
+      "data_analysis",
+      "quality_management",
+      "project_management"
     ],
-    "reasoning": "改进插电混动Y车型质量需要系统质量管控、数据驱动的问题诊断、项目实施与持续改进以及新能源车辆技术的综合能力。"
+    "reasoning": "Plug‑in hybrid quality improvement requires systematic process enhancements, data‑driven analysis, rigorous quality control, and coordinated project execution."
   }
 }

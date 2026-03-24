@@ -824,6 +824,54 @@
     "agent-skills-context": {
       "version": "1.0.0",
       "installedAt": 1774306853620
+    },
+    "content-repurpose-studio": {
+      "version": "1.0.0",
+      "installedAt": 1774315518597
+    },
+    "content-structure-designer": {
+      "version": "1.0.0",
+      "installedAt": 1774315522688
+    },
+    "autonomous-organization": {
+      "version": "1.0.0",
+      "installedAt": 1774315522705
+    },
+    "autonomous-wallet": {
+      "version": "1.0.0",
+      "installedAt": 1774315522711
+    },
+    "content-generator": {
+      "version": "1.0.0",
+      "installedAt": 1774315522882
+    },
+    "ai-financial-report-cn": {
+      "version": "1.0.0",
+      "installedAt": 1774315523002
+    },
+    "pandas-construction-analysis": {
+      "version": "2.1.0",
+      "installedAt": 1774315523365
+    },
+    "data-automation-service": {
+      "version": "1.0.0",
+      "installedAt": 1774317654580
+    },
+    "agent-social": {
+      "version": "2.4.0",
+      "installedAt": 1774317654602
+    },
+    "gizmolab-tools": {
+      "version": "",
+      "installedAt": 1774320965398
+    },
+    "content-goldmine": {
+      "version": "1.0.0",
+      "installedAt": 1774324807477
+    },
+    "openserv-multi-agent-workflows": {
+      "version": "1.0.2",
+      "installedAt": 1774324807575
     }
   }
 }

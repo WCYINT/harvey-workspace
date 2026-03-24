@@ -492,6 +492,78 @@
       "zip_url": "https://lightmake.site/api/v1/download?slug=agent-skills-context",
       "source": "skillhub",
       "version": "1.0.0"
+    },
+    "content-repurpose-studio": {
+      "name": "content-repurpose-studio",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=content-repurpose-studio",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "content-structure-designer": {
+      "name": "Content Structure Designer",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=content-structure-designer",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "autonomous-organization": {
+      "name": "Autonomous Organization",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=autonomous-organization",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "autonomous-wallet": {
+      "name": "Autonomous Wallet",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=autonomous-wallet",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "content-generator": {
+      "name": "Content Generator",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=content-generator",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "ai-financial-report-cn": {
+      "name": "Ai Financial Report Cn",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=ai-financial-report-cn",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "pandas-construction-analysis": {
+      "name": "Pandas Construction Analysis",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=pandas-construction-analysis",
+      "source": "skillhub",
+      "version": "2.1.0"
+    },
+    "data-automation-service": {
+      "name": "Data Automation Service",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=data-automation-service",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "agent-social": {
+      "name": "Agent Social - Social Network for AI Agents",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=agent-social",
+      "source": "skillhub",
+      "version": "2.4.0"
+    },
+    "gizmolab-tools": {
+      "name": "gizmolab-tools",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=gizmolab-tools",
+      "source": "skillhub",
+      "version": ""
+    },
+    "content-goldmine": {
+      "name": "Content Goldmine",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=content-goldmine",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "openserv-multi-agent-workflows": {
+      "name": "OpenServ Multi Agent Workflows",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=openserv-multi-agent-workflows",
+      "source": "skillhub",
+      "version": "1.0.2"
     }
   }
 }

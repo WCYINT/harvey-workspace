@@ -5209,3 +5209,140 @@ Error: Use --force to inst): agent-stealth-scraper (clawhub)
 [2026-03-24 09:03:51] [VoltAgent] Failed after 3 attempts: name 'INVALID_SLUGS' is not defined
 [2026-03-24 09:03:51] [Step1] 四源获取 0 个技能
 [2026-03-24 09:03:51] [Step1] 无技能获取，中止
+[2026-03-24 09:25:14] === 四源技能自动更新 Started ===
+[2026-03-24 09:25:15] [VoltAgent] Success on attempt 1
+[2026-03-24 09:25:16] [Step1] 四源获取 1090 个技能
+[2026-03-24 09:25:16] [Step2] 已安装: 1394 | 缺失: 526
+[2026-03-24 09:25:17] [Step3] FAIL(info: "Use" not in index, and remote search has no exact slu): Use (skillhub)
+[2026-03-24 09:25:18] [Step3] FAIL(info: "Generate" not in index, and remote search has no exac): Generate (skillhub)
+[2026-03-24 09:25:18] [Step3] OK: content-repurpose-studio (skillhub)
+[2026-03-24 09:25:22] [Step3] FAIL(info: "MANDATORY" not in index, and remote search has no exa): MANDATORY (skillhub)
+[2026-03-24 09:25:22] [Step3] FAIL(info: "CornerStone" not in index, and remote search has no e): CornerStone (skillhub)
+[2026-03-24 09:25:22] [Step3] FAIL(info: "EvoMap" not in index, and remote search has no exact ): EvoMap (skillhub)
+[2026-03-24 09:25:22] [Step3] FAIL(info: "inflated" not in index, and remote search has no exac): inflated (skillhub)
+[2026-03-24 09:25:22] [Step3] OK: content-structure-designer (skillhub)
+[2026-03-24 09:25:22] [Step3] OK: autonomous-organization (skillhub)
+[2026-03-24 09:25:22] [Step3] OK: autonomous-wallet (skillhub)
+[2026-03-24 09:25:22] [Step3] OK: content-hot-tracker (skillhub)
+[2026-03-24 09:25:22] [Step3] OK: content-generator (skillhub)
+[2026-03-24 09:25:22] [Step3] FAIL(info: "Self-healing" not in index, and remote search has no ): Self-healing (skillhub)
+[2026-03-24 09:25:23] [Step3] OK: ai-financial-report-cn (skillhub)
+[2026-03-24 09:25:23] [Step3] OK: pandas-construction-analysis (skillhub)
+[2026-03-24 09:25:23] [Step3] 安装完成: 8 成功 / 7 失败
+[2026-03-24 09:25:23] [Step4] 安全通过: 8 | 危险: 0
+[2026-03-24 09:25:23] [Step5] OK: ai-financial-report-cn
+[2026-03-24 09:25:23] [Step5] OK: autonomous-wallet
+[2026-03-24 09:25:23] [Step5] OK: autonomous-organization
+[2026-03-24 09:25:23] [Step5] OK: pandas-construction-analysis
+[2026-03-24 09:25:23] [Step5] OK: content-structure-designer
+[2026-03-24 09:25:23] [Step5] OK: content-repurpose-studio
+[2026-03-24 09:25:23] [Step5] OK: content-generator
+[2026-03-24 09:25:23] [Step5] OK: content-hot-tracker
+[2026-03-24 09:25:23] [Step5] 集成成功: 8 | 撤销: 0
+[2026-03-24 09:25:23] [Step6] 完成，8 个技能已集成
+[2026-03-24 09:25:27] [邮件] 发送失败: (535, b'Error: authentication failed')
+[2026-03-24 09:25:27] === 完成: 集成8 | 安全8 | 安装8 ===
+[2026-03-24 10:00:01] === 四源技能自动更新 Started ===
+[2026-03-24 10:00:22] [VoltAgent] Timeout on attempt 1: The read operation timed out... Retrying in 2s
+[2026-03-24 10:00:45] [VoltAgent] Timeout on attempt 2: The read operation timed out... Retrying in 4s
+[2026-03-24 10:00:50] [VoltAgent] Success on attempt 3
+[2026-03-24 10:00:50] [Step1] 四源获取 1086 个技能
+[2026-03-24 10:00:50] [Step2] 已安装: 1402 | 缺失: 518
+[2026-03-24 10:00:52] [Step3] FAIL(info: "EvoMap" not in index, and remote search has no exact ): EvoMap (skillhub)
+[2026-03-24 10:00:52] [Step3] FAIL(info: "For" not in index, and remote search has no exact slu): For (skillhub)
+[2026-03-24 10:00:52] [Step3] FAIL(info: "Ad" not in index, and remote search has no exact slug): Ad (skillhub)
+[2026-03-24 10:00:52] [Step3] FAIL(info: "MANDATORY" not in index, and remote search has no exa): MANDATORY (skillhub)
+[2026-03-24 10:00:52] [Step3] FAIL(info: "Use" not in index, and remote search has no exact slu): Use (skillhub)
+[2026-03-24 10:00:53] [Step3] FAIL(info: "Box" not in index, and remote search has no exact slu): Box (skillhub)
+[2026-03-24 10:00:53] [Step3] FAIL(info: "Requires" not in index, and remote search has no exac): Requires (skillhub)
+[2026-03-24 10:00:54] [Step3] FAIL(info: "inflated" not in index, and remote search has no exac): inflated (skillhub)
+[2026-03-24 10:00:54] [Step3] FAIL(info: "abaddon" not in index, and remote search has no exact): abaddon (voltagent)
+[2026-03-24 10:00:54] [Step3] FAIL(info: "Self-healing" not in index, and remote search has no ): Self-healing (skillhub)
+[2026-03-24 10:00:54] [Step3] FAIL(info: "CornerStone" not in index, and remote search has no e): CornerStone (skillhub)
+[2026-03-24 10:00:54] [Step3] FAIL(info: "arc-skill-gitops" not in index, and remote search has): arc-skill-gitops (voltagent)
+[2026-03-24 10:00:54] [Step3] OK: data-automation-service (skillhub)
+[2026-03-24 10:00:54] [Step3] OK: agent-social (skillhub)
+[2026-03-24 10:00:54] [Step3] FAIL(info: "alex-session-wrap-up" not in index, and remote search): alex-session-wrap-up (voltagent)
+[2026-03-24 10:00:54] [Step3] 安装完成: 2 成功 / 13 失败
+[2026-03-24 10:00:54] [Step4] 安全通过: 2 | 危险: 0
+[2026-03-24 10:00:54] [Step5] OK: agent-social
+[2026-03-24 10:00:54] [Step5] OK: data-automation-service
+[2026-03-24 10:00:54] [Step5] 集成成功: 2 | 撤销: 0
+[2026-03-24 10:00:54] [Step6] 完成，2 个技能已集成
+[2026-03-24 10:00:55] [邮件] 发送失败: (535, b'Error: authentication failed')
+[2026-03-24 10:00:55] === 完成: 集成2 | 安全2 | 安装2 ===
+[2026-03-24 10:55:27] === 四源技能自动更新 Started ===
+[2026-03-24 10:55:48] [VoltAgent] Timeout on attempt 1: The read operation timed out... Retrying in 2s
+[2026-03-24 10:55:50] [VoltAgent] Success on attempt 2
+[2026-03-24 10:55:50] [Step1] 四源获取 917 个技能
+[2026-03-24 10:55:50] [Step2] 已安装: 1404 | 缺失: 515
+[2026-03-24 10:55:53] [Step3] FAIL(info: "alex-session-wrap-up" not in index, and remote search): alex-session-wrap-up (voltagent)
+[2026-03-24 10:55:54] [Step3] FAIL(info: "CornerStone" not in index, and remote search has no e): CornerStone (skillhub)
+[2026-03-24 10:55:57] [Step3] FAIL(info: "Box" not in index/remote search, try direct download ): Box (skillhub)
+[2026-03-24 10:55:58] [Step3] FAIL(info: "Requires" not in index, and remote search has no exac): Requires (skillhub)
+[2026-03-24 10:55:58] [Step3] FAIL(info: "Use" not in index/remote search, try direct download ): Use (skillhub)
+[2026-03-24 10:55:58] [Step3] FAIL(info: "inflated" not in index/remote search, try direct down): inflated (skillhub)
+[2026-03-24 10:55:59] [Step3] FAIL(info: "adblock-dns" not in index, and remote search has no e): adblock-dns (voltagent)
+[2026-03-24 10:56:03] [Step3] FAIL(info: "Self-healing" not in index/remote search, try direct ): Self-healing (skillhub)
+[2026-03-24 10:56:05] [Step3] OK: gizmolab-tools (skillhub)
+[2026-03-24 10:56:10] [Step3] FAIL(info: "abaddon" not in index/remote search, try direct downl): abaddon (voltagent)
+[2026-03-24 10:56:14] [Step3] FAIL(info: "acestep-simplemv" not in index/remote search, try dir): acestep-simplemv (voltagent)
+[2026-03-24 10:56:14] [Step3] FAIL(info: "arc-skill-gitops" not in index/remote search, try dir): arc-skill-gitops (voltagent)
+[2026-03-24 10:56:14] [Step3] FAIL(info: "active-maintenance" not in index/remote search, try d): active-maintenance (voltagent)
+[2026-03-24 10:56:17] [Step3] FAIL(info: "For" not in index, and remote search has no exact slu): For (skillhub)
+[2026-03-24 10:56:27] [Step3] FAIL(info: "MANDATORY" not in index/remote search, try direct dow): MANDATORY (skillhub)
+[2026-03-24 10:56:27] [Step3] 安装完成: 1 成功 / 14 失败
+[2026-03-24 10:56:27] [Step4] 安全通过: 1 | 危险: 0
+[2026-03-24 10:56:27] [Step5] OK: gizmolab-tools
+[2026-03-24 10:56:27] [Step5] 集成成功: 1 | 撤销: 0
+[2026-03-24 10:56:27] [Step6] 完成，1 个技能已集成
+[2026-03-24 10:56:30] [邮件] 发送失败: (535, b'Error: authentication failed')
+[2026-03-24 10:56:30] === 完成: 集成1 | 安全1 | 安装1 ===
+[2026-03-24 11:00:01] === 四源技能自动更新 Started ===
+[2026-03-24 11:00:22] [VoltAgent] Success on attempt 1
+[2026-03-24 11:00:22] [Step1] 四源获取 802 个技能
+[2026-03-24 11:00:22] [Step2] 已安装: 1405 | 缺失: 506
+[2026-03-24 11:00:26] [Step3] FAIL(info: "abaddon" not in index/remote search, try direct downl): abaddon (voltagent)
+[2026-03-24 11:00:26] [Step3] FAIL(info: "accounting-workflows" not in index, and remote search): accounting-workflows (voltagent)
+[2026-03-24 11:00:29] [Step3] FAIL(info: "agent-dispatch" not in index, and remote search has n): agent-dispatch (voltagent)
+[2026-03-24 11:00:32] [Step3] FAIL(info: "agentaudit" not in index/remote search, try direct do): agentaudit (voltagent)
+[2026-03-24 11:00:32] [Step3] FAIL(info: "active-maintenance" not in index/remote search, try d): active-maintenance (voltagent)
+[2026-03-24 11:00:33] [Step3] FAIL(info: "agentaudit-skill" not in index, and remote search has): agentaudit-skill (voltagent)
+[2026-03-24 11:00:33] [Step3] FAIL(info: "arc-skill-gitops" not in index/remote search, try dir): arc-skill-gitops (voltagent)
+[2026-03-24 11:00:34] [Step3] FAIL(info: "agent-topology-visualizer" not in index/remote search): agent-topology-visualizer (voltagent)
+[2026-03-24 11:00:35] [Step3] FAIL(info: "agentic-devops" not in index, and remote search has n): agentic-devops (voltagent)
+[2026-03-24 11:00:38] [Step3] FAIL(info: "agent-chat-ux-v1-4-0" not in index/remote search, try): agent-chat-ux-v1-4-0 (voltagent)
+[2026-03-24 11:00:41] [Step3] FAIL(info: "alex-session-wrap-up" not in index, and remote search): alex-session-wrap-up (voltagent)
+[2026-03-24 11:00:43] [Step3] FAIL(info: "adblock-dns" not in index/remote search, try direct d): adblock-dns (voltagent)
+[2026-03-24 11:00:54] [Step3] FAIL(info: "ai-persona-engine" not in index, and remote search ha): ai-persona-engine (voltagent)
+[2026-03-24 11:00:56] [Step3] FAIL(info: "acestep-simplemv" not in index, and remote search has): acestep-simplemv (voltagent)
+[2026-03-24 11:01:01] [Step3] FAIL(info: "add-top-openrouter-models" not in index/remote search): add-top-openrouter-models (voltagent)
+[2026-03-24 11:01:01] [Step3] 安装完成: 0 成功 / 15 失败
+[2026-03-24 11:01:01] [Step3] 无新安装，中止
+[2026-03-24 12:00:01] === 四源技能自动更新 Started ===
+[2026-03-24 12:00:03] [VoltAgent] Success on attempt 1
+[2026-03-24 12:00:04] [Step1] 四源获取 1091 个技能
+[2026-03-24 12:00:04] [Step2] 已安装: 1405 | 缺失: 518
+[2026-03-24 12:00:06] [Step3] FAIL(info: "Use" not in index, and remote search has no exact slu): Use (skillhub)
+[2026-03-24 12:00:06] [Step3] FAIL(info: "CornerStone" not in index, and remote search has no e): CornerStone (skillhub)
+[2026-03-24 12:00:07] [Step3] FAIL(info: "Self-healing" not in index, and remote search has no ): Self-healing (skillhub)
+[2026-03-24 12:00:07] [Step3] FAIL(info: "Ad" not in index, and remote search has no exact slug): Ad (skillhub)
+[2026-03-24 12:00:07] [Step3] FAIL(info: "For" not in index, and remote search has no exact slu): For (skillhub)
+[2026-03-24 12:00:07] [Step3] FAIL(info: "abaddon" not in index, and remote search has no exact): abaddon (voltagent)
+[2026-03-24 12:00:07] [Step3] FAIL(info: "inflated" not in index, and remote search has no exac): inflated (skillhub)
+[2026-03-24 12:00:07] [Step3] FAIL(info: "Requires" not in index, and remote search has no exac): Requires (skillhub)
+[2026-03-24 12:00:07] [Step3] FAIL(info: "Jeffrey" not in index, and remote search has no exact): Jeffrey (skillhub)
+[2026-03-24 12:00:07] [Step3] FAIL(info: "alex-session-wrap-up" not in index, and remote search): alex-session-wrap-up (voltagent)
+[2026-03-24 12:00:07] [Step3] FAIL(info: "arc-skill-gitops" not in index, and remote search has): arc-skill-gitops (voltagent)
+[2026-03-24 12:00:07] [Step3] FAIL(info: "MANDATORY" not in index, and remote search has no exa): MANDATORY (skillhub)
+[2026-03-24 12:00:07] [Step3] FAIL(info: "Box" not in index, and remote search has no exact slu): Box (skillhub)
+[2026-03-24 12:00:07] [Step3] OK: content-goldmine (skillhub)
+[2026-03-24 12:00:07] [Step3] OK: openserv-multi-agent-workflows (skillhub)
+[2026-03-24 12:00:07] [Step3] 安装完成: 2 成功 / 13 失败
+[2026-03-24 12:00:07] [Step4] 安全通过: 2 | 危险: 0
+[2026-03-24 12:00:07] [Step5] OK: openserv-multi-agent-workflows
+[2026-03-24 12:00:07] [Step5] OK: content-goldmine
+[2026-03-24 12:00:07] [Step5] 集成成功: 2 | 撤销: 0
+[2026-03-24 12:00:07] [Step6] 完成，2 个技能已集成
+[2026-03-24 12:00:11] [邮件] 发送失败: (535, b'Error: authentication failed')
+[2026-03-24 12:00:11] === 完成: 集成2 | 安全2 | 安装2 ===
