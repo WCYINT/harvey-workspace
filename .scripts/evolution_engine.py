@@ -13,7 +13,7 @@ H6: 更新 benchmark.md
 H7: 全面测试 + mypy
 """
 
-import subprocess, json, sys, argparse
+import subprocess, json, sys, argparse, os
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
@@ -55,16 +55,47 @@ def _log(msg: str) -> None:
 
 
 def _load_progress() -> dict:
+    """Load progress with validation to ensure data integrity."""
     try:
         with open(PROGRESS_FILE) as f:
-            return json.load(f)
-    except:
-        return {"day": 0, "hour": 0, "skills": 0, "completed_tasks": [], "errors": []}
+            data = json.load(f)
+        # Validate required fields
+        validated = {
+            "day": max(1, int(data.get("day", 1))),
+            "hour": max(0, min(7, int(data.get("hour", 0)))),
+            "skills": max(0, int(data.get("skills", 0))),
+            "completed_tasks": list(data.get("completed_tasks", [])),
+            "errors": list(data.get("errors", []))[-50:],  # Keep last 50 errors
+        }
+        return validated
+    except (json.JSONDecodeError, ValueError, TypeError) as e:
+        _log(f"[PROGRESS-ERROR] Failed to load/validate progress: {e}. Starting fresh.")
+        return {"day": 1, "hour": 0, "skills": 0, "completed_tasks": [], "errors": []}
+    except Exception as e:
+        _log(f"[PROGRESS-ERROR] Unexpected error loading progress: {e}")
+        return {"day": 1, "hour": 0, "skills": 0, "completed_tasks": [], "errors": []}
 
 
 def _save_progress(p: dict) -> None:
-    with open(PROGRESS_FILE, "w") as f:
-        json.dump(p, f, indent=2, ensure_ascii=False)
+    """Save progress with atomic write to prevent corruption."""
+    try:
+        # Validate before saving
+        if not isinstance(p, dict):
+            raise ValueError("Progress must be a dict")
+        required_keys = {"day", "hour", "skills", "completed_tasks", "errors"}
+        if not required_keys.issubset(p.keys()):
+            raise ValueError(f"Missing required keys: {required_keys - set(p.keys())}")
+        
+        # Atomic write: write to temp file, then rename
+        temp_file = PROGRESS_FILE.with_suffix('.tmp')
+        with open(temp_file, "w") as f:
+            json.dump(p, f, indent=2, ensure_ascii=False)
+            f.flush()
+            os.fsync(f.fileno())
+        temp_file.replace(PROGRESS_FILE)
+    except Exception as e:
+        _log(f"[PROGRESS-ERROR] Failed to save progress: {e}")
+        raise
 
 
 def _run_cmd(cmd: list[str], timeout: int = 30) -> tuple[int, str, str]:

@@ -133,38 +133,167 @@ async def _fetch_skills_sh(semaphore: asyncio.Semaphore) -> list[dict]:
             return []
 
 # ── 解析器 ──────────────────────────────────────
-INVALID_SLUGS = {
-    "-", "Use", "For", "and", "MANDATORY", "Navigate", "Google", "Gmail",
-    "Gpt", "Brand-specific", "CornerStone", "ClickSend", "ClickFunnels",
-    "BluOS", "NotebookLM", "inflated", "comprehensive", "Notion",
-    "Requires", "Acuity", "docker", "Jeffrey", "Auto-detect",
-    "Multi-platform", "Ad", "ManyChat", "Box", "Teamo", "persuasive",
-    "Decision", "gumroad", "Auto-invoked", "spawn", "Comprehensive",
-    "troubleshooting", "airtable", "llm", "Billions", "EvoMap",
-    # Additional invalid slugs discovered in 2026-03-22 logs
-    "Acuity", "ClawHub", "Fathom", "LLM", "Telnyx", "TickTick",
-    "blucli", "codeconductor", "gcalcli-calendar", "gogcli", "moltbook-cli-tool",
-    "ordercli", "pr-commit-workflow", "scheduler-for-discord", "sonoscli",
-    "tiangong-notebooklm-cli", "toolguard-daemon-control", "vap-media",
-    "video-cog", "vocal-chat", "webchat-audio-notifications",
-    # Additional invalid slugs discovered in 2026-03-23 deep analysis
-    "into", "content3", "alex-session-wrap-up", "arc-skill-gitops",
-    "Workflowy", "ai-agent-builder", "agent-team",
-    # Additional invalid slugs discovered in 2026-03-23 late logs
-    "add-top-openrouter-models", "adblock-dns", "active-maintenance",
-    "abaddon", "acestep-simplemv", "agent-chat-ux-v1-4-0",
-    # Additional invalid slugs discovered in 2026-03-23 VoltAgent logs
-    "breeze", "bex-nano-banana-pro", "atxp", "ascii-art-generator",
-    "algorithmic-art", "album-cover-generation", "ai-persona-engine",
-    "agentic-devops", "agent-topology-visualizer", "agent-dispatch",
-    "accounting-workflows", "agentaudit-skill", "agentaudit",
-    # Additional invalid slugs discovered in 2026-03-24 logs (cron:ai-hourly-proactive)
-    "ClawHub", "Fathom", "Telnyx", "TickTick", "blucli", "gcalcli-calendar",
-    "gogcli", "moltbook-cli-tool", "ordercli", "sonoscli", "tiangong-notebooklm-cli",
-    "toolguard-daemon-control", "vap-media", "video-cog", "vocal-chat",
-    "webchat-audio-notifications", "pr-commit-workflow", "scheduler-for-discord",
-    "VoltAgent", "Skills.sh", "SkillHub", "ClawHub"
+# ── 统一Slug验证系统 v2.0 ─────────────────────────
+# 移除了庞大的INVALID_SLUGS黑名单，改用基于规则的主动验证
+# 自动学习：被拒绝的slug会被记录，用于持续改进验证规则
+
+# 仅保留真正模糊的例外情况（这些需要人工判断）
+EXCEPTION_CASES = {
+    "-",  # 纯连字符
+    "llm",  # 可能是合法缩写，但常被误用
 }
+
+# 黑名单已移除，改用基于规则的主动验证（见 _is_valid_slug 函数）
+# 此处保留空集合作为向后兼容
+INVALID_SLUGS = set()
+
+# 被拒绝slug的持久化学习记录
+_REJECTED_SLUGS_LOG = Path("/Users/fhjtech/.openclaw/workspace/.learnings/rejected_slugs.json")
+
+def _load_rejected_slugs() -> set[str]:
+    """加载历史上被拒绝的slug，用于增强验证"""
+    try:
+        if _REJECTED_SLUGS_LOG.exists():
+            with open(_REJECTED_SLUGS_LOG, "r", encoding="utf-8") as f:
+                data = json.load(f)
+                return set(data.get("slugs", []))
+    except Exception:
+        pass
+    return set()
+
+def _save_rejected_slug(slug: str) -> None:
+    """记录被拒绝的slug，用于持续学习改进"""
+    try:
+        rejected = _load_rejected_slugs()
+        if slug not in rejected:
+            rejected.add(slug)
+            _REJECTED_SLUGS_LOG.parent.mkdir(parents=True, exist_ok=True)
+            with open(_REJECTED_SLUGS_LOG, "w", encoding="utf-8") as f:
+                json.dump({
+                    "slugs": sorted(list(rejected)),
+                    "last_updated": datetime.now(TZ_CST).isoformat(),
+                    "count": len(rejected)
+                }, f, indent=2, ensure_ascii=False)
+    except Exception:
+        pass
+
+def _is_valid_slug(slug: str, _learned_rejections: set[str] = None) -> bool:
+    """Unified slug validation with proactive pattern matching and automatic learning.
+    
+    v2.0 Changes:
+    - Removed unwieldy INVALID_SLUGS blacklist (89+ entries)
+    - Added automatic learning from rejections
+    - Consolidated all validation into clear, documented rules
+    - Added detailed logging for debugging
+    """
+    if not slug:
+        return False
+    
+    # Load learned rejections (cached for performance)
+    if _learned_rejections is None:
+        _learned_rejections = _load_rejected_slugs()
+    
+    # Rule 1: Known exception cases (truly ambiguous)
+    if slug in EXCEPTION_CASES:
+        log(f"[SlugValidation] Rejected '{slug}': Exception case")
+        return False
+    
+    # Rule 2: Previously learned rejections
+    if slug in _learned_rejections:
+        log(f"[SlugValidation] Rejected '{slug}': Learned from past failures")
+        return False
+    
+    # Rule 3: Must contain at least one alphabetic character
+    if not re.search(r"[a-zA-Z]", slug):
+        log(f"[SlugValidation] Rejected '{slug}': No alphabetic characters")
+        return False
+    
+    # Rule 4: Reject pure numeric/hyphen strings
+    if re.match(r"^[\d-]+$", slug):
+        log(f"[SlugValidation] Rejected '{slug}': Pure numeric/hyphen")
+        return False
+    
+    # Rule 5: Reject common English words (all lowercase, 2-8 chars)
+    common_words = {
+        "use", "for", "and", "the", "into", "with", "from", "into",
+        "add", "new", "get", "set", "run", "all", "any", "are",
+        "can", "may", "via", "per", "now", "old", "way", "how",
+        "but", "not", "was", "had", "has", "have", "did", "does",
+        "will", "would", "could", "should", "shall", "this", "that",
+        "these", "those", "they", "them", "their", "there", "then",
+        "than", "only", "over", "also", "just", "even", "back",
+        "after", "first", "well", "work", "where", "much", "before",
+        "right", "think", "too", "take", "still", "being", "here",
+        "another", "around", "every", "part", "keep", "call", "came",
+        "come", "came", "become", "became", "made", "make", "need",
+        "say", "said", "know", "knew", "known", "see", "saw", "seen",
+        "seem", "want", "went", "come", "came", "put", "turn", "hand",
+        "home", "us", "try", "ask", "end", "why", "let", "point",
+        "again", "off", "give", "given", "given", "find", "found",
+    }
+    if slug.lower() in common_words:
+        log(f"[SlugValidation] Rejected '{slug}': Common English word")
+        return False
+    
+    # Rule 6: Reject descriptive phrases with connecting words
+    descriptive_patterns = [
+        r"comprehensive", r"troubleshooting", r"auto-?detect", r"auto-?invoked",
+        r"multi-?platform", r"web-?chat", r"audio-?notifications", r"cli-?tool",
+        r"scheduler-?for", r"daemon-?control", r"video-?cog", r"vocal-?chat",
+        r"notebook-?lm", r"pr-?commit", r"session-?wrap", r"skill-?gitops",
+        r"agent-?builder", r"agent-?team", r"content\d+", r"wrap-?up",
+        r"decision", r"gumroad", r"spawn", r"airtable", r"workflowy",
+    ]
+    for pattern in descriptive_patterns:
+        if re.search(pattern, slug, re.IGNORECASE):
+            log(f"[SlugValidation] Rejected '{slug}': Descriptive phrase pattern '{pattern}'")
+            return False
+    
+    # Rule 7: Reject common service/brand names (common false positives)
+    brand_names = {
+        "google", "gmail", "notion", "docker", "github", "slack", "jira",
+        "discord", "telegram", "whatsapp", "airtable", "gumroad", "stripe",
+        "paypal", "amazon", "aws", "azure", "gcp", "heroku", "vercel",
+        "netlify", "cloudflare", "datadog", "splunk", "elasticsearch",
+        "mongodb", "postgres", "mysql", "redis", "kafka", "rabbitmq",
+        "clawhub", "skillhub", "voltagent", "openclaw", "skills.sh",
+        "github", "gitlab", "bitbucket", "jira", "confluence", "trello",
+        "asana", "monday", "notion", "obsidian", "evernote", "onenote",
+        "dropbox", "googledrive", "onedrive", "box", "icloud",
+        "figma", "sketch", "adobe", "canva", "photoshop", "illustrator",
+        "vscode", "intellij", "pycharm", "webstorm", "sublime", "atom",
+        "vim", "emacs", "nano", "cursor", "windsurf", "trae",
+        "macos", "windows", "linux", "ubuntu", "debian", "centos", "redhat",
+        "android", "ios", "iphone", "ipad", "watch", "tv",
+    }
+    if slug.lower() in brand_names:
+        log(f"[SlugValidation] Rejected '{slug}': Brand/service name")
+        return False
+    
+    # Rule 8: Additional structural validation
+    # Reject slugs that are just numbers with common suffixes
+    if re.match(r"^\d+(st|nd|rd|th|px|em|rem|vh|vw|%)$", slug, re.IGNORECASE):
+        log(f"[SlugValidation] Rejected '{slug}': Numeric with suffix pattern")
+        return False
+    
+    # Rule 9: Reject obvious file extensions or MIME types
+    file_extensions = {
+        "jpg", "jpeg", "png", "gif", "svg", "webp", "bmp", "tiff",
+        "mp3", "mp4", "wav", "avi", "mov", "mkv", "flv", "wmv",
+        "pdf", "doc", "docx", "xls", "xlsx", "ppt", "pptx",
+        "txt", "csv", "json", "xml", "yaml", "yml", "toml", "ini",
+        "html", "htm", "css", "js", "jsx", "ts", "tsx", "php", "py", "rb",
+        "go", "rs", "java", "kt", "swift", "scala", "clj", "erl",
+        "zip", "tar", "gz", "bz2", "7z", "rar", "xz",
+        "sql", "db", "sqlite", "mdb", "accdb",
+    }
+    if slug.lower() in file_extensions or re.match(r"^[a-z]+\d+$", slug, re.IGNORECASE):
+        if slug.lower() in file_extensions:
+            log(f"[SlugValidation] Rejected '{slug}': File extension pattern")
+            return False
+    
+    # All validation passed - slug looks valid
+    return True
 
 def _is_valid_slug(slug: str) -> bool:
     """Proactive validation: reject obviously invalid slugs before they get processed.

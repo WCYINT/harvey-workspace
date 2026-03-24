@@ -426,6 +426,72 @@
       "zip_url": "https://lightmake.site/api/v1/download?slug=ai-video-cinematography",
       "source": "skillhub",
       "version": "1.0.0"
+    },
+    "agent-execution-market": {
+      "name": "agent execution market",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=agent-execution-market",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "agent-self-reflection-1-0-0": {
+      "name": "Agent Self Reflection 1.0.0",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=agent-self-reflection-1-0-0",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "agent-task-logger": {
+      "name": "Agent Task Logger",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=agent-task-logger",
+      "source": "skillhub",
+      "version": "1.3.0"
+    },
+    "ai-agent-configurator": {
+      "name": "Ai Agent Configurator",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=ai-agent-configurator",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "agent-context-memory": {
+      "name": "上下文管理",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=agent-context-memory",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "agent-ping": {
+      "name": "Agent Ping",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=agent-ping",
+      "source": "skillhub",
+      "version": "1.1.0"
+    },
+    "ai-auto-dev": {
+      "name": "AI Auto Dev",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=ai-auto-dev",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "agent-memory-probe-1773358981-1": {
+      "name": "Agent Memory Pro",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=agent-memory-probe-1773358981-1",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "ai-tools-waai": {
+      "name": "Ai Tools",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=ai-tools-waai",
+      "source": "skillhub",
+      "version": "1.3.0"
+    },
+    "agent-browser-qw": {
+      "name": "Agent Browser Qw",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=agent-browser-qw",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "agent-skills-context": {
+      "name": "Agent Skills Context",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=agent-skills-context",
+      "source": "skillhub",
+      "version": "1.0.0"
     }
   }
 }

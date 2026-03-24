@@ -2,8 +2,68 @@
   "date": "2026-03-24",
   "skills": [
     {
-      "slug": "ai-video-cinematography",
-      "description": "ai视频人物真实性方法论",
+      "slug": "agent-network-scanner",
+      "description": "Agent Network Scanner",
+      "source": "skillhub"
+    },
+    {
+      "slug": "agent-ping",
+      "description": "Agent Ping",
+      "source": "skillhub"
+    },
+    {
+      "slug": "agent-task-logger",
+      "description": "Agent Task Logger",
+      "source": "skillhub"
+    },
+    {
+      "slug": "agent-resilience",
+      "description": "agent resilience",
+      "source": "skillhub"
+    },
+    {
+      "slug": "agent-memory-probe-1773358981-1",
+      "description": "Agent Memory Pro",
+      "source": "skillhub"
+    },
+    {
+      "slug": "agents-efficient-workflow",
+      "description": "agents efficient workflow",
+      "source": "skillhub"
+    },
+    {
+      "slug": "agent-self-reflection-1-0-0",
+      "description": "Agent Self Reflection 1.0.0",
+      "source": "skillhub"
+    },
+    {
+      "slug": "agent-execution-market",
+      "description": "agent execution market",
+      "source": "skillhub"
+    },
+    {
+      "slug": "agent-context-memory",
+      "description": "上下文管理",
+      "source": "skillhub"
+    },
+    {
+      "slug": "agent-browser-qw",
+      "description": "Agent Browser Qw",
+      "source": "skillhub"
+    },
+    {
+      "slug": "ai-auto-dev",
+      "description": "AI Auto Dev",
+      "source": "skillhub"
+    },
+    {
+      "slug": "ai-tools-waai",
+      "description": "Ai Tools",
+      "source": "skillhub"
+    },
+    {
+      "slug": "ai-agent-configurator",
+      "description": "Ai Agent Configurator",
       "source": "skillhub"
     }
   ]

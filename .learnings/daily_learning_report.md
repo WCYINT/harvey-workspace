@@ -2,14 +2,14 @@
 <html><head><meta charset="utf-8"></head>
 <body style="font-family:Arial,sans-serif;max-width:900px;margin:0 auto;padding:20px">
     <h1>📊 Harvey 每日汇报</h1>
-    <p><b>时间：</b>2026-03-24 06:18 (北京时间)</p>
+    <p><b>时间：</b>2026-03-24 08:18 (北京时间)</p>
     <hr>
     
         <h2>📦 技能更新</h2>
-        <p>今日新安装：<b>6</b> 个 | 技能库总数：<b>1379</b></p>
+        <p>今日新安装：<b>13</b> 个 | 技能库总数：<b>1394</b></p>
         <table border="1" cellpadding="6" cellspacing="0" style="border-collapse:collapse;width:100%">
             <tr style="background:#f0f0f0"><th>技能</th><th>来源</th><th>描述</th></tr>
-            <tr><td><code>uapi-get-ai-translate-languages</code></td><td>clawhub</td><td>UAPI AI翻译配置 接口  (3.283)</td></tr><tr><td><code>taizi-coding</code></td><td>clawhub</td><td>Coding  (3.230)</td></tr><tr><td><code>icd-coding</code></td><td>clawhub</td><td>ICD-Coding  (3.188)</td></tr><tr><td><code>coding-custom</code></td><td>clawhub</td><td>Coding Custom  (3.158)</td></tr><tr><td><code>csharp-developer</code></td><td>clawhub</td><td>Csharp Developer  (3.328)</td></tr><tr><td><code>wpf-developer</code></td><td>clawhub</td><td>wpf-developer  (3.270)</td></tr>
+            <tr><td><code>agent-network-scanner</code></td><td>skillhub</td><td>Agent Network Scanner</td></tr><tr><td><code>agent-ping</code></td><td>skillhub</td><td>Agent Ping</td></tr><tr><td><code>agent-task-logger</code></td><td>skillhub</td><td>Agent Task Logger</td></tr><tr><td><code>agent-resilience</code></td><td>skillhub</td><td>agent resilience</td></tr><tr><td><code>agent-memory-probe-1773358981-1</code></td><td>skillhub</td><td>Agent Memory Pro</td></tr><tr><td><code>agents-efficient-workflow</code></td><td>skillhub</td><td>agents efficient workflow</td></tr><tr><td><code>agent-self-reflection-1-0-0</code></td><td>skillhub</td><td>Agent Self Reflection 1.0.0</td></tr><tr><td><code>agent-execution-market</code></td><td>skillhub</td><td>agent execution market</td></tr><tr><td><code>agent-context-memory</code></td><td>skillhub</td><td>上下文管理</td></tr><tr><td><code>agent-browser-qw</code></td><td>skillhub</td><td>Agent Browser Qw</td></tr><tr><td><code>ai-auto-dev</code></td><td>skillhub</td><td>AI Auto Dev</td></tr><tr><td><code>ai-tools-waai</code></td><td>skillhub</td><td>Ai Tools</td></tr><tr><td><code>ai-agent-configurator</code></td><td>skillhub</td><td>Ai Agent Configurator</td></tr>
         </table>
     <hr>
     
@@ -19,7 +19,7 @@
     <h3>最新文章</h3>
     <ul><li>暂无</li></ul>
     <h3>GitHub 活动</h3>
-    <ul><li style='font-family:monospace;font-size:13px'>2026-03-23 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-23 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-23 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-23 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-23 IssueCommentEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-23 DeleteEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-23 IssuesEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-23 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-23 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-23 PushEvent: openclaw/openclaw</li></ul>
+    <ul><li style='font-family:monospace;font-size:13px'>2026-03-24 PushEvent: steipete/CodexBar</li><li style='font-family:monospace;font-size:13px'>2026-03-24 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-23 IssuesEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-23 IssueCommentEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-23 IssueCommentEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-23 IssuesEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-23 IssueCommentEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-23 IssuesEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-23 IssuesEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-23 IssueCommentEvent: openclaw/openclaw</li></ul>
     <h3>💡 关键心得</h3>
     <p>Peter 是 iOS 开发出身（PSPDFKit 作者），后转型 AI 工具专家并加入 OpenAI 做 Agent 开发。
        他的职业路径：从 Swift 专家 → AI Agent 开发者 → 行业影响者。
@@ -33,10 +33,15 @@
     <h3>最新动态</h3>
     <ul><li>暂无</li></ul>
     <h3>最新 Release</h3>
-    <ul><li><b>v2026.3.22</b>: openclaw 2026.3.22 — <a href='https://github.com/openclaw/openclaw/releases/tag/v2026.3.22'>查看</a><br><pre style='font-size:12px'>
+    <ul><li><b>v2026.3.23</b>: 2026.3.23 — <a href='https://github.com/openclaw/openclaw/releases/tag/v2026.3.23'>查看</a><br><pre style='font-size:12px'>## 2026.3.23
+
 ### Breaking
 
-- Plugins/install: bare `openclaw plugins install <package>` now prefers ClawHub before npm for npm-safe names, and only falls back to npm when ClawHub does not have that package or ver</pre></li></ul>
+### Changes
+
+### Fixes
+
+- Browser/Chrome MCP: wait for existing-session browser tabs to become usable after attach instead of treating the initial Chrome MCP handshake as r</pre></li></ul>
     <hr>
     
     <h2>📋 下一步计划</h2>
