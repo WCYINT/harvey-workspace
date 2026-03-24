@@ -2,14 +2,14 @@
 <html><head><meta charset="utf-8"></head>
 <body style="font-family:Arial,sans-serif;max-width:900px;margin:0 auto;padding:20px">
     <h1>📊 Harvey 每日汇报</h1>
-    <p><b>时间：</b>2026-03-24 13:19 (北京时间)</p>
+    <p><b>时间：</b>2026-03-24 15:19 (北京时间)</p>
     <hr>
     
         <h2>📦 技能更新</h2>
-        <p>今日新安装：<b>1</b> 个 | 技能库总数：<b>1408</b></p>
+        <p>今日新安装：<b>5</b> 个 | 技能库总数：<b>1421</b></p>
         <table border="1" cellpadding="6" cellspacing="0" style="border-collapse:collapse;width:100%">
             <tr style="background:#f0f0f0"><th>技能</th><th>来源</th><th>描述</th></tr>
-            <tr><td><code>daily-ai-news-skill</code></td><td>skillhub</td><td>Daily Ai News</td></tr>
+            <tr><td><code>workflows</code></td><td>skillhub</td><td>Workflows</td></tr><tr><td><code>Gina</code></td><td>skillhub</td><td>沙盒工作流的编写、运行、评估与改进手册，提供安全默认值和可重复操作。</td></tr><tr><td><code>security-best-practices</code></td><td>skillhub</td><td>Security Best Practices</td></tr><tr><td><code>security-hardening</code></td><td>skillhub</td><td>Security Hardening</td></tr><tr><td><code>security-audit-hand</code></td><td>skillhub</td><td>Security Audit Hand</td></tr>
         </table>
     <hr>
     
@@ -19,7 +19,7 @@
     <h3>最新文章</h3>
     <ul><li>暂无</li></ul>
     <h3>GitHub 活动</h3>
-    <ul><li style='font-family:monospace;font-size:13px'>2026-03-24 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-24 IssueCommentEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-24 IssuesEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-24 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-24 CreateEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-24 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-24 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-24 IssueCommentEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-24 IssuesEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-24 PushEvent: openclaw/openclaw</li></ul>
+    <ul><li style='font-family:monospace;font-size:13px'>2026-03-24 PushEvent: openclaw/clawhub</li><li style='font-family:monospace;font-size:13px'>2026-03-24 IssueCommentEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-24 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-24 IssuesEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-24 PushEvent: joelnishanth/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-24 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-24 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-24 PushEvent: openclaw/clawhub</li><li style='font-family:monospace;font-size:13px'>2026-03-24 PushEvent: openclaw/clawhub</li><li style='font-family:monospace;font-size:13px'>2026-03-24 PushEvent: openclaw/openclaw</li></ul>
     <h3>💡 关键心得</h3>
     <p>Peter 是 iOS 开发出身（PSPDFKit 作者），后转型 AI 工具专家并加入 OpenAI 做 Agent 开发。
        他的职业路径：从 Swift 专家 → AI Agent 开发者 → 行业影响者。

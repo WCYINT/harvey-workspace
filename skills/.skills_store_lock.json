@@ -570,6 +570,114 @@
       "zip_url": "https://lightmake.site/api/v1/download?slug=daily-ai-news-skill",
       "source": "skillhub",
       "version": "0.1.0"
+    },
+    "Exa": {
+      "name": "Exa",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=Exa",
+      "source": "skillhub",
+      "version": ""
+    },
+    "data-quality-check": {
+      "name": "Data Quality Check",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=data-quality-check",
+      "source": "skillhub",
+      "version": "2.1.0"
+    },
+    "exa-tool": {
+      "name": "Exa Tool",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=exa-tool",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "database-design": {
+      "name": "Database Design",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=database-design",
+      "source": "skillhub",
+      "version": "2.3.5"
+    },
+    "security-hardening": {
+      "name": "Security Hardening",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=security-hardening",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "workflows": {
+      "name": "Workflows",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=workflows",
+      "source": "skillhub",
+      "version": "1.0.2"
+    },
+    "Gina": {
+      "name": "Gina",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=Gina",
+      "source": "skillhub",
+      "version": ""
+    },
+    "security-audit-hand": {
+      "name": "Security Audit Hand",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=security-audit-hand",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "security-best-practices": {
+      "name": "Security Best Practices",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=security-best-practices",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "tools": {
+      "name": "Tools",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=tools",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "ai-side-hustle-agent": {
+      "name": "AI副业顾问",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=ai-side-hustle-agent",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "content-gap-analysis": {
+      "name": "Content Gap Analysis",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=content-gap-analysis",
+      "source": "skillhub",
+      "version": "3.0.0"
+    },
+    "content-monetization-assistant": {
+      "name": "AI内容变现助手",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=content-monetization-assistant",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "security-awareness-skill": {
+      "name": "Agent Security Patterns",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=security-awareness-skill",
+      "source": "skillhub",
+      "version": "0.1.0"
+    },
+    "security-guard": {
+      "name": "Security Guard",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=security-guard",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "security-news": {
+      "name": "Security News",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=security-news",
+      "source": "skillhub",
+      "version": "2.0.0"
+    },
+    "security-modeio": {
+      "name": "Security",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=security-modeio",
+      "source": "skillhub",
+      "version": "0.1.1"
+    },
+    "security-group-auditor": {
+      "name": "Security Group Auditor",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=security-group-auditor",
+      "source": "skillhub",
+      "version": "1.0.0"
     }
   }
 }

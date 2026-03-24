@@ -13,7 +13,7 @@ TZ_CST = timezone(timedelta(hours=8))
 SKILLS_DB = Path("/Users/fhjtech/.openclaw/workspace/.learnings/skills_usage.json")
 ARCHIVE_DIR = Path("/Users/fhjtech/.openclaw/logs/report_archives")
 
-def load_skills_data():
+def load_skills_data() -> None:
     """加载技能数据库"""
     try:
         with open(SKILLS_DB, 'r') as f:
@@ -21,7 +21,7 @@ def load_skills_data():
     except Exception:
         return {"skills": {}, "total_uses": 0}
 
-def get_recently_installed(days=7):
+def get_recently_installed(days=7) -> None:
     """获取最近安装的技能"""
     data = load_skills_data()
     skills = data.get("skills", {})
@@ -48,7 +48,7 @@ def get_recently_installed(days=7):
     
     return sorted(recent, key=lambda x: x["days_ago"])
 
-def generate_summary():
+def generate_summary() -> None:
     """生成本地归档摘要报告"""
     now = datetime.now(TZ_CST)
     recent_skills = get_recently_installed(days=30)
@@ -126,7 +126,7 @@ def generate_summary():
     
     return summary
 
-def save_summary():
+def save_summary() -> None:
     """保存摘要到本地文件"""
     summary = generate_summary()
     now = datetime.now(TZ_CST)
@@ -149,3 +149,5 @@ def save_summary():
 
 if __name__ == "__main__":
     save_summary()
+
+__all__ = ['load_skills_data', 'get_recently_installed', 'generate_summary', 'save_summary']

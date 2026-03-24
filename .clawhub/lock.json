@@ -888,6 +888,78 @@
     "projects": {
       "version": "1.0.0",
       "installedAt": 1774331195381
+    },
+    "Exa": {
+      "version": "",
+      "installedAt": 1774331798566
+    },
+    "data-quality-check": {
+      "version": "2.1.0",
+      "installedAt": 1774331798596
+    },
+    "exa-tool": {
+      "version": "1.0.0",
+      "installedAt": 1774331798607
+    },
+    "database-design": {
+      "version": "2.3.5",
+      "installedAt": 1774332071579
+    },
+    "security-hardening": {
+      "version": "1.0.0",
+      "installedAt": 1774335652886
+    },
+    "workflows": {
+      "version": "1.0.2",
+      "installedAt": 1774335652975
+    },
+    "Gina": {
+      "version": "",
+      "installedAt": 1774335652981
+    },
+    "security-audit-hand": {
+      "version": "1.0.0",
+      "installedAt": 1774335653026
+    },
+    "security-best-practices": {
+      "version": "1.0.0",
+      "installedAt": 1774335653137
+    },
+    "tools": {
+      "version": "1.0.0",
+      "installedAt": 1774337204894
+    },
+    "ai-side-hustle-agent": {
+      "version": "1.0.0",
+      "installedAt": 1774337205090
+    },
+    "content-gap-analysis": {
+      "version": "3.0.0",
+      "installedAt": 1774337205130
+    },
+    "content-monetization-assistant": {
+      "version": "1.0.0",
+      "installedAt": 1774337205132
+    },
+    "security-awareness-skill": {
+      "version": "0.1.0",
+      "installedAt": 1774337205145
+    },
+    "security-guard": {
+      "version": "1.0.0",
+      "installedAt": 1774338701269
+    },
+    "security-news": {
+      "version": "2.0.0",
+      "installedAt": 1774338701283
+    },
+    "security-modeio": {
+      "version": "0.1.1",
+      "installedAt": 1774338701285
+    },
+    "security-group-auditor": {
+      "version": "1.0.0",
+      "installedAt": 1774338701292
     }
   }
 }

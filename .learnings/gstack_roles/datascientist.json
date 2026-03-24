@@ -1,15 +1,15 @@
 {
-  "timestamp": "2026-03-24T13:46:17.222411+08:00",
+  "timestamp": "2026-03-24T14:01:45.468160+08:00",
   "role": "DataScientist",
   "data": {
     "role": "DataScientist",
     "skills_needed": [
-      "statistical-process-control",
+      "statistical-analysis",
       "regression-modeling",
-      "design-of-experiments",
-      "six-sigma-dmaic",
-      "predictive-analytics"
+      "six-sigma",
+      "data-visualization",
+      "experiment-design"
     ],
-    "reasoning": "通过统计过程控制、回归建模和实验设计识别质量根本原因，结合六西格玛和预测分析实现持续改进。"
+    "reasoning": "These skills provide the statistical rigor, modeling capabilities, and process‑improvement tools essential for diagnosing and enhancing quality in the plug‑in hybrid Y model."
   }
 }

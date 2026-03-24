@@ -2,8 +2,18 @@
   "date": "2026-03-24",
   "skills": [
     {
-      "slug": "daily-ai-news-skill",
-      "description": "Daily Ai News",
+      "slug": "security-group-auditor",
+      "description": "Security Group Auditor",
+      "source": "skillhub"
+    },
+    {
+      "slug": "security-news",
+      "description": "Security News",
+      "source": "skillhub"
+    },
+    {
+      "slug": "security-guard",
+      "description": "Security Guard",
       "source": "skillhub"
     }
   ]
