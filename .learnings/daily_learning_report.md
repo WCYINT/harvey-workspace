@@ -2,14 +2,14 @@
 <html><head><meta charset="utf-8"></head>
 <body style="font-family:Arial,sans-serif;max-width:900px;margin:0 auto;padding:20px">
     <h1>📊 Harvey 每日汇报</h1>
-    <p><b>时间：</b>2026-03-24 11:19 (北京时间)</p>
+    <p><b>时间：</b>2026-03-24 13:19 (北京时间)</p>
     <hr>
     
         <h2>📦 技能更新</h2>
-        <p>今日新安装：<b>1</b> 个 | 技能库总数：<b>1405</b></p>
+        <p>今日新安装：<b>1</b> 个 | 技能库总数：<b>1408</b></p>
         <table border="1" cellpadding="6" cellspacing="0" style="border-collapse:collapse;width:100%">
             <tr style="background:#f0f0f0"><th>技能</th><th>来源</th><th>描述</th></tr>
-            <tr><td><code>gizmolab-tools</code></td><td>skillhub</td><td>GizmoLab Tools</td></tr>
+            <tr><td><code>daily-ai-news-skill</code></td><td>skillhub</td><td>Daily Ai News</td></tr>
         </table>
     <hr>
     
@@ -19,7 +19,7 @@
     <h3>最新文章</h3>
     <ul><li>暂无</li></ul>
     <h3>GitHub 活动</h3>
-    <ul><li style='font-family:monospace;font-size:13px'>2026-03-24 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-24 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-24 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-24 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-24 PushEvent: openclaw/clawhub</li><li style='font-family:monospace;font-size:13px'>2026-03-24 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-24 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-24 IssueCommentEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-24 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-24 PushEvent: openclaw/openclaw</li></ul>
+    <ul><li style='font-family:monospace;font-size:13px'>2026-03-24 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-24 IssueCommentEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-24 IssuesEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-24 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-24 CreateEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-24 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-24 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-24 IssueCommentEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-24 IssuesEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-24 PushEvent: openclaw/openclaw</li></ul>
     <h3>💡 关键心得</h3>
     <p>Peter 是 iOS 开发出身（PSPDFKit 作者），后转型 AI 工具专家并加入 OpenAI 做 Agent 开发。
        他的职业路径：从 Swift 专家 → AI Agent 开发者 → 行业影响者。
@@ -33,9 +33,11 @@
     <h3>最新动态</h3>
     <ul><li>暂无</li></ul>
     <h3>最新 Release</h3>
-    <ul><li><b>v2026.3.23</b>: 2026.3.23 — <a href='https://github.com/openclaw/openclaw/releases/tag/v2026.3.23'>查看</a><br><pre style='font-size:12px'>### Fixes
+    <ul><li><b>v2026.3.23</b>: 2026.3.23 — <a href='https://github.com/openclaw/openclaw/releases/tag/v2026.3.23'>查看</a><br><pre style='font-size:12px'>### Breaking
 
-- Browser/Chrome MCP: wait for existing-session browser tabs to become usable after attach instead of treating the initial Chrome MCP handshake as ready, which reduces user-profile timeou</pre></li></ul>
+### Changes
+
+- ModelStudio/Qwen: add standard (pay-as-you-go) DashScope endpoints for China and global Qwen API keys alongside the existing Coding Plan endpoints, and relabel the provide</pre></li></ul>
     <hr>
     
     <h2>📋 下一步计划</h2>

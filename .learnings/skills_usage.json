@@ -14284,6 +14284,18 @@
       "installed_date": "2026-03-24",
       "version": "",
       "source": "skillhub"
+    },
+    "daily-ai-news-skill": {
+      "count": 0,
+      "first_used": null,
+      "contexts": [],
+      "last_used": null,
+      "description": "Daily Ai News",
+      "category": "skillhub",
+      "status": "auto-installed",
+      "installed_date": "2026-03-24",
+      "version": "",
+      "source": "skillhub"
     }
   },
   "categories": {

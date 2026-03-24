@@ -13,7 +13,7 @@ H6: 更新 benchmark.md
 H7: 全面测试 + mypy
 """
 
-import subprocess, json, sys, argparse, os
+import subprocess, json, sys, argparse, os, os
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
@@ -78,6 +78,7 @@ def _load_progress() -> dict:
 
 def _save_progress(p: dict) -> None:
     """Save progress with atomic write to prevent corruption."""
+    import os  # Import os here to ensure it's available in this scope
     try:
         # Validate before saving
         if not isinstance(p, dict):
@@ -85,7 +86,7 @@ def _save_progress(p: dict) -> None:
         required_keys = {"day", "hour", "skills", "completed_tasks", "errors"}
         if not required_keys.issubset(p.keys()):
             raise ValueError(f"Missing required keys: {required_keys - set(p.keys())}")
-        
+
         # Atomic write: write to temp file, then rename
         temp_file = PROGRESS_FILE.with_suffix('.tmp')
         with open(temp_file, "w") as f:

@@ -564,6 +564,12 @@
       "zip_url": "https://lightmake.site/api/v1/download?slug=openserv-multi-agent-workflows",
       "source": "skillhub",
       "version": "1.0.2"
+    },
+    "daily-ai-news-skill": {
+      "name": "Daily Ai News",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=daily-ai-news-skill",
+      "source": "skillhub",
+      "version": "0.1.0"
     }
   }
 }

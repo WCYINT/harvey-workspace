@@ -872,6 +872,22 @@
     "openserv-multi-agent-workflows": {
       "version": "1.0.2",
       "installedAt": 1774324807575
+    },
+    "daily-ai-news-skill": {
+      "version": "0.1.0",
+      "installedAt": 1774326393784
+    },
+    "sixsigma": {
+      "version": "1.0.0",
+      "installedAt": 1774331192836
+    },
+    "plansuite": {
+      "version": "0.1.3",
+      "installedAt": 1774331192910
+    },
+    "projects": {
+      "version": "1.0.0",
+      "installedAt": 1774331195381
     }
   }
 }

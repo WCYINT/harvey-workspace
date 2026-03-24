@@ -1,15 +1,15 @@
 {
-  "timestamp": "2026-03-24T12:04:04.420562+08:00",
+  "timestamp": "2026-03-24T13:46:17.222411+08:00",
   "role": "DataScientist",
   "data": {
     "role": "DataScientist",
     "skills_needed": [
-      "stat_analysis",
-      "regression",
-      "doe",
-      "six_sigma",
-      "ml_modeling"
+      "statistical-process-control",
+      "regression-modeling",
+      "design-of-experiments",
+      "six-sigma-dmaic",
+      "predictive-analytics"
     ],
-    "reasoning": "Effective quality improvement of a plug‑in hybrid vehicle requires robust statistical analysis and predictive modeling to identify defect patterns and optimize processes."
+    "reasoning": "通过统计过程控制、回归建模和实验设计识别质量根本原因，结合六西格玛和预测分析实现持续改进。"
   }
 }

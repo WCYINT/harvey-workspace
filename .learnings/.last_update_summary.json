@@ -2,13 +2,8 @@
   "date": "2026-03-24",
   "skills": [
     {
-      "slug": "openserv-multi-agent-workflows",
-      "description": "OpenServ Multi Agent Workflows",
-      "source": "skillhub"
-    },
-    {
-      "slug": "content-goldmine",
-      "description": "Content Goldmine",
+      "slug": "daily-ai-news-skill",
+      "description": "Daily Ai News",
       "source": "skillhub"
     }
   ]

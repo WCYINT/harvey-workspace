@@ -28,6 +28,40 @@ When a learning is promoted to a skill, add these fields:
 
 ---
 
+## [LRN-20260324-OSIMPORT] correction
+
+**Logged**: 2026-03-24T13:05:00+08:00
+**Priority**: high
+**Status**: resolved
+**Area**: backend
+
+### Summary
+Fixed `NameError: name 'os' is not defined` in evolution_engine.py by adding `os` to top-level imports.
+
+### Details
+The `_save_progress()` function in evolution_engine.py used `os.fsync(f.fileno())` at line 95, but `os` was only imported inside a try block (line 81). If an exception occurred before that import, `os` would not be defined, causing the save to fail with: `Failed to save progress: name 'os' is not defined`.
+
+### Fix
+Changed line 1 from:
+```python
+import subprocess, json, sys, argparse
+```
+to:
+```python
+import subprocess, json, sys, argparse, os
+```
+
+This ensures `os` is always available at module level, regardless of execution path.
+
+### Prevention
+**Decision principle (module-import-consistency)**: When a standard library module is used anywhere in a file, it must be imported at the top level. Never rely on imports inside try blocks or functions for modules used across multiple code paths. This prevents NameError in exception handling and edge cases.
+
+### Metadata
+- Source: proactive_review, cron:ai-hourly-proactive
+- See Also: evolution_engine.py, LRN-20260323-EVO
+
+---
+
 ## [LRN-20260324-JITI] correction
 
 **Logged**: 2026-03-24T04:53:00+08:00
