@@ -605,7 +605,7 @@ def _test_skill(slug: str) -> tuple[str, str]:
 def send_install_report(integrated, fail_list, unsafe, all_skills):
     EMAIL_FROM, EMAIL_TO = "wcyint@163.com", "wcyint@163.com"
     SMTP_HOST, SMTP_PORT = "smtp.163.com", 465
-    EMAIL_PASSWORD = "NDdE6mZyTMifExXL"
+    EMAIL_PASSWORD = "PWvrfWXa6PXWiQLn"
 
     now = datetime.now(TZ_CST)
     subject = f"📦 技能自动更新 | {now.strftime('%m-%d %H:%M')} | +{len(integrated)}个 ⭐用途建议已附"

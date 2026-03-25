@@ -30,7 +30,7 @@ SUMMARY_FILE = Path("/Users/fhjtech/.openclaw/workspace/.learnings/daily_learnin
 # 邮件
 EMAIL_FROM     = "wcyint@163.com"
 EMAIL_TO       = "wcyint@163.com"
-EMAIL_PASSWORD = "NDdE6mZyTMifExXL"
+EMAIL_PASSWORD = "PWvrfWXa6PXWiQLn"
 SMTP_HOST     = "smtp.163.com"
 SMTP_PORT     = 465
 

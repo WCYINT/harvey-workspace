@@ -530,3 +530,34 @@ Created `.credentials.json` in `.scripts/` directory. Updated `ml_skills_upgrade
 ### Metadata
 - Source: cron:ai-twice-hourly-deep
 - Files: .scripts/ml_skills_upgrader.py, .scripts/.credentials.json
+
+---
+
+## [LRN-20260325-TIMEOUT] correction
+
+**Logged**: 2026-03-25T14:32:00+08:00
+**Priority**: critical
+**Status**: resolved
+**Area**: infra
+
+### Summary
+`ai-hourly-proactive` (62 errors) and `ai-twice-hourly-deep` (64 errors) were burning ~126 wasted API calls/day due to prompts too ambitious for their 300s/240s timeout windows.
+
+### Details
+Both jobs asked agents to read 5+ files (ERRORS.md, LEARNINGS.md, logs, skill_updates.log, evolution_progress.json) AND make improvements within the timeout. When MiniMax network issues caused retry delays, each run exceeded its timeout and counted as an error.
+
+**Jobs affected:**
+- `ai-hourly-proactive`: timeoutSeconds=300, consecutiveErrors=62 (300s × 62 = 5+ hours wasted)
+- `ai-twice-hourly-deep`: timeoutSeconds=240, consecutiveErrors=64
+
+### Fix
+1. **Simplified prompts**: Reduced to read only 2 key files (ERRORS.md or LEARNINGS.md) + 1 log file, then do exactly 1 fix and exit
+2. **Reduced timeout**: Lowered from 300/240s to 180s — the simplified scope completes in ~60-90s
+3. **Scope discipline**: "只做1件事" enforced in prompt text
+
+### Prevention
+**Decision principle (timeout-vs-scope-calibration)**: Any isolated-session agentTurn cron job with a timeout MUST have its prompt scope pre-calibrated to complete in ≤60% of the timeout window. If a job consistently times out, the prompt is too ambitious — simplify it rather than increasing timeout. Wider scope should be achieved through more frequent shorter runs, not longer timeouts.
+
+### Metadata
+- Source: cron:ai-hourly-proactive (this run)
+- Fix applied: Updated 2 cron jobs via cron:update API

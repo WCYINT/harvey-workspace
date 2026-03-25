@@ -33,7 +33,7 @@ def send_alert(subject: str, body: str):
         msg["To"] = "wcyint@163.com"
         msg.attach(MIMEText(body, "html", "utf-8"))
         with smtplib.SMTP_SSL("smtp.163.com", 465) as s:
-            s.login("wcyint@163.com", "NDdE6mZyTMifExXL")
+            s.login("wcyint@163.com", "PWvrfWXa6PXWiQLn")
             s.sendmail("wcyint@163.com", ["wcyint@163.com"], msg.as_string())
         return True
     except:
