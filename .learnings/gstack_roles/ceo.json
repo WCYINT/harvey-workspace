@@ -1,14 +1,14 @@
 {
-  "timestamp": "2026-03-24T22:29:13.357134+08:00",
+  "timestamp": "2026-03-25T21:39:52.983058+08:00",
   "role": "CEO",
   "data": {
     "role": "CEO",
     "skills_needed": [
       "lean-six-sigma",
+      "project-mgmt",
       "data-analytics",
-      "project-management",
       "strategic-planning"
     ],
-    "reasoning": "通过精益六西格玛提升质量、数据分析洞察根因、项目管理确保落地、战略规划提升商业价值，使论文兼具理论深度和实践影响力。"
+    "reasoning": "通过精益六西格玛提升质量，项目管理与数据分析确保改进落地，战略规划实现商业价值最大化。"
   }
 }

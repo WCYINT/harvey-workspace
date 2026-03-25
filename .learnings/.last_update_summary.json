@@ -2,38 +2,13 @@
   "date": "2026-03-25",
   "skills": [
     {
-      "slug": "agenthc-market-intelligence",
-      "description": "Stock Market Intelligence",
+      "slug": "ai-meeting-room",
+      "description": "AI Meeting Room (에이전트 룸)",
       "source": "skillhub"
     },
     {
-      "slug": "agent-browser-0-2-0",
-      "description": "Agent Browser 0.2.0",
-      "source": "skillhub"
-    },
-    {
-      "slug": "ai-twitter-daily",
-      "description": "AI Twitter Daily",
-      "source": "skillhub"
-    },
-    {
-      "slug": "ai-ethics",
-      "description": "AI Ethics",
-      "source": "skillhub"
-    },
-    {
-      "slug": "aicone",
-      "description": "aiclone",
-      "source": "skillhub"
-    },
-    {
-      "slug": "airdrop-alert",
-      "description": "Airdrop Alert",
-      "source": "skillhub"
-    },
-    {
-      "slug": "aigohotel-mcp",
-      "description": "aigohotel-mcp",
+      "slug": "security-operator",
+      "description": "Security Operator",
       "source": "skillhub"
     }
   ]

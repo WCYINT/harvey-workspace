@@ -69,16 +69,22 @@ def _load_progress() -> dict:
         }
         return validated
     except (json.JSONDecodeError, ValueError, TypeError) as e:
-        _log(f"[PROGRESS-ERROR] Failed to load/validate progress: {e}. Starting fresh.")
+        # Wrap _log() in its own try to ensure we NEVER crash on progress load
+        try:
+            _log(f"[PROGRESS-ERROR] Failed to load/validate progress: {e}. Starting fresh.")
+        except Exception:
+            pass
         return {"day": 1, "hour": 0, "skills": 0, "completed_tasks": [], "errors": []}
     except Exception as e:
-        _log(f"[PROGRESS-ERROR] Unexpected error loading progress: {e}")
+        try:
+            _log(f"[PROGRESS-ERROR] Unexpected error loading progress: {e}")
+        except Exception:
+            pass
         return {"day": 1, "hour": 0, "skills": 0, "completed_tasks": [], "errors": []}
 
 
 def _save_progress(p: dict) -> None:
     """Save progress with atomic write to prevent corruption."""
-    import os  # Import os here to ensure it's available in this scope
     try:
         # Validate before saving
         if not isinstance(p, dict):
@@ -293,7 +299,8 @@ def _record_learnings() -> str:
         existing_content = learnings_file.read_text(encoding="utf-8", errors="ignore")
 
     # 精确匹配今天是否已有记录（检查独立标题行）
-    today_header = f"## {today}"
+    # 注意：条目格式为 "## {today} Harvey 进化记录"
+    today_header = f"## {today} Harvey 进化记录"
     has_entry_today = any(
         line.strip() == today_header 
         for line in existing_content.split('\n')
@@ -376,12 +383,13 @@ def main() -> None:
 
     _log(f"=== Harvey 进化引擎 [{datetime.now(TZ_CST).strftime('%Y-%m-%d %H:%M')}] mode={args.mode} ===")
 
-    # Night mode: 4x speed = run 4 tasks per cycle
-    # Idle mode (>30min no messages): also run at 4x
+    # Night mode: 4x speed = run all remaining tasks (not just 4)
+    # James确认：进化引擎每轮应该跑完所有7个任务，不遗漏H5/H6/H7
     if args.mode == "night":
+        # 4x speed meaning: each cycle runs all tasks, but cycles run 4x more frequently
+        # Don't limit to [:4] — H5(Learnings), H6(Report), H7(TestAll) were being skipped!
         tasks_to_run = HOURLY_TASKS[task_idx:] + HOURLY_TASKS[:task_idx]
-        tasks_to_run = tasks_to_run[:4]  # 4x speed
-        _log(f"Running {len(tasks_to_run)} tasks in night mode (4x)")
+        _log(f"Running {len(tasks_to_run)} tasks in night mode (all 7, 4x frequency)")
     else:
         tasks_to_run = [(task_name, task_fn)]
 

@@ -118,9 +118,61 @@ def restart_gateway() -> bool:
         log(f"✗ Failed to restart gateway: {e}")
         return False
 
-def perform_health_check(check_only: bool = False) -> int:
+def rebuild_plugins() -> bool:
+    """
+    Rebuild plugins that are failing to load.
+    This is used when cache clearing isn't enough.
+    """
+    log("Step 3a: Rebuilding plugins...")
+    
+    try:
+        # Rebuild memory-lancedb-pro
+        lancedb_plugin = Path.home() / ".openclaw/workspace/plugins/memory-lancedb-pro"
+        if lancedb_plugin.exists():
+            log(f"  Rebuilding {lancedb_plugin.name}...")
+            result = subprocess.run(
+                ["npm", "run", "build"],
+                cwd=lancedb_plugin,
+                capture_output=True,
+                text=True,
+                timeout=60
+            )
+            if result.returncode == 0:
+                log(f"  ✓ {lancedb_plugin.name} rebuilt successfully")
+            else:
+                log(f"  ⚠ {lancedb_plugin.name} build had issues (exit {result.returncode})")
+        
+        # Rebuild yuanbao plugin
+        yuanbao_plugin = Path.home() / ".openclaw/extensions/openclaw-plugin-yuanbao"
+        if yuanbao_plugin.exists():
+            log(f"  Rebuilding {yuanbao_plugin.name}...")
+            result = subprocess.run(
+                ["npm", "run", "build"],
+                cwd=yuanbao_plugin,
+                capture_output=True,
+                text=True,
+                timeout=60
+            )
+            if result.returncode == 0:
+                log(f"  ✓ {yuanbao_plugin.name} rebuilt successfully")
+            else:
+                log(f"  ⚠ {yuanbao_plugin.name} build had issues (exit {result.returncode})")
+        
+        log("✓ Plugin rebuild process completed")
+        return True
+        
+    except Exception as e:
+        log(f"✗ Plugin rebuild failed: {e}")
+        return False
+
+
+def perform_health_check(check_only: bool = False, rebuild: bool = False) -> int:
     """
     Main health check and fix logic.
+    
+    Args:
+        check_only: If True, only check don't fix
+        rebuild: If True, rebuild plugins when cache clearing isn't enough
     
     Returns:
         0 = Healthy or fixed successfully
@@ -155,18 +207,24 @@ def perform_health_check(check_only: bool = False) -> int:
     
     # Step 3: Determine if action is needed
     needs_fix = bool(failures) and cache_exists
+    needs_rebuild = bool(failures) and not cache_exists and rebuild
     
-    if not needs_fix:
+    if not needs_fix and not needs_rebuild:
         if not failures:
             log("=" * 60)
             log("✓ HEALTHY: No issues detected")
             log("=" * 60)
             return 0
         else:
-            # Failures but no cache - might be a different issue
-            log("⚠ Plugin failures detected but no jiti cache to clear")
-            log("  This may require manual investigation")
-            return 1 if not check_only else 2
+            # Failures but no cache - might need plugin rebuild
+            if rebuild:
+                log("⚠ Plugin failures detected but no jiti cache to clear")
+                log("  Will attempt plugin rebuild...")
+                # Fall through to rebuild logic below
+            else:
+                log("⚠ Plugin failures detected but no jiti cache to clear")
+                log("  This may require manual investigation or use --rebuild-plugins")
+                return 1 if not check_only else 2
     
     # Action needed
     log("=" * 60)
@@ -178,20 +236,37 @@ def perform_health_check(check_only: bool = False) -> int:
         return 2
     
     # Step 4: Perform fix
-    log("Step 3: Clearing jiti cache...")
-    if not clear_jiti_cache():
-        log("✗ Failed to clear jiti cache - aborting")
-        return 1
-    
-    log("Step 4: Restarting gateway...")
-    if not restart_gateway():
-        log("⚠ Gateway restart may have failed - please check manually")
-        return 1
-    
-    log("=" * 60)
-    log("✓ FIXED: Jiti cache cleared and gateway restarted")
-    log("=" * 60)
-    return 0
+    if needs_rebuild:
+        # Plugin rebuild path
+        if rebuild_plugins():
+            log("Step 3b: Restarting gateway after plugin rebuild...")
+            if restart_gateway():
+                log("=" * 60)
+                log("✓ FIXED: Plugins rebuilt and gateway restarted")
+                log("=" * 60)
+                return 0
+            else:
+                log("⚠ Plugin rebuild succeeded but gateway restart failed")
+                return 1
+        else:
+            log("✗ Plugin rebuild failed")
+            return 1
+    else:
+        # Standard cache clear path
+        log("Step 3: Clearing jiti cache...")
+        if not clear_jiti_cache():
+            log("✗ Failed to clear jiti cache - aborting")
+            return 1
+        
+        log("Step 4: Restarting gateway...")
+        if not restart_gateway():
+            log("⚠ Gateway restart may have failed - please check manually")
+            return 1
+        
+        log("=" * 60)
+        log("✓ FIXED: Jiti cache cleared and gateway restarted")
+        log("=" * 60)
+        return 0
 
 def main() -> None:
     parser = argparse.ArgumentParser(
@@ -220,20 +295,25 @@ Examples:
         default=5,
         help="Check interval in minutes (daemon mode only, default: 5)"
     )
+    parser.add_argument(
+        "--rebuild-plugins",
+        action="store_true",
+        help="Rebuild plugins when cache clearing isn't enough (default: auto-detect)"
+    )
     
     args = parser.parse_args()
     
     if args.daemon:
         import time
-        log(f"Starting daemon mode (interval: {args.interval} minutes)")
+        log(f"Starting daemon mode (interval: {args.interval} minutes, rebuild: {args.rebuild_plugins})")
         while True:
             try:
-                perform_health_check(check_only=False)
+                perform_health_check(check_only=False, rebuild=args.rebuild_plugins)
             except Exception as e:
                 log(f"Error in daemon mode: {e}")
             time.sleep(args.interval * 60)
     else:
-        exit_code = perform_health_check(check_only=args.check_only)
+        exit_code = perform_health_check(check_only=args.check_only, rebuild=args.rebuild_plugins)
         sys.exit(exit_code)
 
 if __name__ == "__main__":

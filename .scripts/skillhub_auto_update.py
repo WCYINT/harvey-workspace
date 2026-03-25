@@ -89,34 +89,33 @@ async def _search_clawhub(keyword: str, semaphore: asyncio.Semaphore) -> list[di
             return []
 
 # ── Step 1c: VoltAgent GitHub ────────────────────
-async def _fetch_voltagent(semaphore: asyncio.Semaphore, max_retries: int = 3) -> list[dict]:
-    """Fetch VoltAgent skills with exponential backoff retry logic"""
+async def _fetch_voltagent(semaphore: asyncio.Semaphore, max_retries: int = 1) -> list[dict]:
+    """Fetch VoltAgent skills. Reduced to 1 retry since this source consistently times out
+    (GitHub raw CDN latency from CN region), wasting ~60s per failed 3-retry run."""
     async with semaphore:
         url = "https://raw.githubusercontent.com/VoltAgent/awesome-openclaw-skills/main/README.md"
         headers = {"User-Agent": "Mozilla/5.0"}
-        
+
         for attempt in range(max_retries):
             try:
                 req = urllib.request.Request(url, headers=headers)
-                # Increased timeout from 15s to 20s for better reliability
-                with urllib.request.urlopen(req, timeout=20) as resp:
+                # 10s timeout sufficient; 20s was causing 60s waste per run (3×20s retries)
+                with urllib.request.urlopen(req, timeout=10) as resp:
                     content = resp.read().decode("utf-8", errors="ignore")
                 log(f"[VoltAgent] Success on attempt {attempt + 1}")
                 return _parse_voltagent_readme(content)
             except Exception as e:
                 error_msg = str(e)
                 is_timeout = "timed out" in error_msg.lower() or "timeout" in error_msg.lower()
-                
+
                 if attempt < max_retries - 1:
-                    # Exponential backoff: 2s, 4s, 8s
                     wait_time = 2 ** (attempt + 1)
                     error_type = "timeout" if is_timeout else "error"
                     log(f"[VoltAgent] {error_type.capitalize()} on attempt {attempt + 1}: {error_msg[:50]}... Retrying in {wait_time}s")
                     await asyncio.sleep(wait_time)
                 else:
-                    log(f"[VoltAgent] Failed after {max_retries} attempts: {error_msg[:80]}")
+                    log(f"[VoltAgent] Failed after {max_retries} attempt(s): {error_msg[:80]}")
                     return []
-        return []
 
 # ── Step 1d: Skills.sh ─────────────────────────
 async def _fetch_skills_sh(semaphore: asyncio.Semaphore) -> list[dict]:
@@ -193,9 +192,9 @@ def _is_valid_slug(slug: str, _learned_rejections: set[str] = None) -> bool:
     if _learned_rejections is None:
         _learned_rejections = _load_rejected_slugs()
     
-    # Rule 1: Known exception cases (truly ambiguous)
+    # Rule 1: Known exception cases (truly ambiguous) — silent reject, no logging
+    # These are static rules; logging every occurrence creates massive log spam (7000+ entries)
     if slug in EXCEPTION_CASES:
-        log(f"[SlugValidation] Rejected '{slug}': Exception case")
         return False
     
     # Rule 2: Previously learned rejections

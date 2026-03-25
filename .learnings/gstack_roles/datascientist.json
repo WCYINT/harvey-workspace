@@ -1,14 +1,16 @@
 {
-  "timestamp": "2026-03-24T22:29:13.361060+08:00",
+  "timestamp": "2026-03-25T21:39:52.990000+08:00",
   "role": "DataScientist",
   "data": {
     "role": "DataScientist",
     "skills_needed": [
       "statistical-analysis",
       "regression-modeling",
+      "hypothesis-testing",
+      "data-visualization",
       "six-sigma",
-      "data-visualization"
+      "project-management"
     ],
-    "reasoning": "通过统计分析和建模可精准识别质量瓶颈并量化改进效果。"
+    "reasoning": "这些技能帮助系统分析质量数据、构建改进模型并量化改进效果。"
   }
 }

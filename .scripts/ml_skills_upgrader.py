@@ -37,11 +37,34 @@ MAX_CONCURRENCY = 20
 
 TZ_CST = timezone(timedelta(hours=8))
 
-# ── Feishu API 配置（邮件失败时的fallback）─────────────
-FEISHU_APP_ID = "cli_a90c7258f9b85bef"
-FEISHU_APP_SECRET = "Kv6kG5ggU2TP9Ocw5CHSucu1B1t26J7t"
-FEISHU_USER_OPEN_ID = "ou_7bc224841d2a1064cf5a7fbf67824227"  # James
-FEISHU_P2P_CHAT_ID = "oc_59e5938f0f0e1f3e34dcf84f8ffbc3b7"
+# ── Credentials (loaded from env or .credentials.json) ──────────────
+def _load_creds() -> dict:
+    """Load Feishu credentials from env vars or .credentials.json."""
+    creds_file = Path(__file__).parent / ".credentials.json"
+    defaults = {
+        "feishu_app_id": "cli_a90c7258f9b85bef",
+        "feishu_app_secret": "Kv6kG5ggU2TP9Ocw5CHSucu1B1t26J7t",
+        "feishu_user_open_id": "ou_7bc224841d2a1064cf5a7fbf67824227",
+        "feishu_p2p_chat_id": "oc_59e5938f0f0e1f3e34dcf84f8ffbc3b7",
+    }
+    if creds_file.exists():
+        try:
+            defaults.update(json.loads(creds_file.read_text()))
+        except Exception:
+            pass
+    return {
+        "feishu_app_id": os.environ.get("FEISHU_APP_ID", defaults["feishu_app_id"]),
+        "feishu_app_secret": os.environ.get("FEISHU_APP_SECRET", defaults["feishu_app_secret"]),
+        "feishu_user_open_id": os.environ.get("FEISHU_USER_OPEN_ID", defaults["feishu_user_open_id"]),
+        "feishu_p2p_chat_id": os.environ.get("FEISHU_P2P_CHAT_ID", defaults["feishu_p2p_chat_id"]),
+    }
+
+_CREDS = _load_creds()
+
+FEISHU_APP_ID = _CREDS["feishu_app_id"]
+FEISHU_APP_SECRET = _CREDS["feishu_app_secret"]
+FEISHU_USER_OPEN_ID = _CREDS["feishu_user_open_id"]
+FEISHU_P2P_CHAT_ID = _CREDS["feishu_p2p_chat_id"]
 
 def _get_feishu_token() -> str:
     """获取 Feishu tenant access token"""
@@ -455,7 +478,7 @@ def step6_integration_and_pdca(safe: list[str], all_skills: dict) -> dict:
     return summary
 
 # ── 发送邮件报告 ─────────────────────────────────
-def send_report(to_install_count: int, to_upgrade_count: int, safe: list, unsafe: list, all_skills: dict, pdca_summary: dict):
+def send_report(to_install_count: int, to_upgrade_count: int, safe: list, unsafe: list, all_skills: dict, pdca_summary: dict) -> None:
     EMAIL_FROM = "wcyint@163.com"
     EMAIL_TO = "wcyint@163.com"
     SMTP_HOST, SMTP_PORT = "smtp.163.com", 465

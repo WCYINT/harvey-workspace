@@ -96,6 +96,22 @@
       "zip_url": "https://lightmake.site/api/v1/download?slug=airdrop-alert",
       "source": "skillhub",
       "version": "1.0.0"
+    },
+    "ai-business-plan-generator": {
+      "name": "AI Business Plan Generator — Full Investor-Ready Plan in 10 Minutes",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=ai-business-plan-generator",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "security-operator": {
+      "name": "Security Operator",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=security-operator",
+      "source": "skillhub",
+      "version": "2.2.0"
+    }
+  }
+}
+
     }
   }
 }

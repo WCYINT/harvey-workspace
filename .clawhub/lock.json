@@ -1,65 +1,9 @@
 {
   "version": 1,
   "skills": {
-    "engineering": {
+    "jit": {
       "version": "1.0.0",
-      "installedAt": 1774354592793
-    },
-    "airweave": {
-      "version": "1.0.1",
-      "installedAt": 1774357206483
-    },
-    "security-guardian": {
-      "version": "1.1.0",
-      "installedAt": 1774357206556
-    },
-    "content-factory": {
-      "version": "1.0.0",
-      "installedAt": 1774357206635
-    },
-    "notion-api-automation": {
-      "version": "1.0.0",
-      "installedAt": 1774357206658
-    },
-    "aiml-image-video": {
-      "version": "1.0.2",
-      "installedAt": 1774360807026
-    },
-    "plan": {
-      "version": "1.0.0",
-      "installedAt": 1774362577429
-    },
-    "aisa-market-skill": {
-      "version": "1.0.0",
-      "installedAt": 1774364295369
-    },
-    "ai-3d-generator": {
-      "version": "1.0.0",
-      "installedAt": 1774368029575
-    },
-    "agenthc-market-intelligence": {
-      "version": "2.4.0",
-      "installedAt": 1774371606681
-    },
-    "ai-twitter-daily": {
-      "version": "1.0.0",
-      "installedAt": 1774371606729
-    },
-    "aigohotel-mcp": {
-      "version": "1.0.0",
-      "installedAt": 1774371606761
-    },
-    "agent-browser-0-2-0": {
-      "version": "1.0.0",
-      "installedAt": 1774371606765
-    },
-    "aicone": {
-      "version": "2.0.0",
-      "installedAt": 1774371606780
-    },
-    "airdrop-alert": {
-      "version": "1.0.0",
-      "installedAt": 1774371606824
+      "installedAt": 1774446033498
     }
   }
 }
