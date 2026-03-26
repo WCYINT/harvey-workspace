@@ -131,6 +131,13 @@ def diagnose_failure(error_text: str, attempt: int) -> dict:
         suggestions.append("使用 exact-match 验证")
         can_retry = False
         
+    elif any(kw in error_lower for kw in ["rate limit", "rate_limit", "429", "rate limit exceeded", "请求过于频繁", "超出频率限制"]):
+        root_cause = "RATE_LIMIT"
+        suggestions.append("请求频率超限，降低调用频率")
+        suggestions.append("使用缓存减少重复请求")
+        suggestions.append("考虑切换到备用 API 或降级处理")
+        can_retry = True
+        
     elif any(kw in error_lower for kw in ["exit code", "command exited"]):
         exit_code = re.search(r"exit code (\d+)", error_text)
         code = exit_code.group(1) if exit_code else "?"
@@ -175,12 +182,83 @@ def diagnose_failure(error_text: str, attempt: int) -> dict:
 
 # ─── Self-Revision Loop ──────────────────────────────────────────────────────
 
+def check_hypothesis_validity(
+    task: str,
+    attempt_history: list,
+    outcome: str,
+    no_progress_threshold: int = 3,
+) -> dict:
+    """
+    检查当前假设是否已经"死磕"（参考 ARC-AGI-3 发现）。
+    
+    如果连续多次尝试都没有进展（结果相似或持续失败），
+    说明当前假设路径可能是错的，需要建议修正假设。
+    
+    核心灵感：人类会构建思维模型、检验想法、迅速改进。
+    AI 缺乏元认知，会死磕错误假设到底。
+    """
+    if len(attempt_history) < 2:
+        return {"stuck": False, "advice": None, "pivot_needed": False}
+    
+    recent = attempt_history[-no_progress_threshold:]
+    
+    # 检查最近N次是否都失败
+    all_failed = all(not a.get("orm_pass", True) for a in recent)
+    
+    # 检查结果是否高度相似（原地踏步）
+    outcomes = [a.get("outcome", "")[:100] for a in recent]
+    outcomes_unique = len(set(outcomes))
+    
+    stuck = all_failed and outcomes_unique <= 1
+    
+    if stuck:
+        return {
+            "stuck": True,
+            "pivot_needed": True,
+            "attempts": len(attempt_history),
+            "no_progress_count": no_progress_threshold,
+            "advice": (
+                "⚠️ 检测到死磕模式：连续 3 次尝试结果相同且都失败。"
+                "建议重新审视初始假设——可能假设本身是错误的。"
+                "参考 ARC-AGI-3：人类会构建新假设并立即检验，AI 则死磕到底。"
+            ),
+        }
+    
+    # 检查是否效率低下（参考 ARC 评分）
+    efficiency_scores = [
+        a.get("efficiency_score")
+        for a in attempt_history
+        if a.get("efficiency_score") is not None
+    ]
+    if efficiency_scores:
+        avg_eff = sum(efficiency_scores) / len(efficiency_scores)
+        if avg_eff < 0.01:
+            return {
+                "stuck": False,
+                "pivot_needed": False,
+                "low_efficiency": True,
+                "avg_efficiency": avg_eff,
+                "advice": (
+                    f"⚡ 效率评分过低 (avg={avg_eff:.4f})。"
+                    "建议重新建模，寻找更高效的行动路径。"
+                ),
+            }
+    
+    return {"stuck": False, "pivot_needed": False, "advice": None}
+
+
 class RevisionLoop:
     """
     AIBuildAI-style self-revision loop.
     
     Executes a task, validates result with ORM,
     and retries up to MAX_RETRIES if validation fails.
+    
+    新增：假设有效性检查（参考 ARC-AGI-3 人类学习方式）
+    - 探索：尝试新方法
+    - 建模：构建假设
+    - 验证：通过 ORM 验证结果
+    - 修正：检测死磕模式，及时转向
     """
     
     def __init__(self, task: str, executor: Callable[[], str]):
@@ -189,6 +267,7 @@ class RevisionLoop:
         self.attempts = []
         self.final_outcome = None
         self.final_pass = None
+        self.current_hypothesis = task  # 初始假设 = 任务描述
         
     def run(self) -> dict:
         """Run the self-revision loop."""
@@ -227,6 +306,33 @@ class RevisionLoop:
                 self.final_outcome = outcome
                 self.final_pass = False
                 return self._build_result()
+            
+            # 🔬 ARC-AGI-3 启发：假设有效性检查
+            hyp_check = check_hypothesis_validity(
+                self.task, self.attempts, outcome
+            )
+            if hyp_check.get("pivot_needed"):
+                self.attempts[-1]["hypothesis_warning"] = hyp_check
+                # 记录到探索日志
+                try:
+                    import sys
+                    sys.path.insert(0, str(WORKSPACE / ".scripts"))
+                    import explore_model_verify_correct as emvc
+                    emvc.log_exploration(
+                        event_type="correct",
+                        hypothesis=self.current_hypothesis,
+                        action=f"尝试 #{attempt} 失败，检测到死磕",
+                        result=f"死磕检测: {hyp_check['advice']}",
+                        feedback="建议重新审视假设",
+                        metadata={
+                            "attempt_history_len": len(self.attempts),
+                            "root_cause": diagnosis.get("root_cause", ""),
+                        }
+                    )
+                except Exception:
+                    pass  # 不因日志问题中断主流程
+                # 重置假设（探索新路径）
+                self.current_hypothesis = f"{self.task} [修正假设 v{attempt+1}]"
             
             # Prepare adjusted attempt
             suggestions = diagnosis["suggestions"]
