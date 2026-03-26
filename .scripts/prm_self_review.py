@@ -186,15 +186,16 @@ def prm_self_check(steps: list) -> dict:
             "message": "建议添加 VERIFY 步骤以验证执行结果"
         })
     
-    # Check for back-up in system changes
-    task_actions = " ".join(actions).upper()
-    if any(kw in task_actions for kw in ["EXECUTE", "DELETE", "DROP", "PUSH"]):
-        if "BACKUP" not in task_actions and "READ" not in task_actions:
-            issues.append({
-                "type": "MISSING_BACKUP",
-                "severity": "MEDIUM",
-                "message": "系统变更建议先 BACKUP 当前状态"
-            })
+    # Check for back-up in system changes (only WRITE operations need backup)
+    write_actions = ["DELETE", "DROP", "PUSH", "WRITE", "OVERWRITE", "TRUNCATE"]
+    has_write = any(a in actions for a in write_actions)
+    has_read = "READ" in actions or "CHECK" in actions
+    if has_write and not has_read:
+        issues.append({
+            "type": "MISSING_BACKUP",
+            "severity": "MEDIUM",
+            "message": "写入操作建议先 BACKUP 当前状态"
+        })
     
     # Calculate overall risk score
     total_risk = sum(risk_scores.get(s.get("risk", "LOW"), 0) for s in steps)
