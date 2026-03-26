@@ -293,6 +293,17 @@ The goal: Be helpful without being annoying. Check in a few times a day, do usef
 
 This is a starting point. Add your own conventions, style, and rules as you figure out what works.
 
+## 🚨 OpenClaw 版本升级自我进化规则（永久生效）
+
+**触发条件：** OpenClaw 版本升级后（包括 beta）
+**执行步骤：**
+1. 读取 https://github.com/openclaw/openclaw/releases 获取最新版本内容
+2. 提取：Breaking Changes、New Features、Fixes
+3. 评估是否有 Harvey 自我进化相关的功能（如 tools API、新的内省能力）
+4. 如有重大变更，更新相关脚本并记录到当日 memory 文件
+
+**黄金规则：** 版本升级不是终点，是进化的起点。
+
 ## 技能自动更新规则（永久生效）
 
 每3小时自动执行以下6步：
