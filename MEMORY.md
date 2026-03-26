@@ -100,3 +100,37 @@
 - User demonstrated both academic and technical needs - versatile assistance required
 - Working style: direct communication, prefers specific actionable advice, values technical precision
 - Launchd replaced crontab for scheduling (com.hjtech.usage-monitor, skill-discovery, daily-summary)
+
+## 2026-03-26 自我进化系统重大升级
+
+### 今日完成组件
+| 组件 | 路径 | 功能 |
+|---|---|---|
+| auto_learner.py | .scripts/ | 错误自动捕获 + verify + stats + auto-capture + extract-patterns |
+| patterns.json | .learnings/ | 18条决策原则，从learnings自动提取 |
+| prm_self_review.py | .scripts/ | PRM自审计划 + ORM结果校验（AIBuildAI三层架构） |
+| self_revision_loop.py | .scripts/ | AIBuildAI Self-Revision Loop（最多3次自retry） |
+| com.hjtech.auto-learner.plist | ~/Library/LaunchAgents/ | 每30分钟自动verify cron |
+
+### PRM 自审系统
+- Complexity HIGH: 写/修改/删除/发送邮件/飞书/安装/cron → James确认
+- Complexity MEDIUM: 优化/分析/自动化/多文件 → James确认
+- Complexity LOW: 读取/查看/搜索 → 直接执行
+- PRM checks: WAIT_CONFIRM + VERIFY + BACKUP steps
+- ORM校验: 空结果/错误模式检测
+
+### AIBuildAI 三层架构已实现
+- 顶层（任务理解）：prm_self_review.py 复杂度分类 + 步骤拆解
+- 中层（推理与代码生成）：prm_self_check + self_revision_loop
+- 底层（执行与训练）：实际任务执行 + ORM验证
+
+### GitHub Push 问题
+- Push被GH secret scanning拦截：commit ba8ce17包含twilio secret
+- 需要James在GitHub网页处理（allow secret或revert commit）
+- 参考：https://github.com/WCYINT/harvey-workspace/settings/security_analysis
+
+### Claude OS + AIBuildAI 启发
+- 自进化飞轮核心：learnings → patterns.json → PRM查询 → 执行 → ORM验证
+- patterns.json是"进化记忆"，供决策参考
+- Self-Revision Loop = AIBuildAI的"写→训练→评估→重写→再训练"闭环
+
