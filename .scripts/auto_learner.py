@@ -486,6 +486,137 @@ def cmd_stats(args):
 """
 
 
+# ─── Pattern extraction ───────────────────────────────────────────────────────
+
+def extract_patterns() -> str:
+    """Extract decision principles + error signatures from learnings into patterns.json."""
+    import json as _json
+
+    patterns = {}
+    error_sigs = {}
+    
+    # Extract Decision Principles from ERRORS.md
+    err_text = (LEARNINGS_DIR / "ERRORS.md").read_text()
+    for m in re.finditer(r"\*\*Decision principle \(([^)]+)\)\*\*:\s*(.+?)(?=\n###|\n\*\*|\n---)", err_text, re.DOTALL):
+        key = m.group(1).strip()
+        value = m.group(2).strip()
+        patterns[key] = {
+            "principle": key,
+            "trigger": _extract_triggers(value),
+            "fix": value,
+            "prevention": value,
+            "priority": "high"
+        }
+    
+    # Extract Decision Principles from LEARNINGS.md
+    lrn_text = (LEARNINGS_DIR / "LEARNINGS.md").read_text()
+    for m in re.finditer(r"\*\*Decision principle \(([^)]+)\)\*\*:\s*(.+?)(?=\n###|\n\*\*|\n---)", lrn_text, re.DOTALL):
+        key = m.group(1).strip()
+        value = m.group(2).strip()
+        if key not in patterns:
+            patterns[key] = {
+                "principle": key,
+                "trigger": _extract_triggers(value),
+                "fix": value,
+                "prevention": value,
+                "priority": "medium"
+            }
+    
+    # Extract error signatures from ERRORS.md
+    # Parse each ERR- entry and extract from Summary/Details/Root Cause sections
+    for m in re.finditer(r"(## \[(ERR-\d+-\w+)\].*?)(?=## \[ERR-|\Z)", err_text, re.DOTALL):
+        entry_full = m.group(1)
+        entry_id = m.group(2)
+        
+        # Extract Summary
+        sm = re.search(r"### Summary\n(.+?)(?=\n###|\n---)", entry_full, re.DOTALL)
+        summary = sm.group(1).strip()[:300] if sm else ""
+        
+        # Extract Details/Root Cause
+        dm = re.search(r"(?:### Details|### Root Cause|### Root cause)\n(.+?)(?=\n###|\n---)", entry_full, re.DOTALL)
+        details = dm.group(1).strip()[:300] if dm else ""
+        
+        combined = (summary + " " + details).strip()
+        
+        if not combined:
+            continue
+        
+        # Classify this error
+        sig_key = _classify_error(combined)
+        if sig_key and sig_key not in error_sigs:
+            error_sigs[sig_key] = {
+                "patterns": _extract_error_keywords(combined),
+                "entry_prefix": entry_id[:12],
+                "auto_fix": summary[:200] if summary else "Review entry and apply fix.",
+                "summary": summary[:200] if summary else details[:200]
+            }
+    
+    # Count resolution stats
+    t = (LEARNINGS_DIR / "ERRORS.md").read_text()
+    total_err = len(re.findall(r"## \[ERR-", t))
+    resolved_err = len(re.findall(r"\*\*Status\*\*: resolved", t))
+    
+    output = {
+        "version": "1.0",
+        "generated": datetime.now().strftime("%Y-%m-%dT%H:%M:%S+08:00"),
+        "source": "auto_learner.py --extract-patterns",
+        "patterns": patterns,
+        "error_signatures": error_sigs,
+        "resolution_stats": {
+            "total_errors": total_err,
+            "resolved_errors": resolved_err,
+            "resolution_rate": round(resolved_err/total_err, 2) if total_err else 0
+        }
+    }
+    
+    out_path = LEARNINGS_DIR / "patterns.json"
+    out_path.write_text(_json.dumps(output, ensure_ascii=False, indent=2))
+    
+    return (f"Extracted {len(patterns)} decision principles + "
+            f"{len(error_sigs)} error signatures → {out_path.name}")
+
+
+def _extract_triggers(text: str) -> list:
+    """Extract trigger keywords from a principle description."""
+    keywords = []
+    text_lower = text.lower()
+    for kw in re.findall(r"[a-z_]+(?:_[a-z_]+){1,3}", text_lower):
+        if len(kw) > 4 and kw not in ["this_is", "the_is"]:
+            keywords.append(kw)
+    return keywords[:6]
+
+
+def _classify_error(text: str) -> str:
+    """Classify error text into a signature key."""
+    text_lower = text.lower()
+    if "535" in text or "authentication failed" in text_lower or "smtp" in text_lower:
+        return "SMTP_auth_failed"
+    if "cannot find module" in text_lower or "plugin" in text_lower:
+        return "jiti_module_not_found"
+    if "duplicate tool_call" in text_lower or "2013" in text_lower:
+        return "duplicate_tool_call_id"
+    if "permission denied" in text_lower or "eacces" in text_lower:
+        return "permission_denied"
+    if "not found" in text_lower or "enoent" in text_lower:
+        return "not_found"
+    if "timeout" in text_lower:
+        return "timeout"
+    if "exit code" in text_lower:
+        return "exit_code_nonzero"
+    return None
+
+
+def _extract_error_keywords(text: str) -> list:
+    """Extract specific keyword patterns from error text."""
+    keywords = []
+    # Extract error codes/numbers
+    for m in re.finditer(r"\b[A-Z]{2,}_[A-Z_]+\b|\b\d{3,}\b|\b[A-Za-z]+Error\b", text):
+        val = m.group(0)
+        if val not in keywords and len(val) > 2:
+            keywords.append(val)
+    return keywords[:8]
+
+
 # ─── CLI entry point ─────────────────────────────────────────────────────────
 
 def main():
@@ -523,6 +654,9 @@ def main():
     # auto-capture
     sub.add_parser("auto-capture", help="Capture recent errors from logs")
     
+    # extract-patterns
+    sub.add_parser("extract-patterns", help="Extract patterns from learnings into patterns.json")
+    
     args = parser.parse_args()
     
     if args.cmd == "log-error":
@@ -537,6 +671,8 @@ def main():
         print(cmd_stats(args))
     elif args.cmd == "auto-capture":
         print(capture_recent_errors())
+    elif args.cmd == "extract-patterns":
+        print(extract_patterns())
     else:
         parser.print_help()
 

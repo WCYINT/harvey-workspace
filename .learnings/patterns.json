@@ -1,0 +1,154 @@
+{
+  "version": "1.0",
+  "generated": "2026-03-26T11:38:36+08:00",
+  "source": "auto_learner.py --extract-patterns",
+  "patterns": {
+    "demo-file-name-sanity-check": {
+      "principle": "demo-file-name-sanity-check",
+      "trigger": [],
+      "fix": "Demo 文件名不得与标准库模块名冲突。添加命名规则：禁止使用 `contextlib.py`、`functools.py`、`itertools.py` 等标准库名称。",
+      "prevention": "Demo 文件名不得与标准库模块名冲突。添加命名规则：禁止使用 `contextlib.py`、`functools.py`、`itertools.py` 等标准库名称。",
+      "priority": "high"
+    },
+    "credential-sweep-after-fix": {
+      "principle": "credential-sweep-after-fix",
+      "trigger": [
+        "stale_cred"
+      ],
+      "fix": "When fixing a hardcoded credential in one file, immediately do `grep -rl \"STALE_CRED\" ~/.openclaw/workspace/.scripts/` to find all occurrences before considering the fix complete.",
+      "prevention": "When fixing a hardcoded credential in one file, immediately do `grep -rl \"STALE_CRED\" ~/.openclaw/workspace/.scripts/` to find all occurrences before considering the fix complete.",
+      "priority": "high"
+    },
+    "single-source-of-truth-config": {
+      "principle": "single-source-of-truth-config",
+      "trigger": [
+        "password_check"
+      ],
+      "fix": "Never hardcode credentials in scripts. Use a shared config module or read from TOOLS.md/environment. If you must hardcode, maintain a password_check against TOOLS.md at startup.",
+      "prevention": "Never hardcode credentials in scripts. Use a shared config module or read from TOOLS.md/environment. If you must hardcode, maintain a password_check against TOOLS.md at startup.",
+      "priority": "high"
+    },
+    "module-import-consistency": {
+      "principle": "module-import-consistency",
+      "trigger": [],
+      "fix": "When a standard library module is used anywhere in a file, it must be imported at the top level. Never rely on imports inside try blocks or functions for modules used across multiple code paths. This prevents NameError in exception handling and edge cases.",
+      "prevention": "When a standard library module is used anywhere in a file, it must be imported at the top level. Never rely on imports inside try blocks or functions for modules used across multiple code paths. This prevents NameError in exception handling and edge cases.",
+      "priority": "medium"
+    },
+    "jiti-cache-invalidation": {
+      "principle": "jiti-cache-invalidation",
+      "trigger": [],
+      "fix": "After ANY OpenClaw upgrade or plugin modification, ALWAYS clear `/tmp/jiti/` before restarting the gateway. jiti caches compiled TypeScript and will silently load stale code if not cleared, causing obscure module resolution errors.",
+      "prevention": "After ANY OpenClaw upgrade or plugin modification, ALWAYS clear `/tmp/jiti/` before restarting the gateway. jiti caches compiled TypeScript and will silently load stale code if not cleared, causing obscure module resolution errors.",
+      "priority": "medium"
+    },
+    "smtp-resilience": {
+      "principle": "smtp-resilience",
+      "trigger": [],
+      "fix": "Any email-dependent script must:\n1. Archive content locally before attempting email send\n2. Implement retry logic with exponential backoff\n3. Provide detailed, actionable error diagnostics\n4. Never lose data due to delivery failures",
+      "prevention": "Any email-dependent script must:\n1. Archive content locally before attempting email send\n2. Implement retry logic with exponential backoff\n3. Provide detailed, actionable error diagnostics\n4. Never lose data due to delivery failures",
+      "priority": "medium"
+    },
+    "proactive-vs-reactive-validation": {
+      "principle": "proactive-vs-reactive-validation",
+      "trigger": [],
+      "fix": "When maintaining exclusion lists, prefer proactive pattern matching that defines \"valid\" rather than reactive blacklisting of \"invalid\". Valid patterns are finite and stable; invalid patterns are infinite and ever-growing.",
+      "prevention": "When maintaining exclusion lists, prefer proactive pattern matching that defines \"valid\" rather than reactive blacklisting of \"invalid\". Valid patterns are finite and stable; invalid patterns are infinite and ever-growing.",
+      "priority": "medium"
+    },
+    "proactive-log-monitoring": {
+      "principle": "proactive-log-monitoring",
+      "trigger": [],
+      "fix": "The cron-based deep analysis pattern has proven effective at catching edge cases that slip through normal operation. Continue running 30-minute deep analysis cycles to discover and preemptively fix issues before they compound.",
+      "prevention": "The cron-based deep analysis pattern has proven effective at catching edge cases that slip through normal operation. Continue running 30-minute deep analysis cycles to discover and preemptively fix issues before they compound.",
+      "priority": "medium"
+    },
+    "loop-counter-validation": {
+      "principle": "loop-counter-validation",
+      "trigger": [
+        "cycle_length"
+      ],
+      "fix": "Always validate loop counter logic with mathematical verification before deployment. Test boundary conditions: 0, 1, N-1, N, N+1. For cyclic counters, verify modular arithmetic with (completed % cycle_length) not (completed).",
+      "prevention": "Always validate loop counter logic with mathematical verification before deployment. Test boundary conditions: 0, 1, N-1, N, N+1. For cyclic counters, verify modular arithmetic with (completed % cycle_length) not (completed).",
+      "priority": "medium"
+    },
+    "exact-match-validation": {
+      "principle": "exact-match-validation",
+      "trigger": [],
+      "fix": "When checking for duplicate entries, use exact string matching that includes the full expected format, not just partial prefixes. Log the actual format being checked vs. the format being written when debugging duplicate detection issues.",
+      "prevention": "When checking for duplicate entries, use exact string matching that includes the full expected format, not just partial prefixes. Log the actual format being checked vs. the format being written when debugging duplicate detection issues.",
+      "priority": "medium"
+    },
+    "model-explicitness": {
+      "principle": "model-explicitness",
+      "trigger": [],
+      "fix": "For any isolated-session cron job that uses `sessionTarget: \"isolated\"` with `agentTurn`, always explicitly set the `model` in the payload to the intended model. Never rely on session defaults for production cron jobs, as different runtime contexts may have different model preferences or availability. Explicit is safer and more predictable.",
+      "prevention": "For any isolated-session cron job that uses `sessionTarget: \"isolated\"` with `agentTurn`, always explicitly set the `model` in the payload to the intended model. Never rely on session defaults for production cron jobs, as different runtime contexts may have different model preferences or availability. Explicit is safer and more predictable.",
+      "priority": "medium"
+    },
+    "quota-aware-routing": {
+      "principle": "quota-aware-routing",
+      "trigger": [],
+      "fix": "When multiple AI cron jobs share a model pool and one model is exhausted, ALL jobs fail simultaneously. Monitor for `consecutiveErrors: 50+` as an alert condition — it indicates either quota exhaustion or a systemic configuration issue, not individual job failures.",
+      "prevention": "When multiple AI cron jobs share a model pool and one model is exhausted, ALL jobs fail simultaneously. Monitor for `consecutiveErrors: 50+` as an alert condition — it indicates either quota exhaustion or a systemic configuration issue, not individual job failures.",
+      "priority": "medium"
+    },
+    "delivery-config-validation": {
+      "principle": "delivery-config-validation",
+      "trigger": [],
+      "fix": "Any cron job with `delivery.channel: \"feishu\"` MUST include a valid `to` field (openId or chatId). If the job's message text already contains notification logic, use `delivery.mode: \"none\"` instead of a broken delivery config that will fail silently and waste API calls.",
+      "prevention": "Any cron job with `delivery.channel: \"feishu\"` MUST include a valid `to` field (openId or chatId). If the job's message text already contains notification logic, use `delivery.mode: \"none\"` instead of a broken delivery config that will fail silently and waste API calls.",
+      "priority": "medium"
+    },
+    "quiet-mode-doesnt-suppress-errors": {
+      "principle": "quiet-mode-doesnt-suppress-errors",
+      "trigger": [],
+      "fix": "`delivery.mode: \"quiet\"` only suppresses output/announcements — it does NOT suppress delivery errors or prevent `consecutiveErrors` from incrementing. A broken delivery config will always fail regardless of quiet mode.",
+      "prevention": "`delivery.mode: \"quiet\"` only suppresses output/announcements — it does NOT suppress delivery errors or prevent `consecutiveErrors` from incrementing. A broken delivery config will always fail regardless of quiet mode.",
+      "priority": "medium"
+    },
+    "static-vs-dynamic-logging": {
+      "principle": "static-vs-dynamic-logging",
+      "trigger": [],
+      "fix": "Static validation rules (hardcoded deny lists, regex patterns, known-bad constants) should NEVER log on every match. Only dynamically discovered rejections (learned from past failures, user corrections, runtime errors) should log. Static rules that log create unbounded log growth with zero informational value.",
+      "prevention": "Static validation rules (hardcoded deny lists, regex patterns, known-bad constants) should NEVER log on every match. Only dynamically discovered rejections (learned from past failures, user corrections, runtime errors) should log. Static rules that log create unbounded log growth with zero informational value.",
+      "priority": "medium"
+    },
+    "secrets-management": {
+      "principle": "secrets-management",
+      "trigger": [],
+      "fix": "All API keys/tokens/secrets must be loaded from environment variables or a credentials file at runtime. Never hardcode them as module-level constants. Use `os.environ.get(\"KEY\", default)` pattern.",
+      "prevention": "All API keys/tokens/secrets must be loaded from environment variables or a credentials file at runtime. Never hardcode them as module-level constants. Use `os.environ.get(\"KEY\", default)` pattern.",
+      "priority": "medium"
+    },
+    "timeout-vs-scope-calibration": {
+      "principle": "timeout-vs-scope-calibration",
+      "trigger": [],
+      "fix": "Any isolated-session agentTurn cron job with a timeout MUST have its prompt scope pre-calibrated to complete in ≤60% of the timeout window. If a job consistently times out, the prompt is too ambitious — simplify it rather than increasing timeout. Wider scope should be achieved through more frequent shorter runs, not longer timeouts.",
+      "prevention": "Any isolated-session agentTurn cron job with a timeout MUST have its prompt scope pre-calibrated to complete in ≤60% of the timeout window. If a job consistently times out, the prompt is too ambitious — simplify it rather than increasing timeout. Wider scope should be achieved through more frequent shorter runs, not longer timeouts.",
+      "priority": "medium"
+    },
+    "ascii-slug-only": {
+      "principle": "ascii-slug-only",
+      "trigger": [],
+      "fix": "All valid skill slugs must be ASCII-only. Any slug containing non-ASCII characters must be rejected at validation layer, before reaching install step.",
+      "prevention": "All valid skill slugs must be ASCII-only. Any slug containing non-ASCII characters must be rejected at validation layer, before reaching install step.",
+      "priority": "medium"
+    }
+  },
+  "error_signatures": {
+    "duplicate_tool_call_id": {
+      "patterns": [
+        "2013"
+      ],
+      "entry_prefix": "ERR-20260322",
+      "auto_fix": "Duplicate tool_call id \"read32\" — MiniMax API error 2013, blocking proactive cron",
+      "summary": "Duplicate tool_call id \"read32\" — MiniMax API error 2013, blocking proactive cron"
+    }
+  },
+  "resolution_stats": {
+    "total_errors": 6,
+    "resolved_errors": 5,
+    "resolution_rate": 0.83
+  }
+}
