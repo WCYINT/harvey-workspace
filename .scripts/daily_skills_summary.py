@@ -30,7 +30,7 @@ SUMMARY_FILE = Path("/Users/fhjtech/.openclaw/workspace/.learnings/daily_learnin
 # 邮件
 EMAIL_FROM     = "wcyint@163.com"
 EMAIL_TO       = "wcyint@163.com"
-EMAIL_PASSWORD = "PWvrfWXa6PXWiQLn"
+EMAIL_PASSWORD = "xxx"
 SMTP_HOST     = "smtp.163.com"
 SMTP_PORT     = 465
 
@@ -180,6 +180,21 @@ def archive_report(subject: str, html_body: str) -> str:
 
 def send_email_with_retry(subject, html_body, max_retries=3) -> None:
     """Send email with exponential backoff retry"""
+    # Pre-flight: skip if recent auth failure known (avoid wasted connection attempts)
+    try:
+        if SMTP_HEALTH_LOG.exists():
+            with open(SMTP_HEALTH_LOG) as f:
+                history = json.load(f)
+            recent = [h for h in history[-10:] if h.get("status") == "auth_failed"]
+            if recent:
+                last_auth = datetime.fromisoformat(recent[-1]["timestamp"])
+                if (datetime.now(TZ_CST) - last_auth).total_seconds() < 43200:  # 12h cooldown - avoid repeated auth failures when credential is expired
+                    archive_path = archive_report(subject, html_body)
+                    print(f"[{datetime.now(TZ_CST)}] [EMAIL] Skip - recent auth failure known (archived to {archive_path})")
+                    return False
+    except Exception:
+        pass  # Proceed with send attempt if health check fails
+
     msg = MIMEMultipart("alternative")
     msg["Subject"] = subject
     msg["From"] = EMAIL_FROM
@@ -465,6 +480,13 @@ def main() -> None:
     # 保存本地
     with open(SUMMARY_FILE, 'w', encoding='utf-8') as f:
         f.write(html_body)
+
+    # 预检SMTP健康状态，避免盲目重试auth失败
+    health = check_smtp_health()
+    if health["status"] == "auth_failed":
+        print(f"[{datetime.now(TZ_CST)}] [SKIP] SMTP认证失败 ({health['error']})，跳过邮件发送")
+        print(f"[{datetime.now(TZ_CST)}] === 每日汇报完成: LOCAL_ONLY ===")
+        return
 
     # 发送邮件
     email_ok = send_email(subject, html_body)
