@@ -27,6 +27,13 @@ LOGS_DIR = Path.home() / ".openclaw" / "logs"
 PLANS_DIR = WORKSPACE / ".prm_plans"
 PLANS_DIR.mkdir(exist_ok=True)
 
+__all__ = [
+    'classify_complexity', 'should_require_plan', 'generate_steps',
+    'prm_self_check', 'orm_validate_outcome', 'create_plan', 'load_plan',
+    'approve_plan', 'reject_plan', 'log_execution', 'format_plan_for_review',
+    'cmd_plan', 'cmd_validate', 'cmd_review_log', 'cmd_status', 'main',
+]
+
 # ─── Task complexity classification ──────────────────────────────────────────
 
 COMPLEXITY_THRESHOLDS = {

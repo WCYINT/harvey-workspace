@@ -26,6 +26,8 @@ LEARNINGS_DIR = WORKSPACE / ".learnings"
 PATTERNS_FILE = LEARNINGS_DIR / "patterns.json"
 MAX_RETRIES = 3
 
+__all__ = ['match_patterns', 'diagnose_failure', 'cmd_execute', 'cmd_diagnose', 'cmd_simulate', 'main']
+
 
 # ─── Pattern Matcher ─────────────────────────────────────────────────────────
 
