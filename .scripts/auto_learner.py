@@ -1,0 +1,545 @@
+#!/usr/bin/env python3
+"""
+auto_learner.py - Harvey's Self-Evolving Learning System
+
+Automatically captures errors, corrections, and insights → writes to .learnings/
+Verification cron resolves pending entries and promotes high-value learnings.
+
+Usage:
+    python3 auto_learner.py --log-error "description" --error-details "..." --area infra
+    python3 auto_learner.py --log-learning "what was learned" --category correction
+    python3 auto_learner.py --verify          # Run verification: resolve pending items
+    python3 auto_learner.py --report         # Generate pending items report
+    python3 auto_learner.py --stats          # Show learning statistics
+    python3 auto_learner.py --auto-capture   # Called by cron to auto-capture recent errors
+"""
+
+import os
+import sys
+import json
+import re
+import argparse
+from datetime import datetime, timedelta
+from pathlib import Path
+from typing import Optional
+import subprocess
+
+WORKSPACE = Path.home() / ".openclaw" / "workspace"
+LEARNINGS_DIR = WORKSPACE / ".learnings"
+SCRIPTS_DIR = WORKSPACE / ".scripts"
+LOGS_DIR = Path.home() / ".openclaw" / "logs"
+
+# ─── ID generation ───────────────────────────────────────────────────────────
+
+def generate_id(prefix: str) -> str:
+    """Generate sequential ID like ERR-20260326-001"""
+    date_str = datetime.now().strftime("%Y%m%d")
+    # Find existing IDs for today
+    pattern = f"{prefix}-{date_str}"
+    counter = 1
+    for f in LEARNINGS_DIR.glob("*.md"):
+        for line in f.read_text().splitlines():
+            m = re.match(rf"## \[{pattern}-(\d+)\]", line)
+            if m:
+                counter = max(counter, int(m.group(1)) + 1)
+    return f"{pattern}-{counter:03d}"
+
+
+# ─── File operations ────────────────────────────────────────────────────────
+
+def ensure_learnings_dir():
+    """Ensure .learnings directory exists with required files."""
+    LEARNINGS_DIR.mkdir(parents=True, exist_ok=True)
+    for name in ["ERRORS.md", "LEARNINGS.md", "FEATURE_REQUESTS.md"]:
+        p = LEARNINGS_DIR / name
+        if not p.exists():
+            p.write_text(f"# {name.replace('.md','')}\n\n"
+                         "Command failures, exceptions, and unexpected behavior.\n\n"
+                         "**Areas**: frontend | backend | infra | tests | docs | config\n"
+                         "**Statuses**: pending | in_progress | resolved | wont_fix\n\n---\n\n")
+
+
+def append_entry(file_path: Path, content: str):
+    """Append entry to a learnings file."""
+    ensure_learnings_dir()
+    with open(file_path, "a", encoding="utf-8") as f:
+        f.write(content + "\n\n---\n\n")
+
+
+def count_pending(pattern: str = "pending") -> dict:
+    """Count pending/in_progress entries across all learnings files."""
+    counts = {}
+    for name in ["ERRORS.md", "LEARNINGS.md", "FEATURE_REQUESTS.md"]:
+        p = LEARNINGS_DIR / name
+        if p.exists():
+            text = p.read_text()
+            counts[name] = len(re.findall(rf"\*\*{pattern}\*\*", text, re.IGNORECASE))
+    return counts
+
+
+# ─── Entry builders ─────────────────────────────────────────────────────────
+
+def build_error_entry(
+    summary: str,
+    error_details: str,
+    area: str = "backend",
+    command: str = "",
+    context: str = "",
+    reproducible: str = "unknown",
+) -> str:
+    """Build a formatted error entry."""
+    entry_id = generate_id("ERR")
+    now = datetime.now().strftime("%Y-%m-%dT%H:%M:%S%z")
+    # Add +08:00 suffix if not present
+    if not now.endswith("+0800") and not re.search(r"[+-]\d{4}$", now):
+        now = now + "+08:00"
+    
+    ctx_parts = []
+    if command:
+        ctx_parts.append(f"- Command: `{command}`")
+    if context:
+        ctx_parts.append(f"- Context: {context}")
+    
+    content = f"""## [{entry_id}] {area}
+
+**Logged**: {now}
+**Priority**: high
+**Status**: pending
+**Area**: {area}
+
+### Summary
+{summary}
+
+### Error
+```
+{error_details[:2000]}
+```
+
+### Context
+{chr(10).join(ctx_parts) if ctx_parts else "- (none provided)"}
+
+### Suggested Fix
+_Not yet determined — run verification to identify root cause._
+
+### Metadata
+- Reproducible: {reproducible}
+- Source: auto_learner.py
+"""
+    return content
+
+
+def build_learning_entry(
+    summary: str,
+    details: str,
+    category: str = "insight",
+    area: str = "backend",
+    priority: str = "medium",
+    suggested_action: str = "",
+    source: str = "auto_capture",
+) -> str:
+    """Build a formatted learning entry."""
+    entry_id = generate_id("LRN")
+    now = datetime.now().strftime("%Y-%m-%dT%H:%M:%S%z")
+    if not re.search(r"[+-]\d{4}$", now):
+        now = now + "+08:00"
+    
+    content = f"""## [{entry_id}] {category}
+
+**Logged**: {now}
+**Priority**: {priority}
+**Status**: pending
+**Area**: {area}
+
+### Summary
+{summary}
+
+### Details
+{details}
+
+### Suggested Action
+{suggested_action or "_Not yet determined."}
+
+### Metadata
+- Source: {source}
+- Category: {category}
+"""
+    return content
+
+
+# ─── Verification engine ─────────────────────────────────────────────────────
+
+def get_recent_errors(minutes: int = 30) -> list:
+    """Get recent errors from gateway and cron logs."""
+    errors = []
+    log_files = list(LOGS_DIR.glob("*.log")) if LOGS_DIR.exists() else []
+    
+    for lf in sorted(log_files, key=lambda p: p.stat().st_mtime, reverse=True)[:5]:
+        try:
+            text = lf.read_text(errors="ignore")
+            # Look for error patterns
+            for m in re.finditer(
+                r"(\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}[^]]*)\s*(?:ERROR|error|Error|failed|Failed|FAILED|Exception|Traceback).*?(?=\n\d{4}-|$)",
+                text[-50000:],  # Last 50KB
+                re.DOTALL,
+            ):
+                ts = m.group(1).strip()[:19]
+                err_text = m.group(0).strip()[:500]
+                if any(x in err_text for x in ["SIGTERM", "signal", "exec", "failed"]):
+                    errors.append({"timestamp": ts, "error": err_text, "file": lf.name})
+        except Exception:
+            pass
+    
+    return errors
+
+
+def resolve_entry(file_path: Path, entry_id: str, resolution: str, notes: str = ""):
+    """Mark an entry as resolved with resolution notes."""
+    text = file_path.read_text()
+    pattern = rf"(## \[{entry_id}\].*?)(### Metadata\n)(.*?)((?:---\n\n|$))"
+    
+    def make_resolved(m):
+        inner = m.group(1)
+        inner = re.sub(r"\*\*{status}\*\*.*?\n", f"**Status**: resolved\n", inner)
+        now = datetime.now().strftime("%Y-%m-%dT%H:%M:%S+08:00")
+        resolved_block = f"\n### Resolution\n- **Resolved**: {now}\n- **Notes**: {notes or resolution}\n"
+        return m.group(1) + m.group(2) + m.group(3) + resolved_block + (m.group(4) if m.group(4) else "")
+    
+    new_text = re.sub(pattern, make_resolved, text, flags=re.DOTALL)
+    if new_text != text:
+        file_path.write_text(new_text)
+        return True
+    return False
+
+
+def auto_resolve_simple(errors: list) -> int:
+    """Attempt to auto-resolve entries with known fixes."""
+    resolved_count = 0
+    
+    # Known fix mappings (error pattern → (entry_id_prefix, fix_action))
+    known_fixes = {
+        "SMTP": ("ERR-2026032", "SMTP credentials issue - notify James to regenerate 163 authorization code"),
+        "jiti": ("ERR-2026032", "jiti cache staleness - clear /tmp/jiti/ and restart gateway"),
+        "duplicate tool_call": ("ERR-2026032", "MiniMax API tool_call ID collision - use fresh session per cron run"),
+    }
+    
+    for err_info in errors[:5]:
+        err_text = err_info.get("error", "")
+        for keyword, (entry_prefix, fix) in known_fixes.items():
+            if keyword.lower() in err_text.lower():
+                # Find matching pending entry
+                for f in LEARNINGS_DIR.glob("*.md"):
+                    text = f.read_text()
+                    for m in re.finditer(r"## \[(ERR-\d+-\w+)\]", text):
+                        eid = m.group(1)
+                        if eid.startswith(entry_prefix):
+                            idx = text.find(eid)
+                            status_pos = text.find("**Status**:", idx)
+                            status_val = text[status_pos:text.find("\n", status_pos)]
+                            if "pending" in status_val.lower():
+                                if resolve_entry(f, eid, fix, "Auto-resolved by verification engine"):
+                                    resolved_count += 1
+                break
+    
+    return resolved_count
+
+
+def promote_high_value_learning(entry_text: str, target_file: str, section: str):
+    """Promote a learning to AGENTS.md, SOUL.md, TOOLS.md, etc."""
+    # Extract the core principle
+    decision_match = re.search(r"\*\*(Decision principle [^:]+)\*\*:\s*(.+)", entry_text)
+    if not decision_match:
+        return False
+    
+    key = decision_match.group(1)
+    value = decision_match.group(2).strip()
+    
+    target_path = WORKSPACE / target_file
+    if not target_path.exists():
+        return False
+    
+    text = target_path.read_text()
+    
+    # Check if already promoted
+    if key in text:
+        return False
+    
+    # Add to appropriate section
+    new_entry = f"\n### {key}\n{value}\n"
+    
+    # Find insertion point
+    if section in text:
+        idx = text.rfind(f"## {section}") 
+        if idx < 0:
+            idx = text.rfind(f"### {section}")
+        if idx < 0:
+            text += new_entry
+        else:
+            # Find end of this section
+            next_section = text.find("\n## ", idx + 1)
+            if next_section < 0:
+                text += new_entry
+            else:
+                text = text[:next_section] + new_entry + text[next_section:]
+    else:
+        text += new_entry
+    
+    target_path.write_text(text)
+    return True
+
+
+# ─── Auto-capture from recent logs ──────────────────────────────────────────
+
+def capture_recent_errors():
+    """Called by cron to find and log new errors not yet in learnings."""
+    errors = get_recent_errors(minutes=60)
+    if not errors:
+        return "No new errors found in recent logs."
+    
+    captured = 0
+    for err in errors[:3]:
+        err_text = err["error"]
+        
+        # Check if already logged
+        already_logged = False
+        for f in LEARNINGS_DIR.glob("*.md"):
+            if err_text[:100] in f.read_text():
+                already_logged = True
+                break
+        
+        if not already_logged:
+            area = "infra"
+            if "python" in err_text.lower() or ".py" in err_text:
+                area = "backend"
+            elif "git" in err_text.lower():
+                area = "config"
+            
+            entry = build_error_entry(
+                summary=f"Auto-captured error from {err['file']}",
+                error_details=err_text,
+                area=area,
+                context=f"Source: {err['file']} at {err['timestamp']}",
+            )
+            append_entry(LEARNINGS_DIR / "ERRORS.md", entry)
+            captured += 1
+    
+    return f"Captured {captured} new error(s) from recent logs."
+
+
+# ─── Main commands ───────────────────────────────────────────────────────────
+
+def cmd_log_error(args):
+    """Log a new error."""
+    entry = build_error_entry(
+        summary=args.summary,
+        error_details=args.error_details or "No details provided",
+        area=args.area,
+        command=args.command or "",
+        context=args.context or "",
+        reproducible=args.reproducible or "unknown",
+    )
+    append_entry(LEARNINGS_DIR / "ERRORS.md", entry)
+    entry_id = re.search(r"## \[(ERR-\d+-\w+)\]", entry).group(1)
+    print(f"Logged error: {entry_id}")
+    return entry_id
+
+
+def cmd_log_learning(args):
+    """Log a new learning."""
+    entry = build_learning_entry(
+        summary=args.summary,
+        details=args.details or args.summary,
+        category=args.category,
+        area=args.area,
+        priority=args.priority,
+        suggested_action=args.action or "",
+        source=args.source or "manual",
+    )
+    append_entry(LEARNINGS_DIR / "LEARNINGS.md", entry)
+    entry_id = re.search(r"## \[(LRN-\d+-\w+)\]", entry).group(1)
+    print(f"Logged learning: {entry_id}")
+    return entry_id
+
+
+def cmd_verify(args):
+    """Run verification: capture new errors, auto-resolve, report."""
+    results = []
+    
+    # 1. Auto-capture recent errors
+    capture_msg = capture_recent_errors()
+    results.append(capture_msg)
+    
+    # 2. Get recent errors for resolution attempts
+    errors = get_recent_errors(minutes=120)
+    
+    # 3. Attempt auto-resolution
+    if errors:
+        resolved = auto_resolve_simple(errors)
+        results.append(f"Auto-resolved {resolved} entry/entries.")
+    
+    # 4. List all pending items
+    counts = count_pending("pending")
+    in_progress = count_pending("in_progress")
+    
+    pending_list = []
+    for fname, cnt in counts.items():
+        if cnt > 0:
+            pending_list.append(f"  {fname}: {cnt} pending")
+    
+    if pending_list:
+        results.append("Pending items:\n" + "\n".join(pending_list))
+    else:
+        results.append("No pending items — all clear!")
+    
+    return "\n".join(results)
+
+
+def cmd_report(args):
+    """Generate a detailed pending items report."""
+    pending = []
+    
+    for name in ["ERRORS.md", "LEARNINGS.md", "FEATURE_REQUESTS.md"]:
+        p = LEARNINGS_DIR / name
+        if not p.exists():
+            continue
+        
+        text = p.read_text()
+        # Find all entries
+        for m in re.finditer(r"(## \[[^\]]+\][^\n]*\n\*\*Logged\*\*: ([^\n]+)\n\*\*Status\*\*: ([^\n]+))", text):
+            full = m.group(0)
+            entry_id = re.search(r"## \[([^\]]+)\]", full).group(1)
+            logged = m.group(2)
+            status = m.group(3).strip()
+            
+            if "pending" in status.lower():
+                summary_match = re.search(r"### Summary\n(.+?)(?=\n###|\n---\n|$)", full, re.DOTALL)
+                summary = summary_match.group(1).strip()[:100] if summary_match else "(no summary)"
+                pending.append({
+                    "id": entry_id,
+                    "file": name,
+                    "logged": logged,
+                    "summary": summary,
+                })
+    
+    if not pending:
+        return "No pending items. All learnings are resolved!"
+    
+    lines = [f"# Pending Items Report ({len(pending)} total)\n"]
+    for i, item in enumerate(pending, 1):
+        lines.append(f"{i}. [{item['id']}] ({item['file']})")
+        lines.append(f"   Logged: {item['logged']}")
+        lines.append(f"   {item['summary']}")
+        lines.append("")
+    
+    return "\n".join(lines)
+
+
+def cmd_stats(args):
+    """Show learning statistics."""
+    total_errors = 0
+    resolved_errors = 0
+    total_learnings = 0
+    resolved_learnings = 0
+    
+    for name, total, resolved in [
+        ("ERRORS.md", total_errors, resolved_errors),
+        ("LEARNINGS.md", total_learnings, resolved_learnings),
+    ]:
+        p = LEARNINGS_DIR / name
+        if p.exists():
+            text = p.read_text()
+            total = len(re.findall(r"## \[", text))
+            resolved = len(re.findall(r"\*\*Status\*\*: resolved", text))
+    
+    err_p = LEARNINGS_DIR / "ERRORS.md"
+    learn_p = LEARNINGS_DIR / "LEARNINGS.md"
+    
+    if err_p.exists():
+        t = err_p.read_text()
+        total_errors = len(re.findall(r"## \[ERR-", t))
+        resolved_errors = len(re.findall(r"\*\*Status\*\*: resolved", t))
+    
+    if learn_p.exists():
+        t = learn_p.read_text()
+        total_learnings = len(re.findall(r"## \[LRN-", t))
+        resolved_learnings = len(re.findall(r"\*\*Status\*\*: resolved", t))
+    
+    feat_p = LEARNINGS_DIR / "FEATURE_REQUESTS.md"
+    total_features = len(re.findall(r"## \[FEAT-", feat_p.read_text())) if feat_p.exists() else 0
+    
+    pending_errors = total_errors - resolved_errors
+    pending_learnings = total_learnings - resolved_learnings
+    
+    return f"""# Harvey Learning Statistics
+
+## Errors
+  Total: {total_errors} | Resolved: {resolved_errors} | Pending: {pending_errors}
+
+## Learnings
+  Total: {total_learnings} | Resolved: {resolved_learnings} | Pending: {pending_learnings}
+
+## Feature Requests
+  Total: {total_features}
+
+## Resolution Rate
+  Errors: {f"{resolved_errors/total_errors*100:.0f}%" if total_errors else "N/A"}
+  Learnings: {f"{resolved_learnings/total_learnings*100:.0f}%" if total_learnings else "N/A"}
+"""
+
+
+# ─── CLI entry point ─────────────────────────────────────────────────────────
+
+def main():
+    parser = argparse.ArgumentParser(description="Harvey Auto-Learner")
+    sub = parser.add_subparsers(dest="cmd")
+    
+    # log-error
+    p_err = sub.add_parser("log-error", help="Log a new error")
+    p_err.add_argument("--summary", required=True)
+    p_err.add_argument("--error-details", default="")
+    p_err.add_argument("--area", default="backend")
+    p_err.add_argument("--command", default="")
+    p_err.add_argument("--context", default="")
+    p_err.add_argument("--reproducible", default="unknown")
+    
+    # log-learning
+    p_lrn = sub.add_parser("log-learning", help="Log a new learning")
+    p_lrn.add_argument("--summary", required=True)
+    p_lrn.add_argument("--details", default="")
+    p_lrn.add_argument("--category", default="insight")
+    p_lrn.add_argument("--area", default="backend")
+    p_lrn.add_argument("--priority", default="medium")
+    p_lrn.add_argument("--action", default="")
+    p_lrn.add_argument("--source", default="manual")
+    
+    # verify
+    sub.add_parser("verify", help="Run verification engine")
+    
+    # report
+    sub.add_parser("report", help="Generate pending items report")
+    
+    # stats
+    sub.add_parser("stats", help="Show learning statistics")
+    
+    # auto-capture
+    sub.add_parser("auto-capture", help="Capture recent errors from logs")
+    
+    args = parser.parse_args()
+    
+    if args.cmd == "log-error":
+        cmd_log_error(args)
+    elif args.cmd == "log-learning":
+        cmd_log_learning(args)
+    elif args.cmd == "verify":
+        print(cmd_verify(args))
+    elif args.cmd == "report":
+        print(cmd_report(args))
+    elif args.cmd == "stats":
+        print(cmd_stats(args))
+    elif args.cmd == "auto-capture":
+        print(capture_recent_errors())
+    else:
+        parser.print_help()
+
+
+if __name__ == "__main__":
+    main()
