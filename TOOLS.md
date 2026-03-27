@@ -127,7 +127,7 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 ### Harvey 专属邮箱
 
 - **邮箱:** wcyint@163.com
-- **授权码:** xxx
+- **授权码:** xxx（实际值在 LaunchAgent 环境变量 `HARVEY_EMAIL_AUTH` 中）
 - **POP3:** pop.163.com (SSL, 端口 995)
 - **SMTP:** smtp.163.com (SSL, 端口 465)
 - **IMAP:** imap.163.com (SSL, 端口 993)

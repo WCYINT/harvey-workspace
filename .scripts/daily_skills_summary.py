@@ -2,6 +2,8 @@
 """
 每日技能更新 + 学习汇报脚本
 每天 06:00 和 18:00 执行
+"""
+import os
 
 内容：
 1. 技能更新汇总（新安装/安全评估/集成结果）
@@ -30,7 +32,7 @@ SUMMARY_FILE = Path("/Users/fhjtech/.openclaw/workspace/.learnings/daily_learnin
 # 邮件
 EMAIL_FROM     = "wcyint@163.com"
 EMAIL_TO       = "wcyint@163.com"
-EMAIL_PASSWORD = "xxx"
+EMAIL_PASSWORD = os.environ.get("HARVEY_EMAIL_AUTH", "xxx")  # ⚠️ 若 535 报错，需重新在 mail.163.com 生成授权码
 SMTP_HOST     = "smtp.163.com"
 SMTP_PORT     = 465
 
