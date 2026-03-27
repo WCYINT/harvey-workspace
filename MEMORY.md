@@ -38,6 +38,15 @@
 - **所有权限已授权** (admin/maintain/push/triage/pull)
 - ⚠️ Push 被 GitHub 规则拦截（repository rule violations），需在 GitHub 网页设置或新建 token
 
+## 🚨 OpenClaw 版本升级自我进化规则（永久生效）
+
+**触发条件：** OpenClaw 版本升级后（包括 beta）
+**执行步骤：**
+1. 读取 https://github.com/openclaw/openclaw/releases 获取最新版本内容
+2. 提取：Breaking Changes、New Features、Fixes
+3. 评估是否有 Harvey 自我进化相关的功能
+4. 如有重大变更，更新相关脚本并记录到当日 memory 文件
+
 ## Rules & Principles
 
 ### 沟通反馈黄金规则（最高优先级）
@@ -128,6 +137,12 @@
 - Push被GH secret scanning拦截：commit ba8ce17包含twilio secret
 - 需要James在GitHub网页处理（allow secret或revert commit）
 - 参考：https://github.com/WCYINT/harvey-workspace/settings/security_analysis
+
+### Git提交安全黄金规则（最高优先级，2026-03-27）
+- **授权码/密码/密钥绝不暴露在Git历史中**
+- Commit前必须检查：敏感信息（如163邮箱授权码、MiniMax API Key等）用`xxx`替代
+- 已暴露的commit需及时重写历史（filter-branch/filter-repo）
+- 原则：宁可本地暂存，也不让敏感信息上网
 
 ### Claude OS + AIBuildAI 启发
 - 自进化飞轮核心：learnings → patterns.json → PRM查询 → 执行 → ORM验证
