@@ -353,6 +353,19 @@ def _is_valid_slug(slug: str, log_rejection: bool = True) -> bool:
         "visual", "visually",
         "deterministically", "deterministic",
         "fetches", "fetched", "fetch",
+        # Missing from common_words but present in rejected_slugs.json
+        # (43 slugs confirmed missing 2026-03-27; causes repeated 'not_in_index'
+        #  in skill_updates.log despite being in rejected_slugs.json)
+        "create", "enable", "earn", "conduct", "execute",
+        "develop", "query", "help", "provides", "generate",
+        "productivity", "insights", "smart", "your",
+        "agenthire", "ai-agent", "ai-powered", "all-in-one",
+        "end-to-end", "intent-based", "world-class", "multi-agent",
+        "self-healing", "persistent", "real-time",
+        "prism", "intellectia", "gitai", "goplus",
+        "abaddon", "atxp", "breeze", "callmac", "evomap",
+        "accounting-workflows", "brand-specific", "friction-reduction",
+        "mandatory", "inflated", "prismer",
     }
     if slug.lower() in common_words:
         if log_rejection:
@@ -445,7 +458,22 @@ def _is_valid_slug(slug: str, log_rejection: bool = True) -> bool:
             log(f"[SlugValidation] Rejected '{slug}': All-uppercase slug > 4 chars (likely description fragment)")
         return False
 
-    # Rule 12: Reject long ASCII slugs without hyphens (likely description fragments).
+    # Rule 11b: Reject Title Case single words (e.g. "Academic", "Patterns",
+    # "Professional"). Valid slugs are lowercase, kebab-case, or camelCase — not a
+    # single capitalized word. These are description fragments that pass Rule 11
+    # (not ALL-UPPERCASE) but fail at SkillHub with "not in index".
+    if (
+        len(slug) > 3
+        and slug[0].isupper()
+        and slug[1:].islower()
+        and "-" not in slug
+        and "_" not in slug
+    ):
+        if log_rejection:
+            log(f"[SlugValidation] Rejected '{slug}': Title Case single-word slug (description fragment)")
+        return False
+
+    # Rule 13: Reject long ASCII slugs without hyphens (likely description fragments).
     # Valid slugs are either short or kebab-case/underscore_case (which have hyphens/underscores).
     # A 40+ char ASCII string with < 2 separators is almost certainly a description
     # that bypassed Rule 10 via incorrect parsing (e.g. "DeepResearch" or
