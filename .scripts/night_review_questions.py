@@ -10,6 +10,7 @@ from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+import os
 
 TZ_CST = timezone(timedelta(hours=8))
 NOW = datetime.now(TZ_CST)
@@ -49,7 +50,7 @@ def send_question(to_name: str, questions: list) -> bool:
     msg.attach(MIMEText(body, "html", "utf-8"))
     try:
         with smtplib.SMTP_SSL("smtp.163.com", 465) as s:
-            s.login("wcyint@163.com", "PWvrfWXa6PXWiQLn")
+            os.environ.get("HARVEY_EMAIL_AUTH", "xxx")
             s.sendmail("wcyint@163.com", ["wcyint@163.com"], msg.as_string())
         return True
     except:

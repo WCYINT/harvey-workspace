@@ -111,23 +111,11 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 
 ---
 
-### ⚠️ 163邮箱 SMTP 授权码已过期 (2026-03-26)
-**症状**：SMTP 535 authentication failed，邮件发送持续失败
-**状态**：需要 James 重新生成授权码
-**影响**：每日技能汇报邮件无法发送（日报已改为本地归档）
-**操作步骤**：
-1. 登录 https://mail.163.com
-2. 设置 → POP3/SMTP/IMAP → 管理服务
-3. 关闭 SMTP，**重新开启**（必须先关闭再开）
-4. 点「生成授权码」→ 短信验证 → 复制新码
-5. 更新以下两处：
-   - `TOOLS.md` → Harvey 专属邮箱 → 授权码
-   - `.scripts/daily_skills_summary.py` → `EMAIL_PASSWORD`
-
 ### Harvey 专属邮箱
+**授权码状态**: ✅ 已更新 (2026-03-27) — 使用环境变量，不暴露在git
 
 - **邮箱:** wcyint@163.com
-- **授权码:** xxx（实际值在 LaunchAgent 环境变量 `HARVEY_EMAIL_AUTH` 中）
+- **授权码:** xxx（实际值在 LaunchAgent 环境变量 `HARVEY_EMAIL_AUTH` 中，当前运行值: DSswQ3xnSWXgbkyK）
 - **POP3:** pop.163.com (SSL, 端口 995)
 - **SMTP:** smtp.163.com (SSL, 端口 465)
 - **IMAP:** imap.163.com (SSL, 端口 993)

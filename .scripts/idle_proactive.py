@@ -16,6 +16,7 @@ from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+import os
 
 TZ_CST = timezone(timedelta(hours=8))
 NOW = datetime.now(TZ_CST)
@@ -25,7 +26,8 @@ EVOLUTION_LOG = LOG_DIR / "proactive_evolution.json"
 SKILLS_DIR = Path("/Users/fhjtech/.openclaw/workspace/skills")
 
 # 发送主动汇报邮件
-def send_alert(subject: str, body: str):
+def send_alert(subject: str, body: str) -> bool:
+    ERROR_LOG = Path("/Users/fhjtech/.openclaw/logs/smtp_errors.log")
     try:
         msg = MIMEMultipart("alternative")
         msg["Subject"] = subject
@@ -33,10 +35,15 @@ def send_alert(subject: str, body: str):
         msg["To"] = "wcyint@163.com"
         msg.attach(MIMEText(body, "html", "utf-8"))
         with smtplib.SMTP_SSL("smtp.163.com", 465) as s:
-            s.login("wcyint@163.com", "PWvrfWXa6PXWiQLn")
+            os.environ.get("HARVEY_EMAIL_AUTH", "xxx")
             s.sendmail("wcyint@163.com", ["wcyint@163.com"], msg.as_string())
         return True
-    except:
+    except Exception as e:
+        ts = datetime.now(TZ_CST).strftime("%Y-%m-%d %H:%M:%S")
+        err_line = f"[{ts}] [idle_proactive] SMTP send_alert failed: {type(e).__name__}: {e}\n"
+        ERROR_LOG.parent.mkdir(parents=True, exist_ok=True)
+        with open(ERROR_LOG, "a", encoding="utf-8") as f:
+            f.write(err_line)
         return False
 
 # 检测最后人类消息时间
@@ -125,14 +132,15 @@ def check_evolution_progress() -> dict:
         records = []
         if EVOLUTION_LOG.exists():
             records = json.loads(EVOLUTION_LOG.read_text())
-        recent = [r for r in records if datetime.fromisoformat(r.get("timestamp", "2000")).total_seconds() > 86400]  # 24h内
+        cutoff = datetime.now(TZ_CST) - timedelta(hours=24)
+        recent = [r for r in records if datetime.fromisoformat(r.get("timestamp", "2000-01-01T00:00:00+08:00")) > cutoff]  # 24h内
         if len(recent) < 3:
             issues.append(f"过去24小时仅{len(recent)}次进化记录，可能进化不充分")
-    except:
-        pass
+    except Exception as e:
+        issues.append(f"进化进度检查异常: {e}")
     return {"module": "evolution_progress", "status": "ok" if not issues else "info", "issues": issues}
 
-def main():
+def main() -> None:
     print(f"[{NOW.strftime('%H:%M:%S')}] === 主动预见进化 Started ===")
 
     idle_mins = check_idle_minutes()
@@ -193,3 +201,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+__all__ = ['send_alert', 'check_idle_minutes', 'check_thesis_logic', 'check_cron_health', 'check_api_usage', 'check_skill_synergy', 'check_evolution_progress', 'main']

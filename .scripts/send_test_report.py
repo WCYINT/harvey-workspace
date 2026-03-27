@@ -7,12 +7,13 @@ from email.mime.multipart import MIMEMultipart
 from datetime import datetime
 import json
 from pathlib import Path
+import os
 
 WORKSPACE = Path.home() / ".openclaw" / "workspace"
 SMTP_HOST = "smtp.163.com"
 SMTP_PORT = 465
 SMTP_USER = "wcyint@163.com"
-SMTP_PASS = "NDdE6mZyTMifExXL"  # James's authorization code
+SMTP_PASS = "xxx"  # James's authorization code
 
 def get_system_stats() -> dict:
     """Gather system stats for the report."""

@@ -175,7 +175,7 @@ def send_decision_email(skills_to_install: list, reason: str) -> None:
     msg.attach(MIMEText(body, "html", "utf-8"))
     try:
         with smtplib.SMTP_SSL("smtp.163.com", 465) as server:
-            server.login("wcyint@163.com", "PWvrfWXa6PXWiQLn")
+            server.login("wcyint@163.com", "xxx")
             server.sendmail("wcyint@163.com", ["wcyint@163.com"], msg.as_string())
         # 写入待决策文件
         DECISION_FILE.write_text(json.dumps({
@@ -482,7 +482,7 @@ def send_report(to_install_count: int, to_upgrade_count: int, safe: list, unsafe
     EMAIL_FROM = "wcyint@163.com"
     EMAIL_TO = "wcyint@163.com"
     SMTP_HOST, SMTP_PORT = "smtp.163.com", 465
-    EMAIL_PASSWORD = "PWvrfWXa6PXWiQLn"
+    EMAIL_PASSWORD = os.environ.get("HARVEY_EMAIL_AUTH", "xxx")
     now = datetime.now(TZ_CST)
 
     # 生成技能详情行
