@@ -1,0 +1,157 @@
+元宝 OpenClaw 插件自动修复报告（Doctor 模式）
+生成时间: 2026-03-26 07:23:30
+传入参数: --token ***:*** (appKey+appSecret)
+========================================
+
+╔══════════════════════════════════════════════════════════════╗
+║        🦞 元宝 OpenClaw 插件自动修复工具（Doctor）🦞        ║
+╚══════════════════════════════════════════════════════════════╝
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  1. OpenClaw 安装状态  [07:23:30]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✓ OpenClaw 已安装：OpenClaw 2026.3.23-2 (7ffe7e4)
+✗ OpenClaw gateway 未运行
+  启动命令：openclaw gateway
+  检测到 OpenClaw 版本：2026.3.23
+  插件包：openclaw-plugin-yuanbao@latest（OpenClaw > 2026.3.13）
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  2. 插件安装状态  [07:23:31]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  配置文件：/Users/fhjtech/.openclaw/openclaw.json
+⚠ 插件 'openclaw-plugin-yuanbao' 不在配置中
+✗ 插件目录未找到：/Users/fhjtech/.openclaw/extensions/openclaw-plugin-yuanbao
+  OpenClaw 数据目录：/Users/fhjtech/.openclaw
+  期望的插件路径：/Users/fhjtech/.openclaw/extensions/openclaw-plugin-yuanbao
+  扩展目录中的其他插件：
+    - disabled
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  3. 插件加载状态  [07:23:32]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✗ 插件未在 OpenClaw 中注册
+  安装命令：openclaw plugins install openclaw-plugin-yuanbao@latest
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  4. 所有 Channels 状态  [07:23:36]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  已配置的 channels：
+
+    [plugins] feishu_doc: Registered feishu_doc, feishu_app_scopes
+    [plugins] feishu_chat: Registered feishu_chat tool
+    [plugins] feishu_wiki: Registered feishu_wiki tool
+    [plugins] feishu_drive: Registered feishu_drive tool
+    [plugins] feishu_bitable: Registered bitable tools
+    Chat channels:
+    - Feishu default: configured, enabled
+    
+    Auth providers (OAuth + API keys):
+    - openrouter:default (api_key)
+    - minimax-cn:default (api_key)
+    - minimax:cn (api_key)
+    - openai-codex:default (oauth)
+    - minimax-portal:default (oauth)
+    
+    [plugins] feishu_doc: Registered feishu_doc, feishu_app_scopes
+    [plugins] feishu_chat: Registered feishu_chat tool
+    [plugins] feishu_wiki: Registered feishu_wiki tool
+    [plugins] feishu_drive: Registered feishu_drive tool
+    [plugins] feishu_bitable: Registered bitable tools
+    [plugins] feishu_doc: Registered feishu_doc, feishu_app_scopes
+    [plugins] feishu_chat: Registered feishu_chat tool
+    [plugins] feishu_wiki: Registered feishu_wiki tool
+    [plugins] feishu_drive: Registered feishu_drive tool
+    [plugins] feishu_bitable: Registered bitable tools
+    [plugins] feishu_doc: Registered feishu_doc, feishu_app_scopes
+    [plugins] feishu_chat: Registered feishu_chat tool
+    [plugins] feishu_wiki: Registered feishu_wiki tool
+    [plugins] feishu_drive: Registered feishu_drive tool
+    [plugins] feishu_bitable: Registered bitable tools
+    [plugins] feishu_doc: Registered feishu_doc, feishu_app_scopes
+    [plugins] feishu_chat: Registered feishu_chat tool
+    [plugins] feishu_wiki: Registered feishu_wiki tool
+    [plugins] feishu_drive: Registered feishu_drive tool
+    [plugins] feishu_bitable: Registered bitable tools
+    [openai-codex] Token refresh failed: 403 {"error":{"code":"unsupported_country_region_territory","message":"Country, region, or territory not supported","param":null,"type":"request_forbidden"}}
+    [openai-codex] Token refresh failed: 403 {"error":{"code":"unsupported_country_region_territory","message":"Country, region, or territory not supported","param":null,"type":"request_forbidden"}}
+    Usage:
+      MiniMax
+        5h: 27% left · resets 2h 36m
+    
+    Docs: https://docs.openclaw.ai/gateway/configuration
+
+✗ ✗ 2 个 channel 处于错误状态
+  \033[1;33m说明：\033[0m不显示凭证信息。下方仅检查元宝 channel 的配置详情。
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  5. 元宝 Channel 配置  [07:23:40]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+⚠ 元宝 channel 配置未找到
+  您可能需要使用 --app-key 和 --app-secret 配置 channel
+⚠ 在 channels 状态中未找到元宝 channel
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  6. 网络连接性（仅元宝）  [07:23:44]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  检查 API 域名：bot.yuanbao.tencent.com
+✓ API 域名可达
+  检查 WebSocket 域名：bot-wss.yuanbao.tencent.com
+⚠ WebSocket 域名不可达（这可能是检测工具问题）
+  请检查您的网络连接和防火墙设置
+  DNS 解析 bot.yuanbao.tencent.com:
+✓ DNS 解析成功
+    bot.yuanbao.tencent.com has address 124.220.119.237
+    bot.yuanbao.tencent.com has address 43.140.152.251
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  7. 最近的 Gateway 日志（元宝相关）  [07:23:45]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  日志文件：/tmp/openclaw/openclaw-2026-03-26.log
+  最近的元宝日志：
+    {"0":"Config warnings:\\n- plugins.entries.memory-lancedb-pro: plugin not found: memory-lancedb-pro (stale config entry ignored; remove it from plugins config)\n- plugins.entries.openclaw-plugin-yuanbao: plugin not found: openclaw-plugin-yuanbao (stale config entry ignored; remove it from plugins config)\n- plugins.allow: plugin not found: memory-lancedb-pro (stale config entry ignored; remove it from plugins config)\n- plugins.allow: plugin not found: openclaw-plugin-yuanbao (stale config entry ignored; remove it from plugins config)","_meta":{"runtime":"node","runtimeVersion":"25.8.1","hostname":"unknown","name":"openclaw","date":"2026-03-25T19:17:35.319Z","logLevelId":4,"logLevelName":"WARN","path":{"fullFilePath":"file:///Users/fhjtech/.nvm/versions/node/v24.13.1/lib/node_modules/openclaw/dist/subsystem-DISldKSB.js:280:46","fileName":"subsystem-DISldKSB.js","fileNameWithLine":"subsystem-DISldKSB.js:280","fileColumn":"46","fileLine":"280","filePath":"Users/fhjtech/.nvm/versions/node/v24.13.1/lib/node_modules/openclaw/dist/subsystem-DISldKSB.js","filePathWithLine":"Users/fhjtech/.nvm/versions/node/v24.13.1/lib/node_modules/openclaw/dist/subsystem-DISldKSB.js:280","method":"console.warn"}},"time":"2026-03-26T03:17:35.326+08:00"}
+    {"0":"Config warnings:\\n- plugins.entries.memory-lancedb-pro: plugin not found: memory-lancedb-pro (stale config entry ignored; remove it from plugins config)\n- plugins.entries.openclaw-plugin-yuanbao: plugin not found: openclaw-plugin-yuanbao (stale config entry ignored; remove it from plugins config)\n- plugins.allow: plugin not found: memory-lancedb-pro (stale config entry ignored; remove it from plugins config)\n- plugins.allow: plugin not found: openclaw-plugin-yuanbao (stale config entry ignored; remove it from plugins config)","_meta":{"runtime":"node","runtimeVersion":"25.8.1","hostname":"unknown","name":"openclaw","date":"2026-03-25T21:28:09.762Z","logLevelId":4,"logLevelName":"WARN","path":{"fullFilePath":"file:///Users/fhjtech/.nvm/versions/node/v24.13.1/lib/node_modules/openclaw/dist/subsystem-DISldKSB.js:280:46","fileName":"subsystem-DISldKSB.js","fileNameWithLine":"subsystem-DISldKSB.js:280","fileColumn":"46","fileLine":"280","filePath":"Users/fhjtech/.nvm/versions/node/v24.13.1/lib/node_modules/openclaw/dist/subsystem-DISldKSB.js","filePathWithLine":"Users/fhjtech/.nvm/versions/node/v24.13.1/lib/node_modules/openclaw/dist/subsystem-DISldKSB.js:280","method":"console.warn"}},"time":"2026-03-26T05:28:09.765+08:00"}
+    {"0":"Config warnings:\\n- plugins.entries.memory-lancedb-pro: plugin not found: memory-lancedb-pro (stale config entry ignored; remove it from plugins config)\n- plugins.entries.openclaw-plugin-yuanbao: plugin not found: openclaw-plugin-yuanbao (stale config entry ignored; remove it from plugins config)\n- plugins.allow: plugin not found: memory-lancedb-pro (stale config entry ignored; remove it from plugins config)\n- plugins.allow: plugin not found: openclaw-plugin-yuanbao (stale config entry ignored; remove it from plugins config)","_meta":{"runtime":"node","runtimeVersion":"25.8.1","hostname":"unknown","name":"openclaw","date":"2026-03-25T22:34:11.407Z","logLevelId":4,"logLevelName":"WARN","path":{"fullFilePath":"file:///Users/fhjtech/.nvm/versions/node/v24.13.1/lib/node_modules/openclaw/dist/subsystem-DISldKSB.js:280:46","fileName":"subsystem-DISldKSB.js","fileNameWithLine":"subsystem-DISldKSB.js:280","fileColumn":"46","fileLine":"280","filePath":"Users/fhjtech/.nvm/versions/node/v24.13.1/lib/node_modules/openclaw/dist/subsystem-DISldKSB.js","filePathWithLine":"Users/fhjtech/.nvm/versions/node/v24.13.1/lib/node_modules/openclaw/dist/subsystem-DISldKSB.js:280","method":"console.warn"}},"time":"2026-03-26T06:34:11.410+08:00"}
+    {"0":"Config warnings:\\n- plugins.entries.memory-lancedb-pro: plugin not found: memory-lancedb-pro (stale config entry ignored; remove it from plugins config)\n- plugins.entries.openclaw-plugin-yuanbao: plugin not found: openclaw-plugin-yuanbao (stale config entry ignored; remove it from plugins config)\n- plugins.allow: plugin not found: memory-lancedb-pro (stale config entry ignored; remove it from plugins config)\n- plugins.allow: plugin not found: openclaw-plugin-yuanbao (stale config entry ignored; remove it from plugins config)","_meta":{"runtime":"node","runtimeVersion":"25.8.1","hostname":"unknown","name":"openclaw","date":"2026-03-25T22:34:11.430Z","logLevelId":4,"logLevelName":"WARN","path":{"fullFilePath":"file:///Users/fhjtech/.nvm/versions/node/v24.13.1/lib/node_modules/openclaw/dist/subsystem-DISldKSB.js:280:46","fileName":"subsystem-DISldKSB.js","fileNameWithLine":"subsystem-DISldKSB.js:280","fileColumn":"46","fileLine":"280","filePath":"Users/fhjtech/.nvm/versions/node/v24.13.1/lib/node_modules/openclaw/dist/subsystem-DISldKSB.js","filePathWithLine":"Users/fhjtech/.nvm/versions/node/v24.13.1/lib/node_modules/openclaw/dist/subsystem-DISldKSB.js:280","method":"console.warn"}},"time":"2026-03-26T06:34:11.436+08:00"}
+    {"0":"Config warnings:\\n- plugins.entries.memory-lancedb-pro: plugin not found: memory-lancedb-pro (stale config entry ignored; remove it from plugins config)\n- plugins.entries.openclaw-plugin-yuanbao: plugin not found: openclaw-plugin-yuanbao (stale config entry ignored; remove it from plugins config)\n- plugins.allow: plugin not found: memory-lancedb-pro (stale config entry ignored; remove it from plugins config)\n- plugins.allow: plugin not found: openclaw-plugin-yuanbao (stale config entry ignored; remove it from plugins config)","_meta":{"runtime":"node","runtimeVersion":"25.8.1","hostname":"unknown","name":"openclaw","date":"2026-03-25T22:34:11.440Z","logLevelId":4,"logLevelName":"WARN","path":{"fullFilePath":"file:///Users/fhjtech/.nvm/versions/node/v24.13.1/lib/node_modules/openclaw/dist/subsystem-DISldKSB.js:280:46","fileName":"subsystem-DISldKSB.js","fileNameWithLine":"subsystem-DISldKSB.js:280","fileColumn":"46","fileLine":"280","filePath":"Users/fhjtech/.nvm/versions/node/v24.13.1/lib/node_modules/openclaw/dist/subsystem-DISldKSB.js","filePathWithLine":"Users/fhjtech/.nvm/versions/node/v24.13.1/lib/node_modules/openclaw/dist/subsystem-DISldKSB.js:280","method":"console.warn"}},"time":"2026-03-26T06:34:11.440+08:00"}
+    {"0":"Config warnings:\\n- plugins.entries.memory-lancedb-pro: plugin not found: memory-lancedb-pro (stale config entry ignored; remove it from plugins config)\n- plugins.entries.openclaw-plugin-yuanbao: plugin not found: openclaw-plugin-yuanbao (stale config entry ignored; remove it from plugins config)\n- plugins.allow: plugin not found: memory-lancedb-pro (stale config entry ignored; remove it from plugins config)\n- plugins.allow: plugin not found: openclaw-plugin-yuanbao (stale config entry ignored; remove it from plugins config)","_meta":{"runtime":"node","runtimeVersion":"25.8.1","hostname":"unknown","name":"openclaw","date":"2026-03-25T22:34:13.335Z","logLevelId":4,"logLevelName":"WARN","path":{"fullFilePath":"file:///Users/fhjtech/.nvm/versions/node/v24.13.1/lib/node_modules/openclaw/dist/subsystem-DISldKSB.js:280:46","fileName":"subsystem-DISldKSB.js","fileNameWithLine":"subsystem-DISldKSB.js:280","fileColumn":"46","fileLine":"280","filePath":"Users/fhjtech/.nvm/versions/node/v24.13.1/lib/node_modules/openclaw/dist/subsystem-DISldKSB.js","filePathWithLine":"Users/fhjtech/.nvm/versions/node/v24.13.1/lib/node_modules/openclaw/dist/subsystem-DISldKSB.js:280","method":"console.warn"}},"time":"2026-03-26T06:34:13.338+08:00"}
+    {"0":"Config warnings:\\n- plugins.entries.memory-lancedb-pro: plugin not found: memory-lancedb-pro (stale config entry ignored; remove it from plugins config)\n- plugins.entries.openclaw-plugin-yuanbao: plugin not found: openclaw-plugin-yuanbao (stale config entry ignored; remove it from plugins config)\n- plugins.allow: plugin not found: memory-lancedb-pro (stale config entry ignored; remove it from plugins config)\n- plugins.allow: plugin not found: openclaw-plugin-yuanbao (stale config entry ignored; remove it from plugins config)","_meta":{"runtime":"node","runtimeVersion":"25.8.1","hostname":"unknown","name":"openclaw","date":"2026-03-25T22:41:32.224Z","logLevelId":4,"logLevelName":"WARN","path":{"fullFilePath":"file:///Users/fhjtech/.nvm/versions/node/v24.13.1/lib/node_modules/openclaw/dist/subsystem-DISldKSB.js:280:46","fileName":"subsystem-DISldKSB.js","fileNameWithLine":"subsystem-DISldKSB.js:280","fileColumn":"46","fileLine":"280","filePath":"Users/fhjtech/.nvm/versions/node/v24.13.1/lib/node_modules/openclaw/dist/subsystem-DISldKSB.js","filePathWithLine":"Users/fhjtech/.nvm/versions/node/v24.13.1/lib/node_modules/openclaw/dist/subsystem-DISldKSB.js:280","method":"console.warn"}},"time":"2026-03-26T06:41:32.228+08:00"}
+    {"0":"{\"subsystem\":\"gateway/reload\"}","1":"config change detected; evaluating reload (plugins.entries.memory-lancedb-pro, plugins.entries.openclaw-plugin-yuanbao)","_meta":{"runtime":"node","runtimeVersion":"25.8.1","hostname":"unknown","name":"{\"subsystem\":\"gateway/reload\"}","parentNames":["openclaw"],"date":"2026-03-25T22:44:23.837Z","logLevelId":3,"logLevelName":"INFO","path":{"fullFilePath":"file:///Users/fhjtech/.nvm/versions/node/v24.13.1/lib/node_modules/openclaw/dist/subsystem-DISldKSB.js:454:14","fileName":"subsystem-DISldKSB.js","fileNameWithLine":"subsystem-DISldKSB.js:454","fileColumn":"14","fileLine":"454","filePath":"Users/fhjtech/.nvm/versions/node/v24.13.1/lib/node_modules/openclaw/dist/subsystem-DISldKSB.js","filePathWithLine":"Users/fhjtech/.nvm/versions/node/v24.13.1/lib/node_modules/openclaw/dist/subsystem-DISldKSB.js:454","method":"logToFile"}},"time":"2026-03-26T06:44:23.837+08:00"}
+    {"0":"{\"subsystem\":\"gateway/reload\"}","1":"config change detected; evaluating reload (plugins.installs.openclaw-plugin-yuanbao)","_meta":{"runtime":"node","runtimeVersion":"25.8.1","hostname":"unknown","name":"{\"subsystem\":\"gateway/reload\"}","parentNames":["openclaw"],"date":"2026-03-25T22:44:45.501Z","logLevelId":3,"logLevelName":"INFO","path":{"fullFilePath":"file:///Users/fhjtech/.nvm/versions/node/v24.13.1/lib/node_modules/openclaw/dist/subsystem-DISldKSB.js:454:14","fileName":"subsystem-DISldKSB.js","fileNameWithLine":"subsystem-DISldKSB.js:454","fileColumn":"14","fileLine":"454","filePath":"Users/fhjtech/.nvm/versions/node/v24.13.1/lib/node_modules/openclaw/dist/subsystem-DISldKSB.js","filePathWithLine":"Users/fhjtech/.nvm/versions/node/v24.13.1/lib/node_modules/openclaw/dist/subsystem-DISldKSB.js:454","method":"logToFile"}},"time":"2026-03-26T06:44:45.502+08:00"}
+    {"0":"{\"subsystem\":\"gateway/channels/feishu\"}","1":"feishu[default]: Feishu[default] DM from ou_7bc224841d2a1064cf5a7fbf67824227: bash <(curl -fsSL https://static.yuanbao.tencent.com/m/yb-claw/yuanbao-doctor.sh) --bot-token NphOc1MmQM7hqZ5TMTW0eE221dra8mlS:YEU75QpheYQtu1lnMk6sumnOUKoO8Buz","_meta":{"runtime":"node","runtimeVersion":"25.8.1","hostname":"unknown","name":"{\"subsystem\":\"gateway/channels/feishu\"}","parentNames":["openclaw"],"date":"2026-03-25T23:22:04.658Z","logLevelId":3,"logLevelName":"INFO","path":{"fullFilePath":"file:///Users/fhjtech/.nvm/versions/node/v24.13.1/lib/node_modules/openclaw/dist/subsystem-DISldKSB.js:454:14","fileName":"subsystem-DISldKSB.js","fileNameWithLine":"subsystem-DISldKSB.js:454","fileColumn":"14","fileLine":"454","filePath":"Users/fhjtech/.nvm/versions/node/v24.13.1/lib/node_modules/openclaw/dist/subsystem-DISldKSB.js","filePathWithLine":"Users/fhjtech/.nvm/versions/node/v24.13.1/lib/node_modules/openclaw/dist/subsystem-DISldKSB.js:454","method":"logToFile"}},"time":"2026-03-26T07:22:04.659+08:00"}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  8. 运行时状态输出（已知错误特征匹配）  [07:23:45]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✓ status 输出中未发现额外的已知错误特征
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  诊断结果汇总
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  共发现 6 个问题：
+
+  [1] OpenClaw Gateway 未运行
+       ✗ 阻断  |  来源：结构检查
+  [2] 插件目录或文件未找到
+       ✗ 阻断  |  来源：结构检查
+  [3] 插件未在 OpenClaw 注册
+       ✗ 阻断  |  来源：结构检查
+  [4] appKey 未配置
+       ✗ 阻断  |  来源：结构检查
+  [5] appSecret 未配置
+       ✗ 阻断  |  来源：结构检查
+  [6] 其他 Channel 断联或错误
+       ⚠ 警告  |  来源：结构检查
+
+开始修复
+
+✓ 配置已备份：/Users/fhjtech/.openclaw/openclaw.json.yuanbao-20260326_072348.bak
+配置备份：/Users/fhjtech/.openclaw/openclaw.json.yuanbao-20260326_072348.bak
+→ 修复：启动 OpenClaw Gateway
+  已发送启动命令，等待 gateway 就绪...
+✓ OpenClaw Gateway 已启动 (PID: 3385)
+→ 修复：安装并注册插件
+  正在安装插件（openclaw-plugin-yuanbao@latest）...
+  正在启用插件...
+  重启 gateway 以加载新插件...

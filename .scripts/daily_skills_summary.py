@@ -1,18 +1,17 @@
 #!/usr/bin/env python3
 """
-每日技能更新 + 学习汇报脚本
-每天 06:00 和 18:00 执行
+Daily Skills Update + Learning Report
+Runs at 06:00 and 18:00 daily
+
+Contents:
+1. Skills update summary (new installs / security evaluation / integration results)
+2. Peter Steinberger learning (https://steipete.me + GitHub)
+3. OpenClaw official updates (https://openclaw.ai + GitHub/openclaw)
+
+Send to: wcyint@163.com (James email)
 """
+
 import os
-
-内容：
-1. 技能更新汇总（新安装/安全评估/集成结果）
-2. Peter Steinberger 学习 (https://steipete.me + GitHub)
-3. OpenClaw 官方动态 (https://openclaw.ai + GitHub/openclaw)
-
-发送到: wgcapsa@163.com (James邮箱)
-"""
-
 import json
 import smtplib
 import subprocess
@@ -55,6 +54,21 @@ def check_smtp_health() -> dict:
         "error": None,
         "recommendation": None
     }
+    
+    # Fast path: skip SMTP connection if recent auth failure is known (12h cooldown)
+    try:
+        if SMTP_HEALTH_LOG.exists():
+            with open(SMTP_HEALTH_LOG) as f:
+                history = json.load(f)
+            recent = [h for h in history[-10:] if h.get("status") in ("auth_failed", "unhealthy")]
+            if recent:
+                last_auth = datetime.fromisoformat(recent[-1]["timestamp"])
+                if (datetime.now(TZ_CST) - last_auth).total_seconds() < 259200:
+                    result["status"] = "auth_failed"
+                    result["error"] = "Skipped - recent auth failure within 72h cooldown"
+                    return result
+    except Exception:
+        pass  # Proceed if health log read fails
     
     import socket
     start_time = datetime.now()
@@ -190,7 +204,7 @@ def send_email_with_retry(subject, html_body, max_retries=3) -> None:
             recent = [h for h in history[-10:] if h.get("status") == "auth_failed"]
             if recent:
                 last_auth = datetime.fromisoformat(recent[-1]["timestamp"])
-                if (datetime.now(TZ_CST) - last_auth).total_seconds() < 43200:  # 12h cooldown - avoid repeated auth failures when credential is expired
+                if (datetime.now(TZ_CST) - last_auth).total_seconds() < 259200:  # 72h cooldown (auth expired since 2026-03-26) - avoid repeated auth failures when credential is expired
                     archive_path = archive_report(subject, html_body)
                     print(f"[{datetime.now(TZ_CST)}] [EMAIL] Skip - recent auth failure known (archived to {archive_path})")
                     return False
@@ -228,7 +242,7 @@ def send_email_with_retry(subject, html_body, max_retries=3) -> None:
     error_msg = f"[{datetime.now(TZ_CST)}] [EMAIL] 失败 (archived to {archive_path}): {last_error}"
     print(error_msg)
     
-    # Log detailed diagnostics for SMTP auth issues
+    # Log 535 errors to SMTP_HEALTH_LOG so subsequent calls skip email attempts for 72h
     if "535" in str(last_error) or "authentication" in str(last_error).lower():
         diag_msg = f"""
 [{datetime.now(TZ_CST)}] [EMAIL-DIAGNOSTICS] SMTP Authentication Failed (535)
@@ -253,6 +267,21 @@ def send_email_with_retry(subject, html_body, max_retries=3) -> None:
         error_log = Path("/Users/fhjtech/.openclaw/logs/smtp_errors.log")
         with open(error_log, "a") as f:
             f.write(diag_msg)
+        # Write to SMTP_HEALTH_LOG so send_email_with_retry skips for 72h
+        try:
+            history = []
+            if SMTP_HEALTH_LOG.exists():
+                with open(SMTP_HEALTH_LOG) as f:
+                    history = json.load(f)
+            history.append({
+                "timestamp": datetime.now(TZ_CST).isoformat(),
+                "status": "auth_failed",
+                "error": str(last_error)
+            })
+            with open(SMTP_HEALTH_LOG, "w") as f:
+                json.dump(history[-50:], f)  # keep last 50 entries
+        except Exception:
+            pass
     
     return False
 

@@ -111,6 +111,47 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 
 ---
 
+### 📬 邮箱授权码白银规则（经验教训）
+
+**问题根源：** macOS LaunchAgent 不继承 shell 环境变量，即使 ~/.zshrc 中 export 也没用。
+
+**更新授权码标准操作（必须按顺序执行）：**
+```bash
+# 1. 卸载 plist
+launchctl unload ~/Library/LaunchAgents/xxx.plist
+
+# 2. 编辑 plist，添加 EnvironmentVariables（必须！）
+# <key>EnvironmentVariables</key>
+# <dict>
+#     <key>HARVEY_EMAIL_AUTH</key>
+#     <string>新授权码</string>
+# </dict>
+
+# 3. 重新加载
+launchctl load ~/Library/LaunchAgents/xxx.plist
+
+# 4. 清除 72h SMTP 冷却期
+echo '[]' > ~/.openclaw/logs/smtp_health.json
+
+# 5. 验证 SMTP 连接
+python3 -c "import smtplib, os; ..."
+```
+
+**需配置授权码的 LaunchAgent（2026-03-28 盘点）：**
+- ✅ com.hjtech.daily-summary.plist
+- ✅ com.hjtech.skill-discovery.plist
+- ✅ ai.openclaw.email-integration.plist
+- ✅ com.hjtech.auto-learner.plist
+
+**预防性检查命令：**
+```bash
+# 检查哪些 plist 已有授权码
+grep -l "HARVEY_EMAIL_AUTH" ~/Library/LaunchAgents/*.plist
+
+# 检查哪些 plist 缺少（需补上）
+grep -L "HARVEY_EMAIL_AUTH" ~/Library/LaunchAgents/*.plist
+```
+
 ### Harvey 专属邮箱
 **授权码状态**: ✅ 已更新 (2026-03-27) — 使用环境变量，不暴露在git
 
@@ -241,3 +282,43 @@ RECOMMENDATION: 方案X
 ---
 
 Add whatever helps you do your job. This is your cheat sheet.
+
+## 🚨 OpenClaw 版本升级后自动检查清单
+
+版本升级后**必须**执行以下检查并反馈结果：
+
+```bash
+# 1. LaunchAgents 状态检查
+launchctl list | grep hjtech
+
+# 2. 日志检查（最近是否有错误）
+tail -20 ~/.openclaw/logs/daily_summary.log
+tail -20 ~/.openclaw/logs/daily_summary.err
+
+# 3. SMTP 健康状态
+cat ~/.openclaw/logs/smtp_health.json | tail -3
+
+# 4. 关键脚本语法验证
+python3 -m py_compile ~/.openclaw/workspace/.scripts/daily_skills_summary.py
+python3 -m py_compile ~/.openclaw/workspace/.scripts/skillhub_auto_update.py
+
+# 5. 邮件发送测试
+python3 -c "
+import smtplib, os
+from email.mime.text import MIMEText
+auth = os.environ.get('HARVEY_EMAIL_AUTH', '')
+msg = MIMEText('OpenClaw升级后测试')
+msg['Subject'] = 'Health Check'
+msg['From'] = 'wcyint@163.com'
+msg['To'] = 'wcyint@163.com'
+with smtplib.SMTP_SSL('smtp.163.com', 465) as s:
+    s.login('wcyint@163.com', auth)
+    s.send_message(msg)
+print('OK')
+"
+```
+
+**检查结果必须包含：**
+- ✅/❌ 每个检查项的状态
+- 如有问题：症状 + 原因 + 修复方案
+- 发送给 James 确认

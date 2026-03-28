@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated": "2026-03-26T11:38:36+08:00",
+  "generated": "2026-03-27T07:38:44+08:00",
   "source": "auto_learner.py --extract-patterns",
   "patterns": {
     "demo-file-name-sanity-check": {
@@ -28,6 +28,15 @@
       "prevention": "Never hardcode credentials in scripts. Use a shared config module or read from TOOLS.md/environment. If you must hardcode, maintain a password_check against TOOLS.md at startup.",
       "priority": "high"
     },
+    "python-cache-invalidation": {
+      "principle": "python-cache-invalidation",
+      "trigger": [
+        "__pycache__"
+      ],
+      "fix": "Python 模块修改后若出现 NameError 或行为异常，应清理 `/tmp/jiti/` 和 `__pycache__`。jiti 缓存 `.py` → `.pyc` 编译结果，重启 gateway 前需清理。",
+      "prevention": "Python 模块修改后若出现 NameError 或行为异常，应清理 `/tmp/jiti/` 和 `__pycache__`。jiti 缓存 `.py` → `.pyc` 编译结果，重启 gateway 前需清理。",
+      "priority": "high"
+    },
     "module-import-consistency": {
       "principle": "module-import-consistency",
       "trigger": [],
@@ -40,6 +49,13 @@
       "trigger": [],
       "fix": "After ANY OpenClaw upgrade or plugin modification, ALWAYS clear `/tmp/jiti/` before restarting the gateway. jiti caches compiled TypeScript and will silently load stale code if not cleared, causing obscure module resolution errors.",
       "prevention": "After ANY OpenClaw upgrade or plugin modification, ALWAYS clear `/tmp/jiti/` before restarting the gateway. jiti caches compiled TypeScript and will silently load stale code if not cleared, causing obscure module resolution errors.",
+      "priority": "medium"
+    },
+    "source-availability-check": {
+      "principle": "source-availability-check",
+      "trigger": [],
+      "fix": "Before adding a network-based skill source, verify it's accessible from the target environment (CN region). A source that fails consistently wastes run time and generates log noise. Test with `curl -s --max-time 10 <url>` before committing.",
+      "prevention": "Before adding a network-based skill source, verify it's accessible from the target environment (CN region). A source that fails consistently wastes run time and generates log noise. Test with `curl -s --max-time 10 <url>` before committing.",
       "priority": "medium"
     },
     "smtp-resilience": {
@@ -144,11 +160,20 @@
       "entry_prefix": "ERR-20260322",
       "auto_fix": "Duplicate tool_call id \"read32\" — MiniMax API error 2013, blocking proactive cron",
       "summary": "Duplicate tool_call id \"read32\" — MiniMax API error 2013, blocking proactive cron"
+    },
+    "SMTP_auth_failed": {
+      "patterns": [
+        "163",
+        "535"
+      ],
+      "entry_prefix": "ERR-20260326",
+      "auto_fix": "163 SMTP auth code expired — multiple auto-capture duplicates now merged into this single entry. This is the single source of truth for the SMTP 535 auth failure.",
+      "summary": "163 SMTP auth code expired — multiple auto-capture duplicates now merged into this single entry. This is the single source of truth for the SMTP 535 auth failure."
     }
   },
   "resolution_stats": {
-    "total_errors": 6,
-    "resolved_errors": 5,
-    "resolution_rate": 0.83
+    "total_errors": 15,
+    "resolved_errors": 8,
+    "resolution_rate": 0.53
   }
 }

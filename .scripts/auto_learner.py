@@ -22,7 +22,6 @@ import argparse
 from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Optional
-import subprocess
 
 WORKSPACE = Path.home() / ".openclaw" / "workspace"
 LEARNINGS_DIR = WORKSPACE / ".learnings"
@@ -32,13 +31,20 @@ LOGS_DIR = Path.home() / ".openclaw" / "logs"
 # ─── ID generation ───────────────────────────────────────────────────────────
 
 def generate_id(prefix: str) -> str:
-    """Generate sequential ID like ERR-20260326-001"""
+    """Generate sequential ID like ERR-20260326-001.
+    
+    IDs are at file bottom (recent entries), so read LAST 200 lines.
+    """
     date_str = datetime.now().strftime("%Y%m%d")
-    # Find existing IDs for today
     pattern = f"{prefix}-{date_str}"
     counter = 1
     for f in LEARNINGS_DIR.glob("*.md"):
-        for line in f.read_text().splitlines():
+        # Read only last 200 lines - IDs are at bottom of each file (recent entries)
+        try:
+            lines = f.read_text(errors="ignore").splitlines()[-200:]
+        except Exception:
+            continue
+        for line in lines:
             m = re.match(rf"## \[{pattern}-(\d+)\]", line)
             if m:
                 counter = max(counter, int(m.group(1)) + 1)
@@ -47,7 +53,7 @@ def generate_id(prefix: str) -> str:
 
 # ─── File operations ────────────────────────────────────────────────────────
 
-def ensure_learnings_dir():
+def ensure_learnings_dir() -> None:
     """Ensure .learnings directory exists with required files."""
     LEARNINGS_DIR.mkdir(parents=True, exist_ok=True)
     for name in ["ERRORS.md", "LEARNINGS.md", "FEATURE_REQUESTS.md"]:
@@ -59,7 +65,7 @@ def ensure_learnings_dir():
                          "**Statuses**: pending | in_progress | resolved | wont_fix\n\n---\n\n")
 
 
-def append_entry(file_path: Path, content: str):
+def append_entry(file_path: Path, content: str) -> None:
     """Append entry to a learnings file."""
     ensure_learnings_dir()
     with open(file_path, "a", encoding="utf-8") as f:
@@ -184,7 +190,15 @@ def get_recent_errors(minutes: int = 30) -> list:
             ):
                 ts = m.group(1).strip()[:19]
                 err_text = m.group(0).strip()[:500]
-                if any(x in err_text for x in ["SIGTERM", "signal", "exec", "failed"]):
+                # Broaden filter: catch subprocess failures + Python exceptions + HTTP errors.
+                # Previously only caught subprocess/signal → missed all Python tracebacks.
+                if any(x in err_text for x in [
+                    "SIGTERM", "SIGKILL", "signal", "exec failed", "subprocess",
+                    "NameError", "TypeError", "KeyError", "ValueError",
+                    "ImportError", "AttributeError", "RuntimeError",
+                    "HTTPError", "ConnectionError", "TimeoutError",
+                    "StatusCode: 4", "StatusCode: 5",  # HTTP 4xx/5xx errors
+                ]):
                     errors.append({"timestamp": ts, "error": err_text, "file": lf.name})
         except Exception:
             pass
@@ -192,14 +206,70 @@ def get_recent_errors(minutes: int = 30) -> list:
     return errors
 
 
-def resolve_entry(file_path: Path, entry_id: str, resolution: str, notes: str = ""):
+def get_skill_update_failures(minutes: int = 180) -> list:
+    """Get real failures from skill_updates.log (SMTP, install failures).
+
+    Ignores slug-validation noise. Only captures:
+    - SMTP 535 auth errors
+    - Installation failures (X 成功 / Y 失败 where Y > 0)
+    """
+    skill_log = LEARNINGS_DIR / "skill_updates.log"
+    if not skill_log.exists():
+        return []
+
+    try:
+        text = skill_log.read_text(errors="ignore")
+    except Exception:
+        return []
+
+    cutoff = datetime.now() - timedelta(minutes=minutes)
+    failures = []
+    lines = text.splitlines()
+
+    for line in reversed(lines[-500:]):  # Last 500 lines is enough
+        # Parse timestamp
+        ts_match = re.match(r"\[(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})\]", line)
+        if not ts_match:
+            continue
+        try:
+            ts = datetime.strptime(ts_match.group(1), "%Y-%m-%d %H:%M:%S")
+        except ValueError:
+            continue
+        if ts < cutoff:
+            break
+
+        # Real failure: SMTP 535
+        if "SMTP 535" in line or "认证错误" in line:
+            failures.append({
+                "timestamp": ts_match.group(1),
+                "error": f"[skill_updates.log] {line.strip()}",
+                "file": "skill_updates.log"
+            })
+            continue
+
+        # Real failure: install failures (Y > 0)
+        m = re.search(r"\[Step3\]\s*安装完成:\s*(\d+)\s*成功\s*/\s*(\d+)\s*失败", line)
+        if m:
+            success = int(m.group(1))
+            failure = int(m.group(2))
+            if failure > 0:  # Real failure
+                failures.append({
+                    "timestamp": ts_match.group(1),
+                    "error": f"[skill_updates.log] Install failure: {success} OK / {failure} failed",
+                    "file": "skill_updates.log"
+                })
+
+    return failures
+
+
+def resolve_entry(file_path: Path, entry_id: str, resolution: str, notes: str = "") -> None:
     """Mark an entry as resolved with resolution notes."""
     text = file_path.read_text()
     pattern = rf"(## \[{entry_id}\].*?)(### Metadata\n)(.*?)((?:---\n\n|$))"
     
-    def make_resolved(m):
+    def make_resolved(m) -> None:
         inner = m.group(1)
-        inner = re.sub(r"\*\*{status}\*\*.*?\n", f"**Status**: resolved\n", inner)
+        inner = re.sub(r"\*\*Status\*\*.*?\n", "**Status**: resolved\n", inner)
         now = datetime.now().strftime("%Y-%m-%dT%H:%M:%S+08:00")
         resolved_block = f"\n### Resolution\n- **Resolved**: {now}\n- **Notes**: {notes or resolution}\n"
         return m.group(1) + m.group(2) + m.group(3) + resolved_block + (m.group(4) if m.group(4) else "")
@@ -243,7 +313,7 @@ def auto_resolve_simple(errors: list) -> int:
     return resolved_count
 
 
-def promote_high_value_learning(entry_text: str, target_file: str, section: str):
+def promote_high_value_learning(entry_text: str, target_file: str, section: str) -> None:
     """Promote a learning to AGENTS.md, SOUL.md, TOOLS.md, etc."""
     # Extract the core principle
     decision_match = re.search(r"\*\*(Decision principle [^:]+)\*\*:\s*(.+)", entry_text)
@@ -289,9 +359,11 @@ def promote_high_value_learning(entry_text: str, target_file: str, section: str)
 
 # ─── Auto-capture from recent logs ──────────────────────────────────────────
 
-def capture_recent_errors():
+def capture_recent_errors() -> str:
     """Called by cron to find and log new errors not yet in learnings."""
+    # Gateway/cron logs + skill_updates.log
     errors = get_recent_errors(minutes=60)
+    errors += get_skill_update_failures(minutes=180)
     if not errors:
         return "No new errors found in recent logs."
     
@@ -299,10 +371,22 @@ def capture_recent_errors():
     for err in errors[:3]:
         err_text = err["error"]
         
-        # Check if already logged
+        # Deduplicate: strip timestamps/file-paths to get stable error pattern.
+        # SMTP lines from skill_updates.log have format:
+        #   [skill_updates.log] [YYYY-MM-DD HH:MM:SS] [邮件] ... SMTP 535 ...
+        # The first 100 chars vary by timestamp, so we extract the stable part.
+        dedup_pattern = err_text
+        m = re.search(r"(SMTP 535[^]]+|Install failure: \d+ OK / \d+ failed)", err_text)
+        if m:
+            dedup_pattern = m.group(1)  # e.g. "SMTP 535 认证错误（授权码可能过期）"
+        
+        # Also strip the skill_updates.log prefix + timestamp if present
+        dedup_pattern = re.sub(r"^\[skill_updates\.log\]\s*\[\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}\}\s*", "", dedup_pattern)
+        
+        # Check if already logged using stable pattern
         already_logged = False
         for f in LEARNINGS_DIR.glob("*.md"):
-            if err_text[:100] in f.read_text():
+            if dedup_pattern[:80] in f.read_text():
                 already_logged = True
                 break
         
@@ -327,7 +411,7 @@ def capture_recent_errors():
 
 # ─── Main commands ───────────────────────────────────────────────────────────
 
-def cmd_log_error(args):
+def cmd_log_error(args) -> None:
     """Log a new error."""
     entry = build_error_entry(
         summary=args.summary,
@@ -343,7 +427,7 @@ def cmd_log_error(args):
     return entry_id
 
 
-def cmd_log_learning(args):
+def cmd_log_learning(args) -> None:
     """Log a new learning."""
     entry = build_learning_entry(
         summary=args.summary,
@@ -360,7 +444,7 @@ def cmd_log_learning(args):
     return entry_id
 
 
-def cmd_verify(args):
+def cmd_verify(args) -> None:
     """Run verification: capture new errors, auto-resolve, report."""
     results = []
     
@@ -393,7 +477,7 @@ def cmd_verify(args):
     return "\n".join(results)
 
 
-def cmd_report(args):
+def cmd_report(args) -> None:
     """Generate a detailed pending items report."""
     pending = []
     
@@ -433,7 +517,7 @@ def cmd_report(args):
     return "\n".join(lines)
 
 
-def cmd_stats(args):
+def cmd_stats(args) -> None:
     """Show learning statistics."""
     total_errors = 0
     resolved_errors = 0
@@ -619,7 +703,7 @@ def _extract_error_keywords(text: str) -> list:
 
 # ─── CLI entry point ─────────────────────────────────────────────────────────
 
-def main():
+def main() -> None:
     parser = argparse.ArgumentParser(description="Harvey Auto-Learner")
     sub = parser.add_subparsers(dest="cmd")
     
@@ -679,3 +763,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+__all__ = ['generate_id', 'ensure_learnings_dir', 'append_entry', 'count_pending', 'build_error_entry', 'build_learning_entry', 'get_recent_errors', 'resolve_entry', 'auto_resolve_simple', 'promote_high_value_learning', 'capture_recent_errors', 'cmd_log_error', 'cmd_log_learning', 'cmd_verify', 'cmd_report', 'cmd_stats', 'extract_patterns', 'main', 'make_resolved']

@@ -1,0 +1,18 @@
+{
+  "lastChecks": {
+    "email": 1774519888,
+    "calendar": 1774480959,
+    "weather": null,
+    "jiti": 1774522282,
+    "daily_summary": 1774520541,
+    "evening": 1742990116
+  },
+  "notes": {
+    "email_auth_failing": "SMTP 535 + IMAP LOGIN error - auth code may need renewal",
+    "minimax_client_returning_wrong_model": "Returns \u667a\u8c31\u6e05\u8a00 instead of MiniMax - check endpoint",
+    "new_skills_installed": "10 from ClawHub (2026-03-26 morning)",
+    "email_auth_issue": "IMAP/SMTP password in config is PTafS36jSftPZKm4 but TOOLS.md says NDdE6mZyTMifExXL - mismatch, need to regenerate 163\u6388\u6743\u7801",
+    "action_needed": "Generate new 163 email authorization code at mail.163.com/settings/\u6388\u6743\u7801",
+    "minimax_url_issue": "BASE_URL uses api.minimaxi.com but correct may be api.minimax.chat - needs verification"
+  }
+}

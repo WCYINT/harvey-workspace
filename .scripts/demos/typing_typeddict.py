@@ -1,0 +1,3 @@
+# Learning: typing_typeddict
+# Example: class Config(TypedDict): ...
+

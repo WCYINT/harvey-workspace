@@ -1,0 +1,3 @@
+# Learning: typing_protocol
+# Example: class Readable(Protocol): def read(self): ...
+

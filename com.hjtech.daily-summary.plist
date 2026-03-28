@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.hjtech.daily-summary</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/opt/homebrew/bin/python3</string>
+        <string>/Users/fhjtech/.openclaw/workspace/.scripts/daily_skills_summary.py</string>
+    </array>
+    <key>StartInterval</key>
+    <integer>3600</integer>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>StandardOutPath</key>
+    <string>/Users/fhjtech/.openclaw/logs/daily_summary.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/fhjtech/.openclaw/logs/daily_summary.err</string>
+    <key>KeepAlive</key>
+    <false/>
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>HARVEY_EMAIL_AUTH</key>
+        <string>DSswQ3xnSWXgbkyK</string>
+    </dict>
+</dict>
+</plist>

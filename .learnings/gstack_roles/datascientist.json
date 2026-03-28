@@ -1,16 +1,17 @@
 {
-  "timestamp": "2026-03-25T21:39:52.990000+08:00",
+  "timestamp": "2026-03-28T09:36:26.656937+08:00",
   "role": "DataScientist",
   "data": {
     "role": "DataScientist",
     "skills_needed": [
       "statistical-analysis",
+      "quality-management",
       "regression-modeling",
-      "hypothesis-testing",
-      "data-visualization",
+      "design-of-experiments",
+      "root-cause-analysis",
       "six-sigma",
-      "project-management"
+      "predictive-modeling"
     ],
-    "reasoning": "这些技能帮助系统分析质量数据、构建改进模型并量化改进效果。"
+    "reasoning": "这些技能覆盖了从统计分析到实验设计、根因分析和预测模型的全链条，为提升插电混动Y车型质量提供必要的量化依据。"
   }
 }

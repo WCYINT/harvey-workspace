@@ -46,8 +46,42 @@
 2. 提取：Breaking Changes、New Features、Fixes
 3. 评估是否有 Harvey 自我进化相关的功能
 4. 如有重大变更，更新相关脚本并记录到当日 memory 文件
+5. **【黄金规则】自动检查例行任务是否正常运行（见下方清单）**
+
+**版本升级后必须检查的例行任务：**
+| 任务 | 检查命令 | 预期结果 |
+|------|---------|---------|
+| daily-summary | `launchctl list \| grep daily-summary` | state = started |
+| auto-learner | `launchctl list \| grep auto-learner` | state = started |
+| usage-monitor | `launchctl list \| grep usage-monitor` | state = started |
+| SMTP认证 | `tail -5 logs/daily_summary.log` | 无 535 错误 |
+| 语法检查 | `python3 -m py_compile .scripts/daily_skills_summary.py` | 无报错 |
+
+**发现问题的处理优先级：**
+1. 立即修复可执行项（如授权码过期、语法错误）
+2. 记录需 James 决策的问题
+3. 立即反馈完整测试结果
 
 ## Rules & Principles
+
+### 📬 邮箱授权码白银规则（2026-03-28）
+
+**问题根源：** macOS LaunchAgent 不继承 shell 环境变量，`~/.zshrc` export 无效。
+
+**更新授权码标准操作（必须按顺序执行）：**
+1. `launchctl unload xxx.plist`
+2. 编辑 plist，添加 `<EnvironmentVariables><key>HARVEY_EMAIL_AUTH</key><string>新授权码</string></EnvironmentVariables>`
+3. `launchctl load xxx.plist`
+4. 清除冷却期：`echo '[]' > ~/.openclaw/logs/smtp_health.json`
+5. 验证：`python3 -c "import smtplib..."`
+
+**需配置授权码的 LaunchAgent（2026-03-28）：**
+- com.hjtech.daily-summary.plist ✅
+- com.hjtech.skill-discovery.plist ✅
+- ai.openclaw.email-integration.plist ✅
+- com.hjtech.auto-learner.plist ✅
+
+**重要补充（2026-03-28）：** `email_integration/email_client.py` 内置硬编码密码 fallback（当 `HARVEY_EMAIL_AUTH` 环境变量未设置时使用）。cron/scheduler 任务不继承 LaunchAgent 环境变量，因此更新授权码时需同时修改该文件的 `self.password`。
 
 ### 沟通反馈黄金规则（最高优先级）
 - **沟通必含计划**：邮件/飞书/元宝沟通时，必须附上深思熟虑的下一步计划（至少3种方案）
@@ -80,6 +114,12 @@
 - **数字即时确认**：当 James 给出一个数字（如"8%"），立即确认对应哪个数据源/字段，不要自行推演
 - **矛盾即停**：当 James 提供的数字与我观察到的不符时，停止推理，30秒内提出澄清问题
 - **自动反思触发器**：当同一问题花费 >3 轮对话才解决时，自动记录到 learnings/ERRORS.md
+
+### 🐛 Edit Failed 自动排查规则
+- 当工具返回 "failed" 或 "error" 时，**立即查看 gateway.log**（路径：`/Users/fhjtech/.openclaw/logs/gateway.log`）
+- 常见原因：oldText 与实际文件内容不匹配（文件已被其他编辑改动）
+- 排查步骤：`tail -50 gateway.log | grep -i "文件名\|failed\|error"`
+- 发现问题后，尝试用 read 工具重新读取文件确认当前内容，再用 edit 重试
 
 - **授权默认规则**：邮件发出后1小时无回复 = 默认获得授权按建议执行（James确认）
 - **邮件必含下一步计划**：每封邮件必须附上下一步计划 + 执行理由

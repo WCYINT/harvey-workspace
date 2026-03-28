@@ -1,0 +1,173 @@
+元宝 OpenClaw 插件自动修复报告（Doctor 模式）
+生成时间: 2026-03-26 07:54:22
+传入参数: --token ***:*** (appKey+appSecret)
+========================================
+
+╔══════════════════════════════════════════════════════════════╗
+║        🦞 元宝 OpenClaw 插件自动修复工具（Doctor）🦞        ║
+╚══════════════════════════════════════════════════════════════╝
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  1. OpenClaw 安装状态  [07:54:22]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✓ OpenClaw 已安装：OpenClaw 2026.3.23-2 (7ffe7e4)
+✗ OpenClaw gateway 未运行
+  启动命令：openclaw gateway
+  检测到 OpenClaw 版本：2026.3.23
+  插件包：openclaw-plugin-yuanbao@latest（OpenClaw > 2026.3.13）
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  2. 插件安装状态  [07:54:23]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  配置文件：/Users/fhjtech/.openclaw/openclaw.json
+✓ 插件 'openclaw-plugin-yuanbao' 已在配置中
+✓ 插件目录存在：/Users/fhjtech/.openclaw/extensions/openclaw-plugin-yuanbao
+✓ 插件入口文件存在：dist/index.js
+✓ 插件 manifest 存在：openclaw.plugin.json
+  Manifest 中的插件 ID：'openclaw-plugin-yuanbao'
+✓ 插件 ID 匹配
+  插件版本：2.1.0
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  3. 插件加载状态  [07:54:24]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✓ 插件已在 OpenClaw 中注册
+✓ 插件已启用
+⚠ gateway 日志中存在历史错误（可能已恢复）：
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  4. 所有 Channels 状态  [07:54:34]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  已配置的 channels：
+
+    [plugins] feishu_doc: Registered feishu_doc, feishu_app_scopes
+    [plugins] feishu_chat: Registered feishu_chat tool
+    [plugins] feishu_wiki: Registered feishu_wiki tool
+    [plugins] feishu_drive: Registered feishu_drive tool
+    [plugins] feishu_bitable: Registered bitable tools
+    Chat channels:
+    - Feishu default: configured, enabled
+    - 元宝 Bot default: configured, enabled
+    
+    Auth providers (OAuth + API keys):
+    - openrouter:default (api_key)
+    - minimax-cn:default (api_key)
+    - minimax:cn (api_key)
+    - openai-codex:default (oauth)
+    - minimax-portal:default (oauth)
+    
+    [plugins] feishu_doc: Registered feishu_doc, feishu_app_scopes
+    [plugins] feishu_chat: Registered feishu_chat tool
+    [plugins] feishu_wiki: Registered feishu_wiki tool
+    [plugins] feishu_drive: Registered feishu_drive tool
+    [plugins] feishu_bitable: Registered bitable tools
+    [plugins] feishu_doc: Registered feishu_doc, feishu_app_scopes
+    [plugins] feishu_chat: Registered feishu_chat tool
+    [plugins] feishu_wiki: Registered feishu_wiki tool
+    [plugins] feishu_drive: Registered feishu_drive tool
+    [plugins] feishu_bitable: Registered bitable tools
+    [plugins] feishu_doc: Registered feishu_doc, feishu_app_scopes
+    [plugins] feishu_chat: Registered feishu_chat tool
+    [plugins] feishu_wiki: Registered feishu_wiki tool
+    [plugins] feishu_drive: Registered feishu_drive tool
+    [plugins] feishu_bitable: Registered bitable tools
+    [plugins] feishu_doc: Registered feishu_doc, feishu_app_scopes
+    [plugins] feishu_chat: Registered feishu_chat tool
+    [plugins] feishu_wiki: Registered feishu_wiki tool
+    [plugins] feishu_drive: Registered feishu_drive tool
+    [plugins] feishu_bitable: Registered bitable tools
+    [plugins] feishu_doc: Registered feishu_doc, feishu_app_scopes
+    [plugins] feishu_chat: Registered feishu_chat tool
+    [plugins] feishu_wiki: Registered feishu_wiki tool
+    [plugins] feishu_drive: Registered feishu_drive tool
+    [plugins] feishu_bitable: Registered bitable tools
+    [plugins] feishu_doc: Registered feishu_doc, feishu_app_scopes
+    [plugins] feishu_chat: Registered feishu_chat tool
+    [plugins] feishu_wiki: Registered feishu_wiki tool
+    [plugins] feishu_drive: Registered feishu_drive tool
+    [plugins] feishu_bitable: Registered bitable tools
+    [plugins] feishu_doc: Registered feishu_doc, feishu_app_scopes
+    [plugins] feishu_chat: Registered feishu_chat tool
+    [plugins] feishu_wiki: Registered feishu_wiki tool
+    [plugins] feishu_drive: Registered feishu_drive tool
+    [plugins] feishu_bitable: Registered bitable tools
+    [plugins] feishu_doc: Registered feishu_doc, feishu_app_scopes
+    [plugins] feishu_chat: Registered feishu_chat tool
+    [plugins] feishu_wiki: Registered feishu_wiki tool
+    [plugins] feishu_drive: Registered feishu_drive tool
+    [plugins] feishu_bitable: Registered bitable tools
+    [openai-codex] Token refresh failed: 403 {"error":{"code":"unsupported_country_region_territory","message":"Country, region, or territory not supported","param":null,"type":"request_forbidden"}}
+    [openai-codex] Token refresh failed: 403 {"error":{"code":"unsupported_country_region_territory","message":"Country, region, or territory not supported","param":null,"type":"request_forbidden"}}
+    Usage:
+      MiniMax
+        5h: 33% left · resets 2h 5m
+    
+    Docs: https://docs.openclaw.ai/gateway/configuration
+
+✗ ✗ 2 个 channel 处于错误状态
+  \033[1;33m说明：\033[0m不显示凭证信息。下方仅检查元宝 channel 的配置详情。
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  5. 元宝 Channel 配置  [07:54:42]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✓ 元宝 channel 配置已找到
+✓ appKey 已配置
+✓ appSecret 已配置
+  元宝 channel 状态：
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  6. 网络连接性（仅元宝）  [07:54:49]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  检查 API 域名：bot.yuanbao.tencent.com
+✓ API 域名可达
+  检查 WebSocket 域名：bot-wss.yuanbao.tencent.com
+⚠ WebSocket 域名不可达（这可能是检测工具问题）
+  请检查您的网络连接和防火墙设置
+  DNS 解析 bot.yuanbao.tencent.com:
+✓ DNS 解析成功
+    bot.yuanbao.tencent.com has address 43.140.152.251
+    bot.yuanbao.tencent.com has address 124.220.119.237
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  7. 最近的 Gateway 日志（元宝相关）  [07:54:50]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  日志文件：/tmp/openclaw/openclaw-2026-03-26.log
+  最近的元宝日志：
+    {"0":"{\"subsystem\":\"plugins\"}","1":"feishu_doc: Registered feishu_doc, feishu_app_scopes","_meta":{"runtime":"node","runtimeVersion":"24.13.1","hostname":"unknown","name":"{\"subsystem\":\"plugins\"}","parentNames":["openclaw"],"date":"2026-03-25T23:54:49.138Z","logLevelId":3,"logLevelName":"INFO","path":{"fullFilePath":"file:///Users/fhjtech/.openclaw/extensions/openclaw-plugin-yuanbao/node_modules/openclaw/dist/env-D1ktUnAV.js:19772:14","fileName":"env-D1ktUnAV.js","fileNameWithLine":"env-D1ktUnAV.js:19772","fileColumn":"14","fileLine":"19772","filePath":"/Users/fhjtech/.openclaw/extensions/openclaw-plugin-yuanbao/node_modules/openclaw/dist/env-D1ktUnAV.js","filePathWithLine":"/Users/fhjtech/.openclaw/extensions/openclaw-plugin-yuanbao/node_modules/openclaw/dist/env-D1ktUnAV.js:19772","method":"logToFile"}},"time":"2026-03-26T07:54:49.139+08:00"}
+    {"0":"{\"subsystem\":\"plugins\"}","1":"feishu_chat: Registered feishu_chat tool","_meta":{"runtime":"node","runtimeVersion":"24.13.1","hostname":"unknown","name":"{\"subsystem\":\"plugins\"}","parentNames":["openclaw"],"date":"2026-03-25T23:54:49.143Z","logLevelId":3,"logLevelName":"INFO","path":{"fullFilePath":"file:///Users/fhjtech/.openclaw/extensions/openclaw-plugin-yuanbao/node_modules/openclaw/dist/env-D1ktUnAV.js:19772:14","fileName":"env-D1ktUnAV.js","fileNameWithLine":"env-D1ktUnAV.js:19772","fileColumn":"14","fileLine":"19772","filePath":"/Users/fhjtech/.openclaw/extensions/openclaw-plugin-yuanbao/node_modules/openclaw/dist/env-D1ktUnAV.js","filePathWithLine":"/Users/fhjtech/.openclaw/extensions/openclaw-plugin-yuanbao/node_modules/openclaw/dist/env-D1ktUnAV.js:19772","method":"logToFile"}},"time":"2026-03-26T07:54:49.143+08:00"}
+    {"0":"{\"subsystem\":\"plugins\"}","1":"feishu_wiki: Registered feishu_wiki tool","_meta":{"runtime":"node","runtimeVersion":"24.13.1","hostname":"unknown","name":"{\"subsystem\":\"plugins\"}","parentNames":["openclaw"],"date":"2026-03-25T23:54:49.144Z","logLevelId":3,"logLevelName":"INFO","path":{"fullFilePath":"file:///Users/fhjtech/.openclaw/extensions/openclaw-plugin-yuanbao/node_modules/openclaw/dist/env-D1ktUnAV.js:19772:14","fileName":"env-D1ktUnAV.js","fileNameWithLine":"env-D1ktUnAV.js:19772","fileColumn":"14","fileLine":"19772","filePath":"/Users/fhjtech/.openclaw/extensions/openclaw-plugin-yuanbao/node_modules/openclaw/dist/env-D1ktUnAV.js","filePathWithLine":"/Users/fhjtech/.openclaw/extensions/openclaw-plugin-yuanbao/node_modules/openclaw/dist/env-D1ktUnAV.js:19772","method":"logToFile"}},"time":"2026-03-26T07:54:49.144+08:00"}
+    {"0":"{\"subsystem\":\"plugins\"}","1":"feishu_drive: Registered feishu_drive tool","_meta":{"runtime":"node","runtimeVersion":"24.13.1","hostname":"unknown","name":"{\"subsystem\":\"plugins\"}","parentNames":["openclaw"],"date":"2026-03-25T23:54:49.144Z","logLevelId":3,"logLevelName":"INFO","path":{"fullFilePath":"file:///Users/fhjtech/.openclaw/extensions/openclaw-plugin-yuanbao/node_modules/openclaw/dist/env-D1ktUnAV.js:19772:14","fileName":"env-D1ktUnAV.js","fileNameWithLine":"env-D1ktUnAV.js:19772","fileColumn":"14","fileLine":"19772","filePath":"/Users/fhjtech/.openclaw/extensions/openclaw-plugin-yuanbao/node_modules/openclaw/dist/env-D1ktUnAV.js","filePathWithLine":"/Users/fhjtech/.openclaw/extensions/openclaw-plugin-yuanbao/node_modules/openclaw/dist/env-D1ktUnAV.js:19772","method":"logToFile"}},"time":"2026-03-26T07:54:49.144+08:00"}
+    {"0":"{\"subsystem\":\"plugins\"}","1":"feishu_bitable: Registered bitable tools","_meta":{"runtime":"node","runtimeVersion":"24.13.1","hostname":"unknown","name":"{\"subsystem\":\"plugins\"}","parentNames":["openclaw"],"date":"2026-03-25T23:54:49.145Z","logLevelId":3,"logLevelName":"INFO","path":{"fullFilePath":"file:///Users/fhjtech/.openclaw/extensions/openclaw-plugin-yuanbao/node_modules/openclaw/dist/env-D1ktUnAV.js:19772:14","fileName":"env-D1ktUnAV.js","fileNameWithLine":"env-D1ktUnAV.js:19772","fileColumn":"14","fileLine":"19772","filePath":"/Users/fhjtech/.openclaw/extensions/openclaw-plugin-yuanbao/node_modules/openclaw/dist/env-D1ktUnAV.js","filePathWithLine":"/Users/fhjtech/.openclaw/extensions/openclaw-plugin-yuanbao/node_modules/openclaw/dist/env-D1ktUnAV.js:19772","method":"logToFile"}},"time":"2026-03-26T07:54:49.145+08:00"}
+    {"0":"{\"subsystem\":\"plugins\"}","1":"feishu_doc: Registered feishu_doc, feishu_app_scopes","_meta":{"runtime":"node","runtimeVersion":"24.13.1","hostname":"unknown","name":"{\"subsystem\":\"plugins\"}","parentNames":["openclaw"],"date":"2026-03-25T23:54:49.231Z","logLevelId":3,"logLevelName":"INFO","path":{"fullFilePath":"file:///Users/fhjtech/.openclaw/extensions/openclaw-plugin-yuanbao/node_modules/openclaw/dist/env-D1ktUnAV.js:19772:14","fileName":"env-D1ktUnAV.js","fileNameWithLine":"env-D1ktUnAV.js:19772","fileColumn":"14","fileLine":"19772","filePath":"/Users/fhjtech/.openclaw/extensions/openclaw-plugin-yuanbao/node_modules/openclaw/dist/env-D1ktUnAV.js","filePathWithLine":"/Users/fhjtech/.openclaw/extensions/openclaw-plugin-yuanbao/node_modules/openclaw/dist/env-D1ktUnAV.js:19772","method":"logToFile"}},"time":"2026-03-26T07:54:49.231+08:00"}
+    {"0":"{\"subsystem\":\"plugins\"}","1":"feishu_chat: Registered feishu_chat tool","_meta":{"runtime":"node","runtimeVersion":"24.13.1","hostname":"unknown","name":"{\"subsystem\":\"plugins\"}","parentNames":["openclaw"],"date":"2026-03-25T23:54:49.232Z","logLevelId":3,"logLevelName":"INFO","path":{"fullFilePath":"file:///Users/fhjtech/.openclaw/extensions/openclaw-plugin-yuanbao/node_modules/openclaw/dist/env-D1ktUnAV.js:19772:14","fileName":"env-D1ktUnAV.js","fileNameWithLine":"env-D1ktUnAV.js:19772","fileColumn":"14","fileLine":"19772","filePath":"/Users/fhjtech/.openclaw/extensions/openclaw-plugin-yuanbao/node_modules/openclaw/dist/env-D1ktUnAV.js","filePathWithLine":"/Users/fhjtech/.openclaw/extensions/openclaw-plugin-yuanbao/node_modules/openclaw/dist/env-D1ktUnAV.js:19772","method":"logToFile"}},"time":"2026-03-26T07:54:49.232+08:00"}
+    {"0":"{\"subsystem\":\"plugins\"}","1":"feishu_wiki: Registered feishu_wiki tool","_meta":{"runtime":"node","runtimeVersion":"24.13.1","hostname":"unknown","name":"{\"subsystem\":\"plugins\"}","parentNames":["openclaw"],"date":"2026-03-25T23:54:49.233Z","logLevelId":3,"logLevelName":"INFO","path":{"fullFilePath":"file:///Users/fhjtech/.openclaw/extensions/openclaw-plugin-yuanbao/node_modules/openclaw/dist/env-D1ktUnAV.js:19772:14","fileName":"env-D1ktUnAV.js","fileNameWithLine":"env-D1ktUnAV.js:19772","fileColumn":"14","fileLine":"19772","filePath":"/Users/fhjtech/.openclaw/extensions/openclaw-plugin-yuanbao/node_modules/openclaw/dist/env-D1ktUnAV.js","filePathWithLine":"/Users/fhjtech/.openclaw/extensions/openclaw-plugin-yuanbao/node_modules/openclaw/dist/env-D1ktUnAV.js:19772","method":"logToFile"}},"time":"2026-03-26T07:54:49.233+08:00"}
+    {"0":"{\"subsystem\":\"plugins\"}","1":"feishu_drive: Registered feishu_drive tool","_meta":{"runtime":"node","runtimeVersion":"24.13.1","hostname":"unknown","name":"{\"subsystem\":\"plugins\"}","parentNames":["openclaw"],"date":"2026-03-25T23:54:49.233Z","logLevelId":3,"logLevelName":"INFO","path":{"fullFilePath":"file:///Users/fhjtech/.openclaw/extensions/openclaw-plugin-yuanbao/node_modules/openclaw/dist/env-D1ktUnAV.js:19772:14","fileName":"env-D1ktUnAV.js","fileNameWithLine":"env-D1ktUnAV.js:19772","fileColumn":"14","fileLine":"19772","filePath":"/Users/fhjtech/.openclaw/extensions/openclaw-plugin-yuanbao/node_modules/openclaw/dist/env-D1ktUnAV.js","filePathWithLine":"/Users/fhjtech/.openclaw/extensions/openclaw-plugin-yuanbao/node_modules/openclaw/dist/env-D1ktUnAV.js:19772","method":"logToFile"}},"time":"2026-03-26T07:54:49.233+08:00"}
+    {"0":"{\"subsystem\":\"plugins\"}","1":"feishu_bitable: Registered bitable tools","_meta":{"runtime":"node","runtimeVersion":"24.13.1","hostname":"unknown","name":"{\"subsystem\":\"plugins\"}","parentNames":["openclaw"],"date":"2026-03-25T23:54:49.234Z","logLevelId":3,"logLevelName":"INFO","path":{"fullFilePath":"file:///Users/fhjtech/.openclaw/extensions/openclaw-plugin-yuanbao/node_modules/openclaw/dist/env-D1ktUnAV.js:19772:14","fileName":"env-D1ktUnAV.js","fileNameWithLine":"env-D1ktUnAV.js:19772","fileColumn":"14","fileLine":"19772","filePath":"/Users/fhjtech/.openclaw/extensions/openclaw-plugin-yuanbao/node_modules/openclaw/dist/env-D1ktUnAV.js","filePathWithLine":"/Users/fhjtech/.openclaw/extensions/openclaw-plugin-yuanbao/node_modules/openclaw/dist/env-D1ktUnAV.js:19772","method":"logToFile"}},"time":"2026-03-26T07:54:49.234+08:00"}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  8. 运行时状态输出（已知错误特征匹配）  [07:54:50]
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✓ status 输出中未发现额外的已知错误特征
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  诊断结果汇总
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  共发现 3 个问题：
+
+  [1] OpenClaw Gateway 未运行
+       ✗ 阻断  |  来源：结构检查
+  [2] Gateway 日志中存在历史错误（参考）
+       ⚠ 警告  |  来源：结构检查
+  [3] 其他 Channel 断联或错误
+       ⚠ 警告  |  来源：结构检查
+
+开始修复
+
+✓ 配置已备份：/Users/fhjtech/.openclaw/openclaw.json.yuanbao-20260326_075458.bak
+配置备份：/Users/fhjtech/.openclaw/openclaw.json.yuanbao-20260326_075458.bak
+→ 修复：启动 OpenClaw Gateway
+  已发送启动命令，等待 gateway 就绪...
+✓ OpenClaw Gateway 已启动 (PID: 5689)
+✓ channels.yuanbao.enabled 已设为 true
+→ 修复：重启 Gateway 恢复 Channel 连接

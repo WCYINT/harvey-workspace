@@ -72,7 +72,7 @@ def classify_complexity(task: str) -> str:
     
     if high_score >= 1:
         return "HIGH"
-    elif med_score >= 2:
+    elif med_score >= 1:
         return "MEDIUM"
     else:
         return "LOW"
@@ -330,7 +330,7 @@ def reject_plan(plan_id: str, reason: str = "") -> dict:
     return plan
 
 
-def log_execution(plan_id: str, step: int, action: str, result: str):
+def log_execution(plan_id: str, step: int, action: str, result: str) -> None:
     """Log execution of a step."""
     plan = load_plan(plan_id)
     if not plan:
@@ -395,14 +395,14 @@ def format_plan_for_review(plan: dict) -> str:
 
 # ─── CLI ────────────────────────────────────────────────────────────────────
 
-def cmd_plan(args):
+def cmd_plan(args) -> None:
     """Create a new PRM plan."""
     plan = create_plan(args.task, args.session or "")
     print(format_plan_for_review(plan))
     return plan["plan_id"]
 
 
-def cmd_validate(args):
+def cmd_validate(args) -> None:
     """Validate an existing plan's outcome (ORM)."""
     plan = load_plan(args.plan_id)
     if not plan:
@@ -426,7 +426,7 @@ def cmd_validate(args):
     return result
 
 
-def cmd_review_log(args):
+def cmd_review_log(args) -> None:
     """Show recent plan history."""
     plans = sorted(PLANS_DIR.glob("*.json"), key=lambda p: p.stat().st_mtime, reverse=True)
     
@@ -448,7 +448,7 @@ def cmd_review_log(args):
     print("\n".join(lines))
 
 
-def cmd_status(args):
+def cmd_status(args) -> None:
     """Show PRM system status."""
     plans = sorted(PLANS_DIR.glob("*.json"), key=lambda p: p.stat().st_mtime, reverse=True)
     pending = sum(1 for p in plans if json.loads(p.read_text()).get("status") == "PENDING_CONFIRM")
@@ -486,7 +486,7 @@ def cmd_status(args):
 """)
 
 
-def main():
+def main() -> None:
     import argparse
     parser = argparse.ArgumentParser(description="Harvey PRM Self-Review System")
     sub = parser.add_subparsers(dest="cmd")

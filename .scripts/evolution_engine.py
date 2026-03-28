@@ -134,8 +134,9 @@ def _learn_something_new() -> str:
     name, example = features[idx]
     _log(f"[H1-LEARN] Today: {name} | Example: {example}")
 
-    # 写一个实际用法的 demo 脚本
-    demo_path = WORKSPACE / f".scripts/demos/{name}.py"
+    # 写一个实际用法的 demo 脚本（禁止使用标准库同名，强制加 _demo 后缀）
+    safe_name = f"{name}_demo" if name in ("contextlib", "functools", "itertools", "os", "sys", "re", "json", "collections", "typing", "pathlib", "asyncio") else name
+    demo_path = WORKSPACE / f".scripts/demos/{safe_name}.py"
     demo_path.parent.mkdir(exist_ok=True)
     demo_path.write_text(f"# Learning: {name}\n# Example: {example}\n\n", encoding="utf-8")
     return name

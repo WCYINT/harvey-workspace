@@ -332,3 +332,29 @@ This is a starting point. Add your own conventions, style, and rules as you figu
 **邮件配置：**
 - 发送方: wcyint@163.com
 - 接收方: wcyint@163.com
+
+## 🚨 OpenClaw 版本升级后自动检查规则（黄金规则）
+
+**触发条件：** OpenClaw 版本升级后（包括 beta）
+**执行步骤（升级后必须立即执行）：**
+1. 检查例行任务 LaunchAgents 是否正常运行
+2. 执行自动测试验证邮件发送、SMTP认证、cron任务
+3. 验证 daily_skills_summary.py 等关键脚本语法和功能
+4. 反馈测试结果给 James
+
+**例行任务清单：**
+```bash
+# 检查所有 LaunchAgents 状态
+launchctl list | grep hjtech
+
+# 检查 daily-summary 日志
+tail -10 ~/.openclaw/logs/daily_summary.log
+
+# 测试 SMTP
+python3 -c "import smtplib; ..."
+
+# 验证 cron 任务执行
+cat ~/.openclaw/logs/usage_monitor.log | tail -5
+```
+
+**执行时机：** 升级完成后的第一次 heartbeat 或首次交互时必须包含检查结果反馈

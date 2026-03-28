@@ -1,117 +1,437 @@
 {
   "version": 1,
   "skills": {
-    "ai-income-agent": {
-      "name": "AI Income Agent",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=ai-income-agent",
+    "4claw": {
+      "name": "4claw",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=4claw",
+      "source": "skillhub",
+      "version": "0.2.4"
+    },
+    "arya-reminders": {
+      "name": "Arya Reminders",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=arya-reminders",
+      "source": "skillhub",
+      "version": "0.1.1"
+    },
+    "adversarial-prompting": {
+      "name": "Adversarial Prompting",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=adversarial-prompting",
       "source": "skillhub",
       "version": "1.0.0"
     },
-    "agent-batch-guard": {
-      "name": "Agent Batch Guard",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=agent-batch-guard",
+    "atlassian-mcp": {
+      "name": "Atlassian MCP (Jira, Confluence)",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=atlassian-mcp",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "asc-release-flow": {
+      "name": "ASC Release Flow",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=asc-release-flow",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "acestep-lyrics-transcription": {
+      "name": "acestep-lyrics-transcription",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=acestep-lyrics-transcription",
       "source": "skillhub",
       "version": "1.0.1"
     },
-    "agent-ops-framework": {
-      "name": "Agent Ops Framework",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=agent-ops-framework",
-      "source": "skillhub",
-      "version": "2.4.5"
-    },
-    "airweave": {
-      "name": "Airweave",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=airweave",
+    "agentx-marketplace": {
+      "name": "agentX marketplace",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=agentx-marketplace",
       "source": "skillhub",
       "version": "1.0.1"
     },
-    "security-guardian": {
-      "name": "Security Guardian",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=security-guardian",
-      "source": "skillhub",
-      "version": "1.1.0"
-    },
-    "content-factory": {
-      "name": "content-factory",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=content-factory",
+    "arc-department-manager": {
+      "name": "Department Manager",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=arc-department-manager",
       "source": "skillhub",
       "version": "1.0.0"
     },
-    "notion-api-automation": {
-      "name": "Notion API",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=notion-api-automation",
+    "ag-model-usage": {
+      "name": "Ag Model Usage",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=ag-model-usage",
       "source": "skillhub",
       "version": "1.0.0"
     },
-    "aiml-image-video": {
-      "name": "AIML Generate images and videos",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=aiml-image-video",
+    "adaptive-suite": {
+      "name": "adaptive-suite",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=adaptive-suite",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "aap-passport": {
+      "name": "Aap Passport",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=aap-passport",
+      "source": "skillhub",
+      "version": "3.2.0"
+    },
+    "aiml-embeddings": {
+      "name": "AIML Embeddings Generator",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=aiml-embeddings",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "data-ai-daily-brief": {
+      "name": "Data+AI Daily Brief",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=data-ai-daily-brief",
       "source": "skillhub",
       "version": "1.0.2"
     },
-    "aisa-market-skill": {
-      "name": "MarketPulse Financial Data",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=aisa-market-skill",
+    "agentmail": {
+      "name": "AgentMail",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=agentmail",
+      "source": "skillhub",
+      "version": "1.1.1"
+    },
+    "agent-doppelganger": {
+      "name": "Agent Doppelgänger",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=agent-doppelganger",
       "source": "skillhub",
       "version": "1.0.0"
     },
-    "ai-3d-generator": {
-      "name": "Ai 3d Generator",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=ai-3d-generator",
+    "agentmail-integration": {
+      "name": "AgentMail Integration",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=agentmail-integration",
+      "source": "skillhub",
+      "version": "1.1.0"
+    },
+    "serp-analysis": {
+      "name": "Serp Analysis",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=serp-analysis",
+      "source": "skillhub",
+      "version": "3.0.0"
+    },
+    "ai-project-learner": {
+      "name": "AI Project Learner",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=ai-project-learner",
       "source": "skillhub",
       "version": "1.0.0"
     },
-    "agenthc-market-intelligence": {
-      "name": "Stock Market Intelligence",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=agenthc-market-intelligence",
+    "agent-security-monitor": {
+      "name": "Agent Security Monitor",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=agent-security-monitor",
       "source": "skillhub",
-      "version": "2.4.0"
+      "version": "1.1.0"
     },
-    "ai-twitter-daily": {
-      "name": "AI Twitter Daily",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=ai-twitter-daily",
+    "aixin": {
+      "name": "Aixin-agentID-chat",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=aixin",
+      "source": "skillhub",
+      "version": "0.1.1"
+    },
+    "database-migrations": {
+      "name": "database-migrations",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=database-migrations",
       "source": "skillhub",
       "version": "1.0.0"
     },
-    "aigohotel-mcp": {
-      "name": "aigohotel-mcp",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=aigohotel-mcp",
+    "ai-agent-helper-moss": {
+      "name": "Ai Agent Helper Moss",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=ai-agent-helper-moss",
+      "source": "skillhub",
+      "version": "1.0.1"
+    },
+    "ai-documentation-generator": {
+      "name": "Ai Documentation Generator",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=ai-documentation-generator",
       "source": "skillhub",
       "version": "1.0.0"
     },
-    "agent-browser-0-2-0": {
-      "name": "Agent Browser 0.2.0",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=agent-browser-0-2-0",
+    "content-idea-gen": {
+      "name": "Content Idea Generator",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=content-idea-gen",
       "source": "skillhub",
       "version": "1.0.0"
     },
-    "aicone": {
-      "name": "aiclone",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=aicone",
+    "security-sentinel": {
+      "name": "Security Sentinel",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=security-sentinel",
       "source": "skillhub",
-      "version": "2.0.0"
+      "version": "1.0.1"
     },
-    "airdrop-alert": {
-      "name": "Airdrop Alert",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=airdrop-alert",
+    "airdrop-checker": {
+      "name": "Airdrop Checker",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=airdrop-checker",
+      "source": "skillhub",
+      "version": "1.1.0"
+    },
+    "Check": {
+      "name": "Check",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=Check",
+      "source": "skillhub",
+      "version": ""
+    },
+    "ai-md": {
+      "name": "AI.MD",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=ai-md",
+      "source": "skillhub",
+      "version": "4.0.0"
+    },
+    "Chinese": {
+      "name": "Chinese",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=Chinese",
+      "source": "skillhub",
+      "version": ""
+    },
+    "ct-accessibility-toolkit": {
+      "name": "Accessibility Toolkit",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=ct-accessibility-toolkit",
       "source": "skillhub",
       "version": "1.0.0"
     },
-    "ai-business-plan-generator": {
-      "name": "AI Business Plan Generator — Full Investor-Ready Plan in 10 Minutes",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=ai-business-plan-generator",
+    "ai-company-starter": {
+      "name": "AI Company Starter",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=ai-company-starter",
+      "source": "skillhub",
+      "version": "1.0.2"
+    },
+    "ai-video-generation": {
+      "name": "Ai Video Generation",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=ai-video-generation",
+      "source": "skillhub",
+      "version": "0.1.5"
+    },
+    "tradecraft": {
+      "name": "Tradecraft.finance - Agents trade together on Solana",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=tradecraft",
+      "source": "skillhub",
+      "version": "1.0.1"
+    },
+    "afrexai-data-migration": {
+      "name": "Data Migration Planner",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=afrexai-data-migration",
       "source": "skillhub",
       "version": "1.0.0"
     },
-    "security-operator": {
-      "name": "Security Operator",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=security-operator",
+    "aicodem-xmind-testcase": {
+      "name": "Aicodem skill",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=aicodem-xmind-testcase",
       "source": "skillhub",
-      "version": "2.2.0"
-    }
-  }
-}
-
+      "version": "1.0.0"
+    },
+    "agent-defibrillator": {
+      "name": "Agent Defibrillator",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=agent-defibrillator",
+      "source": "skillhub",
+      "version": "1.0.1"
+    },
+    "agent-soul-crafter": {
+      "name": "Agent Soul Crafter",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=agent-soul-crafter",
+      "source": "skillhub",
+      "version": "1.1.1"
+    },
+    "ai-news-daily": {
+      "name": "ai-news-daily-v1.0.4",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=ai-news-daily",
+      "source": "skillhub",
+      "version": "1.0.4"
+    },
+    "mx-findata": {
+      "name": "MX Fin Data",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=mx-findata",
+      "source": "skillhub",
+      "version": "1.0.2"
+    },
+    "agent-browser-0": {
+      "name": "Agent Browser 0",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=agent-browser-0",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "data912": {
+      "name": "Data 912 Market Data",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=data912",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "Build": {
+      "name": "Build",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=Build",
+      "source": "skillhub",
+      "version": ""
+    },
+    "ait-community": {
+      "name": "AIT Community",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=ait-community",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "Write": {
+      "name": "Write",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=Write",
+      "source": "skillhub",
+      "version": ""
+    },
+    "Expense": {
+      "name": "Expense",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=Expense",
+      "source": "skillhub",
+      "version": ""
+    },
+    "WordPress": {
+      "name": "WordPress",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=WordPress",
+      "source": "skillhub",
+      "version": ""
+    },
+    "agent-media": {
+      "name": "Agent Media: Generate AI-powered videos and images from the terminal using the `agent-media` CLI.",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=agent-media",
+      "source": "skillhub",
+      "version": "1.0.1"
+    },
+    "agentsocial": {
+      "name": "Agentsocial",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=agentsocial",
+      "source": "skillhub",
+      "version": "0.4.0"
+    },
+    "ai-agent-setup": {
+      "name": "Ai Agent Setup",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=ai-agent-setup",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "agent-wallet-cli": {
+      "name": "Agent Wallet CLI",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=agent-wallet-cli",
+      "source": "skillhub",
+      "version": "1.4.0"
+    },
+    "Scaffold": {
+      "name": "Scaffold",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=Scaffold",
+      "source": "skillhub",
+      "version": ""
+    },
+    "ai-invoice-generator": {
+      "name": "Invoice Generator",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=ai-invoice-generator",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "ai-content-pipeline": {
+      "name": "Ai Content Pipeline",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=ai-content-pipeline",
+      "source": "skillhub",
+      "version": "0.1.5"
+    },
+    "agent-orchestrator-molter": {
+      "name": "Agent Orchestrator",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=agent-orchestrator-molter",
+      "source": "skillhub",
+      "version": "1.0.5"
+    },
+    "Browser": {
+      "name": "Browser",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=Browser",
+      "source": "skillhub",
+      "version": ""
+    },
+    "Design": {
+      "name": "Design",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=Design",
+      "source": "skillhub",
+      "version": ""
+    },
+    "Audit": {
+      "name": "Audit",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=Audit",
+      "source": "skillhub",
+      "version": ""
+    },
+    "Delegate": {
+      "name": "Delegate",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=Delegate",
+      "source": "skillhub",
+      "version": ""
+    },
+    "zonein": {
+      "name": "Hyperliquid & Polymarket Trading Agent OS — Smart Money Signals, Backtesting, Autonomous Execution & Self-Learning | ZoneIn",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=zonein",
+      "source": "skillhub",
+      "version": "2.3.6"
+    },
+    "Monitor": {
+      "name": "Monitor",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=Monitor",
+      "source": "skillhub",
+      "version": ""
+    },
+    "Book": {
+      "name": "Book",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=Book",
+      "source": "skillhub",
+      "version": ""
+    },
+    "computer-use": {
+      "name": "Computer Use",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=computer-use",
+      "source": "skillhub",
+      "version": "1.2.1"
+    },
+    "personal-productivity": {
+      "name": "Personal Productivity",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=personal-productivity",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "weather": {
+      "name": "Weather",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=weather",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "Send": {
+      "name": "Send",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=Send",
+      "source": "skillhub",
+      "version": ""
+    },
+    "productivity-design": {
+      "name": "productivity-design",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=productivity-design",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "academic-writing-assistant": {
+      "name": "Academic Writing Assistant",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=academic-writing-assistant",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "chinese-writing-assistant": {
+      "name": "专业中文写稿助手",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=chinese-writing-assistant",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "api-gateway": {
+      "name": "API Gateway",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=api-gateway",
+      "source": "skillhub",
+      "version": "1.0.54"
+    },
+    "ai-writing-assistant": {
+      "name": "Ai Writing Assistant",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=ai-writing-assistant",
+      "source": "skillhub",
+      "version": "1.0.0"
+    },
+    "agentledger-writing-assistant": {
+      "name": "Writing Assistant",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=agentledger-writing-assistant",
+      "source": "skillhub",
+      "version": "1.0.1"
+    },
+    "agentic-eval": {
+      "name": "agentic-eval",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=agentic-eval",
+      "source": "skillhub",
+      "version": "1.0.0"
     }
   }
 }

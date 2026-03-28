@@ -26,7 +26,7 @@ class HaveryEmailClient:
     def __init__(self, config_path: Optional[str] = None):
         """Initialize email client with configuration"""
         self.email = "wcyint@163.com"
-        self.password = "PWvrfWXa6PXWiQLn"
+        self.password = "SEMefmThGnEKJiTz"
         
         # Server configurations
         self.imap_server = "imap.163.com"

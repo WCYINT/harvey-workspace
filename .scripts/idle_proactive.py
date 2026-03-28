@@ -16,7 +16,6 @@ from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
-import os
 
 TZ_CST = timezone(timedelta(hours=8))
 NOW = datetime.now(TZ_CST)
@@ -35,7 +34,8 @@ def send_alert(subject: str, body: str) -> bool:
         msg["To"] = "wcyint@163.com"
         msg.attach(MIMEText(body, "html", "utf-8"))
         with smtplib.SMTP_SSL("smtp.163.com", 465) as s:
-            os.environ.get("HARVEY_EMAIL_AUTH", "xxx")
+            auth_code = os.environ.get("HARVEY_EMAIL_AUTH", "xxx")
+            s.login("wcyint@163.com", auth_code)
             s.sendmail("wcyint@163.com", ["wcyint@163.com"], msg.as_string())
         return True
     except Exception as e:
@@ -82,11 +82,27 @@ def check_cron_health() -> dict:
             ["/Users/fhjtech/.nvm/versions/node/v24.13.1/bin/openclaw", "cron", "list"],
             capture_output=True, text=True, timeout=15
         )
+        # Parse the Status column dynamically by finding the "Status" header,
+        # then extracting the field at that column position. Old code used fixed
+        # byte offsets [117:125] which silently misparsed if output format changed.
+        header_col = None
         for line in result.stdout.split('\n'):
-            if 'error' in line.lower():
+            if header_col is None:
+                # First find the Status column index
+                idx = line.find("Status")
+                if idx != -1:
+                    header_col = idx
+                continue
+            if not line.strip() or len(line) <= header_col:
+                continue
+            # Extract status value from the column position
+            status = line[header_col:].strip().split(None, 1)[0].lower()
+            if status == "error":
                 status_map["error"] += 1
-            elif 'ok' in line.lower():
+            elif status == "ok":
                 status_map["ok"] += 1
+            elif status == "running":
+                status_map["running"] = status_map.get("running", 0) + 1
         if status_map["error"] > 2:
             issues.append(f"有{status_map['error']}个cron任务error，建议检查")
     except Exception as e:

@@ -32,6 +32,8 @@ LOG_FILE     = Path("/Users/fhjtech/.openclaw/workspace/.learnings/skill_updates
 LOG_MARKER   = Path("/Users/fhjtech/.openclaw/workspace/.learnings/.last_update_summary.json")
 LOCK_FILE        = Path("/Users/fhjtech/.openclaw/workspace/.learnings/.skillhub_update.lock")
 SMTP_HEALTH_LOG  = Path("/Users/fhjtech/.openclaw/logs/smtp_health.json")
+STALE_UP_TO_DATE_CACHE = Path("/Users/fhjtech/.openclaw/workspace/.learnings/.up_to_date_stale.json")
+STALE_UP_TO_DATE_HOURS = 2  # 如果上次报告"已是最新"且不足此时间窗口，跳过 Step1 API 调用
 SKILLHUB_CMD     = "/Users/fhjtech/.local/bin/skillhub"
 CLAWHUB_CMD  = "/opt/homebrew/bin/clawhub"
 MAX_INSTALL  = 15   # 每轮最多安装15个（James确认）
@@ -234,7 +236,9 @@ _learned_rejections: set[str] | None = None
 _REJECTED_SLUGS_LOG = Path("/Users/fhjtech/.openclaw/workspace/.learnings/rejected_slugs.json")
 
 def _load_rejected_slugs() -> set[str]:
-    """加载历史上被拒绝的slug，用于增强验证"""
+    """加载历史上被拒绝的slug，用于增强验证。
+    返回格式: {"slug"} (旧格式，无前缀) 或 {"source:slug"} (新格式，带源前缀)。
+    检查时需同时匹配两种格式以实现向后兼容。"""
     try:
         if _REJECTED_SLUGS_LOG.exists():
             with open(_REJECTED_SLUGS_LOG, "r", encoding="utf-8") as f:
@@ -244,13 +248,26 @@ def _load_rejected_slugs() -> set[str]:
         pass
     return set()
 
-def _save_rejected_slug(slug: str) -> None:
-    """记录被拒绝的slug，用于持续学习改进（统一小写避免大小写不一致导致重复过滤失败）"""
+def _is_rejected_for_source(slug_lower: str, source: str, rejected: set[str]) -> bool:
+    """检查slug是否在特定源被拒绝（向后兼容：也检查无前缀的旧格式）"""
+    # 新格式：source:slug
+    if f"{source}:{slug_lower}" in rejected:
+        return True
+    # 旧格式（全局拒绝，向后兼容）
+    if slug_lower in rejected:
+        return True
+    return False
+
+def _save_rejected_slug(slug: str, source: str | None = None) -> None:
+    """记录被拒绝的slug，用于持续学习改进。
+    新格式带source前缀（如 skillhub:inflated），实现按源隔离拒绝。
+    无source参数时使用旧格式（全局拒绝），用于向后兼容。"""
     try:
         slug_lower = slug.lower()
         rejected = _load_rejected_slugs()
-        if slug_lower not in rejected:
-            rejected.add(slug_lower)
+        key = f"{source}:{slug_lower}" if source else slug_lower
+        if key not in rejected:
+            rejected.add(key)
             _REJECTED_SLUGS_LOG.parent.mkdir(parents=True, exist_ok=True)
             with open(_REJECTED_SLUGS_LOG, "w", encoding="utf-8") as f:
                 json.dump({
@@ -295,8 +312,12 @@ def _is_valid_slug(slug: str, log_rejection: bool = True) -> bool:
     if slug in EXCEPTION_CASES:
         return False
 
-    # Rule 2: Previously learned rejections (rejected slugs are stored lowercase)
-    if slug.lower() in _learned_rejections:
+    # Rule 2: Previously learned rejections (source-aware; also checks legacy bare slugs)
+    # Note: _is_valid_slug is called at parse time before source is known, so we check
+    # both source-specific and legacy formats. In step2/step3, source is available and
+    # per-source checking is used instead.
+    slug_lower = slug.lower()
+    if slug_lower in _learned_rejections:
         if log_rejection:
             log(f"[SlugValidation] Rejected '{slug}': Learned from past failures")
         return False
@@ -313,13 +334,29 @@ def _is_valid_slug(slug: str, log_rejection: bool = True) -> bool:
             log(f"[SlugValidation] Rejected '{slug}': Slug too short (< 4 chars)")
         return False
 
-    # Rule 4: Reject pure numeric/hyphen strings
+    # Rule 4: Reject Title Case single-word slugs (e.g. 'Academic', 'Patterns', 'Professional').
+    # These are description fragments from ClawHub search that pass _is_valid_slug
+    # (not in common_words when lowercased, not in rejected yet) but fail at install.
+    # Previously handled by a belt-and-suspenders filter in step2_find_missing;
+    # moved here to make _is_valid_slug the single source of slug quality truth.
+    if (
+        len(slug) > 3
+        and slug[0].isupper()
+        and slug[1:].islower()
+        and "-" not in slug
+        and "_" not in slug
+    ):
+        if log_rejection:
+            log(f"[SlugValidation] Rejected '{slug}': Title Case single-word")
+        return False
+
+    # Rule 5: Reject pure numeric/hyphen strings
     if re.match(r"^[\d-]+$", slug):
         if log_rejection:
             log(f"[SlugValidation] Rejected '{slug}': Pure numeric/hyphen")
         return False
 
-    # Rule 5: Reject common English words (all lowercase, 2-8 chars)
+    # Rule 6: Reject common English words (all lowercase, 2-8 chars)
     # Also reject service names / brand words that keep failing with "not in index"
     # (observed in skill_updates.log: 2026-03-21 12:00-12:02)
     common_words = {
@@ -340,7 +377,10 @@ def _is_valid_slug(slug: str, log_rejection: bool = True) -> bool:
         "home", "us", "try", "ask", "end", "why", "let", "point",
         "again", "off", "give", "given", "given", "find", "found",
         # High-failure brand/service names from skill_updates.log
+        # (2026-03-28: + Ultimate, Boost, Essential, Professional, Convert, Learns, Guides, Designs, Fully)
         "gmail", "gpt", "navigate", "cornerstone", "brand",
+        "academic", "patterns", "ultimate", "boost", "essential",
+        "convert", "learns", "guides", "designs", "fully",
         # High-failure slug keywords from rejected_slugs.json (causing repeated "not in index")
         "agent", "manage", "creates", "automates",
         # Single-word adjectives/descriptive that repeatedly fail "not in index"
@@ -372,7 +412,7 @@ def _is_valid_slug(slug: str, log_rejection: bool = True) -> bool:
             log(f"[SlugValidation] Rejected '{slug}': Common English word")
         return False
 
-    # Rule 6: Reject descriptive phrases with connecting words
+    # Rule 7: Reject descriptive phrases with connecting words
     # Note: 5+ segment slugs are rejected because they're almost always versioned/descriptive.
     # 4-segment names like tiangong-wps-word-automation are legitimate platform-tool-action
     # identifiers — they represent real tools and should be allowed through.
@@ -391,7 +431,7 @@ def _is_valid_slug(slug: str, log_rejection: bool = True) -> bool:
                 log(f"[SlugValidation] Rejected '{slug}': Descriptive phrase (5+ segments: {slug.count('-')+1})")
             return False
 
-    # Rule 7: Reject common service/brand names (common false positives)
+    # Rule 8: Reject common service/brand names (common false positives)
     brand_names = {
         "google", "gmail", "notion", "docker", "github", "slack", "jira",
         "discord", "telegram", "whatsapp", "airtable", "gumroad", "stripe",
@@ -416,14 +456,14 @@ def _is_valid_slug(slug: str, log_rejection: bool = True) -> bool:
             log(f"[SlugValidation] Rejected '{slug}': Brand/service name")
         return False
 
-    # Rule 8: Additional structural validation
+    # Rule 9: Additional structural validation
     # Reject slugs that are just numbers with common suffixes
     if re.match(r"^\d+(st|nd|rd|th|px|em|rem|vh|vw|%)$", slug, re.IGNORECASE):
         if log_rejection:
             log(f"[SlugValidation] Rejected '{slug}': Numeric with suffix pattern")
         return False
 
-    # Rule 9: Reject obvious file extensions or MIME types
+    # Rule 10: Reject obvious file extensions or MIME types
     file_extensions = {
         "jpg", "jpeg", "png", "gif", "svg", "webp", "bmp", "tiff",
         "mp3", "mp4", "wav", "avi", "mov", "mkv", "flv", "wmv",
@@ -588,14 +628,33 @@ async def step1_fetch_all() -> dict[str, dict]:
 def step2_find_missing(all_skills: dict[str, dict]) -> tuple[dict[str, dict], set[str]]:
     installed = {d.name for d in SKILLS_DIR.iterdir() if d.is_dir() and not d.name.startswith(".")}
     rejected = _load_rejected_slugs()
-    missing = {slug: info for slug, info in all_skills.items()
-               if slug not in installed and slug.lower() not in rejected}
+    # Title Case single-word rejection is now in _is_valid_slug (Rule 4);
+    # step2_find_missing uses per-source rejection checking: a slug rejected
+    # by SkillHub is not rejected by ClawHub (if stored as skillhub:slug format).
+    missing = {}
+    for slug, info in all_skills.items():
+        if slug in installed:
+            continue
+        source = info.get("source", "")
+        slug_lower = slug.lower()
+        # Per-source rejection: reject only if rejected for THIS source,
+        # or if legacy bare-slug entry exists (backward compat)
+        if _is_rejected_for_source(slug_lower, source, rejected):
+            continue
+        missing[slug] = info
     log(f"[Step2] 已安装: {len(installed)} | 缺失: {len(missing)} (已过滤 {len(rejected)} 个已知失效slug)")
     return missing, installed
 
 # ── Step 3: 优先级安装 ─────────────────────────
 async def _install_one(slug: str, source: str, semaphore: asyncio.Semaphore) -> tuple[str, bool, str]:
     async with semaphore:
+        # Belt-and-suspenders: reject non-ASCII slugs before subprocess call.
+        # safe_ordered in step3_install should already filter these, but
+        # ClawHub search can return Chinese descriptions as slug field,
+        # bypassing _is_valid_slug and causing repeated "not_in_index" failures.
+        if not slug.isascii():
+            log(f"[Step3] SKIP(non-ASCII slug): {slug[:40]}")
+            return (slug, False, "non_ascii_slug")
         try:
             if source == "clawhub":
                 proc = await asyncio.create_subprocess_exec(
@@ -615,13 +674,12 @@ async def _install_one(slug: str, source: str, semaphore: asyncio.Semaphore) -> 
             # SkillHub: slug in search index but not available for install → soft skip
             # Also persist to rejection list so future runs skip validation entirely
             if not ok and "not in index" in stderr:
-                # Only save as learned rejection if:
-                # 1. The slug itself is structurally valid (not a description fragment)
-                # 2. AND the source is SkillHub (other sources' slugs don't belong in
-                #    SkillHub's rejection cache — e.g. VoltAgent slugs like
-                #    "active-maintenance" that are valid but simply not in SkillHub index)
-                if _is_valid_slug(slug) and source == "skillhub":
-                    _save_rejected_slug(slug)  # Learn: these slugs don't exist in remote index
+                # Always save as learned rejection — persistent "not in index" failures mean
+                # the remote doesn't have this slug regardless of local validation rules.
+                # Previous logic only saved valid-looking slugs, but many valid slugs
+                # (e.g. "CornerStone", "abaddon") fail validation AND install, so they
+                # never get cached and retry every run (wasting API calls + filling logs).
+                _save_rejected_slug(slug)
                 log(f"[Step3] SKIP(not in index): {slug} ({source})")
                 return (slug, False, "not_in_index")
             status = "OK" if ok else f"FAIL({stderr[:60]})"
@@ -653,13 +711,17 @@ async def step3_install(missing: dict[str, dict]) -> tuple[list[str], list[str]]
     results = await asyncio.gather(*tasks)
     ok_list = [slug for slug, ok, _ in results if ok]
     fail_list = [(slug, reason) for slug, ok, reason in results if not ok]
+    # Build slug->source mapping from results to enable per-source rejection saving
+    slug_source_map = {slug: src for slug, src, _ in results}
     not_in_index_list = [slug for slug, reason in fail_list if reason == "not_in_index"]
     # Always learn "not_in_index" failures so the slug is skipped in future runs
+    # Use per-source format (source:slug) to avoid blocking other sources
     for slug in not_in_index_list:
         # Slug already validated by _is_valid_slug at parse time; "not in index" is a
         # runtime network/index mismatch — add directly to rejection cache
-        _save_rejected_slug(slug)
-        log(f"[Step3] Learned not_in_index: {slug} -> rejected_slugs.json")
+        source = slug_source_map.get(slug, "")
+        _save_rejected_slug(slug, source)
+        log(f"[Step3] Learned not_in_index: {slug} (source={source}) -> rejected_slugs.json")
     real_fail = len(fail_list) - len(not_in_index_list)
     log(f"[Step3] 安装完成: {len(ok_list)} 成功 / {real_fail} 失败 (另有 {len(not_in_index_list)} 个跳过)")
     return ok_list, fail_list
@@ -738,6 +800,9 @@ def step5_integrate(safe: list[str], all_skills: dict) -> tuple[list[str], list[
             log(f"[Step5] OK: {slug}")
         except Exception as e:
             log(f"[Step5] FAIL: {slug} -> {e}，撤销")
+            # Persist rejection so this slug is skipped on future runs (prevents
+            # infinite retry loop when a skill downloads but has missing/broken SKILL.md)
+            _save_rejected_slug(slug)
             try:
                 shutil.rmtree(sp)
             except Exception:
@@ -929,20 +994,49 @@ def send_install_report(integrated, fail_list, unsafe, all_skills):
     msg["To"] = EMAIL_TO
     msg.attach(MIMEText(body, "html", "utf-8"))
     # ── SMTP Auth 预检（避免 535 后盲目重试）────────────
-    # Cooldown: skip SMTP attempt if 535 was logged within 72h
+    # Exponential backoff: 30min → 1h → 2h → 4h → 8h (max)
+    # Only consecutive failures within 4h window count; success resets.
+    # FIX: Always probe SMTP first — if connection succeeds, skip cooldown regardless of history.
+    _probe_ok = False
     try:
-        if SMTP_HEALTH_LOG.exists():
-            with open(SMTP_HEALTH_LOG) as f:
-                history = json.load(f)
-            recent = [h for h in history if h.get("status") in ("auth_failed", "unhealthy")]
-            if recent:
-                last_auth = datetime.fromisoformat(recent[-1]["timestamp"])
-                if (datetime.now(TZ_CST) - last_auth).total_seconds() < 259200:
-                    log(f"[邮件] SMTP 72h cooldown active (last fail: {recent[-1]['timestamp']}), 跳过预检")
-                    _archive_report(subject, body)
-                    return
+        import socket
+        socket.create_connection((SMTP_HOST, SMTP_PORT), timeout=5).close()
+        with smtplib.SMTP_SSL(SMTP_HOST, SMTP_PORT, timeout=10) as server:
+            server.ehlo()
+            server.login(EMAIL_FROM, EMAIL_PASSWORD)
+        _probe_ok = True
     except Exception:
-        pass  # Proceed if health log read fails
+        pass  # Probe failed — fall through to history-based cooldown below
+
+    if _probe_ok:
+        log("[邮件] SMTP probe succeeded, skipping cooldown")
+    else:
+        # History-based cooldown only when probe fails AND history shows recent failures
+        try:
+            if SMTP_HEALTH_LOG.exists():
+                with open(SMTP_HEALTH_LOG) as f:
+                    history = json.load(f)
+                recent = [h for h in history if h.get("status") in ("auth_failed", "unhealthy")]
+                if recent:
+                    now = datetime.now(TZ_CST)
+                    consec = 0
+                    for h in reversed(recent):
+                        fail_time = datetime.fromisoformat(h["timestamp"])
+                        age_h = (now - fail_time).total_seconds() / 3600
+                        if age_h <= 4:
+                            consec += 1
+                        else:
+                            break
+                    if consec > 0:
+                        backoff_h = min(8, 0.5 * (2 ** (consec - 1)))
+                        last_auth = datetime.fromisoformat(recent[-1]["timestamp"])
+                        elapsed = (now - last_auth).total_seconds()
+                        if elapsed < backoff_h * 3600:
+                            log(f"[邮件] SMTP backoff {backoff_h:.1f}h (consecutive={consec}, last fail: {recent[-1]['timestamp']}), 跳过预检")
+                            _archive_report(subject, body)
+                            return
+        except Exception:
+            pass
 
     try:
         with smtplib.SMTP_SSL(SMTP_HOST, SMTP_PORT, timeout=15) as server:
@@ -991,6 +1085,22 @@ def send_install_report(integrated, fail_list, unsafe, all_skills):
             server.login(EMAIL_FROM, EMAIL_PASSWORD)
             server.sendmail(EMAIL_FROM, [EMAIL_TO], msg.as_string())
         log(f"[邮件] 汇报已发送至 {EMAIL_TO}")
+        # Record success to reset consecutive failure counter
+        try:
+            health_history = []
+            if SMTP_HEALTH_LOG.exists():
+                with open(SMTP_HEALTH_LOG) as f:
+                    health_history = json.load(f)
+            health_history.append({
+                "timestamp": datetime.now(TZ_CST).isoformat(),
+                "status": "healthy",
+                "source": "skillhub_auto_update"
+            })
+            health_history = health_history[-100:]
+            with open(SMTP_HEALTH_LOG, "w") as f:
+                json.dump(health_history, f, indent=2)
+        except Exception:
+            pass
     except Exception as e:
         log(f"[邮件] 发送失败: {e}")
         _archive_report(subject, body)
@@ -1005,6 +1115,17 @@ def main() -> None:
         return
     try:
         log("=== 四源技能自动更新 Started ===")
+        # ── Stale-cache guard: skip API calls if recently confirmed "all up to date" ──
+        try:
+            cache = json.loads(STALE_UP_TO_DATE_CACHE.read_text())
+            last_empty_ts = datetime.fromisoformat(cache["ts"]).replace(tzinfo=TZ_CST)
+            age_hours = (datetime.now(TZ_CST) - last_empty_ts).total_seconds() / 3600
+            if cache.get("empty") and age_hours < STALE_UP_TO_DATE_HOURS:
+                log(f"所有技能已是最新 (cached, {age_hours:.1f}h ago < {STALE_UP_TO_DATE_HOURS}h)，跳过 Step1")
+                _release_lock()
+                return
+        except Exception:
+            pass  # Cache miss/corrupt → proceed normally
         all_skills = asyncio.run(step1_fetch_all())
         if not all_skills:
             log("[Step1] 无技能获取，中止")
@@ -1012,6 +1133,15 @@ def main() -> None:
         missing, _ = step2_find_missing(all_skills)
         if not missing:
             log("所有技能已是最新")
+            # Write stale-cache so next runs skip API calls for STALE_UP_TO_DATE_HOURS
+            try:
+                STALE_UP_TO_DATE_CACHE.write_text(json.dumps({
+                    "ts": datetime.now(TZ_CST).isoformat(),
+                    "empty": True
+                }))
+            except Exception:
+                pass
+            _release_lock()
             return
         newly_installed, install_failed = asyncio.run(step3_install(missing))
         # Even if no new installs succeeded, still process failures (especially "not_in_index"
@@ -1038,6 +1168,11 @@ def main() -> None:
         send_install_report(integrated, install_failed, unsafe, all_skills)
         log(f"=== 完成: 集成{len(integrated)} | 安全{len(safe)} | 安装{len(newly_installed)} ===")
         log_summary()
+        # Invalidate stale-cache: new skills were installed, next run must re-check
+        try:
+            STALE_UP_TO_DATE_CACHE.unlink(missing_ok=True)
+        except Exception:
+            pass
     finally:
         _release_lock()
 

@@ -1,15 +1,35 @@
 {
-  "date": "2026-03-25",
+  "date": "2026-03-28",
   "skills": [
     {
-      "slug": "ai-meeting-room",
-      "description": "AI Meeting Room (에이전트 룸)",
-      "source": "skillhub"
+      "slug": "agent-automation-scripter",
+      "description": "Agent Automation Scripter  (3.442)",
+      "source": "clawhub"
     },
     {
-      "slug": "security-operator",
-      "description": "Security Operator",
-      "source": "skillhub"
+      "slug": "openclaw-agent-browser",
+      "description": "Agent Browser  (1.166)",
+      "source": "clawhub"
+    },
+    {
+      "slug": "sub-agent-factory",
+      "description": "Sub Agent Factory  (1.084)",
+      "source": "clawhub"
+    },
+    {
+      "slug": "agency-agents-openclaw",
+      "description": "Agency Agents Openclaw  (1.012)",
+      "source": "clawhub"
+    },
+    {
+      "slug": "quack-workflow",
+      "description": "Quack Workflow Engine  (3.429)",
+      "source": "clawhub"
+    },
+    {
+      "slug": "writing-assistant-litiao",
+      "description": "Writing Assistant Litiao  (3.469)",
+      "source": "clawhub"
     }
   ]
 }

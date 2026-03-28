@@ -21,7 +21,7 @@ ERRORS_FILE = LEARNINGS_DIR / "ERRORS.md"
 # 最近对话会话目录
 SESSIONS_DIR = Path("/Users/fhjtech/.openclaw/agents/main/sessions")
 
-def get_recent_sessions() -> None:
+def get_recent_sessions() -> list[Path]:
     """获取最近的 session 文件"""
     if not SESSIONS_DIR.exists():
         return []
@@ -35,34 +35,67 @@ def get_recent_sessions() -> None:
     sessions.sort(key=lambda x: x[1], reverse=True)
     return [s[0] for s in sessions[:3]]
 
-def count_turns_on_topic(session_file, keywords) -> None:
-    """计算特定主题的来回轮次"""
+def count_turns_on_topic(session_file, keywords) -> int:
+    """计算特定主题的来回轮次
+    
+    支持两种 session 格式:
+    - OpenClaw v3: {"type":"message","message":{"role":"user|assistant","content":[{"type":"text","text":"..."}]}}
+    - Legacy: {"sender":"...","content":"..."}
+    """
     try:
         with open(session_file, 'r') as f:
             lines = f.readlines()
         
-        turns = 0
         consecutive_turns = 0
         max_consecutive = 0
         last_sender = None
         
-        for line in lines[-100:]:  # 只看最近100条
+        for line in lines[-200:]:  # 看最近200条（增加样本量）
             try:
                 msg = json.loads(line.strip())
-                content = msg.get('content', '')
-                sender = msg.get('sender', 'unknown')
+                
+                # OpenClaw v3 格式
+                if 'message' in msg and 'role' in msg['message']:
+                    role = msg['message']['role']
+                    # 提取所有文本内容块
+                    content_parts = []
+                    for block in msg['message'].get('content', []):
+                        if isinstance(block, dict) and block.get('type') == 'text':
+                            content_parts.append(block.get('text', ''))
+                        elif isinstance(block, dict) and block.get('type') == 'toolResult':
+                            # toolResult content can be str or list; guard against string iteration
+                            tc = block.get('content', [])
+                            if isinstance(tc, list):
+                                for tb in tc:
+                                    if isinstance(tb, dict) and tb.get('type') == 'text':
+                                        content_parts.append(tb.get('text', ''))
+                            elif isinstance(tc, str):
+                                content_parts.append(tc)
+                    content = ' '.join(content_parts)
+                    sender = role  # "user" or "assistant"
+                else:
+                    # Legacy 格式
+                    content = msg.get('content', '')
+                    sender = msg.get('sender', 'unknown')
                 
                 # 检查是否包含关键词
-                if any(kw.lower() in content.lower() for kw in keywords):
-                    if sender != last_sender:
-                        consecutive_turns += 1
+                has_kw = any(kw.lower() in content.lower() for kw in keywords)
+                
+                if has_kw:
+                    if sender == 'user':
+                        # 不要在看到 user 时重置——如果前一条也是 user 消息（连续用户输入），
+                        # 计数器保持（等 assistant 回应时再累加）。只有 assistant 回应后才 +1。
                         last_sender = sender
-                    turns += 1
-                    max_consecutive = max(max_consecutive, consecutive_turns)
-                else:
+                    elif sender == 'assistant' and last_sender == 'user':
+                        # assistant 完成了一个完整 round (user->assistant)，+1
+                        consecutive_turns += 1
+                        max_consecutive = max(max_consecutive, consecutive_turns)
+                        last_sender = sender
+                elif sender == 'user':
+                    # 非关键词用户消息: 话题切换，彻底重置
                     consecutive_turns = 0
-                    last_sender = None
-            except (json.JSONDecodeError, KeyError):
+                    last_sender = sender
+            except (json.JSONDecodeError, KeyError, TypeError):
                 continue
         
         return max_consecutive
@@ -104,19 +137,22 @@ def main() -> None:
         print("No recent sessions found")
         return
     
-    # 检测关键词
+    # 检测关键词（遍历所有最近 session，避免跨 session 的重复问题漏检）
     usage_keywords = ["usage", "百分比", "13%", "8%", "left", "API使用率"]
-    turn_count = count_turns_on_topic(recent[0], usage_keywords)
+    max_turns = 0
+    for session_file in recent:
+        turns = count_turns_on_topic(session_file, usage_keywords)
+        max_turns = max(max_turns, turns)
     
-    if turn_count > 3:
+    if max_turns > 3:
         log_reflection(
             topic="session_status usage% 解读",
-            turns_spent=turn_count,
+            turns_spent=max_turns,
             summary="误解 '5h 13% left' 格式，将13%理解为剩余而非已用",
             lesson="当James说'只用8%'时，没有立即确认数字来源，而是自行推演。应立即问'这个8%对应session_status哪个字段？'"
         )
     
-    print(f"Turns on usage topic: {turn_count}")
+    print(f"Max turns on usage topic (across {len(recent)} sessions): {max_turns}")
 
 if __name__ == "__main__":
     main()

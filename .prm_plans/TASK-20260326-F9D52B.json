@@ -1,0 +1,61 @@
+{
+  "plan_id": "TASK-20260326-F9D52B",
+  "task": "重构整个scripts目录的代码",
+  "complexity": "HIGH",
+  "session_id": "",
+  "created_at": "2026-03-26T11:56:39+08:00",
+  "status": "PENDING_CONFIRM",
+  "steps": [
+    {
+      "step": 1,
+      "action": "CHECK_ENV",
+      "target": "检查当前环境状态",
+      "risk": "LOW"
+    },
+    {
+      "step": 2,
+      "action": "READ_PATTERNS",
+      "target": "查询patterns.json是否有相关预防规则",
+      "risk": "LOW"
+    },
+    {
+      "step": 3,
+      "action": "PLAN",
+      "target": "制定执行计划（含回滚方案）",
+      "risk": "MEDIUM"
+    },
+    {
+      "step": 4,
+      "action": "WAIT_CONFIRM",
+      "target": "等待James确认",
+      "risk": "HIGH"
+    },
+    {
+      "step": 5,
+      "action": "BACKUP",
+      "target": "备份当前状态",
+      "risk": "LOW"
+    },
+    {
+      "step": 6,
+      "action": "EXECUTE",
+      "target": "执行变更",
+      "risk": "HIGH"
+    },
+    {
+      "step": 7,
+      "action": "VERIFY",
+      "target": "验证变更结果",
+      "risk": "MEDIUM"
+    }
+  ],
+  "prm_result": {
+    "issues": [],
+    "overall_risk": "HIGH",
+    "total_steps": 7,
+    "high_risk_count": 2,
+    "pass": true
+  },
+  "orm_results": [],
+  "execution_log": []
+}

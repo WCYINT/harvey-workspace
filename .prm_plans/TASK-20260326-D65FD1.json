@@ -1,0 +1,37 @@
+{
+  "plan_id": "TASK-20260326-D65FD1",
+  "task": "查看当前目录下有哪些文件",
+  "complexity": "LOW",
+  "session_id": "",
+  "created_at": "2026-03-26T11:55:54+08:00",
+  "status": "AUTO_APPROVED",
+  "steps": [
+    {
+      "step": 1,
+      "action": "EXECUTE",
+      "target": "执行: 查看当前目录下有哪些文件",
+      "risk": "LOW"
+    },
+    {
+      "step": 2,
+      "action": "VERIFY",
+      "target": "验证结果",
+      "risk": "LOW"
+    }
+  ],
+  "prm_result": {
+    "issues": [
+      {
+        "type": "MISSING_BACKUP",
+        "severity": "MEDIUM",
+        "message": "系统变更建议先 BACKUP 当前状态"
+      }
+    ],
+    "overall_risk": "LOW",
+    "total_steps": 2,
+    "high_risk_count": 0,
+    "pass": true
+  },
+  "orm_results": [],
+  "execution_log": []
+}

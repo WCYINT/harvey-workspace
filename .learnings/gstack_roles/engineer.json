@@ -1,16 +1,14 @@
 {
-  "timestamp": "2026-03-25T21:39:52.988431+08:00",
+  "timestamp": "2026-03-28T09:36:26.656756+08:00",
   "role": "Engineer",
   "data": {
     "role": "Engineer",
     "skills_needed": [
-      "dfmea",
-      "six_sigma",
-      "lean_manufacturing",
-      "ev_hybrid_systems",
-      "data_analytics",
-      "root_cause_analysis"
+      "data-analysis",
+      "six-sigma",
+      "automotive-engineering",
+      "project-management"
     ],
-    "reasoning": "通过DFMEA、六西格玛和精益制造等质量工具结合新能源动力系统专业知识，可快速定位根因并实施有效改进。"
+    "reasoning": "Ensuring feasible, low‑difficulty quality improvement of the plug‑in hybrid Y model demands data‑driven analysis, Six Sigma root‑cause methods, automotive system expertise, and solid project management."
   }
 }
