@@ -1,34 +1,59 @@
 {
-  "date": "2026-03-28",
+  "date": "2026-03-30",
   "skills": [
     {
-      "slug": "agent-automation-scripter",
-      "description": "Agent Automation Scripter  (3.442)",
+      "slug": "geepers-llm",
+      "description": "Geepers Llm  (3.296)",
       "source": "clawhub"
     },
     {
-      "slug": "openclaw-agent-browser",
-      "description": "Agent Browser  (1.166)",
+      "slug": "llm-evaluation",
+      "description": "Llm Evaluation  (3.076)",
       "source": "clawhub"
     },
     {
-      "slug": "sub-agent-factory",
-      "description": "Sub Agent Factory  (1.084)",
+      "slug": "transprompt",
+      "description": "TransPrompt｜一句指令，把需求变成可直接发给 AI 的专业 Prompt  (0.679)",
       "source": "clawhub"
     },
     {
-      "slug": "agency-agents-openclaw",
-      "description": "Agency Agents Openclaw  (1.012)",
+      "slug": "fumi-ai-prompt-templates",
+      "description": "Ai Prompt Templates  (0.610)",
       "source": "clawhub"
     },
     {
-      "slug": "quack-workflow",
-      "description": "Quack Workflow Engine  (3.429)",
+      "slug": "agentic-wallet",
+      "description": "Agentic Wallet  (2.831)",
       "source": "clawhub"
     },
     {
-      "slug": "writing-assistant-litiao",
-      "description": "Writing Assistant Litiao  (3.469)",
+      "slug": "agentic-workflow-automation-v2",
+      "description": "Agentic Workflow Automation  (2.828)",
+      "source": "clawhub"
+    },
+    {
+      "slug": "autonomous-agent-toolkit-automaton",
+      "description": "Autonomous Agent Toolkit  (3.074)",
+      "source": "clawhub"
+    },
+    {
+      "slug": "self-evolve-automaton",
+      "description": "Self Evolve  (0.630)",
+      "source": "clawhub"
+    },
+    {
+      "slug": "magi",
+      "description": "Self Improving  (0.593)",
+      "source": "clawhub"
+    },
+    {
+      "slug": "thinking-sovereignty",
+      "description": "thinking-sovereignty  (0.568)",
+      "source": "clawhub"
+    },
+    {
+      "slug": "coding-cli-management",
+      "description": "Coding Cli Management  (3.227)",
       "source": "clawhub"
     }
   ]

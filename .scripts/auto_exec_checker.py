@@ -111,7 +111,9 @@ def execute_default_action(state: dict) -> bool:
             import smtplib
             from email.mime.text import MIMEText
             from email.mime.multipart import MIMEMultipart
-            auth_code = os.environ.get("HARVEY_EMAIL_AUTH", "xxx")
+            auth_code = os.environ.get("HARVEY_EMAIL_AUTH")
+            if not auth_code:
+                raise ValueError("HARVEY_EMAIL_AUTH environment variable is not set")
             msg = MIMEMultipart()
             msg["From"] = "wcyint@163.com"
             msg["To"] = to_addr or "wcyint@163.com"

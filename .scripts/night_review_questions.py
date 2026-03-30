@@ -50,7 +50,7 @@ def send_question(to_name: str, questions: list) -> bool:
     msg.attach(MIMEText(body, "html", "utf-8"))
     try:
         with smtplib.SMTP_SSL("smtp.163.com", 465) as s:
-            os.environ.get("HARVEY_EMAIL_AUTH", "xxx")
+            s.login("wcyint@163.com", os.environ["HARVEY_EMAIL_AUTH"])
             s.sendmail("wcyint@163.com", ["wcyint@163.com"], msg.as_string())
         return True
     except:

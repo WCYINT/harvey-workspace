@@ -306,13 +306,19 @@ This is a starting point. Add your own conventions, style, and rules as you figu
 
 ## 技能自动更新规则（永久生效）
 
-每3小时自动执行以下6步：
-1. 从四大来源查询技能：SkillHub、ClawHub、VoltAgent、Skills.sh
-2. 对比技能库，确认未安装的技能
-3. 下载并安装未安装的技能（每次最多15个）
-4. 测试这些技能并评估其安全性
-5. 安装测试合格的技能，验证系统集成
-6. 每天早上6点、晚上6点总结发给James安装了哪些新技能以及使用场景
+每3小时自动执行以下7步：
+1. **七大类别Top100查询**：对 AI智能、开发工具、效率提升、数据分析、内容创作、通讯协作、安全合规 这7个类别，分别用其关键词到 SkillHub/ClawHub 查询Top100，并追加 ClawHub Explore Top100（评分排序）
+2. **对比技能库**：检查已安装/未安装状态
+3. **下载安装**：安装未安装的技能（每次最多15个）
+4. **Step 3.5 安全扫描**：skill-auditor 深度安全检测（credential theft, prompt injection, backdoors），高风险拒绝
+5. **分类功能测试**：按七大类别分组测试，验证技能功能可用性
+6. **集成系统**：添加到进化系统，并验证是否成功。如果不成功，取消集成该技能并报告记录
+7. **每日报告**：6:00和18:00邮件发送到 wcyint@163.com（含分类测试结果 + 用途建议）
+
+**安全扫描集成：**
+- `skill-auditor`：深度安全扫描，检测恶意模式、凭证泄露、隐蔽后门
+- 扫描结果记录到 `.learnings/skill_security_audit.json`
+- 高风险技能自动拒绝并记录
 
 **四大技能来源：**
 | 来源 | 地址 | 说明 |
@@ -328,6 +334,13 @@ This is a starting point. Add your own conventions, style, and rules as you figu
 
 **SkillHub商店：** /Users/fhjtech/.local/bin/skillhub
 **ClawHub CLI：** /opt/homebrew/bin/clawhub
+**Skills.sh CLI：** `npx skills add <owner>/<repo>/<skill>` （skills.sh官方安装方式）
+
+**Skills.sh 安装格式（已集成到脚本）：**
+```bash
+# 格式: npx skills add <owner>/<repo>/<skill>
+npx skills add bahayonghang/academic-writing-skills/latex-thesis-zh
+```
 
 **邮件配置：**
 - 发送方: wcyint@163.com

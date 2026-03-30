@@ -22,6 +22,26 @@ from pathlib import Path
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
+# ── 网络获取辅助函数（带curl降级）────────────────────────
+def _fetch_url_with_fallback(url: str, timeout: int = 10) -> str | None:
+    """Try urllib first, fall back to curl on failure.
+    Returns content string or None if both methods fail."""
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+        with urllib.request.urlopen(req, timeout=timeout) as resp:
+            return resp.read().decode("utf-8", errors="ignore")
+    except Exception as urllib_err:
+        try:
+            result = subprocess.run(
+                ["curl", "-s", "--max-time", str(timeout + 5), url],
+                capture_output=True, text=True, timeout=timeout + 8
+            )
+            if result.returncode == 0 and result.stdout:
+                return result.stdout
+        except Exception:
+            pass
+        return None
+
 # ── 配置 ──────────────────────────────────────────
 SKILLS_DIR   = Path("/Users/fhjtech/.openclaw/workspace/skills")
 SKILLS_DB    = Path("/Users/fhjtech/.openclaw/workspace/.learnings/skills_usage.json")
@@ -31,7 +51,7 @@ SUMMARY_FILE = Path("/Users/fhjtech/.openclaw/workspace/.learnings/daily_learnin
 # 邮件
 EMAIL_FROM     = "wcyint@163.com"
 EMAIL_TO       = "wcyint@163.com"
-EMAIL_PASSWORD = os.environ.get("HARVEY_EMAIL_AUTH", "xxx")  # ⚠️ 若 535 报错，需重新在 mail.163.com 生成授权码
+EMAIL_PASSWORD = os.environ.get("HARVEY_EMAIL_AUTH")  # ⚠️ 必须从 LaunchAgent 环境变量读取，勿硬编码
 SMTP_HOST     = "smtp.163.com"
 SMTP_PORT     = 465
 
@@ -60,13 +80,16 @@ def check_smtp_health() -> dict:
         if SMTP_HEALTH_LOG.exists():
             with open(SMTP_HEALTH_LOG) as f:
                 history = json.load(f)
-            recent = [h for h in history[-10:] if h.get("status") in ("auth_failed", "unhealthy")]
-            if recent:
-                last_auth = datetime.fromisoformat(recent[-1]["timestamp"])
-                if (datetime.now(TZ_CST) - last_auth).total_seconds() < 259200:
-                    result["status"] = "auth_failed"
-                    result["error"] = "Skipped - recent auth failure within 72h cooldown"
-                    return result
+            # Fix: only check the MOST RECENT entry (not any in last 10)
+            # later healthy entries override older auth_failed records
+            if history:
+                latest = history[-1]
+                if latest.get("status") == "auth_failed":
+                    last_auth = datetime.fromisoformat(latest["timestamp"])
+                    if (datetime.now(TZ_CST) - last_auth).total_seconds() < 259200:
+                        result["status"] = "auth_failed"
+                        result["error"] = "Skipped - recent auth failure within 72h cooldown"
+                        return result
     except Exception:
         pass  # Proceed if health log read fails
     
@@ -201,13 +224,16 @@ def send_email_with_retry(subject, html_body, max_retries=3) -> None:
         if SMTP_HEALTH_LOG.exists():
             with open(SMTP_HEALTH_LOG) as f:
                 history = json.load(f)
-            recent = [h for h in history[-10:] if h.get("status") == "auth_failed"]
-            if recent:
-                last_auth = datetime.fromisoformat(recent[-1]["timestamp"])
-                if (datetime.now(TZ_CST) - last_auth).total_seconds() < 259200:  # 72h cooldown (auth expired since 2026-03-26) - avoid repeated auth failures when credential is expired
-                    archive_path = archive_report(subject, html_body)
-                    print(f"[{datetime.now(TZ_CST)}] [EMAIL] Skip - recent auth failure known (archived to {archive_path})")
-                    return False
+            # Fix: only skip if the MOST RECENT entry is auth_failed within 72h
+            # (not just any auth_failed in last 10 — later healthy entries override)
+            if history:
+                latest = history[-1]
+                if latest.get("status") == "auth_failed":
+                    last_auth = datetime.fromisoformat(latest["timestamp"])
+                    if (datetime.now(TZ_CST) - last_auth).total_seconds() < 259200:
+                        archive_path = archive_report(subject, html_body)
+                        print(f"[{datetime.now(TZ_CST)}] [EMAIL] Skip - recent auth failure known (archived to {archive_path})")
+                        return False
     except Exception:
         pass  # Proceed with send attempt if health check fails
 
@@ -295,12 +321,7 @@ def learn_peter_steinberger() -> dict:
     result = {"articles": [], "github": [], "summary": ""}
     try:
         # 抓取博客
-        req = urllib.request.Request(
-            "https://steipete.me/",
-            headers={"User-Agent": "Mozilla/5.0"}
-        )
-        with urllib.request.urlopen(req, timeout=10) as resp:
-            content = resp.read().decode("utf-8", errors="ignore")
+        content = _fetch_url_with_fallback("https://steipete.me/") or ""
         # 提取文章标题和链接
         titles = re.findall(r'<h2[^>]*><a[^>]*href="([^"]+)"[^>]*>([^<]+)</a></h2>', content)
         dates = re.findall(r'<time[^>]*>([^<]+)</time>', content)
@@ -336,12 +357,7 @@ def learn_openclaw() -> dict:
     """抓取 OpenClaw 官网 + GitHub 最新动态"""
     result = {"news": [], "github_releases": [], "summary": ""}
     try:
-        req = urllib.request.Request(
-            "https://openclaw.ai/",
-            headers={"User-Agent": "Mozilla/5.0"}
-        )
-        with urllib.request.urlopen(req, timeout=10) as resp:
-            content = resp.read().decode("utf-8", errors="ignore")
+        content = _fetch_url_with_fallback("https://openclaw.ai/") or ""
         # 提取博客/新闻标题
         titles = re.findall(r'<h[23][^>]*><a[^>]*href="([^"]+)"[^>]*>([^<]+)</a>', content)
         for url, title in titles[:5]:

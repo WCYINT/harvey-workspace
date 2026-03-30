@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.hjtech.usage-monitor</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/opt/homebrew/bin/python3</string>
+        <string>/Users/fhjtech/.openclaw/workspace/.scripts/usage_monitor.py</string>
+    </array>
+    <key>StartInterval</key>
+    <integer>1500</integer>  <!-- 25 minutes = 1500 seconds -->
+    <key>RunAtLoad</key>
+    <true/>
+    <key>StandardOutPath</key>
+    <string>/Users/fhjtech/.openclaw/logs/usage_monitor.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/fhjtech/.openclaw/logs/usage_monitor.err</string>
+    <key>KeepAlive</key>
+    <false/>
+</dict>
+</plist>

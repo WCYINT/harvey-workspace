@@ -2,14 +2,14 @@
 <html><head><meta charset="utf-8"></head>
 <body style="font-family:Arial,sans-serif;max-width:900px;margin:0 auto;padding:20px">
     <h1>📊 Harvey 每日汇报</h1>
-    <p><b>时间：</b>2026-03-28 09:34 (北京时间)</p>
+    <p><b>时间：</b>2026-03-30 20:21 (北京时间)</p>
     <hr>
     
         <h2>📦 技能更新</h2>
-        <p>今日新安装：<b>6</b> 个 | 技能库总数：<b>1766</b></p>
+        <p>今日新安装：<b>11</b> 个 | 技能库总数：<b>2332</b></p>
         <table border="1" cellpadding="6" cellspacing="0" style="border-collapse:collapse;width:100%">
             <tr style="background:#f0f0f0"><th>技能</th><th>来源</th><th>描述</th></tr>
-            <tr><td><code>agent-automation-scripter</code></td><td>clawhub</td><td>Agent Automation Scripter  (3.442)</td></tr><tr><td><code>openclaw-agent-browser</code></td><td>clawhub</td><td>Agent Browser  (1.166)</td></tr><tr><td><code>sub-agent-factory</code></td><td>clawhub</td><td>Sub Agent Factory  (1.084)</td></tr><tr><td><code>agency-agents-openclaw</code></td><td>clawhub</td><td>Agency Agents Openclaw  (1.012)</td></tr><tr><td><code>quack-workflow</code></td><td>clawhub</td><td>Quack Workflow Engine  (3.429)</td></tr><tr><td><code>writing-assistant-litiao</code></td><td>clawhub</td><td>Writing Assistant Litiao  (3.469)</td></tr>
+            <tr><td><code>geepers-llm</code></td><td>clawhub</td><td>Geepers Llm  (3.296)</td></tr><tr><td><code>llm-evaluation</code></td><td>clawhub</td><td>Llm Evaluation  (3.076)</td></tr><tr><td><code>transprompt</code></td><td>clawhub</td><td>TransPrompt｜一句指令，把需求变成可直接发给 AI 的专业 Prompt  (0.679)</td></tr><tr><td><code>fumi-ai-prompt-templates</code></td><td>clawhub</td><td>Ai Prompt Templates  (0.610)</td></tr><tr><td><code>agentic-wallet</code></td><td>clawhub</td><td>Agentic Wallet  (2.831)</td></tr><tr><td><code>agentic-workflow-automation-v2</code></td><td>clawhub</td><td>Agentic Workflow Automation  (2.828)</td></tr><tr><td><code>autonomous-agent-toolkit-automaton</code></td><td>clawhub</td><td>Autonomous Agent Toolkit  (3.074)</td></tr><tr><td><code>self-evolve-automaton</code></td><td>clawhub</td><td>Self Evolve  (0.630)</td></tr><tr><td><code>magi</code></td><td>clawhub</td><td>Self Improving  (0.593)</td></tr><tr><td><code>thinking-sovereignty</code></td><td>clawhub</td><td>thinking-sovereignty  (0.568)</td></tr><tr><td><code>coding-cli-management</code></td><td>clawhub</td><td>Coding Cli Management  (3.227)</td></tr>
         </table>
     <hr>
     
@@ -19,7 +19,7 @@
     <h3>最新文章</h3>
     <ul><li>暂无</li></ul>
     <h3>GitHub 活动</h3>
-    <ul><li style='font-family:monospace;font-size:13px'>2026-03-28 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-28 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-28 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-28 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-28 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-28 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-28 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-28 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-28 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-28 PushEvent: openclaw/openclaw</li></ul>
+    <ul><li style='font-family:monospace;font-size:13px'>2026-03-30 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-30 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-30 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-30 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-30 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-30 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-30 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-30 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-30 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-03-24 PullRequestEvent: openclaw/openclaw</li></ul>
     <h3>💡 关键心得</h3>
     <p>Peter 是 iOS 开发出身（PSPDFKit 作者），后转型 AI 工具专家并加入 OpenAI 做 Agent 开发。
        他的职业路径：从 Swift 专家 → AI Agent 开发者 → 行业影响者。
@@ -33,11 +33,10 @@
     <h3>最新动态</h3>
     <ul><li>暂无</li></ul>
     <h3>最新 Release</h3>
-    <ul><li><b>v2026.3.24</b>: openclaw 2026.3.24 — <a href='https://github.com/openclaw/openclaw/releases/tag/v2026.3.24'>查看</a><br><pre style='font-size:12px'>### Breaking
+    <ul><li><b>v2026.3.28</b>: openclaw 2026.3.28 — <a href='https://github.com/openclaw/openclaw/releases/tag/v2026.3.28'>查看</a><br><pre style='font-size:12px'>
+### Breaking
 
-### Changes
-
-- Gateway/OpenAI compatibility: add `/v1/models` and `/v1/embeddings`, and forward explicit model overrides through `/v1/chat/completions` and `/v1/responses` for broader cl</pre></li></ul>
+- Providers/Qwen: remove the deprecated `qwen-portal-auth` OAuth integration for `portal.qwen.ai`; migrate to Model Studio with `openclaw onboard --auth-choice modelstudio-api-key`. (#5</pre></li></ul>
     <hr>
     
     <h2>📋 下一步计划</h2>

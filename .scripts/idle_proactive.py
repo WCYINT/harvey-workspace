@@ -34,7 +34,9 @@ def send_alert(subject: str, body: str) -> bool:
         msg["To"] = "wcyint@163.com"
         msg.attach(MIMEText(body, "html", "utf-8"))
         with smtplib.SMTP_SSL("smtp.163.com", 465) as s:
-            auth_code = os.environ.get("HARVEY_EMAIL_AUTH", "xxx")
+            auth_code = os.environ.get("HARVEY_EMAIL_AUTH")
+            if not auth_code:
+                raise ValueError("HARVEY_EMAIL_AUTH env var not set — cannot send alert")
             s.login("wcyint@163.com", auth_code)
             s.sendmail("wcyint@163.com", ["wcyint@163.com"], msg.as_string())
         return True
@@ -53,8 +55,10 @@ def check_idle_minutes() -> int:
             data = json.loads(IDLE_MARKER.read_text())
             last = datetime.fromisoformat(data["timestamp"])
             return int((datetime.now(TZ_CST) - last).total_seconds() / 60)
-    except:
-        pass
+    except Exception as e:
+        # Bare except swallows all errors silently — now log it so failures are visible
+        import sys
+        print(f"[idle_proactive] check_idle_minutes error: {type(e).__name__}: {e}", file=sys.stderr)
     return 999  # 无记录，默认空闲
 
 # 主动检测1：论文上下文逻辑（如果论文文件存在）
@@ -202,7 +206,7 @@ def main() -> None:
     for i in all_issues:
         print(f"  - {i}")
 
-    # 记录
+    # 记录（原子写入，防止中途失败导致历史丢失）
     try:
         records = json.loads(EVOLUTION_LOG.read_text()) if EVOLUTION_LOG.exists() else []
         records.append({
@@ -211,9 +215,13 @@ def main() -> None:
             "issues": all_issues,
             "results": results
         })
-        EVOLUTION_LOG.write_text(json.dumps(records[-100:], indent=2))  # 保留最近100条
-    except:
-        pass
+        records = records[-100:]  # 保留最近100条
+        tmp = EVOLUTION_LOG.with_suffix(".tmp")
+        tmp.write_text(json.dumps(records, indent=2))
+        tmp.rename(EVOLUTION_LOG)  # atomic on macOS
+    except Exception as e:
+        import sys
+        print(f"[主动预见] 进化记录写入失败: {e}", file=sys.stderr)
 
 if __name__ == "__main__":
     main()

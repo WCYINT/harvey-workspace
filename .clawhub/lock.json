@@ -1,353 +1,65 @@
 {
   "version": 1,
   "skills": {
-    "project-writing": {
-      "version": "0.1.0",
-      "installedAt": 1774559496297
-    },
-    "multichannel-content-publisher": {
+    "agentic-wallet": {
       "version": "1.0.0",
-      "installedAt": 1774559496314
+      "installedAt": 1774872820042
     },
-    "data-ai-daily-brief": {
-      "version": "1.0.2",
-      "installedAt": 1774562119613
+    "transprompt": {
+      "version": "1.0.1",
+      "installedAt": 1774872820262
     },
-    "agentmail": {
-      "version": "1.1.1",
-      "installedAt": 1774567523640
-    },
-    "cto": {
+    "llm-proxy": {
       "version": "1.0.4",
-      "installedAt": 1774570609372
+      "installedAt": 1774872820467
     },
-    "agent-doppelganger": {
+    "geepers-llm": {
       "version": "1.0.0",
-      "installedAt": 1774570622423
+      "installedAt": 1774872820700
     },
-    "agentmail-integration": {
-      "version": "1.1.0",
-      "installedAt": 1774570622423
+    "isnad-security-kit": {
+      "version": "1.0.0",
+      "installedAt": 1774872820704
     },
-    "serp-analysis": {
+    "self-evolve-automaton": {
+      "version": "1.0.2",
+      "installedAt": 1774872820742
+    },
+    "thinking-sovereignty": {
+      "version": "1.0.0",
+      "installedAt": 1774872820782
+    },
+    "agentic-workflow-automation-v2": {
+      "version": "2.0.0",
+      "installedAt": 1774872820821
+    },
+    "magi": {
+      "version": "1.8.0",
+      "installedAt": 1774872820846
+    },
+    "llm-evaluation": {
+      "version": "1.0.0",
+      "installedAt": 1774872820901
+    },
+    "autonomous-agent-toolkit-automaton": {
+      "version": "3.1.2",
+      "installedAt": 1774872821038
+    },
+    "coding-cli-management": {
+      "version": "1.0.0",
+      "installedAt": 1774872821256
+    },
+    "fumi-ai-prompt-templates": {
+      "version": "1.0.0",
+      "installedAt": 1774872821334
+    },
+    "autonomous-learning-cycle": {
+      "version": "1.0.0",
+      "installedAt": 1774872821957
+    },
+    "x402janus": {
       "version": "3.0.0",
-      "installedAt": 1774573469508
-    },
-    "ai-project-learner": {
-      "version": "1.0.0",
-      "installedAt": 1774573469513
-    },
-    "agent-security-monitor": {
-      "version": "1.1.0",
-      "installedAt": 1774573469538
-    },
-    "us-stock-analysis-automaton": {
-      "version": "0.1.2",
-      "installedAt": 1774573471201
-    },
-    "aixin": {
-      "version": "0.1.1",
-      "installedAt": 1774576026435
-    },
-    "iot": {
-      "version": "1.0.0",
-      "installedAt": 1774580731369
-    },
-    "database-migrations": {
-      "version": "1.0.0",
-      "installedAt": 1774581429948
-    },
-    "ai-agent-helper-moss": {
-      "version": "1.0.1",
-      "installedAt": 1774584222862
-    },
-    "ai-documentation-generator": {
-      "version": "1.0.0",
-      "installedAt": 1774584222867
-    },
-    "content-idea-gen": {
-      "version": "1.0.0",
-      "installedAt": 1774584222880
-    },
-    "security-sentinel": {
-      "version": "1.0.1",
-      "installedAt": 1774584222890
-    },
-    "airdrop-checker": {
-      "version": "1.1.0",
-      "installedAt": 1774584222892
-    },
-    "Check": {
-      "version": "",
-      "installedAt": 1774584222911
-    },
-    "ai-md": {
-      "version": "4.0.0",
-      "installedAt": 1774584222946
-    },
-    "data-analyst-cn-zc": {
-      "version": "1.0.0",
-      "installedAt": 1774584223808
-    },
-    "Chinese": {
-      "version": "",
-      "installedAt": 1774595050352
-    },
-    "ct-accessibility-toolkit": {
-      "version": "1.0.0",
-      "installedAt": 1774595050373
-    },
-    "ai-company-starter": {
-      "version": "1.0.2",
-      "installedAt": 1774595050404
-    },
-    "ai-video-generation": {
-      "version": "0.1.5",
-      "installedAt": 1774597641597
-    },
-    "tradecraft": {
-      "version": "1.0.1",
-      "installedAt": 1774597641682
-    },
-    "afrexai-data-migration": {
-      "version": "1.0.0",
-      "installedAt": 1774597641688
-    },
-    "aicodem-xmind-testcase": {
-      "version": "1.0.0",
-      "installedAt": 1774603047088
-    },
-    "agent-defibrillator": {
-      "version": "1.0.1",
-      "installedAt": 1774605871276
-    },
-    "agent-soul-crafter": {
-      "version": "1.1.1",
-      "installedAt": 1774605871320
-    },
-    "ai-news-daily": {
-      "version": "1.0.4",
-      "installedAt": 1774605871349
-    },
-    "mx-findata": {
-      "version": "1.0.2",
-      "installedAt": 1774605871356
-    },
-    "agent-browser-0": {
-      "version": "1.0.0",
-      "installedAt": 1774605871365
-    },
-    "data912": {
-      "version": "1.0.0",
-      "installedAt": 1774605871371
-    },
-    "Build": {
-      "version": "",
-      "installedAt": 1774608449902
-    },
-    "ait-community": {
-      "version": "1.0.0",
-      "installedAt": 1774608449921
-    },
-    "Write": {
-      "version": "",
-      "installedAt": 1774608449926
-    },
-    "Expense": {
-      "version": "",
-      "installedAt": 1774608449943
-    },
-    "WordPress": {
-      "version": "",
-      "installedAt": 1774608449974
-    },
-    "agent-media": {
-      "version": "1.0.1",
-      "installedAt": 1774613852801
-    },
-    "agentsocial": {
-      "version": "0.4.0",
-      "installedAt": 1774613852833
-    },
-    "ai-agent-setup": {
-      "version": "1.0.0",
-      "installedAt": 1774613852842
-    },
-    "agent-wallet-cli": {
-      "version": "1.4.0",
-      "installedAt": 1774613852846
-    },
-    "Scaffold": {
-      "version": "",
-      "installedAt": 1774613852865
-    },
-    "ai-invoice-generator": {
-      "version": "1.0.0",
-      "installedAt": 1774613852868
-    },
-    "ai-content-pipeline": {
-      "version": "0.1.5",
-      "installedAt": 1774613852899
-    },
-    "agent-orchestrator-molter": {
-      "version": "1.0.5",
-      "installedAt": 1774613852902
-    },
-    "Browser": {
-      "version": "",
-      "installedAt": 1774617720542
-    },
-    "Design": {
-      "version": "",
-      "installedAt": 1774617720560
-    },
-    "Audit": {
-      "version": "",
-      "installedAt": 1774617720601
-    },
-    "Delegate": {
-      "version": "",
-      "installedAt": 1774617720696
-    },
-    "zonein": {
-      "version": "2.3.6",
-      "installedAt": 1774617720764
-    },
-    "Monitor": {
-      "version": "",
-      "installedAt": 1774617808801
-    },
-    "Book": {
-      "version": "",
-      "installedAt": 1774617808848
-    },
-    "computer-use": {
-      "version": "1.2.1",
-      "installedAt": 1774617808999
-    },
-    "personal-productivity": {
-      "version": "1.0.0",
-      "installedAt": 1774617809017
-    },
-    "weather": {
-      "version": "1.0.0",
-      "installedAt": 1774623213565
-    },
-    "Send": {
-      "version": "",
-      "installedAt": 1774623213579
-    },
-    "productivity-design": {
-      "version": "1.0.0",
-      "installedAt": 1774623213824
-    },
-    "academic-writing-assistant": {
-      "version": "1.0.0",
-      "installedAt": 1774623213836
-    },
-    "chinese-writing-assistant": {
-      "version": "1.0.0",
-      "installedAt": 1774623213851
-    },
-    "api-gateway": {
-      "version": "1.0.54",
-      "installedAt": 1774627430447
-    },
-    "ai-writing-assistant": {
-      "version": "1.0.0",
-      "installedAt": 1774627430496
-    },
-    "agentledger-writing-assistant": {
-      "version": "1.0.1",
-      "installedAt": 1774627430509
-    },
-    "agentic-eval": {
-      "version": "1.0.0",
-      "installedAt": 1774628616509
-    },
-    "customer": {
-      "version": "1.0.0",
-      "installedAt": 1774646223544
-    },
-    "prompts": {
-      "version": "1.0.0",
-      "installedAt": 1774647457920
-    },
-    "clash-of-coins-agentic": {
-      "version": "1.0.1",
-      "installedAt": 1774649060432
-    },
-    "agentic-workflow": {
-      "version": "1.0.0",
-      "installedAt": 1774649060777
-    },
-    "badman-agent-rental": {
-      "version": "1.0.0",
-      "installedAt": 1774649060791
-    },
-    "autonomous-trading-system": {
-      "version": "1.0.0",
-      "installedAt": 1774649060906
-    },
-    "agentic-api-transformer": {
-      "version": "1.0.0",
-      "installedAt": 1774649060951
-    },
-    "agenttrust": {
-      "version": "1.0.2",
-      "installedAt": 1774649061025
-    },
-    "autonomous-trading-system-automaton": {
-      "version": "1.0.1",
-      "installedAt": 1774649061213
-    },
-    "forge-autonomous-agent-v1": {
-      "version": "1.0.0",
-      "installedAt": 1774649061501
-    },
-    "autonomous-loop": {
-      "version": "1.0.1",
-      "installedAt": 1774649061549
-    },
-    "socneo-autonomous-agent": {
-      "version": "1.0.0",
-      "installedAt": 1774649061793
-    },
-    "agent-bom": {
-      "version": "0.75.9",
-      "installedAt": 1774649061812
-    },
-    "alva": {
-      "version": "1.2.0",
-      "installedAt": 1774649062478
-    },
-    "alchemy-official": {
-      "version": "1.1.1",
-      "installedAt": 1774649066329
-    },
-    "openclaw-agent-browser": {
-      "version": "1.0.0",
-      "installedAt": 1774649493617
-    },
-    "sub-agent-factory": {
-      "version": "1.1.0",
-      "installedAt": 1774649493718
-    },
-    "agent-automation-scripter": {
-      "version": "1.0.0",
-      "installedAt": 1774649493724
-    },
-    "writing-assistant-litiao": {
-      "version": "1.0.0",
-      "installedAt": 1774649493838
-    },
-    "quack-workflow": {
-      "version": "1.0.0",
-      "installedAt": 1774649494231
-    },
-    "agency-agents-openclaw": {
-      "version": "1.0.0",
-      "installedAt": 1774649499866
+      "installedAt": 1774872822006
     }
   }
 }

@@ -147,8 +147,8 @@ def read_role_files() -> dict:
         try:
             data = json.loads(f.read_text())
             results[data["role"]] = data
-        except:
-            pass
+        except Exception as e:
+            log(f"[角色文件] 读取失败 {f.name}: {e}")
     return results
 
 # ── 决策节点：发送确认邮件 ────────────────────
@@ -175,7 +175,7 @@ def send_decision_email(skills_to_install: list, reason: str) -> None:
     msg.attach(MIMEText(body, "html", "utf-8"))
     try:
         with smtplib.SMTP_SSL("smtp.163.com", 465) as server:
-            server.login("wcyint@163.com", "xxx")
+            server.login("wcyint@163.com", os.environ["HARVEY_EMAIL_AUTH"])
             server.sendmail("wcyint@163.com", ["wcyint@163.com"], msg.as_string())
         # 写入待决策文件
         DECISION_FILE.write_text(json.dumps({
@@ -247,10 +247,10 @@ skills_needed使用简短slug，只输出JSON。"""
         skills_list = [s["skill"] for s in sorted_skills[:10]]
 
         log(f"[Step1] gstack三角色讨论完成，技能优先级: {skills_list}")
-        return {"status": "ok", "skills_needed": skills_list, "roles": role_responses}
+        return {"status": "ok", "skills_needed": skills_list, "roles": role_responses, "gstack_ok": True}
     except Exception as e:
         log(f"[Step1] gstack讨论异常: {e}")
-        return {"status": "error", "skills_needed": ML_SKILLS_KEYWORDS, "roles": {}}
+        return {"status": "error", "skills_needed": ML_SKILLS_KEYWORDS, "roles": {}, "gstack_ok": False}
 
 # ── Step 2: 并行搜索四大平台 ─────────────────────
 async def _search_skillhub(kw: str, semaphore: asyncio.Semaphore) -> list[dict]:
@@ -482,7 +482,7 @@ def send_report(to_install_count: int, to_upgrade_count: int, safe: list, unsafe
     EMAIL_FROM = "wcyint@163.com"
     EMAIL_TO = "wcyint@163.com"
     SMTP_HOST, SMTP_PORT = "smtp.163.com", 465
-    EMAIL_PASSWORD = os.environ.get("HARVEY_EMAIL_AUTH", "xxx")
+    EMAIL_PASSWORD = os.environ["HARVEY_EMAIL_AUTH"]
     now = datetime.now(TZ_CST)
 
     # 生成技能详情行
@@ -591,13 +591,19 @@ async def main():
     log("=== ML/LLM技能专项提升任务 Started ===")
     # Step 1: gstack讨论（结果写入共享文件）
     gstack_result = step1_gstack_discussion()
+    gstack_ok = gstack_result.get("gstack_ok", False)
     keywords = gstack_result.get("skills_needed", ML_SKILLS_KEYWORDS)
     # 写入共享角色文件
     for role_name, role_data in gstack_result.get("roles", {}).items():
         write_role_file(role_name, role_data)
 
     # Step 2: 4平台并行搜索
-    all_skills = await step2_parallel_search(keywords)
+    # 若gstack讨论失败（返回fallback关键词），复用增量检查的quick_skills，避免重复I/O
+    if not gstack_ok and keywords == ML_SKILLS_KEYWORDS:
+        log(f"[Step2] gstack讨论失败，复用增量检查结果（{len(quick_skills)}个技能）")
+        all_skills = quick_skills
+    else:
+        all_skills = await step2_parallel_search(keywords)
     if not all_skills:
         log("[Step2] 无技能获取，中止")
         return

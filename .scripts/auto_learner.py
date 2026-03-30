@@ -30,20 +30,44 @@ LOGS_DIR = Path.home() / ".openclaw" / "logs"
 
 # ─── ID generation ───────────────────────────────────────────────────────────
 
+def tailn(file_path: Path, n: int = 200) -> list:
+    """Read only the last n lines of a file without loading the entire file.
+    
+    Uses a rolling read-backwards approach: reads a conservative window from EOF,
+    then trims to exactly n lines. Avoids O(n) line-counting for large files.
+    """
+    try:
+        with open(file_path, "rb") as fh:
+            total_size = fh.seek(0, 2)
+            if total_size <= 0:
+                return []
+            # Read a conservative window: n lines * 150 bytes + 1KB buffer for safety.
+            # This is an OVER-estimate to ensure we always capture n lines.
+            window_size = min(total_size, n * 150 + 1024)
+            fh.seek(max(0, total_size - window_size))
+            remaining = fh.read()
+            try:
+                decoded = remaining.decode("utf-8", errors="ignore")
+            except Exception:
+                return []
+            lines = decoded.splitlines()
+            return lines[-n:] if len(lines) > n else lines
+    except Exception:
+        return []
+
+
 def generate_id(prefix: str) -> str:
     """Generate sequential ID like ERR-20260326-001.
     
-    IDs are at file bottom (recent entries), so read LAST 200 lines.
+    IDs are at file bottom (recent entries), so read LAST 200 lines only.
+    Uses tailn() to avoid loading large files into memory.
     """
     date_str = datetime.now().strftime("%Y%m%d")
     pattern = f"{prefix}-{date_str}"
     counter = 1
     for f in LEARNINGS_DIR.glob("*.md"):
         # Read only last 200 lines - IDs are at bottom of each file (recent entries)
-        try:
-            lines = f.read_text(errors="ignore").splitlines()[-200:]
-        except Exception:
-            continue
+        lines = tailn(f, 200)
         for line in lines:
             m = re.match(rf"## \[{pattern}-(\d+)\]", line)
             if m:
@@ -73,13 +97,20 @@ def append_entry(file_path: Path, content: str) -> None:
 
 
 def count_pending(pattern: str = "pending") -> dict:
-    """Count pending/in_progress entries across all learnings files."""
+    """Count pending/in_progress entries across all learnings files.
+    Only matches **Status**: <pattern> (not body fields like **Pending**:).
+    """
     counts = {}
     for name in ["ERRORS.md", "LEARNINGS.md", "FEATURE_REQUESTS.md"]:
         p = LEARNINGS_DIR / name
         if p.exists():
             text = p.read_text()
-            counts[name] = len(re.findall(rf"\*\*{pattern}\*\*", text, re.IGNORECASE))
+            # Match lines: **Status**: <pattern> (only Status field, not body **Pending**:)
+            counts[name] = len(re.findall(
+                rf"^\*\*Status\*\*:\s+{pattern}\b",
+                text,
+                re.IGNORECASE | re.MULTILINE
+            ))
     return counts
 
 
@@ -181,11 +212,12 @@ def get_recent_errors(minutes: int = 30) -> list:
     
     for lf in sorted(log_files, key=lambda p: p.stat().st_mtime, reverse=True)[:5]:
         try:
-            text = lf.read_text(errors="ignore")
+            lines = tailn(lf, 500)
+            text = "\n".join(lines)
             # Look for error patterns
             for m in re.finditer(
                 r"(\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}[^]]*)\s*(?:ERROR|error|Error|failed|Failed|FAILED|Exception|Traceback).*?(?=\n\d{4}-|$)",
-                text[-50000:],  # Last 50KB
+                text,
                 re.DOTALL,
             ):
                 ts = m.group(1).strip()[:19]
@@ -197,7 +229,6 @@ def get_recent_errors(minutes: int = 30) -> list:
                     "NameError", "TypeError", "KeyError", "ValueError",
                     "ImportError", "AttributeError", "RuntimeError",
                     "HTTPError", "ConnectionError", "TimeoutError",
-                    "StatusCode: 4", "StatusCode: 5",  # HTTP 4xx/5xx errors
                 ]):
                     errors.append({"timestamp": ts, "error": err_text, "file": lf.name})
         except Exception:
@@ -218,15 +249,14 @@ def get_skill_update_failures(minutes: int = 180) -> list:
         return []
 
     try:
-        text = skill_log.read_text(errors="ignore")
+        lines = tailn(skill_log, 500)
     except Exception:
         return []
 
     cutoff = datetime.now() - timedelta(minutes=minutes)
     failures = []
-    lines = text.splitlines()
 
-    for line in reversed(lines[-500:]):  # Last 500 lines is enough
+    for line in reversed(lines[-500:]):  # Newest-first so early-break on old ts exits cleanly
         # Parse timestamp
         ts_match = re.match(r"\[(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})\]", line)
         if not ts_match:
@@ -262,7 +292,7 @@ def get_skill_update_failures(minutes: int = 180) -> list:
     return failures
 
 
-def resolve_entry(file_path: Path, entry_id: str, resolution: str, notes: str = "") -> None:
+def resolve_entry(file_path: Path, entry_id: str, resolution: str, notes: str = "") -> bool:
     """Mark an entry as resolved with resolution notes."""
     text = file_path.read_text()
     pattern = rf"(## \[{entry_id}\].*?)(### Metadata\n)(.*?)((?:---\n\n|$))"
@@ -282,39 +312,59 @@ def resolve_entry(file_path: Path, entry_id: str, resolution: str, notes: str = 
 
 
 def auto_resolve_simple(errors: list) -> int:
-    """Attempt to auto-resolve entries with known fixes."""
-    resolved_count = 0
+    """Attempt to auto-resolve entries with known fixes.
     
-    # Known fix mappings (error pattern → (entry_id_prefix, fix_action))
+    Bug fix (2026-03-29): Previously matched by ID prefix (e.g. "ERR-2026032" matches
+    ALL March errors) then applied the same fix to ALL — scope creep bug.
+    Now matches by BOTH: entry's summary text must contain the keyword AND ID prefix.
+    """
+    resolved_count = 0
+
+    # Known fix mappings: keyword → (ID prefix, fix action)
+    # Only auto-resolve if the pending entry's summary ALSO mentions the keyword.
     known_fixes = {
         "SMTP": ("ERR-2026032", "SMTP credentials issue - notify James to regenerate 163 authorization code"),
         "jiti": ("ERR-2026032", "jiti cache staleness - clear /tmp/jiti/ and restart gateway"),
         "duplicate tool_call": ("ERR-2026032", "MiniMax API tool_call ID collision - use fresh session per cron run"),
     }
-    
+
     for err_info in errors[:5]:
         err_text = err_info.get("error", "")
         for keyword, (entry_prefix, fix) in known_fixes.items():
-            if keyword.lower() in err_text.lower():
-                # Find matching pending entry
-                for f in LEARNINGS_DIR.glob("*.md"):
-                    text = f.read_text()
-                    for m in re.finditer(r"## \[(ERR-\d+-\w+)\]", text):
-                        eid = m.group(1)
-                        if eid.startswith(entry_prefix):
-                            idx = text.find(eid)
-                            status_pos = text.find("**Status**:", idx)
-                            status_val = text[status_pos:text.find("\n", status_pos)]
-                            if "pending" in status_val.lower():
-                                if resolve_entry(f, eid, fix, "Auto-resolved by verification engine"):
-                                    resolved_count += 1
-                break
-    
+            if keyword.lower() not in err_text.lower():
+                continue
+            # Find pending entries whose ID matches the prefix AND summary mentions the keyword
+            for f in LEARNINGS_DIR.glob("*.md"):
+                text = f.read_text()
+                for m in re.finditer(r"## \[(ERR-\d+-\w+)\]", text):
+                    eid = m.group(1)
+                    if not eid.startswith(entry_prefix):
+                        continue
+                    # Extract entry body to check if summary mentions the keyword
+                    start = m.start()
+                    next_entry = text.find("\n## ", start + 1)
+                    entry_body = text[start:next_entry if next_entry > 0 else len(text)]
+                    if keyword.lower() not in entry_body.lower():
+                        continue
+                    # Check if still pending
+                    status_pos = text.find("**Status**:", start)
+                    if status_pos < 0:
+                        continue
+                    status_line_end = text.find("\n", status_pos)
+                    status_val = text[status_pos:status_line_end]
+                    if "pending" not in status_val.lower():
+                        continue
+                    if resolve_entry(f, eid, fix, "Auto-resolved by verification engine"):
+                        resolved_count += 1
+
     return resolved_count
 
 
-def promote_high_value_learning(entry_text: str, target_file: str, section: str) -> None:
-    """Promote a learning to AGENTS.md, SOUL.md, TOOLS.md, etc."""
+def promote_high_value_learning(entry_text: str, target_file: str, section: str) -> bool:
+    """Promote a learning to AGENTS.md, SOUL.md, TOOLS.md, etc.
+    
+    Returns True if promoted, False if skipped (no match, already exists, or file not found).
+    """
     # Extract the core principle
     decision_match = re.search(r"\*\*(Decision principle [^:]+)\*\*:\s*(.+)", entry_text)
     if not decision_match:
@@ -444,7 +494,7 @@ def cmd_log_learning(args) -> None:
     return entry_id
 
 
-def cmd_verify(args) -> None:
+def cmd_verify(args) -> str:
     """Run verification: capture new errors, auto-resolve, report."""
     results = []
     
@@ -477,7 +527,7 @@ def cmd_verify(args) -> None:
     return "\n".join(results)
 
 
-def cmd_report(args) -> None:
+def cmd_report(args) -> str:
     """Generate a detailed pending items report."""
     pending = []
     
@@ -517,37 +567,24 @@ def cmd_report(args) -> None:
     return "\n".join(lines)
 
 
-def cmd_stats(args) -> None:
+def cmd_stats(args) -> str:
     """Show learning statistics."""
-    total_errors = 0
-    resolved_errors = 0
-    total_learnings = 0
-    resolved_learnings = 0
-    
-    for name, total, resolved in [
-        ("ERRORS.md", total_errors, resolved_errors),
-        ("LEARNINGS.md", total_learnings, resolved_learnings),
-    ]:
-        p = LEARNINGS_DIR / name
-        if p.exists():
-            text = p.read_text()
-            total = len(re.findall(r"## \[", text))
-            resolved = len(re.findall(r"\*\*Status\*\*: resolved", text))
-    
     err_p = LEARNINGS_DIR / "ERRORS.md"
     learn_p = LEARNINGS_DIR / "LEARNINGS.md"
-    
+    feat_p = LEARNINGS_DIR / "FEATURE_REQUESTS.md"
+
+    total_errors = resolved_errors = total_learnings = resolved_learnings = 0
+
     if err_p.exists():
         t = err_p.read_text()
         total_errors = len(re.findall(r"## \[ERR-", t))
         resolved_errors = len(re.findall(r"\*\*Status\*\*: resolved", t))
-    
+
     if learn_p.exists():
         t = learn_p.read_text()
         total_learnings = len(re.findall(r"## \[LRN-", t))
         resolved_learnings = len(re.findall(r"\*\*Status\*\*: resolved", t))
-    
-    feat_p = LEARNINGS_DIR / "FEATURE_REQUESTS.md"
+
     total_features = len(re.findall(r"## \[FEAT-", feat_p.read_text())) if feat_p.exists() else 0
     
     pending_errors = total_errors - resolved_errors
@@ -765,4 +802,4 @@ if __name__ == "__main__":
     main()
 
 
-__all__ = ['generate_id', 'ensure_learnings_dir', 'append_entry', 'count_pending', 'build_error_entry', 'build_learning_entry', 'get_recent_errors', 'resolve_entry', 'auto_resolve_simple', 'promote_high_value_learning', 'capture_recent_errors', 'cmd_log_error', 'cmd_log_learning', 'cmd_verify', 'cmd_report', 'cmd_stats', 'extract_patterns', 'main', 'make_resolved']
+__all__ = ['generate_id', 'ensure_learnings_dir', 'append_entry', 'count_pending', 'build_error_entry', 'build_learning_entry', 'get_recent_errors', 'resolve_entry', 'auto_resolve_simple', 'promote_high_value_learning', 'capture_recent_errors', 'cmd_log_error', 'cmd_log_learning', 'cmd_verify', 'cmd_report', 'cmd_stats', 'extract_patterns', 'main']

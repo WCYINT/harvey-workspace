@@ -1,7 +1,7 @@
 {
-  "last_check": "2026-03-23T23:45:00+08:00",
+  "last_check": "2026-03-29T08:33:00+08:00",
   "emails_processed": 0,
   "insights_generated": 0,
   "pending_feedback": [],
-  "status": "initialized"
+  "status": "no_new_feedback"
 }

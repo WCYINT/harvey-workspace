@@ -176,4 +176,13 @@
     "resolved_errors": 8,
     "resolution_rate": 0.53
   }
+},{
+    "id": "edit-consecutive-file",
+    "pattern": "避免同一文件连续多次 edit，每次 edit 前重新读取文件确认当前内容",
+    "trigger": "需要对同一文件进行多次编辑",
+    "action": "每次 edit 后立即 py_compile 验证；复杂修改使用 write 直接覆盖",
+    "category": "workflow",
+    "source": "ERRORS.md 2026-03-28"
+  },
+    "edit-consecutive-file": {"id": "edit-consecutive-file", "pattern": "避免同一文件连续多次edit，每次edit前重新读取文件确认当前内容", "trigger": "需要对同一文件进行多次编辑", "action": "每次edit后立即py_compile验证；复杂修改使用write直接覆盖", "category": "workflow", "source": "ERRORS.md 2026-03-28"}
 }
