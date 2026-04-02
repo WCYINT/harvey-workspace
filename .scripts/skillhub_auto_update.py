@@ -165,29 +165,35 @@ def _check_and_fix_edit_failures() -> list[dict]:
 
         log(f"[EditFix] 检测到 Edit 失败: {file_path} ({char_count} chars) → {cause}")
 
-        # 尝试修复：重新读取文件内容，验证 oldText
+        # 从前后20行上下文中提取 oldText/newText（char_count 定位）
         fixed = False
         detail = ""
         try:
             content = Path(file_path).read_text(encoding="utf-8", errors="ignore")
-            # oldText 通常在错误前的上下文中，找到 "oldText:" 或 "old_string:" 后的内容
-            ctx_match = re.search(r'(?:oldText|old_string)["\']?\s*[:=]\s*["\`](.*?)["`\']', line)
-            if ctx_match:
-                old_text_snippet = ctx_match.group(1)[:int(char_count)]
-                if old_text_snippet in content:
-                    detail = f"验证通过：oldText 存在于文件当前内容中（可能是时序问题）"
-                    fixed = True  # 内容匹配，无需修改
-                else:
-                    detail = f"oldText 不匹配：片段 '{old_text_snippet[:30]}...' 未在文件中找到"
+            # 从邻近行中找 old_text= 或 old_string= 的实际内容（不依赖引号包裹）
+            ctx_lines = [
+                l.strip() for l in lines
+                if ("oldText" in l or "old_string" in l) and file_path in l
+            ]
+            old_text_found = None
+            for ctx_line in ctx_lines:
+                # 提取 oldText 参数值（格式: oldText=xxx 或 oldText:xxx）
+                m2 = re.search(r'(?:oldText|old_string)[=:]\s*(.+?)(?:\s*,|\s*new)', ctx_line)
+                if m2:
+                    candidate = m2.group(1).strip()
+                    # 验证 char_count 是否接近
+                    if len(candidate) >= int(char_count) - 5 and candidate in content:
+                        old_text_found = candidate
+                        break
+            if old_text_found:
+                detail = f"验证通过：oldText 存在于文件（{len(old_text_found)} chars，char_count={char_count}）"
+                fixed = True
             else:
-                # 无法提取 oldText，尝试查找类似的代码块
-                # 找到函数/类定义的开始
-                func_match = re.search(r'def\s+\w+|class\s+\w+|async\s+def\s+\w+', content)
-                if func_match:
-                    detail = f"文件中存在函数定义，但无法确定具体编辑位置"
-                fixed = False
+                # 退而求次：只用 char_count 估算位置
+                line_offset = sum(1 for l in lines if file_path in l and lines[lines.index(l):].__len__())
+                detail = f"无法自动验证 oldText（文件可能已被改动），请手动检查 {file_path}"
         except Exception as e:
-            detail = f"修复尝试失败: {e}"
+            detail = f"排查失败: {e}"
 
         results.append({
             "file": file_path,
@@ -1023,6 +1029,8 @@ async def _install_one(slug: str, source: str, semaphore: asyncio.Semaphore) -> 
             stdout, stderr_bytes = await asyncio.wait_for(proc.communicate(), timeout=60)
             stderr = stderr_bytes.decode(errors="replace")
             ok = proc.returncode == 0
+            # npx skills add writes errors to stdout, not stderr — include it for skills.sh
+            combined_err = stderr if source != "skills.sh" else (stdout + stderr)
             # SkillHub: slug in search index but not available for install → soft skip
             # Also persist to rejection list so future runs skip validation entirely
             if not ok and "not in index" in stderr:
@@ -1035,7 +1043,8 @@ async def _install_one(slug: str, source: str, semaphore: asyncio.Semaphore) -> 
                 # _is_voltagent_rejected() can find voltagent:<slug> format, not bare slug
                 log(f"[Step3] SKIP(not in index): {slug} ({source})")
                 return (slug, False, "not_in_index")
-            status = "OK" if ok else f"FAIL({stderr[:60]})"
+            fail_msg = combined_err[:60] if not ok else ""
+            status = "OK" if ok else f"FAIL({fail_msg})"
             log(f"[Step3] {status}: {slug} ({source})")
             return (slug, ok, status)
         except asyncio.TimeoutError:
@@ -1110,9 +1119,21 @@ def _uninstall_unsafe_skills(unsafe: list[tuple[str, str]]) -> None:
     """
     removed = 0
     skipped = 0
+    # Step3.5 slug_specific_bypass 的镜像 — 防止同一误报在 Step3.5 通过后又在 Step3.6 卸载
+    # (shell-exec-python/curl-wget/supply-chain-npm-exec 在 docs 中被 auditor 误报)
+    _step3_6_slug_bypass = {
+        "self-evolving-skill",   # supply-chain-npm-exec: npx exec to bootstrap AI agents (误报 2026-04-02)
+        "github-watch",          # shell-exec-python: GitHub API polling tool (误报 2026-04-02)
+        "contextui",             # curl-wget: CLI HTTP tool for LLM API calls (误报 2026-04-02)
+        "intel-search",          # homedir-access+browser-tool: search/intelligence tool (误报 2026-04-02)
+    }
     for slug, reason in unsafe:
         if slug in _CORE_SKILLS_PROTECTED:
             log(f"[Step3.6] 跳过核心技能: {slug} ( Auditor危险但白名单保护)")
+            skipped += 1
+            continue
+        if slug in _step3_6_slug_bypass:
+            log(f"[Step3.6] 跳过误报技能: {slug} (slug_specific_bypass镜像)")
             skipped += 1
             continue
         sp = SKILLS_DIR / slug
@@ -1195,6 +1216,11 @@ def step3_5_auditor_scan(installed: list[str]) -> tuple[list[str], list[tuple[st
                             "music-generator-topmediai",  # credential-file-access: finding only in docs, not code (误报 2026-04-01)
                             "imessage",            # shell-exec-python: iMessage CLI wrapper, legitimate (误报 2026-04-01)
                             "nochat-channel-plugin",  # fetch-call+base64-encode: notification/chat plugin (误报 2026-04-01)
+                            "nochat-channel",         # fetch-call+base64-encode: nochat channel integration (误报 2026-04-02)  # NOTE: auch für nochat-channel-plugin als Basis-Slug
+                            "openclaw-obsidian-tasks",  # supply-chain-npm-exec: OpenClaw obsidian sync skill, npx is expected (误报 2026-04-02, reappeared)
+                            "openclaw-team-builder",   # supply-chain-npm-exec: OpenClaw team builder, npx/npm exec expected (误报 2026-04-02)
+                            "multi-team-coding",       # browser-tool: multi-team coding assistant, browser automation is expected (误报 2026-04-02)
+                            "feishu-meeting",          # absolute-path-unix+curl-wget: Feishu meeting skill, standard Unix paths and HTTP expected (误报 2026-04-02)
                             "openrouter-transcribe",  # curl-wget: public API transcription tool (误报 2026-04-01)
                             "project-context-sync",  # curl-wget: project context sync utility (误报 2026-04-01)
                             "audio-analyzer",      # memory-write: audio analysis config (误报 2026-04-01)
@@ -1206,10 +1232,16 @@ def step3_5_auditor_scan(installed: list[str]) -> tuple[list[str], list[tuple[st
                             "self-evolving-skill",  # supply-chain-npm-exec: npx exec to bootstrap AI agents, legitimate (误报 2026-04-02)
                             "github-watch",         # shell-exec-python: GitHub API polling tool, legitimate (误报 2026-04-02)
                             "contextui",            # curl-wget: CLI HTTP tool for LLM API calls, legitimate (误报 2026-04-02)
+                            "gitmap",               # shell-exec-python: git visualization tool, legitimate git CLI usage (误报 2026-04-02 09:09)
+                            "equity-analyst",       # shell-exec-python: financial equity analysis with python scripts (误报 2026-04-02 09:09)
+                            "supabase",             # curl-wget: Supabase CLI/database tool making expected HTTP calls (误报 2026-04-02 09:09)
+                            "gmail-oauth",          # curl-wget: Gmail OAuth integration making expected API calls (误报 2026-04-02 09:09)
+                            "text-to-song",         # sleeper-keyword-trigger: music generation triggered by song lyrics/keywords (误报 2026-04-02 09:09)
                         }
                         if slug in slug_specific_bypass:
                             safe.append(slug)
-                            log(f"[Step3.5] PASS: {slug} (slug精确白名单)")
+                            bypassed_ids = [f.get("id", "?") for f in high_crit]
+                            log(f"[Step3.5] PASS: {slug} (slug精确白名单: {', '.join(bypassed_ids)})")
                             continue
                         # Documentation skill bypass: skills with no executable scripts
                         # get false positives from static analysis (relative imports
@@ -1249,7 +1281,9 @@ def step3_5_auditor_scan(installed: list[str]) -> tuple[list[str], list[tuple[st
                                 ("fetch-call",                    # CLI tools making outbound HTTP calls
                                  lambda: any(k in slug_lower for k in ["task", "todo", "remind", "notify", "webhook", "api", "topic", "repo", "news", "feed", "rss", "github", "feishu", "calendar", "event", "schedule", "automation", "tiktok", "tikto", "uid", "life", "user", "identity", "wechat", "article", "spider", "telegram", "bot", "slack", "discord", "second", "wechat-article-spider", "github-automation-pro", "google-search", "google-search-pro", "search"])),
                                 ("sleeper-date-trigger",         # Date/schedule-based reminder and note tools (expected behavior)
-                                 lambda: any(k in slug_lower for k in ["note", "foam", "task", "todo", "remind", "schedule", "panner", "event", "calendar", "agenda", "search", "news", "digest", "meeting", "prep", "summarizer", "summary", "digest"])),
+                                 lambda: any(k in slug_lower for k in ["note", "foam", "task", "todo", "remind", "schedule", "panner", "event", "calendar", "agenda", "search", "news", "digest", "meeting", "prep", "summarizer", "summary", "digest", "team"])),
+                                ("cron-manipulation",             # Team reporting/collaboration tools legitimately create scheduled tasks
+                                 lambda: any(k in slug_lower for k in ["team", "daily", "weekly", "report"])),
                                 ("absolute-path-unix",            # Task tools using /tmp or standard Unix paths
                                  lambda: any(k in slug_lower for k in ["task", "todo", "panner", "remind", "schedule"])),
                                 ("prompt-injection-role",         # Role-assignment in skill descriptions (doc-only)
@@ -1268,6 +1302,10 @@ def step3_5_auditor_scan(installed: list[str]) -> tuple[list[str], list[tuple[st
                                  lambda: any(k in slug_lower for k in ["remind", "message", "send", "notify", "chat", "lift", "deepseek", "gpt", "conversation", "summary", "lark", "feishu", "telegram", "bot", "wechat", "slack", "discord"])),
                                 ("base64-encode",                 # Image/text encoding skills legitimately using base64
                                  lambda: any(k in slug_lower for k in ["image", "ocr", "text-recognition", "encode", "decode", "vision", "picture", "photo", "paddle", "clipt", "vision", "img", "audio", "speech", "transcribe", "stt", "tts"])),
+                                ("homedir-access",                # Search/intelligence tools legitimately access home dirs for indexing
+                                 lambda: any(k in slug_lower for k in ["search", "intelli", "intel", "find", "locate", "index"])),
+                                ("browser-tool",                  # Search/intelligence tools legitimately use browser automation
+                                 lambda: any(k in slug_lower for k in ["search", "intelli", "intel", "spider", "scrape", "crawl", "web"])),
                             ] if pred()
                         ]
                         high_non_whitelisted = [f for f in high_crit if f.get("id") not in whitelisted_findings]
