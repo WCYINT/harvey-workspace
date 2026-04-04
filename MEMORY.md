@@ -97,14 +97,12 @@
 
 ### ⚡ API 调用白银规则
 - **目的**：高效利用 API 调用次数资源，最大化 Harvey 针对 MBA 论文修改能力的自我提升效率和效果
-- **数据获取方式（2026-03-24 更新）：**
-  - OpenClaw 升级到 2026.3.22 后，`session_status` 不再输出 `📊 Usage: 5h XX% left`
-  - 改用 MiniMax API：`GET https://www.minimaxi.com/v1/api/openplatform/coding_plan/remains`
-  - 提取 `MiniMax-M*` 的 `current_interval_usage_count`（已用）和 `total - used`（可用）
-  - **阈值**：剩余可用 < 5%总量 时触发告警（告警线 = 4500×5% = 225次）
+- **⚠️ MiniMax API 数据来源已移除（2026-04-04 James 确认）：**
+  - MiniMax API 返回数据不准，存在误读
+  - **权威数据源：session_status 命令输出**
 - **检查频率**：每 25 分钟通过 cron job 检查一次 usage
-- **remaining_pct > 5%**：正常调用 MiniMax API，保持正常工作
-- **remaining_pct <= 5%**：减少 API 消耗，自主决策并执行，邮件通知 wcyint@163.com
+- **剩余可用 > 5%**：正常调用 MiniMax API，保持正常工作
+- **剩余可用 <= 5%**：减少 API 消耗，自主决策并执行，邮件通知 wcyint@163.com
 - **减少消耗决策**：
   - remaining_pct <= 2%：切换 kimi-k2.5（完全停止 MiniMax）、关闭非必要任务
   - remaining_pct <= 3%：切换 kimi-k2.5、降低 thinking 级别、合并批量操作

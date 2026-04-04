@@ -1,0 +1,44 @@
+{
+  "project": {
+    "name": "my-first-project",
+    "repo_path": ".",
+    "language": "typescript",
+    "board_enabled": true,
+    "board_name": "my-first-project"
+  },
+  "pipeline": {
+    "versions_dir": "versions",
+    "docs_dir": "docs",
+    "state_file": ".state.json"
+  },
+  "llm": {
+    "provider": "openai-compatible"
+  },
+  "adapters": {
+    "deploy": "shell",
+    "archive": "local-copy",
+    "orchestration": "local_llm",
+    "publish": "clawhub"
+  },
+  "openclaw": {
+    "base_url": "",
+    "api_key": "",
+    "model": "",
+    "agent_id": "skill-runner",
+    "mode": "run",
+    "timeout_seconds": 900
+  },
+  "deploy": {
+    "build_command": "",
+    "deploy_command": "",
+    "restart_command": "",
+    "host": "",
+    "user": "",
+    "path": "",
+    "upload_mode": "rsync"
+  },
+  "publish": {
+    "github_repo": "",
+    "release_branch": "main"
+  }
+}

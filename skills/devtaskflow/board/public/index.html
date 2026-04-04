@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>DevTaskFlow 项目看板</title>
+<style>
+body{font-family:sans-serif;background:#f5f5f5;margin:0;padding:0;}
+header{background:#fff;padding:1rem;box-shadow:0 2px 4px rgba(0,0,0,0.1);text-align:center;}
+#lastUpdate{font-size:0.9rem;color:#666;}
+.container{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1rem;padding:1rem;}
+.card{background:#fff;padding:1rem;border-radius:8px;box-shadow:0 2px 4px rgba(0,0,0,0.1);cursor:pointer;transition:transform .2s;}
+.card:hover{transform:scale(1.02);}
+.status{font-weight:bold;}
+.progress{background:#e0e0e0;height:8px;border-radius:4px;overflow:hidden;margin:0.5rem 0;}
+.progress span{display:block;height:100;background:#76c7c0;}
+.deploy{margin-top:0.5rem;font-size:0.9rem;color:#555;}
+.details{display:none;margin-top:0.5rem;border-top:1px solid #eee;padding-top:0.5rem;}
+@media (prefers-color-scheme: dark){body{background:#222;color:#ddd} .card{background:#333} .header{background:#111}}
+</style>
+</head>
+<body>
+<header>
+<h1>📊 DevTaskFlow 项目看板</h1>
+<div id="lastUpdate">[最后更新: --]</div>
+</header>
+<div class="container" id="board"></div>
+<script>
+const API = '/api/projects';
+function fetchData(){fetch(API).then(r=>r.json()).then(render).catch(console.error);}
+function render(projects){
+ const board=document.getElementById('board');
+ board.innerHTML='';
+ const now=new Date();
+ document.getElementById('lastUpdate').textContent='[最后更新: '+now.getHours().toString().padStart(2,'0')+':'+now.getMinutes().toString().padStart(2,'0')+']';
+ projects.forEach(p=>{
+   const card=document.createElement('div');
+   card.className='card';
+   const statusIcon={'active':'🟢','sealed':'📦','paused':'⏸️','failed':'🔴'}[p.status]||'⚪';
+   const version=p.current_version||'';
+   const state=p.version_state||{};
+   const tasks=state.tasks||[];
+   const completed=tasks.filter(t=>t.status==='done').length;
+   const progress=tasks.length?Math.round(completed/tasks.length*100):0;
+   const deploy=p.deploy||{};
+   card.innerHTML=`
+   <div><strong>${statusIcon} ${p.name} ${version}</strong></div>
+   <div class="status">状态：${p.status}</div>
+   <div>进度：${completed}/${tasks.length} 任务完成</div>
+   <div class="progress"><span style="width:${progress}%"></span></div>
+   <div class="deploy">
+     <div>📦 部署信息</div>
+     <div>地址：${deploy.host||'--'}</div>
+     <div>位置：${deploy.user||'--'}@${deploy.host||'--'}</div>
+     <div>路径：${deploy.path||'--'}</div>
+   </div>
+   <div class="details">
+     <div><strong>任务列表：</strong></div>
+     <ul>${tasks.map(t=>`<li>${t.id} ${t.name} (${t.priority}) - ${t.status}</li>`).join('')}</ul>
+     <div><strong>最近错误：</strong> ${state.last_error||'无'}</div>
+     <div><strong>需求摘要：</strong><pre style="white-space:pre-wrap;font-size:0.9rem;">${p.requirements_summary||''}</pre></div>
+   </div>
+   `;
+   card.addEventListener('click',()=>{card.querySelector('.details').style.display = card.querySelector('.details').style.display==='none'?'block':'none';});
+   board.appendChild(card);
+ });
+}
+fetchData();
+setInterval(fetchData,30000);
+</script>
+</body>
+</html>

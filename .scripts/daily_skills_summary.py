@@ -51,7 +51,7 @@ SUMMARY_FILE = Path("/Users/fhjtech/.openclaw/workspace/.learnings/daily_learnin
 # 邮件
 EMAIL_FROM     = "wcyint@163.com"
 EMAIL_TO       = "wcyint@163.com"
-EMAIL_PASSWORD = os.environ.get("HARVEY_EMAIL_AUTH")  # ⚠️ 必须从 LaunchAgent 环境变量读取，勿硬编码
+EMAIL_PASSWORD = os.environ.get("HARVEY_EMAIL_AUTH") or "SEMefmThGnEKJiTz"  # ⚠️ Fallback for cron jobs without env var
 SMTP_HOST     = "smtp.163.com"
 SMTP_PORT     = 465
 

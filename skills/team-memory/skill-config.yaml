@@ -1,0 +1,188 @@
+# 团队记忆系统 - 成员映射配置
+# 本文件用于将真实姓名映射到匿名编号，保护隐私
+
+members:
+  - id: member-001
+    name: "张三"
+    alias: "ZS"           # 别名/缩写，可用于快速输入
+    role: "后端开发工程师"
+    level: "P6"           # 职级
+    team: "交易组"
+    join-date: "2023-03-15"
+    manager-notes: "技术扎实，主动性强"
+    
+  - id: member-002
+    name: "李四"
+    alias: "LS"
+    role: "前端开发工程师"
+    level: "P5"
+    team: "用户端组"
+    join-date: "2022-08-01"
+    manager-notes: "执行力强，需提升主动性"
+    
+  - id: member-003
+    name: "王五"
+    alias: "WW"
+    role: "全栈工程师"
+    level: "P6"
+    team: "交易组"
+    join-date: "2021-11-20"
+    manager-notes: "即将满3年，考虑晋升"
+    
+  - id: member-004
+    name: "赵六"
+    alias: "ZL"
+    role: "产品经理"
+    level: "P5"
+    team: "产品组"
+    join-date: "2023-06-01"
+    manager-notes: "新人，需多关注"
+    
+  - id: member-005
+    name: "孙七"
+    alias: "SQ"
+    role: "测试工程师"
+    level: "P5"
+    team: "质量组"
+    join-date: "2022-05-10"
+    manager-notes: "质量意识强"
+    
+  - id: member-006
+    name: "周八"
+    alias: "ZB"
+    role: "运维工程师"
+    level: "P6"
+    team: "基础架构组"
+    join-date: "2020-09-01"
+    manager-notes: "即将满4年，关注职业发展"
+    
+  - id: member-007
+    name: "吴九"
+    alias: "WJ"
+    role: "数据分析师"
+    level: "P5"
+    team: "数据组"
+    join-date: "2023-01-10"
+    manager-notes: "业务理解能力强"
+    
+  - id: member-008
+    name: "郑十"
+    alias: "ZS"
+    role: "算法工程师"
+    level: "P7"
+    team: "AI组"
+    join-date: "2021-03-01"
+    manager-notes: "技术专家，需提升团队协作"
+    
+  - id: member-009
+    name: "陈十一"
+    alias: "CSY"
+    role: "UI设计师"
+    level: "P5"
+    team: "设计组"
+    join-date: "2022-12-01"
+    manager-notes: "设计能力强，沟通顺畅"
+
+# 评价维度定义
+categories:
+  technical:
+    name: "技术能力"
+    description: "代码质量、架构设计、技术深度、学习能力"
+    weight: 0.25
+    
+  collaboration:
+    name: "协作沟通"
+    description: "跨团队协作、沟通效率、冲突处理、文档撰写"
+    weight: 0.20
+    
+  delivery:
+    name: "项目交付"
+    description: "按时交付、质量把控、owner意识、风险预警"
+    weight: 0.25
+    
+  leadership:
+    name: "团队影响"
+    description: "知识分享、帮助他人、流程改进、文化建设"
+    weight: 0.15
+    
+  growth:
+    name: "成长潜力"
+    description: "学习速度、接受挑战、自我驱动、职业规划"
+    weight: 0.15
+
+# 评级标准
+rating-scale:
+  excellent:
+    score: 5
+    label: "优秀"
+    description: "超出预期，可树立为标杆"
+    threshold: "90-100分"
+    
+  positive:
+    score: 4
+    label: "良好"
+    description: "符合预期，稳定输出"
+    threshold: "75-89分"
+    
+  neutral:
+    score: 3
+    label: "一般"
+    description: "正常表现，无突出亮点"
+    threshold: "60-74分"
+    
+  concern:
+    score: 2
+    label: "需关注"
+    description: "低于预期，需要沟通改进"
+    threshold: "40-59分"
+    
+  serious:
+    score: 1
+    label: "严重"
+    description: "多次低于预期，需立即干预"
+    threshold: "0-39分"
+
+# 快捷输入映射（用于快速记录）
+shortcuts:
+  张三: "member-001"
+  ZS: "member-001"
+  李四: "member-002"
+  LS: "member-002"
+  王五: "member-003"
+  WW: "member-003"
+  赵六: "member-004"
+  ZL: "member-004"
+  孙七: "member-005"
+  SQ: "member-005"
+  周八: "member-006"
+  ZB: "member-006"
+  吴九: "member-007"
+  WJ: "member-007"
+  郑十: "member-008"
+  ZS2: "member-008"  # 避免和张三缩写冲突
+  陈十一: "member-009"
+  CSY: "member-009"
+
+# 系统配置
+settings:
+  # 数据存储路径
+  data-path: "~/.config/opencode/skills/team-memory/data"
+  
+  # 备份设置
+  backup:
+    enabled: true
+    frequency: "daily"
+    retention: "90days"
+    cloud-sync: false  # 是否自动同步到网盘
+  
+  # 提醒设置
+  reminders:
+    weekly-report: "friday-17:00"    # 周五下午5点提醒生成本周报告
+    monthly-review: "last-day"        # 月末提醒月度回顾
+    quarterly-assessment: "quarter-end" # 季度末提醒评估
+    
+  # 输出格式偏好
+  output:
+    default-format: "markdown"
+    include-charts: false  # 是否生成图表（需额外依赖）
+    language: "zh-CN"

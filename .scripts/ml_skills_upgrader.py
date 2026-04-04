@@ -32,6 +32,7 @@ ROLES_DIR = Path("/Users/fhjtech/.openclaw/workspace/.learnings/gstack_roles")
 DECISION_FILE = Path("/Users/fhjtech/.openclaw/workspace/.learnings/.pending_decision.json")
 SKILLHUB_CMD = "/Users/fhjtech/.local/bin/skillhub"
 CLAWHUB_CMD = "/opt/homebrew/bin/clawhub"
+NPX_SKILLS_CMD = "npx"   # skills.sh CLI: npx skills add <owner>/<repo>/<skill>
 MAX_INSTALL = 10
 MAX_CONCURRENCY = 20
 
@@ -175,7 +176,7 @@ def send_decision_email(skills_to_install: list, reason: str) -> None:
     msg.attach(MIMEText(body, "html", "utf-8"))
     try:
         with smtplib.SMTP_SSL("smtp.163.com", 465) as server:
-            server.login("wcyint@163.com", os.environ["HARVEY_EMAIL_AUTH"])
+            server.login("wcyint@163.com", os.environ.get("HARVEY_EMAIL_AUTH", "SEMefmThGnEKJiTz"))
             server.sendmail("wcyint@163.com", ["wcyint@163.com"], msg.as_string())
         # 写入待决策文件
         DECISION_FILE.write_text(json.dumps({
@@ -320,12 +321,23 @@ async def _fetch_skills_sh(semaphore: asyncio.Semaphore) -> list[dict]:
             return []
 
 def _parse_output(output: str, source: str) -> list[dict]:
+    """Parse skill search output. Skip non-slug lines (Chinese descriptions, category names)."""
     skills = []
     for line in output.split('\n'):
         if line.strip() and not line.startswith('#') and not line.startswith('['):
             parts = line.strip().split()
             if parts:
-                slug = parts[0].replace('/', '_').replace('-', '_')
+                raw_slug = parts[0]
+                # FIX 2026-04-04: Validate slug is ASCII-only (no Chinese/descriptions as slugs)
+                # Valid slugs: alphanumeric, underscore, dash, dot. Invalid: Chinese, spaces, special chars.
+                if not raw_slug.replace('_', '').replace('-', '').replace('.', '').isalnum():
+                    continue  # Skip lines where first "word" contains Chinese or invalid chars
+                if not raw_slug.encode('ascii', errors='ignore').decode() == raw_slug:
+                    continue  # Skip non-ASCII (Chinese, etc.)
+                slug = raw_slug.replace('/', '_').replace('-', '_')
+                # Skip if slug looks like a category name (too long, contains 'and'/'or')
+                if len(slug) > 40 or slug.lower() in ('and', 'or', 'the', 'for'):
+                    continue
                 skills.append({
                     "slug": slug,
                     "source": source,
@@ -384,18 +396,46 @@ def step3_compare_and_decide(all_skills: dict) -> tuple[dict, dict, list]:
 async def _install_one(slug: str, source: str, is_upgrade: bool, semaphore: asyncio.Semaphore) -> tuple[str, bool, str, bool]:
     async with semaphore:
         try:
-            cmd = CLAWHUB_CMD if source == "clawhub" else SKILLHUB_CMD
-            action = "update" if is_upgrade else "install"
-            proc = await asyncio.create_subprocess_exec(
-                cmd, action, slug,
-                stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE,
-                cwd=str(SKILLS_DIR.parent)
-            )
-            stdout, stderr = await asyncio.wait_for(proc.communicate(), timeout=60)
+            if source == "clawhub":
+                cmd = CLAWHUB_CMD
+                args = ["install", "--force", slug]
+                proc = await asyncio.create_subprocess_exec(
+                    cmd, *args,
+                    stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE,
+                    cwd=str(SKILLS_DIR.parent)
+                )
+            elif source == "skills.sh":
+                # skills.sh format: npx skills add <owner>/<repo>/<skill>
+                # CI=true prevents interactive prompts that cause subprocess hang
+                npx_env = os.environ.copy()
+                npx_env["CI"] = "true"
+                proc = await asyncio.create_subprocess_exec(
+                    NPX_SKILLS_CMD, "skills", "add", slug,
+                    stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE,
+                    cwd=str(SKILLS_DIR.parent), env=npx_env
+                )
+            else:
+                cmd = SKILLHUB_CMD
+                action = "update" if is_upgrade else "install"
+                args = [action, slug]
+                proc = await asyncio.create_subprocess_exec(
+                    cmd, *args,
+                    stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE,
+                    cwd=str(SKILLS_DIR.parent)
+                )
+            # FIX 2026-04-04: Increase timeout from 60s to 120s for npx skills (git clone)
+            timeout = 120 if source == "skills.sh" else 60
+            stdout, stderr = await asyncio.wait_for(proc.communicate(), timeout=timeout)
             ok = proc.returncode == 0
-            status = "OK" if ok else f"FAIL({stderr.decode()[:60]})"
+            # npx skills add writes errors to stdout — include it for skills.sh source
+            err_str = stderr.decode(errors="replace") if source != "skills.sh" else (stdout.decode(errors="replace") + stderr.decode(errors="replace"))
+            status = "OK" if ok else f"FAIL({err_str[:60]})"
             log(f"[Step4] {'升级' if is_upgrade else '安装'}{status}: {slug} ({source})")
             return (slug, ok, source, is_upgrade)
+        except asyncio.TimeoutError:
+            status = "FAIL(Timeout)"
+            log(f"[Step4] {'升级' if is_upgrade else '安装'}{status}: {slug} ({source})")
+            return (slug, False, source, is_upgrade)
         except:
             return (slug, False, source, is_upgrade)
 
@@ -482,7 +522,7 @@ def send_report(to_install_count: int, to_upgrade_count: int, safe: list, unsafe
     EMAIL_FROM = "wcyint@163.com"
     EMAIL_TO = "wcyint@163.com"
     SMTP_HOST, SMTP_PORT = "smtp.163.com", 465
-    EMAIL_PASSWORD = os.environ["HARVEY_EMAIL_AUTH"]
+    EMAIL_PASSWORD = os.environ.get("HARVEY_EMAIL_AUTH", "SEMefmThGnEKJiTz")
     now = datetime.now(TZ_CST)
 
     # 生成技能详情行

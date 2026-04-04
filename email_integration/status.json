@@ -1,7 +1,9 @@
 {
-  "last_check": "2026-03-29T08:33:00+08:00",
-  "emails_processed": 0,
-  "insights_generated": 0,
-  "pending_feedback": [],
-  "status": "no_new_feedback"
+  "last_check": "2026-04-01T23:22:00+08:00",
+  "status": "idle",
+  "queue_empty": true,
+  "notifications_sent": 0,
+  "checked_by": "Harvey AI",
+  "result": "silent_handled",
+  "notes": "[2026-04-01 23:22] 邮件洞察检查完成。无新反馈，无重要通知事项，静默处理。LEARNINGS和ERRORS中所有条目均为已解决或自动处理状态，无需James关注。"
 }

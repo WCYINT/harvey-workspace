@@ -38,7 +38,7 @@ def log(msg) -> None:
     with open(LOG_FILE, "a", encoding="utf-8") as f:
         f.write(line + "\n")
 
-def get_feishu_token() -> None:
+def get_feishu_token() -> str:
     url = "https://open.feishu.cn/open-apis/auth/v3/tenant_access_token/internal"
     payload = json.dumps({"app_id": FEISHU_APP_ID, "app_secret": FEISHU_APP_SECRET}).encode()
     req = urllib.request.Request(url, data=payload,
@@ -47,7 +47,7 @@ def get_feishu_token() -> None:
         data = json.load(resp)
     return data["tenant_access_token"]
 
-def send_feishu(token, content) -> None:
+def send_feishu(token, content) -> dict:
     url = f"https://open.feishu.cn/open-apis/im/v1/messages?receive_id_type=open_id"
     payload = {
         "receive_id": FEISHU_USER_ID,
@@ -60,51 +60,41 @@ def send_feishu(token, content) -> None:
     with urllib.request.urlopen(req, timeout=10) as resp:
         return json.load(resp)
 
-def is_gateway_alive() -> None:
+def is_gateway_alive() -> bool:
     """检查 Gateway 是否响应"""
     url = f"http://127.0.0.1:{GATEWAY_PORT}/health"
     try:
         req = urllib.request.Request(url, headers={"Authorization": f"Bearer {GATEWAY_TOKEN}"})
         with urllib.request.urlopen(req, timeout=5) as resp:
             return resp.status == 200
-    except:
+    except Exception:
         return False
 
-def is_caffeinate_running() -> None:
-    """检查 caffeinate 是否在保活"""
-    if not PID_FILE.exists():
-        return False
+def is_caffeinate_running() -> bool:
+    """检查 caffeinate LaunchAgent 是否在运行（launchd 管理）"""
     try:
-        pid = int(PID_FILE.read_text().strip())
-        os.kill(pid, 0)  # 检查进程是否存在
-        return True
-    except:
-        return False
-
-def start_caffeinate():
-    """启动 caffeinate 防止休眠"""
-    try:
-        # 先停掉旧的
-        if is_caffeinate_running():
-            pid = int(PID_FILE.read_text().strip())
-            try:
-                os.kill(pid, 9)
-            except:
-                pass
-        # 启动新的 caffeinate -s（系统休眠阻止）
-        proc = subprocess.Popen(
-            ["caffeinate", "-s", "-i"],
-            stdout=subprocess.DEVNULL,
-            stderr=subprocess.DEVNULL
+        result = subprocess.run(
+            ["launchctl", "list", "com.hjtech.caffeinate"],
+            capture_output=True, text=True, timeout=5
         )
-        PID_FILE.write_text(str(proc.pid))
-        log(f"[CAFFE] Started caffeinate pid={proc.pid}")
+        return result.returncode == 0
+    except Exception:
+        return False
+
+def start_caffeinate() -> bool:
+    """通过 launchctl 启动 caffeinate LaunchAgent"""
+    try:
+        subprocess.run(
+            ["launchctl", "load", "/Users/fhjtech/Library/LaunchAgents/com.hjtech.caffeinate.plist"],
+            capture_output=True, timeout=10
+        )
+        log("[CAFFE] Loaded caffeinate LaunchAgent")
         return True
     except Exception as e:
         log(f"[CAFFE] Failed: {e}")
         return False
 
-def restart_gateway():
+def restart_gateway() -> bool:
     """尝试重启 Gateway"""
     log("[GATEWAY] Attempting restart via launchctl...")
     try:
@@ -123,7 +113,7 @@ def restart_gateway():
         log(f"[GATEWAY] Restart failed: {e}")
     return False
 
-def check_system_resources():
+def check_system_resources() -> bool:
     """检查系统资源"""
     try:
         subprocess.run(["uptime"], capture_output=True, timeout=3)
@@ -132,15 +122,15 @@ def check_system_resources():
         log(f"[SYS] Resource check error: {e}")
         return True
 
-def get_auto_approve_record():
+def get_auto_approve_record() -> list:
     """获取自动授权记录"""
     f = LOG_DIR / ".auto_approve_records.json"
     try:
         return json.loads(f.read_text())
-    except:
+    except Exception:
         return []
 
-def record_auto_approve(reason, action):
+def record_auto_approve(reason, action) -> None:
     """记录自动授权"""
     f = LOG_DIR / ".auto_approve_records.json"
     records = get_auto_approve_record()
@@ -151,7 +141,7 @@ def record_auto_approve(reason, action):
     })
     f.write_text(json.dumps(records, indent=2, ensure_ascii=False))
 
-def notify_james(message):
+def notify_james(message) -> None:
     """发送飞书通知"""
     try:
         token = get_feishu_token()
@@ -164,7 +154,7 @@ def notify_james(message):
         log(f"[FEISHU] Error: {e}")
 
 # ── 主检查流程 ─────────────────────────────────
-def main():
+def main() -> None:
     log("=== Health Check Started ===")
     issues = []
 
@@ -219,12 +209,6 @@ def main():
             log("[ISSUE] caffeinate not running, starting...")
             if start_caffeinate():
                 notify_james("🔧 Harvey 已自动启动 caffeinate 防止 Mac 休眠")
-        else:
-            log("[OK] caffeinate is running")
-        if not is_caffeinate_running():
-            log("[ISSUE] caffeinate not running, starting...")
-            start_caffeinate()
-            notify_james("🔧 Harvey 已自动启动 caffeinate 防止 Mac 休眠")
         else:
             log("[OK] caffeinate is running")
 

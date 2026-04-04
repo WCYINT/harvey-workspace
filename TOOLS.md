@@ -59,31 +59,15 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 
 **目的：** 高效利用 API 调用次数资源，最大化 Harvey 针对 MBA 论文修改能力的自我提升效率和效果
 
-**session_status 正确解读（铁律）：**
-```
-📊 Usage: 5h 13% left ⏱2h 18m
-      ↓      ↓          ↓
-   时间段   已用%      剩余时间
-```
-- `5h` = 时间段总长（5小时窗口）
-- `13%` = 已消耗的 API 调用次数占比
-- `⏱2h 18m` = 该时间段剩余时间
-
-**阈值定义：** 95% 阈值指的是 `5h XX% left` 中的 `XX%`，即5小时窗口内已消耗的 API 调用次数比例。
+**⚠️ MiniMax API 数据来源已移除（2026-04-04 James 确认）：**
+- MiniMax API 返回数据不准，存在误读
+- **权威数据源：session_status 命令输出**
 
 **执行步骤：**
-1. 每 25 分钟通过 OpenClaw cron job 检查一次 MiniMax API usage
-2. 调用 MiniMax API (`https://www.minimaxi.com/v1/api/openplatform/coding_plan/remains`) 获取：
-   - `total = current_interval_total_count`（总量，4500）
-   - `used = current_interval_usage_count`（已用）
-   - `remaining = total - used`（可用）
-   - `remaining_pct = remaining / total * 100`
-3. **remaining_pct > 5%** → 正常调用 MiniMax API，保持正常工作
-4. **remaining_pct <= 5%** → 减少 API 消耗，自主做出减少消耗决策并执行，邮件通知 wcyint@163.com
-
-**session_status 变更说明（2026-03-24）：**
-- OpenClaw 升级到 2026.3.22 后，`session_status` 不再输出 `📊 Usage: 5h XX% left`
-- 改用 MiniMax API 直接获取 usage 数据
+1. 使用 `session_status` 命令获取当前 API 使用情况
+2. 通过 OpenClaw 控制台判断剩余额度
+3. **剩余可用 > 5%** → 正常调用 MiniMax API
+4. **剩余可用 <= 5%** → 减少 API 消耗，自主决策并执行，邮件通知 wcyint@163.com
 
 **减少消耗决策规则：**
 - usage >= 99%：切换 kimi-k2.5（完全停止 MiniMax）、关闭非必要任务

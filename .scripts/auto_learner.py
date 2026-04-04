@@ -41,17 +41,46 @@ def tailn(file_path: Path, n: int = 200) -> list:
             total_size = fh.seek(0, 2)
             if total_size <= 0:
                 return []
-            # Read a conservative window: n lines * 150 bytes + 1KB buffer for safety.
-            # This is an OVER-estimate to ensure we always capture n lines.
-            window_size = min(total_size, n * 150 + 1024)
+            # Read a window: n lines * 2000 bytes (worst-case markdown+code line) + 2KB buffer.
+            # LEARNINGS.md entries contain code blocks, tables, URLs — lines can be 1KB-100KB.
+            # Small files (window > total): min() returns total → read all → lines[-n:] works
+            # Large files (window < total): min() returns n*2000+2048 → seek from EOF backward
+            # NOTE: If a single line exceeds this window (e.g. 100KB URL on one line),
+            # splitlines() includes the truncated fragment, losing recent entries at boundary.
+            # This is a known limitation of the read-backwards approach; 2000 multiplier is a
+            # practical balance between memory usage and coverage for typical markdown files.
+            window_size = min(total_size, n * 2000 + 2048)
             fh.seek(max(0, total_size - window_size))
             remaining = fh.read()
-            try:
+            # For large files, the seek position may land mid-line, causing the
+            # first "line" from splitlines() to be a partial fragment. Detect this
+            # and expand the window until we have at least n complete lines.
+            # The previous code dropped the partial line silently, losing recent
+            # entries at the window boundary (bug: entry IDs and content truncated).
+            max_window = total_size  # never read more than the whole file
+            while True:
                 decoded = remaining.decode("utf-8", errors="ignore")
-            except Exception:
-                return []
-            lines = decoded.splitlines()
-            return lines[-n:] if len(lines) > n else lines
+                lines = decoded.splitlines()
+                # Count how many lines in the window are complete (non-partial).
+                # A line is partial if the window doesn't start at file beginning
+                # AND the first char is not '\n' (we started mid-line).
+                started_mid = (total_size - window_size) > 0
+                is_partial_first = started_mid and decoded and decoded[0] not in ("\n", "\r")
+                num_complete = len(lines) - (1 if is_partial_first else 0)
+                if num_complete >= n or window_size >= max_window:
+                    # Have enough lines OR have read entire file; return what we have.
+                    if is_partial_first and num_complete >= n:
+                        # Skip partial first line, then take last n complete lines
+                        return lines[len(lines) - n:]
+                    elif is_partial_first:
+                        # Not enough complete lines; return all complete lines
+                        return lines[1:]
+                    else:
+                        return lines[-n:]
+                # Expand window and re-read to capture more complete lines
+                window_size = min(max_window, window_size * 2)
+                fh.seek(max(0, total_size - window_size))
+                remaining = fh.read()
     except Exception:
         return []
 
@@ -149,7 +178,7 @@ def build_error_entry(
 
 ### Error
 ```
-{error_details[:2000]}
+{error_details[:4000]}
 ```
 
 ### Context
@@ -212,15 +241,20 @@ def get_recent_errors(minutes: int = 30) -> list:
     
     for lf in sorted(log_files, key=lambda p: p.stat().st_mtime, reverse=True)[:5]:
         try:
-            lines = tailn(lf, 500)
+            # gateway.err.log has very long lines (model-fallback entries ~300-500 bytes);
+            # use 2000-line window to ensure ~6h of lookback covers the 60-min capture window.
+            n_lines = 2000 if "gateway.err.log" in lf.name else 500
+            lines = tailn(lf, n_lines)
             text = "\n".join(lines)
             # Look for error patterns
             for m in re.finditer(
-                r"(\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}[^]]*)\s*(?:ERROR|error|Error|failed|Failed|FAILED|Exception|Traceback).*?(?=\n\d{4}-|$)",
+                # Timestamp: allow optional .sss and timezone so \D* stops at the [source] space.
+                # Without .sss: \D*=.316+08:00 and eats the [source] space → \s* fails.
+                r"(\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?[^\sT]*)\s+\[([^\]]+)\]\s*.*?(?:ERROR|error|Error|failed|Failed|FAILED|Exception|Traceback).*?(?=\n\d{4}-|$)",
                 text,
-                re.DOTALL,
+                re.DOTALL | re.IGNORECASE,
             ):
-                ts = m.group(1).strip()[:19]
+                ts = m.group(1).strip()[:25]  # Keep full ISO-8601 with timezone: "2026-04-01T02:08:00+08:00" (25 chars)
                 err_text = m.group(0).strip()[:500]
                 # Broaden filter: catch subprocess failures + Python exceptions + HTTP errors.
                 # Previously only caught subprocess/signal → missed all Python tracebacks.
@@ -229,6 +263,7 @@ def get_recent_errors(minutes: int = 30) -> list:
                     "NameError", "TypeError", "KeyError", "ValueError",
                     "ImportError", "AttributeError", "RuntimeError",
                     "HTTPError", "ConnectionError", "TimeoutError",
+                    "401", "Unauthorized",  # supermemory plugin auth failures
                 ]):
                     errors.append({"timestamp": ts, "error": err_text, "file": lf.name})
         except Exception:
@@ -256,8 +291,11 @@ def get_skill_update_failures(minutes: int = 180) -> list:
     cutoff = datetime.now() - timedelta(minutes=minutes)
     failures = []
 
-    for line in reversed(lines[-500:]):  # Newest-first so early-break on old ts exits cleanly
-        # Parse timestamp
+    # Parse all lines once; build list of (ts, line) for entries within the cutoff window.
+    # (Avoids reversing twice and prevents early-break from skipping failures that
+    # appear after an old entry in reversed order.)
+    recent = []
+    for line in lines:
         ts_match = re.match(r"\[(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})\]", line)
         if not ts_match:
             continue
@@ -265,8 +303,12 @@ def get_skill_update_failures(minutes: int = 180) -> list:
             ts = datetime.strptime(ts_match.group(1), "%Y-%m-%d %H:%M:%S")
         except ValueError:
             continue
-        if ts < cutoff:
-            break
+        if ts >= cutoff:
+            recent.append((ts, line))
+
+    # Process newest-first so we capture the most recent failures first
+    for ts, line in sorted(recent, reverse=True):
+        ts_match = re.match(r"\[(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})\]", line)
 
         # Real failure: SMTP 535
         if "SMTP 535" in line or "认证错误" in line:
@@ -277,12 +319,13 @@ def get_skill_update_failures(minutes: int = 180) -> list:
             })
             continue
 
-        # Real failure: install failures (Y > 0)
+        # Real failure: catastrophic install failures (≥50% failed — partial failures are normal)
         m = re.search(r"\[Step3\]\s*安装完成:\s*(\d+)\s*成功\s*/\s*(\d+)\s*失败", line)
         if m:
             success = int(m.group(1))
             failure = int(m.group(2))
-            if failure > 0:  # Real failure
+            # Only capture when failure rate >= 50%; normal partial failures (e.g. 1/15) are expected
+            if failure >= success:
                 failures.append({
                     "timestamp": ts_match.group(1),
                     "error": f"[skill_updates.log] Install failure: {success} OK / {failure} failed",
@@ -297,12 +340,13 @@ def resolve_entry(file_path: Path, entry_id: str, resolution: str, notes: str = 
     text = file_path.read_text()
     pattern = rf"(## \[{entry_id}\].*?)(### Metadata\n)(.*?)((?:---\n\n|$))"
     
-    def make_resolved(m) -> None:
+    def make_resolved(m) -> str:
         inner = m.group(1)
         inner = re.sub(r"\*\*Status\*\*.*?\n", "**Status**: resolved\n", inner)
         now = datetime.now().strftime("%Y-%m-%dT%H:%M:%S+08:00")
         resolved_block = f"\n### Resolution\n- **Resolved**: {now}\n- **Notes**: {notes or resolution}\n"
-        return m.group(1) + m.group(2) + m.group(3) + resolved_block + (m.group(4) if m.group(4) else "")
+        # m.group(1)=header, (2)='### Metadata\n', (3)=metadata-content, (4)=---\n\n or end
+        return inner + m.group(2) + m.group(3) + resolved_block + (m.group(4) if m.group(4) else "")
     
     new_text = re.sub(pattern, make_resolved, text, flags=re.DOTALL)
     if new_text != text:
@@ -325,6 +369,7 @@ def auto_resolve_simple(errors: list) -> int:
     known_fixes = {
         "SMTP": ("ERR-2026032", "SMTP credentials issue - notify James to regenerate 163 authorization code"),
         "jiti": ("ERR-2026032", "jiti cache staleness - clear /tmp/jiti/ and restart gateway"),
+        "Could not find the exact text": ("ERR-20260403", "jiti cache staleness - clear /tmp/jiti/ and restart gateway"),
         "duplicate tool_call": ("ERR-2026032", "MiniMax API tool_call ID collision - use fresh session per cron run"),
     }
 
@@ -431,14 +476,17 @@ def capture_recent_errors() -> str:
             dedup_pattern = m.group(1)  # e.g. "SMTP 535 认证错误（授权码可能过期）"
         
         # Also strip the skill_updates.log prefix + timestamp if present
-        dedup_pattern = re.sub(r"^\[skill_updates\.log\]\s*\[\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}\}\s*", "", dedup_pattern)
+        dedup_pattern = re.sub(r"^\[skill_updates\.log\]\s*\[\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}\]\s*", "", dedup_pattern)
         
         # Check if already logged using stable pattern
-        already_logged = False
-        for f in LEARNINGS_DIR.glob("*.md"):
-            if dedup_pattern[:80] in f.read_text():
-                already_logged = True
-                break
+        # Pre-load all learnings content once (avoid re-reading files in loop)
+        if "_learnings_cache" not in globals():
+            global _learnings_cache
+            _learnings_cache = {}
+            for lf in LEARNINGS_DIR.glob("*.md"):
+                _learnings_cache[lf.name] = lf.read_text(errors="ignore")
+        
+        already_logged = dedup_pattern[:80] in "\n".join(_learnings_cache.values())
         
         if not already_logged:
             area = "infra"

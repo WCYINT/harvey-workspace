@@ -1,0 +1,16 @@
+{
+  "analyzed_at":"2026-03-16T22:20:00+08:00",
+  "source_file":"collected_20260316.jsonl",
+  "patterns":[
+    {"name":"重复查询","count":4,"severity":"medium","suggestion":"使用缓存或记忆系统避免重复查询","wasted_tokens":11136}
+,
+    {"name":"过长上下文","count":0,"severity":"high","suggestion":"达到80%上下文窗口时自动切换新会话","wasted_tokens":0,"threshold":52428}
+,
+    {"name":"无效重试","count":0,"severity":"high","suggestion":"检测相同错误模式后切换策略","wasted_tokens":0}
+,
+    {"name":"过度生成","count":0,"severity":"medium","suggestion":"在prompt中明确指定输出长度限制","wasted_tokens":0}
+,
+    {"name":"低质量循环","count":2,"severity":"critical","suggestion":"检测到质量下降趋势时，重置上下文并尝试不同方法","wasted_tokens":25400}
+
+  ]
+}

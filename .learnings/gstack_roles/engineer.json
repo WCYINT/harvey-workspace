@@ -1,15 +1,15 @@
 {
-  "timestamp": "2026-03-29T22:48:41.331627+08:00",
+  "timestamp": "2026-04-04T12:02:49.554798+08:00",
   "role": "Engineer",
   "data": {
     "role": "Engineer",
     "skills_needed": [
-      "quality_mgmt",
-      "six_sigma",
-      "dfmea",
-      "data_analytics",
-      "ev_powertrain"
+      "quality-management",
+      "automotive-engineering",
+      "data-analysis",
+      "six-sigma",
+      "cross-functional-coordination"
     ],
-    "reasoning": "质量改进必须在严格的质量管理体系下，运用六西格玛、DFMEA 等技术手段并通过数据分析验证，同时需要掌握电动汽车动力系统的工程知识。"
+    "reasoning": "插电混动车型质量改进需要融合质量方法论、汽车工程专业知识和跨部门协调能力来平衡技术可行性与实现难度。"
   }
 }

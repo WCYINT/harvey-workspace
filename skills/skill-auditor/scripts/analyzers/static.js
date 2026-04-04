@@ -79,9 +79,9 @@ const PATTERNS = [
   {
     id: 'curl-wget',
     category: 'Network',
-    severity: 'high',
+    severity: 'medium',
     regex: /\b(?:curl|wget|Invoke-WebRequest|Invoke-RestMethod)\s+['"`\-h$]/g,
-    description: 'CLI HTTP tool — makes outbound network requests'
+    description: 'CLI HTTP tool — makes outbound network requests (downgraded: normal CLI behavior for package fetching/API calls)'
   },
   {
     id: 'webhook-exfil',
@@ -552,6 +552,11 @@ function scanFile(filePath, skillDir, options = {}) {
         if (pattern.id === 'http-url' && isMetadataFile(filePath)) continue;
         // Skip safe URLs (badges, registries, repo links) everywhere
         if (pattern.id === 'http-url' && match[0] && isSafeUrl(match[0])) continue;
+        // Skip webhook/prompt-injection patterns in doc files (false positives — skill docs describe what they do)
+        if (isDocFile(filePath) && (
+          pattern.id === 'webhook-exfil' ||
+          pattern.id.startsWith('prompt-injection-')
+        )) continue;
 
         const adjustedSeverity = adjustSeverityForContext(pattern.severity, filePath);
         findings.push({

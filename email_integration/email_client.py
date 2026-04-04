@@ -63,45 +63,68 @@ class HaveryEmailClient:
             logger.error(f"Failed to load config from {config_path}: {e}")
     
     def send_email(self, to_address: str, subject: str, body: str, 
-                   is_html: bool = False) -> bool:
+                   is_html: bool = False, max_retries: int = 3) -> bool:
         """
-        Send an email via SMTP
+        Send an email via SMTP with retry + fallback server support.
         
         Args:
             to_address: Recipient email address
             subject: Email subject
             body: Email body content
             is_html: Whether body is HTML (default: plain text)
+            max_retries: Max retries per server (default: 3)
             
         Returns:
             bool: True if sent successfully, False otherwise
         """
-        try:
-            # Create message
-            msg = MIMEMultipart('alternative')
-            msg['From'] = self.email
-            msg['To'] = to_address
-            msg['Subject'] = subject
-            msg['Date'] = email.utils.formatdate(localtime=True)
+        # SMTP configurations: primary + fallbacks (host, port)
+        smtp_configs = [
+            (self.smtp_server, self.smtp_port),
+            # Fallback: 163.com alternative port 587 (STARTTLS)
+            ("smtp.163.com", 587),
+        ]
+        
+        # Create message once
+        msg = MIMEMultipart('alternative')
+        msg['From'] = self.email
+        msg['To'] = to_address
+        msg['Subject'] = subject
+        msg['Date'] = email.utils.formatdate(localtime=True)
+        if is_html:
+            msg.attach(MIMEText(body, 'html'))
+        else:
+            msg.attach(MIMEText(body, 'plain'))
+
+        last_error = None
+        for smtp_host, smtp_port in smtp_configs:
+            for attempt in range(1, max_retries + 1):
+                try:
+                    context = ssl.create_default_context()
+                    if smtp_port == 587:
+                        # Port 587 requires STARTTLS upgrade
+                        with smtplib.SMTP(smtp_host, smtp_port, timeout=15) as server:
+                            server.starttls(context=context)
+                            server.login(self.email, self.password)
+                            server.send_message(msg)
+                    else:
+                        with smtplib.SMTP_SSL(smtp_host, smtp_port, context=context, timeout=15) as server:
+                            server.login(self.email, self.password)
+                            server.send_message(msg)
+                    
+                    logger.info(f"Email sent successfully via {smtp_host}:{smtp_port} to {to_address}: {subject}")
+                    return True
+                    
+                except Exception as e:
+                    last_error = e
+                    logger.warning(f"SMTP attempt {attempt}/{max_retries} via {smtp_host}:{smtp_port} failed: {e}")
+                    if attempt < max_retries:
+                        import time
+                        time.sleep(2 ** attempt)  # Exponential backoff: 2s, 4s
             
-            # Add body
-            if is_html:
-                msg.attach(MIMEText(body, 'html'))
-            else:
-                msg.attach(MIMEText(body, 'plain'))
-            
-            # Connect to SMTP server
-            context = ssl.create_default_context()
-            with smtplib.SMTP_SSL(self.smtp_server, self.smtp_port, context=context) as server:
-                server.login(self.email, self.password)
-                server.send_message(msg)
-            
-            logger.info(f"Email sent successfully to {to_address}: {subject}")
-            return True
-            
-        except Exception as e:
-            logger.error(f"Failed to send email: {e}")
-            return False
+            logger.warning(f"All {max_retries} attempts exhausted for {smtp_host}:{smtp_port}, trying next server...")
+        
+        logger.error(f"Failed to send email after exhausting all servers and retries: {last_error}")
+        return False
     
     def send_learning_notification(self, learning_data: Dict[str, Any], 
                                    to_address: Optional[str] = None) -> bool:

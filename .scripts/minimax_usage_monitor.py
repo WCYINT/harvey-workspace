@@ -5,6 +5,7 @@ MiniMax API 使用率监控脚本
 """
 
 import json
+import os
 import time
 import urllib.request
 from datetime import datetime, timezone, timedelta
@@ -12,7 +13,7 @@ from playwright.sync_api import sync_playwright
 
 CHROME_PATH = "/Users/fhjtech/Library/Caches/ms-playwright/chromium-1208/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing"
 USERNAME = "18620362529"
-PASSWORD = "WG17sjjlove"
+PASSWORD = os.environ.get("MINIMAX_PASSWORD", "WG17sjjlove")
 FEISHU_APP_ID = "cli_a90c7258f9b85bef"
 FEISHU_APP_SECRET = "Kv6kG5ggU2TP9Ocw5CHSucu1B1t26J7t"
 FEISHU_USER_ID = "ou_7bc224841d2a1064cf5a7fbf67824227"
@@ -24,7 +25,7 @@ def log(msg) -> None:
     ts = datetime.now(TZ_CST).strftime("%Y-%m-%d %H:%M:%S")
     print(f"[{ts}] {msg}")
 
-def get_feishu_token() -> None:
+def get_feishu_token() -> str:
     url = "https://open.feishu.cn/open-apis/auth/v3/tenant_access_token/internal"
     payload = json.dumps({"app_id": FEISHU_APP_ID, "app_secret": FEISHU_APP_SECRET}).encode()
     req = urllib.request.Request(url, data=payload,
@@ -32,7 +33,7 @@ def get_feishu_token() -> None:
     with urllib.request.urlopen(req, timeout=10) as resp:
         return json.load(resp)["tenant_access_token"]
 
-def send_feishu_message(token, content, receive_id, receive_id_type="open_id") -> None:
+def send_feishu_message(token, content, receive_id, receive_id_type="open_id") -> dict:
     url = f"https://open.feishu.cn/open-apis/im/v1/messages?receive_id_type={receive_id_type}"
     payload = {
         "receive_id": receive_id,
@@ -45,7 +46,7 @@ def send_feishu_message(token, content, receive_id, receive_id_type="open_id") -
     with urllib.request.urlopen(req, timeout=10) as resp:
         return json.load(resp)
 
-def get_minimax_cookies() -> None:
+def get_minimax_cookies() -> list:
     """Login to MiniMax and return cookies for API auth"""
     with sync_playwright() as p:
         browser = p.chromium.launch(executable_path=CHROME_PATH, headless=True)
@@ -61,18 +62,18 @@ def get_minimax_cookies() -> None:
         browser.close()
         return cookies
 
-def get_usage(cookies) -> None:
+def get_usage(cookies) -> dict:
     """Query the MiniMax usage API"""
     cookie_str = "; ".join([f"{c['name']}={c['value']}" for c in cookies])
     url = "https://www.minimaxi.com/v1/api/openplatform/coding_plan/remains"
     req = urllib.request.Request(url, headers={
-        "Cookie": cookie_str,
-        "Content-Type": "application/json"
+        "Cookie": cookie_str
+        # Note: GET request — no Content-Type needed
     })
     with urllib.request.urlopen(req, timeout=10) as resp:
         return json.loads(resp.read())
 
-def format_report(usage_data):
+def format_report(usage_data) -> str:
     """Format usage data into a readable report"""
     now = datetime.now(TZ_CST).strftime("%Y-%m-%d %H:%M")
     
@@ -100,7 +101,7 @@ def format_report(usage_data):
     weekly_left = weekly_total - weekly_used
     
     # Determine status emoji
-    def status(pct):
+    def status(pct) -> str:
         if pct >= 90: return "🔴"
         if pct >= 70: return "🟡"
         return "🟢"
@@ -135,7 +136,7 @@ def format_report(usage_data):
     
     return report
 
-def main():
+def main() -> None:
     log("Starting MiniMax usage check...")
     
     try:

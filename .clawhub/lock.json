@@ -1,65 +1,73 @@
 {
   "version": 1,
   "skills": {
-    "agentic-wallet": {
+    "tool-permission-manager": {
       "version": "1.0.0",
-      "installedAt": 1774872820042
+      "installedAt": 1775241159284
     },
-    "transprompt": {
+    "solana-security": {
+      "version": "0.6.0",
+      "installedAt": 1775241159356
+    },
+    "visa-itinerary-gen": {
+      "version": "1.5.0",
+      "installedAt": 1775241159521
+    },
+    "quiver": {
       "version": "1.0.1",
-      "installedAt": 1774872820262
+      "installedAt": 1775243047267
     },
-    "llm-proxy": {
-      "version": "1.0.4",
-      "installedAt": 1774872820467
-    },
-    "geepers-llm": {
+    "beta": {
       "version": "1.0.0",
-      "installedAt": 1774872820700
+      "installedAt": 1775244979347
     },
-    "isnad-security-kit": {
+    "team-up": {
       "version": "1.0.0",
-      "installedAt": 1774872820704
+      "installedAt": 1775262916119
     },
-    "self-evolve-automaton": {
-      "version": "1.0.2",
-      "installedAt": 1774872820742
-    },
-    "thinking-sovereignty": {
+    "authorize": {
       "version": "1.0.0",
-      "installedAt": 1774872820782
+      "installedAt": 1775262917055
     },
-    "agentic-workflow-automation-v2": {
-      "version": "2.0.0",
-      "installedAt": 1774872820821
-    },
-    "magi": {
-      "version": "1.8.0",
-      "installedAt": 1774872820846
-    },
-    "llm-evaluation": {
+    "obsidian-notion": {
       "version": "1.0.0",
-      "installedAt": 1774872820901
+      "installedAt": 1775262919150
     },
-    "autonomous-agent-toolkit-automaton": {
-      "version": "3.1.2",
-      "installedAt": 1774872821038
+    "privy-integration": {
+      "version": "0.2.0",
+      "installedAt": 1775262919436
     },
-    "coding-cli-management": {
+    "ai-engineer": {
       "version": "1.0.0",
-      "installedAt": 1774872821256
+      "installedAt": 1775264652287
     },
-    "fumi-ai-prompt-templates": {
+    "makefile-build": {
       "version": "1.0.0",
-      "installedAt": 1774872821334
+      "installedAt": 1775264652316
     },
-    "autonomous-learning-cycle": {
+    "gen-image": {
       "version": "1.0.0",
-      "installedAt": 1774872821957
+      "installedAt": 1775268376999
     },
-    "x402janus": {
-      "version": "3.0.0",
-      "installedAt": 1774872822006
+    "baidu-scholar-search": {
+      "version": "1.0.0",
+      "installedAt": 1775268377000
+    },
+    "daily-review-ritual": {
+      "version": "1.0.0",
+      "installedAt": 1775268377016
+    },
+    "de-ai-ify": {
+      "version": "1.0.0",
+      "installedAt": 1775268377095
+    },
+    "agent-bom-scan": {
+      "version": "0.75.14",
+      "installedAt": 1775273817756
+    },
+    "powpow-integration": {
+      "version": "2.1.6",
+      "installedAt": 1775273817770
     }
   }
 }

@@ -1,0 +1,66 @@
+{
+  "name": "@guava-parity/guard-scanner",
+  "version": "13.0.1",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "description": "Agent Skill Security Scanner - 2026 Moltbook Payload Immune System",
+  "openclaw.extensions": "./openclaw.plugin.json",
+  "openclaw.hooks": {
+    "guard-scanner": "./hooks/guard-scanner"
+  },
+  "main": "src/scanner.js",
+  "bin": {
+    "guard-scanner": "src/cli.js"
+  },
+  "scripts": {
+    "scan": "node src/cli.js",
+    "test": "node scripts/generate-capabilities.js && node scripts/verify-capabilities.js && node scripts/test-quality-gate.js && node --test test/*.test.js",
+    "test:core": "node --test test/scanner.test.js test/patterns.test.js",
+    "test:quality": "node scripts/test-quality-gate.js"
+  },
+  "keywords": [
+    "security",
+    "scanner",
+    "ai-agent",
+    "skill-scanner",
+    "prompt-injection",
+    "openclaw",
+    "mcp",
+    "sarif",
+    "compaction-persistence",
+    "threat-signatures",
+    "owasp",
+    "discovery",
+    "daemon",
+    "typescript"
+  ],
+  "author": "Guava & Dee",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/koatora20/guard-scanner.git"
+  },
+  "homepage": "https://github.com/koatora20/guard-scanner",
+  "files": [
+    "src/",
+    "hooks/",
+    "docs/",
+    "openclaw.plugin.json",
+    "SKILL.md",
+    "SECURITY.md",
+    "README.md",
+    "LICENSE"
+  ],
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.0"
+  },
+  "dependencies": {
+    "ws": "^8.19.0"
+  }
+}

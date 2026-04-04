@@ -1,707 +1,62 @@
 {
   "tests": [
     {
-      "timestamp": "2026-03-28T18:06:42.570956+08:00",
+      "timestamp": "2026-04-01T20:36:49.037658+08:00",
       "results": {
         "AI智能": [],
         "开发工具": [
-          "jisang1000-systematic-debugging",
-          "git-helper",
-          "git-summary",
-          "git-changelog-gen"
-        ],
-        "效率提升": [],
-        "数据分析": [],
-        "内容创作": [],
-        "通讯协作": [],
-        "安全合规": [],
-        "未分类": []
-      },
-      "total": 4
-    },
-    {
-      "timestamp": "2026-03-28T19:12:56.461367+08:00",
-      "results": {
-        "AI智能": [
-          "ai-captcha",
-          "fliz-ai-video-generator",
-          "kallyai",
-          "llm-supervisor-agent",
-          "llm-cost-tracker",
-          "which-llm",
-          "litellm"
-        ],
-        "开发工具": [
-          "molt-identity"
-        ],
-        "效率提升": [
-          "zero-rules"
-        ],
-        "数据分析": [],
-        "内容创作": [],
-        "通讯协作": [
-          "coordinate-meeting"
-        ],
-        "安全合规": [],
-        "未分类": [
-          "anthropology",
-          "genlayer-dev",
-          "value-tracker",
-          "personality-switcher",
-          "rdm-assistant"
-        ]
-      },
-      "total": 15
-    },
-    {
-      "timestamp": "2026-03-28T20:43:25.472740+08:00",
-      "results": {
-        "AI智能": [],
-        "开发工具": [
-          "pua-debugging-pro",
-          "gitflow",
-          "git-crypt-backup"
-        ],
-        "效率提升": [],
-        "数据分析": [],
-        "内容创作": [],
-        "通讯协作": [],
-        "安全合规": [],
-        "未分类": []
-      },
-      "total": 3
-    },
-    {
-      "timestamp": "2026-03-28T21:06:39.751421+08:00",
-      "results": {
-        "AI智能": [],
-        "开发工具": [
-          "git-hub-issus",
-          "programming",
-          "programming-assistant"
-        ],
-        "效率提升": [],
-        "数据分析": [],
-        "内容创作": [],
-        "通讯协作": [],
-        "安全合规": [],
-        "未分类": [
-          "ruby"
-        ]
-      },
-      "total": 4
-    },
-    {
-      "timestamp": "2026-03-28T21:40:47.186673+08:00",
-      "results": {
-        "AI智能": [],
-        "开发工具": [],
-        "效率提升": [],
-        "数据分析": [],
-        "内容创作": [],
-        "通讯协作": [],
-        "安全合规": [],
-        "未分类": [
-          "backtest-expert"
-        ]
-      },
-      "total": 1
-    },
-    {
-      "timestamp": "2026-03-28T23:11:39.236842+08:00",
-      "results": {
-        "AI智能": [
-          "reddi-llm-judge"
-        ],
-        "开发工具": [
-          "slidespeak",
-          "gitea"
-        ],
-        "效率提升": [
-          "office-automation-test",
-          "openclaw-automation-recipes"
-        ],
-        "数据分析": [],
-        "内容创作": [],
-        "通讯协作": [],
-        "安全合规": [],
-        "未分类": [
-          "code-docs-search-exa",
-          "feishu",
-          "startup-metrics",
-          "skilltree",
-          "peekaboo",
-          "memory-hygiene"
-        ]
-      },
-      "total": 11
-    },
-    {
-      "timestamp": "2026-03-29T00:10:11.644366+08:00",
-      "results": {
-        "AI智能": [
-          "aioz-ui-skills",
-          "agentictrade",
-          "happycoding-aicoding"
-        ],
-        "开发工具": [
-          "popeye-coding",
-          "meta-video-ad-deconstructor",
-          "douyin-publish"
-        ],
-        "效率提升": [
-          "task-specialist"
-        ],
-        "数据分析": [],
-        "内容创作": [],
-        "通讯协作": [],
-        "安全合规": [],
-        "未分类": [
-          "bio-reabilita-z",
-          "organize"
-        ]
-      },
-      "total": 9
-    },
-    {
-      "timestamp": "2026-03-29T00:42:30.292612+08:00",
-      "results": {
-        "AI智能": [
-          "ai-news-feed",
-          "railil"
-        ],
-        "开发工具": [
-          "github-ops",
-          "github-image-hosting"
-        ],
-        "效率提升": [
-          "taskleef",
-          "tasktime",
-          "task-management",
-          "task-finish-contract"
-        ],
-        "数据分析": [],
-        "内容创作": [],
-        "通讯协作": [],
-        "安全合规": [],
-        "未分类": [
-          "word-docx",
-          "openclaw-tavily-search",
-          "revenue-operations"
-        ]
-      },
-      "total": 11
-    },
-    {
-      "timestamp": "2026-03-29T02:13:06.585033+08:00",
-      "results": {
-        "AI智能": [
-          "ai-code-helper",
-          "ai-photos"
-        ],
-        "开发工具": [
-          "identitygram-signin",
-          "github-chat-ops",
-          "code-snippet-oc"
-        ],
-        "效率提升": [
-          "task-todo",
-          "task2-refactor-evomap",
-          "task-delegator",
-          "yinan-task-automator"
-        ],
-        "数据分析": [],
-        "内容创作": [],
-        "通讯协作": [],
-        "安全合规": [],
-        "未分类": [
-          "edge-tts"
-        ]
-      },
-      "total": 10
-    },
-    {
-      "timestamp": "2026-03-29T03:04:34.721601+08:00",
-      "results": {
-        "AI智能": [
-          "aiclude-vulns-scan",
-          "aiprox",
-          "OpenCode"
-        ],
-        "开发工具": [
-          "neuraldebug"
-        ],
-        "效率提升": [
-          "productivity-bot"
-        ],
-        "数据分析": [],
-        "内容创作": [],
-        "通讯协作": [],
-        "安全合规": [],
-        "未分类": [
-          "lofy",
-          "everything-is-ok",
-          "no-prompt",
-          "assert",
-          "translatepro"
-        ]
-      },
-      "total": 10
-    },
-    {
-      "timestamp": "2026-03-29T03:43:18.974496+08:00",
-      "results": {
-        "AI智能": [],
-        "开发工具": [
-          "self-love-confidence"
-        ],
-        "效率提升": [
-          "openclaw-reminder",
-          "apple-reminders",
-          "martok9803-reminder-engine",
-          "elevenlabs-phone-reminder-lite"
-        ],
-        "数据分析": [],
-        "内容创作": [],
-        "通讯协作": [
-          "meeting-notes-pro"
-        ],
-        "安全合规": [],
-        "未分类": [
-          "meyhem-search"
-        ]
-      },
-      "total": 7
-    },
-    {
-      "timestamp": "2026-03-29T05:13:33.010178+08:00",
-      "results": {
-        "AI智能": [
-          "ai-meeting-prep"
-        ],
-        "开发工具": [
-          "idea-storm",
-          "github-search"
-        ],
-        "效率提升": [
-          "channel-reminders",
-          "waste-reminder"
-        ],
-        "数据分析": [
-          "cs-analytics-tracking",
-          "database-schema-designer",
-          "database-schema-differ"
-        ],
-        "内容创作": [],
-        "通讯协作": [],
-        "安全合规": [
-          "arc-security-mcp"
-        ],
-        "未分类": [
-          "welsh",
-          "deep-strategy",
-          "zoho-recruit",
-          "cron-mastery"
-        ]
-      },
-      "total": 13
-    },
-    {
-      "timestamp": "2026-03-29T06:04:28.617163+08:00",
-      "results": {
-        "AI智能": [
-          "para-second-brain",
-          "rss-ai-reader"
-        ],
-        "开发工具": [
-          "coding-tutorial-video"
-        ],
-        "效率提升": [],
-        "数据分析": [],
-        "内容创作": [],
-        "通讯协作": [],
-        "安全合规": [],
-        "未分类": [
-          "astranova",
-          "humanize",
-          "swelist",
-          "respectful-responses-female"
-        ]
-      },
-      "total": 7
-    },
-    {
-      "timestamp": "2026-03-29T06:43:51.791701+08:00",
-      "results": {
-        "AI智能": [],
-        "开发工具": [],
-        "效率提升": [
-          "task-planner",
-          "taskwarrior",
-          "task-review-workflow",
-          "task-router-skill"
-        ],
-        "数据分析": [
-          "mx-macro-data",
-          "unit-price-database-manager",
-          "alicloud-database-analyticdb-mysql",
-          "volcengine-database-rds",
-          "alicloud-database-rds-supabase"
-        ],
-        "内容创作": [],
-        "通讯协作": [],
-        "安全合规": [],
-        "未分类": [
-          "excel-xlsx",
-          "byterover"
-        ]
-      },
-      "total": 11
-    },
-    {
-      "timestamp": "2026-03-29T08:14:05.709794+08:00",
-      "results": {
-        "AI智能": [],
-        "开发工具": [
-          "git-changelog",
-          "git-auto",
-          "github-star-manager-skill"
-        ],
-        "效率提升": [
-          "task-experience-summaries"
-        ],
-        "数据分析": [
-          "ridb-search"
-        ],
-        "内容创作": [],
-        "通讯协作": [],
-        "安全合规": [],
-        "未分类": [
-          "gprophet-api",
-          "mupeng-rag-engineer",
-          "things-mac"
-        ]
-      },
-      "total": 8
-    },
-    {
-      "timestamp": "2026-03-29T09:04:33.494156+08:00",
-      "results": {
-        "AI智能": [
-          "s2s-forecasting-expert",
-          "taizi-ai-productivity-audit"
-        ],
-        "开发工具": [
-          "git-pushing",
-          "github-trending",
-          "github-contribution"
-        ],
-        "效率提升": [
-          "popeye-productivity",
-          "office-productivity",
-          "auto-workflow-builder",
-          "task-watchdog",
-          "new-agent-task-tracker",
-          "auto-complex-task-planner"
-        ],
-        "数据分析": [],
-        "内容创作": [],
-        "通讯协作": [],
-        "安全合规": [],
-        "未分类": [
-          "prompt-engineer-1"
-        ]
-      },
-      "total": 12
-    },
-    {
-      "timestamp": "2026-03-29T09:44:22.287921+08:00",
-      "results": {
-        "AI智能": [
-          "russian-uncensored"
-        ],
-        "开发工具": [],
-        "效率提升": [
-          "task-progress-report",
-          "muslim-prayer-reminder"
-        ],
-        "数据分析": [
-          "sql-pro",
-          "sql-query-generator",
-          "sql-injection-testing",
-          "sql-server-toolkit"
-        ],
-        "内容创作": [],
-        "通讯协作": [],
-        "安全合规": [],
-        "未分类": [
-          "xero",
-          "tushare-finance",
-          "salesforce-api",
-          "session-logs",
-          "yahoo-finance"
-        ]
-      },
-      "total": 12
-    },
-    {
-      "timestamp": "2026-03-29T11:14:39.141053+08:00",
-      "results": {
-        "AI智能": [
-          "ai-podcast-creation"
-        ],
-        "开发工具": [],
-        "效率提升": [
-          "automated-tweet-scheduler"
-        ],
-        "数据分析": [
-          "mx-finance-data",
-          "sql-query-optimizer",
-          "sql-generator"
-        ],
-        "内容创作": [],
-        "通讯协作": [],
-        "安全合规": [],
-        "未分类": [
-          "firecrawl-search",
-          "mx-stocks-screener",
-          "attio-api",
-          "zoho-people",
-          "akshare-stock"
-        ]
-      },
-      "total": 10
-    },
-    {
-      "timestamp": "2026-03-29T12:05:24.086119+08:00",
-      "results": {
-        "AI智能": [
-          "afrexai-ml-engineering",
-          "opentask"
-        ],
-        "开发工具": [
-          "test-debugger"
-        ],
-        "效率提升": [
-          "task-system",
-          "task-harness",
-          "task-plan-generator",
-          "recipe-plan-weekly-schedule",
-          "conference-schedule-optimizer",
-          "schedules-manager",
-          "cron-scheduler-local",
-          "focus-break-reminder"
-        ],
-        "数据分析": [],
-        "内容创作": [],
-        "通讯协作": [],
-        "安全合规": [],
-        "未分类": []
-      },
-      "total": 11
-    },
-    {
-      "timestamp": "2026-03-29T12:45:14.886801+08:00",
-      "results": {
-        "AI智能": [],
-        "开发工具": [
-          "github-copilot-cli",
-          "chinese-copywriting-guidelines"
-        ],
-        "效率提升": [],
-        "数据分析": [
-          "sql-doc",
-          "sql-profiler",
-          "sql-sparql-graphql-skill",
-          "sql-to-go"
-        ],
-        "内容创作": [],
-        "通讯协作": [],
-        "安全合规": [],
-        "未分类": [
-          "copywriter"
-        ]
-      },
-      "total": 7
-    },
-    {
-      "timestamp": "2026-03-29T14:15:33.014407+08:00",
-      "results": {
-        "AI智能": [
-          "ai-prompt-gen"
-        ],
-        "开发工具": [],
-        "效率提升": [
-          "task-orchestra",
-          "task-resume",
-          "tasks-md-sprint-sync",
-          "task-reminder-publish",
-          "task-list"
-        ],
-        "数据分析": [
-          "db-query"
-        ],
-        "内容创作": [],
-        "通讯协作": [],
-        "安全合规": [],
-        "未分类": [
-          "gemini-voice-assistant"
-        ]
-      },
-      "total": 8
-    },
-    {
-      "timestamp": "2026-03-29T15:05:03.800756+08:00",
-      "results": {
-        "AI智能": [
-          "ai-intelligent-behavior-analysis",
-          "drink-water-reminder-yikailucas"
-        ],
-        "开发工具": [
-          "github-trending-stable"
-        ],
-        "效率提升": [
-          "shelly-social-scheduler",
-          "water-reminder"
-        ],
-        "数据分析": [],
-        "内容创作": [],
-        "通讯协作": [],
-        "安全合规": [],
-        "未分类": [
-          "code-runner",
-          "time-management-2"
-        ]
-      },
-      "total": 7
-    },
-    {
-      "timestamp": "2026-03-29T15:46:12.143837+08:00",
-      "results": {
-        "AI智能": [],
-        "开发工具": [
-          "github-actions-generator",
-          "github-cred"
+          "xcodebuildmcp"
         ],
         "效率提升": [],
         "数据分析": [],
         "内容创作": [
-          "moment-writer"
+          "audio-to-text-caption"
         ],
         "通讯协作": [],
         "安全合规": [],
         "未分类": [
-          "product-description-generator"
+          "clawcolab-skill"
         ]
       },
-      "total": 4
+      "total": 3
     },
     {
-      "timestamp": "2026-03-29T17:16:33.235424+08:00",
+      "timestamp": "2026-04-01T21:08:33.322163+08:00",
       "results": {
-        "AI智能": [],
-        "开发工具": [
-          "github-issue-creator",
-          "github-mpc"
+        "AI智能": [
+          "ai-news-poster",
+          "flyai",
+          "tailwind-design-system",
+          "daily-reminder"
         ],
-        "效率提升": [],
+        "开发工具": [
+          "ui-ux-for-openclaw",
+          "gi-vue-component-guide",
+          "building-components",
+          "smart-web-components-usage"
+        ],
+        "效率提升": [
+          "task-tracker-pro"
+        ],
         "数据分析": [],
         "内容创作": [],
         "通讯协作": [],
         "安全合规": [],
         "未分类": [
-          "prompt",
-          "notion-api-skill"
-        ]
-      },
-      "total": 4
-    },
-    {
-      "timestamp": "2026-03-29T18:07:29.052352+08:00",
-      "results": {
-        "AI智能": [
-          "ai-chatbot-builder",
-          "ai-seo",
-          "ai-music-muse",
-          "ai-influencer",
-          "ai-infographics-news",
-          "fhir-questionnaire"
-        ],
-        "开发工具": [
-          "idealpostcodes"
-        ],
-        "效率提升": [],
-        "数据分析": [
-          "toolweb-hipaa-gap-analysis"
-        ],
-        "内容创作": [],
-        "通讯协作": [],
-        "安全合规": [],
-        "未分类": [
-          "vendor-risk-assessment",
-          "threat-intel-v2",
-          "backlink-analyzer"
+          "frontend-design-pro",
+          "react-composition"
         ]
       },
       "total": 11
     },
     {
-      "timestamp": "2026-03-29T18:46:47.041568+08:00",
+      "timestamp": "2026-04-01T22:07:12.566127+08:00",
       "results": {
         "AI智能": [
-          "task-queue-sr",
-          "afrexai-medical-billing"
-        ],
-        "开发工具": [],
-        "效率提升": [],
-        "数据分析": [
-          "healthcare-wellness-lead-generator"
-        ],
-        "内容创作": [],
-        "通讯协作": [],
-        "安全合规": [],
-        "未分类": [
-          "pubmed2blog",
-          "lovable",
-          "elevenlabsclaw",
-          "nurse"
-        ]
-      },
-      "total": 7
-    },
-    {
-      "timestamp": "2026-03-29T20:17:13.481126+08:00",
-      "results": {
-        "AI智能": [
-          "ai-familiar",
-          "task-squad-ai"
+          "chat-ollama-gradio"
         ],
         "开发工具": [
-          "idea-to-startup",
-          "github-pages-auto-deploy",
-          "github-actions"
-        ],
-        "效率提升": [
-          "task-supervisor"
-        ],
-        "数据分析": [
-          "medical"
-        ],
-        "内容创作": [],
-        "通讯协作": [],
-        "安全合规": [],
-        "未分类": []
-      },
-      "total": 7
-    },
-    {
-      "timestamp": "2026-03-29T21:04:24.911549+08:00",
-      "results": {
-        "AI智能": [],
-        "开发工具": [
-          "debug-system",
-          "git-workflow-cn",
-          "agent-code-debugger"
+          "uid-life"
         ],
         "效率提升": [],
         "数据分析": [],
@@ -709,451 +64,360 @@
         "通讯协作": [],
         "安全合规": [],
         "未分类": [
-          "notion-pipeline",
-          "clangd-lsp",
-          "openclaw-browser-stagehand",
-          "caremax-records",
-          "confluence-integration"
+          "ksef-accountant-en"
+        ]
+      },
+      "total": 3
+    },
+    {
+      "timestamp": "2026-04-01T23:37:32.641232+08:00",
+      "results": {
+        "AI智能": [
+          "aigc",
+          "ai-news-infographics",
+          "ai-mermaid-diagrams"
+        ],
+        "开发工具": [
+          "douyin-video-publish",
+          "add-minimax-provider",
+          "github-trending-project",
+          "yida-dev"
+        ],
+        "效率提升": [],
+        "数据分析": [],
+        "内容创作": [],
+        "通讯协作": [],
+        "安全合规": [],
+        "未分类": [
+          "find-skill"
         ]
       },
       "total": 8
     },
     {
-      "timestamp": "2026-03-29T21:47:41.769505+08:00",
+      "timestamp": "2026-04-02T00:05:10.159994+08:00",
       "results": {
-        "AI智能": [
-          "ai-bounty-skill",
-          "github-trending-daily"
-        ],
+        "AI智能": [],
         "开发工具": [
-          "github-gem-seeker"
+          "youtube-video-idea-generator",
+          "idea-to-product",
+          "github-helper",
+          "github-auto-reply"
         ],
-        "效率提升": [
-          "task-decomp"
-        ],
+        "效率提升": [],
         "数据分析": [
-          "medical-specialty-briefs",
-          "medical-entity-extractor",
-          "medical-triage"
+          "sql-reports",
+          "pls-seo-audit",
+          "seo-optimization",
+          "website-seo"
         ],
         "内容创作": [],
         "通讯协作": [],
         "安全合规": [],
-        "未分类": []
+        "未分类": [
+          "resolved-sh-rstack",
+          "xhs-autopilot"
+        ]
       },
-      "total": 7
+      "total": 10
     },
     {
-      "timestamp": "2026-03-29T23:18:11.591478+08:00",
+      "timestamp": "2026-04-02T01:07:50.926739+08:00",
       "results": {
-        "AI智能": [
-          "brainz-tasks"
+        "AI智能": [],
+        "开发工具": [
+          "github-trending-report"
         ],
-        "开发工具": [],
-        "效率提升": [
-          "todoist-task-manager",
-          "weeek-tasks"
-        ],
+        "效率提升": [],
         "数据分析": [
-          "medical-device-code-review",
-          "medical-document-processor"
+          "authoring-data-cli-source"
         ],
         "内容创作": [],
-        "通讯协作": [],
-        "安全合规": [],
+        "通讯协作": [
+          "chat-ask",
+          "telegram-rich-messages"
+        ],
+        "安全合规": [
+          "authorship-credit-gen"
+        ],
         "未分类": []
       },
       "total": 5
     },
     {
-      "timestamp": "2026-03-30T00:48:28.528006+08:00",
-      "results": {
-        "AI智能": [],
-        "开发工具": [
-          "flatnotes-tasksmd-github-audit"
-        ],
-        "效率提升": [
-          "gtasks-cli"
-        ],
-        "数据分析": [
-          "medical-imaging-suite",
-          "medical-note-assistant",
-          "medical-auditor",
-          "medical-record-generator"
-        ],
-        "内容创作": [],
-        "通讯协作": [],
-        "安全合规": [],
-        "未分类": [
-          "gevety",
-          "performance-reporter",
-          "linkswarm"
-        ]
-      },
-      "total": 9
-    },
-    {
-      "timestamp": "2026-03-30T02:18:49.158445+08:00",
+      "timestamp": "2026-04-02T02:38:11.828464+08:00",
       "results": {
         "AI智能": [
-          "ai-dev-tools",
-          "tulisai"
+          "reposit"
+        ],
+        "开发工具": [
+          "comfyui-api",
+          "feast"
+        ],
+        "效率提升": [],
+        "数据分析": [],
+        "内容创作": [],
+        "通讯协作": [],
+        "安全合规": [
+          "authorization",
+          "intelligence-ingestion",
+          "apex-crypto-intelligence"
+        ],
+        "未分类": []
+      },
+      "total": 6
+    },
+    {
+      "timestamp": "2026-04-02T03:05:00.656719+08:00",
+      "results": {
+        "AI智能": [
+          "campaign-analytics"
         ],
         "开发工具": [],
         "效率提升": [
-          "task-sync",
-          "tasktrove"
+          "smart-task-scheduler"
         ],
         "数据分析": [
-          "medical-terms",
-          "ahrefs",
-          "seo-ranker",
-          "seo-optimizer",
-          "seoul-subway",
-          "seo-article-gen"
+          "jpeng-database-manager",
+          "text-to-sql-query",
+          "uplo-healthcare",
+          "zhang-healthcare-law",
+          "healthcare-chatbot-pro"
         ],
         "内容创作": [],
         "通讯协作": [],
-        "安全合规": [],
+        "安全合规": [
+          "sano-intel"
+        ],
         "未分类": [
-          "ahrefs-mcp",
-          "ahrefs-connection",
-          "linkswarm-api"
-        ]
-      },
-      "total": 13
-    },
-    {
-      "timestamp": "2026-03-30T03:49:04.350330+08:00",
-      "results": {
-        "AI智能": [],
-        "开发工具": [
-          "seo-affiliate-guide"
-        ],
-        "效率提升": [],
-        "数据分析": [
-          "seo-optimizer-pro",
-          "seo-autopilot",
-          "seo-content-engine",
-          "seo-suite",
-          "seo-content-brief",
-          "seo-content-factory",
-          "seo-research-master",
-          "seoul",
-          "seo-content-optimizer",
-          "seo-geo-audit"
-        ],
-        "内容创作": [],
-        "通讯协作": [],
-        "安全合规": [],
-        "未分类": [
-          "flight-tracker",
-          "marketing-copy-knowledge"
-        ]
-      },
-      "total": 13
-    },
-    {
-      "timestamp": "2026-03-30T05:19:20.352564+08:00",
-      "results": {
-        "AI智能": [
-          "airtag",
-          "ai-cheese",
-          "ai-personal-branding-kit",
-          "ai-coach",
-          "ai-density",
-          "heygen-avatar-lite"
-        ],
-        "开发工具": [
-          "github-workflow"
-        ],
-        "效率提升": [
-          "task-engine"
-        ],
-        "数据分析": [
-          "seo-strategy"
-        ],
-        "内容创作": [],
-        "通讯协作": [
-          "meeting-prep"
-        ],
-        "安全合规": [],
-        "未分类": [
-          "image"
+          "obsidian-viz",
+          "uplo-clinical",
+          "pfizer"
         ]
       },
       "total": 11
     },
     {
-      "timestamp": "2026-03-30T06:49:35.205930+08:00",
+      "timestamp": "2026-04-02T04:08:34.760401+08:00",
       "results": {
-        "AI智能": [
-          "ai-breathing"
-        ],
-        "开发工具": [
-          "github-integration"
-        ],
-        "效率提升": [],
-        "数据分析": [],
-        "内容创作": [
-          "wechat-article-crayon",
-          "official-writing",
-          "zhihu-writer",
-          "wechat-article-writer"
-        ],
-        "通讯协作": [],
-        "安全合规": [],
-        "未分类": [
-          "vassili-clawhub-cli",
-          "photo-captions",
-          "tweet-writer",
-          "story-cog",
-          "writer",
-          "startclaw-optimizer",
-          "lightrag"
-        ]
-      },
-      "total": 13
-    },
-    {
-      "timestamp": "2026-03-30T08:20:01.161401+08:00",
-      "results": {
-        "AI智能": [
-          "clawshot"
-        ],
-        "开发工具": [
-          "short-video-script",
-          "video-script-creator"
-        ],
-        "效率提升": [],
-        "数据分析": [],
-        "内容创作": [
-          "my-novel-writer",
-          "context-recovery",
-          "context-manager",
-          "context-engineering",
-          "context-budgeting"
-        ],
-        "通讯协作": [],
-        "安全合规": [],
-        "未分类": [
-          "remotion-best-practices",
-          "audio-cog",
-          "gemini",
-          "diagram-generator",
-          "memory-setup"
-        ]
-      },
-      "total": 13
-    },
-    {
-      "timestamp": "2026-03-30T09:50:17.598115+08:00",
-      "results": {
-        "AI智能": [
-          "chatgpt-image-gen",
-          "telegram-pairing-message-customization"
-        ],
+        "AI智能": [],
         "开发工具": [],
         "效率提升": [],
-        "数据分析": [
-          "clawdchat"
+        "数据分析": [],
+        "内容创作": [],
+        "通讯协作": [],
+        "安全合规": [
+          "remnux-malware-triage"
         ],
-        "内容创作": [
-          "context-anchor",
-          "contextoverflow"
-        ],
-        "通讯协作": [
-          "chat",
-          "message-bird",
-          "douyin-messager"
-        ],
-        "安全合规": [],
-        "未分类": [
-          "news-summary"
-        ]
+        "未分类": []
       },
-      "total": 9
+      "total": 1
     },
     {
-      "timestamp": "2026-03-30T11:20:33.786807+08:00",
+      "timestamp": "2026-04-02T05:39:12.367283+08:00",
       "results": {
         "AI智能": [
-          "telegram-pairing-customization"
+          "ai-efficiency-monitor"
         ],
         "开发工具": [],
         "效率提升": [],
         "数据分析": [],
         "内容创作": [],
-        "通讯协作": [
-          "bilibili-messager"
+        "通讯协作": [],
+        "安全合规": [
+          "ffmpeg-master"
         ],
-        "安全合规": [],
         "未分类": [
-          "whatsapp-business",
-          "imsg",
-          "google-contacts",
-          "table-image",
-          "paperless-ngx",
-          "beepctl",
-          "newsletter-generator"
+          "gemini-image-gen"
         ]
       },
-      "total": 9
+      "total": 3
     },
     {
-      "timestamp": "2026-03-30T12:50:51.702372+08:00",
+      "timestamp": "2026-04-02T06:07:23.108233+08:00",
       "results": {
         "AI智能": [
-          "maihh-agent-connect",
-          "claw-swarm"
+          "ai-travel",
+          "daily-news",
+          "ai-video-workflow",
+          "ai-text-humanizer-zh",
+          "local-llm-router"
         ],
         "开发工具": [],
         "效率提升": [],
-        "数据分析": [],
+        "数据分析": [
+          "dataforseo"
+        ],
+        "内容创作": [],
+        "通讯协作": [],
+        "安全合规": [],
+        "未分类": [
+          "deep-work-orchestrator",
+          "ecomseer",
+          "filesystem",
+          "openclaw-coworker-prompts"
+        ]
+      },
+      "total": 10
+    },
+    {
+      "timestamp": "2026-04-02T07:09:29.376021+08:00",
+      "results": {
+        "AI智能": [],
+        "开发工具": [
+          "git-commit-helper",
+          "music-video-editor"
+        ],
+        "效率提升": [],
+        "数据分析": [
+          "chat2duckdb-cloudcba"
+        ],
         "内容创作": [
-          "context-clean-up",
-          "product-marketing-context"
+          "audio-script-writer"
         ],
         "通讯协作": [
-          "wechat-article-pro"
+          "chatfuel",
+          "chat-selfie",
+          "chatlayer",
+          "chatrace",
+          "chatra",
+          "chatmask"
         ],
         "安全合规": [],
         "未分类": [
-          "conventional-commits",
-          "telegram-api",
-          "dingtalk-feishu-cn",
-          "e2ee",
-          "newsletter",
-          "seedstr",
-          "notion-sync"
+          "java-development-manual",
+          "dify"
         ]
       },
       "total": 12
     },
     {
-      "timestamp": "2026-03-30T14:21:09.634183+08:00",
+      "timestamp": "2026-04-02T08:39:45.229978+08:00",
       "results": {
         "AI智能": [],
-        "开发工具": [],
+        "开发工具": [
+          "dividend-growth-pullback-screener"
+        ],
         "效率提升": [],
         "数据分析": [],
         "内容创作": [
-          "text-stats"
+          "text-diff"
         ],
         "通讯协作": [
-          "chatbot-personality-set",
-          "chattts"
+          "team-collab"
         ],
         "安全合规": [],
         "未分类": [
-          "planning-with-files",
-          "polt",
-          "moltresearch",
-          "clawpedia",
-          "nudocs",
-          "clawstarter"
+          "eastmoney-tools",
+          "tools-page-generator",
+          "tools-litiao",
+          "chinese-toolkit"
         ]
       },
-      "total": 9
+      "total": 7
     },
     {
-      "timestamp": "2026-03-30T15:51:28.745060+08:00",
+      "timestamp": "2026-04-02T09:09:46.383722+08:00",
       "results": {
         "AI智能": [],
-        "开发工具": [],
-        "效率提升": [],
-        "数据分析": [
-          "teamgram-database-schema"
+        "开发工具": [
+          "gitea-2",
+          "ui-designer-skill"
         ],
+        "效率提升": [
+          "taskline"
+        ],
+        "数据分析": [
+          "analyticscli-ts-sdk"
+        ],
+        "内容创作": [
+          "text-to-podcast",
+          "love-text",
+          "text-to-ppt",
+          "html-to-text",
+          "text2speech",
+          "textline",
+          "mood-music"
+        ],
+        "通讯协作": [],
+        "安全合规": [],
+        "未分类": [
+          "golang-samber-lo"
+        ]
+      },
+      "total": 12
+    },
+    {
+      "timestamp": "2026-04-02T10:10:11.040848+08:00",
+      "results": {
+        "AI智能": [
+          "ai-stock-crypto-scanner",
+          "insaiai-intelligent-editing"
+        ],
+        "开发工具": [],
+        "效率提升": [
+          "team-tasks"
+        ],
+        "数据分析": [],
         "内容创作": [],
         "通讯协作": [
-          "wecom-agent-message",
-          "team-discuss",
-          "teamwave",
-          "teamgram-rpc-development",
-          "teamgram-mtproto-protocol",
-          "teamgram-architecture",
-          "meeting",
-          "meeting-to-action",
-          "meetings",
-          "meeting-minutes",
-          "meeting-notes",
-          "meeting-assistant"
+          "team-memory",
+          "team-collab-repo",
+          "team-planner",
+          "teamcamp"
         ],
         "安全合规": [],
         "未分类": []
       },
-      "total": 13
+      "total": 7
     },
     {
-      "timestamp": "2026-03-30T17:22:11.007728+08:00",
+      "timestamp": "2026-04-02T11:41:33.692576+08:00",
       "results": {
         "AI智能": [],
         "开发工具": [],
-        "效率提升": [
-          "task-dispatcher",
-          "meeting-minutes-task-extractor"
-        ],
-        "数据分析": [],
-        "内容创作": [],
-        "通讯协作": [
-          "meeting-note",
-          "meeting-agenda",
-          "meeting-score",
-          "meeting-notes-oc",
-          "meeting-notes-generator",
-          "meeting-autopilot-pro",
-          "meeting-prep-sr"
-        ],
-        "安全合规": [],
-        "未分类": [
-          "fintech-engineer"
-        ]
-      },
-      "total": 10
-    },
-    {
-      "timestamp": "2026-03-30T18:52:34.061441+08:00",
-      "results": {
-        "AI智能": [],
-        "开发工具": [
-          "godot-engine-3d-developer",
-          "video-edit"
-        ],
         "效率提升": [],
         "数据分析": [],
         "内容创作": [
-          "text-to-speech",
-          "speech-to-text"
+          "tiktok-content-creation-compliance"
         ],
-        "通讯协作": [
-          "chat-rooom",
-          "team-pilot",
-          "meetingsummarizer"
-        ],
+        "通讯协作": [],
         "安全合规": [],
         "未分类": [
-          "image-cog",
-          "swift-concurrency-expert",
-          "praesidia"
+          "mema-vault",
+          "metasploit-skill"
         ]
       },
-      "total": 10
+      "total": 3
     },
     {
-      "timestamp": "2026-03-30T20:13:43.179905+08:00",
+      "timestamp": "2026-04-02T12:04:11.460900+08:00",
       "results": {
         "AI智能": [
-          "geepers-llm",
-          "llm-evaluation",
-          "transprompt",
-          "fumi-ai-prompt-templates",
-          "agentic-wallet",
-          "agentic-workflow-automation-v2",
-          "autonomous-agent-toolkit-automaton"
+          "autonomous-research-loop"
+        ],
+        "开发工具": [],
+        "效率提升": [],
+        "数据分析": [],
+        "内容创作": [],
+        "通讯协作": [],
+        "安全合规": [],
+        "未分类": []
+      },
+      "total": 1
+    },
+    {
+      "timestamp": "2026-04-02T13:11:53.142754+08:00",
+      "results": {
+        "AI智能": [
+          "seeddance-ai-video"
         ],
         "开发工具": [
-          "coding-cli-management"
+          "marketing-ideas",
+          "video",
+          "video-generator",
+          "ui-designer",
+          "swiftui-empty-app-init"
         ],
         "效率提升": [],
         "数据分析": [],
@@ -1161,12 +425,787 @@
         "通讯协作": [],
         "安全合规": [],
         "未分类": [
-          "self-evolve-automaton",
-          "magi",
-          "thinking-sovereignty"
+          "python-executor",
+          "test-master",
+          "bitwarden"
+        ]
+      },
+      "total": 9
+    },
+    {
+      "timestamp": "2026-04-02T13:44:14.050242+08:00",
+      "results": {
+        "AI智能": [
+          "airunningcoach",
+          "ydc-ai-sdk-integration",
+          "afrexai-meeting-mastery"
+        ],
+        "开发工具": [
+          "unified-video-lyrics",
+          "audio-video"
+        ],
+        "效率提升": [],
+        "数据分析": [],
+        "内容创作": [
+          "music-festivals",
+          "audiobook"
+        ],
+        "通讯协作": [
+          "persona-team-lead",
+          "acp-team"
+        ],
+        "安全合规": [],
+        "未分类": [
+          "solobuddy"
+        ]
+      },
+      "total": 10
+    },
+    {
+      "timestamp": "2026-04-02T15:07:30.226312+08:00",
+      "results": {
+        "AI智能": [
+          "alicloud-ai-audio-tts"
+        ],
+        "开发工具": [
+          "comfyui-request"
+        ],
+        "效率提升": [],
+        "数据分析": [
+          "backlink-prospector-lite"
+        ],
+        "内容创作": [
+          "elevenlabs-music-automaton",
+          "live-music",
+          "eachlabs-voice-audio",
+          "parakeet-mlx",
+          "audio-editor",
+          "audio-command-executor"
+        ],
+        "通讯协作": [],
+        "安全合规": [],
+        "未分类": [
+          "agent-spm-setup-skill"
+        ]
+      },
+      "total": 10
+    },
+    {
+      "timestamp": "2026-04-02T15:14:50.597067+08:00",
+      "results": {
+        "AI智能": [
+          "aiotnetwork-account-auth",
+          "container-runtime-threat-model"
+        ],
+        "开发工具": [],
+        "效率提升": [],
+        "数据分析": [],
+        "内容创作": [],
+        "通讯协作": [],
+        "安全合规": [
+          "secure-auth-patterns",
+          "auth",
+          "authenticate-wallet",
+          "authenticate",
+          "agnic-authenticate-wallet",
+          "twofactor",
+          "s3-threat-modeling",
+          "threat-intel-aggregator"
+        ],
+        "未分类": [
+          "crypto-2",
+          "env-manager",
+          "ctf-crypto"
+        ]
+      },
+      "total": 13
+    },
+    {
+      "timestamp": "2026-04-02T16:45:31.869767+08:00",
+      "results": {
+        "AI智能": [
+          "humanizer-plus",
+          "ai-intelligent-live-chat"
+        ],
+        "开发工具": [
+          "git-flow-helper",
+          "gitlab-code-reviewer",
+          "gitea-actions",
+          "github-track",
+          "git-commit-formatter"
+        ],
+        "效率提升": [],
+        "数据分析": [],
+        "内容创作": [],
+        "通讯协作": [
+          "chat-analyzer"
+        ],
+        "安全合规": [],
+        "未分类": [
+          "golang-samber-ro",
+          "naver-real-estate-search",
+          "anamnese"
         ]
       },
       "total": 11
+    },
+    {
+      "timestamp": "2026-04-02T18:16:09.455339+08:00",
+      "results": {
+        "AI智能": [
+          "ai-content-generator",
+          "aifundraisingagent",
+          "humanize-zh"
+        ],
+        "开发工具": [],
+        "效率提升": [],
+        "数据分析": [
+          "dune-analytics-api",
+          "sql-optimization-patterns",
+          "lite-sqlite"
+        ],
+        "内容创作": [
+          "audio-enhance"
+        ],
+        "通讯协作": [
+          "chatdecode",
+          "chatbotkit"
+        ],
+        "安全合规": [],
+        "未分类": [
+          "terraform-engineer",
+          "notion-cli"
+        ]
+      },
+      "total": 11
+    },
+    {
+      "timestamp": "2026-04-02T19:46:53.417533+08:00",
+      "results": {
+        "AI智能": [],
+        "开发工具": [
+          "linguistic-humidifier"
+        ],
+        "效率提升": [
+          "productivity-improving",
+          "tasker"
+        ],
+        "数据分析": [
+          "sw-analytics-tracking"
+        ],
+        "内容创作": [
+          "xiaohongshu-viral-content-generator"
+        ],
+        "通讯协作": [
+          "chats-share",
+          "chatwork",
+          "multi-agent-group-chat",
+          "chat-chat",
+          "message-chunker"
+        ],
+        "安全合规": [
+          "clawtrix-dev-intel"
+        ],
+        "未分类": []
+      },
+      "total": 11
+    },
+    {
+      "timestamp": "2026-04-02T21:17:20.784792+08:00",
+      "results": {
+        "AI智能": [],
+        "开发工具": [
+          "gitbackup"
+        ],
+        "效率提升": [
+          "task-runner"
+        ],
+        "数据分析": [],
+        "内容创作": [
+          "dialogue-audio",
+          "ffmpeg-audio-extract"
+        ],
+        "通讯协作": [
+          "chat2duckdb",
+          "message-injector",
+          "messageguard",
+          "douyin-send-message"
+        ],
+        "安全合规": [],
+        "未分类": []
+      },
+      "total": 8
+    },
+    {
+      "timestamp": "2026-04-02T22:48:35.356896+08:00",
+      "results": {
+        "AI智能": [],
+        "开发工具": [
+          "uimap"
+        ],
+        "效率提升": [
+          "task-panner-validator",
+          "taskify-cli"
+        ],
+        "数据分析": [
+          "datafenxi"
+        ],
+        "内容创作": [],
+        "通讯协作": [
+          "wechat-message-sender",
+          "wechat-send"
+        ],
+        "安全合规": [
+          "intelligent-diagnosis-report"
+        ],
+        "未分类": [
+          "notion-skill",
+          "skills-a2a"
+        ]
+      },
+      "total": 9
+    },
+    {
+      "timestamp": "2026-04-03T00:20:10.436392+08:00",
+      "results": {
+        "AI智能": [
+          "praesidia-ai-a2a"
+        ],
+        "开发工具": [],
+        "效率提升": [],
+        "数据分析": [],
+        "内容创作": [],
+        "通讯协作": [],
+        "安全合规": [],
+        "未分类": []
+      },
+      "total": 1
+    },
+    {
+      "timestamp": "2026-04-03T01:50:54.017673+08:00",
+      "results": {
+        "AI智能": [
+          "volcengine-ai-audio-tts"
+        ],
+        "开发工具": [
+          "clawindustry"
+        ],
+        "效率提升": [],
+        "数据分析": [
+          "healthcare-lead-generator",
+          "seo-intel"
+        ],
+        "内容创作": [],
+        "通讯协作": [],
+        "安全合规": [
+          "permission-guard",
+          "openclaw-exec-permission",
+          "huo15-permission",
+          "user-permissions",
+          "threat",
+          "business-intelligence"
+        ],
+        "未分类": [
+          "00-action-guard",
+          "structs-diplomacy",
+          "feishu-perm-cn"
+        ]
+      },
+      "total": 13
+    },
+    {
+      "timestamp": "2026-04-03T03:21:26.029205+08:00",
+      "results": {
+        "AI智能": [
+          "llm-sast-scanner"
+        ],
+        "开发工具": [],
+        "效率提升": [],
+        "数据分析": [],
+        "内容创作": [],
+        "通讯协作": [],
+        "安全合规": [
+          "openclaw-skill-intelligence-ingestion",
+          "agent-intelligence",
+          "protocol-intelligence",
+          "golang-security"
+        ],
+        "未分类": [
+          "delagent",
+          "ctf-pwn",
+          "s3-pentest-commands",
+          "ctf-web",
+          "payloads",
+          "ctf-misc"
+        ]
+      },
+      "total": 11
+    },
+    {
+      "timestamp": "2026-04-03T04:51:57.372800+08:00",
+      "results": {
+        "AI智能": [
+          "intel-asrai",
+          "afrexai-vendor-risk-assessment"
+        ],
+        "开发工具": [
+          "c-suite-competitive-intel"
+        ],
+        "效率提升": [
+          "security-review-workflow"
+        ],
+        "数据分析": [],
+        "内容创作": [],
+        "通讯协作": [],
+        "安全合规": [
+          "company-intel",
+          "gov-competitive-intel",
+          "cs-competitive-intel",
+          "dellight-intelligence-ops",
+          "s3-malware-analyst",
+          "ctf-malware",
+          "toolweb-malware-defense-roadmap",
+          "check-axios-malware"
+        ],
+        "未分类": [
+          "safuclaw",
+          "memory-forensics"
+        ]
+      },
+      "total": 14
+    },
+    {
+      "timestamp": "2026-04-03T06:22:45.993492+08:00",
+      "results": {
+        "AI智能": [
+          "game-ai"
+        ],
+        "开发工具": [
+          "oc-debugging",
+          "ui-ux-craft-kit",
+          "activity-control-ui",
+          "openclaw-ui-designer"
+        ],
+        "效率提升": [
+          "task-decomposer-skill"
+        ],
+        "数据分析": [
+          "excel-data-quality"
+        ],
+        "内容创作": [],
+        "通讯协作": [],
+        "安全合规": [],
+        "未分类": [
+          "link",
+          "exuvia",
+          "super-publish-skill",
+          "mathgraphs",
+          "g2-chart"
+        ]
+      },
+      "total": 12
+    },
+    {
+      "timestamp": "2026-04-03T07:53:31.208234+08:00",
+      "results": {
+        "AI智能": [
+          "afrexai-cybersecurity",
+          "afrexai-vendor-risk"
+        ],
+        "开发工具": [],
+        "效率提升": [],
+        "数据分析": [
+          "google-cloud-healthcare-api"
+        ],
+        "内容创作": [
+          "textanywhere"
+        ],
+        "通讯协作": [],
+        "安全合规": [
+          "liberfi-auth",
+          "authbridge",
+          "threat-stack",
+          "qr-code",
+          "intellexer-api",
+          "risk-assessment-compliance"
+        ],
+        "未分类": [
+          "baa-review"
+        ]
+      },
+      "total": 11
+    },
+    {
+      "timestamp": "2026-04-03T09:24:11.654977+08:00",
+      "results": {
+        "AI智能": [
+          "ai-director",
+          "aiotnetwork-crypto-wallet",
+          "aiseact",
+          "ai-songwriter-clone",
+          "airq",
+          "hft-paper-trader",
+          "hitl-protocol"
+        ],
+        "开发工具": [
+          "nyx-archive-coding-philosophy"
+        ],
+        "效率提升": [],
+        "数据分析": [],
+        "内容创作": [],
+        "通讯协作": [],
+        "安全合规": [],
+        "未分类": [
+          "next-browser",
+          "pokemon-red",
+          "soulcraft",
+          "tekin"
+        ]
+      },
+      "total": 12
+    },
+    {
+      "timestamp": "2026-04-03T10:56:06.422910+08:00",
+      "results": {
+        "AI智能": [],
+        "开发工具": [
+          "music-discovery-guide"
+        ],
+        "效率提升": [
+          "seo-outreach-skill"
+        ],
+        "数据分析": [],
+        "内容创作": [
+          "ecommerce-copywriter"
+        ],
+        "通讯协作": [],
+        "安全合规": [],
+        "未分类": [
+          "lobster-tank",
+          "thecolony",
+          "semantic-walk",
+          "devvit-publishing-auditor",
+          "cryptography"
+        ]
+      },
+      "total": 8
+    },
+    {
+      "timestamp": "2026-04-03T12:27:38.216096+08:00",
+      "results": {
+        "AI智能": [],
+        "开发工具": [
+          "project-trident"
+        ],
+        "效率提升": [],
+        "数据分析": [],
+        "内容创作": [],
+        "通讯协作": [],
+        "安全合规": [
+          "privacy-gdpr",
+          "zhang-gdpr-compliance"
+        ],
+        "未分类": [
+          "phi-readiness-stages",
+          "agent-autonomy-kit-automaton"
+        ]
+      },
+      "total": 5
+    },
+    {
+      "timestamp": "2026-04-03T13:58:45.019363+08:00",
+      "results": {
+        "AI智能": [],
+        "开发工具": [
+          "gitignore-sync",
+          "gitstats"
+        ],
+        "效率提升": [],
+        "数据分析": [],
+        "内容创作": [],
+        "通讯协作": [],
+        "安全合规": [],
+        "未分类": []
+      },
+      "total": 2
+    },
+    {
+      "timestamp": "2026-04-03T15:29:28.631805+08:00",
+      "results": {
+        "AI智能": [
+          "ai-interior-design-visualizer"
+        ],
+        "开发工具": [
+          "keevx-video-translate"
+        ],
+        "效率提升": [],
+        "数据分析": [
+          "geo-seo-optimizer"
+        ],
+        "内容创作": [
+          "doc-to-text",
+          "pretext-layout"
+        ],
+        "通讯协作": [],
+        "安全合规": [],
+        "未分类": [
+          "proactive-agent-skill",
+          "docx-skill",
+          "clawdex"
+        ]
+      },
+      "total": 8
+    },
+    {
+      "timestamp": "2026-04-03T17:00:44.596624+08:00",
+      "results": {
+        "AI智能": [],
+        "开发工具": [],
+        "效率提升": [],
+        "数据分析": [],
+        "内容创作": [],
+        "通讯协作": [],
+        "安全合规": [
+          "authorization-first"
+        ],
+        "未分类": [
+          "awesome-pentest"
+        ]
+      },
+      "total": 2
+    },
+    {
+      "timestamp": "2026-04-03T18:32:19.411946+08:00",
+      "results": {
+        "AI智能": [],
+        "开发工具": [],
+        "效率提升": [],
+        "数据分析": [],
+        "内容创作": [
+          "textit"
+        ],
+        "通讯协作": [],
+        "安全合规": [],
+        "未分类": [
+          "kalshi-crypto-correlation-trader"
+        ]
+      },
+      "total": 2
+    },
+    {
+      "timestamp": "2026-04-03T20:03:31.616851+08:00",
+      "results": {
+        "AI智能": [
+          "ai-niche-website-flipper"
+        ],
+        "开发工具": [],
+        "效率提升": [],
+        "数据分析": [],
+        "内容创作": [],
+        "通讯协作": [],
+        "安全合规": [
+          "dead-or-alive"
+        ],
+        "未分类": []
+      },
+      "total": 2
+    },
+    {
+      "timestamp": "2026-04-03T20:28:35.222614+08:00",
+      "results": {
+        "AI智能": [
+          "ai-dating",
+          "ai-food-recommendation-cn"
+        ],
+        "开发工具": [
+          "sysflow-systematic-debugging"
+        ],
+        "效率提升": [],
+        "数据分析": [],
+        "内容创作": [],
+        "通讯协作": [],
+        "安全合规": [],
+        "未分类": [
+          "agent-nou",
+          "onemind",
+          "react-best-practices"
+        ]
+      },
+      "total": 6
+    },
+    {
+      "timestamp": "2026-04-03T20:53:51.504410+08:00",
+      "results": {
+        "AI智能": [],
+        "开发工具": [
+          "orderly-sdk-debugging",
+          "gitea-workflow-dispatch"
+        ],
+        "效率提升": [
+          "structured-workflow"
+        ],
+        "数据分析": [],
+        "内容创作": [],
+        "通讯协作": [],
+        "安全合规": [],
+        "未分类": [
+          "simul8or-trader",
+          "clawdpoker",
+          "gekko-strategist",
+          "mx-finance-search"
+        ]
+      },
+      "total": 7
+    },
+    {
+      "timestamp": "2026-04-03T21:03:22.196714+08:00",
+      "results": {
+        "AI智能": [
+          "agentmail-wrapper"
+        ],
+        "开发工具": [
+          "videowei-copywriter"
+        ],
+        "效率提升": [],
+        "数据分析": [
+          "supalytics",
+          "bilibili-analytics",
+          "deepread-medical"
+        ],
+        "内容创作": [],
+        "通讯协作": [],
+        "安全合规": [],
+        "未分类": [
+          "douyin-downloader-nodejs",
+          "voice-wake-say",
+          "polt-skill",
+          "douyin-sensitive-check",
+          "telnyx-10dlc",
+          "mampe-industrial-core"
+        ]
+      },
+      "total": 11
+    },
+    {
+      "timestamp": "2026-04-03T21:59:36.739582+08:00",
+      "results": {
+        "AI智能": [
+          "kiro-ide-guide",
+          "afrexai-web-scraping-engine"
+        ],
+        "开发工具": [],
+        "效率提升": [],
+        "数据分析": [],
+        "内容创作": [],
+        "通讯协作": [],
+        "安全合规": [],
+        "未分类": []
+      },
+      "total": 2
+    },
+    {
+      "timestamp": "2026-04-04T02:33:08.867324+08:00",
+      "results": {
+        "AI智能": [],
+        "开发工具": [],
+        "效率提升": [],
+        "数据分析": [],
+        "内容创作": [],
+        "通讯协作": [],
+        "安全合规": [
+          "tool-permission-manager",
+          "solana-security"
+        ],
+        "未分类": []
+      },
+      "total": 2
+    },
+    {
+      "timestamp": "2026-04-04T03:05:06.092605+08:00",
+      "results": {
+        "AI智能": [],
+        "开发工具": [
+          "quiver"
+        ],
+        "效率提升": [],
+        "数据分析": [],
+        "内容创作": [],
+        "通讯协作": [],
+        "安全合规": [],
+        "未分类": []
+      },
+      "total": 1
+    },
+    {
+      "timestamp": "2026-04-04T08:35:19.872999+08:00",
+      "results": {
+        "AI智能": [
+          "authorize"
+        ],
+        "开发工具": [],
+        "效率提升": [],
+        "数据分析": [],
+        "内容创作": [],
+        "通讯协作": [
+          "team-up"
+        ],
+        "安全合规": [],
+        "未分类": [
+          "privy-integration"
+        ]
+      },
+      "total": 3
+    },
+    {
+      "timestamp": "2026-04-04T09:04:12.559142+08:00",
+      "results": {
+        "AI智能": [
+          "ai-engineer"
+        ],
+        "开发工具": [
+          "makefile-build"
+        ],
+        "效率提升": [],
+        "数据分析": [],
+        "内容创作": [],
+        "通讯协作": [],
+        "安全合规": [],
+        "未分类": []
+      },
+      "total": 2
+    },
+    {
+      "timestamp": "2026-04-04T10:06:17.466200+08:00",
+      "results": {
+        "AI智能": [
+          "de-ai-ify",
+          "daily-review-ritual"
+        ],
+        "开发工具": [],
+        "效率提升": [],
+        "数据分析": [],
+        "内容创作": [],
+        "通讯协作": [],
+        "安全合规": [],
+        "未分类": []
+      },
+      "total": 2
+    },
+    {
+      "timestamp": "2026-04-04T11:36:57.994664+08:00",
+      "results": {
+        "AI智能": [],
+        "开发工具": [],
+        "效率提升": [],
+        "数据分析": [],
+        "内容创作": [],
+        "通讯协作": [],
+        "安全合规": [],
+        "未分类": [
+          "agent-bom-scan"
+        ]
+      },
+      "total": 1
     }
   ]
 }

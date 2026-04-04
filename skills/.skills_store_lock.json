@@ -1,245 +1,65 @@
 {
   "version": 1,
   "skills": {
-    "meeting": {
-      "name": "Meeting",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=meeting",
-      "source": "skillhub",
-      "version": "2.0.0"
-    },
-    "team-discuss": {
-      "name": "team-discuss",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=team-discuss",
-      "source": "skillhub",
-      "version": "0.1.1"
-    },
-    "teamwave": {
-      "name": "Teamwave",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=teamwave",
+    "google-tasks": {
+      "name": "Google Tasks",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=google-tasks",
       "source": "skillhub",
       "version": "1.0.0"
     },
-    "teamgram-rpc-development": {
-      "name": "Teamgram RPC Development",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=teamgram-rpc-development",
-      "source": "skillhub",
-      "version": "2.0.0"
-    },
-    "meeting-prep-agent": {
-      "name": "Meeting Prep Agent",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=meeting-prep-agent",
-      "source": "skillhub",
-      "version": "1.1.0"
-    },
-    "meeting-minutes": {
-      "name": "Meeting Minutes",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=meeting-minutes",
-      "source": "skillhub",
-      "version": "1.4.1"
-    },
-    "teamgram-architecture": {
-      "name": "Teamgram Architecture",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=teamgram-architecture",
+    "quiver": {
+      "name": "Quiver Quantitative",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=quiver",
       "source": "skillhub",
       "version": "1.0.1"
     },
-    "meetings": {
-      "name": "Meetings",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=meetings",
+    "team-up": {
+      "name": "Team Up",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=team-up",
       "source": "skillhub",
       "version": "1.0.0"
     },
-    "meeting-to-action": {
-      "name": "Meeting To Action",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=meeting-to-action",
+    "authorize": {
+      "name": "Authorize.net Agentic Payments - Add agentic cards and wallets to your stack",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=authorize",
       "source": "skillhub",
       "version": "1.0.0"
     },
-    "meeting-notes": {
-      "name": "Meeting Notes",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=meeting-notes",
-      "source": "skillhub",
-      "version": "1.0.1"
-    },
-    "team-lead": {
-      "name": "Team Lead",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=team-lead",
+    "ai-engineer": {
+      "name": "AI Engineer",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=ai-engineer",
       "source": "skillhub",
       "version": "1.0.0"
     },
-    "teamgram-mtproto-protocol": {
-      "name": "Teamgram MTProto Protocol",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=teamgram-mtproto-protocol",
-      "source": "skillhub",
-      "version": "1.0.1"
-    },
-    "meeting-notes-oc": {
-      "name": "会议记录助手",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=meeting-notes-oc",
+    "makefile-build": {
+      "name": "Makefile & Build",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=makefile-build",
       "source": "skillhub",
       "version": "1.0.0"
     },
-    "neverdie": {
-      "name": "LLM NeverDie",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=neverdie",
-      "source": "skillhub",
-      "version": "1.2.0"
-    },
-    "meeting-autopilot-pro": {
-      "name": "Meeting Autopilot",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=meeting-autopilot-pro",
+    "gen-image": {
+      "name": "AI图片生成",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=gen-image",
       "source": "skillhub",
       "version": "1.0.0"
     },
-    "meeting-minutes-task-extractor": {
-      "name": "Meeting Minutes Task Extractor",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=meeting-minutes-task-extractor",
+    "baidu-scholar-search": {
+      "name": "baidu scholar search",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=baidu-scholar-search",
       "source": "skillhub",
       "version": "1.0.0"
     },
-    "meeting-note": {
-      "name": "Meeting Note",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=meeting-note",
+    "daily-review-ritual": {
+      "name": "Daily Review Ritual",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=daily-review-ritual",
       "source": "skillhub",
       "version": "1.0.0"
     },
-    "meeting-notes-generator": {
-      "name": "Meeting Notes Generator",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=meeting-notes-generator",
+    "de-ai-ify": {
+      "name": "De-AI-ify",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=de-ai-ify",
       "source": "skillhub",
       "version": "1.0.0"
-    },
-    "meeting-autopilot": {
-      "name": "meeting-autopilot",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=meeting-autopilot",
-      "source": "skillhub",
-      "version": "0.1.2"
-    },
-    "chatgpt-skill": {
-      "name": "ChatGPT Web Skill",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=chatgpt-skill",
-      "source": "skillhub",
-      "version": "0.1.0"
-    },
-    "meeting-summary-generator": {
-      "name": "Meeting Summary Generator",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=meeting-summary-generator",
-      "source": "skillhub",
-      "version": "1.1.2"
-    },
-    "task-dispatcher": {
-      "name": "Task Dispatcher",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=task-dispatcher",
-      "source": "skillhub",
-      "version": "1.0.0"
-    },
-    "meeting-score": {
-      "name": "meeting-score",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=meeting-score",
-      "source": "skillhub",
-      "version": "1.0.0"
-    },
-    "fintech-engineer": {
-      "name": "fintech-engineer",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=fintech-engineer",
-      "source": "skillhub",
-      "version": "1.0.1"
-    },
-    "meeting-prep-sr": {
-      "name": "MeetingPrep Auto-Generate Meeting Briefs",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=meeting-prep-sr",
-      "source": "skillhub",
-      "version": "1.0.2"
-    },
-    "meeting-transcripts": {
-      "name": "Meeting Transcripts",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=meeting-transcripts",
-      "source": "skillhub",
-      "version": "1.0.0"
-    },
-    "text-to-speech": {
-      "name": "Text To Speech",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=text-to-speech",
-      "source": "skillhub",
-      "version": "0.1.5"
-    },
-    "team-pilot": {
-      "name": "TeamPilot",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=team-pilot",
-      "source": "skillhub",
-      "version": "0.1.1"
-    },
-    "video-edit": {
-      "name": "Video Editing",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=video-edit",
-      "source": "skillhub",
-      "version": "1.0.0"
-    },
-    "image-cog": {
-      "name": "image-cog",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=image-cog",
-      "source": "skillhub",
-      "version": "1.0.3"
-    },
-    "meetingsummarizer": {
-      "name": "Meeting Summarizer",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=meetingsummarizer",
-      "source": "skillhub",
-      "version": "1.0.2"
-    },
-    "chat-rooom": {
-      "name": "Chat Rooom",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=chat-rooom",
-      "source": "skillhub",
-      "version": "1.0.0"
-    },
-    "praesidia": {
-      "name": "Praesidia",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=praesidia",
-      "source": "skillhub",
-      "version": "2.0.1"
-    },
-    "swift-concurrency-expert": {
-      "name": "Swift Concurrency Expert",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=swift-concurrency-expert",
-      "source": "skillhub",
-      "version": "1.0.0"
-    },
-    "text-to-image": {
-      "name": "Text To Image",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=text-to-image",
-      "source": "skillhub",
-      "version": "0.1.0"
-    },
-    "gdpr-dsgvo-expert": {
-      "name": "Gdpr Dsgvo Expert",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=gdpr-dsgvo-expert",
-      "source": "skillhub",
-      "version": "2.1.1"
-    },
-    "contextui": {
-      "name": "Contextui",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=contextui",
-      "source": "skillhub",
-      "version": "1.0.7"
-    },
-    "lead-gen-website": {
-      "name": "Lead Gen Website Builder (SEO PUR)",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=lead-gen-website",
-      "source": "skillhub",
-      "version": "1.0.0"
-    },
-    "feishu-message": {
-      "name": "feishu-message",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=feishu-message",
-      "source": "skillhub",
-      "version": "1.0.5"
-    },
-    "speech-to-text": {
-      "name": "Speech To Text",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=speech-to-text",
-      "source": "skillhub",
-      "version": "0.1.5"
     }
   }
 }
