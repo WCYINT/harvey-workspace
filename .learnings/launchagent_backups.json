@@ -527,6 +527,486 @@
           "size": 965
         }
       ]
+    },
+    {
+      "date": "2026-04-05",
+      "timestamp": "20260405_030005",
+      "files": [
+        {
+          "name": "com.hjtech.daily-summary.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260405_030005_com.hjtech.daily-summary.plist",
+          "backup_time": "2026-04-05T03:00:05.962121+08:00",
+          "size": 928
+        },
+        {
+          "name": "com.hjtech.skill-discovery.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260405_030005_com.hjtech.skill-discovery.plist",
+          "backup_time": "2026-04-05T03:00:05.963709+08:00",
+          "size": 971
+        },
+        {
+          "name": "com.hjtech.auto-learner.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260405_030005_com.hjtech.auto-learner.plist",
+          "backup_time": "2026-04-05T03:00:05.968750+08:00",
+          "size": 865
+        },
+        {
+          "name": "com.hjtech.usage-monitor.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260405_030005_com.hjtech.usage-monitor.plist",
+          "backup_time": "2026-04-05T03:00:05.970021+08:00",
+          "size": 819
+        },
+        {
+          "name": "ai.openclaw.email-integration.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260405_030005_ai.openclaw.email-integration.plist",
+          "backup_time": "2026-04-05T03:00:05.971454+08:00",
+          "size": 1044
+        },
+        {
+          "name": "ai.openclaw.gateway.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260405_030005_ai.openclaw.gateway.plist",
+          "backup_time": "2026-04-05T03:00:05.972566+08:00",
+          "size": 2289
+        },
+        {
+          "name": "com.fhjtech.evomap.heartbeat.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260405_030005_com.fhjtech.evomap.heartbeat.plist",
+          "backup_time": "2026-04-05T03:00:05.973656+08:00",
+          "size": 965
+        }
+      ]
+    },
+    {
+      "date": "2026-04-06",
+      "timestamp": "20260406_030004",
+      "files": [
+        {
+          "name": "com.hjtech.daily-summary.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260406_030004_com.hjtech.daily-summary.plist",
+          "backup_time": "2026-04-06T03:00:04.162098+08:00",
+          "size": 928
+        },
+        {
+          "name": "com.hjtech.skill-discovery.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260406_030004_com.hjtech.skill-discovery.plist",
+          "backup_time": "2026-04-06T03:00:04.163199+08:00",
+          "size": 971
+        },
+        {
+          "name": "com.hjtech.auto-learner.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260406_030004_com.hjtech.auto-learner.plist",
+          "backup_time": "2026-04-06T03:00:04.163731+08:00",
+          "size": 865
+        },
+        {
+          "name": "com.hjtech.usage-monitor.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260406_030004_com.hjtech.usage-monitor.plist",
+          "backup_time": "2026-04-06T03:00:04.164432+08:00",
+          "size": 819
+        },
+        {
+          "name": "ai.openclaw.email-integration.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260406_030004_ai.openclaw.email-integration.plist",
+          "backup_time": "2026-04-06T03:00:04.165327+08:00",
+          "size": 1044
+        },
+        {
+          "name": "ai.openclaw.gateway.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260406_030004_ai.openclaw.gateway.plist",
+          "backup_time": "2026-04-06T03:00:04.165983+08:00",
+          "size": 2289
+        },
+        {
+          "name": "com.fhjtech.evomap.heartbeat.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260406_030004_com.fhjtech.evomap.heartbeat.plist",
+          "backup_time": "2026-04-06T03:00:04.166579+08:00",
+          "size": 965
+        }
+      ]
+    },
+    {
+      "date": "2026-04-07",
+      "timestamp": "20260407_211809",
+      "files": [
+        {
+          "name": "com.hjtech.daily-summary.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260407_211809_com.hjtech.daily-summary.plist",
+          "backup_time": "2026-04-07T21:18:09.991800+08:00",
+          "size": 928
+        },
+        {
+          "name": "com.hjtech.skill-discovery.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260407_211809_com.hjtech.skill-discovery.plist",
+          "backup_time": "2026-04-07T21:18:10.006533+08:00",
+          "size": 971
+        },
+        {
+          "name": "com.hjtech.auto-learner.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260407_211809_com.hjtech.auto-learner.plist",
+          "backup_time": "2026-04-07T21:18:10.007861+08:00",
+          "size": 865
+        },
+        {
+          "name": "com.hjtech.usage-monitor.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260407_211809_com.hjtech.usage-monitor.plist",
+          "backup_time": "2026-04-07T21:18:10.010100+08:00",
+          "size": 819
+        },
+        {
+          "name": "ai.openclaw.email-integration.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260407_211809_ai.openclaw.email-integration.plist",
+          "backup_time": "2026-04-07T21:18:10.015295+08:00",
+          "size": 1044
+        },
+        {
+          "name": "ai.openclaw.gateway.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260407_211809_ai.openclaw.gateway.plist",
+          "backup_time": "2026-04-07T21:18:10.020894+08:00",
+          "size": 2289
+        },
+        {
+          "name": "com.fhjtech.evomap.heartbeat.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260407_211809_com.fhjtech.evomap.heartbeat.plist",
+          "backup_time": "2026-04-07T21:18:10.022551+08:00",
+          "size": 965
+        }
+      ]
+    },
+    {
+      "date": "2026-04-08",
+      "timestamp": "20260408_030001",
+      "files": [
+        {
+          "name": "com.hjtech.daily-summary.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260408_030001_com.hjtech.daily-summary.plist",
+          "backup_time": "2026-04-08T03:00:01.433693+08:00",
+          "size": 928
+        },
+        {
+          "name": "com.hjtech.skill-discovery.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260408_030001_com.hjtech.skill-discovery.plist",
+          "backup_time": "2026-04-08T03:00:01.434602+08:00",
+          "size": 971
+        },
+        {
+          "name": "com.hjtech.auto-learner.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260408_030001_com.hjtech.auto-learner.plist",
+          "backup_time": "2026-04-08T03:00:01.435434+08:00",
+          "size": 865
+        },
+        {
+          "name": "com.hjtech.usage-monitor.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260408_030001_com.hjtech.usage-monitor.plist",
+          "backup_time": "2026-04-08T03:00:01.436452+08:00",
+          "size": 819
+        },
+        {
+          "name": "ai.openclaw.email-integration.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260408_030001_ai.openclaw.email-integration.plist",
+          "backup_time": "2026-04-08T03:00:01.437871+08:00",
+          "size": 1044
+        },
+        {
+          "name": "ai.openclaw.gateway.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260408_030001_ai.openclaw.gateway.plist",
+          "backup_time": "2026-04-08T03:00:01.438874+08:00",
+          "size": 2289
+        },
+        {
+          "name": "com.fhjtech.evomap.heartbeat.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260408_030001_com.fhjtech.evomap.heartbeat.plist",
+          "backup_time": "2026-04-08T03:00:01.439768+08:00",
+          "size": 965
+        }
+      ]
+    },
+    {
+      "date": "2026-04-09",
+      "timestamp": "20260409_030005",
+      "files": [
+        {
+          "name": "com.hjtech.daily-summary.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260409_030005_com.hjtech.daily-summary.plist",
+          "backup_time": "2026-04-09T03:00:05.671650+08:00",
+          "size": 928
+        },
+        {
+          "name": "com.hjtech.skill-discovery.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260409_030005_com.hjtech.skill-discovery.plist",
+          "backup_time": "2026-04-09T03:00:05.672318+08:00",
+          "size": 971
+        },
+        {
+          "name": "com.hjtech.auto-learner.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260409_030005_com.hjtech.auto-learner.plist",
+          "backup_time": "2026-04-09T03:00:05.672813+08:00",
+          "size": 865
+        },
+        {
+          "name": "com.hjtech.usage-monitor.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260409_030005_com.hjtech.usage-monitor.plist",
+          "backup_time": "2026-04-09T03:00:05.673554+08:00",
+          "size": 819
+        },
+        {
+          "name": "ai.openclaw.email-integration.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260409_030005_ai.openclaw.email-integration.plist",
+          "backup_time": "2026-04-09T03:00:05.674446+08:00",
+          "size": 1044
+        },
+        {
+          "name": "ai.openclaw.gateway.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260409_030005_ai.openclaw.gateway.plist",
+          "backup_time": "2026-04-09T03:00:05.674960+08:00",
+          "size": 2289
+        },
+        {
+          "name": "com.fhjtech.evomap.heartbeat.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260409_030005_com.fhjtech.evomap.heartbeat.plist",
+          "backup_time": "2026-04-09T03:00:05.675493+08:00",
+          "size": 965
+        }
+      ]
+    },
+    {
+      "date": "2026-04-10",
+      "timestamp": "20260410_030005",
+      "files": [
+        {
+          "name": "com.hjtech.daily-summary.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260410_030005_com.hjtech.daily-summary.plist",
+          "backup_time": "2026-04-10T03:00:05.637995+08:00",
+          "size": 928
+        },
+        {
+          "name": "com.hjtech.skill-discovery.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260410_030005_com.hjtech.skill-discovery.plist",
+          "backup_time": "2026-04-10T03:00:05.638824+08:00",
+          "size": 971
+        },
+        {
+          "name": "com.hjtech.auto-learner.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260410_030005_com.hjtech.auto-learner.plist",
+          "backup_time": "2026-04-10T03:00:05.639316+08:00",
+          "size": 865
+        },
+        {
+          "name": "com.hjtech.usage-monitor.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260410_030005_com.hjtech.usage-monitor.plist",
+          "backup_time": "2026-04-10T03:00:05.640195+08:00",
+          "size": 819
+        },
+        {
+          "name": "ai.openclaw.email-integration.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260410_030005_ai.openclaw.email-integration.plist",
+          "backup_time": "2026-04-10T03:00:05.640988+08:00",
+          "size": 1044
+        },
+        {
+          "name": "ai.openclaw.gateway.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260410_030005_ai.openclaw.gateway.plist",
+          "backup_time": "2026-04-10T03:00:05.641554+08:00",
+          "size": 2289
+        },
+        {
+          "name": "com.fhjtech.evomap.heartbeat.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260410_030005_com.fhjtech.evomap.heartbeat.plist",
+          "backup_time": "2026-04-10T03:00:05.642115+08:00",
+          "size": 965
+        }
+      ]
+    },
+    {
+      "date": "2026-04-10",
+      "timestamp": "20260410_065305",
+      "files": [
+        {
+          "name": "com.hjtech.daily-summary.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260410_065305_com.hjtech.daily-summary.plist",
+          "backup_time": "2026-04-10T06:53:05.966768+08:00",
+          "size": 928
+        },
+        {
+          "name": "com.hjtech.skill-discovery.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260410_065305_com.hjtech.skill-discovery.plist",
+          "backup_time": "2026-04-10T06:53:06.025385+08:00",
+          "size": 971
+        },
+        {
+          "name": "com.hjtech.auto-learner.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260410_065305_com.hjtech.auto-learner.plist",
+          "backup_time": "2026-04-10T06:53:06.032600+08:00",
+          "size": 865
+        },
+        {
+          "name": "com.hjtech.usage-monitor.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260410_065305_com.hjtech.usage-monitor.plist",
+          "backup_time": "2026-04-10T06:53:06.230933+08:00",
+          "size": 819
+        },
+        {
+          "name": "ai.openclaw.email-integration.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260410_065305_ai.openclaw.email-integration.plist",
+          "backup_time": "2026-04-10T06:53:06.278027+08:00",
+          "size": 1044
+        },
+        {
+          "name": "ai.openclaw.gateway.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260410_065305_ai.openclaw.gateway.plist",
+          "backup_time": "2026-04-10T06:53:06.310933+08:00",
+          "size": 2289
+        },
+        {
+          "name": "com.fhjtech.evomap.heartbeat.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260410_065305_com.fhjtech.evomap.heartbeat.plist",
+          "backup_time": "2026-04-10T06:53:06.498325+08:00",
+          "size": 965
+        }
+      ]
+    },
+    {
+      "date": "2026-04-10",
+      "timestamp": "20260410_211249",
+      "files": [
+        {
+          "name": "com.hjtech.daily-summary.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260410_211249_com.hjtech.daily-summary.plist",
+          "backup_time": "2026-04-10T21:12:49.024319+08:00",
+          "size": 928
+        },
+        {
+          "name": "com.hjtech.skill-discovery.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260410_211249_com.hjtech.skill-discovery.plist",
+          "backup_time": "2026-04-10T21:12:49.025060+08:00",
+          "size": 971
+        },
+        {
+          "name": "com.hjtech.auto-learner.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260410_211249_com.hjtech.auto-learner.plist",
+          "backup_time": "2026-04-10T21:12:49.025759+08:00",
+          "size": 865
+        },
+        {
+          "name": "com.hjtech.usage-monitor.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260410_211249_com.hjtech.usage-monitor.plist",
+          "backup_time": "2026-04-10T21:12:49.027544+08:00",
+          "size": 819
+        },
+        {
+          "name": "ai.openclaw.email-integration.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260410_211249_ai.openclaw.email-integration.plist",
+          "backup_time": "2026-04-10T21:12:49.028334+08:00",
+          "size": 1044
+        },
+        {
+          "name": "ai.openclaw.gateway.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260410_211249_ai.openclaw.gateway.plist",
+          "backup_time": "2026-04-10T21:12:49.029225+08:00",
+          "size": 2289
+        },
+        {
+          "name": "com.fhjtech.evomap.heartbeat.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260410_211249_com.fhjtech.evomap.heartbeat.plist",
+          "backup_time": "2026-04-10T21:12:49.029991+08:00",
+          "size": 965
+        }
+      ]
+    },
+    {
+      "date": "2026-04-10",
+      "timestamp": "20260410_223102",
+      "files": [
+        {
+          "name": "com.hjtech.daily-summary.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260410_223102_com.hjtech.daily-summary.plist",
+          "backup_time": "2026-04-10T22:31:02.186164+08:00",
+          "size": 928
+        },
+        {
+          "name": "com.hjtech.skill-discovery.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260410_223102_com.hjtech.skill-discovery.plist",
+          "backup_time": "2026-04-10T22:31:02.224594+08:00",
+          "size": 971
+        },
+        {
+          "name": "com.hjtech.auto-learner.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260410_223102_com.hjtech.auto-learner.plist",
+          "backup_time": "2026-04-10T22:31:02.253241+08:00",
+          "size": 865
+        },
+        {
+          "name": "com.hjtech.usage-monitor.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260410_223102_com.hjtech.usage-monitor.plist",
+          "backup_time": "2026-04-10T22:31:02.256021+08:00",
+          "size": 819
+        },
+        {
+          "name": "ai.openclaw.email-integration.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260410_223102_ai.openclaw.email-integration.plist",
+          "backup_time": "2026-04-10T22:31:02.264228+08:00",
+          "size": 1044
+        },
+        {
+          "name": "ai.openclaw.gateway.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260410_223102_ai.openclaw.gateway.plist",
+          "backup_time": "2026-04-10T22:31:02.265268+08:00",
+          "size": 2289
+        },
+        {
+          "name": "com.fhjtech.evomap.heartbeat.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260410_223102_com.fhjtech.evomap.heartbeat.plist",
+          "backup_time": "2026-04-10T22:31:02.271304+08:00",
+          "size": 965
+        }
+      ]
+    },
+    {
+      "date": "2026-04-11",
+      "timestamp": "20260411_030005",
+      "files": [
+        {
+          "name": "com.hjtech.daily-summary.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260411_030005_com.hjtech.daily-summary.plist",
+          "backup_time": "2026-04-11T03:00:05.225217+08:00",
+          "size": 928
+        },
+        {
+          "name": "com.hjtech.skill-discovery.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260411_030005_com.hjtech.skill-discovery.plist",
+          "backup_time": "2026-04-11T03:00:05.226234+08:00",
+          "size": 971
+        },
+        {
+          "name": "com.hjtech.auto-learner.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260411_030005_com.hjtech.auto-learner.plist",
+          "backup_time": "2026-04-11T03:00:05.226676+08:00",
+          "size": 865
+        },
+        {
+          "name": "com.hjtech.usage-monitor.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260411_030005_com.hjtech.usage-monitor.plist",
+          "backup_time": "2026-04-11T03:00:05.227400+08:00",
+          "size": 819
+        },
+        {
+          "name": "ai.openclaw.email-integration.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260411_030005_ai.openclaw.email-integration.plist",
+          "backup_time": "2026-04-11T03:00:05.228200+08:00",
+          "size": 1044
+        },
+        {
+          "name": "ai.openclaw.gateway.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260411_030005_ai.openclaw.gateway.plist",
+          "backup_time": "2026-04-11T03:00:05.228988+08:00",
+          "size": 2289
+        },
+        {
+          "name": "com.fhjtech.evomap.heartbeat.plist",
+          "backup_path": "/Users/fhjtech/.openclaw/workspace/backups/launchagents/20260411_030005_com.fhjtech.evomap.heartbeat.plist",
+          "backup_time": "2026-04-11T03:00:05.229548+08:00",
+          "size": 965
+        }
+      ]
     }
   ]
 }

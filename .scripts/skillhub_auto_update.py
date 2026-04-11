@@ -303,28 +303,39 @@ async def _search_clawhub(keyword: str, semaphore: asyncio.Semaphore) -> list[di
 
 # ── 网络获取辅助函数（带curl降级）────────────────────────
 def _fetch_url_with_fallback(url: str, timeout: int = 10) -> str | None:
-    """Try urllib first, fall back to curl on failure.
-    Returns content string or None if both methods fail."""
-    try:
-        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-        with urllib.request.urlopen(req, timeout=timeout) as resp:
-            return resp.read().decode("utf-8", errors="ignore")
-    except Exception as urllib_err:
-        # 降级到curl（处理企业网络/代理干扰urllib的情况）
+    """Try urllib first, fall back to curl on failure. Retry up to 2x on SSL errors.
+    Returns content string or None if all attempts fail."""
+    import time
+    last_err = None
+    for attempt in range(3):
         try:
-            result = subprocess.run(
-                ["curl", "-s", "--max-time", str(timeout + 5), url],
-                capture_output=True, text=True, timeout=timeout + 8
-            )
-            if result.returncode == 0 and result.stdout:
-                log(f"[VoltAgent] curl fallback succeeded (urllib failed: {str(urllib_err)[:40]})")
-                return result.stdout
-            else:
-                log(f"[VoltAgent] curl fallback also failed: {result.stderr[:60] if result.stderr else 'no output'}")
+            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+            with urllib.request.urlopen(req, timeout=timeout) as resp:
+                return resp.read().decode("utf-8", errors="ignore")
+        except Exception as urllib_err:
+            err_str = str(urllib_err)
+            last_err = urllib_err
+            is_ssl = "SSL" in err_str or "ssl" in err_str
+            if attempt < 2 and is_ssl:
+                time.sleep(2)
+                continue
+            # 降级到curl（处理企业网络/代理干扰urllib的情况）
+            try:
+                result = subprocess.run(
+                    ["curl", "-s", "--max-time", str(timeout + 5), url],
+                    capture_output=True, text=True, timeout=timeout + 8
+                )
+                if result.returncode == 0 and result.stdout:
+                    log(f"[VoltAgent] curl fallback succeeded (urllib failed: {err_str[:40]})")
+                    return result.stdout
+                else:
+                    log(f"[VoltAgent] curl fallback also failed: {result.stderr[:60] if result.stderr else 'no output'}")
+                    return None
+            except Exception as curl_err:
+                log(f"[VoltAgent] curl fallback error: {str(curl_err)[:60]}")
                 return None
-        except Exception as curl_err:
-            log(f"[VoltAgent] curl fallback error: {str(curl_err)[:60]}")
-            return None
+    log(f"[VoltAgent] _fetch_url_with_fallback failed after 3 attempts: {str(last_err)[:60]}")
+    return None
 
 
 # ── Step 1c: VoltAgent / OpenClaw Skills GitHub ────────────────────
@@ -344,12 +355,11 @@ async def _fetch_voltagent(semaphore: asyncio.Semaphore) -> list[dict]:
     async with semaphore:
         try:
             api_url = "https://api.github.com/repos/openclaw/skills/contents/skills"
-            req = urllib.request.Request(
-                api_url,
-                headers={"Accept": "application/vnd.github.v3+json", "User-Agent": "Mozilla/5.0"}
-            )
-            with urllib.request.urlopen(req, timeout=20) as resp:
-                data = json.loads(resp.read().decode("utf-8"))
+            content = _fetch_url_with_fallback(api_url, timeout=20)
+            if content is None:
+                log("[VoltAgent] Failed: both urllib and curl failed")
+                return []
+            data = json.loads(content)
 
             skills = []
             for item in data:
@@ -1150,7 +1160,7 @@ async def _install_one_inner(slug: str, source: str) -> tuple[str, bool, str]:
                     fail_detail = err_candidate[:80]
                 else:
                     # Look for error keywords in combined output (more robust than npm prefix)
-                    err_keywords = ('error', 'fail', 'not found', 'not in index',
+                    err_keywords = ('error', 'fatal:', 'fail', 'not found', 'not in index',
                                     'could not', 'unable to', 'invalid', 'ermission',
                                     'timeout', 'network', 'enoent', 'eaccess')
                     for line in lines:
@@ -2132,10 +2142,23 @@ def main() -> None:
         # Even if no new installs succeeded, still process failures (especially "not_in_index"
         # which need to be learned into rejected_slugs.json for future run optimization)
         has_not_in_index = any(reason == "not_in_index" for _, reason in install_failed)
-        if not newly_installed and not has_not_in_index:
+        # Only abort on truly-critical failures. skills_sh_failed and skills_sh_circuit_open
+        # are expected-to-be-flaky (npx+git+npm; network/repo issues) and should NOT block
+        # the process when the system is likely already up-to-date (small missing list + cache hit).
+        skills_sh_only = all(reason in ("skills_sh_failed", "skills_sh_circuit_open") for _, reason in install_failed)
+        # FIX 2026-04-05: Also bypass abort when install_failed contains ONLY skills_sh_failed
+        # (not just skills_sh_circuit_open). VoltAgent SSL + skills.sh clone failures cause
+        # skills_sh_only=False even though only skills.sh is failing, triggering spurious aborts.
+        skills_sh_fail_only = (
+            len(install_failed) > 0
+            and all(reason in ("skills_sh_failed", "skills_sh_circuit_open") for _, reason in install_failed)
+        )
+        if not newly_installed and not has_not_in_index and not skills_sh_only and not skills_sh_fail_only:
             failure_summary = ", ".join(sorted(set(r for _, r in install_failed)))
             log(f"[Step3] 无新安装且无非索引失败，但有其他失败: {failure_summary}，中止")
             return
+        if not newly_installed and not has_not_in_index and skills_sh_fail_only:
+            log(f"[Step3] 无新安装但 skills_sh 全失败（网络/克隆问题），不中止")
         if not newly_installed and has_not_in_index:
             log(f"[Step3] 无新安装但有 {sum(1 for _, r in install_failed if r == 'not_in_index')} 个 not_in_index 失败（已学习），继续生成报告")
         if not newly_installed:

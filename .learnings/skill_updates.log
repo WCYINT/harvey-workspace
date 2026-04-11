@@ -20663,3 +20663,2698 @@ Error: Rate limit exceeded
 [2026-04-04 11:37:01] [邮件] SMTP probe succeeded, skipping cooldown
 [2026-04-04 11:37:08] [邮件] 汇报已发送至 wcyint@163.com
 [2026-04-04 11:37:08] === 完成: 集成1 | Auditor安全1 | 分类测试1 | 安装2 ===
+[2026-04-04 12:06:15] === 四源技能自动更新 Started ===
+[2026-04-04 12:06:38] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-04 12:06:39] [Step1] 七类别Top100 + 四源获取 1079 个技能
+[2026-04-04 12:06:39] [Step2] 已安装: 3103 | 缺失: 6 (已过滤 334 个已知失效slug)
+[2026-04-04 12:06:40] [Step3] OK: context-compactor (skillhub)
+[2026-04-04 12:06:40] [Step3] OK: context-gatekeeper (skillhub)
+[2026-04-04 12:06:40] [Step3] OK: authy (skillhub)
+[2026-04-04 12:06:40] [Step3] OK: meeting-minutes-organizer (skillhub)
+[2026-04-04 12:06:41] [Step3] OK: reddit-api (clawhub)
+[2026-04-04 12:06:42] [Step3] OK: arxiv-paper-processor (clawhub)
+[2026-04-04 12:06:42] [Step3] 安装完成: 6 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-04 12:06:42] [Step3.5] FAIL: arxiv-paper-processor -> [high] sleeper-date-trigger: Date-based trigger — sleeper agent with future activation (downgraded — in docum; [high] sh
+[2026-04-04 12:06:42] [Step3.5] PASS: reddit-api (仅 medium/low findings)
+[2026-04-04 12:06:42] [Step3.5] FAIL: context-gatekeeper -> [high] shell-exec-python: Python shell execution — can run arbitrary system commands
+[2026-04-04 12:06:42] [Step3.5] FAIL: context-compactor -> [high] supply-chain-npm-exec: NPX/npm exec — runs packages without explicit installation; [high] supply-chain-npm-exec: 
+[2026-04-04 12:06:42] [Step3.5] PASS: meeting-minutes-organizer
+[2026-04-04 12:06:42] [Step3.5] PASS: authy (仅 medium/low findings)
+[2026-04-04 12:06:42] [Step3.5] Auditor扫描完成: 安全3 | 危险3
+[2026-04-04 12:06:42] [Step3.6] 卸载危险技能: arxiv-paper-processor ([high] sleeper-date-trigger: Date-based trigger — sleeper ag)
+[2026-04-04 12:06:42] [Step3.6] 卸载危险技能: context-gatekeeper ([high] shell-exec-python: Python shell execution — can run a)
+[2026-04-04 12:06:42] [Step3.6] 卸载危险技能: context-compactor ([high] supply-chain-npm-exec: NPX/npm exec — runs packages w)
+[2026-04-04 12:06:42] [Step3.6] 已卸载 3/3 个危险技能，0 个核心技能已保护
+[2026-04-04 12:06:42] [Step4] [未分类] reddit-api
+[2026-04-04 12:06:42] [Step4] [通讯协作] meeting-minutes-organizer
+[2026-04-04 12:06:42] [Step4] [安全合规] authy
+[2026-04-04 12:06:42] [Step4] 分类测试完成: 3 个技能已分类
+[2026-04-04 12:06:42]   通讯协作: 1 个
+[2026-04-04 12:06:42]   安全合规: 1 个
+[2026-04-04 12:06:42]   未分类: 1 个
+[2026-04-04 12:06:42] [Step4] 安全通过: 3 | 危险: 0
+[2026-04-04 12:06:42] [Step5] OK: reddit-api
+[2026-04-04 12:06:42] [Step5] OK: meeting-minutes-organizer
+[2026-04-04 12:06:42] [Step5] OK: authy
+[2026-04-04 12:06:42] [Step5] 集成成功: 3 | 撤销: 0
+[2026-04-04 12:06:42] [Step6] 完成，3 个技能已集成
+[2026-04-04 12:06:43] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-04 12:06:46] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-04 12:06:46] === 完成: 集成3 | Auditor安全3 | 分类测试3 | 安装6 ===
+[2026-04-04 13:07:08] === 四源技能自动更新 Started ===
+[2026-04-04 13:07:27] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-04 13:07:28] [Step1] 七类别Top100 + 四源获取 1077 个技能
+[2026-04-04 13:07:28] [Step2] 已安装: 3106 | 缺失: 5 (已过滤 337 个已知失效slug)
+[2026-04-04 13:07:29] [Step3] OK: universal-video-downloader (skillhub)
+[2026-04-04 13:07:29] [Step3] OK: safe-config-workflow (skillhub)
+[2026-04-04 13:07:30] [Step3] OK: agentic-arena-defi (clawhub)
+[2026-04-04 13:07:30] [Step3] OK: developer-kit (clawhub)
+[2026-04-04 13:07:31] [Step3] OK: laiye-ocr (clawhub)
+[2026-04-04 13:07:31] [Step3] 安装完成: 5 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-04 13:07:31] [Step3.5] PASS: agentic-arena-defi (仅 medium/low findings)
+[2026-04-04 13:07:31] [Step3.5] PASS: laiye-ocr (仅 medium/low findings)
+[2026-04-04 13:07:31] [Step3.5] PASS: developer-kit (仅 medium/low findings)
+[2026-04-04 13:07:31] [Step3.5] FAIL: universal-video-downloader -> [high] shell-exec-python: Python shell execution — can run arbitrary system commands; [high] shell-exec-python: Python s
+[2026-04-04 13:07:31] [Step3.5] PASS: safe-config-workflow (仅 medium/low findings)
+[2026-04-04 13:07:31] [Step3.5] Auditor扫描完成: 安全4 | 危险1
+[2026-04-04 13:07:31] [Step3.6] 卸载危险技能: universal-video-downloader ([high] shell-exec-python: Python shell execution — can run a)
+[2026-04-04 13:07:31] [Step3.6] 已卸载 1/1 个危险技能，0 个核心技能已保护
+[2026-04-04 13:07:31] [Step4] [AI智能] agentic-arena-defi
+[2026-04-04 13:07:31] [Step4] [AI智能] laiye-ocr
+[2026-04-04 13:07:31] [Step4] [开发工具] developer-kit
+[2026-04-04 13:07:31] [Step4] [效率提升] safe-config-workflow
+[2026-04-04 13:07:31] [Step4] 分类测试完成: 4 个技能已分类
+[2026-04-04 13:07:31]   AI智能: 2 个
+[2026-04-04 13:07:31]   开发工具: 1 个
+[2026-04-04 13:07:31]   效率提升: 1 个
+[2026-04-04 13:07:31] [Step4] 安全通过: 4 | 危险: 0
+[2026-04-04 13:07:31] [Step5] OK: agentic-arena-defi
+[2026-04-04 13:07:31] [Step5] OK: laiye-ocr
+[2026-04-04 13:07:31] [Step5] OK: developer-kit
+[2026-04-04 13:07:31] [Step5] OK: safe-config-workflow
+[2026-04-04 13:07:31] [Step5] 集成成功: 4 | 撤销: 0
+[2026-04-04 13:07:31] [Step6] 完成，4 个技能已集成
+[2026-04-04 13:07:32] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-04 13:07:34] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-04 13:07:34] === 完成: 集成4 | Auditor安全4 | 分类测试4 | 安装5 ===
+[2026-04-04 14:37:35] === 四源技能自动更新 Started ===
+[2026-04-04 14:38:09] [VoltAgent] Failed: [SSL: RECORD_LAYER_FAILURE] record layer failure (_ssl.c:2710)
+[2026-04-04 14:38:12] [Step1] 七类别Top100 + 四源获取 379 个技能
+[2026-04-04 14:38:12] [Step2] 已安装: 3118 | 缺失: 8 (已过滤 338 个已知失效slug)
+[2026-04-04 14:38:16] [Step3] SKIP(skills.sh failed): kishorkukreja/awesome-supply-chain/electronics-supply-chain — ■  Failed to clone repository
+[2026-04-04 14:38:17] [Step3] OK: bybit-trading (clawhub)
+[2026-04-04 14:38:17] [Step3] OK: article-idea-capture (clawhub)
+[2026-04-04 14:38:17] [Step3] OK: verified-agent-identity-6 (clawhub)
+[2026-04-04 14:38:18] [Step3] OK: cookiy (clawhub)
+[2026-04-04 14:38:19] [Step3] OK: intelli-train-ai/skills/academic-search (skills.sh)
+[2026-04-04 14:38:19] [Step3] OK: claw-cast (clawhub)
+[2026-04-04 14:38:24] [Step3] OK: verified-agent-identity-4 (clawhub)
+[2026-04-04 14:38:24] [Step3] 安装完成: 7 成功 / 1 失败 (另有 0 个跳过)
+[2026-04-04 14:38:24] [Step3.5] PASS: claw-cast (仅 medium/low findings)
+[2026-04-04 14:38:24] [Step3.5] PASS: article-idea-capture (仅 medium/low findings)
+[2026-04-04 14:38:24] [Step3.5] PASS: verified-agent-identity-6 (仅 medium/low findings)
+[2026-04-04 14:38:24] [Step3.5] FAIL: verified-agent-identity-4 -> [high] homedir-access: Home directory access in code — may reach user files outside workspace; [high] message-tool-abuse
+[2026-04-04 14:38:24] [Step3.5] PASS: bybit-trading (仅 medium/low findings)
+[2026-04-04 14:38:24] [Step3.5] PASS: cookiy (仅 medium/low findings)
+[2026-04-04 14:38:24] [Step3.5] Auditor扫描完成: 安全5 | 危险2
+[2026-04-04 14:38:24] [Step3.6] 卸载危险技能: verified-agent-identity-4 ([high] homedir-access: Home directory access in code — may r)
+[2026-04-04 14:38:24] [Step3.6] 已卸载 1/2 个危险技能，0 个核心技能已保护
+[2026-04-04 14:38:24] [Step4] [未分类] claw-cast
+[2026-04-04 14:38:24] [Step4] [开发工具] article-idea-capture
+[2026-04-04 14:38:24] [Step4] [开发工具] verified-agent-identity-6
+[2026-04-04 14:38:24] [Step4] [AI智能] bybit-trading
+[2026-04-04 14:38:24] [Step4] [未分类] cookiy
+[2026-04-04 14:38:24] [Step4] 分类测试完成: 5 个技能已分类
+[2026-04-04 14:38:24]   AI智能: 1 个
+[2026-04-04 14:38:24]   开发工具: 2 个
+[2026-04-04 14:38:24]   未分类: 2 个
+[2026-04-04 14:38:24] [Step4] 安全通过: 5 | 危险: 0
+[2026-04-04 14:38:24] [Step5] OK: claw-cast
+[2026-04-04 14:38:24] [Step5] OK: article-idea-capture
+[2026-04-04 14:38:24] [Step5] OK: verified-agent-identity-6
+[2026-04-04 14:38:24] [Step5] OK: bybit-trading
+[2026-04-04 14:38:24] [Step5] OK: cookiy
+[2026-04-04 14:38:24] [Step5] 集成成功: 5 | 撤销: 0
+[2026-04-04 14:38:24] [Step6] 完成，5 个技能已集成
+[2026-04-04 14:38:28] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-04 14:38:34] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-04 14:38:34] === 完成: 集成5 | Auditor安全5 | 分类测试5 | 安装7 ===
+[2026-04-04 16:08:35] === 四源技能自动更新 Started ===
+[2026-04-04 16:09:02] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-04 16:09:06] [Step1] 七类别Top100 + 四源获取 946 个技能
+[2026-04-04 16:09:06] [Step2] 已安装: 3123 | 缺失: 4 (已过滤 341 个已知失效slug)
+[2026-04-04 16:09:09] [Step3] OK: help-pair (clawhub)
+[2026-04-04 16:09:09] [Step3] OK: optimize-context (skillhub)
+[2026-04-04 16:09:09] [Step3] OK: airshelf (skillhub)
+[2026-04-04 16:09:09] [Step3] OK: aiusd-trade-agent (skillhub)
+[2026-04-04 16:09:09] [Step3] 安装完成: 4 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-04 16:09:13] [Step3.5] FAIL: aiusd-trade-agent -> [high] shell-exec-node: Node.js shell execution — can run arbitrary system commands; [high] shell-exec-node: Node.js she
+[2026-04-04 16:09:13] [Step3.5] PASS: airshelf (文档技能: 高风险均为误报)
+[2026-04-04 16:09:13] [Step3.5] PASS: help-pair
+[2026-04-04 16:09:13] [Step3.5] FAIL: optimize-context -> [high] message-tool-abuse: References OpenClaw session/message tools — could exfiltrate data via messaging ; [high] mess
+[2026-04-04 16:09:13] [Step3.5] Auditor扫描完成: 安全2 | 危险2
+[2026-04-04 16:09:13] [Step3.6] 卸载危险技能: aiusd-trade-agent ([high] shell-exec-node: Node.js shell execution — can run ar)
+[2026-04-04 16:09:13] [Step3.6] 卸载危险技能: optimize-context ([high] message-tool-abuse: References OpenClaw session/messa)
+[2026-04-04 16:09:13] [Step3.6] 已卸载 2/2 个危险技能，0 个核心技能已保护
+[2026-04-04 16:09:13] [Step4] [AI智能] airshelf
+[2026-04-04 16:09:13] [Step4] [AI智能] help-pair
+[2026-04-04 16:09:13] [Step4] 分类测试完成: 2 个技能已分类
+[2026-04-04 16:09:13]   AI智能: 2 个
+[2026-04-04 16:09:13] [Step4] 安全通过: 2 | 危险: 0
+[2026-04-04 16:09:13] [Step5] OK: airshelf
+[2026-04-04 16:09:13] [Step5] OK: help-pair
+[2026-04-04 16:09:13] [Step5] 集成成功: 2 | 撤销: 0
+[2026-04-04 16:09:13] [Step6] 完成，2 个技能已集成
+[2026-04-04 16:09:14] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-04 16:09:16] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-04 16:09:16] === 完成: 集成2 | Auditor安全2 | 分类测试2 | 安装4 ===
+[2026-04-04 16:30:42] === 四源技能自动更新 Started ===
+[2026-04-04 16:31:01] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-04 16:31:04] [ClawHub Top] rate-limited, retrying in 3.1s (attempt 1/3)...
+[2026-04-04 16:31:10] [Step1] 七类别Top100 + 四源获取 1007 个技能
+[2026-04-04 16:31:10] [Step2] 已安装: 3125 | 缺失: 6 (已过滤 343 个已知失效slug)
+[2026-04-04 16:31:11] [Step3] OK: ai-api-test (skillhub)
+[2026-04-04 16:31:11] [Step3] OK: ai-revenue-tracker (skillhub)
+[2026-04-04 16:31:11] [Step3] OK: estimate-builder (skillhub)
+[2026-04-04 16:31:11] [Step3] OK: ai-tech-lead (skillhub)
+[2026-04-04 16:31:11] [Step3] OK: xhs-content-gen (skillhub)
+[2026-04-04 16:31:12] [Step3] OK: longevity-os (clawhub)
+[2026-04-04 16:31:12] [Step3] 安装完成: 6 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-04 16:31:12] [Step3.5] PASS: ai-api-test (仅 medium/low findings)
+[2026-04-04 16:31:12] [Step3.5] PASS: ai-revenue-tracker (仅 medium/low findings)
+[2026-04-04 16:31:13] [Step3.5] PASS: ai-tech-lead
+[2026-04-04 16:31:13] [Step3.5] PASS: longevity-os (仅 medium/low findings)
+[2026-04-04 16:31:13] [Step3.5] PASS: estimate-builder (仅 medium/low findings)
+[2026-04-04 16:31:13] [Step3.5] PASS: xhs-content-gen (仅 medium/low findings)
+[2026-04-04 16:31:13] [Step3.5] Auditor扫描完成: 安全6 | 危险0
+[2026-04-04 16:31:13] [Step3.6] 已卸载 0/0 个危险技能，0 个核心技能已保护
+[2026-04-04 16:31:13] [Step4] [AI智能] ai-api-test
+[2026-04-04 16:31:13] [Step4] [AI智能] ai-revenue-tracker
+[2026-04-04 16:31:13] [Step4] [AI智能] ai-tech-lead
+[2026-04-04 16:31:13] [Step4] [未分类] longevity-os
+[2026-04-04 16:31:13] [Step4] [开发工具] estimate-builder
+[2026-04-04 16:31:13] [Step4] [内容创作] xhs-content-gen
+[2026-04-04 16:31:13] [Step4] 分类测试完成: 6 个技能已分类
+[2026-04-04 16:31:13]   AI智能: 3 个
+[2026-04-04 16:31:13]   开发工具: 1 个
+[2026-04-04 16:31:13]   内容创作: 1 个
+[2026-04-04 16:31:13]   未分类: 1 个
+[2026-04-04 16:31:13] [Step4] 安全通过: 6 | 危险: 0
+[2026-04-04 16:31:13] [Step5] OK: ai-api-test
+[2026-04-04 16:31:13] [Step5] OK: ai-revenue-tracker
+[2026-04-04 16:31:13] [Step5] OK: ai-tech-lead
+[2026-04-04 16:31:13] [Step5] OK: longevity-os
+[2026-04-04 16:31:13] [Step5] OK: estimate-builder
+[2026-04-04 16:31:13] [Step5] OK: xhs-content-gen
+[2026-04-04 16:31:13] [Step5] 集成成功: 6 | 撤销: 0
+[2026-04-04 16:31:13] [Step6] 完成，6 个技能已集成
+[2026-04-04 16:31:13] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-04 16:31:16] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-04 16:31:16] === 完成: 集成6 | Auditor安全6 | 分类测试6 | 安装6 ===
+[2026-04-04 17:39:16] === 四源技能自动更新 Started ===
+[2026-04-04 17:39:31] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-04 17:39:31] [Step1] 七类别Top100 + 四源获取 1074 个技能
+[2026-04-04 17:39:32] [Step2] 已安装: 3131 | 缺失: 0 (已过滤 343 个已知失效slug)
+[2026-04-04 17:39:32] 所有技能已是最新
+[2026-04-04 18:02:58] === 四源技能自动更新 Started ===
+[2026-04-04 18:02:58] 所有技能已是最新 (cached, 0.4h ago < 2h)，跳过 Step1
+[2026-04-04 19:09:32] === 四源技能自动更新 Started ===
+[2026-04-04 19:09:32] 所有技能已是最新 (cached, 1.5h ago < 2h)，跳过 Step1
+[2026-04-04 20:39:32] === 四源技能自动更新 Started ===
+[2026-04-04 20:41:00] [VoltAgent] Failed: IncompleteRead(322201 bytes read, 366834 more expected)
+[2026-04-04 20:41:00] [Step1] 七类别Top100 + 四源获取 378 个技能
+[2026-04-04 20:41:00] [Step2] 已安装: 3131 | 缺失: 4 (已过滤 343 个已知失效slug)
+[2026-04-04 20:41:21] [Step3] OK: lobster-agentic-engineering (clawhub)
+[2026-04-04 20:41:35] [Step3] OK: agentic-engineering-bak (clawhub)
+[2026-04-04 20:41:35] [Step3] OK: apollo-debugging (clawhub)
+[2026-04-04 20:41:36] [Step3] OK: awesome-closet-stylist (clawhub)
+[2026-04-04 20:41:36] [Step3] 安装完成: 4 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-04 20:41:36] [Step3.5] PASS: agentic-engineering-bak
+[2026-04-04 20:41:36] [Step3.5] PASS: lobster-agentic-engineering
+[2026-04-04 20:41:36] [Step3.5] PASS: apollo-debugging
+[2026-04-04 20:41:36] [Step3.5] PASS: awesome-closet-stylist (仅 medium/low findings)
+[2026-04-04 20:41:36] [Step3.5] Auditor扫描完成: 安全4 | 危险0
+[2026-04-04 20:41:36] [Step3.6] 已卸载 0/0 个危险技能，0 个核心技能已保护
+[2026-04-04 20:41:36] [Step4] [AI智能] agentic-engineering-bak
+[2026-04-04 20:41:36] [Step4] [AI智能] lobster-agentic-engineering
+[2026-04-04 20:41:36] [Step4] [开发工具] apollo-debugging
+[2026-04-04 20:41:36] [Step4] [未分类] awesome-closet-stylist
+[2026-04-04 20:41:36] [Step4] 分类测试完成: 4 个技能已分类
+[2026-04-04 20:41:36]   AI智能: 2 个
+[2026-04-04 20:41:36]   开发工具: 1 个
+[2026-04-04 20:41:36]   未分类: 1 个
+[2026-04-04 20:41:36] [Step4] 安全通过: 4 | 危险: 0
+[2026-04-04 20:41:36] [Step5] OK: agentic-engineering-bak
+[2026-04-04 20:41:36] [Step5] OK: lobster-agentic-engineering
+[2026-04-04 20:41:36] [Step5] OK: apollo-debugging
+[2026-04-04 20:41:36] [Step5] OK: awesome-closet-stylist
+[2026-04-04 20:41:36] [Step5] 集成成功: 4 | 撤销: 0
+[2026-04-04 20:41:36] [Step6] 完成，4 个技能已集成
+[2026-04-04 20:41:49] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-04 20:42:03] [邮件] 发送 transient error [1/3]: Connection unexpectedly closed，3s后重试
+[2026-04-04 20:42:14] [邮件] 发送 transient error [2/3]: Connection unexpectedly closed，6s后重试
+[2026-04-04 20:42:32] [邮件] 发送失败: Connection unexpectedly closed
+[2026-04-04 20:42:32] [邮件] 报告已存档: /Users/fhjtech/.openclaw/logs/skill_report_archives/20260404_204232___技能自动更新___04-04_20_41____4个__用途建议已附.html
+[2026-04-04 20:42:32] === 完成: 集成4 | Auditor安全4 | 分类测试4 | 安装4 ===
+[2026-04-04 22:12:32] === 四源技能自动更新 Started ===
+[2026-04-04 22:13:01] [Skills.sh API] retry 1/3 for kw='writing assistant' after 1s: The read operation timed out
+[2026-04-04 22:13:46] [VoltAgent] Failed: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)>
+[2026-04-04 22:13:53] [Step1] 七类别Top100 + 四源获取 401 个技能
+[2026-04-04 22:13:53] [Step2] 已安装: 3135 | 缺失: 37 (已过滤 343 个已知失效slug)
+[2026-04-04 22:14:17] [Step3] OK: hk-ai-stock-expert (clawhub)
+[2026-04-04 22:14:17] [Step3] OK: vvvv-patching (clawhub)
+[2026-04-04 22:14:17] [Step3] OK: backlink-analysis (clawhub)
+[2026-04-04 22:14:17] [Step3] OK: db-schema-gen (clawhub)
+[2026-04-04 22:14:17] [Step3] OK: todo-webapp (clawhub)
+[2026-04-04 22:14:17] [Step3] OK: agent-architect (clawhub)
+[2026-04-04 22:14:17] [Step3] OK: schema-builder (clawhub)
+[2026-04-04 22:14:17] [Step3] OK: mind (clawhub)
+[2026-04-04 22:14:17] [Step3] OK: healthcare-video-maker (clawhub)
+[2026-04-04 22:14:18] [Step3] OK: code-runner-local (clawhub)
+[2026-04-04 22:14:18] [Step3] OK: lobster-debugging (clawhub)
+[2026-04-04 22:14:18] [Step3] OK: ilang-compress (clawhub)
+[2026-04-04 22:14:18] [Step3] OK: fairygui-tools (clawhub)
+[2026-04-04 22:14:18] [Step3] OK: sovereign-id (clawhub)
+[2026-04-04 22:14:19] [Step3] OK: nano-gpt-cli (clawhub)
+[2026-04-04 22:14:19] [Step3] 安装完成: 15 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-04 22:14:19] [Step3.5] PASS: hk-ai-stock-expert
+[2026-04-04 22:14:19] [Step3.5] FAIL: nano-gpt-cli -> [high] base64-encode: Base64 encoding/decoding — may hide malicious payloads; [high] path-traversal: Path traversal — at
+[2026-04-04 22:14:19] [Step3.5] PASS: agent-architect
+[2026-04-04 22:14:19] [Step3.5] FAIL: sovereign-id -> [high] path-traversal: Path traversal — attempts to access files outside skill directory; [high] supply-chain-npm-exec: 
+[2026-04-04 22:14:19] [Step3.5] PASS: lobster-debugging
+[2026-04-04 22:14:19] [Step3.5] PASS: vvvv-patching
+[2026-04-04 22:14:19] [Step3.5] PASS: code-runner-local (文档技能: 高风险均为误报)
+[2026-04-04 22:14:19] [Step3.5] PASS: ilang-compress (仅 medium/low findings)
+[2026-04-04 22:14:20] [Step3.5] PASS: mind
+[2026-04-04 22:14:20] [Step3.5] PASS: fairygui-tools (仅 medium/low findings)
+[2026-04-04 22:14:20] [Step3.5] FAIL: todo-webapp -> [high] startup-persistence: System startup/persistence mechanism (downgraded — in documentation file) ⚠️ Und; [high] sta
+[2026-04-04 22:14:20] [Step3.5] PASS: db-schema-gen
+[2026-04-04 22:14:20] [Step3.5] PASS: schema-builder (仅 medium/low findings)
+[2026-04-04 22:14:20] [Step3.5] PASS: healthcare-video-maker (仅 medium/low findings)
+[2026-04-04 22:14:20] [Step3.5] PASS: backlink-analysis (仅 medium/low findings)
+[2026-04-04 22:14:20] [Step3.5] Auditor扫描完成: 安全12 | 危险3
+[2026-04-04 22:14:20] [Step3.6] 卸载危险技能: nano-gpt-cli ([high] base64-encode: Base64 encoding/decoding — may hide ma)
+[2026-04-04 22:14:20] [Step3.6] 卸载危险技能: sovereign-id ([high] path-traversal: Path traversal — attempts to access f)
+[2026-04-04 22:14:20] [Step3.6] 卸载危险技能: todo-webapp ([high] startup-persistence: System startup/persistence mecha)
+[2026-04-04 22:14:20] [Step3.6] 已卸载 3/3 个危险技能，0 个核心技能已保护
+[2026-04-04 22:14:20] [Step4] [AI智能] hk-ai-stock-expert
+[2026-04-04 22:14:20] [Step4] [AI智能] agent-architect
+[2026-04-04 22:14:20] [Step4] [开发工具] lobster-debugging
+[2026-04-04 22:14:20] [Step4] [未分类] vvvv-patching
+[2026-04-04 22:14:20] [Step4] [未分类] code-runner-local
+[2026-04-04 22:14:20] [Step4] [未分类] ilang-compress
+[2026-04-04 22:14:20] [Step4] [未分类] mind
+[2026-04-04 22:14:20] [Step4] [AI智能] fairygui-tools
+[2026-04-04 22:14:20] [Step4] [未分类] db-schema-gen
+[2026-04-04 22:14:20] [Step4] [开发工具] schema-builder
+[2026-04-04 22:14:20] [Step4] [开发工具] healthcare-video-maker
+[2026-04-04 22:14:20] [Step4] [数据分析] backlink-analysis
+[2026-04-04 22:14:20] [Step4] 分类测试完成: 12 个技能已分类
+[2026-04-04 22:14:20]   AI智能: 3 个
+[2026-04-04 22:14:20]   开发工具: 3 个
+[2026-04-04 22:14:20]   数据分析: 1 个
+[2026-04-04 22:14:20]   未分类: 5 个
+[2026-04-04 22:14:20] [Step4] 安全通过: 12 | 危险: 0
+[2026-04-04 22:14:20] [Step5] OK: hk-ai-stock-expert
+[2026-04-04 22:14:20] [Step5] OK: agent-architect
+[2026-04-04 22:14:20] [Step5] OK: lobster-debugging
+[2026-04-04 22:14:20] [Step5] OK: vvvv-patching
+[2026-04-04 22:14:20] [Step5] OK: code-runner-local
+[2026-04-04 22:14:20] [Step5] OK: ilang-compress
+[2026-04-04 22:14:20] [Step5] OK: mind
+[2026-04-04 22:14:20] [Step5] OK: fairygui-tools
+[2026-04-04 22:14:20] [Step5] OK: db-schema-gen
+[2026-04-04 22:14:20] [Step5] OK: schema-builder
+[2026-04-04 22:14:20] [Step5] OK: healthcare-video-maker
+[2026-04-04 22:14:20] [Step5] OK: backlink-analysis
+[2026-04-04 22:14:20] [Step5] 集成成功: 12 | 撤销: 0
+[2026-04-04 22:14:20] [Step6] 完成，12 个技能已集成
+[2026-04-04 22:14:49] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-04 22:14:49] === 完成: 集成12 | Auditor安全12 | 分类测试12 | 安装15 ===
+[2026-04-04 23:44:49] === 四源技能自动更新 Started ===
+[2026-04-04 23:44:53] [Skills.sh API] retry 1/3 for kw='thesis paper academic' after 1s: Remote end closed connection without response
+[2026-04-04 23:45:37] [VoltAgent] Failed: [SSL: RECORD_LAYER_FAILURE] record layer failure (_ssl.c:2710)
+[2026-04-04 23:45:39] [Step1] 七类别Top100 + 四源获取 399 个技能
+[2026-04-04 23:45:39] [Step2] 已安装: 3147 | 缺失: 24 (已过滤 346 个已知失效slug)
+[2026-04-04 23:45:44] [Step3] OK: user-authentication-system (clawhub)
+[2026-04-04 23:45:44] [Step3] OK: seo-agent-skill (clawhub)
+[2026-04-04 23:45:44] [Step3] OK: snailmail (clawhub)
+[2026-04-04 23:45:44] [Step3] OK: env-secure-manager (clawhub)
+[2026-04-04 23:45:44] [Step3] OK: ocmap-pairing-auth (clawhub)
+[2026-04-04 23:45:46] [Step3] OK: generate-ai-music (clawhub)
+[2026-04-04 23:45:46] [Step3] OK: shopify-backlink-builder (clawhub)
+[2026-04-04 23:45:46] [Step3] OK: link-building (clawhub)
+[2026-04-04 23:45:46] [Step3] OK: medcrypt (clawhub)
+[2026-04-04 23:45:46] [Step3] OK: authenticate-openant (clawhub)
+[2026-04-04 23:45:46] [Step3] OK: a2a-e2ee-encryption (clawhub)
+[2026-04-04 23:45:46] [Step3] OK: pdf-to-markdown (clawhub)
+[2026-04-04 23:45:46] [Step3] OK: max-auth (clawhub)
+[2026-04-04 23:45:46] [Step3] OK: akkualle-backlink-analyzer (clawhub)
+[2026-04-04 23:45:47] [Step3] OK: moss-platform-quick-auth (clawhub)
+[2026-04-04 23:45:47] [Step3] 安装完成: 15 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-04 23:45:47] [Step3.5] PASS: akkualle-backlink-analyzer (仅 medium/low findings)
+[2026-04-04 23:45:47] [Step3.5] PASS: shopify-backlink-builder
+[2026-04-04 23:45:47] [Step3.5] PASS: seo-agent-skill (仅 medium/low findings)
+[2026-04-04 23:45:48] [Step3.5] PASS: link-building
+[2026-04-04 23:45:48] [Step3.5] PASS: pdf-to-markdown (仅 medium/low findings)
+[2026-04-04 23:45:48] [Step3.5] FAIL: generate-ai-music -> [high] sleeper-keyword-trigger: Keyword-triggered execution — sleeper agent waiting for activation phrase (downg; [high]
+[2026-04-04 23:45:48] [Step3.5] PASS: snailmail (仅 medium/low findings)
+[2026-04-04 23:45:48] [Step3.5] FAIL: a2a-e2ee-encryption -> [high] base64-encode: Base64 encoding/decoding — may hide malicious payloads; [high] base64-encode: Base64 encoding/deco
+[2026-04-04 23:45:48] [Step3.5] FAIL: medcrypt -> [high] base64-encode: Base64 encoding/decoding — may hide malicious payloads; [high] base64-encode: Base64 encoding/deco
+[2026-04-04 23:45:48] [Step3.5] PASS: env-secure-manager (仅 medium/low findings)
+[2026-04-04 23:45:48] [Step3.5] FAIL: max-auth -> [high] homedir-access: Home directory access in code — may reach user files outside workspace; [high] shell-exec-node: N
+[2026-04-04 23:45:48] [Step3.5] PASS: moss-platform-quick-auth (仅 medium/low findings)
+[2026-04-04 23:45:48] [Step3.5] PASS: ocmap-pairing-auth
+[2026-04-04 23:45:48] [Step3.5] PASS: user-authentication-system
+[2026-04-04 23:45:48] [Step3.5] PASS: authenticate-openant (仅 medium/low findings)
+[2026-04-04 23:45:48] [Step3.5] Auditor扫描完成: 安全11 | 危险4
+[2026-04-04 23:45:48] [Step3.6] 卸载危险技能: generate-ai-music ([high] sleeper-keyword-trigger: Keyword-triggered execution )
+[2026-04-04 23:45:48] [Step3.6] 卸载危险技能: a2a-e2ee-encryption ([high] base64-encode: Base64 encoding/decoding — may hide ma)
+[2026-04-04 23:45:48] [Step3.6] 卸载危险技能: medcrypt ([high] base64-encode: Base64 encoding/decoding — may hide ma)
+[2026-04-04 23:45:48] [Step3.6] 卸载危险技能: max-auth ([high] homedir-access: Home directory access in code — may r)
+[2026-04-04 23:45:48] [Step3.6] 已卸载 4/4 个危险技能，0 个核心技能已保护
+[2026-04-04 23:45:48] [Step4] [数据分析] akkualle-backlink-analyzer
+[2026-04-04 23:45:48] [Step4] [开发工具] shopify-backlink-builder
+[2026-04-04 23:45:48] [Step4] [数据分析] seo-agent-skill
+[2026-04-04 23:45:48] [Step4] [开发工具] link-building
+[2026-04-04 23:45:48] [Step4] [未分类] pdf-to-markdown
+[2026-04-04 23:45:48] [Step4] [AI智能] snailmail
+[2026-04-04 23:45:48] [Step4] [未分类] env-secure-manager
+[2026-04-04 23:45:48] [Step4] [开发工具] moss-platform-quick-auth
+[2026-04-04 23:45:48] [Step4] [AI智能] ocmap-pairing-auth
+[2026-04-04 23:45:48] [Step4] [安全合规] user-authentication-system
+[2026-04-04 23:45:48] [Step4] [安全合规] authenticate-openant
+[2026-04-04 23:45:48] [Step4] 分类测试完成: 11 个技能已分类
+[2026-04-04 23:45:48]   AI智能: 2 个
+[2026-04-04 23:45:48]   开发工具: 3 个
+[2026-04-04 23:45:48]   数据分析: 2 个
+[2026-04-04 23:45:48]   安全合规: 2 个
+[2026-04-04 23:45:48]   未分类: 2 个
+[2026-04-04 23:45:48] [Step4] 安全通过: 11 | 危险: 0
+[2026-04-04 23:45:48] [Step5] OK: akkualle-backlink-analyzer
+[2026-04-04 23:45:48] [Step5] OK: shopify-backlink-builder
+[2026-04-04 23:45:48] [Step5] OK: seo-agent-skill
+[2026-04-04 23:45:48] [Step5] OK: link-building
+[2026-04-04 23:45:48] [Step5] OK: pdf-to-markdown
+[2026-04-04 23:45:48] [Step5] OK: snailmail
+[2026-04-04 23:45:48] [Step5] OK: env-secure-manager
+[2026-04-04 23:45:48] [Step5] OK: moss-platform-quick-auth
+[2026-04-04 23:45:48] [Step5] OK: ocmap-pairing-auth
+[2026-04-04 23:45:48] [Step5] OK: user-authentication-system
+[2026-04-04 23:45:48] [Step5] OK: authenticate-openant
+[2026-04-04 23:45:48] [Step5] 集成成功: 11 | 撤销: 0
+[2026-04-04 23:45:49] [Step6] 完成，11 个技能已集成
+[2026-04-04 23:45:52] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-04 23:46:02] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-04 23:46:02] === 完成: 集成11 | Auditor安全11 | 分类测试11 | 安装15 ===
+[2026-04-05 01:16:03] === 四源技能自动更新 Started ===
+[2026-04-05 01:17:00] [VoltAgent] Failed: [SSL: RECORD_LAYER_FAILURE] record layer failure (_ssl.c:2710)
+[2026-04-05 01:17:02] [Step1] 七类别Top100 + 四源获取 393 个技能
+[2026-04-05 01:17:02] [Step2] 已安装: 3158 | 缺失: 9 (已过滤 350 个已知失效slug)
+[2026-04-05 01:17:06] [Step3] OK: jpeng-threat-intelligence (clawhub)
+[2026-04-05 01:17:06] [Step3] OK: iseclaw-intel (clawhub)
+[2026-04-05 01:17:06] [Step3] OK: hipaa-patient-comms (clawhub)
+[2026-04-05 01:17:06] [Step3] OK: authentication (clawhub)
+[2026-04-05 01:17:06] [Step3] OK: jpeng-permission-auditor (clawhub)
+[2026-04-05 01:17:07] [Step3] OK: polymarket-central-bank-trader (clawhub)
+[2026-04-05 01:17:07] [Step3] OK: ctf-solver (clawhub)
+[2026-04-05 01:17:07] [Step3] OK: dellight-strategic-intelligence (clawhub)
+[2026-04-05 01:17:07] [Step3] SKIP(skills.sh failed): aradotso/trending-skills/awesome-phd-cv — ■  Failed to clone repository
+[2026-04-05 01:17:07] [Step3] 安装完成: 8 成功 / 1 失败 (另有 0 个跳过)
+[2026-04-05 01:17:07] [Step3.5] PASS: authentication
+[2026-04-05 01:17:07] [Step3.5] PASS: jpeng-permission-auditor
+[2026-04-05 01:17:07] [Step3.5] PASS: jpeng-threat-intelligence
+[2026-04-05 01:17:07] [Step3.5] PASS: iseclaw-intel (仅 medium/low findings)
+[2026-04-05 01:17:08] [Step3.5] PASS: dellight-strategic-intelligence
+[2026-04-05 01:17:08] [Step3.5] PASS: ctf-solver (仅 medium/low findings)
+[2026-04-05 01:17:08] [Step3.5] FAIL: polymarket-central-bank-trader -> [high] sleeper-date-trigger: Date-based trigger — sleeper agent with future activation (downgraded — in docum; [critical
+[2026-04-05 01:17:08] [Step3.5] PASS: hipaa-patient-comms (仅 medium/low findings)
+[2026-04-05 01:17:08] [Step3.5] Auditor扫描完成: 安全7 | 危险1
+[2026-04-05 01:17:08] [Step3.6] 卸载危险技能: polymarket-central-bank-trader ([high] sleeper-date-trigger: Date-based trigger — sleeper ag)
+[2026-04-05 01:17:08] [Step3.6] 已卸载 1/1 个危险技能，0 个核心技能已保护
+[2026-04-05 01:17:08] [Step4] [安全合规] authentication
+[2026-04-05 01:17:08] [Step4] [安全合规] jpeng-permission-auditor
+[2026-04-05 01:17:08] [Step4] [安全合规] jpeng-threat-intelligence
+[2026-04-05 01:17:08] [Step4] [安全合规] iseclaw-intel
+[2026-04-05 01:17:08] [Step4] [安全合规] dellight-strategic-intelligence
+[2026-04-05 01:17:08] [Step4] [未分类] ctf-solver
+[2026-04-05 01:17:08] [Step4] [安全合规] hipaa-patient-comms
+[2026-04-05 01:17:08] [Step4] 分类测试完成: 7 个技能已分类
+[2026-04-05 01:17:08]   安全合规: 6 个
+[2026-04-05 01:17:08]   未分类: 1 个
+[2026-04-05 01:17:08] [Step4] 安全通过: 7 | 危险: 0
+[2026-04-05 01:17:08] [Step5] OK: authentication
+[2026-04-05 01:17:08] [Step5] OK: jpeng-permission-auditor
+[2026-04-05 01:17:08] [Step5] OK: jpeng-threat-intelligence
+[2026-04-05 01:17:08] [Step5] OK: iseclaw-intel
+[2026-04-05 01:17:08] [Step5] OK: dellight-strategic-intelligence
+[2026-04-05 01:17:08] [Step5] OK: ctf-solver
+[2026-04-05 01:17:08] [Step5] OK: hipaa-patient-comms
+[2026-04-05 01:17:08] [Step5] 集成成功: 7 | 撤销: 0
+[2026-04-05 01:17:08] [Step6] 完成，7 个技能已集成
+[2026-04-05 01:17:11] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-05 01:17:18] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-05 01:17:18] === 完成: 集成7 | Auditor安全7 | 分类测试7 | 安装8 ===
+[2026-04-05 02:47:18] === 四源技能自动更新 Started ===
+[2026-04-05 02:48:10] [VoltAgent] Failed: [SSL: RECORD_LAYER_FAILURE] record layer failure (_ssl.c:2710)
+[2026-04-05 02:48:10] [Step1] 七类别Top100 + 四源获取 394 个技能
+[2026-04-05 02:48:10] [Step2] 已安装: 3165 | 缺失: 3 (已过滤 352 个已知失效slug)
+[2026-04-05 02:48:18] [Step3] SKIP(skills.sh failed): jackieyyang/skills/ntu-dissertation-expert — ┌   skills
+[2026-04-05 02:48:25] [Step3] SKIP(skills.sh failed): theneoai/awesome-skills/production-manager — ■  Failed to clone repository
+[2026-04-05 02:48:31] [Step3] SKIP(skills.sh failed): kishorkukreja/awesome-supply-chain/quality-management — ┌   skills
+[2026-04-05 02:48:31] [Step3] 安装完成: 0 成功 / 3 失败 (另有 0 个跳过)
+[2026-04-05 02:48:31] [Step3] 无新安装且无非索引失败，但有其他失败: skills_sh_failed，中止
+[2026-04-05 04:18:31] === 四源技能自动更新 Started ===
+[2026-04-05 04:19:05] [VoltAgent] Failed: [SSL: RECORD_LAYER_FAILURE] record layer failure (_ssl.c:2710)
+[2026-04-05 04:19:07] [Step1] 七类别Top100 + 四源获取 390 个技能
+[2026-04-05 04:19:07] [Step2] 已安装: 3165 | 缺失: 0 (已过滤 355 个已知失效slug)
+[2026-04-05 04:19:07] 所有技能已是最新
+[2026-04-05 05:49:08] === 四源技能自动更新 Started ===
+[2026-04-05 05:49:08] 所有技能已是最新 (cached, 1.5h ago < 2h)，跳过 Step1
+[2026-04-05 07:19:08] === 四源技能自动更新 Started ===
+[2026-04-05 07:19:40] [VoltAgent] Failed: [SSL: RECORD_LAYER_FAILURE] record layer failure (_ssl.c:2710)
+[2026-04-05 07:19:41] [Step1] 七类别Top100 + 四源获取 391 个技能
+[2026-04-05 07:19:41] [Step2] 已安装: 3165 | 缺失: 1 (已过滤 355 个已知失效slug)
+[2026-04-05 07:19:49] [Step3] SKIP(skills.sh failed): zhiruifeng/localagentcrew/writing-assistant — ■  Failed to clone repository
+[2026-04-05 07:19:49] [Step3] 安装完成: 0 成功 / 1 失败 (另有 0 个跳过)
+[2026-04-05 07:19:49] [Step3] 无新安装且无非索引失败，但有其他失败: skills_sh_failed，中止
+[2026-04-05 08:49:49] === 四源技能自动更新 Started ===
+[2026-04-05 08:50:30] [VoltAgent] curl fallback also failed: no output
+[2026-04-05 08:50:30] [VoltAgent] Failed: both urllib and curl failed
+[2026-04-05 08:50:30] [Step1] 七类别Top100 + 四源获取 390 个技能
+[2026-04-05 08:50:30] [Step2] 已安装: 3165 | 缺失: 0 (已过滤 356 个已知失效slug)
+[2026-04-05 08:50:30] 所有技能已是最新
+[2026-04-05 10:20:31] === 四源技能自动更新 Started ===
+[2026-04-05 10:20:31] 所有技能已是最新 (cached, 1.5h ago < 2h)，跳过 Step1
+[2026-04-05 10:26:24] === 四源技能自动更新 Started ===
+[2026-04-05 10:26:24] 所有技能已是最新 (cached, 1.6h ago < 2h)，跳过 Step1
+[2026-04-05 11:50:32] === 四源技能自动更新 Started ===
+[2026-04-05 11:50:52] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-05 11:50:57] [Step1] 七类别Top100 + 四源获取 1082 个技能
+[2026-04-05 11:50:57] [Step2] 已安装: 3165 | 缺失: 1 (已过滤 356 个已知失效slug)
+[2026-04-05 11:50:58] [Step3] OK: asia-llm-router-skills (skillhub)
+[2026-04-05 11:50:58] [Step3] 安装完成: 1 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-05 11:50:59] [Step3.5] FAIL: asia-llm-router-skills -> [high] message-tool-abuse: References OpenClaw session/message tools — could exfiltrate data via messaging ; [high] mess
+[2026-04-05 11:50:59] [Step3.5] Auditor扫描完成: 安全0 | 危险1
+[2026-04-05 11:50:59] [Step3.5] skill-auditor 扫描后无安全技能，中止
+[2026-04-05 12:03:19] === 四源技能自动更新 Started ===
+[2026-04-05 12:03:34] [Skills.sh API] retry 1/3 for kw='thesis paper academic' after 1s: The read operation timed out
+[2026-04-05 12:04:02] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-05 12:04:02] [ClawHub Top] rate-limited, retrying in 3.7s (attempt 1/3)...
+[2026-04-05 12:04:07] [Step1] 七类别Top100 + 四源获取 963 个技能
+[2026-04-05 12:04:08] [Step2] 已安装: 3166 | 缺失: 1 (已过滤 357 个已知失效slug)
+[2026-04-05 12:04:09] [Step3] OK: swiftui-ui-patterns (skillhub)
+[2026-04-05 12:04:09] [Step3] 安装完成: 1 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-05 12:04:09] [Step3.5] PASS: swiftui-ui-patterns
+[2026-04-05 12:04:09] [Step3.5] Auditor扫描完成: 安全1 | 危险0
+[2026-04-05 12:04:09] [Step3.6] 已卸载 0/0 个危险技能，0 个核心技能已保护
+[2026-04-05 12:04:09] [Step4] [开发工具] swiftui-ui-patterns
+[2026-04-05 12:04:09] [Step4] 分类测试完成: 1 个技能已分类
+[2026-04-05 12:04:09]   开发工具: 1 个
+[2026-04-05 12:04:09] [Step4] 安全通过: 1 | 危险: 0
+[2026-04-05 12:04:09] [Step5] OK: swiftui-ui-patterns
+[2026-04-05 12:04:09] [Step5] 集成成功: 1 | 撤销: 0
+[2026-04-05 12:04:09] [Step6] 完成，1 个技能已集成
+[2026-04-05 12:04:09] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-05 12:04:10] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-05 12:04:10] === 完成: 集成1 | Auditor安全1 | 分类测试1 | 安装1 ===
+[2026-04-05 13:20:59] === 四源技能自动更新 Started ===
+[2026-04-05 13:21:14] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-05 13:21:14] [Step1] 七类别Top100 + 四源获取 1091 个技能
+[2026-04-05 13:21:14] [Step2] 已安装: 3167 | 缺失: 2 (已过滤 357 个已知失效slug)
+[2026-04-05 13:21:16] [Step3] OK: klaviyo (skillhub)
+[2026-04-05 13:21:17] [Step3] OK: nex-gdpr (clawhub)
+[2026-04-05 13:21:17] [Step3] 安装完成: 2 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-05 13:21:17] [Step3.5] PASS: klaviyo (仅 medium/low findings)
+[2026-04-05 13:21:17] [Step3.5] FAIL: nex-gdpr -> [critical] sleeper-date-trigger: Date-based trigger — sleeper agent with future activation; [critical] sleeper-date-trig
+[2026-04-05 13:21:17] [Step3.5] Auditor扫描完成: 安全1 | 危险1
+[2026-04-05 13:21:17] [Step3.6] 卸载危险技能: nex-gdpr ([critical] sleeper-date-trigger: Date-based trigger — sleepe)
+[2026-04-05 13:21:17] [Step3.6] 已卸载 1/1 个危险技能，0 个核心技能已保护
+[2026-04-05 13:21:17] [Step4] [未分类] klaviyo
+[2026-04-05 13:21:17] [Step4] 分类测试完成: 1 个技能已分类
+[2026-04-05 13:21:17]   未分类: 1 个
+[2026-04-05 13:21:17] [Step4] 安全通过: 1 | 危险: 0
+[2026-04-05 13:21:17] [Step5] OK: klaviyo
+[2026-04-05 13:21:17] [Step5] 集成成功: 1 | 撤销: 0
+[2026-04-05 13:21:18] [Step6] 完成，1 个技能已集成
+[2026-04-05 13:21:18] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-05 13:21:22] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-05 13:21:22] === 完成: 集成1 | Auditor安全1 | 分类测试1 | 安装2 ===
+[2026-04-05 14:51:22] === 四源技能自动更新 Started ===
+[2026-04-05 14:51:39] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-05 14:51:40] [Step1] 七类别Top100 + 四源获取 1093 个技能
+[2026-04-05 14:51:40] [Step2] 已安装: 3168 | 缺失: 4 (已过滤 358 个已知失效slug)
+[2026-04-05 14:51:41] [Step3] OK: content-workflow (skillhub)
+[2026-04-05 14:51:41] [Step3] OK: pexoai-agent (skillhub)
+[2026-04-05 14:51:41] [Step3] OK: sec-daily-digest (skillhub)
+[2026-04-05 14:51:44] [Step3] OK: polymarket-global-elections-trader (clawhub)
+[2026-04-05 14:51:44] [Step3] 安装完成: 4 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-05 14:51:45] [Step3.5] FAIL: pexoai-agent -> [high] message-tool-abuse: References OpenClaw session/message tools — could exfiltrate data via messaging ; [high] mess
+[2026-04-05 14:51:45] [Step3.5] FAIL: sec-daily-digest -> [high] path-traversal: Path traversal — attempts to access files outside skill directory; [high] path-traversal: Path tr
+[2026-04-05 14:51:45] [Step3.5] PASS: polymarket-global-elections-trader (仅 medium/low findings)
+[2026-04-05 14:51:45] [Step3.5] PASS: content-workflow
+[2026-04-05 14:51:45] [Step3.5] Auditor扫描完成: 安全2 | 危险2
+[2026-04-05 14:51:45] [Step3.6] 卸载危险技能: pexoai-agent ([high] message-tool-abuse: References OpenClaw session/messa)
+[2026-04-05 14:51:45] [Step3.6] 卸载危险技能: sec-daily-digest ([high] path-traversal: Path traversal — attempts to access f)
+[2026-04-05 14:51:45] [Step3.6] 已卸载 2/2 个危险技能，0 个核心技能已保护
+[2026-04-05 14:51:45] [Step4] [未分类] polymarket-global-elections-trader
+[2026-04-05 14:51:45] [Step4] [效率提升] content-workflow
+[2026-04-05 14:51:45] [Step4] 分类测试完成: 2 个技能已分类
+[2026-04-05 14:51:45]   效率提升: 1 个
+[2026-04-05 14:51:45]   未分类: 1 个
+[2026-04-05 14:51:45] [Step4] 安全通过: 2 | 危险: 0
+[2026-04-05 14:51:45] [Step5] OK: polymarket-global-elections-trader
+[2026-04-05 14:51:45] [Step5] OK: content-workflow
+[2026-04-05 14:51:45] [Step5] 集成成功: 2 | 撤销: 0
+[2026-04-05 14:51:45] [Step6] 完成，2 个技能已集成
+[2026-04-05 14:51:45] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-05 14:51:48] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-05 14:51:48] === 完成: 集成2 | Auditor安全2 | 分类测试2 | 安装4 ===
+[2026-04-05 16:21:49] === 四源技能自动更新 Started ===
+[2026-04-05 16:22:06] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-05 16:22:10] [Step1] 七类别Top100 + 四源获取 1062 个技能
+[2026-04-05 16:22:10] [Step2] 已安装: 3170 | 缺失: 5 (已过滤 360 个已知失效slug)
+[2026-04-05 16:22:12] [Step3] OK: openclaw-safe-guard (skillhub)
+[2026-04-05 16:22:12] [Step3] OK: openclaw-safety-coach (skillhub)
+[2026-04-05 16:22:12] [Step3] OK: ai-video (skillhub)
+[2026-04-05 16:22:12] [Step3] OK: memory-baidu-embedding-db (skillhub)
+[2026-04-05 16:22:12] [Step3] OK: tech-news-digest (skillhub)
+[2026-04-05 16:22:12] [Step3] 安装完成: 5 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-05 16:22:12] [Step3.5] FAIL: ai-video -> [high] shell-exec-python: Python shell execution — can run arbitrary system commands
+[2026-04-05 16:22:12] [Step3.5] PASS: tech-news-digest (slug精确白名单: shell-exec-python, sleeper-date-trigger, shell-exec-python, shell-exec-python, shell-exec-python, sleeper-date-trigger)
+[2026-04-05 16:22:12] [Step3.5] PASS: openclaw-safe-guard (仅 medium/low findings)
+[2026-04-05 16:22:12] [Step3.5] FAIL: memory-baidu-embedding-db -> [high] absolute-path-unix: Absolute Unix path — accesses system directories; [high] absolute-path-unix: Absolute Unix pa
+[2026-04-05 16:22:12] [Step3.5] PASS: openclaw-safety-coach
+[2026-04-05 16:22:12] [Step3.5] Auditor扫描完成: 安全3 | 危险2
+[2026-04-05 16:22:12] [Step3.6] 卸载危险技能: ai-video ([high] shell-exec-python: Python shell execution — can run a)
+[2026-04-05 16:22:12] [Step3.6] 卸载危险技能: memory-baidu-embedding-db ([high] absolute-path-unix: Absolute Unix path — accesses sys)
+[2026-04-05 16:22:12] [Step3.6] 已卸载 2/2 个危险技能，0 个核心技能已保护
+[2026-04-05 16:22:12] [Step4] [未分类] tech-news-digest
+[2026-04-05 16:22:12] [Step4] [安全合规] openclaw-safe-guard
+[2026-04-05 16:22:12] [Step4] [未分类] openclaw-safety-coach
+[2026-04-05 16:22:12] [Step4] 分类测试完成: 3 个技能已分类
+[2026-04-05 16:22:12]   安全合规: 1 个
+[2026-04-05 16:22:12]   未分类: 2 个
+[2026-04-05 16:22:12] [Step4] 安全通过: 3 | 危险: 0
+[2026-04-05 16:22:12] [Step5] OK: tech-news-digest
+[2026-04-05 16:22:12] [Step5] OK: openclaw-safe-guard
+[2026-04-05 16:22:12] [Step5] OK: openclaw-safety-coach
+[2026-04-05 16:22:12] [Step5] 集成成功: 3 | 撤销: 0
+[2026-04-05 16:22:12] [Step6] 完成，3 个技能已集成
+[2026-04-05 16:22:13] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-05 16:22:13] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-05 16:22:13] === 完成: 集成3 | Auditor安全3 | 分类测试3 | 安装5 ===
+[2026-04-05 17:52:14] === 四源技能自动更新 Started ===
+[2026-04-05 17:52:35] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-05 17:52:35] [Step1] 七类别Top100 + 四源获取 1079 个技能
+[2026-04-05 17:52:35] [Step2] 已安装: 3173 | 缺失: 62 (已过滤 362 个已知失效slug)
+[2026-04-05 17:52:37] [Step3] OK: dexter (skillhub)
+[2026-04-05 17:52:37] [Step3] OK: commit-analyzer (skillhub)
+[2026-04-05 17:52:37] [Step3] OK: inkos (skillhub)
+[2026-04-05 17:52:37] [Step3] OK: gitcommit (skillhub)
+[2026-04-05 17:52:37] [Step3] OK: frontend-agent (skillhub)
+[2026-04-05 17:52:37] [Step3] OK: larry-tiktok-agent (skillhub)
+[2026-04-05 17:52:37] [Step3] OK: ai-daily-cn (skillhub)
+[2026-04-05 17:52:37] [Step3] OK: aioz-ui-v3 (skillhub)
+[2026-04-05 17:52:37] [Step3] OK: autoresearchclaw-autonomous-research (skillhub)
+[2026-04-05 17:52:37] [Step3] OK: miniprogram-development (skillhub)
+[2026-04-05 17:52:37] [Step3] OK: self-evolution (skillhub)
+[2026-04-05 17:52:37] [Step3] OK: github-manager (skillhub)
+[2026-04-05 17:52:37] [Step3] OK: github-deploy-skill (skillhub)
+[2026-04-05 17:52:37] [Step3] OK: wechat-mini-app (skillhub)
+[2026-04-05 17:52:37] [Step3] OK: torchliquidationbot (skillhub)
+[2026-04-05 17:52:37] [Step3] 安装完成: 15 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-05 17:52:37] [Step3.5] FAIL: ai-daily-cn -> [high] supply-chain-curl-pipe: Curl pipe to shell — executes remote code without verification (downgraded — in ; [high] 
+[2026-04-05 17:52:37] [Step3.5] PASS: aioz-ui-v3 (仅 medium/low findings)
+[2026-04-05 17:52:37] [Step3.5] PASS: dexter (仅 medium/low findings)
+[2026-04-05 17:52:37] [Step3.5] PASS: commit-analyzer
+[2026-04-05 17:52:38] [Step3.5] FAIL: torchliquidationbot -> [high] supply-chain-npm-exec: NPX/npm exec — runs packages without explicit installation
+[2026-04-05 17:52:38] [Step3.5] PASS: autoresearchclaw-autonomous-research (仅 medium/low findings)
+[2026-04-05 17:52:38] [Step3.5] FAIL: larry-tiktok-agent -> [high] shell-exec-python: Python shell execution — can run arbitrary system commands; [high] shell-exec-python: Python s
+[2026-04-05 17:52:38] [Step3.5] PASS: inkos (仅 medium/low findings)
+[2026-04-05 17:52:38] [Step3.5] PASS: self-evolution
+[2026-04-05 17:52:38] [Step3.5] PASS: github-deploy-skill
+[2026-04-05 17:52:38] [Step3.5] FAIL: github-manager -> [high] shell-exec-node: Node.js shell execution — can run arbitrary system commands; [high] shell-exec-generic: Dynamic 
+[2026-04-05 17:52:38] [Step3.5] PASS: gitcommit
+[2026-04-05 17:52:38] [Step3.5] PASS: wechat-mini-app (仅 medium/low findings)
+[2026-04-05 17:52:38] [Step3.5] PASS: frontend-agent
+[2026-04-05 17:52:38] [Step3.5] PASS: miniprogram-development (仅 medium/low findings)
+[2026-04-05 17:52:38] [Step3.5] Auditor扫描完成: 安全11 | 危险4
+[2026-04-05 17:52:38] [Step3.6] 卸载危险技能: ai-daily-cn ([high] supply-chain-curl-pipe: Curl pipe to shell — executes)
+[2026-04-05 17:52:38] [Step3.6] 卸载危险技能: torchliquidationbot ([high] supply-chain-npm-exec: NPX/npm exec — runs packages w)
+[2026-04-05 17:52:38] [Step3.6] 卸载危险技能: larry-tiktok-agent ([high] shell-exec-python: Python shell execution — can run a)
+[2026-04-05 17:52:38] [Step3.6] 卸载危险技能: github-manager ([high] shell-exec-node: Node.js shell execution — can run ar)
+[2026-04-05 17:52:38] [Step3.6] 已卸载 4/4 个危险技能，0 个核心技能已保护
+[2026-04-05 17:52:38] [Step4] [AI智能] aioz-ui-v3
+[2026-04-05 17:52:38] [Step4] [未分类] dexter
+[2026-04-05 17:52:38] [Step4] [未分类] commit-analyzer
+[2026-04-05 17:52:38] [Step4] [AI智能] autoresearchclaw-autonomous-research
+[2026-04-05 17:52:38] [Step4] [未分类] inkos
+[2026-04-05 17:52:38] [Step4] [未分类] self-evolution
+[2026-04-05 17:52:38] [Step4] [开发工具] github-deploy-skill
+[2026-04-05 17:52:38] [Step4] [开发工具] gitcommit
+[2026-04-05 17:52:38] [Step4] [通讯协作] wechat-mini-app
+[2026-04-05 17:52:38] [Step4] [未分类] frontend-agent
+[2026-04-05 17:52:38] [Step4] [未分类] miniprogram-development
+[2026-04-05 17:52:38] [Step4] 分类测试完成: 11 个技能已分类
+[2026-04-05 17:52:38]   AI智能: 2 个
+[2026-04-05 17:52:38]   开发工具: 2 个
+[2026-04-05 17:52:38]   通讯协作: 1 个
+[2026-04-05 17:52:38]   未分类: 6 个
+[2026-04-05 17:52:38] [Step4] 安全通过: 11 | 危险: 0
+[2026-04-05 17:52:38] [Step5] OK: aioz-ui-v3
+[2026-04-05 17:52:38] [Step5] OK: dexter
+[2026-04-05 17:52:38] [Step5] OK: commit-analyzer
+[2026-04-05 17:52:38] [Step5] OK: autoresearchclaw-autonomous-research
+[2026-04-05 17:52:38] [Step5] OK: inkos
+[2026-04-05 17:52:38] [Step5] OK: self-evolution
+[2026-04-05 17:52:38] [Step5] OK: github-deploy-skill
+[2026-04-05 17:52:38] [Step5] OK: gitcommit
+[2026-04-05 17:52:38] [Step5] OK: wechat-mini-app
+[2026-04-05 17:52:38] [Step5] OK: frontend-agent
+[2026-04-05 17:52:38] [Step5] OK: miniprogram-development
+[2026-04-05 17:52:38] [Step5] 集成成功: 11 | 撤销: 0
+[2026-04-05 17:52:38] [Step6] 完成，11 个技能已集成
+[2026-04-05 17:52:39] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-05 17:52:40] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-05 17:52:40] === 完成: 集成11 | Auditor安全11 | 分类测试11 | 安装15 ===
+[2026-04-05 19:22:42] === 四源技能自动更新 Started ===
+[2026-04-05 19:22:59] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-05 19:23:04] [Step1] 七类别Top100 + 四源获取 1050 个技能
+[2026-04-05 19:23:04] [Step2] 已安装: 3184 | 缺失: 24 (已过滤 366 个已知失效slug)
+[2026-04-05 19:23:05] [Step3] OK: duckdb-cli-ai-skills (skillhub)
+[2026-04-05 19:23:05] [Step3] OK: starlight-guild (skillhub)
+[2026-04-05 19:23:05] [Step3] OK: seo-analyzer-v2 (skillhub)
+[2026-04-05 19:23:05] [Step3] OK: collab-to-skill (skillhub)
+[2026-04-05 19:23:05] [Step3] OK: dba-team (skillhub)
+[2026-04-05 19:23:05] [Step3] OK: seo-content-pro (skillhub)
+[2026-04-05 19:23:05] [Step3] OK: plausible-analytics (skillhub)
+[2026-04-05 19:23:05] [Step3] OK: project-mode (skillhub)
+[2026-04-05 19:23:05] [Step3] OK: hermes-full (skillhub)
+[2026-04-05 19:23:05] [Step3] OK: ppt-collab (skillhub)
+[2026-04-05 19:23:05] [Step3] OK: legal-compliance-bundle (skillhub)
+[2026-04-05 19:23:05] [Step3] OK: multi-agent-dev-team (skillhub)
+[2026-04-05 19:23:05] [Step3] OK: ironclaw-pipeline-analytics (skillhub)
+[2026-04-05 19:23:05] [Step3] OK: seo-geo-content-engine (skillhub)
+[2026-04-05 19:23:06] [Step3] OK: accountable-care-organization-video (clawhub)
+[2026-04-05 19:23:06] [Step3] 安装完成: 15 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-05 19:23:06] [Step3.5] PASS: project-mode (仅 medium/low findings)
+[2026-04-05 19:23:06] [Step3.5] PASS: plausible-analytics (仅 medium/low findings)
+[2026-04-05 19:23:07] [Step3.5] PASS: ironclaw-pipeline-analytics (仅 medium/low findings)
+[2026-04-05 19:23:07] [Step3.5] PASS: duckdb-cli-ai-skills
+[2026-04-05 19:23:07] [Step3.5] PASS: accountable-care-organization-video
+[2026-04-05 19:23:07] [Step3.5] PASS: seo-geo-content-engine (仅 medium/low findings)
+[2026-04-05 19:23:07] [Step3.5] FAIL: seo-analyzer-v2 -> [high] fetch-call: HTTP library call — makes outbound network requests
+[2026-04-05 19:23:07] [Step3.5] PASS: seo-content-pro
+[2026-04-05 19:23:07] [Step3.5] PASS: collab-to-skill
+[2026-04-05 19:23:07] [Step3.5] PASS: dba-team
+[2026-04-05 19:23:07] [Step3.5] PASS: hermes-full
+[2026-04-05 19:23:07] [Step3.5] PASS: ppt-collab
+[2026-04-05 19:23:07] [Step3.5] PASS: starlight-guild (文档技能: 高风险均为误报)
+[2026-04-05 19:23:07] [Step3.5] PASS: multi-agent-dev-team (仅 medium/low findings)
+[2026-04-05 19:23:08] [Step3.5] FAIL: legal-compliance-bundle -> [critical] zero-width-chars: Zero-width/invisible characters — hidden content that renders invisible
+[2026-04-05 19:23:08] [Step3.5] Auditor扫描完成: 安全13 | 危险2
+[2026-04-05 19:23:08] [Step3.6] 卸载危险技能: seo-analyzer-v2 ([high] fetch-call: HTTP library call — makes outbound networ)
+[2026-04-05 19:23:08] [Step3.6] 卸载危险技能: legal-compliance-bundle ([critical] zero-width-chars: Zero-width/invisible characters)
+[2026-04-05 19:23:08] [Step3.6] 已卸载 2/2 个危险技能，0 个核心技能已保护
+[2026-04-05 19:23:08] [Step4] [AI智能] project-mode
+[2026-04-05 19:23:08] [Step4] [数据分析] plausible-analytics
+[2026-04-05 19:23:08] [Step4] [数据分析] ironclaw-pipeline-analytics
+[2026-04-05 19:23:08] [Step4] [AI智能] duckdb-cli-ai-skills
+[2026-04-05 19:23:08] [Step4] [开发工具] accountable-care-organization-video
+[2026-04-05 19:23:08] [Step4] [数据分析] seo-geo-content-engine
+[2026-04-05 19:23:08] [Step4] [数据分析] seo-content-pro
+[2026-04-05 19:23:08] [Step4] [通讯协作] collab-to-skill
+[2026-04-05 19:23:08] [Step4] [AI智能] dba-team
+[2026-04-05 19:23:08] [Step4] [AI智能] hermes-full
+[2026-04-05 19:23:08] [Step4] [通讯协作] ppt-collab
+[2026-04-05 19:23:08] [Step4] [开发工具] starlight-guild
+[2026-04-05 19:23:08] [Step4] [通讯协作] multi-agent-dev-team
+[2026-04-05 19:23:08] [Step4] 分类测试完成: 13 个技能已分类
+[2026-04-05 19:23:08]   AI智能: 4 个
+[2026-04-05 19:23:08]   开发工具: 2 个
+[2026-04-05 19:23:08]   数据分析: 4 个
+[2026-04-05 19:23:08]   通讯协作: 3 个
+[2026-04-05 19:23:08] [Step4] 安全通过: 13 | 危险: 0
+[2026-04-05 19:23:08] [Step5] OK: project-mode
+[2026-04-05 19:23:08] [Step5] OK: plausible-analytics
+[2026-04-05 19:23:08] [Step5] OK: ironclaw-pipeline-analytics
+[2026-04-05 19:23:08] [Step5] OK: duckdb-cli-ai-skills
+[2026-04-05 19:23:08] [Step5] OK: accountable-care-organization-video
+[2026-04-05 19:23:08] [Step5] OK: seo-geo-content-engine
+[2026-04-05 19:23:08] [Step5] OK: seo-content-pro
+[2026-04-05 19:23:08] [Step5] OK: collab-to-skill
+[2026-04-05 19:23:08] [Step5] OK: dba-team
+[2026-04-05 19:23:08] [Step5] OK: hermes-full
+[2026-04-05 19:23:08] [Step5] OK: ppt-collab
+[2026-04-05 19:23:08] [Step5] OK: starlight-guild
+[2026-04-05 19:23:08] [Step5] OK: multi-agent-dev-team
+[2026-04-05 19:23:08] [Step5] 集成成功: 13 | 撤销: 0
+[2026-04-05 19:23:08] [Step6] 完成，13 个技能已集成
+[2026-04-05 19:23:08] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-05 19:23:15] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-05 19:23:15] === 完成: 集成13 | Auditor安全13 | 分类测试13 | 安装15 ===
+[2026-04-05 20:53:16] === 四源技能自动更新 Started ===
+[2026-04-05 20:53:35] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-05 20:53:37] [ClawHub Top] rate-limited, retrying in 3.9s (attempt 1/3)...
+[2026-04-05 20:53:46] [ClawHub Top] rate-limited, retrying in 9.0s (attempt 2/3)...
+[2026-04-05 20:54:01] [ClawHub Top] rate-limited, retrying in 20.3s (attempt 3/3)...
+[2026-04-05 20:54:22] [ClawHub Top] explore failed after retries: - Fetching latest skills
+✖ Rate limit exceeded
+Error: Rate limit exceeded
+
+[2026-04-05 20:54:22] [ClawHub Top] 设置 1h 冷静期
+[2026-04-05 20:54:22] [Step1] 七类别Top100 + 四源获取 1051 个技能
+[2026-04-05 20:54:22] [Step2] 已安装: 3197 | 缺失: 6 (已过滤 368 个已知失效slug)
+[2026-04-05 20:54:23] [Step3] OK: sovereign-accessibility-auditor (skillhub)
+[2026-04-05 20:54:23] [Step3] OK: afrexai-fleet-management (skillhub)
+[2026-04-05 20:54:23] [Step3] OK: beijing-tech-finance (skillhub)
+[2026-04-05 20:54:23] [Step3] OK: contract-reviewer (skillhub)
+[2026-04-05 20:54:23] [Step3] OK: einstein (skillhub)
+[2026-04-05 20:54:23] [Step3] OK: ecommerce-customer-service-pro (skillhub)
+[2026-04-05 20:54:23] [Step3] 安装完成: 6 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-05 20:54:23] [Step3.5] FAIL: einstein -> [high] path-traversal: Path traversal — attempts to access files outside skill directory; [high] fetch-call: HTTP librar
+[2026-04-05 20:54:24] [Step3.5] PASS: beijing-tech-finance (仅 medium/low findings)
+[2026-04-05 20:54:24] [Step3.5] PASS: sovereign-accessibility-auditor
+[2026-04-05 20:54:24] [Step3.5] PASS: afrexai-fleet-management (仅 medium/low findings)
+[2026-04-05 20:54:24] [Step3.5] PASS: contract-reviewer (仅 medium/low findings)
+[2026-04-05 20:54:24] [Step3.5] PASS: ecommerce-customer-service-pro
+[2026-04-05 20:54:24] [Step3.5] Auditor扫描完成: 安全5 | 危险1
+[2026-04-05 20:54:24] [Step3.6] 卸载危险技能: einstein ([high] path-traversal: Path traversal — attempts to access f)
+[2026-04-05 20:54:24] [Step3.6] 已卸载 1/1 个危险技能，0 个核心技能已保护
+[2026-04-05 20:54:24] [Step4] [未分类] beijing-tech-finance
+[2026-04-05 20:54:24] [Step4] [未分类] sovereign-accessibility-auditor
+[2026-04-05 20:54:24] [Step4] [AI智能] afrexai-fleet-management
+[2026-04-05 20:54:24] [Step4] [未分类] contract-reviewer
+[2026-04-05 20:54:24] [Step4] [未分类] ecommerce-customer-service-pro
+[2026-04-05 20:54:24] [Step4] 分类测试完成: 5 个技能已分类
+[2026-04-05 20:54:24]   AI智能: 1 个
+[2026-04-05 20:54:24]   未分类: 4 个
+[2026-04-05 20:54:24] [Step4] 安全通过: 5 | 危险: 0
+[2026-04-05 20:54:24] [Step5] OK: beijing-tech-finance
+[2026-04-05 20:54:24] [Step5] OK: sovereign-accessibility-auditor
+[2026-04-05 20:54:24] [Step5] OK: afrexai-fleet-management
+[2026-04-05 20:54:24] [Step5] OK: contract-reviewer
+[2026-04-05 20:54:24] [Step5] OK: ecommerce-customer-service-pro
+[2026-04-05 20:54:24] [Step5] 集成成功: 5 | 撤销: 0
+[2026-04-05 20:54:24] [Step6] 完成，5 个技能已集成
+[2026-04-05 20:54:25] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-05 20:54:25] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-05 20:54:25] === 完成: 集成5 | Auditor安全5 | 分类测试5 | 安装6 ===
+[2026-04-05 21:03:47] === 四源技能自动更新 Started ===
+[2026-04-05 21:04:07] [ClawHub Top] 冷静期，还剩 0.8h，跳过
+[2026-04-05 21:04:10] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-05 21:04:13] [Step1] 七类别Top100 + 四源获取 929 个技能
+[2026-04-05 21:04:13] [Step2] 已安装: 3202 | 缺失: 2 (已过滤 369 个已知失效slug)
+[2026-04-05 21:04:15] [Step3] OK: ai-autotester (skillhub)
+[2026-04-05 21:04:16] [Step3] OK: ai-os-blueprint (skillhub)
+[2026-04-05 21:04:16] [Step3] 安装完成: 2 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-05 21:04:16] [Step3.5] PASS: ai-os-blueprint (仅 medium/low findings)
+[2026-04-05 21:04:16] [Step3.5] FAIL: ai-autotester -> [high] absolute-path-unix: Absolute Unix path — accesses system directories; [high] shell-exec-python: Python shell exec
+[2026-04-05 21:04:16] [Step3.5] Auditor扫描完成: 安全1 | 危险1
+[2026-04-05 21:04:16] [Step3.6] 卸载危险技能: ai-autotester ([high] absolute-path-unix: Absolute Unix path — accesses sys)
+[2026-04-05 21:04:16] [Step3.6] 已卸载 1/1 个危险技能，0 个核心技能已保护
+[2026-04-05 21:04:16] [Step4] [AI智能] ai-os-blueprint
+[2026-04-05 21:04:16] [Step4] 分类测试完成: 1 个技能已分类
+[2026-04-05 21:04:16]   AI智能: 1 个
+[2026-04-05 21:04:16] [Step4] 安全通过: 1 | 危险: 0
+[2026-04-05 21:04:16] [Step5] OK: ai-os-blueprint
+[2026-04-05 21:04:16] [Step5] 集成成功: 1 | 撤销: 0
+[2026-04-05 21:04:16] [Step6] 完成，1 个技能已集成
+[2026-04-05 21:04:16] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-05 21:04:18] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-05 21:04:18] === 完成: 集成1 | Auditor安全1 | 分类测试1 | 安装2 ===
+[2026-04-05 22:24:26] === 四源技能自动更新 Started ===
+[2026-04-05 22:24:39] [ClawHub Top] 冷静期结束，恢复 ClawHub Top
+[2026-04-05 22:24:41] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-05 22:24:44] [Step1] 七类别Top100 + 四源获取 1063 个技能
+[2026-04-05 22:24:44] [Step2] 已安装: 3203 | 缺失: 3 (已过滤 370 个已知失效slug)
+[2026-04-05 22:24:47] [Step3] OK: github-readme-generator (skillhub)
+[2026-04-05 22:24:47] [Step3] OK: subagent-driven-development-2 (skillhub)
+[2026-04-05 22:24:47] [Step3] OK: github-actions-failure-matrix (skillhub)
+[2026-04-05 22:24:47] [Step3] 安装完成: 3 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-05 22:24:47] [Step3.5] PASS: github-readme-generator
+[2026-04-05 22:24:47] [Step3.5] PASS: github-actions-failure-matrix (仅 medium/low findings)
+[2026-04-05 22:24:47] [Step3.5] PASS: subagent-driven-development-2 (仅 medium/low findings)
+[2026-04-05 22:24:47] [Step3.5] Auditor扫描完成: 安全3 | 危险0
+[2026-04-05 22:24:47] [Step3.6] 已卸载 0/0 个危险技能，0 个核心技能已保护
+[2026-04-05 22:24:47] [Step4] [开发工具] github-readme-generator
+[2026-04-05 22:24:47] [Step4] [AI智能] github-actions-failure-matrix
+[2026-04-05 22:24:47] [Step4] [未分类] subagent-driven-development-2
+[2026-04-05 22:24:47] [Step4] 分类测试完成: 3 个技能已分类
+[2026-04-05 22:24:47]   AI智能: 1 个
+[2026-04-05 22:24:47]   开发工具: 1 个
+[2026-04-05 22:24:47]   未分类: 1 个
+[2026-04-05 22:24:47] [Step4] 安全通过: 3 | 危险: 0
+[2026-04-05 22:24:47] [Step5] OK: github-readme-generator
+[2026-04-05 22:24:47] [Step5] OK: github-actions-failure-matrix
+[2026-04-05 22:24:47] [Step5] OK: subagent-driven-development-2
+[2026-04-05 22:24:47] [Step5] 集成成功: 3 | 撤销: 0
+[2026-04-05 22:24:47] [Step6] 完成，3 个技能已集成
+[2026-04-05 22:24:48] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-05 22:24:48] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-05 22:24:48] === 完成: 集成3 | Auditor安全3 | 分类测试3 | 安装3 ===
+[2026-04-05 23:54:49] === 四源技能自动更新 Started ===
+[2026-04-05 23:55:10] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-05 23:55:14] [Step1] 七类别Top100 + 四源获取 982 个技能
+[2026-04-05 23:55:14] [Step2] 已安装: 3206 | 缺失: 2 (已过滤 370 个已知失效slug)
+[2026-04-05 23:55:15] [Step3] OK: tencent-ads-assistant (skillhub)
+[2026-04-05 23:55:15] [Step3] OK: afrexai-training-program (skillhub)
+[2026-04-05 23:55:15] [Step3] 安装完成: 2 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-05 23:55:15] [Step3.5] PASS: tencent-ads-assistant (仅 medium/low findings)
+[2026-04-05 23:55:16] [Step3.5] PASS: afrexai-training-program (仅 medium/low findings)
+[2026-04-05 23:55:16] [Step3.5] Auditor扫描完成: 安全2 | 危险0
+[2026-04-05 23:55:16] [Step3.6] 已卸载 0/0 个危险技能，0 个核心技能已保护
+[2026-04-05 23:55:16] [Step4] [未分类] tencent-ads-assistant
+[2026-04-05 23:55:16] [Step4] [AI智能] afrexai-training-program
+[2026-04-05 23:55:16] [Step4] 分类测试完成: 2 个技能已分类
+[2026-04-05 23:55:16]   AI智能: 1 个
+[2026-04-05 23:55:16]   未分类: 1 个
+[2026-04-05 23:55:16] [Step4] 安全通过: 2 | 危险: 0
+[2026-04-05 23:55:16] [Step5] OK: tencent-ads-assistant
+[2026-04-05 23:55:16] [Step5] OK: afrexai-training-program
+[2026-04-05 23:55:16] [Step5] 集成成功: 2 | 撤销: 0
+[2026-04-05 23:55:16] [Step6] 完成，2 个技能已集成
+[2026-04-05 23:55:16] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-05 23:55:19] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-05 23:55:19] === 完成: 集成2 | Auditor安全2 | 分类测试2 | 安装2 ===
+[2026-04-06 01:25:19] === 四源技能自动更新 Started ===
+[2026-04-06 01:25:34] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-06 01:25:35] [Step1] 七类别Top100 + 四源获取 1087 个技能
+[2026-04-06 01:25:35] [Step2] 已安装: 3208 | 缺失: 3 (已过滤 370 个已知失效slug)
+[2026-04-06 01:25:36] [Step3] OK: freeride-ai (skillhub)
+[2026-04-06 01:25:36] [Step3] OK: ai-data-scraper (skillhub)
+[2026-04-06 01:25:36] [Step3] OK: crabnet (skillhub)
+[2026-04-06 01:25:36] [Step3] 安装完成: 3 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-06 01:25:36] [Step3.5] PASS: ai-data-scraper (仅 medium/low findings)
+[2026-04-06 01:25:36] [Step3.5] FAIL: freeride-ai -> [high] fetch-call: HTTP library call — makes outbound network requests; [critical] sleeper-date-trigger: Date-based trig
+[2026-04-06 01:25:36] [Step3.5] PASS: crabnet (文档技能: 高风险均为误报)
+[2026-04-06 01:25:36] [Step3.5] Auditor扫描完成: 安全2 | 危险1
+[2026-04-06 01:25:36] [Step3.6] 卸载危险技能: freeride-ai ([high] fetch-call: HTTP library call — makes outbound networ)
+[2026-04-06 01:25:36] [Step3.6] 已卸载 1/1 个危险技能，0 个核心技能已保护
+[2026-04-06 01:25:36] [Step4] [AI智能] ai-data-scraper
+[2026-04-06 01:25:36] [Step4] [未分类] crabnet
+[2026-04-06 01:25:36] [Step4] 分类测试完成: 2 个技能已分类
+[2026-04-06 01:25:36]   AI智能: 1 个
+[2026-04-06 01:25:36]   未分类: 1 个
+[2026-04-06 01:25:36] [Step4] 安全通过: 2 | 危险: 0
+[2026-04-06 01:25:36] [Step5] OK: ai-data-scraper
+[2026-04-06 01:25:36] [Step5] OK: crabnet
+[2026-04-06 01:25:36] [Step5] 集成成功: 2 | 撤销: 0
+[2026-04-06 01:25:36] [Step6] 完成，2 个技能已集成
+[2026-04-06 01:25:37] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-06 01:25:41] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-06 01:25:41] === 完成: 集成2 | Auditor安全2 | 分类测试2 | 安装3 ===
+[2026-04-06 02:55:41] === 四源技能自动更新 Started ===
+[2026-04-06 02:55:58] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-06 02:55:58] [Step1] 七类别Top100 + 四源获取 1073 个技能
+[2026-04-06 02:55:58] [Step2] 已安装: 3210 | 缺失: 1 (已过滤 371 个已知失效slug)
+[2026-04-06 02:55:59] [Step3] OK: hyperliquid (skillhub)
+[2026-04-06 02:55:59] [Step3] 安装完成: 1 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-06 02:56:00] [Step3.5] PASS: hyperliquid (文档技能: 高风险均为误报)
+[2026-04-06 02:56:00] [Step3.5] Auditor扫描完成: 安全1 | 危险0
+[2026-04-06 02:56:00] [Step3.6] 已卸载 0/0 个危险技能，0 个核心技能已保护
+[2026-04-06 02:56:00] [Step4] [开发工具] hyperliquid
+[2026-04-06 02:56:00] [Step4] 分类测试完成: 1 个技能已分类
+[2026-04-06 02:56:00]   开发工具: 1 个
+[2026-04-06 02:56:00] [Step4] 安全通过: 1 | 危险: 0
+[2026-04-06 02:56:00] [Step5] OK: hyperliquid
+[2026-04-06 02:56:00] [Step5] 集成成功: 1 | 撤销: 0
+[2026-04-06 02:56:00] [Step6] 完成，1 个技能已集成
+[2026-04-06 02:56:01] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-06 02:56:02] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-06 02:56:02] === 完成: 集成1 | Auditor安全1 | 分类测试1 | 安装1 ===
+[2026-04-06 04:26:02] === 四源技能自动更新 Started ===
+[2026-04-06 04:26:18] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-06 04:26:18] [Step1] 七类别Top100 + 四源获取 1078 个技能
+[2026-04-06 04:26:18] [Step2] 已安装: 3211 | 缺失: 1 (已过滤 371 个已知失效slug)
+[2026-04-06 04:26:20] [Step3] OK: ai-seo-optimizer-pro (skillhub)
+[2026-04-06 04:26:20] [Step3] 安装完成: 1 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-06 04:26:20] [Step3.5] FAIL: ai-seo-optimizer-pro -> [high] path-traversal: Path traversal — attempts to access files outside skill directory
+[2026-04-06 04:26:20] [Step3.5] Auditor扫描完成: 安全0 | 危险1
+[2026-04-06 04:26:20] [Step3.5] skill-auditor 扫描后无安全技能，中止
+[2026-04-06 05:56:20] === 四源技能自动更新 Started ===
+[2026-04-06 05:56:35] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-06 05:56:35] [Step1] 七类别Top100 + 四源获取 1077 个技能
+[2026-04-06 05:56:35] [Step2] 已安装: 3212 | 缺失: 0 (已过滤 372 个已知失效slug)
+[2026-04-06 05:56:35] 所有技能已是最新
+[2026-04-06 07:26:36] === 四源技能自动更新 Started ===
+[2026-04-06 07:26:36] 所有技能已是最新 (cached, 1.5h ago < 2h)，跳过 Step1
+[2026-04-06 08:56:36] === 四源技能自动更新 Started ===
+[2026-04-06 08:56:52] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-06 08:56:52] [Step1] 七类别Top100 + 四源获取 1080 个技能
+[2026-04-06 08:56:52] [Step2] 已安装: 3212 | 缺失: 26 (已过滤 372 个已知失效slug)
+[2026-04-06 08:56:54] [Step3] SKIP(not in index): PigX (skillhub)
+[2026-04-06 08:56:54] [Step3] OK: ai-project-pricing-cn (skillhub)
+[2026-04-06 08:56:54] [Step3] OK: ainative-react-sdk (skillhub)
+[2026-04-06 08:56:54] [Step3] OK: ai-tech-deep-analysis (skillhub)
+[2026-04-06 08:56:54] [Step3] OK: ai-devops-toolkit (skillhub)
+[2026-04-06 08:56:54] [Step3] OK: project-planner-new (skillhub)
+[2026-04-06 08:56:54] [Step3] OK: gifgrep (skillhub)
+[2026-04-06 08:56:54] [Step3] OK: ship-learn-next (skillhub)
+[2026-04-06 08:56:54] [Step3] OK: ai-stock-master (skillhub)
+[2026-04-06 08:56:54] [Step3] OK: finance (skillhub)
+[2026-04-06 08:56:54] [Step3] OK: pigxui-skill (skillhub)
+[2026-04-06 08:56:54] [Step3] OK: github-repo-search (skillhub)
+[2026-04-06 08:56:54] [Step3] OK: skill-dev-guide (skillhub)
+[2026-04-06 08:56:54] [Step3] OK: frontend-spec (skillhub)
+[2026-04-06 08:56:56] [Step3] OK: nano-gpt-plugin (clawhub)
+[2026-04-06 08:56:56] [Step3] SKIP(not in index): PigX
+[2026-04-06 08:56:56] [Step3] Learned not_in_index: PigX (source=skillhub) -> rejected_slugs.json
+[2026-04-06 08:56:56] [Step3] 安装完成: 14 成功 / 0 失败 (另有 1 个跳过)
+[2026-04-06 08:56:57] [Step3.5] PASS: ai-devops-toolkit (文档技能: 高风险均为误报)
+[2026-04-06 08:56:57] [Step3.5] PASS: ai-tech-deep-analysis (仅 medium/low findings)
+[2026-04-06 08:56:57] [Step3.5] FAIL: ai-stock-master -> [high] fetch-call: HTTP library call — makes outbound network requests; [high] fetch-call: HTTP library call — makes out
+[2026-04-06 08:56:57] [Step3.5] PASS: ai-project-pricing-cn
+[2026-04-06 08:56:57] [Step3.5] PASS: ainative-react-sdk (仅 medium/low findings)
+[2026-04-06 08:56:57] [Step3.5] FAIL: nano-gpt-plugin -> [high] absolute-path-unix: Absolute Unix path — accesses system directories; [high] absolute-path-unix: Absolute Unix pa
+[2026-04-06 08:56:57] [Step3.5] PASS: gifgrep (仅 medium/low findings)
+[2026-04-06 08:56:57] [Step3.5] FAIL: finance -> [high] fetch-call: HTTP library call — makes outbound network requests; [high] shell-exec-python: Python shell execution
+[2026-04-06 08:56:57] [Step3.5] PASS: github-repo-search
+[2026-04-06 08:56:57] [Step3.5] PASS: ship-learn-next
+[2026-04-06 08:56:57] [Step3.5] PASS: frontend-spec
+[2026-04-06 08:56:57] [Step3.5] PASS: pigxui-skill (仅 medium/low findings)
+[2026-04-06 08:56:58] [Step3.5] PASS: project-planner-new
+[2026-04-06 08:56:58] [Step3.5] PASS: skill-dev-guide (仅 medium/low findings)
+[2026-04-06 08:56:58] [Step3.5] Auditor扫描完成: 安全11 | 危险3
+[2026-04-06 08:56:58] [Step3.6] 卸载危险技能: ai-stock-master ([high] fetch-call: HTTP library call — makes outbound networ)
+[2026-04-06 08:56:58] [Step3.6] 卸载危险技能: nano-gpt-plugin ([high] absolute-path-unix: Absolute Unix path — accesses sys)
+[2026-04-06 08:56:58] [Step3.6] 卸载危险技能: finance ([high] fetch-call: HTTP library call — makes outbound networ)
+[2026-04-06 08:56:58] [Step3.6] 已卸载 3/3 个危险技能，0 个核心技能已保护
+[2026-04-06 08:56:58] [Step4] [AI智能] ai-devops-toolkit
+[2026-04-06 08:56:58] [Step4] [AI智能] ai-tech-deep-analysis
+[2026-04-06 08:56:58] [Step4] [AI智能] ai-project-pricing-cn
+[2026-04-06 08:56:58] [Step4] [AI智能] ainative-react-sdk
+[2026-04-06 08:56:58] [Step4] [未分类] gifgrep
+[2026-04-06 08:56:58] [Step4] [开发工具] github-repo-search
+[2026-04-06 08:56:58] [Step4] [未分类] ship-learn-next
+[2026-04-06 08:56:58] [Step4] [开发工具] frontend-spec
+[2026-04-06 08:56:58] [Step4] [开发工具] pigxui-skill
+[2026-04-06 08:56:58] [Step4] [开发工具] project-planner-new
+[2026-04-06 08:56:58] [Step4] [AI智能] skill-dev-guide
+[2026-04-06 08:56:58] [Step4] 分类测试完成: 11 个技能已分类
+[2026-04-06 08:56:58]   AI智能: 5 个
+[2026-04-06 08:56:58]   开发工具: 4 个
+[2026-04-06 08:56:58]   未分类: 2 个
+[2026-04-06 08:56:58] [Step4] 安全通过: 11 | 危险: 0
+[2026-04-06 08:56:58] [Step5] OK: ai-devops-toolkit
+[2026-04-06 08:56:58] [Step5] OK: ai-tech-deep-analysis
+[2026-04-06 08:56:58] [Step5] OK: ai-project-pricing-cn
+[2026-04-06 08:56:58] [Step5] OK: ainative-react-sdk
+[2026-04-06 08:56:58] [Step5] OK: gifgrep
+[2026-04-06 08:56:58] [Step5] OK: github-repo-search
+[2026-04-06 08:56:58] [Step5] OK: ship-learn-next
+[2026-04-06 08:56:58] [Step5] OK: frontend-spec
+[2026-04-06 08:56:58] [Step5] OK: pigxui-skill
+[2026-04-06 08:56:58] [Step5] OK: project-planner-new
+[2026-04-06 08:56:58] [Step5] OK: skill-dev-guide
+[2026-04-06 08:56:58] [Step5] 集成成功: 11 | 撤销: 0
+[2026-04-06 08:56:58] [Step6] 完成，11 个技能已集成
+[2026-04-06 08:56:58] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-06 08:56:59] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-06 08:56:59] === 完成: 集成11 | Auditor安全11 | 分类测试11 | 安装14 ===
+[2026-04-06 09:03:35] === 四源技能自动更新 Started ===
+[2026-04-06 09:04:00] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-06 09:04:02] [ClawHub Top] rate-limited, retrying in 3.5s (attempt 1/3)...
+[2026-04-06 09:04:08] [Step1] 七类别Top100 + 四源获取 908 个技能
+[2026-04-06 09:04:08] [Step2] 已安装: 3223 | 缺失: 12 (已过滤 376 个已知失效slug)
+[2026-04-06 09:04:10] [Step3] OK: zhuchenggong-xiaohongshu-create (skillhub)
+[2026-04-06 09:04:10] [Step3] OK: ai-news-daily-zh (skillhub)
+[2026-04-06 09:04:10] [Step3] OK: novel-writer-cn (skillhub)
+[2026-04-06 09:04:10] [Step3] OK: ai-image-generator (skillhub)
+[2026-04-06 09:04:10] [Step3] OK: goplaces (skillhub)
+[2026-04-06 09:04:10] [Step3] OK: vue-expert-js (skillhub)
+[2026-04-06 09:04:10] [Step3] OK: task-interrupt (skillhub)
+[2026-04-06 09:04:10] [Step3] OK: openclaw-stock-data-skill (skillhub)
+[2026-04-06 09:04:10] [Step3] OK: task-executor (skillhub)
+[2026-04-06 09:04:10] [Step3] OK: github-trending-feed (skillhub)
+[2026-04-06 09:04:10] [Step3] OK: ui-polish-pass (skillhub)
+[2026-04-06 09:04:10] [Step3] OK: textin-parse (skillhub)
+[2026-04-06 09:04:10] [Step3] 安装完成: 12 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-06 09:04:10] [Step3.5] PASS: ai-image-generator
+[2026-04-06 09:04:10] [Step3.5] PASS: ai-news-daily-zh (预期行为白名单: credential-file-access, fetch-call, sleeper-date-trigger, cron-manipulation)
+[2026-04-06 09:04:10] [Step3.5] PASS: github-trending-feed (仅 medium/low findings)
+[2026-04-06 09:04:10] [Step3.5] PASS: vue-expert-js (仅 medium/low findings)
+[2026-04-06 09:04:10] [Step3.5] PASS: ui-polish-pass
+[2026-04-06 09:04:10] [Step3.5] PASS: task-interrupt (仅 medium/low findings)
+[2026-04-06 09:04:11] [Step3.5] PASS: task-executor
+[2026-04-06 09:04:11] [Step3.5] FAIL: openclaw-stock-data-skill -> [high] env-sensitive-access: Reads sensitive environment variables — could harvest API keys or secrets ⚠️ Und; [high] fe
+[2026-04-06 09:04:11] [Step3.5] PASS: novel-writer-cn
+[2026-04-06 09:04:11] [Step3.5] PASS: zhuchenggong-xiaohongshu-create (仅 medium/low findings)
+[2026-04-06 09:04:11] [Step3.5] FAIL: textin-parse -> [high] fetch-call: HTTP library call — makes outbound network requests; [high] fetch-call: HTTP library call — makes out
+[2026-04-06 09:04:11] [Step3.5] PASS: goplaces
+[2026-04-06 09:04:11] [Step3.5] Auditor扫描完成: 安全10 | 危险2
+[2026-04-06 09:04:11] [Step3.6] 卸载危险技能: openclaw-stock-data-skill ([high] env-sensitive-access: Reads sensitive environment var)
+[2026-04-06 09:04:11] [Step3.6] 卸载危险技能: textin-parse ([high] fetch-call: HTTP library call — makes outbound networ)
+[2026-04-06 09:04:11] [Step3.6] 已卸载 2/2 个危险技能，0 个核心技能已保护
+[2026-04-06 09:04:11] [Step4] [AI智能] ai-image-generator
+[2026-04-06 09:04:11] [Step4] [AI智能] ai-news-daily-zh
+[2026-04-06 09:04:11] [Step4] [开发工具] github-trending-feed
+[2026-04-06 09:04:11] [Step4] [未分类] vue-expert-js
+[2026-04-06 09:04:11] [Step4] [开发工具] ui-polish-pass
+[2026-04-06 09:04:11] [Step4] [效率提升] task-interrupt
+[2026-04-06 09:04:11] [Step4] [效率提升] task-executor
+[2026-04-06 09:04:11] [Step4] [内容创作] novel-writer-cn
+[2026-04-06 09:04:11] [Step4] [内容创作] zhuchenggong-xiaohongshu-create
+[2026-04-06 09:04:11] [Step4] [未分类] goplaces
+[2026-04-06 09:04:11] [Step4] 分类测试完成: 10 个技能已分类
+[2026-04-06 09:04:11]   AI智能: 2 个
+[2026-04-06 09:04:11]   开发工具: 2 个
+[2026-04-06 09:04:11]   效率提升: 2 个
+[2026-04-06 09:04:11]   内容创作: 2 个
+[2026-04-06 09:04:11]   未分类: 2 个
+[2026-04-06 09:04:11] [Step4] 安全通过: 10 | 危险: 0
+[2026-04-06 09:04:11] [Step5] OK: ai-image-generator
+[2026-04-06 09:04:11] [Step5] OK: ai-news-daily-zh
+[2026-04-06 09:04:11] [Step5] OK: github-trending-feed
+[2026-04-06 09:04:11] [Step5] OK: vue-expert-js
+[2026-04-06 09:04:11] [Step5] OK: ui-polish-pass
+[2026-04-06 09:04:11] [Step5] OK: task-interrupt
+[2026-04-06 09:04:11] [Step5] OK: task-executor
+[2026-04-06 09:04:11] [Step5] OK: novel-writer-cn
+[2026-04-06 09:04:11] [Step5] OK: zhuchenggong-xiaohongshu-create
+[2026-04-06 09:04:11] [Step5] OK: goplaces
+[2026-04-06 09:04:11] [Step5] 集成成功: 10 | 撤销: 0
+[2026-04-06 09:04:11] [Step6] 完成，10 个技能已集成
+[2026-04-06 09:04:11] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-06 10:27:00] === 四源技能自动更新 Started ===
+[2026-04-06 10:27:18] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-06 10:27:19] [Step1] 七类别Top100 + 四源获取 1068 个技能
+[2026-04-06 10:27:19] [Step2] 已安装: 3233 | 缺失: 3 (已过滤 378 个已知失效slug)
+[2026-04-06 10:27:20] [Step3] OK: tool-output-auditor (skillhub)
+[2026-04-06 10:27:20] [Step3] OK: tooljet (skillhub)
+[2026-04-06 10:27:21] [Step3] OK: agentic-engineering-ecc (clawhub)
+[2026-04-06 10:27:21] [Step3] 安装完成: 3 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-06 10:27:21] [Step3.5] PASS: agentic-engineering-ecc (仅 medium/low findings)
+[2026-04-06 10:27:21] [Step3.5] PASS: tooljet (仅 medium/low findings)
+[2026-04-06 10:27:21] [Step3.5] PASS: tool-output-auditor (仅 medium/low findings)
+[2026-04-06 10:27:21] [Step3.5] Auditor扫描完成: 安全3 | 危险0
+[2026-04-06 10:27:21] [Step3.6] 已卸载 0/0 个危险技能，0 个核心技能已保护
+[2026-04-06 10:27:21] [Step4] [AI智能] agentic-engineering-ecc
+[2026-04-06 10:27:21] [Step4] [未分类] tooljet
+[2026-04-06 10:27:21] [Step4] [未分类] tool-output-auditor
+[2026-04-06 10:27:21] [Step4] 分类测试完成: 3 个技能已分类
+[2026-04-06 10:27:21]   AI智能: 1 个
+[2026-04-06 10:27:21]   未分类: 2 个
+[2026-04-06 10:27:21] [Step4] 安全通过: 3 | 危险: 0
+[2026-04-06 10:27:21] [Step5] OK: agentic-engineering-ecc
+[2026-04-06 10:27:21] [Step5] OK: tooljet
+[2026-04-06 10:27:21] [Step5] OK: tool-output-auditor
+[2026-04-06 10:27:21] [Step5] 集成成功: 3 | 撤销: 0
+[2026-04-06 10:27:21] [Step6] 完成，3 个技能已集成
+[2026-04-06 10:27:21] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-06 10:27:22] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-06 10:27:22] === 完成: 集成3 | Auditor安全3 | 分类测试3 | 安装3 ===
+[2026-04-06 11:57:22] === 四源技能自动更新 Started ===
+[2026-04-06 11:57:38] [Skills.sh API] retry 1/3 for kw='thesis paper academic' after 1s: The read operation timed out
+[2026-04-06 11:57:54] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-06 11:57:56] [Step1] 七类别Top100 + 四源获取 1084 个技能
+[2026-04-06 11:57:56] [Step2] 已安装: 3236 | 缺失: 3 (已过滤 378 个已知失效slug)
+[2026-04-06 11:57:58] [Step3] OK: ui-design-optimizer (skillhub)
+[2026-04-06 11:57:58] [Step3] OK: ai-news (skillhub)
+[2026-04-06 11:57:58] [Step3] OK: text-humanizer-instruction-based (skillhub)
+[2026-04-06 11:57:58] [Step3] 安装完成: 3 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-06 11:57:58] [Step3.5] PASS: ai-news (仅 medium/low findings)
+[2026-04-06 11:57:58] [Step3.5] FAIL: ui-design-optimizer -> [high] zero-width-chars: Zero-width/invisible characters — hidden content that renders invisible (downgra; [high] zero-w
+[2026-04-06 11:57:58] [Step3.5] PASS: text-humanizer-instruction-based
+[2026-04-06 11:57:58] [Step3.5] Auditor扫描完成: 安全2 | 危险1
+[2026-04-06 11:57:58] [Step3.6] 卸载危险技能: ui-design-optimizer ([high] zero-width-chars: Zero-width/invisible characters — h)
+[2026-04-06 11:57:58] [Step3.6] 已卸载 1/1 个危险技能，0 个核心技能已保护
+[2026-04-06 11:57:58] [Step4] [AI智能] ai-news
+[2026-04-06 11:57:58] [Step4] [内容创作] text-humanizer-instruction-based
+[2026-04-06 11:57:58] [Step4] 分类测试完成: 2 个技能已分类
+[2026-04-06 11:57:58]   AI智能: 1 个
+[2026-04-06 11:57:58]   内容创作: 1 个
+[2026-04-06 11:57:58] [Step4] 安全通过: 2 | 危险: 0
+[2026-04-06 11:57:58] [Step5] OK: ai-news
+[2026-04-06 11:57:58] [Step5] OK: text-humanizer-instruction-based
+[2026-04-06 11:57:58] [Step5] 集成成功: 2 | 撤销: 0
+[2026-04-06 11:57:58] [Step6] 完成，2 个技能已集成
+[2026-04-06 11:57:58] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-06 11:58:06] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-06 11:58:06] === 完成: 集成2 | Auditor安全2 | 分类测试2 | 安装3 ===
+[2026-04-06 13:28:07] === 四源技能自动更新 Started ===
+[2026-04-06 13:28:24] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-06 13:28:26] [Step1] 七类别Top100 + 四源获取 1095 个技能
+[2026-04-06 13:28:26] [Step2] 已安装: 3238 | 缺失: 1 (已过滤 379 个已知失效slug)
+[2026-04-06 13:28:27] [Step3] OK: ai-text-humanizer (skillhub)
+[2026-04-06 13:28:27] [Step3] 安装完成: 1 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-06 13:28:27] [Step3.5] PASS: ai-text-humanizer (仅 medium/low findings)
+[2026-04-06 13:28:27] [Step3.5] Auditor扫描完成: 安全1 | 危险0
+[2026-04-06 13:28:27] [Step3.6] 已卸载 0/0 个危险技能，0 个核心技能已保护
+[2026-04-06 13:28:27] [Step4] [AI智能] ai-text-humanizer
+[2026-04-06 13:28:27] [Step4] 分类测试完成: 1 个技能已分类
+[2026-04-06 13:28:27]   AI智能: 1 个
+[2026-04-06 13:28:27] [Step4] 安全通过: 1 | 危险: 0
+[2026-04-06 13:28:27] [Step5] OK: ai-text-humanizer
+[2026-04-06 13:28:27] [Step5] 集成成功: 1 | 撤销: 0
+[2026-04-06 13:28:27] [Step6] 完成，1 个技能已集成
+[2026-04-06 13:28:31] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-06 13:28:31] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-06 13:28:31] === 完成: 集成1 | Auditor安全1 | 分类测试1 | 安装1 ===
+[2026-04-06 14:58:32] === 四源技能自动更新 Started ===
+[2026-04-06 14:58:47] [Skills.sh API] retry 1/3 for kw='thesis paper academic' after 1s: The read operation timed out
+[2026-04-06 14:59:05] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-06 14:59:05] [Step1] 七类别Top100 + 四源获取 1080 个技能
+[2026-04-06 14:59:05] [Step2] 已安装: 3239 | 缺失: 1 (已过滤 379 个已知失效slug)
+[2026-04-06 14:59:06] [Step3] OK: openclaw-comfyui (skillhub)
+[2026-04-06 14:59:06] [Step3] 安装完成: 1 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-06 14:59:07] [Step3.5] FAIL: openclaw-comfyui -> [high] fetch-call: HTTP library call — makes outbound network requests; [high] fetch-call: HTTP library call — makes out
+[2026-04-06 14:59:07] [Step3.5] Auditor扫描完成: 安全0 | 危险1
+[2026-04-06 14:59:07] [Step3.5] skill-auditor 扫描后无安全技能，中止
+[2026-04-06 16:29:07] === 四源技能自动更新 Started ===
+[2026-04-06 16:29:23] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-06 16:29:24] [Step1] 七类别Top100 + 四源获取 1072 个技能
+[2026-04-06 16:29:24] [Step2] 已安装: 3240 | 缺失: 33 (已过滤 380 个已知失效slug)
+[2026-04-06 16:29:25] [Step3] OK: memory (skillhub)
+[2026-04-06 16:29:25] [Step3] OK: ai-saas-competitor-teardown (skillhub)
+[2026-04-06 16:29:25] [Step3] OK: ai-personal-finance-advisor (skillhub)
+[2026-04-06 16:29:25] [Step3] OK: ci-cd-pipeline-builder (skillhub)
+[2026-04-06 16:29:25] [Step3] OK: aioz-stream-skill (skillhub)
+[2026-04-06 16:29:25] [Step3] OK: docker-sandbox (skillhub)
+[2026-04-06 16:29:25] [Step3] OK: ai-online-course-empire (skillhub)
+[2026-04-06 16:29:25] [Step3] OK: ai-documentary-explainer-factory (skillhub)
+[2026-04-06 16:29:25] [Step3] OK: web-scraper (skillhub)
+[2026-04-06 16:29:25] [Step3] OK: promptify (skillhub)
+[2026-04-06 16:29:25] [Step3] OK: ai-affiliate-marketing-goldmine (skillhub)
+[2026-04-06 16:29:25] [Step3] OK: moltbot-best-practices (skillhub)
+[2026-04-06 16:29:25] [Step3] OK: agent-b-dev-skill (skillhub)
+[2026-04-06 16:29:25] [Step3] OK: vectcut (skillhub)
+[2026-04-06 16:29:26] [Step3] OK: code-debug (clawhub)
+[2026-04-06 16:29:26] [Step3] 安装完成: 15 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-06 16:29:26] [Step3.5] PASS: ai-affiliate-marketing-goldmine (文档技能: 高风险均为误报)
+[2026-04-06 16:29:26] [Step3.5] PASS: ai-online-course-empire (仅 medium/low findings)
+[2026-04-06 16:29:26] [Step3.5] PASS: ai-documentary-explainer-factory (仅 medium/low findings)
+[2026-04-06 16:29:26] [Step3.5] PASS: ai-saas-competitor-teardown (仅 medium/low findings)
+[2026-04-06 16:29:26] [Step3.5] PASS: ai-personal-finance-advisor (仅 medium/low findings)
+[2026-04-06 16:29:26] [Step3.5] PASS: aioz-stream-skill (仅 medium/low findings)
+[2026-04-06 16:29:26] [Step3.5] FAIL: agent-b-dev-skill -> [high] path-traversal: Path traversal — attempts to access files outside skill directory; [high] shell-exec-python: Pyth
+[2026-04-06 16:29:26] [Step3.5] FAIL: moltbot-best-practices -> [high] sleeper-keyword-trigger: Keyword-triggered execution — sleeper agent waiting for activation phrase (downg
+[2026-04-06 16:29:26] [Step3.5] PASS: web-scraper (文档技能: 高风险均为误报)
+[2026-04-06 16:29:27] [Step3.5] PASS: code-debug
+[2026-04-06 16:29:27] [Step3.5] PASS: docker-sandbox (仅 medium/low findings)
+[2026-04-06 16:29:27] [Step3.5] PASS: promptify (文档技能: 高风险均为误报)
+[2026-04-06 16:29:27] [Step3.5] PASS: memory (仅 medium/low findings)
+[2026-04-06 16:29:27] [Step3.5] PASS: ci-cd-pipeline-builder (仅 medium/low findings)
+[2026-04-06 16:29:27] [Step3.5] PASS: vectcut (JSON解析失败: auditor内部错误)
+[2026-04-06 16:29:27] [Step3.5] Auditor扫描完成: 安全13 | 危险2
+[2026-04-06 16:29:27] [Step3.6] 卸载危险技能: agent-b-dev-skill ([high] path-traversal: Path traversal — attempts to access f)
+[2026-04-06 16:29:27] [Step3.6] 卸载危险技能: moltbot-best-practices ([high] sleeper-keyword-trigger: Keyword-triggered execution )
+[2026-04-06 16:29:27] [Step3.6] 已卸载 2/2 个危险技能，0 个核心技能已保护
+[2026-04-06 16:29:27] [Step4] [AI智能] ai-affiliate-marketing-goldmine
+[2026-04-06 16:29:27] [Step4] [AI智能] ai-online-course-empire
+[2026-04-06 16:29:27] [Step4] [AI智能] ai-documentary-explainer-factory
+[2026-04-06 16:29:27] [Step4] [AI智能] ai-saas-competitor-teardown
+[2026-04-06 16:29:27] [Step4] [AI智能] ai-personal-finance-advisor
+[2026-04-06 16:29:27] [Step4] [AI智能] aioz-stream-skill
+[2026-04-06 16:29:27] [Step4] [未分类] web-scraper
+[2026-04-06 16:29:27] [Step4] [开发工具] code-debug
+[2026-04-06 16:29:27] [Step4] [未分类] docker-sandbox
+[2026-04-06 16:29:27] [Step4] [未分类] promptify
+[2026-04-06 16:29:27] [Step4] [未分类] memory
+[2026-04-06 16:29:27] [Step4] [开发工具] ci-cd-pipeline-builder
+[2026-04-06 16:29:27] [Step4] [开发工具] vectcut
+[2026-04-06 16:29:27] [Step4] 分类测试完成: 13 个技能已分类
+[2026-04-06 16:29:27]   AI智能: 6 个
+[2026-04-06 16:29:27]   开发工具: 3 个
+[2026-04-06 16:29:27]   未分类: 4 个
+[2026-04-06 16:29:27] [Step4] 安全通过: 13 | 危险: 0
+[2026-04-06 16:29:27] [Step5] OK: ai-affiliate-marketing-goldmine
+[2026-04-06 16:29:27] [Step5] OK: ai-online-course-empire
+[2026-04-06 16:29:27] [Step5] OK: ai-documentary-explainer-factory
+[2026-04-06 16:29:27] [Step5] OK: ai-saas-competitor-teardown
+[2026-04-06 16:29:27] [Step5] OK: ai-personal-finance-advisor
+[2026-04-06 16:29:27] [Step5] OK: aioz-stream-skill
+[2026-04-06 16:29:27] [Step5] OK: web-scraper
+[2026-04-06 16:29:27] [Step5] OK: code-debug
+[2026-04-06 16:29:27] [Step5] OK: docker-sandbox
+[2026-04-06 16:29:27] [Step5] OK: promptify
+[2026-04-06 16:29:27] [Step5] OK: memory
+[2026-04-06 16:29:27] [Step5] OK: ci-cd-pipeline-builder
+[2026-04-06 16:29:27] [Step5] OK: vectcut
+[2026-04-06 16:29:27] [Step5] 集成成功: 13 | 撤销: 0
+[2026-04-06 16:29:27] [Step6] 完成，13 个技能已集成
+[2026-04-06 16:29:27] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-06 16:29:28] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-06 16:29:28] === 完成: 集成13 | Auditor安全13 | 分类测试13 | 安装15 ===
+[2026-04-06 17:59:29] === 四源技能自动更新 Started ===
+[2026-04-06 17:59:45] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-06 17:59:49] [Step1] 七类别Top100 + 四源获取 1058 个技能
+[2026-04-06 17:59:50] [Step2] 已安装: 3253 | 缺失: 3 (已过滤 382 个已知失效slug)
+[2026-04-06 17:59:51] [Step3] OK: context-driven-development (skillhub)
+[2026-04-06 17:59:51] [Step3] OK: ai-backendfrontend-autowriter (skillhub)
+[2026-04-06 17:59:52] [Step3] OK: sis-skill (skillhub)
+[2026-04-06 17:59:52] [Step3] 安装完成: 3 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-06 17:59:52] [Step3.5] PASS: ai-backendfrontend-autowriter (仅 medium/low findings)
+[2026-04-06 17:59:52] [Step3.5] PASS: context-driven-development (文档技能: 高风险均为误报)
+[2026-04-06 17:59:52] [Step3.5] PASS: sis-skill (仅 medium/low findings)
+[2026-04-06 17:59:52] [Step3.5] Auditor扫描完成: 安全3 | 危险0
+[2026-04-06 17:59:52] [Step3.6] 已卸载 0/0 个危险技能，0 个核心技能已保护
+[2026-04-06 17:59:52] [Step4] [AI智能] ai-backendfrontend-autowriter
+[2026-04-06 17:59:52] [Step4] [内容创作] context-driven-development
+[2026-04-06 17:59:52] [Step4] [开发工具] sis-skill
+[2026-04-06 17:59:52] [Step4] 分类测试完成: 3 个技能已分类
+[2026-04-06 17:59:52]   AI智能: 1 个
+[2026-04-06 17:59:52]   开发工具: 1 个
+[2026-04-06 17:59:52]   内容创作: 1 个
+[2026-04-06 17:59:52] [Step4] 安全通过: 3 | 危险: 0
+[2026-04-06 17:59:52] [Step5] OK: ai-backendfrontend-autowriter
+[2026-04-06 17:59:52] [Step5] OK: context-driven-development
+[2026-04-06 17:59:52] [Step5] OK: sis-skill
+[2026-04-06 17:59:52] [Step5] 集成成功: 3 | 撤销: 0
+[2026-04-06 17:59:52] [Step6] 完成，3 个技能已集成
+[2026-04-06 17:59:53] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-06 17:59:53] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-06 17:59:53] === 完成: 集成3 | Auditor安全3 | 分类测试3 | 安装3 ===
+[2026-04-06 19:29:54] === 四源技能自动更新 Started ===
+[2026-04-06 19:30:13] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-06 19:30:13] [Step1] 七类别Top100 + 四源获取 1105 个技能
+[2026-04-06 19:30:14] [Step2] 已安装: 3256 | 缺失: 15 (已过滤 382 个已知失效slug)
+[2026-04-06 19:30:15] [Step3] OK: ai-seo-content-engine (skillhub)
+[2026-04-06 19:30:15] [Step3] OK: ppt-audio-to-video (skillhub)
+[2026-04-06 19:30:15] [Step3] OK: emily-radix-assistant (skillhub)
+[2026-04-06 19:30:15] [Step3] OK: gitee-create-pr (skillhub)
+[2026-04-06 19:30:15] [Step3] OK: git-assist (skillhub)
+[2026-04-06 19:30:15] [Step3] OK: code-1-0-4 (skillhub)
+[2026-04-06 19:30:15] [Step3] OK: personal-scheduler (skillhub)
+[2026-04-06 19:30:15] [Step3] OK: neural-memory (skillhub)
+[2026-04-06 19:30:15] [Step3] OK: aibrary-podcast-summary (skillhub)
+[2026-04-06 19:30:15] [Step3] OK: clawtank (skillhub)
+[2026-04-06 19:30:15] [Step3] OK: clean-code-review (skillhub)
+[2026-04-06 19:30:15] [Step3] OK: nvidia-image-gen (skillhub)
+[2026-04-06 19:30:16] [Step3] OK: elevenlabs-tts (skillhub)
+[2026-04-06 19:30:16] [Step3] OK: pipedrive-api (skillhub)
+[2026-04-06 19:30:16] [Step3] OK: openclaw-sec (skillhub)
+[2026-04-06 19:30:16] [Step3] 安装完成: 15 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-06 19:30:16] [Step3.5] PASS: ai-seo-content-engine (仅 medium/low findings)
+[2026-04-06 19:30:16] [Step3.5] PASS: aibrary-podcast-summary
+[2026-04-06 19:30:16] [Step3.5] PASS: gitee-create-pr
+[2026-04-06 19:30:16] [Step3.5] FAIL: git-assist -> [high] shell-exec-node: Node.js shell execution — can run arbitrary system commands
+[2026-04-06 19:30:16] [Step3.5] PASS: emily-radix-assistant (文档技能: 高风险均为误报)
+[2026-04-06 19:30:16] [Step3.5] PASS: code-1-0-4 (仅 medium/low findings)
+[2026-04-06 19:30:16] [Step3.5] FAIL: personal-scheduler -> [high] shell-exec-python: Python shell execution — can run arbitrary system commands
+[2026-04-06 19:30:16] [Step3.5] FAIL: nvidia-image-gen -> [high] fetch-call: HTTP library call — makes outbound network requests
+[2026-04-06 19:30:16] [Step3.5] PASS: elevenlabs-tts (仅 medium/low findings)
+[2026-04-06 19:30:16] [Step3.5] FAIL: ppt-audio-to-video -> [high] shell-exec-python: Python shell execution — can run arbitrary system commands
+[2026-04-06 19:30:17] [Step3.5] FAIL: clawtank -> [high] fetch-call: HTTP library call — makes outbound network requests; [high] fetch-call: HTTP library call — makes out
+[2026-04-06 19:30:17] [Step3.5] PASS: openclaw-sec (JSON解析失败: auditor内部错误)
+[2026-04-06 19:30:17] [Step3.5] PASS: clean-code-review (仅 medium/low findings)
+[2026-04-06 19:30:17] [Step3.5] PASS: pipedrive-api (仅 medium/low findings)
+[2026-04-06 19:30:17] [Step3.5] PASS: neural-memory (仅 medium/low findings)
+[2026-04-06 19:30:17] [Step3.5] Auditor扫描完成: 安全10 | 危险5
+[2026-04-06 19:30:17] [Step3.6] 卸载危险技能: git-assist ([high] shell-exec-node: Node.js shell execution — can run ar)
+[2026-04-06 19:30:17] [Step3.6] 卸载危险技能: personal-scheduler ([high] shell-exec-python: Python shell execution — can run a)
+[2026-04-06 19:30:17] [Step3.6] 跳过误报技能: nvidia-image-gen (slug_specific_bypass镜像)
+[2026-04-06 19:30:17] [Step3.6] 卸载危险技能: ppt-audio-to-video ([high] shell-exec-python: Python shell execution — can run a)
+[2026-04-06 19:30:17] [Step3.6] 卸载危险技能: clawtank ([high] fetch-call: HTTP library call — makes outbound networ)
+[2026-04-06 19:30:17] [Step3.6] 已卸载 4/5 个危险技能，1 个核心技能已保护
+[2026-04-06 19:30:17] [Step4] [AI智能] ai-seo-content-engine
+[2026-04-06 19:30:17] [Step4] [AI智能] aibrary-podcast-summary
+[2026-04-06 19:30:17] [Step4] [开发工具] gitee-create-pr
+[2026-04-06 19:30:17] [Step4] [未分类] emily-radix-assistant
+[2026-04-06 19:30:17] [Step4] [未分类] code-1-0-4
+[2026-04-06 19:30:17] [Step4] [未分类] elevenlabs-tts
+[2026-04-06 19:30:17] [Step4] [未分类] openclaw-sec
+[2026-04-06 19:30:17] [Step4] [未分类] clean-code-review
+[2026-04-06 19:30:17] [Step4] [未分类] pipedrive-api
+[2026-04-06 19:30:17] [Step4] [未分类] neural-memory
+[2026-04-06 19:30:17] [Step4] 分类测试完成: 10 个技能已分类
+[2026-04-06 19:30:17]   AI智能: 2 个
+[2026-04-06 19:30:17]   开发工具: 1 个
+[2026-04-06 19:30:17]   未分类: 7 个
+[2026-04-06 19:30:17] [Step4] 安全通过: 10 | 危险: 0
+[2026-04-06 19:30:17] [Step5] OK: ai-seo-content-engine
+[2026-04-06 19:30:17] [Step5] OK: aibrary-podcast-summary
+[2026-04-06 19:30:17] [Step5] OK: gitee-create-pr
+[2026-04-06 19:30:17] [Step5] OK: emily-radix-assistant
+[2026-04-06 19:30:17] [Step5] OK: code-1-0-4
+[2026-04-06 19:30:17] [Step5] OK: elevenlabs-tts
+[2026-04-06 19:30:17] [Step5] OK: openclaw-sec
+[2026-04-06 19:30:17] [Step5] OK: clean-code-review
+[2026-04-06 19:30:17] [Step5] OK: pipedrive-api
+[2026-04-06 19:30:17] [Step5] OK: neural-memory
+[2026-04-06 19:30:17] [Step5] 集成成功: 10 | 撤销: 0
+[2026-04-06 19:30:17] [Step6] 完成，10 个技能已集成
+[2026-04-06 19:30:17] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-06 19:30:18] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-06 19:30:18] === 完成: 集成10 | Auditor安全10 | 分类测试10 | 安装15 ===
+[2026-04-06 21:00:18] === 四源技能自动更新 Started ===
+[2026-04-06 21:00:48] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-06 21:00:50] [ClawHub Top] rate-limited, retrying in 3.3s (attempt 1/3)...
+[2026-04-06 21:00:58] [ClawHub Top] rate-limited, retrying in 8.4s (attempt 2/3)...
+[2026-04-06 21:01:08] [Step1] 七类别Top100 + 四源获取 915 个技能
+[2026-04-06 21:01:08] [Step2] 已安装: 3267 | 缺失: 0 (已过滤 387 个已知失效slug)
+[2026-04-06 21:01:08] 所有技能已是最新
+[2026-04-06 22:31:08] === 四源技能自动更新 Started ===
+[2026-04-06 22:31:08] 所有技能已是最新 (cached, 1.5h ago < 2h)，跳过 Step1
+[2026-04-07 00:01:09] === 四源技能自动更新 Started ===
+[2026-04-07 00:01:48] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-07 00:01:48] [ClawHub Top] rate-limited, retrying in 3.3s (attempt 1/3)...
+[2026-04-07 00:01:57] [ClawHub Top] rate-limited, retrying in 8.4s (attempt 2/3)...
+[2026-04-07 00:02:06] [Step1] 七类别Top100 + 四源获取 886 个技能
+[2026-04-07 00:02:06] [Step2] 已安装: 3267 | 缺失: 5 (已过滤 387 个已知失效slug)
+[2026-04-07 00:02:08] [Step3] OK: video-image-file-analysis (skillhub)
+[2026-04-07 00:02:08] [Step3] OK: stock-analysis-23 (skillhub)
+[2026-04-07 00:02:08] [Step3] OK: swiftui-view-refactor (skillhub)
+[2026-04-07 00:02:08] [Step3] OK: team-efficiency-daily-report (skillhub)
+[2026-04-07 00:02:08] [Step3] OK: buildlog (skillhub)
+[2026-04-07 00:02:08] [Step3] 安装完成: 5 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-07 00:02:08] [Step3.5] PASS: buildlog (仅 medium/low findings)
+[2026-04-07 00:02:08] [Step3.5] PASS: swiftui-view-refactor
+[2026-04-07 00:02:09] [Step3.5] PASS: stock-analysis-23 (仅 medium/low findings)
+[2026-04-07 00:02:09] [Step3.5] FAIL: video-image-file-analysis -> [high] fetch-call: HTTP library call — makes outbound network requests; [high] fetch-call: HTTP library call — makes out
+[2026-04-07 00:02:09] [Step3.5] FAIL: team-efficiency-daily-report -> [high] homedir-access: Home directory access in code — may reach user files outside workspace; [high] browser-tool: Brow
+[2026-04-07 00:02:09] [Step3.5] Auditor扫描完成: 安全3 | 危险2
+[2026-04-07 00:02:09] [Step3.6] 卸载危险技能: video-image-file-analysis ([high] fetch-call: HTTP library call — makes outbound networ)
+[2026-04-07 00:02:09] [Step3.6] 卸载危险技能: team-efficiency-daily-report ([high] homedir-access: Home directory access in code — may r)
+[2026-04-07 00:02:09] [Step3.6] 已卸载 2/2 个危险技能，0 个核心技能已保护
+[2026-04-07 00:02:09] [Step4] [开发工具] buildlog
+[2026-04-07 00:02:09] [Step4] [开发工具] swiftui-view-refactor
+[2026-04-07 00:02:09] [Step4] [数据分析] stock-analysis-23
+[2026-04-07 00:02:09] [Step4] 分类测试完成: 3 个技能已分类
+[2026-04-07 00:02:09]   开发工具: 2 个
+[2026-04-07 00:02:09]   数据分析: 1 个
+[2026-04-07 00:02:09] [Step4] 安全通过: 3 | 危险: 0
+[2026-04-07 00:02:09] [Step5] OK: buildlog
+[2026-04-07 00:02:09] [Step5] OK: swiftui-view-refactor
+[2026-04-07 00:02:09] [Step5] OK: stock-analysis-23
+[2026-04-07 00:02:09] [Step5] 集成成功: 3 | 撤销: 0
+[2026-04-07 00:02:09] [Step6] 完成，3 个技能已集成
+[2026-04-07 00:02:11] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-07 00:02:11] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-07 00:02:11] === 完成: 集成3 | Auditor安全3 | 分类测试3 | 安装5 ===
+[2026-04-07 01:32:11] === 四源技能自动更新 Started ===
+[2026-04-07 01:32:31] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-07 01:32:32] [Step1] 七类别Top100 + 四源获取 1090 个技能
+[2026-04-07 01:32:32] [Step2] 已安装: 3270 | 缺失: 0 (已过滤 389 个已知失效slug)
+[2026-04-07 01:32:32] 所有技能已是最新
+[2026-04-07 21:57:01] === 四源技能自动更新 Started ===
+[2026-04-07 21:57:27] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-07 21:57:28] [Step1] 七类别Top100 + 四源获取 1089 个技能
+[2026-04-07 21:57:28] [Step2] 已安装: 3270 | 缺失: 8 (已过滤 389 个已知失效slug)
+[2026-04-07 21:57:30] [Step3] OK: credential-manager (skillhub)
+[2026-04-07 21:57:30] [Step3] OK: text-art (skillhub)
+[2026-04-07 21:57:30] [Step3] OK: toolbox-10-skill (skillhub)
+[2026-04-07 21:57:31] [Step3] OK: domain-authority-auditor (skillhub)
+[2026-04-07 21:57:31] [Step3] OK: vue-component-analyzer (clawhub)
+[2026-04-07 21:57:31] [Step3] OK: wechat-send-message (clawhub)
+[2026-04-07 21:57:31] [Step3] OK: text-to-voice-local (clawhub)
+[2026-04-07 21:57:32] [Step3] OK: database-agent (clawhub)
+[2026-04-07 21:57:32] [Step3] 安装完成: 8 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-07 21:57:32] [Step3.5] PASS: vue-component-analyzer (仅 medium/low findings)
+[2026-04-07 21:57:32] [Step3.5] FAIL: database-agent -> [high] message-tool-abuse: References OpenClaw session/message tools — could exfiltrate data via messaging 
+[2026-04-07 21:57:32] [Step3.5] PASS: text-art (仅 medium/low findings)
+[2026-04-07 21:57:33] [Step3.5] PASS: text-to-voice-local (仅 medium/low findings)
+[2026-04-07 21:57:33] [Step3.5] PASS: wechat-send-message
+[2026-04-07 21:57:33] [Step3.5] PASS: domain-authority-auditor (仅 medium/low findings)
+[2026-04-07 21:57:33] [Step3.5] FAIL: credential-manager -> [high] social-moltbook: Moltbook connection — known security risk (leaked 1.5M API tokens) (downgraded —; [high] social-
+[2026-04-07 21:57:33] [Step3.5] FAIL: toolbox-10-skill -> [high] path-traversal: Path traversal — attempts to access files outside skill directory; [high] path-traversal: Path tr
+[2026-04-07 21:57:33] [Step3.5] Auditor扫描完成: 安全5 | 危险3
+[2026-04-07 21:57:33] [Step3.6] 卸载危险技能: database-agent ([high] message-tool-abuse: References OpenClaw session/messa)
+[2026-04-07 21:57:33] [Step3.6] 卸载危险技能: credential-manager ([high] social-moltbook: Moltbook connection — known security)
+[2026-04-07 21:57:33] [Step3.6] 卸载危险技能: toolbox-10-skill ([high] path-traversal: Path traversal — attempts to access f)
+[2026-04-07 21:57:33] [Step3.6] 已卸载 3/3 个危险技能，0 个核心技能已保护
+[2026-04-07 21:57:33] [Step4] [开发工具] vue-component-analyzer
+[2026-04-07 21:57:33] [Step4] [内容创作] text-art
+[2026-04-07 21:57:33] [Step4] [内容创作] text-to-voice-local
+[2026-04-07 21:57:33] [Step4] [通讯协作] wechat-send-message
+[2026-04-07 21:57:33] [Step4] [AI智能] domain-authority-auditor
+[2026-04-07 21:57:33] [Step4] 分类测试完成: 5 个技能已分类
+[2026-04-07 21:57:33]   AI智能: 1 个
+[2026-04-07 21:57:33]   开发工具: 1 个
+[2026-04-07 21:57:33]   内容创作: 2 个
+[2026-04-07 21:57:33]   通讯协作: 1 个
+[2026-04-07 21:57:33] [Step4] 安全通过: 5 | 危险: 0
+[2026-04-07 21:57:33] [Step5] OK: vue-component-analyzer
+[2026-04-07 21:57:33] [Step5] OK: text-art
+[2026-04-07 21:57:33] [Step5] OK: text-to-voice-local
+[2026-04-07 21:57:33] [Step5] OK: wechat-send-message
+[2026-04-07 21:57:33] [Step5] OK: domain-authority-auditor
+[2026-04-07 21:57:33] [Step5] 集成成功: 5 | 撤销: 0
+[2026-04-07 21:57:33] [Step6] 完成，5 个技能已集成
+[2026-04-07 21:57:33] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-07 21:57:36] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-07 21:57:36] === 完成: 集成5 | Auditor安全5 | 分类测试5 | 安装8 ===
+[2026-04-07 23:27:36] === 四源技能自动更新 Started ===
+[2026-04-07 23:28:07] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-07 23:28:12] [Step1] 七类别Top100 + 四源获取 1013 个技能
+[2026-04-07 23:28:12] [Step2] 已安装: 3275 | 缺失: 1 (已过滤 392 个已知失效slug)
+[2026-04-07 23:28:14] [Step3] OK: koompi-healthcare (clawhub)
+[2026-04-07 23:28:14] [Step3] 安装完成: 1 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-07 23:28:14] [Step3.5] PASS: koompi-healthcare (仅 medium/low findings)
+[2026-04-07 23:28:14] [Step3.5] Auditor扫描完成: 安全1 | 危险0
+[2026-04-07 23:28:14] [Step3.6] 已卸载 0/0 个危险技能，0 个核心技能已保护
+[2026-04-07 23:28:14] [Step4] [数据分析] koompi-healthcare
+[2026-04-07 23:28:14] [Step4] 分类测试完成: 1 个技能已分类
+[2026-04-07 23:28:14]   数据分析: 1 个
+[2026-04-07 23:28:14] [Step4] 安全通过: 1 | 危险: 0
+[2026-04-07 23:28:14] [Step5] OK: koompi-healthcare
+[2026-04-07 23:28:14] [Step5] 集成成功: 1 | 撤销: 0
+[2026-04-07 23:28:14] [Step6] 完成，1 个技能已集成
+[2026-04-07 23:28:15] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-07 23:28:17] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-07 23:28:17] === 完成: 集成1 | Auditor安全1 | 分类测试1 | 安装1 ===
+[2026-04-08 00:58:17] === 四源技能自动更新 Started ===
+[2026-04-08 00:58:36] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-08 00:58:37] [Step1] 七类别Top100 + 四源获取 1090 个技能
+[2026-04-08 00:58:37] [Step2] 已安装: 3276 | 缺失: 2 (已过滤 392 个已知失效slug)
+[2026-04-08 00:58:38] [Step3] OK: ai-video-creator (skillhub)
+[2026-04-08 00:58:39] [Step3] OK: text-cleaner-cli (clawhub)
+[2026-04-08 00:58:39] [Step3] 安装完成: 2 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-08 00:58:39] [Step3.5] FAIL: ai-video-creator -> [high] shell-exec-python: Python shell execution — can run arbitrary system commands; [high] shell-exec-python: Python s
+[2026-04-08 00:58:39] [Step3.5] FAIL: text-cleaner-cli -> [high] zero-width-chars: Zero-width/invisible characters — hidden content that renders invisible (downgra; [critical] ze
+[2026-04-08 00:58:39] [Step3.5] Auditor扫描完成: 安全0 | 危险2
+[2026-04-08 00:58:39] [Step3.5] skill-auditor 扫描后无安全技能，中止
+[2026-04-08 02:28:36] === 四源技能自动更新 Started ===
+[2026-04-08 02:28:52] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-08 02:28:52] [Step1] 七类别Top100 + 四源获取 1078 个技能
+[2026-04-08 02:28:52] [Step2] 已安装: 3278 | 缺失: 0 (已过滤 394 个已知失效slug)
+[2026-04-08 02:28:52] 所有技能已是最新
+[2026-04-08 03:58:52] === 四源技能自动更新 Started ===
+[2026-04-08 03:58:52] 所有技能已是最新 (cached, 1.5h ago < 2h)，跳过 Step1
+[2026-04-08 05:28:56] === 四源技能自动更新 Started ===
+[2026-04-08 05:29:15] [Skills.sh API] retry 1/3 for kw='writing assistant' after 1s: The read operation timed out
+[2026-04-08 05:29:26] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-08 05:29:26] [Step1] 七类别Top100 + 四源获取 1075 个技能
+[2026-04-08 05:29:26] [Step2] 已安装: 3278 | 缺失: 1 (已过滤 394 个已知失效slug)
+[2026-04-08 05:29:29] [Step3] OK: reky (clawhub)
+[2026-04-08 05:29:29] [Step3] 安装完成: 1 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-08 05:29:29] [Step3.5] PASS: reky
+[2026-04-08 05:29:29] [Step3.5] Auditor扫描完成: 安全1 | 危险0
+[2026-04-08 05:29:29] [Step3.6] 已卸载 0/0 个危险技能，0 个核心技能已保护
+[2026-04-08 05:29:29] [Step4] [未分类] reky
+[2026-04-08 05:29:29] [Step4] 分类测试完成: 1 个技能已分类
+[2026-04-08 05:29:29]   未分类: 1 个
+[2026-04-08 05:29:29] [Step4] 安全通过: 1 | 危险: 0
+[2026-04-08 05:29:29] [Step5] OK: reky
+[2026-04-08 05:29:29] [Step5] 集成成功: 1 | 撤销: 0
+[2026-04-08 05:29:29] [Step6] 完成，1 个技能已集成
+[2026-04-08 05:29:29] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-08 05:29:30] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-08 05:29:30] === 完成: 集成1 | Auditor安全1 | 分类测试1 | 安装1 ===
+[2026-04-08 06:59:30] === 四源技能自动更新 Started ===
+[2026-04-08 06:59:46] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-08 06:59:46] [Step1] 七类别Top100 + 四源获取 1077 个技能
+[2026-04-08 06:59:46] [Step2] 已安装: 3279 | 缺失: 2 (已过滤 394 个已知失效slug)
+[2026-04-08 06:59:49] [Step3] OK: ntriq-compliance-intel-mcp (clawhub)
+[2026-04-08 06:59:49] [Step3] OK: ntriq-cisa-alert-monitor (clawhub)
+[2026-04-08 06:59:49] [Step3] 安装完成: 2 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-08 06:59:49] [Step3.5] PASS: ntriq-compliance-intel-mcp (仅 medium/low findings)
+[2026-04-08 06:59:49] [Step3.5] PASS: ntriq-cisa-alert-monitor (仅 medium/low findings)
+[2026-04-08 06:59:49] [Step3.5] Auditor扫描完成: 安全2 | 危险0
+[2026-04-08 06:59:49] [Step3.6] 已卸载 0/0 个危险技能，0 个核心技能已保护
+[2026-04-08 06:59:49] [Step4] [安全合规] ntriq-compliance-intel-mcp
+[2026-04-08 06:59:49] [Step4] [未分类] ntriq-cisa-alert-monitor
+[2026-04-08 06:59:49] [Step4] 分类测试完成: 2 个技能已分类
+[2026-04-08 06:59:49]   安全合规: 1 个
+[2026-04-08 06:59:49]   未分类: 1 个
+[2026-04-08 06:59:49] [Step4] 安全通过: 2 | 危险: 0
+[2026-04-08 06:59:49] [Step5] OK: ntriq-compliance-intel-mcp
+[2026-04-08 06:59:49] [Step5] OK: ntriq-cisa-alert-monitor
+[2026-04-08 06:59:49] [Step5] 集成成功: 2 | 撤销: 0
+[2026-04-08 06:59:49] [Step6] 完成，2 个技能已集成
+[2026-04-08 06:59:49] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-08 06:59:52] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-08 06:59:52] === 完成: 集成2 | Auditor安全2 | 分类测试2 | 安装2 ===
+[2026-04-08 08:29:52] === 四源技能自动更新 Started ===
+[2026-04-08 08:30:09] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-08 08:30:10] [Step1] 七类别Top100 + 四源获取 1093 个技能
+[2026-04-08 08:30:10] [Step2] 已安装: 3281 | 缺失: 2 (已过滤 394 个已知失效slug)
+[2026-04-08 08:30:11] [Step3] OK: ai-legal-assistant-pro (skillhub)
+[2026-04-08 08:30:13] [Step3] OK: report-generator-adarsh (clawhub)
+[2026-04-08 08:30:13] [Step3] 安装完成: 2 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-08 08:30:13] [Step3.5] PASS: ai-legal-assistant-pro (仅 medium/low findings)
+[2026-04-08 08:30:13] [Step3.5] PASS: report-generator-adarsh
+[2026-04-08 08:30:13] [Step3.5] Auditor扫描完成: 安全2 | 危险0
+[2026-04-08 08:30:13] [Step3.6] 已卸载 0/0 个危险技能，0 个核心技能已保护
+[2026-04-08 08:30:13] [Step4] [AI智能] ai-legal-assistant-pro
+[2026-04-08 08:30:13] [Step4] [未分类] report-generator-adarsh
+[2026-04-08 08:30:13] [Step4] 分类测试完成: 2 个技能已分类
+[2026-04-08 08:30:13]   AI智能: 1 个
+[2026-04-08 08:30:13]   未分类: 1 个
+[2026-04-08 08:30:13] [Step4] 安全通过: 2 | 危险: 0
+[2026-04-08 08:30:13] [Step5] OK: ai-legal-assistant-pro
+[2026-04-08 08:30:13] [Step5] OK: report-generator-adarsh
+[2026-04-08 08:30:13] [Step5] 集成成功: 2 | 撤销: 0
+[2026-04-08 08:30:13] [Step6] 完成，2 个技能已集成
+[2026-04-08 08:30:13] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-08 08:30:14] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-08 08:30:14] === 完成: 集成2 | Auditor安全2 | 分类测试2 | 安装2 ===
+[2026-04-08 10:00:14] === 四源技能自动更新 Started ===
+[2026-04-08 10:00:49] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-08 10:00:50] [ClawHub Top] rate-limited, retrying in 3.9s (attempt 1/3)...
+[2026-04-08 10:01:00] [ClawHub Top] rate-limited, retrying in 8.7s (attempt 2/3)...
+[2026-04-08 10:01:14] [Step1] 七类别Top100 + 四源获取 879 个技能
+[2026-04-08 10:01:14] [Step2] 已安装: 3283 | 缺失: 2 (已过滤 394 个已知失效slug)
+[2026-04-08 10:01:15] [Step3] OK: ai-avatar (skillhub)
+[2026-04-08 10:01:15] [Step3] OK: douyin-copy-extract (skillhub)
+[2026-04-08 10:01:15] [Step3] 安装完成: 2 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-08 10:01:15] [Step3.5] PASS: ai-avatar (文档技能: 高风险均为误报)
+[2026-04-08 10:01:15] [Step3.5] PASS: douyin-copy-extract
+[2026-04-08 10:01:15] [Step3.5] Auditor扫描完成: 安全2 | 危险0
+[2026-04-08 10:01:15] [Step3.6] 已卸载 0/0 个危险技能，0 个核心技能已保护
+[2026-04-08 10:01:15] [Step4] [AI智能] ai-avatar
+[2026-04-08 10:01:15] [Step4] [内容创作] douyin-copy-extract
+[2026-04-08 10:01:15] [Step4] 分类测试完成: 2 个技能已分类
+[2026-04-08 10:01:15]   AI智能: 1 个
+[2026-04-08 10:01:15]   内容创作: 1 个
+[2026-04-08 10:01:15] [Step4] 安全通过: 2 | 危险: 0
+[2026-04-08 10:01:15] [Step5] OK: ai-avatar
+[2026-04-08 10:01:15] [Step5] OK: douyin-copy-extract
+[2026-04-08 10:01:15] [Step5] 集成成功: 2 | 撤销: 0
+[2026-04-08 10:01:16] [Step6] 完成，2 个技能已集成
+[2026-04-08 10:01:16] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-08 10:01:19] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-08 10:01:19] === 完成: 集成2 | Auditor安全2 | 分类测试2 | 安装2 ===
+[2026-04-08 11:31:19] === 四源技能自动更新 Started ===
+[2026-04-08 11:31:36] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-08 11:31:36] [Step1] 七类别Top100 + 四源获取 1091 个技能
+[2026-04-08 11:31:36] [Step2] 已安装: 3285 | 缺失: 0 (已过滤 394 个已知失效slug)
+[2026-04-08 11:31:36] 所有技能已是最新
+[2026-04-08 12:03:41] === 四源技能自动更新 Started ===
+[2026-04-08 12:03:41] 所有技能已是最新 (cached, 0.5h ago < 2h)，跳过 Step1
+[2026-04-08 13:01:36] === 四源技能自动更新 Started ===
+[2026-04-08 13:01:36] 所有技能已是最新 (cached, 1.5h ago < 2h)，跳过 Step1
+[2026-04-08 14:31:36] === 四源技能自动更新 Started ===
+[2026-04-08 14:31:59] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-08 14:32:01] [ClawHub Top] rate-limited, retrying in 3.8s (attempt 1/3)...
+[2026-04-08 14:32:07] [Step1] 七类别Top100 + 四源获取 935 个技能
+[2026-04-08 14:32:07] [Step2] 已安装: 3285 | 缺失: 5 (已过滤 394 个已知失效slug)
+[2026-04-08 14:32:09] [Step3] OK: seoul-world-model (skillhub)
+[2026-04-08 14:32:09] [Step3] OK: seopro (skillhub)
+[2026-04-08 14:32:09] [Step3] OK: seo-audit-report (skillhub)
+[2026-04-08 14:32:09] [Step3] OK: seo-geo-qa (skillhub)
+[2026-04-08 14:32:10] [Step3] OK: water-movement-reminder (clawhub)
+[2026-04-08 14:32:10] [Step3] 安装完成: 5 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-08 14:32:10] [Step3.5] PASS: water-movement-reminder (文档技能: 高风险均为误报)
+[2026-04-08 14:32:10] [Step3.5] PASS: seo-audit-report (仅 medium/low findings)
+[2026-04-08 14:32:10] [Step3.5] FAIL: seo-geo-qa -> [high] shell-exec-python: Python shell execution — can run arbitrary system commands; [high] shell-exec-python: Python s
+[2026-04-08 14:32:10] [Step3.5] PASS: seopro (仅 medium/low findings)
+[2026-04-08 14:32:10] [Step3.5] PASS: seoul-world-model (仅 medium/low findings)
+[2026-04-08 14:32:10] [Step3.5] Auditor扫描完成: 安全4 | 危险1
+[2026-04-08 14:32:10] [Step3.6] 卸载危险技能: seo-geo-qa ([high] shell-exec-python: Python shell execution — can run a)
+[2026-04-08 14:32:10] [Step3.6] 已卸载 1/1 个危险技能，0 个核心技能已保护
+[2026-04-08 14:32:10] [Step4] [效率提升] water-movement-reminder
+[2026-04-08 14:32:10] [Step4] [数据分析] seo-audit-report
+[2026-04-08 14:32:10] [Step4] [数据分析] seopro
+[2026-04-08 14:32:10] [Step4] [数据分析] seoul-world-model
+[2026-04-08 14:32:10] [Step4] 分类测试完成: 4 个技能已分类
+[2026-04-08 14:32:10]   效率提升: 1 个
+[2026-04-08 14:32:10]   数据分析: 3 个
+[2026-04-08 14:32:10] [Step4] 安全通过: 4 | 危险: 0
+[2026-04-08 14:32:10] [Step5] OK: water-movement-reminder
+[2026-04-08 14:32:10] [Step5] OK: seo-audit-report
+[2026-04-08 14:32:10] [Step5] OK: seopro
+[2026-04-08 14:32:10] [Step5] OK: seoul-world-model
+[2026-04-08 14:32:10] [Step5] 集成成功: 4 | 撤销: 0
+[2026-04-08 14:32:10] [Step6] 完成，4 个技能已集成
+[2026-04-08 14:32:11] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-08 14:32:12] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-08 14:32:12] === 完成: 集成4 | Auditor安全4 | 分类测试4 | 安装5 ===
+[2026-04-08 16:02:12] === 四源技能自动更新 Started ===
+[2026-04-08 16:02:30] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-08 16:02:33] [ClawHub Top] rate-limited, retrying in 3.3s (attempt 1/3)...
+[2026-04-08 16:02:41] [ClawHub Top] rate-limited, retrying in 8.1s (attempt 2/3)...
+[2026-04-08 16:02:54] [ClawHub Top] rate-limited, retrying in 20.5s (attempt 3/3)...
+[2026-04-08 16:03:15] [ClawHub Top] explore failed after retries: - Fetching latest skills
+✖ Rate limit exceeded
+Error: Rate limit exceeded
+
+[2026-04-08 16:03:15] [ClawHub Top] 设置 1h 冷静期
+[2026-04-08 16:03:15] [Step1] 七类别Top100 + 四源获取 1066 个技能
+[2026-04-08 16:03:15] [Step2] 已安装: 3289 | 缺失: 10 (已过滤 395 个已知失效slug)
+[2026-04-08 16:03:16] [Step3] OK: continuity (skillhub)
+[2026-04-08 16:03:16] [Step3] OK: doubao-image (skillhub)
+[2026-04-08 16:03:16] [Step3] OK: moltguild (skillhub)
+[2026-04-08 16:03:16] [Step3] OK: redbook-image-generator (skillhub)
+[2026-04-08 16:03:16] [Step3] OK: juicy (skillhub)
+[2026-04-08 16:03:16] [Step3] OK: unifai-trading-suite (skillhub)
+[2026-04-08 16:03:18] [Step3] OK: autonomous-github-team (clawhub)
+[2026-04-08 16:03:18] [Step3] OK: graphviz-skill (clawhub)
+[2026-04-08 16:03:18] [Step3] OK: discordanywhere (clawhub)
+[2026-04-08 16:03:19] [Step3] OK: openrouter-audio (clawhub)
+[2026-04-08 16:03:19] [Step3] 安装完成: 10 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-08 16:03:19] [Step3.5] PASS: autonomous-github-team
+[2026-04-08 16:03:19] [Step3.5] FAIL: unifai-trading-suite -> [high] sleeper-date-trigger: Date-based trigger — sleeper agent with future activation (downgraded — in docum; [high] me
+[2026-04-08 16:03:19] [Step3.5] PASS: moltguild (文档技能: 高风险均为误报)
+[2026-04-08 16:03:20] [Step3.5] PASS: juicy (仅 medium/low findings)
+[2026-04-08 16:03:20] [Step3.5] FAIL: continuity -> [high] social-moltbook: Moltbook connection — known security risk (leaked 1.5M API tokens) (downgraded —
+[2026-04-08 16:03:20] [Step3.5] PASS: graphviz-skill (仅 medium/low findings)
+[2026-04-08 16:03:20] [Step3.5] FAIL: doubao-image -> [high] env-sensitive-access: Reads sensitive environment variables — could harvest API keys or secrets ⚠️ Und; [high] fe
+[2026-04-08 16:03:20] [Step3.5] FAIL: redbook-image-generator -> [high] absolute-path-unix: Absolute Unix path — accesses system directories
+[2026-04-08 16:03:20] [Step3.5] PASS: openrouter-audio (预期行为白名单: base64-encode)
+[2026-04-08 16:03:20] [Step3.5] PASS: discordanywhere (仅 medium/low findings)
+[2026-04-08 16:03:20] [Step3.5] Auditor扫描完成: 安全6 | 危险4
+[2026-04-08 16:03:20] [Step3.6] 卸载危险技能: unifai-trading-suite ([high] sleeper-date-trigger: Date-based trigger — sleeper ag)
+[2026-04-08 16:03:20] [Step3.6] 卸载危险技能: continuity ([high] social-moltbook: Moltbook connection — known security)
+[2026-04-08 16:03:20] [Step3.6] 卸载危险技能: doubao-image ([high] env-sensitive-access: Reads sensitive environment var)
+[2026-04-08 16:03:20] [Step3.6] 卸载危险技能: redbook-image-generator ([high] absolute-path-unix: Absolute Unix path — accesses sys)
+[2026-04-08 16:03:20] [Step3.6] 已卸载 4/4 个危险技能，0 个核心技能已保护
+[2026-04-08 16:03:20] [Step4] [AI智能] autonomous-github-team
+[2026-04-08 16:03:20] [Step4] [开发工具] moltguild
+[2026-04-08 16:03:20] [Step4] [开发工具] juicy
+[2026-04-08 16:03:20] [Step4] [未分类] graphviz-skill
+[2026-04-08 16:03:20] [Step4] [内容创作] openrouter-audio
+[2026-04-08 16:03:20] [Step4] [通讯协作] discordanywhere
+[2026-04-08 16:03:20] [Step4] 分类测试完成: 6 个技能已分类
+[2026-04-08 16:03:20]   AI智能: 1 个
+[2026-04-08 16:03:20]   开发工具: 2 个
+[2026-04-08 16:03:20]   内容创作: 1 个
+[2026-04-08 16:03:20]   通讯协作: 1 个
+[2026-04-08 16:03:20]   未分类: 1 个
+[2026-04-08 16:03:20] [Step4] 安全通过: 6 | 危险: 0
+[2026-04-08 16:03:20] [Step5] OK: autonomous-github-team
+[2026-04-08 16:03:20] [Step5] OK: moltguild
+[2026-04-08 16:03:20] [Step5] OK: juicy
+[2026-04-08 16:03:20] [Step5] OK: graphviz-skill
+[2026-04-08 16:03:20] [Step5] OK: openrouter-audio
+[2026-04-08 16:03:20] [Step5] OK: discordanywhere
+[2026-04-08 16:03:20] [Step5] 集成成功: 6 | 撤销: 0
+[2026-04-08 16:03:20] [Step6] 完成，6 个技能已集成
+[2026-04-08 16:03:23] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-08 16:03:26] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-08 16:03:26] === 完成: 集成6 | Auditor安全6 | 分类测试6 | 安装10 ===
+[2026-04-08 17:33:26] === 四源技能自动更新 Started ===
+[2026-04-08 17:33:46] [ClawHub Top] 冷静期结束，恢复 ClawHub Top
+[2026-04-08 17:33:48] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-08 17:33:51] [ClawHub Top] rate-limited, retrying in 3.4s (attempt 1/3)...
+[2026-04-08 17:33:59] [ClawHub Top] rate-limited, retrying in 8.3s (attempt 2/3)...
+[2026-04-08 17:34:09] [Step1] 七类别Top100 + 四源获取 1064 个技能
+[2026-04-08 17:34:09] [Step2] 已安装: 3295 | 缺失: 2 (已过滤 399 个已知失效slug)
+[2026-04-08 17:34:10] [Step3] OK: llm-wiki (skillhub)
+[2026-04-08 17:34:12] [Step3] OK: cs-seo-audit (clawhub)
+[2026-04-08 17:34:12] [Step3] 安装完成: 2 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-08 17:34:12] [Step3.5] FAIL: llm-wiki -> [high] sleeper-date-trigger: Date-based trigger — sleeper agent with future activation (downgraded — in docum
+[2026-04-08 17:34:12] [Step3.5] PASS: cs-seo-audit (仅 medium/low findings)
+[2026-04-08 17:34:12] [Step3.5] Auditor扫描完成: 安全1 | 危险1
+[2026-04-08 17:34:12] [Step3.6] 卸载危险技能: llm-wiki ([high] sleeper-date-trigger: Date-based trigger — sleeper ag)
+[2026-04-08 17:34:12] [Step3.6] 已卸载 1/1 个危险技能，0 个核心技能已保护
+[2026-04-08 17:34:12] [Step4] [数据分析] cs-seo-audit
+[2026-04-08 17:34:12] [Step4] 分类测试完成: 1 个技能已分类
+[2026-04-08 17:34:12]   数据分析: 1 个
+[2026-04-08 17:34:12] [Step4] 安全通过: 1 | 危险: 0
+[2026-04-08 17:34:12] [Step5] OK: cs-seo-audit
+[2026-04-08 17:34:12] [Step5] 集成成功: 1 | 撤销: 0
+[2026-04-08 17:34:12] [Step6] 完成，1 个技能已集成
+[2026-04-08 17:34:16] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-08 17:34:17] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-08 17:34:17] === 完成: 集成1 | Auditor安全1 | 分类测试1 | 安装2 ===
+[2026-04-08 19:04:17] === 四源技能自动更新 Started ===
+[2026-04-08 19:04:52] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-08 19:04:54] [Step1] 七类别Top100 + 四源获取 1070 个技能
+[2026-04-08 19:04:54] [Step2] 已安装: 3296 | 缺失: 2 (已过滤 400 个已知失效slug)
+[2026-04-08 19:04:56] [Step3] OK: gdpr-compliance (clawhub)
+[2026-04-08 19:04:57] [Step3] OK: health-safety-risk-assessment (clawhub)
+[2026-04-08 19:04:57] [Step3] 安装完成: 2 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-08 19:04:57] [Step3.5] PASS: health-safety-risk-assessment
+[2026-04-08 19:04:57] [Step3.5] PASS: gdpr-compliance
+[2026-04-08 19:04:57] [Step3.5] Auditor扫描完成: 安全2 | 危险0
+[2026-04-08 19:04:57] [Step3.6] 已卸载 0/0 个危险技能，0 个核心技能已保护
+[2026-04-08 19:04:57] [Step4] [安全合规] health-safety-risk-assessment
+[2026-04-08 19:04:57] [Step4] [安全合规] gdpr-compliance
+[2026-04-08 19:04:57] [Step4] 分类测试完成: 2 个技能已分类
+[2026-04-08 19:04:57]   安全合规: 2 个
+[2026-04-08 19:04:57] [Step4] 安全通过: 2 | 危险: 0
+[2026-04-08 19:04:57] [Step5] OK: health-safety-risk-assessment
+[2026-04-08 19:04:57] [Step5] OK: gdpr-compliance
+[2026-04-08 19:04:57] [Step5] 集成成功: 2 | 撤销: 0
+[2026-04-08 19:04:57] [Step6] 完成，2 个技能已集成
+[2026-04-08 19:04:57] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-08 19:05:01] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-08 19:05:01] === 完成: 集成2 | Auditor安全2 | 分类测试2 | 安装2 ===
+[2026-04-08 20:35:01] === 四源技能自动更新 Started ===
+[2026-04-08 20:35:23] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-08 20:35:25] [Step1] 七类别Top100 + 四源获取 1080 个技能
+[2026-04-08 20:35:25] [Step2] 已安装: 3298 | 缺失: 4 (已过滤 400 个已知失效slug)
+[2026-04-08 20:35:27] [Step3] OK: ai-profit-engine (skillhub)
+[2026-04-08 20:35:27] [Step3] OK: ai-pm-resume-hub (skillhub)
+[2026-04-08 20:35:27] [Step3] OK: siyuan-task-skill (skillhub)
+[2026-04-08 20:35:27] [Step3] OK: wechat-article-typeset (skillhub)
+[2026-04-08 20:35:27] [Step3] 安装完成: 4 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-08 20:35:27] [Step3.5] FAIL: ai-pm-resume-hub -> [high] browser-tool: Browser automation — could access authenticated sessions ⚠️ Undisclosed — not me
+[2026-04-08 20:35:27] [Step3.5] FAIL: ai-profit-engine -> [high] social-moltbook: Moltbook connection — known security risk (leaked 1.5M API tokens) (downgraded —; [high] social-
+[2026-04-08 20:35:27] [Step3.5] PASS: siyuan-task-skill (仅 medium/low findings)
+[2026-04-08 20:35:27] [Step3.5] FAIL: wechat-article-typeset -> [high] path-traversal: Path traversal — attempts to access files outside skill directory
+[2026-04-08 20:35:27] [Step3.5] Auditor扫描完成: 安全1 | 危险3
+[2026-04-08 20:35:27] [Step3.6] 卸载危险技能: ai-pm-resume-hub ([high] browser-tool: Browser automation — could access authe)
+[2026-04-08 20:35:27] [Step3.6] 卸载危险技能: ai-profit-engine ([high] social-moltbook: Moltbook connection — known security)
+[2026-04-08 20:35:27] [Step3.6] 卸载危险技能: wechat-article-typeset ([high] path-traversal: Path traversal — attempts to access f)
+[2026-04-08 20:35:27] [Step3.6] 已卸载 3/3 个危险技能，0 个核心技能已保护
+[2026-04-08 20:35:27] [Step4] [效率提升] siyuan-task-skill
+[2026-04-08 20:35:27] [Step4] 分类测试完成: 1 个技能已分类
+[2026-04-08 20:35:27]   效率提升: 1 个
+[2026-04-08 20:35:27] [Step4] 安全通过: 1 | 危险: 0
+[2026-04-08 20:35:27] [Step5] OK: siyuan-task-skill
+[2026-04-08 20:35:27] [Step5] 集成成功: 1 | 撤销: 0
+[2026-04-08 20:35:27] [Step6] 完成，1 个技能已集成
+[2026-04-08 20:35:28] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-08 20:35:30] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-08 20:35:30] === 完成: 集成1 | Auditor安全1 | 分类测试1 | 安装4 ===
+[2026-04-08 22:05:30] === 四源技能自动更新 Started ===
+[2026-04-08 22:05:48] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-08 22:05:52] [Step1] 七类别Top100 + 四源获取 1077 个技能
+[2026-04-08 22:05:52] [Step2] 已安装: 3299 | 缺失: 4 (已过滤 403 个已知失效slug)
+[2026-04-08 22:05:53] [Step3] OK: ai-imperial-court (skillhub)
+[2026-04-08 22:05:53] [Step3] OK: sqlmap-skill (skillhub)
+[2026-04-08 22:05:55] [Step3] OK: smart-meeting-minutes-cn (clawhub)
+[2026-04-08 22:05:55] [Step3] OK: cyber-fantasy-ui (clawhub)
+[2026-04-08 22:05:55] [Step3] 安装完成: 4 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-08 22:05:55] [Step3.5] PASS: ai-imperial-court
+[2026-04-08 22:05:55] [Step3.5] PASS: cyber-fantasy-ui (仅 medium/low findings)
+[2026-04-08 22:05:55] [Step3.5] PASS: sqlmap-skill (仅 medium/low findings)
+[2026-04-08 22:05:55] [Step3.5] PASS: smart-meeting-minutes-cn
+[2026-04-08 22:05:55] [Step3.5] Auditor扫描完成: 安全4 | 危险0
+[2026-04-08 22:05:55] [Step3.6] 已卸载 0/0 个危险技能，0 个核心技能已保护
+[2026-04-08 22:05:55] [Step4] [AI智能] ai-imperial-court
+[2026-04-08 22:05:55] [Step4] [开发工具] cyber-fantasy-ui
+[2026-04-08 22:05:55] [Step4] [数据分析] sqlmap-skill
+[2026-04-08 22:05:55] [Step4] [通讯协作] smart-meeting-minutes-cn
+[2026-04-08 22:05:55] [Step4] 分类测试完成: 4 个技能已分类
+[2026-04-08 22:05:55]   AI智能: 1 个
+[2026-04-08 22:05:55]   开发工具: 1 个
+[2026-04-08 22:05:55]   数据分析: 1 个
+[2026-04-08 22:05:55]   通讯协作: 1 个
+[2026-04-08 22:05:55] [Step4] 安全通过: 4 | 危险: 0
+[2026-04-08 22:05:55] [Step5] OK: ai-imperial-court
+[2026-04-08 22:05:55] [Step5] OK: cyber-fantasy-ui
+[2026-04-08 22:05:55] [Step5] OK: sqlmap-skill
+[2026-04-08 22:05:55] [Step5] OK: smart-meeting-minutes-cn
+[2026-04-08 22:05:55] [Step5] 集成成功: 4 | 撤销: 0
+[2026-04-08 22:05:55] [Step6] 完成，4 个技能已集成
+[2026-04-08 22:05:57] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-08 22:05:58] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-08 22:05:58] === 完成: 集成4 | Auditor安全4 | 分类测试4 | 安装4 ===
+[2026-04-08 23:35:58] === 四源技能自动更新 Started ===
+[2026-04-08 23:36:19] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-08 23:36:21] [Step1] 七类别Top100 + 四源获取 1089 个技能
+[2026-04-08 23:36:21] [Step2] 已安装: 3303 | 缺失: 2 (已过滤 403 个已知失效slug)
+[2026-04-08 23:36:22] [Step3] OK: text-to-speech-heygen (skillhub)
+[2026-04-08 23:36:23] [Step3] OK: compound-eng-writing (clawhub)
+[2026-04-08 23:36:23] [Step3] 安装完成: 2 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-08 23:36:24] [Step3.5] PASS: compound-eng-writing
+[2026-04-08 23:36:24] [Step3.5] PASS: text-to-speech-heygen (仅 medium/low findings)
+[2026-04-08 23:36:24] [Step3.5] Auditor扫描完成: 安全2 | 危险0
+[2026-04-08 23:36:24] [Step3.6] 已卸载 0/0 个危险技能，0 个核心技能已保护
+[2026-04-08 23:36:24] [Step4] [内容创作] compound-eng-writing
+[2026-04-08 23:36:24] [Step4] [内容创作] text-to-speech-heygen
+[2026-04-08 23:36:24] [Step4] 分类测试完成: 2 个技能已分类
+[2026-04-08 23:36:24]   内容创作: 2 个
+[2026-04-08 23:36:24] [Step4] 安全通过: 2 | 危险: 0
+[2026-04-08 23:36:24] [Step5] OK: compound-eng-writing
+[2026-04-08 23:36:24] [Step5] OK: text-to-speech-heygen
+[2026-04-08 23:36:24] [Step5] 集成成功: 2 | 撤销: 0
+[2026-04-08 23:36:24] [Step6] 完成，2 个技能已集成
+[2026-04-08 23:36:24] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-08 23:36:26] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-08 23:36:26] === 完成: 集成2 | Auditor安全2 | 分类测试2 | 安装2 ===
+[2026-04-09 01:06:26] === 四源技能自动更新 Started ===
+[2026-04-09 01:06:55] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-09 01:06:57] [Step1] 七类别Top100 + 四源获取 1091 个技能
+[2026-04-09 01:06:57] [Step2] 已安装: 3305 | 缺失: 0 (已过滤 403 个已知失效slug)
+[2026-04-09 01:06:57] 所有技能已是最新
+[2026-04-09 02:36:57] === 四源技能自动更新 Started ===
+[2026-04-09 02:36:57] 所有技能已是最新 (cached, 1.5h ago < 2h)，跳过 Step1
+[2026-04-09 04:06:55] === 四源技能自动更新 Started ===
+[2026-04-09 04:07:23] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-09 04:07:23] [Step1] 七类别Top100 + 四源获取 1074 个技能
+[2026-04-09 04:07:23] [Step2] 已安装: 3305 | 缺失: 1 (已过滤 403 个已知失效slug)
+[2026-04-09 04:07:26] [Step3] OK: medical-transport-video (clawhub)
+[2026-04-09 04:07:26] [Step3] 安装完成: 1 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-09 04:07:26] [Step3.5] PASS: medical-transport-video (仅 medium/low findings)
+[2026-04-09 04:07:26] [Step3.5] Auditor扫描完成: 安全1 | 危险0
+[2026-04-09 04:07:26] [Step3.6] 已卸载 0/0 个危险技能，0 个核心技能已保护
+[2026-04-09 04:07:26] [Step4] [开发工具] medical-transport-video
+[2026-04-09 04:07:26] [Step4] 分类测试完成: 1 个技能已分类
+[2026-04-09 04:07:26]   开发工具: 1 个
+[2026-04-09 04:07:26] [Step4] 安全通过: 1 | 危险: 0
+[2026-04-09 04:07:26] [Step5] OK: medical-transport-video
+[2026-04-09 04:07:26] [Step5] 集成成功: 1 | 撤销: 0
+[2026-04-09 04:07:26] [Step6] 完成，1 个技能已集成
+[2026-04-09 04:07:26] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-09 04:07:27] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-09 04:07:27] === 完成: 集成1 | Auditor安全1 | 分类测试1 | 安装1 ===
+[2026-04-09 05:37:27] === 四源技能自动更新 Started ===
+[2026-04-09 05:37:42] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-09 05:37:44] [Step1] 七类别Top100 + 四源获取 1094 个技能
+[2026-04-09 05:37:44] [Step2] 已安装: 3306 | 缺失: 0 (已过滤 403 个已知失效slug)
+[2026-04-09 05:37:44] 所有技能已是最新
+[2026-04-09 07:07:46] === 四源技能自动更新 Started ===
+[2026-04-09 07:07:46] 所有技能已是最新 (cached, 1.5h ago < 2h)，跳过 Step1
+[2026-04-09 08:37:46] === 四源技能自动更新 Started ===
+[2026-04-09 08:38:08] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-09 08:38:13] [Step1] 七类别Top100 + 四源获取 987 个技能
+[2026-04-09 08:38:13] [Step2] 已安装: 3306 | 缺失: 0 (已过滤 403 个已知失效slug)
+[2026-04-09 08:38:13] 所有技能已是最新
+[2026-04-09 10:08:13] === 四源技能自动更新 Started ===
+[2026-04-09 10:08:13] 所有技能已是最新 (cached, 1.5h ago < 2h)，跳过 Step1
+[2026-04-09 11:38:14] === 四源技能自动更新 Started ===
+[2026-04-09 11:38:29] [Skills.sh API] retry 1/3 for kw='thesis paper academic' after 1s: The read operation timed out
+[2026-04-09 11:38:55] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-09 11:38:57] [ClawHub Top] rate-limited, retrying in 3.2s (attempt 1/3)...
+[2026-04-09 11:39:02] [Step1] 七类别Top100 + 四源获取 984 个技能
+[2026-04-09 11:39:02] [Step2] 已安装: 3306 | 缺失: 5 (已过滤 403 个已知失效slug)
+[2026-04-09 11:39:03] [Step3] OK: zero-trust (skillhub)
+[2026-04-09 11:39:03] [Step3] OK: shared-memory (skillhub)
+[2026-04-09 11:40:04] [Step3] SKIP(skills.sh failed): theneoai/awesome-skills/lean-six-sigma-black-belt — ■  Failed to clone repository
+[2026-04-09 11:40:04] [Step3] SKIP(skills.sh failed): theneoai/awesome-skills/siemens — npm warn exec The following package was not found and will be installed: skills@
+[2026-04-09 11:41:05] [Step3] SKIP(skills.sh failed): theneoai/awesome-skills/general-motors-gm-skill — ■  Failed to clone repository
+[2026-04-09 11:41:05] [Step3] 安装完成: 2 成功 / 3 失败 (另有 0 个跳过)
+[2026-04-09 11:41:05] [Step3.5] PASS: zero-trust
+[2026-04-09 11:41:05] [Step3.5] PASS: shared-memory (仅 medium/low findings)
+[2026-04-09 11:41:05] [Step3.5] Auditor扫描完成: 安全2 | 危险0
+[2026-04-09 11:41:05] [Step3.6] 已卸载 0/0 个危险技能，0 个核心技能已保护
+[2026-04-09 11:41:05] [Step4] [未分类] zero-trust
+[2026-04-09 11:41:05] [Step4] [未分类] shared-memory
+[2026-04-09 11:41:05] [Step4] 分类测试完成: 2 个技能已分类
+[2026-04-09 11:41:05]   未分类: 2 个
+[2026-04-09 11:41:05] [Step4] 安全通过: 2 | 危险: 0
+[2026-04-09 11:41:05] [Step5] OK: zero-trust
+[2026-04-09 11:41:05] [Step5] OK: shared-memory
+[2026-04-09 11:41:05] [Step5] 集成成功: 2 | 撤销: 0
+[2026-04-09 11:41:05] [Step6] 完成，2 个技能已集成
+[2026-04-09 11:41:06] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-09 11:41:09] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-09 11:41:09] === 完成: 集成2 | Auditor安全2 | 分类测试2 | 安装2 ===
+[2026-04-09 13:11:10] === 四源技能自动更新 Started ===
+[2026-04-09 13:11:33] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-09 13:11:33] [Step1] 七类别Top100 + 四源获取 1080 个技能
+[2026-04-09 13:11:33] [Step2] 已安装: 3308 | 缺失: 4 (已过滤 406 个已知失效slug)
+[2026-04-09 13:11:35] [Step3] OK: ui-inspiration-library (skillhub)
+[2026-04-09 13:11:35] [Step3] OK: flow-n-intel (skillhub)
+[2026-04-09 13:11:35] [Step3] OK: team-mode-delivery (skillhub)
+[2026-04-09 13:11:36] [Step3] OK: translateflow (clawhub)
+[2026-04-09 13:11:36] [Step3] 安装完成: 4 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-09 13:11:36] [Step3.5] PASS: translateflow (仅 medium/low findings)
+[2026-04-09 13:11:36] [Step3.5] PASS: ui-inspiration-library (仅 medium/low findings)
+[2026-04-09 13:11:36] [Step3.5] PASS: team-mode-delivery (仅 medium/low findings)
+[2026-04-09 13:11:36] [Step3.5] PASS: flow-n-intel (仅 medium/low findings)
+[2026-04-09 13:11:36] [Step3.5] Auditor扫描完成: 安全4 | 危险0
+[2026-04-09 13:11:36] [Step3.6] 已卸载 0/0 个危险技能，0 个核心技能已保护
+[2026-04-09 13:11:36] [Step4] [未分类] translateflow
+[2026-04-09 13:11:36] [Step4] [开发工具] ui-inspiration-library
+[2026-04-09 13:11:36] [Step4] [通讯协作] team-mode-delivery
+[2026-04-09 13:11:36] [Step4] [安全合规] flow-n-intel
+[2026-04-09 13:11:36] [Step4] 分类测试完成: 4 个技能已分类
+[2026-04-09 13:11:36]   开发工具: 1 个
+[2026-04-09 13:11:36]   通讯协作: 1 个
+[2026-04-09 13:11:36]   安全合规: 1 个
+[2026-04-09 13:11:36]   未分类: 1 个
+[2026-04-09 13:11:36] [Step4] 安全通过: 4 | 危险: 0
+[2026-04-09 13:11:36] [Step5] OK: translateflow
+[2026-04-09 13:11:36] [Step5] OK: ui-inspiration-library
+[2026-04-09 13:11:36] [Step5] OK: team-mode-delivery
+[2026-04-09 13:11:36] [Step5] OK: flow-n-intel
+[2026-04-09 13:11:36] [Step5] 集成成功: 4 | 撤销: 0
+[2026-04-09 13:11:36] [Step6] 完成，4 个技能已集成
+[2026-04-09 13:11:37] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-09 13:11:37] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-09 13:11:37] === 完成: 集成4 | Auditor安全4 | 分类测试4 | 安装4 ===
+[2026-04-09 14:41:38] === 四源技能自动更新 Started ===
+[2026-04-09 14:42:02] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-09 14:42:03] [ClawHub Top] rate-limited, retrying in 3.8s (attempt 1/3)...
+[2026-04-09 14:42:10] [Step1] 七类别Top100 + 四源获取 972 个技能
+[2026-04-09 14:42:10] [Step2] 已安装: 3312 | 缺失: 5 (已过滤 406 个已知失效slug)
+[2026-04-09 14:42:12] [Step3] OK: ai-intelligent-report-generator (skillhub)
+[2026-04-09 14:42:12] [Step3] OK: ai-model-comparison (skillhub)
+[2026-04-09 14:42:12] [Step3] OK: aioz-storage-skill (skillhub)
+[2026-04-09 14:42:12] [Step3] OK: textlocal (skillhub)
+[2026-04-09 14:42:12] [Step3] OK: teamdeck (skillhub)
+[2026-04-09 14:42:12] [Step3] 安装完成: 5 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-09 14:42:12] [Step3.5] PASS: ai-intelligent-report-generator
+[2026-04-09 14:42:12] [Step3.5] PASS: ai-model-comparison
+[2026-04-09 14:42:12] [Step3.5] FAIL: aioz-storage-skill -> [high] base64-encode: Base64 encoding/decoding — may hide malicious payloads; [high] base64-encode: Base64 encoding/deco
+[2026-04-09 14:42:12] [Step3.5] PASS: textlocal (仅 medium/low findings)
+[2026-04-09 14:42:12] [Step3.5] PASS: teamdeck (仅 medium/low findings)
+[2026-04-09 14:42:12] [Step3.5] Auditor扫描完成: 安全4 | 危险1
+[2026-04-09 14:42:12] [Step3.6] 卸载危险技能: aioz-storage-skill ([high] base64-encode: Base64 encoding/decoding — may hide ma)
+[2026-04-09 14:42:12] [Step3.6] 已卸载 1/1 个危险技能，0 个核心技能已保护
+[2026-04-09 14:42:12] [Step4] [AI智能] ai-intelligent-report-generator
+[2026-04-09 14:42:12] [Step4] [AI智能] ai-model-comparison
+[2026-04-09 14:42:12] [Step4] [内容创作] textlocal
+[2026-04-09 14:42:12] [Step4] [通讯协作] teamdeck
+[2026-04-09 14:42:12] [Step4] 分类测试完成: 4 个技能已分类
+[2026-04-09 14:42:12]   AI智能: 2 个
+[2026-04-09 14:42:12]   内容创作: 1 个
+[2026-04-09 14:42:12]   通讯协作: 1 个
+[2026-04-09 14:42:12] [Step4] 安全通过: 4 | 危险: 0
+[2026-04-09 14:42:12] [Step5] OK: ai-intelligent-report-generator
+[2026-04-09 14:42:12] [Step5] OK: ai-model-comparison
+[2026-04-09 14:42:12] [Step5] OK: textlocal
+[2026-04-09 14:42:12] [Step5] OK: teamdeck
+[2026-04-09 14:42:12] [Step5] 集成成功: 4 | 撤销: 0
+[2026-04-09 14:42:12] [Step6] 完成，4 个技能已集成
+[2026-04-09 14:42:15] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-09 14:42:19] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-09 14:42:19] === 完成: 集成4 | Auditor安全4 | 分类测试4 | 安装5 ===
+[2026-04-09 16:12:19] === 四源技能自动更新 Started ===
+[2026-04-09 16:12:55] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-09 16:12:57] [ClawHub Top] rate-limited, retrying in 3.9s (attempt 1/3)...
+[2026-04-09 16:13:04] [Step1] 七类别Top100 + 四源获取 911 个技能
+[2026-04-09 16:13:04] [Step2] 已安装: 3316 | 缺失: 6 (已过滤 407 个已知失效slug)
+[2026-04-09 16:13:05] [Step3] OK: afrexai-swot-analyzer (skillhub)
+[2026-04-09 16:13:05] [Step3] OK: jimeng-video (skillhub)
+[2026-04-09 16:13:06] [Step3] OK: godot-mcp (skillhub)
+[2026-04-09 16:13:06] [Step3] OK: ollama-local (skillhub)
+[2026-04-09 16:13:06] [Step3] OK: gemini-computer-use (skillhub)
+[2026-04-09 16:13:06] [Step3] OK: ai-performance-optimizer (skillhub)
+[2026-04-09 16:13:06] [Step3] 安装完成: 6 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-09 16:13:07] [Step3.5] FAIL: ai-performance-optimizer -> [high] fetch-call: HTTP library call — makes outbound network requests; [high] message-tool-abuse: References OpenClaw s
+[2026-04-09 16:13:07] [Step3.5] PASS: ollama-local (仅 medium/low findings)
+[2026-04-09 16:13:07] [Step3.5] PASS: godot-mcp
+[2026-04-09 16:13:07] [Step3.5] PASS: jimeng-video (仅 medium/low findings)
+[2026-04-09 16:13:07] [Step3.5] FAIL: gemini-computer-use -> [high] browser-tool: Browser automation — could access authenticated sessions ⚠️ Undisclosed — not me; [high] browser-to
+[2026-04-09 16:13:07] [Step3.5] PASS: afrexai-swot-analyzer
+[2026-04-09 16:13:07] [Step3.5] Auditor扫描完成: 安全4 | 危险2
+[2026-04-09 16:13:07] [Step3.6] 卸载危险技能: ai-performance-optimizer ([high] fetch-call: HTTP library call — makes outbound networ)
+[2026-04-09 16:13:07] [Step3.6] 卸载危险技能: gemini-computer-use ([high] browser-tool: Browser automation — could access authe)
+[2026-04-09 16:13:07] [Step3.6] 已卸载 2/2 个危险技能，0 个核心技能已保护
+[2026-04-09 16:13:07] [Step4] [未分类] ollama-local
+[2026-04-09 16:13:07] [Step4] [未分类] godot-mcp
+[2026-04-09 16:13:07] [Step4] [开发工具] jimeng-video
+[2026-04-09 16:13:07] [Step4] [AI智能] afrexai-swot-analyzer
+[2026-04-09 16:13:07] [Step4] 分类测试完成: 4 个技能已分类
+[2026-04-09 16:13:07]   AI智能: 1 个
+[2026-04-09 16:13:07]   开发工具: 1 个
+[2026-04-09 16:13:07]   未分类: 2 个
+[2026-04-09 16:13:07] [Step4] 安全通过: 4 | 危险: 0
+[2026-04-09 16:13:07] [Step5] OK: ollama-local
+[2026-04-09 16:13:07] [Step5] OK: godot-mcp
+[2026-04-09 16:13:07] [Step5] OK: jimeng-video
+[2026-04-09 16:13:07] [Step5] OK: afrexai-swot-analyzer
+[2026-04-09 16:13:07] [Step5] 集成成功: 4 | 撤销: 0
+[2026-04-09 16:13:07] [Step6] 完成，4 个技能已集成
+[2026-04-09 16:13:12] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-09 16:13:12] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-09 16:13:12] === 完成: 集成4 | Auditor安全4 | 分类测试4 | 安装6 ===
+[2026-04-09 17:43:12] === 四源技能自动更新 Started ===
+[2026-04-09 17:43:34] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-09 17:43:38] [Step1] 七类别Top100 + 四源获取 1079 个技能
+[2026-04-09 17:43:39] [Step2] 已安装: 3320 | 缺失: 17 (已过滤 409 个已知失效slug)
+[2026-04-09 17:43:40] [Step3] SKIP(not in index): video-creation-pro (skillhub)
+[2026-04-09 17:43:41] [Step3] OK: video-creation-suite (skillhub)
+[2026-04-09 17:43:41] [Step3] OK: tushare (skillhub)
+[2026-04-09 17:43:41] [Step3] OK: fluid-memory (skillhub)
+[2026-04-09 17:43:41] [Step3] OK: idealspot (skillhub)
+[2026-04-09 17:43:41] [Step3] OK: finance-news-pro (skillhub)
+[2026-04-09 17:43:41] [Step3] OK: redquant-ashare-quant (skillhub)
+[2026-04-09 17:43:41] [Step3] OK: bilibili-hot-monitor (skillhub)
+[2026-04-09 17:43:41] [Step3] OK: polymarket-odds (skillhub)
+[2026-04-09 17:43:41] [Step3] OK: ai-project-radar (skillhub)
+[2026-04-09 17:43:41] [Step3] OK: douyin-cover-builder (skillhub)
+[2026-04-09 17:43:41] [Step3] OK: 01-exchange-kill (skillhub)
+[2026-04-09 17:43:41] [Step3] OK: ai-headshot-skill (skillhub)
+[2026-04-09 17:43:42] [Step3] OK: text-tighten-yikailucas (clawhub)
+[2026-04-09 17:43:42] [Step3] OK: ai-debug-assistant (clawhub)
+[2026-04-09 17:43:42] [Step3] SKIP(not in index): video-creation-pro
+[2026-04-09 17:43:42] [Step3] Learned not_in_index: video-creation-pro (source=skillhub) -> rejected_slugs.json
+[2026-04-09 17:43:42] [Step3] 安装完成: 14 成功 / 0 失败 (另有 1 个跳过)
+[2026-04-09 17:43:43] [Step3.5] PASS: ai-project-radar (仅 medium/low findings)
+[2026-04-09 17:43:43] [Step3.5] FAIL: ai-headshot-skill -> [high] fetch-call: HTTP library call — makes outbound network requests
+[2026-04-09 17:43:43] [Step3.5] PASS: idealspot (仅 medium/low findings)
+[2026-04-09 17:43:43] [Step3.5] PASS: 01-exchange-kill (仅 medium/low findings)
+[2026-04-09 17:43:43] [Step3.5] FAIL: ai-debug-assistant -> [high] supply-chain-npm-exec: NPX/npm exec — runs packages without explicit installation
+[2026-04-09 17:43:43] [Step3.5] PASS: douyin-cover-builder
+[2026-04-09 17:43:43] [Step3.5] PASS: polymarket-odds (仅 medium/low findings)
+[2026-04-09 17:43:43] [Step3.5] PASS: video-creation-suite
+[2026-04-09 17:43:43] [Step3.5] FAIL: fluid-memory -> [high] shell-exec-python: Python shell execution — can run arbitrary system commands; [high] shell-exec-python: Python s
+[2026-04-09 17:43:43] [Step3.5] PASS: tushare (仅 medium/low findings)
+[2026-04-09 17:43:43] [Step3.5] PASS: finance-news-pro (仅 medium/low findings)
+[2026-04-09 17:43:44] [Step3.5] PASS: redquant-ashare-quant
+[2026-04-09 17:43:44] [Step3.5] FAIL: bilibili-hot-monitor -> [high] fetch-call: HTTP library call — makes outbound network requests; [high] fetch-call: HTTP library call — makes out
+[2026-04-09 17:43:44] [Step3.5] PASS: text-tighten-yikailucas
+[2026-04-09 17:43:44] [Step3.5] Auditor扫描完成: 安全10 | 危险4
+[2026-04-09 17:43:44] [Step3.6] 卸载危险技能: ai-headshot-skill ([high] fetch-call: HTTP library call — makes outbound networ)
+[2026-04-09 17:43:44] [Step3.6] 卸载危险技能: ai-debug-assistant ([high] supply-chain-npm-exec: NPX/npm exec — runs packages w)
+[2026-04-09 17:43:44] [Step3.6] 卸载危险技能: fluid-memory ([high] shell-exec-python: Python shell execution — can run a)
+[2026-04-09 17:43:44] [Step3.6] 卸载危险技能: bilibili-hot-monitor ([high] fetch-call: HTTP library call — makes outbound networ)
+[2026-04-09 17:43:44] [Step3.6] 已卸载 4/4 个危险技能，0 个核心技能已保护
+[2026-04-09 17:43:44] [Step4] [AI智能] ai-project-radar
+[2026-04-09 17:43:44] [Step4] [开发工具] idealspot
+[2026-04-09 17:43:44] [Step4] [未分类] 01-exchange-kill
+[2026-04-09 17:43:44] [Step4] [开发工具] douyin-cover-builder
+[2026-04-09 17:43:44] [Step4] [未分类] polymarket-odds
+[2026-04-09 17:43:44] [Step4] [开发工具] video-creation-suite
+[2026-04-09 17:43:44] [Step4] [未分类] tushare
+[2026-04-09 17:43:44] [Step4] [数据分析] finance-news-pro
+[2026-04-09 17:43:44] [Step4] [数据分析] redquant-ashare-quant
+[2026-04-09 17:43:44] [Step4] [AI智能] text-tighten-yikailucas
+[2026-04-09 17:43:44] [Step4] 分类测试完成: 10 个技能已分类
+[2026-04-09 17:43:44]   AI智能: 2 个
+[2026-04-09 17:43:44]   开发工具: 3 个
+[2026-04-09 17:43:44]   数据分析: 2 个
+[2026-04-09 17:43:44]   未分类: 3 个
+[2026-04-09 17:43:44] [Step4] 安全通过: 10 | 危险: 0
+[2026-04-09 17:43:44] [Step5] OK: ai-project-radar
+[2026-04-09 17:43:44] [Step5] OK: idealspot
+[2026-04-09 17:43:44] [Step5] OK: 01-exchange-kill
+[2026-04-09 17:43:44] [Step5] OK: douyin-cover-builder
+[2026-04-09 17:43:44] [Step5] OK: polymarket-odds
+[2026-04-09 17:43:44] [Step5] OK: video-creation-suite
+[2026-04-09 17:43:44] [Step5] OK: tushare
+[2026-04-09 17:43:44] [Step5] OK: finance-news-pro
+[2026-04-09 17:43:44] [Step5] OK: redquant-ashare-quant
+[2026-04-09 17:43:44] [Step5] OK: text-tighten-yikailucas
+[2026-04-09 17:43:44] [Step5] 集成成功: 10 | 撤销: 0
+[2026-04-09 17:43:44] [Step6] 完成，10 个技能已集成
+[2026-04-09 17:43:44] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-09 17:43:46] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-09 17:43:46] === 完成: 集成10 | Auditor安全10 | 分类测试10 | 安装14 ===
+[2026-04-09 19:13:46] === 四源技能自动更新 Started ===
+[2026-04-09 19:14:11] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-09 19:14:14] [Step1] 七类别Top100 + 四源获取 962 个技能
+[2026-04-09 19:14:14] [Step2] 已安装: 3330 | 缺失: 3 (已过滤 414 个已知失效slug)
+[2026-04-09 19:14:15] [Step3] OK: jvs-enterprise-wechat (skillhub)
+[2026-04-09 19:14:15] [Step3] OK: wechat-writer (skillhub)
+[2026-04-09 19:14:16] [Step3] OK: bookforge-disaster-risk-assessment (clawhub)
+[2026-04-09 19:14:16] [Step3] 安装完成: 3 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-09 19:14:16] [Step3.5] PASS: wechat-writer (文档技能: 高风险均为误报)
+[2026-04-09 19:14:16] [Step3.5] PASS: jvs-enterprise-wechat (仅 medium/low findings)
+[2026-04-09 19:14:16] [Step3.5] PASS: bookforge-disaster-risk-assessment (仅 medium/low findings)
+[2026-04-09 19:14:16] [Step3.5] Auditor扫描完成: 安全3 | 危险0
+[2026-04-09 19:14:16] [Step3.6] 已卸载 0/0 个危险技能，0 个核心技能已保护
+[2026-04-09 19:14:16] [Step4] [效率提升] wechat-writer
+[2026-04-09 19:14:16] [Step4] [AI智能] jvs-enterprise-wechat
+[2026-04-09 19:14:16] [Step4] [安全合规] bookforge-disaster-risk-assessment
+[2026-04-09 19:14:16] [Step4] 分类测试完成: 3 个技能已分类
+[2026-04-09 19:14:16]   AI智能: 1 个
+[2026-04-09 19:14:16]   效率提升: 1 个
+[2026-04-09 19:14:16]   安全合规: 1 个
+[2026-04-09 19:14:16] [Step4] 安全通过: 3 | 危险: 0
+[2026-04-09 19:14:16] [Step5] OK: wechat-writer
+[2026-04-09 19:14:16] [Step5] OK: jvs-enterprise-wechat
+[2026-04-09 19:14:16] [Step5] OK: bookforge-disaster-risk-assessment
+[2026-04-09 19:14:16] [Step5] 集成成功: 3 | 撤销: 0
+[2026-04-09 19:14:16] [Step6] 完成，3 个技能已集成
+[2026-04-09 19:14:17] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-09 19:14:18] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-09 19:14:18] === 完成: 集成3 | Auditor安全3 | 分类测试3 | 安装3 ===
+[2026-04-09 20:44:18] === 四源技能自动更新 Started ===
+[2026-04-09 20:44:38] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-09 20:44:44] [Step1] 七类别Top100 + 四源获取 1086 个技能
+[2026-04-09 20:44:44] [Step2] 已安装: 3333 | 缺失: 2 (已过滤 414 个已知失效slug)
+[2026-04-09 20:44:46] [Step3] OK: deepvista-chat (clawhub)
+[2026-04-09 20:44:46] [Step3] OK: text-repeater (clawhub)
+[2026-04-09 20:44:46] [Step3] 安装完成: 2 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-09 20:44:47] [Step3.5] PASS: text-repeater (文档技能: 高风险均为误报)
+[2026-04-09 20:44:47] [Step3.5] PASS: deepvista-chat (仅 medium/low findings)
+[2026-04-09 20:44:47] [Step3.5] Auditor扫描完成: 安全2 | 危险0
+[2026-04-09 20:44:47] [Step3.6] 已卸载 0/0 个危险技能，0 个核心技能已保护
+[2026-04-09 20:44:47] [Step4] [内容创作] text-repeater
+[2026-04-09 20:44:47] [Step4] [通讯协作] deepvista-chat
+[2026-04-09 20:44:47] [Step4] 分类测试完成: 2 个技能已分类
+[2026-04-09 20:44:47]   内容创作: 1 个
+[2026-04-09 20:44:47]   通讯协作: 1 个
+[2026-04-09 20:44:47] [Step4] 安全通过: 2 | 危险: 0
+[2026-04-09 20:44:47] [Step5] OK: text-repeater
+[2026-04-09 20:44:47] [Step5] OK: deepvista-chat
+[2026-04-09 20:44:47] [Step5] 集成成功: 2 | 撤销: 0
+[2026-04-09 20:44:47] [Step6] 完成，2 个技能已集成
+[2026-04-09 20:44:47] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-09 20:44:49] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-09 20:44:49] === 完成: 集成2 | Auditor安全2 | 分类测试2 | 安装2 ===
+[2026-04-09 22:14:49] === 四源技能自动更新 Started ===
+[2026-04-09 22:15:11] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-09 22:15:15] [Step1] 七类别Top100 + 四源获取 995 个技能
+[2026-04-09 22:15:15] [Step2] 已安装: 3335 | 缺失: 0 (已过滤 414 个已知失效slug)
+[2026-04-09 22:15:15] 所有技能已是最新
+[2026-04-09 23:45:16] === 四源技能自动更新 Started ===
+[2026-04-09 23:45:16] 所有技能已是最新 (cached, 1.5h ago < 2h)，跳过 Step1
+[2026-04-10 01:15:16] === 四源技能自动更新 Started ===
+[2026-04-10 01:15:39] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-10 01:15:40] [Step1] 七类别Top100 + 四源获取 1097 个技能
+[2026-04-10 01:15:40] [Step2] 已安装: 3335 | 缺失: 5 (已过滤 414 个已知失效slug)
+[2026-04-10 01:15:42] [Step3] OK: task-tracker-claw (skillhub)
+[2026-04-10 01:15:42] [Step3] OK: llm-wiki-pro (skillhub)
+[2026-04-10 01:15:42] [Step3] OK: task-scheduler-py (skillhub)
+[2026-04-10 01:15:45] [Step3] OK: pretext-text-measurement (clawhub)
+[2026-04-10 01:15:45] [Step3] OK: automd-viz (clawhub)
+[2026-04-10 01:15:45] [Step3] 安装完成: 5 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-10 01:15:45] [Step3.5] PASS: llm-wiki-pro (仅 medium/low findings)
+[2026-04-10 01:15:45] [Step3.5] PASS: task-tracker-claw
+[2026-04-10 01:15:46] [Step3.5] PASS: task-scheduler-py (预期行为白名单: fetch-call, sleeper-date-trigger, absolute-path-unix, shell-exec-python)
+[2026-04-10 01:15:46] [Step3.5] PASS: automd-viz (仅 medium/low findings)
+[2026-04-10 01:15:46] [Step3.5] FAIL: pretext-text-measurement -> [high] shell-exec-node: Node.js shell execution — can run arbitrary system commands; [high] shell-exec-node: Node.js she
+[2026-04-10 01:15:46] [Step3.5] Auditor扫描完成: 安全4 | 危险1
+[2026-04-10 01:15:46] [Step3.6] 卸载危险技能: pretext-text-measurement ([high] shell-exec-node: Node.js shell execution — can run ar)
+[2026-04-10 01:15:46] [Step3.6] 已卸载 1/1 个危险技能，0 个核心技能已保护
+[2026-04-10 01:15:46] [Step4] [AI智能] llm-wiki-pro
+[2026-04-10 01:15:46] [Step4] [效率提升] task-tracker-claw
+[2026-04-10 01:15:46] [Step4] [效率提升] task-scheduler-py
+[2026-04-10 01:15:46] [Step4] [未分类] automd-viz
+[2026-04-10 01:15:46] [Step4] 分类测试完成: 4 个技能已分类
+[2026-04-10 01:15:46]   AI智能: 1 个
+[2026-04-10 01:15:46]   效率提升: 2 个
+[2026-04-10 01:15:46]   未分类: 1 个
+[2026-04-10 01:15:46] [Step4] 安全通过: 4 | 危险: 0
+[2026-04-10 01:15:46] [Step5] OK: llm-wiki-pro
+[2026-04-10 01:15:46] [Step5] OK: task-tracker-claw
+[2026-04-10 01:15:46] [Step5] OK: task-scheduler-py
+[2026-04-10 01:15:46] [Step5] OK: automd-viz
+[2026-04-10 01:15:46] [Step5] 集成成功: 4 | 撤销: 0
+[2026-04-10 01:15:46] [Step6] 完成，4 个技能已集成
+[2026-04-10 01:15:48] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-10 01:15:52] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-10 01:15:52] === 完成: 集成4 | Auditor安全4 | 分类测试4 | 安装5 ===
+[2026-04-10 02:45:52] === 四源技能自动更新 Started ===
+[2026-04-10 02:46:15] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-10 02:46:16] [Step1] 七类别Top100 + 四源获取 1092 个技能
+[2026-04-10 02:46:16] [Step2] 已安装: 3339 | 缺失: 0 (已过滤 415 个已知失效slug)
+[2026-04-10 02:46:16] 所有技能已是最新
+[2026-04-10 04:16:16] === 四源技能自动更新 Started ===
+[2026-04-10 04:16:16] 所有技能已是最新 (cached, 1.5h ago < 2h)，跳过 Step1
+[2026-04-10 05:46:17] === 四源技能自动更新 Started ===
+[2026-04-10 05:46:39] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-10 05:46:40] [Step1] 七类别Top100 + 四源获取 1089 个技能
+[2026-04-10 05:46:40] [Step2] 已安装: 3339 | 缺失: 1 (已过滤 415 个已知失效slug)
+[2026-04-10 05:46:43] [Step3] OK: ai-sbti-skill-test (clawhub)
+[2026-04-10 05:46:43] [Step3] 安装完成: 1 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-10 05:46:44] [Step3.5] PASS: ai-sbti-skill-test (仅 medium/low findings)
+[2026-04-10 05:46:44] [Step3.5] Auditor扫描完成: 安全1 | 危险0
+[2026-04-10 05:46:44] [Step3.6] 已卸载 0/0 个危险技能，0 个核心技能已保护
+[2026-04-10 05:46:44] [Step4] [AI智能] ai-sbti-skill-test
+[2026-04-10 05:46:44] [Step4] 分类测试完成: 1 个技能已分类
+[2026-04-10 05:46:44]   AI智能: 1 个
+[2026-04-10 05:46:44] [Step4] 安全通过: 1 | 危险: 0
+[2026-04-10 05:46:44] [Step5] OK: ai-sbti-skill-test
+[2026-04-10 05:46:44] [Step5] 集成成功: 1 | 撤销: 0
+[2026-04-10 05:46:44] [Step6] 完成，1 个技能已集成
+[2026-04-10 05:46:44] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-10 05:46:46] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-10 05:46:46] === 完成: 集成1 | Auditor安全1 | 分类测试1 | 安装1 ===
+[2026-04-10 06:53:13] === 四源技能自动更新 Started ===
+[2026-04-10 06:54:06] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-10 06:54:11] [Step1] 七类别Top100 + 四源获取 1002 个技能
+[2026-04-10 06:54:11] [Step2] 已安装: 3340 | 缺失: 3 (已过滤 415 个已知失效slug)
+[2026-04-10 06:54:12] [Step3] OK: ai-usage (skillhub)
+[2026-04-10 06:54:12] [Step3] OK: ai-sentinel (skillhub)
+[2026-04-10 06:54:12] [Step3] OK: aiqbee (skillhub)
+[2026-04-10 06:54:12] [Step3] 安装完成: 3 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-10 06:54:12] [Step3.5] PASS: ai-sentinel (仅 medium/low findings)
+[2026-04-10 06:54:12] [Step3.5] FAIL: ai-usage -> [high] shell-exec-python: Python shell execution — can run arbitrary system commands
+[2026-04-10 06:54:13] [Step3.5] PASS: aiqbee (仅 medium/low findings)
+[2026-04-10 06:54:13] [Step3.5] Auditor扫描完成: 安全2 | 危险1
+[2026-04-10 06:54:13] [Step3.6] 卸载危险技能: ai-usage ([high] shell-exec-python: Python shell execution — can run a)
+[2026-04-10 06:54:13] [Step3.6] 已卸载 1/1 个危险技能，0 个核心技能已保护
+[2026-04-10 06:54:13] [Step4] [AI智能] ai-sentinel
+[2026-04-10 06:54:13] [Step4] [AI智能] aiqbee
+[2026-04-10 06:54:13] [Step4] 分类测试完成: 2 个技能已分类
+[2026-04-10 06:54:13]   AI智能: 2 个
+[2026-04-10 06:54:13] [Step4] 安全通过: 2 | 危险: 0
+[2026-04-10 06:54:13] [Step5] OK: ai-sentinel
+[2026-04-10 06:54:13] [Step5] OK: aiqbee
+[2026-04-10 06:54:13] [Step5] 集成成功: 2 | 撤销: 0
+[2026-04-10 06:54:13] [Step6] 完成，2 个技能已集成
+[2026-04-10 06:54:13] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-10 06:54:17] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-10 06:54:17] === 完成: 集成2 | Auditor安全2 | 分类测试2 | 安装3 ===
+[2026-04-10 08:24:17] === 四源技能自动更新 Started ===
+[2026-04-10 08:24:33] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-10 08:24:35] [Step1] 七类别Top100 + 四源获取 1094 个技能
+[2026-04-10 08:24:35] [Step2] 已安装: 3342 | 缺失: 0 (已过滤 416 个已知失效slug)
+[2026-04-10 08:24:35] 所有技能已是最新
+[2026-04-10 09:54:35] === 四源技能自动更新 Started ===
+[2026-04-10 09:54:35] 所有技能已是最新 (cached, 1.5h ago < 2h)，跳过 Step1
+[2026-04-10 11:24:35] === 四源技能自动更新 Started ===
+[2026-04-10 11:24:59] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-10 11:25:00] [ClawHub Top] rate-limited, retrying in 3.4s (attempt 1/3)...
+[2026-04-10 11:25:05] [Step1] 七类别Top100 + 四源获取 937 个技能
+[2026-04-10 11:25:05] [Step2] 已安装: 3342 | 缺失: 2 (已过滤 416 个已知失效slug)
+[2026-04-10 11:25:06] [Step3] OK: mtg-edh-deckbuilder (skillhub)
+[2026-04-10 11:25:06] [Step3] OK: image-prompt-generator (skillhub)
+[2026-04-10 11:25:06] [Step3] 安装完成: 2 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-10 11:25:06] [Step3.5] PASS: mtg-edh-deckbuilder (仅 medium/low findings)
+[2026-04-10 11:25:06] [Step3.5] PASS: image-prompt-generator
+[2026-04-10 11:25:06] [Step3.5] Auditor扫描完成: 安全2 | 危险0
+[2026-04-10 11:25:06] [Step3.6] 已卸载 0/0 个危险技能，0 个核心技能已保护
+[2026-04-10 11:25:06] [Step4] [开发工具] mtg-edh-deckbuilder
+[2026-04-10 11:25:06] [Step4] [内容创作] image-prompt-generator
+[2026-04-10 11:25:06] [Step4] 分类测试完成: 2 个技能已分类
+[2026-04-10 11:25:06]   开发工具: 1 个
+[2026-04-10 11:25:06]   内容创作: 1 个
+[2026-04-10 11:25:06] [Step4] 安全通过: 2 | 危险: 0
+[2026-04-10 11:25:06] [Step5] OK: mtg-edh-deckbuilder
+[2026-04-10 11:25:06] [Step5] OK: image-prompt-generator
+[2026-04-10 11:25:06] [Step5] 集成成功: 2 | 撤销: 0
+[2026-04-10 11:25:06] [Step6] 完成，2 个技能已集成
+[2026-04-10 11:25:07] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-10 11:25:07] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-10 11:25:07] === 完成: 集成2 | Auditor安全2 | 分类测试2 | 安装2 ===
+[2026-04-10 12:55:07] === 四源技能自动更新 Started ===
+[2026-04-10 12:55:39] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-10 12:55:42] [Step1] 七类别Top100 + 四源获取 1083 个技能
+[2026-04-10 12:55:42] [Step2] 已安装: 3344 | 缺失: 0 (已过滤 416 个已知失效slug)
+[2026-04-10 12:55:42] 所有技能已是最新
+[2026-04-10 14:25:42] === 四源技能自动更新 Started ===
+[2026-04-10 14:25:42] 所有技能已是最新 (cached, 1.5h ago < 2h)，跳过 Step1
+[2026-04-10 15:55:42] === 四源技能自动更新 Started ===
+[2026-04-10 15:56:10] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-10 15:56:12] [Step1] 七类别Top100 + 四源获取 986 个技能
+[2026-04-10 15:56:12] [Step2] 已安装: 3344 | 缺失: 0 (已过滤 416 个已知失效slug)
+[2026-04-10 15:56:12] 所有技能已是最新
+[2026-04-10 17:26:13] === 四源技能自动更新 Started ===
+[2026-04-10 17:26:13] 所有技能已是最新 (cached, 1.5h ago < 2h)，跳过 Step1
+[2026-04-10 18:56:13] === 四源技能自动更新 Started ===
+[2026-04-10 18:56:41] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-10 18:56:44] [Step1] 七类别Top100 + 四源获取 1082 个技能
+[2026-04-10 18:56:44] [Step2] 已安装: 3344 | 缺失: 1 (已过滤 416 个已知失效slug)
+[2026-04-10 18:56:45] [Step3] OK: ai-daily-report (skillhub)
+[2026-04-10 18:56:45] [Step3] 安装完成: 1 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-10 18:56:45] [Step3.5] PASS: ai-daily-report (仅 medium/low findings)
+[2026-04-10 18:56:45] [Step3.5] Auditor扫描完成: 安全1 | 危险0
+[2026-04-10 18:56:45] [Step3.6] 已卸载 0/0 个危险技能，0 个核心技能已保护
+[2026-04-10 18:56:45] [Step4] [AI智能] ai-daily-report
+[2026-04-10 18:56:45] [Step4] 分类测试完成: 1 个技能已分类
+[2026-04-10 18:56:45]   AI智能: 1 个
+[2026-04-10 18:56:45] [Step4] 安全通过: 1 | 危险: 0
+[2026-04-10 18:56:45] [Step5] OK: ai-daily-report
+[2026-04-10 18:56:45] [Step5] 集成成功: 1 | 撤销: 0
+[2026-04-10 18:56:45] [Step6] 完成，1 个技能已集成
+[2026-04-10 18:56:47] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-10 18:56:47] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-10 18:56:47] === 完成: 集成1 | Auditor安全1 | 分类测试1 | 安装1 ===
+[2026-04-10 20:26:48] === 四源技能自动更新 Started ===
+[2026-04-10 20:27:06] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-10 20:27:11] [Step1] 七类别Top100 + 四源获取 1079 个技能
+[2026-04-10 20:27:11] [Step2] 已安装: 3345 | 缺失: 4 (已过滤 416 个已知失效slug)
+[2026-04-10 20:27:12] [Step3] OK: ai-research-analyst (skillhub)
+[2026-04-10 20:27:12] [Step3] OK: aiznt-volcseed (skillhub)
+[2026-04-10 20:27:12] [Step3] OK: ai-deepnews (skillhub)
+[2026-04-10 20:27:12] [Step3] OK: ai-vlog-editor-zh (skillhub)
+[2026-04-10 20:27:12] [Step3] 安装完成: 4 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-10 20:27:13] [Step3.5] FAIL: ai-research-analyst -> [high] path-traversal: Path traversal — attempts to access files outside skill directory
+[2026-04-10 20:27:13] [Step3.5] PASS: ai-deepnews (仅 medium/low findings)
+[2026-04-10 20:27:13] [Step3.5] PASS: aiznt-volcseed (仅 medium/low findings)
+[2026-04-10 20:27:13] [Step3.5] PASS: ai-vlog-editor-zh (仅 medium/low findings)
+[2026-04-10 20:27:13] [Step3.5] Auditor扫描完成: 安全3 | 危险1
+[2026-04-10 20:27:13] [Step3.6] 卸载危险技能: ai-research-analyst ([high] path-traversal: Path traversal — attempts to access f)
+[2026-04-10 20:27:13] [Step3.6] 已卸载 1/1 个危险技能，0 个核心技能已保护
+[2026-04-10 20:27:13] [Step4] [AI智能] ai-deepnews
+[2026-04-10 20:27:13] [Step4] [AI智能] aiznt-volcseed
+[2026-04-10 20:27:13] [Step4] [AI智能] ai-vlog-editor-zh
+[2026-04-10 20:27:13] [Step4] 分类测试完成: 3 个技能已分类
+[2026-04-10 20:27:13]   AI智能: 3 个
+[2026-04-10 20:27:13] [Step4] 安全通过: 3 | 危险: 0
+[2026-04-10 20:27:13] [Step5] OK: ai-deepnews
+[2026-04-10 20:27:13] [Step5] OK: aiznt-volcseed
+[2026-04-10 20:27:13] [Step5] OK: ai-vlog-editor-zh
+[2026-04-10 20:27:13] [Step5] 集成成功: 3 | 撤销: 0
+[2026-04-10 20:27:13] [Step6] 完成，3 个技能已集成
+[2026-04-10 20:27:13] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-10 20:27:14] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-10 20:27:14] === 完成: 集成3 | Auditor安全3 | 分类测试3 | 安装4 ===
+[2026-04-10 21:12:51] === 四源技能自动更新 Started ===
+[2026-04-10 21:13:38] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-10 21:13:43] [Step1] 七类别Top100 + 四源获取 1080 个技能
+[2026-04-10 21:13:43] [Step2] 已安装: 3348 | 缺失: 10 (已过滤 417 个已知失效slug)
+[2026-04-10 21:13:45] [Step3] OK: terminal-ui-website-design (skillhub)
+[2026-04-10 21:13:45] [Step3] OK: mux-video (skillhub)
+[2026-04-10 21:13:45] [Step3] OK: ima-skills (skillhub)
+[2026-04-10 21:13:45] [Step3] OK: research-idea (skillhub)
+[2026-04-10 21:13:45] [Step3] OK: xhs-full-operation-workflow (skillhub)
+[2026-04-10 21:13:45] [Step3] OK: secucheck (skillhub)
+[2026-04-10 21:13:45] [Step3] OK: office (skillhub)
+[2026-04-10 21:13:45] [Step3] OK: ai-specialists (skillhub)
+[2026-04-10 21:13:45] [Step3] OK: onchain (skillhub)
+[2026-04-10 21:13:46] [Step3] OK: anthropic-chat (clawhub)
+[2026-04-10 21:13:46] [Step3] 安装完成: 10 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-10 21:13:46] [Step3.5] FAIL: ai-specialists -> [high] social-moltbook: Moltbook connection — known security risk (leaked 1.5M API tokens) (downgraded —
+[2026-04-10 21:13:46] [Step3.5] PASS: onchain (仅 medium/low findings)
+[2026-04-10 21:13:47] [Step3.5] PASS: research-idea (仅 medium/low findings)
+[2026-04-10 21:13:47] [Step3.5] PASS: mux-video
+[2026-04-10 21:13:47] [Step3.5] PASS: ima-skills (仅 medium/low findings)
+[2026-04-10 21:13:47] [Step3.5] FAIL: anthropic-chat -> [high] env-sensitive-access: Reads sensitive environment variables — could harvest API keys or secrets ⚠️ Und; [high] en
+[2026-04-10 21:13:47] [Step3.5] PASS: terminal-ui-website-design (仅 medium/low findings)
+[2026-04-10 21:13:47] [Step3.5] PASS: xhs-full-operation-workflow
+[2026-04-10 21:13:47] [Step3.5] PASS: office
+[2026-04-10 21:13:47] [Step3.5] FAIL: secucheck -> [high] supply-chain-curl-pipe: Curl pipe to shell — executes remote code without verification (downgraded — in ; [critic
+[2026-04-10 21:13:47] [Step3.5] Auditor扫描完成: 安全7 | 危险3
+[2026-04-10 21:13:47] [Step3.6] 卸载危险技能: ai-specialists ([high] social-moltbook: Moltbook connection — known security)
+[2026-04-10 21:13:47] [Step3.6] 卸载危险技能: anthropic-chat ([high] env-sensitive-access: Reads sensitive environment var)
+[2026-04-10 21:13:47] [Step3.6] 卸载危险技能: secucheck ([high] supply-chain-curl-pipe: Curl pipe to shell — executes)
+[2026-04-10 21:13:47] [Step3.6] 已卸载 3/3 个危险技能，0 个核心技能已保护
+[2026-04-10 21:13:47] [Step4] [AI智能] onchain
+[2026-04-10 21:13:47] [Step4] [开发工具] research-idea
+[2026-04-10 21:13:47] [Step4] [开发工具] mux-video
+[2026-04-10 21:13:47] [Step4] [未分类] ima-skills
+[2026-04-10 21:13:47] [Step4] [开发工具] terminal-ui-website-design
+[2026-04-10 21:13:47] [Step4] [效率提升] xhs-full-operation-workflow
+[2026-04-10 21:13:47] [Step4] [未分类] office
+[2026-04-10 21:13:47] [Step4] 分类测试完成: 7 个技能已分类
+[2026-04-10 21:13:47]   AI智能: 1 个
+[2026-04-10 21:13:47]   开发工具: 3 个
+[2026-04-10 21:13:47]   效率提升: 1 个
+[2026-04-10 21:13:47]   未分类: 2 个
+[2026-04-10 21:13:47] [Step4] UNSAFE: ima-skills -> 无 SKILL.md/skills.md
+[2026-04-10 21:13:47] [Step4] 安全通过: 6 | 危险: 1
+[2026-04-10 21:13:47] [Step5] OK: onchain
+[2026-04-10 21:13:47] [Step5] OK: research-idea
+[2026-04-10 21:13:47] [Step5] OK: mux-video
+[2026-04-10 21:13:47] [Step5] OK: terminal-ui-website-design
+[2026-04-10 21:13:47] [Step5] OK: xhs-full-operation-workflow
+[2026-04-10 21:13:47] [Step5] OK: office
+[2026-04-10 21:13:47] [Step5] 集成成功: 6 | 撤销: 0
+[2026-04-10 21:13:47] [Step6] 完成，6 个技能已集成
+[2026-04-10 21:13:48] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-10 21:13:48] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-10 21:13:48] === 完成: 集成6 | Auditor安全7 | 分类测试7 | 安装10 ===
+[2026-04-10 22:31:04] === 四源技能自动更新 Started ===
+[2026-04-10 22:31:50] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-10 22:31:51] [ClawHub Top] rate-limited, retrying in 3.2s (attempt 1/3)...
+[2026-04-10 22:32:00] [ClawHub Top] rate-limited, retrying in 8.8s (attempt 2/3)...
+[2026-04-10 22:32:14] [ClawHub Top] rate-limited, retrying in 20.4s (attempt 3/3)...
+[2026-04-10 22:32:34] [ClawHub Top] explore failed after retries: - Fetching latest skills
+✖ Rate limit exceeded
+Error: Rate limit exceeded
+
+[2026-04-10 22:32:34] [ClawHub Top] 设置 1h 冷静期
+[2026-04-10 22:32:34] [Step1] 七类别Top100 + 四源获取 955 个技能
+[2026-04-10 22:32:35] [Step2] 已安装: 3355 | 缺失: 15 (已过滤 420 个已知失效slug)
+[2026-04-10 22:32:39] [Step3] OK: LINE (skillhub)
+[2026-04-10 22:32:39] [Step3] OK: sui-move (skillhub)
+[2026-04-10 22:32:39] [Step3] OK: tool-calling (skillhub)
+[2026-04-10 22:32:39] [Step3] OK: security-skill-hub (skillhub)
+[2026-04-10 22:32:39] [Step3] OK: nathan-legal-os-pro (skillhub)
+[2026-04-10 22:32:39] [Step3] OK: praesidia-a2 (skillhub)
+[2026-04-10 22:32:39] [Step3] OK: line-rich-messages (skillhub)
+[2026-04-10 22:32:39] [Step3] OK: cron (skillhub)
+[2026-04-10 22:32:39] [Step3] OK: equity-analyst-test (skillhub)
+[2026-04-10 22:32:39] [Step3] OK: typescript (skillhub)
+[2026-04-10 22:32:39] [Step3] OK: build-discipline (skillhub)
+[2026-04-10 22:32:39] [Step3] OK: ui-new (skillhub)
+[2026-04-10 22:32:39] [Step3] OK: perry-workspaces (skillhub)
+[2026-04-10 22:32:39] [Step3] OK: senior-dev (skillhub)
+[2026-04-10 22:32:39] [Step3] OK: wxwork (skillhub)
+[2026-04-10 22:32:39] [Step3] 安装完成: 15 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-10 22:32:40] [Step3.5] PASS: perry-workspaces (仅 medium/low findings)
+[2026-04-10 22:32:40] [Step3.5] PASS: senior-dev (仅 medium/low findings)
+[2026-04-10 22:32:40] [Step3.5] PASS: ui-new (仅 medium/low findings)
+[2026-04-10 22:32:40] [Step3.5] PASS: build-discipline
+[2026-04-10 22:32:40] [Step3.5] PASS: sui-move (仅 medium/low findings)
+[2026-04-10 22:32:40] [Step3.5] PASS: equity-analyst-test (仅 medium/low findings)
+[2026-04-10 22:32:40] [Step3.5] PASS: cron (仅 medium/low findings)
+[2026-04-10 22:32:41] [Step3.5] PASS: wxwork
+[2026-04-10 22:32:41] [Step3.5] PASS: line-rich-messages (仅 medium/low findings)
+[2026-04-10 22:32:41] [Step3.5] PASS: LINE (仅 medium/low findings)
+[2026-04-10 22:32:41] [Step3.5] PASS: praesidia-a2 (仅 medium/low findings)
+[2026-04-10 22:32:41] [Step3.5] FAIL: nathan-legal-os-pro -> [high] shell-exec-python: Python shell execution — can run arbitrary system commands; [high] shell-exec-python: Python s
+[2026-04-10 22:32:41] [Step3.5] PASS: security-skill-hub
+[2026-04-10 22:32:42] [Step3.5] PASS: typescript
+[2026-04-10 22:32:42] [Step3.5] PASS: tool-calling
+[2026-04-10 22:32:42] [Step3.5] Auditor扫描完成: 安全14 | 危险1
+[2026-04-10 22:32:42] [Step3.6] 卸载危险技能: nathan-legal-os-pro ([high] shell-exec-python: Python shell execution — can run a)
+[2026-04-10 22:32:42] [Step3.6] 已卸载 1/1 个危险技能，0 个核心技能已保护
+[2026-04-10 22:32:43] [Step4] [未分类] perry-workspaces
+[2026-04-10 22:32:43] [Step4] [未分类] senior-dev
+[2026-04-10 22:32:43] [Step4] [开发工具] ui-new
+[2026-04-10 22:32:43] [Step4] [开发工具] build-discipline
+[2026-04-10 22:32:43] [Step4] [开发工具] sui-move
+[2026-04-10 22:32:43] [Step4] [开发工具] equity-analyst-test
+[2026-04-10 22:32:43] [Step4] [未分类] cron
+[2026-04-10 22:32:43] [Step4] [通讯协作] wxwork
+[2026-04-10 22:32:43] [Step4] [通讯协作] line-rich-messages
+[2026-04-10 22:32:43] [Step4] [开发工具] LINE
+[2026-04-10 22:32:43] [Step4] [未分类] praesidia-a2
+[2026-04-10 22:32:43] [Step4] [安全合规] security-skill-hub
+[2026-04-10 22:32:43] [Step4] [未分类] typescript
+[2026-04-10 22:32:43] [Step4] [未分类] tool-calling
+[2026-04-10 22:32:43] [Step4] 分类测试完成: 14 个技能已分类
+[2026-04-10 22:32:43]   开发工具: 5 个
+[2026-04-10 22:32:43]   通讯协作: 2 个
+[2026-04-10 22:32:43]   安全合规: 1 个
+[2026-04-10 22:32:43]   未分类: 6 个
+[2026-04-10 22:32:43] [Step4] 安全通过: 14 | 危险: 0
+[2026-04-10 22:32:43] [Step5] OK: perry-workspaces
+[2026-04-10 22:32:43] [Step5] OK: senior-dev
+[2026-04-10 22:32:43] [Step5] OK: ui-new
+[2026-04-10 22:32:43] [Step5] OK: build-discipline
+[2026-04-10 22:32:43] [Step5] OK: sui-move
+[2026-04-10 22:32:43] [Step5] OK: equity-analyst-test
+[2026-04-10 22:32:43] [Step5] OK: cron
+[2026-04-10 22:32:43] [Step5] OK: wxwork
+[2026-04-10 22:32:43] [Step5] OK: line-rich-messages
+[2026-04-10 22:32:43] [Step5] OK: LINE
+[2026-04-10 22:32:43] [Step5] OK: praesidia-a2
+[2026-04-10 22:32:43] [Step5] OK: security-skill-hub
+[2026-04-10 22:32:43] [Step5] OK: typescript
+[2026-04-10 22:32:43] [Step5] OK: tool-calling
+[2026-04-10 22:32:43] [Step5] 集成成功: 14 | 撤销: 0
+[2026-04-10 22:32:43] [Step6] 完成，14 个技能已集成
+[2026-04-10 22:32:46] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-10 22:32:46] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-10 22:32:46] === 完成: 集成14 | Auditor安全14 | 分类测试14 | 安装15 ===
+[2026-04-11 00:02:47] === 四源技能自动更新 Started ===
+[2026-04-11 00:03:28] [ClawHub Top] 冷静期结束，恢复 ClawHub Top
+[2026-04-11 00:03:30] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-11 00:03:34] [Step1] 七类别Top100 + 四源获取 1082 个技能
+[2026-04-11 00:03:34] [Step2] 已安装: 3369 | 缺失: 41 (已过滤 421 个已知失效slug)
+[2026-04-11 00:03:36] [Step3] OK: stock-research-engine (skillhub)
+[2026-04-11 00:03:36] [Step3] OK: code-stats (skillhub)
+[2026-04-11 00:03:36] [Step3] OK: clawslist (skillhub)
+[2026-04-11 00:03:36] [Step3] OK: aipexbase-cli (skillhub)
+[2026-04-11 00:03:36] [Step3] OK: gitlab-workflow (skillhub)
+[2026-04-11 00:03:36] [Step3] OK: video-clip-assistant (skillhub)
+[2026-04-11 00:03:36] [Step3] OK: ios-simulator (skillhub)
+[2026-04-11 00:03:36] [Step3] OK: book-guitar-lessons (skillhub)
+[2026-04-11 00:03:36] [Step3] OK: linear (skillhub)
+[2026-04-11 00:03:36] [Step3] OK: quit-porn (skillhub)
+[2026-04-11 00:03:36] [Step3] OK: sui-auto-test (skillhub)
+[2026-04-11 00:03:36] [Step3] OK: samma-suit (skillhub)
+[2026-04-11 00:03:36] [Step3] OK: lobster-jobs (skillhub)
+[2026-04-11 00:03:36] [Step3] OK: grok-imagine-video (skillhub)
+[2026-04-11 00:03:36] [Step3] OK: solvr (skillhub)
+[2026-04-11 00:03:36] [Step3] 安装完成: 15 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-11 00:03:36] [Step3.5] PASS: aipexbase-cli
+[2026-04-11 00:03:36] [Step3.5] PASS: clawslist (仅 medium/low findings)
+[2026-04-11 00:03:36] [Step3.5] PASS: ios-simulator (仅 medium/low findings)
+[2026-04-11 00:03:36] [Step3.5] FAIL: grok-imagine-video -> [high] fetch-call: HTTP library call — makes outbound network requests; [high] fetch-call: HTTP library call — makes out
+[2026-04-11 00:03:36] [Step3.5] PASS: video-clip-assistant (预期行为白名单: shell-exec-python)
+[2026-04-11 00:03:36] [Step3.5] PASS: gitlab-workflow (仅 medium/low findings)
+[2026-04-11 00:03:36] [Step3.5] PASS: stock-research-engine
+[2026-04-11 00:03:37] [Step3.5] PASS: code-stats (仅 medium/low findings)
+[2026-04-11 00:03:37] [Step3.5] FAIL: solvr -> [high] social-moltbook: Moltbook connection — known security risk (leaked 1.5M API tokens) (downgraded —; [high] path-tr
+[2026-04-11 00:03:37] [Step3.5] PASS: quit-porn
+[2026-04-11 00:03:37] [Step3.5] PASS: book-guitar-lessons (仅 medium/low findings)
+[2026-04-11 00:03:37] [Step3.5] PASS: samma-suit
+[2026-04-11 00:03:37] [Step3.5] PASS: sui-auto-test (仅 medium/low findings)
+[2026-04-11 00:03:37] [Step3.5] PASS: lobster-jobs (仅 medium/low findings)
+[2026-04-11 00:03:37] [Step3.5] PASS: linear (仅 medium/low findings)
+[2026-04-11 00:03:37] [Step3.5] Auditor扫描完成: 安全13 | 危险2
+[2026-04-11 00:03:37] [Step3.6] 卸载危险技能: grok-imagine-video ([high] fetch-call: HTTP library call — makes outbound networ)
+[2026-04-11 00:03:37] [Step3.6] 卸载危险技能: solvr ([high] social-moltbook: Moltbook connection — known security)
+[2026-04-11 00:03:37] [Step3.6] 已卸载 2/2 个危险技能，0 个核心技能已保护
+[2026-04-11 00:03:37] [Step4] [AI智能] aipexbase-cli
+[2026-04-11 00:03:37] [Step4] [AI智能] clawslist
+[2026-04-11 00:03:37] [Step4] [未分类] ios-simulator
+[2026-04-11 00:03:37] [Step4] [开发工具] video-clip-assistant
+[2026-04-11 00:03:37] [Step4] [开发工具] gitlab-workflow
+[2026-04-11 00:03:37] [Step4] [未分类] stock-research-engine
+[2026-04-11 00:03:37] [Step4] [未分类] code-stats
+[2026-04-11 00:03:37] [Step4] [开发工具] quit-porn
+[2026-04-11 00:03:37] [Step4] [开发工具] book-guitar-lessons
+[2026-04-11 00:03:37] [Step4] [开发工具] samma-suit
+[2026-04-11 00:03:37] [Step4] [开发工具] sui-auto-test
+[2026-04-11 00:03:37] [Step4] [效率提升] lobster-jobs
+[2026-04-11 00:03:37] [Step4] [未分类] linear
+[2026-04-11 00:03:37] [Step4] 分类测试完成: 13 个技能已分类
+[2026-04-11 00:03:37]   AI智能: 2 个
+[2026-04-11 00:03:37]   开发工具: 6 个
+[2026-04-11 00:03:37]   效率提升: 1 个
+[2026-04-11 00:03:37]   未分类: 4 个
+[2026-04-11 00:03:37] [Step4] 安全通过: 13 | 危险: 0
+[2026-04-11 00:03:37] [Step5] OK: aipexbase-cli
+[2026-04-11 00:03:37] [Step5] OK: clawslist
+[2026-04-11 00:03:37] [Step5] OK: ios-simulator
+[2026-04-11 00:03:37] [Step5] OK: video-clip-assistant
+[2026-04-11 00:03:37] [Step5] OK: gitlab-workflow
+[2026-04-11 00:03:37] [Step5] OK: stock-research-engine
+[2026-04-11 00:03:37] [Step5] OK: code-stats
+[2026-04-11 00:03:37] [Step5] OK: quit-porn
+[2026-04-11 00:03:37] [Step5] OK: book-guitar-lessons
+[2026-04-11 00:03:37] [Step5] OK: samma-suit
+[2026-04-11 00:03:37] [Step5] OK: sui-auto-test
+[2026-04-11 00:03:37] [Step5] OK: lobster-jobs
+[2026-04-11 00:03:37] [Step5] OK: linear
+[2026-04-11 00:03:37] [Step5] 集成成功: 13 | 撤销: 0
+[2026-04-11 00:03:37] [Step6] 完成，13 个技能已集成
+[2026-04-11 00:03:38] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-11 00:03:39] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-11 00:03:39] === 完成: 集成13 | Auditor安全13 | 分类测试13 | 安装15 ===
+[2026-04-11 00:15:34] === 四源技能自动更新 Started ===
+[2026-04-11 00:15:52] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-11 00:15:53] [ClawHub Top] rate-limited, retrying in 4.0s (attempt 1/3)...
+[2026-04-11 00:16:02] [ClawHub Top] rate-limited, retrying in 8.4s (attempt 2/3)...
+[2026-04-11 00:16:12] [Step1] 七类别Top100 + 四源获取 1051 个技能
+[2026-04-11 00:16:12] [Step2] 已安装: 3382 | 缺失: 7 (已过滤 423 个已知失效slug)
+[2026-04-11 00:16:13] [Step3] OK: google-workspace-mcp (skillhub)
+[2026-04-11 00:16:14] [Step3] OK: filesystem-mcp (skillhub)
+[2026-04-11 00:16:14] [Step3] OK: google-drive (skillhub)
+[2026-04-11 00:16:14] [Step3] OK: trello-api (skillhub)
+[2026-04-11 00:16:14] [Step3] OK: config-guardian (skillhub)
+[2026-04-11 00:16:14] [Step3] OK: chrome-devtools (skillhub)
+[2026-04-11 00:16:14] [Step3] OK: imap-email (skillhub)
+[2026-04-11 00:16:14] [Step3] 安装完成: 7 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-11 00:16:14] [Step3.5] FAIL: imap-email -> [high] sleeper-date-trigger: Date-based trigger — sleeper agent with future activation (downgraded — in docum; [high] pa
+[2026-04-11 00:16:14] [Step3.5] PASS: config-guardian
+[2026-04-11 00:16:14] [Step3.5] PASS: filesystem-mcp (仅 medium/low findings)
+[2026-04-11 00:16:14] [Step3.5] PASS: trello-api (仅 medium/low findings)
+[2026-04-11 00:16:14] [Step3.5] PASS: google-drive (仅 medium/low findings)
+[2026-04-11 00:16:14] [Step3.5] PASS: google-workspace-mcp
+[2026-04-11 00:16:14] [Step3.5] PASS: chrome-devtools (仅 medium/low findings)
+[2026-04-11 00:16:14] [Step3.5] Auditor扫描完成: 安全6 | 危险1
+[2026-04-11 00:16:14] [Step3.6] 卸载危险技能: imap-email ([high] sleeper-date-trigger: Date-based trigger — sleeper ag)
+[2026-04-11 00:16:14] [Step3.6] 已卸载 1/1 个危险技能，0 个核心技能已保护
+[2026-04-11 00:16:14] [Step4] [未分类] config-guardian
+[2026-04-11 00:16:14] [Step4] [未分类] filesystem-mcp
+[2026-04-11 00:16:14] [Step4] [未分类] trello-api
+[2026-04-11 00:16:14] [Step4] [未分类] google-drive
+[2026-04-11 00:16:14] [Step4] [未分类] google-workspace-mcp
+[2026-04-11 00:16:14] [Step4] [未分类] chrome-devtools
+[2026-04-11 00:16:14] [Step4] 分类测试完成: 6 个技能已分类
+[2026-04-11 00:16:14]   未分类: 6 个
+[2026-04-11 00:16:14] [Step4] 安全通过: 6 | 危险: 0
+[2026-04-11 00:16:14] [Step5] OK: config-guardian
+[2026-04-11 00:16:14] [Step5] OK: filesystem-mcp
+[2026-04-11 00:16:14] [Step5] OK: trello-api
+[2026-04-11 00:16:14] [Step5] OK: google-drive
+[2026-04-11 00:16:14] [Step5] OK: google-workspace-mcp
+[2026-04-11 00:16:14] [Step5] OK: chrome-devtools
+[2026-04-11 00:16:14] [Step5] 集成成功: 6 | 撤销: 0
+[2026-04-11 00:16:14] [Step6] 完成，6 个技能已集成
+[2026-04-11 00:16:14] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-11 00:16:15] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-11 00:16:15] === 完成: 集成6 | Auditor安全6 | 分类测试6 | 安装7 ===
+[2026-04-11 01:33:39] === 四源技能自动更新 Started ===
+[2026-04-11 01:34:07] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-11 01:34:11] [Step1] 七类别Top100 + 四源获取 1031 个技能
+[2026-04-11 01:34:11] [Step2] 已安装: 3388 | 缺失: 3 (已过滤 424 个已知失效slug)
+[2026-04-11 01:34:13] [Step3] OK: community-intel (clawhub)
+[2026-04-11 01:34:13] [Step3] OK: netseeker (clawhub)
+[2026-04-11 01:34:14] [Step3] OK: text-to-markdown (clawhub)
+[2026-04-11 01:34:14] [Step3] 安装完成: 3 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-11 01:34:14] [Step3.5] PASS: text-to-markdown (仅 medium/low findings)
+[2026-04-11 01:34:14] [Step3.5] PASS: community-intel
+[2026-04-11 01:34:14] [Step3.5] PASS: netseeker (仅 medium/low findings)
+[2026-04-11 01:34:14] [Step3.5] Auditor扫描完成: 安全3 | 危险0
+[2026-04-11 01:34:14] [Step3.6] 已卸载 0/0 个危险技能，0 个核心技能已保护
+[2026-04-11 01:34:14] [Step4] [内容创作] text-to-markdown
+[2026-04-11 01:34:14] [Step4] [安全合规] community-intel
+[2026-04-11 01:34:14] [Step4] [未分类] netseeker
+[2026-04-11 01:34:14] [Step4] 分类测试完成: 3 个技能已分类
+[2026-04-11 01:34:14]   内容创作: 1 个
+[2026-04-11 01:34:14]   安全合规: 1 个
+[2026-04-11 01:34:14]   未分类: 1 个
+[2026-04-11 01:34:14] [Step4] 安全通过: 3 | 危险: 0
+[2026-04-11 01:34:14] [Step5] OK: text-to-markdown
+[2026-04-11 01:34:14] [Step5] OK: community-intel
+[2026-04-11 01:34:14] [Step5] OK: netseeker
+[2026-04-11 01:34:14] [Step5] 集成成功: 3 | 撤销: 0
+[2026-04-11 01:34:14] [Step6] 完成，3 个技能已集成
+[2026-04-11 01:34:14] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-11 01:34:16] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-11 01:34:16] === 完成: 集成3 | Auditor安全3 | 分类测试3 | 安装3 ===
+[2026-04-11 03:03:26] === 四源技能自动更新 Started ===
+[2026-04-11 03:03:44] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-11 03:03:45] [Step1] 七类别Top100 + 四源获取 1097 个技能
+[2026-04-11 03:03:45] [Step2] 已安装: 3391 | 缺失: 0 (已过滤 424 个已知失效slug)
+[2026-04-11 03:03:45] 所有技能已是最新
+[2026-04-11 03:04:16] === 四源技能自动更新 Started ===
+[2026-04-11 03:04:16] 所有技能已是最新 (cached, 0.0h ago < 2h)，跳过 Step1
+[2026-04-11 04:34:17] === 四源技能自动更新 Started ===
+[2026-04-11 04:34:17] 所有技能已是最新 (cached, 1.5h ago < 2h)，跳过 Step1
+[2026-04-11 06:03:06] === 四源技能自动更新 Started ===
+[2026-04-11 06:03:22] [Skills.sh API] retry 1/3 for kw='thesis paper academic' after 1s: The read operation timed out
+[2026-04-11 06:03:37] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-11 06:03:39] [Step1] 七类别Top100 + 四源获取 1086 个技能
+[2026-04-11 06:03:39] [Step2] 已安装: 3391 | 缺失: 15 (已过滤 424 个已知失效slug)
+[2026-04-11 06:03:41] [Step3] OK: reddit (skillhub)
+[2026-04-11 06:03:41] [Step3] OK: cloudflare-toolkit (skillhub)
+[2026-04-11 06:03:41] [Step3] OK: aws-infra (skillhub)
+[2026-04-11 06:03:41] [Step3] OK: ppt-maker (skillhub)
+[2026-04-11 06:03:41] [Step3] OK: wechat-article-reader (skillhub)
+[2026-04-11 06:03:41] [Step3] OK: kokoro-tts (skillhub)
+[2026-04-11 06:03:41] [Step3] OK: emergency-rescue (skillhub)
+[2026-04-11 06:03:41] [Step3] OK: zoho-crm (skillhub)
+[2026-04-11 06:03:41] [Step3] OK: github-analyzer (skillhub)
+[2026-04-11 06:03:41] [Step3] OK: slack-api (skillhub)
+[2026-04-11 06:03:41] [Step3] OK: openbotauth (skillhub)
+[2026-04-11 06:03:41] [Step3] OK: claude-code-mastery (skillhub)
+[2026-04-11 06:03:41] [Step3] OK: awiki-agent-did-message (skillhub)
+[2026-04-11 06:03:42] [Step3] OK: agency-senior-developer (clawhub)
+[2026-04-11 06:03:42] [Step3] OK: infra-monitoring (clawhub)
+[2026-04-11 06:03:42] [Step3] 安装完成: 15 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-11 06:03:42] [Step3.5] PASS: ppt-maker (仅 medium/low findings)
+[2026-04-11 06:03:43] [Step3.5] PASS: agency-senior-developer (仅 medium/low findings)
+[2026-04-11 06:03:43] [Step3.5] FAIL: github-analyzer -> [high] env-sensitive-access: Reads sensitive environment variables — could harvest API keys or secrets ⚠️ Und; [high] ba
+[2026-04-11 06:03:43] [Step3.5] PASS: emergency-rescue (仅 medium/low findings)
+[2026-04-11 06:03:43] [Step3.5] FAIL: claude-code-mastery -> [high] zero-width-chars: Zero-width/invisible characters — hidden content that renders invisible (downgra; [high] zero-w
+[2026-04-11 06:03:43] [Step3.5] PASS: infra-monitoring (仅 medium/low findings)
+[2026-04-11 06:03:43] [Step3.5] PASS: wechat-article-reader (仅 medium/low findings)
+[2026-04-11 06:03:43] [Step3.5] PASS: slack-api (仅 medium/low findings)
+[2026-04-11 06:03:43] [Step3.5] PASS: kokoro-tts (仅 medium/low findings)
+[2026-04-11 06:03:43] [Step3.5] FAIL: awiki-agent-did-message -> [high] shell-exec-python: Python shell execution — can run arbitrary system commands; [high] shell-exec-python: Python s
+[2026-04-11 06:03:43] [Step3.5] PASS: aws-infra (仅 medium/low findings)
+[2026-04-11 06:03:43] [Step3.5] PASS: openbotauth (仅 medium/low findings)
+[2026-04-11 06:03:44] [Step3.5] PASS: zoho-crm (仅 medium/low findings)
+[2026-04-11 06:03:44] [Step3.5] PASS: reddit (文档技能: 高风险均为误报)
+[2026-04-11 06:03:44] [Step3.5] PASS: cloudflare-toolkit (仅 medium/low findings)
+[2026-04-11 06:03:44] [Step3.5] Auditor扫描完成: 安全12 | 危险3
+[2026-04-11 06:03:44] [Step3.6] 卸载危险技能: github-analyzer ([high] env-sensitive-access: Reads sensitive environment var)
+[2026-04-11 06:03:44] [Step3.6] 卸载危险技能: claude-code-mastery ([high] zero-width-chars: Zero-width/invisible characters — h)
+[2026-04-11 06:03:44] [Step3.6] 卸载危险技能: awiki-agent-did-message ([high] shell-exec-python: Python shell execution — can run a)
+[2026-04-11 06:03:44] [Step3.6] 已卸载 3/3 个危险技能，0 个核心技能已保护
+[2026-04-11 06:03:44] [Step4] [AI智能] ppt-maker
+[2026-04-11 06:03:44] [Step4] [开发工具] agency-senior-developer
+[2026-04-11 06:03:44] [Step4] [未分类] emergency-rescue
+[2026-04-11 06:03:44] [Step4] [未分类] infra-monitoring
+[2026-04-11 06:03:44] [Step4] [通讯协作] wechat-article-reader
+[2026-04-11 06:03:44] [Step4] [未分类] slack-api
+[2026-04-11 06:03:44] [Step4] [未分类] kokoro-tts
+[2026-04-11 06:03:44] [Step4] [未分类] aws-infra
+[2026-04-11 06:03:44] [Step4] [安全合规] openbotauth
+[2026-04-11 06:03:44] [Step4] [未分类] zoho-crm
+[2026-04-11 06:03:44] [Step4] [未分类] reddit
+[2026-04-11 06:03:44] [Step4] [未分类] cloudflare-toolkit
+[2026-04-11 06:03:44] [Step4] 分类测试完成: 12 个技能已分类
+[2026-04-11 06:03:44]   AI智能: 1 个
+[2026-04-11 06:03:44]   开发工具: 1 个
+[2026-04-11 06:03:44]   通讯协作: 1 个
+[2026-04-11 06:03:44]   安全合规: 1 个
+[2026-04-11 06:03:44]   未分类: 8 个
+[2026-04-11 06:03:44] [Step4] 安全通过: 12 | 危险: 0
+[2026-04-11 06:03:44] [Step5] OK: ppt-maker
+[2026-04-11 06:03:44] [Step5] OK: agency-senior-developer
+[2026-04-11 06:03:44] [Step5] OK: emergency-rescue
+[2026-04-11 06:03:44] [Step5] OK: infra-monitoring
+[2026-04-11 06:03:44] [Step5] OK: wechat-article-reader
+[2026-04-11 06:03:44] [Step5] OK: slack-api
+[2026-04-11 06:03:44] [Step5] OK: kokoro-tts
+[2026-04-11 06:03:44] [Step5] OK: aws-infra
+[2026-04-11 06:03:44] [Step5] OK: openbotauth
+[2026-04-11 06:03:44] [Step5] OK: zoho-crm
+[2026-04-11 06:03:44] [Step5] OK: reddit
+[2026-04-11 06:03:44] [Step5] OK: cloudflare-toolkit
+[2026-04-11 06:03:44] [Step5] 集成成功: 12 | 撤销: 0
+[2026-04-11 06:03:44] [Step6] 完成，12 个技能已集成
+[2026-04-11 06:03:45] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-11 06:03:46] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-11 06:03:46] === 完成: 集成12 | Auditor安全12 | 分类测试12 | 安装15 ===
+[2026-04-11 06:04:17] === 四源技能自动更新 Started ===
+[2026-04-11 06:04:32] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-11 06:04:32] [Step1] 七类别Top100 + 四源获取 1083 个技能
+[2026-04-11 06:04:32] [Step2] 已安装: 3403 | 缺失: 0 (已过滤 427 个已知失效slug)
+[2026-04-11 06:04:32] 所有技能已是最新
+[2026-04-11 07:34:32] === 四源技能自动更新 Started ===
+[2026-04-11 07:34:32] 所有技能已是最新 (cached, 1.5h ago < 2h)，跳过 Step1
+[2026-04-11 09:04:34] === 四源技能自动更新 Started ===
+[2026-04-11 09:05:01] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-11 09:05:02] [ClawHub Top] rate-limited, retrying in 3.6s (attempt 1/3)...
+[2026-04-11 09:05:07] [Step1] 七类别Top100 + 四源获取 871 个技能
+[2026-04-11 09:05:07] [Step2] 已安装: 3403 | 缺失: 0 (已过滤 427 个已知失效slug)
+[2026-04-11 09:05:07] 所有技能已是最新
+[2026-04-11 10:35:08] === 四源技能自动更新 Started ===
+[2026-04-11 10:35:08] 所有技能已是最新 (cached, 1.5h ago < 2h)，跳过 Step1
+[2026-04-11 12:05:08] === 四源技能自动更新 Started ===
+[2026-04-11 12:05:46] [VoltAgent] OpenClaw GitHub API: found 1 matching skills
+[2026-04-11 12:05:50] [ClawHub Top] rate-limited, retrying in 3.7s (attempt 1/3)...
+[2026-04-11 12:05:59] [ClawHub Top] rate-limited, retrying in 9.0s (attempt 2/3)...
+[2026-04-11 12:06:14] [Step1] 七类别Top100 + 四源获取 1040 个技能
+[2026-04-11 12:06:14] [Step2] 已安装: 3403 | 缺失: 2 (已过滤 427 个已知失效slug)
+[2026-04-11 12:06:17] [Step3] OK: agency-cms-developer (clawhub)
+[2026-04-11 12:06:18] [Step3] OK: compound-eng-debugging (clawhub)
+[2026-04-11 12:06:18] [Step3] 安装完成: 2 成功 / 0 失败 (另有 0 个跳过)
+[2026-04-11 12:06:18] [Step3.5] PASS: agency-cms-developer (仅 medium/low findings)
+[2026-04-11 12:06:18] [Step3.5] PASS: compound-eng-debugging (仅 medium/low findings)
+[2026-04-11 12:06:18] [Step3.5] Auditor扫描完成: 安全2 | 危险0
+[2026-04-11 12:06:18] [Step3.6] 已卸载 0/0 个危险技能，0 个核心技能已保护
+[2026-04-11 12:06:18] [Step4] [开发工具] agency-cms-developer
+[2026-04-11 12:06:18] [Step4] [开发工具] compound-eng-debugging
+[2026-04-11 12:06:18] [Step4] 分类测试完成: 2 个技能已分类
+[2026-04-11 12:06:18]   开发工具: 2 个
+[2026-04-11 12:06:18] [Step4] 安全通过: 2 | 危险: 0
+[2026-04-11 12:06:18] [Step5] OK: agency-cms-developer
+[2026-04-11 12:06:18] [Step5] OK: compound-eng-debugging
+[2026-04-11 12:06:18] [Step5] 集成成功: 2 | 撤销: 0
+[2026-04-11 12:06:18] [Step6] 完成，2 个技能已集成
+[2026-04-11 12:06:18] [邮件] SMTP probe succeeded, skipping cooldown
+[2026-04-11 12:06:19] [邮件] 汇报已发送至 wcyint@163.com
+[2026-04-11 12:06:19] === 完成: 集成2 | Auditor安全2 | 分类测试2 | 安装2 ===

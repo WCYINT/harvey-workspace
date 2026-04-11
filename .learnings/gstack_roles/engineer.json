@@ -1,15 +1,15 @@
 {
-  "timestamp": "2026-04-04T12:02:49.554798+08:00",
+  "timestamp": "2026-04-08T18:35:25.052448+08:00",
   "role": "Engineer",
   "data": {
     "role": "Engineer",
     "skills_needed": [
-      "quality-management",
-      "automotive-engineering",
+      "quality-mgmt",
+      "automotive-powertrain",
       "data-analysis",
-      "six-sigma",
-      "cross-functional-coordination"
+      "lean-six-sigma",
+      "supplier-quality"
     ],
-    "reasoning": "插电混动车型质量改进需要融合质量方法论、汽车工程专业知识和跨部门协调能力来平衡技术可行性与实现难度。"
+    "reasoning": "插电混动质量改进需融合质量管理方法论、混动系统技术知识与数据分析能力，同时需要供应链质量管控视角。"
   }
 }

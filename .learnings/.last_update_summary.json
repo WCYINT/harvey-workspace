@@ -1,9 +1,14 @@
 {
-  "date": "2026-04-04",
+  "date": "2026-04-11",
   "skills": [
     {
-      "slug": "agent-bom-scan",
-      "description": "agent-bom scan  (0.482)",
+      "slug": "agency-cms-developer",
+      "description": "test  (2.053)",
+      "source": "clawhub"
+    },
+    {
+      "slug": "compound-eng-debugging",
+      "description": "debugging  (2.120)",
       "source": "clawhub"
     }
   ]

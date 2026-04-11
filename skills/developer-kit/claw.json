@@ -1,0 +1,22 @@
+{
+  "name": "developer-kit",
+  "version": "1.0.0",
+  "description": "Complete AI-assisted full-stack development toolkit: React, TypeScript, Testing, Git, and GitHub analysis. Subscribe for $19/month.",
+  "author": "lobster-marshal",
+  "license": "MIT",
+  "entry": "SKILL.md",
+  "tags": ["developer", "fullstack", "react", "typescript", "testing", "git", "subscription"],
+  "models": ["*"],
+  "dependencies": [
+    "react-expert",
+    "typescript",
+    "testing-patterns",
+    "git-essentials",
+    "github-repo-analyzer"
+  ],
+  "pricing": {
+    "type": "subscription",
+    "monthly": 19,
+    "yearly": 199
+  }
+}

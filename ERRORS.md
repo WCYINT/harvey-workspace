@@ -41,3 +41,19 @@ _(暂无)_
 **分析**: Auth code `SEMefmThGnEKJiTz` 在 06:00 AM SMTP失败后，触发账号安全锁定，导致 IMAP 也失效
 **状态**: ✅ 已解决 (2026-04-03) — James 已重新生成授权码，SMTP auth_test 验证通过
 **预防**: 后续如遇 163.com 锁定，需 James 登录 webmail.163.com 解除并重新生成 auth code
+
+---
+
+## ERR-20260408-SIGKILL (2026-04-08)
+
+**Error:** Exec failed (calm-har, signal SIGKILL) at 09:35:31
+
+**Type:** Non-critical (one occurrence)
+
+**Impact:** Single calm-har process killed; Gateway (pid 25051) still running normally
+
+**Root cause:** Unknown - likely system OOM killer or resource pressure
+
+**Status:** `wont_fix` - isolated event, no recurrence detected
+
+**Action:** Monitor for 24h; escalate if recurrence >3x

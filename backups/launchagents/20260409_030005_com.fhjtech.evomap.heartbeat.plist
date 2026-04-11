@@ -1,0 +1,28 @@
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.fhjtech.evomap.heartbeat</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/opt/homebrew/bin/python3</string>
+        <string>/Users/fhjtech/.openclaw/workspace/evomap_heartbeat_loop.py</string>
+    </array>
+    <key>WorkingDirectory</key>
+    <string>/Users/fhjtech/.openclaw/workspace</string>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <true/>
+    <key>StandardOutPath</key>
+    <string>/Users/fhjtech/.openclaw/workspace/evomap_heartbeat_launchd.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/fhjtech/.openclaw/workspace/evomap_heartbeat_launchd.err</string>
+    <key>ProcessType</key>
+    <string>Background</string>
+    <key>Nice</key>
+    <integer>1</integer>
+    <key>UserName</key>
+    <string>fhjtech</string>
+</dict>
+</plist>

@@ -1,73 +1,73 @@
 {
   "version": 1,
   "skills": {
-    "tool-permission-manager": {
+    "text-to-markdown": {
+      "version": "1.0.3",
+      "installedAt": 1775842454228
+    },
+    "reddit": {
       "version": "1.0.0",
-      "installedAt": 1775241159284
+      "installedAt": 1775858621532
     },
-    "solana-security": {
-      "version": "0.6.0",
-      "installedAt": 1775241159356
+    "kokoro-tts": {
+      "version": "0.1.0",
+      "installedAt": 1775858621534
     },
-    "visa-itinerary-gen": {
+    "emergency-rescue": {
+      "version": "1.0.0",
+      "installedAt": 1775858621537
+    },
+    "aws-infra": {
+      "version": "1.0.0",
+      "installedAt": 1775858621541
+    },
+    "zoho-crm": {
+      "version": "1.0.4",
+      "installedAt": 1775858621541
+    },
+    "ppt-maker": {
+      "version": "1.0.3",
+      "installedAt": 1775858621547
+    },
+    "cloudflare-toolkit": {
       "version": "1.5.0",
-      "installedAt": 1775241159521
+      "installedAt": 1775858621548
     },
-    "quiver": {
-      "version": "1.0.1",
-      "installedAt": 1775243047267
-    },
-    "beta": {
+    "github-analyzer": {
       "version": "1.0.0",
-      "installedAt": 1775244979347
+      "installedAt": 1775858621552
     },
-    "team-up": {
+    "slack-api": {
+      "version": "1.0.8",
+      "installedAt": 1775858621561
+    },
+    "openbotauth": {
+      "version": "0.1.1",
+      "installedAt": 1775858621611
+    },
+    "claude-code-mastery": {
+      "version": "1.4.3",
+      "installedAt": 1775858621615
+    },
+    "awiki-agent-did-message": {
+      "version": "1.1.0",
+      "installedAt": 1775858621617
+    },
+    "agency-senior-developer": {
       "version": "1.0.0",
-      "installedAt": 1775262916119
+      "installedAt": 1775858622020
     },
-    "authorize": {
+    "infra-monitoring": {
+      "version": "0.1.0",
+      "installedAt": 1775858622865
+    },
+    "agency-cms-developer": {
       "version": "1.0.0",
-      "installedAt": 1775262917055
+      "installedAt": 1775880377764
     },
-    "obsidian-notion": {
-      "version": "1.0.0",
-      "installedAt": 1775262919150
-    },
-    "privy-integration": {
-      "version": "0.2.0",
-      "installedAt": 1775262919436
-    },
-    "ai-engineer": {
-      "version": "1.0.0",
-      "installedAt": 1775264652287
-    },
-    "makefile-build": {
-      "version": "1.0.0",
-      "installedAt": 1775264652316
-    },
-    "gen-image": {
-      "version": "1.0.0",
-      "installedAt": 1775268376999
-    },
-    "baidu-scholar-search": {
-      "version": "1.0.0",
-      "installedAt": 1775268377000
-    },
-    "daily-review-ritual": {
-      "version": "1.0.0",
-      "installedAt": 1775268377016
-    },
-    "de-ai-ify": {
-      "version": "1.0.0",
-      "installedAt": 1775268377095
-    },
-    "agent-bom-scan": {
-      "version": "0.75.14",
-      "installedAt": 1775273817756
-    },
-    "powpow-integration": {
-      "version": "2.1.6",
-      "installedAt": 1775273817770
+    "compound-eng-debugging": {
+      "version": "2.55.0",
+      "installedAt": 1775880378138
     }
   }
 }

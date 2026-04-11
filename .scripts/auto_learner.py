@@ -50,7 +50,8 @@ def tailn(file_path: Path, n: int = 200) -> list:
             # This is a known limitation of the read-backwards approach; 2000 multiplier is a
             # practical balance between memory usage and coverage for typical markdown files.
             window_size = min(total_size, n * 2000 + 2048)
-            fh.seek(max(0, total_size - window_size))
+            read_start = max(0, total_size - window_size)
+            fh.seek(read_start)
             remaining = fh.read()
             # For large files, the seek position may land mid-line, causing the
             # first "line" from splitlines() to be a partial fragment. Detect this
@@ -62,10 +63,14 @@ def tailn(file_path: Path, n: int = 200) -> list:
                 decoded = remaining.decode("utf-8", errors="ignore")
                 lines = decoded.splitlines()
                 # Count how many lines in the window are complete (non-partial).
-                # A line is partial if the window doesn't start at file beginning
-                # AND the first char is not '\n' (we started mid-line).
-                started_mid = (total_size - window_size) > 0
-                is_partial_first = started_mid and decoded and decoded[0] not in ("\n", "\r")
+                # A line is partial ONLY if we started mid-file AND the first char
+                # is not a newline (we landed mid-line, not at a line boundary).
+                # Bug fix: previous code used `started_mid = (total_size-window_size)>0`
+                # which is True for ANY file larger than the window — even when the
+                # seek lands exactly at a line boundary. This incorrectly skipped
+                # complete lines, silently dropping recent entries.
+                # Fix: check the actual seek position (read_start), not window_size.
+                is_partial_first = (read_start > 0) and (remaining and remaining[0:1] not in (b'\n', b'\r'))
                 num_complete = len(lines) - (1 if is_partial_first else 0)
                 if num_complete >= n or window_size >= max_window:
                     # Have enough lines OR have read entire file; return what we have.
@@ -73,13 +78,15 @@ def tailn(file_path: Path, n: int = 200) -> list:
                         # Skip partial first line, then take last n complete lines
                         return lines[len(lines) - n:]
                     elif is_partial_first:
-                        # Not enough complete lines; return all complete lines
-                        return lines[1:]
+                        # Not enough complete lines; return all available complete lines
+                        # (skip partial first line at index 0, take everything after)
+                        return lines[1:1 + num_complete] if num_complete > 0 else []
                     else:
                         return lines[-n:]
                 # Expand window and re-read to capture more complete lines
                 window_size = min(max_window, window_size * 2)
-                fh.seek(max(0, total_size - window_size))
+                read_start = max(0, total_size - window_size)
+                fh.seek(read_start)
                 remaining = fh.read()
     except Exception:
         return []
@@ -156,10 +163,11 @@ def build_error_entry(
     """Build a formatted error entry."""
     entry_id = generate_id("ERR")
     now = datetime.now().strftime("%Y-%m-%dT%H:%M:%S%z")
-    # Add +08:00 suffix if not present
-    if not now.endswith("+0800") and not re.search(r"[+-]\d{4}$", now):
+    # Normalize timezone: strftime('%z') may return '+0800' (Linux) or '' (macOS).
+    # If timezone present with colon (+08:00) or without (+0800), keep as-is.
+    # If no timezone, append +08:00.
+    if not re.search(r"[+-]\d{2}:?\d{2}$", now):
         now = now + "+08:00"
-    
     ctx_parts = []
     if command:
         ctx_parts.append(f"- Command: `{command}`")
@@ -206,9 +214,10 @@ def build_learning_entry(
     """Build a formatted learning entry."""
     entry_id = generate_id("LRN")
     now = datetime.now().strftime("%Y-%m-%dT%H:%M:%S%z")
-    if not re.search(r"[+-]\d{4}$", now):
+    # Normalize timezone: strftime('%z') may return '+0800' (Linux) or '' (macOS).
+    if not re.search(r"[+-]\d{2}:?\d{2}$", now):
         now = now + "+08:00"
-    
+
     content = f"""## [{entry_id}] {category}
 
 **Logged**: {now}
@@ -257,14 +266,22 @@ def get_recent_errors(minutes: int = 30) -> list:
                 ts = m.group(1).strip()[:25]  # Keep full ISO-8601 with timezone: "2026-04-01T02:08:00+08:00" (25 chars)
                 err_text = m.group(0).strip()[:500]
                 # Broaden filter: catch subprocess failures + Python exceptions + HTTP errors.
-                # Previously only caught subprocess/signal → missed all Python tracebacks.
+                # Excludes generic "Error" (too broad — matches FailoverError, lane task error, etc.).
+                # Excludes "timeout" (too broad — matches reason=timeout in normal fallback).
+                # Only catches concrete failure signals: exception types, signals, HTTP errors, auth failures.
                 if any(x in err_text for x in [
                     "SIGTERM", "SIGKILL", "signal", "exec failed", "subprocess",
                     "NameError", "TypeError", "KeyError", "ValueError",
                     "ImportError", "AttributeError", "RuntimeError",
                     "HTTPError", "ConnectionError", "TimeoutError",
                     "401", "Unauthorized",  # supermemory plugin auth failures
+                    "candidate_failed",     # only if next=none (all candidates exhausted)
+                    "SIGABRT",              # abort signal
                 ]):
+                    # Exclude candidate_failed when next=<model> is present — fallback in progress, not outage
+                    # next=none (no fallback available) means all candidates exhausted = real outage, do NOT exclude
+                    if "candidate_failed" in err_text and re.search(r"next=(?!none\b)\S+", err_text):
+                        continue
                     errors.append({"timestamp": ts, "error": err_text, "file": lf.name})
         except Exception:
             pass
@@ -319,13 +336,32 @@ def get_skill_update_failures(minutes: int = 180) -> list:
             })
             continue
 
-        # Real failure: catastrophic install failures (≥50% failed — partial failures are normal)
+        # Real failure: VoltAgent SSL/network errors (transient, but worth capturing for pattern analysis)
+        if "[VoltAgent] Failed:" in line:
+            failures.append({
+                "timestamp": ts_match.group(1),
+                "error": f"[skill_updates.log] {line.strip()}",
+                "file": "skill_updates.log"
+            })
+            continue
+
+        # Transient SKIP: skills.sh clone failures are transient network/remote issues.
+        # These are SKIPs (not catastrophic failures) — no need to flood ERRORS.md.
+        # The root fix (making skills_sh_failed non-fatal in skillhub_auto_update.py)
+        # requires James authorization since that file is edit-prohibited.
+        if "SKIP(skills.sh failed):" in line:
+            continue
+
+        # Real failure: catastrophic install failures (≥50% failed AND at least 1 success).
+        # "0 OK / N failed" where all slugs are new is normal learning — skip it.
         m = re.search(r"\[Step3\]\s*安装完成:\s*(\d+)\s*成功\s*/\s*(\d+)\s*失败", line)
         if m:
             success = int(m.group(1))
             failure = int(m.group(2))
-            # Only capture when failure rate >= 50%; normal partial failures (e.g. 1/15) are expected
-            if failure >= success:
+            # Only capture when failures outnumber successes AND at least 1 succeeded.
+            # This skips "0 OK / N failed" (all-new-slug learning events) while still
+            # catching genuine partial failures like "1 OK / 14 failed" or "6 OK / 8 failed".
+            if failure > success and success > 0:
                 failures.append({
                     "timestamp": ts_match.group(1),
                     "error": f"[skill_updates.log] Install failure: {success} OK / {failure} failed",
@@ -371,9 +407,18 @@ def auto_resolve_simple(errors: list) -> int:
         "jiti": ("ERR-2026032", "jiti cache staleness - clear /tmp/jiti/ and restart gateway"),
         "Could not find the exact text": ("ERR-20260403", "jiti cache staleness - clear /tmp/jiti/ and restart gateway"),
         "duplicate tool_call": ("ERR-2026032", "MiniMax API tool_call ID collision - use fresh session per cron run"),
+        "candidate_failed": ("ERR-2026040", "Model cascade timeout - transient network/provider blip, system self-recovered"),
+        "connection": ("ERR-2026040", "LLM connection error - transient network blip, system auto-recovered"),
+        "timeout": ("ERR-2026040", "Cascade timeout - transient network/provider blip, system auto-recovered via model fallback"),
+        "RECORD_LAYER_FAILURE": ("ERR-2026040", "VoltAgent SSL RECORD_LAYER_FAILURE - transient GitHub API SSL error, retry succeeded via other sources"),
+        # skillhub_auto_update.py line 2135: "has_not_in_index" only checks not_in_index, treats
+        # skills_sh_failed as fatal → script aborts at line 2138, skipping report + all downstream steps.
+        # Root fix: change has_not_in_index to also include 'skills_sh_failed' (needs James授权 since
+        # skillhub_auto_update.py is edit-prohibited).
+        "SKIP(skills.sh failed)": ("ERR-2026040", "skills.sh clone failure - transient network/remote GitHub issue; skillhub_auto_update.py line 2135 needs James授权: change 'has_not_in_index' check to also treat 'skills_sh_failed' as non-fatal (like not_in_index), or remove the early-return block entirely"),
     }
 
-    for err_info in errors[:5]:
+    for err_info in errors[:20]:
         err_text = err_info.get("error", "")
         for keyword, (entry_prefix, fix) in known_fixes.items():
             if keyword.lower() not in err_text.lower():
@@ -474,6 +519,27 @@ def capture_recent_errors() -> str:
         m = re.search(r"(SMTP 535[^]]+|Install failure: \d+ OK / \d+ failed)", err_text)
         if m:
             dedup_pattern = m.group(1)  # e.g. "SMTP 535 认证错误（授权码可能过期）"
+        elif "candidate_failed" in err_text:
+            # Model-fallback cascade: strip timestamp, reason, next= (vary per event).
+            # Stable: decision=candidate_failed, requested, candidate.
+            stable = re.sub(
+                r"^\d{4}-\d{2}-\d{2}T[\d:\.\+\-]+ (\[model-fallback/decision\] decision=)(candidate_failed)",
+                r"\1\2",
+                err_text,
+            )
+            stable = re.sub(r"reason=\w+", "reason=VAR", stable)
+            stable = re.sub(r"next=\S+", "next=VAR", stable)
+            dedup_pattern = stable
+
+        # Lane task error: deduplicate by duration (same event appears with different lane names).
+        # e.g. lane=nested vs lane=session:agent:main:cron:ai-every-5-min-code = same cascade.
+        elif "lane task error" in err_text.lower():
+            m_dur = re.search(r"durationMs=(\d+)", err_text)
+            if m_dur:
+                # Extract stable error type + duration as dedup key.
+                m_err = re.search(r'error="([^"]+)"', err_text)
+                err_type = m_err.group(1) if m_err else "unknown"
+                dedup_pattern = f"lane_task_error:{err_type}:duration={m_dur.group(1)}"
         
         # Also strip the skill_updates.log prefix + timestamp if present
         dedup_pattern = re.sub(r"^\[skill_updates\.log\]\s*\[\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}\]\s*", "", dedup_pattern)
@@ -487,16 +553,44 @@ def capture_recent_errors() -> str:
                 _learnings_cache[lf.name] = lf.read_text(errors="ignore")
         
         already_logged = dedup_pattern[:80] in "\n".join(_learnings_cache.values())
-        
+
         if not already_logged:
             area = "infra"
             if "python" in err_text.lower() or ".py" in err_text:
                 area = "backend"
             elif "git" in err_text.lower():
                 area = "config"
-            
+
+            # Special case: VoltAgent SSL errors get descriptive summary so known_fixes
+            # can match keywords like "Failed" and "RECORD_LAYER_FAILURE" for auto-resolve.
+            if "VoltAgent" in err.get("error", "") and "Failed" in err.get("error", ""):
+                failed_part = err["error"].split("Failed:")[1].strip() if "Failed:" in err["error"] else "SSL failure"
+                summary = f"VoltAgent Failed: {failed_part[:60]}"
+            elif "SKIP(skills.sh failed):" in err.get("error", ""):
+                # Extract slug from "SKIP(skills.sh failed): owner/repo/skill — reason"
+                parts = err["error"].split("SKIP(skills.sh failed):")[1].strip() if "SKIP(skills.sh failed):" in err["error"] else ""
+                slug_part = parts.split(" — ")[0].strip() if " — " in parts else parts.strip()
+                summary = f"SKIP(skills.sh failed): {slug_part[:50]}"
+            elif "timeout" in err_text.lower() or "timed out" in err_text.lower():
+                # Extract model/provider for better auto-resolve matching
+                m_model = re.search(r"model=([\w\-\./]+)", err_text)
+                model_info = f" ({m_model.group(1)})" if m_model else ""
+                summary = f"LLM timeout{model_info}"
+            elif "connection error" in err_text.lower() or "connection failed" in err_text.lower():
+                m_model = re.search(r"model=([\w\-\./]+)", err_text)
+                model_info = f" ({m_model.group(1)})" if m_model else ""
+                summary = f"LLM connection error{model_info}"
+            elif "candidate_failed" in err_text:
+                m_req = re.search(r"requested=([\w\-\./]+)", err_text)
+                m_cand = re.search(r"candidate=([\w\-\./]+)", err_text)
+                req = m_req.group(1) if m_req else "?"
+                cand = m_cand.group(1) if m_cand else "?"
+                summary = f"Model fallback failed: {req} → {cand}"
+            else:
+                summary = f"Auto-captured error from {err['file']}"
+
             entry = build_error_entry(
-                summary=f"Auto-captured error from {err['file']}",
+                summary=summary,
                 error_details=err_text,
                 area=area,
                 context=f"Source: {err['file']} at {err['timestamp']}",

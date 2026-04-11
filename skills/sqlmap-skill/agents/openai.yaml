@@ -1,0 +1,4 @@
+interface:
+  display_name: "SQLMap Operator"
+  short_description: "Build and run authorized sqlmap commands safely."
+  default_prompt: "Use this skill to map user goals to sqlmap flags, run scans against authorized targets, and summarize key findings."

@@ -136,6 +136,15 @@ grep -l "HARVEY_EMAIL_AUTH" ~/Library/LaunchAgents/*.plist
 grep -L "HARVEY_EMAIL_AUTH" ~/Library/LaunchAgents/*.plist
 ```
 
+### Voyage AI Embedding API
+
+- **官网**: https://dashboard.voyageai.com
+- **账号**: wcyint@163.com
+- **密码**: WG17sjjlove
+- **API Key**: pa-HvKYEzyhA_vt6Of1USV5munwK8J8Z6zBP4Eytdn6I2c
+- **模型**: voyage-4-large (200M tokens 免费)
+- **使用量**: 97,508 / 200,000,000 tokens (0.05%)
+
 ### Harvey 专属邮箱
 **授权码状态**: ✅ 已更新 (2026-03-27) — 使用环境变量，不暴露在git
 

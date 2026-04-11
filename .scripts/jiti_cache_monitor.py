@@ -96,20 +96,30 @@ def clear_jiti_cache() -> bool:
 def restart_gateway() -> bool:
     """Signal gateway to restart"""
     try:
-        # Find gateway process
+        # Find gateway process using ps (more reliable than pgrep -f)
         result = subprocess.run(
-            ["pgrep", "-f", "openclaw-gateway"],
+            ["ps", "aux"],
             capture_output=True,
-            text=True
+            text=True,
+            timeout=10
         )
         
-        if result.returncode == 0 and result.stdout.strip():
-            pid = result.stdout.strip().split()[0]
-            log(f"Found gateway PID: {pid}")
+        gateway_pid = None
+        for line in result.stdout.splitlines():
+            if "openclaw-gateway" in line and "grep" not in line:
+                parts = line.split()
+                try:
+                    gateway_pid = parts[1]  # PID is the 2nd column in ps aux
+                    break
+                except (IndexError, ValueError):
+                    continue
+        
+        if gateway_pid:
+            log(f"Found gateway PID: {gateway_pid}")
             
             # Send SIGTERM for graceful restart
-            subprocess.run(["kill", "-TERM", pid], check=False)
-            log(f"✓ Sent SIGTERM to gateway PID {pid}")
+            subprocess.run(["kill", "-TERM", gateway_pid], check=False)
+            log(f"✓ Sent SIGTERM to gateway PID {gateway_pid}")
             return True
         else:
             log("⚠ Gateway process not found (may already be stopped)")

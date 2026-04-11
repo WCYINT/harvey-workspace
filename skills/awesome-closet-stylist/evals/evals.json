@@ -1,0 +1,61 @@
+{
+  "skill_name": "awesome-closet-stylist",
+  "evals": [
+    {
+      "id": "wardrobe-maintenance-add-item",
+      "prompt": "我刚买了一件深灰色羊毛大衣，长度到膝盖，偏通勤风，帮我记进衣橱。",
+      "expected_output": "The response should treat this as wardrobe maintenance, update wardrobe/wardrobe.json, and confirm the addition in natural language without exposing JSON. It should capture the coat as a usable clothing record and avoid unnecessary follow-up questions.",
+      "files": [
+        "wardrobe/wardrobe.json"
+      ]
+    },
+    {
+      "id": "wardrobe-query-by-category-and-season",
+      "prompt": "帮我看看现在衣橱里适合春天穿的外套有哪些。",
+      "expected_output": "The response should read from the existing wardrobe, summarize first, and then mention relevant spring outerwear items in natural language. It should not modify wardrobe data or sound like a raw database dump.",
+      "files": [
+        "wardrobe/wardrobe.json"
+      ]
+    },
+    {
+      "id": "outfit-recommendation-from-existing-wardrobe",
+      "prompt": "明天 18 度，有点风，我要去见客户，帮我用我现有的衣服搭一套别太随便的。",
+      "expected_output": "The response should recommend a coherent outfit using existing wardrobe items first, explain why the combination works, and relate it to temperature, wind, and occasion. It must not invent missing garments, modify wardrobe data, or output JSON.",
+      "files": [
+        "wardrobe/wardrobe.json"
+      ]
+    },
+    {
+      "id": "outfit-refinement-change-one-part",
+      "prompt": "刚才那套别动太多，把鞋换得更轻松一点。",
+      "expected_output": "The response should treat this as a refinement of the previous outfit, preserve overall continuity, change only the shoes unless required otherwise, and explain the effect in natural language. It must not rewrite the whole outfit by default.",
+      "files": [
+        "wardrobe/wardrobe.json"
+      ]
+    },
+    {
+      "id": "recommendation-near-empty-wardrobe-single-follow-up",
+      "prompt": "我衣橱里现在几乎没记什么，明天要去约会，帮我搭一套。",
+      "expected_output": "The response should recognize that the wardrobe is empty or near-empty for recommendation quality, avoid inventing clothes, and ask only one critical follow-up question instead of turning the exchange into a form.",
+      "files": [
+        "wardrobe/wardrobe.json"
+      ]
+    },
+    {
+      "id": "maintenance-ambiguous-delete-single-clarification",
+      "prompt": "把那件黑色外套删掉。",
+      "expected_output": "If the target item is not safely identifiable, the response should ask one concise clarification question and avoid deleting anything prematurely. It should not ask multiple questions at once.",
+      "files": [
+        "wardrobe/wardrobe.json"
+      ]
+    },
+    {
+      "id": "image-assisted-intake-no-image-generation",
+      "prompt": "我发你这张照片，帮我看看这件上衣是什么类型，顺便记进衣橱。",
+      "expected_output": "The response should use the image only as auxiliary input to help identify and record the item, confirm the wardrobe update in natural language, and avoid outputting JSON or offering to generate a new outfit image, poster, or composite.",
+      "files": [
+        "wardrobe/wardrobe.json"
+      ]
+    }
+  ]
+}

@@ -11,7 +11,7 @@ Harvey 主动预见进化任务
   - 发现问题主动修复或汇报
 """
 
-import json, os, smtplib
+import json, os, smtplib, subprocess
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from email.mime.multipart import MIMEMultipart
@@ -59,14 +59,16 @@ def check_idle_minutes() -> int:
         # Bare except swallows all errors silently — now log it so failures are visible
         import sys
         print(f"[idle_proactive] check_idle_minutes error: {type(e).__name__}: {e}", file=sys.stderr)
-    return 999  # 无记录，默认空闲
+    return 0  # 无记录，默认非空闲，避免误触发主动检测
 
 # 主动检测1：论文上下文逻辑（如果论文文件存在）
 def check_thesis_logic() -> dict:
     issues = []
     try:
         thesis_path = Path("/Volumes/10-ShareData/0-Thesis/最后一版")
-        if thesis_path.exists():
+        if not thesis_path.exists():
+            issues.append("论文目录未挂载或不存在: /Volumes/10-ShareData/0-Thesis/最后一版")
+        else:
             latest = max(thesis_path.glob("*.docm"), key=lambda p: p.stat().st_mtime, default=None)
             if latest:
                 age_hours = (datetime.now(TZ_CST) - datetime.fromtimestamp(latest.stat().st_mtime, TZ_CST)).total_seconds() / 3600
@@ -81,26 +83,30 @@ def check_cron_health() -> dict:
     issues = []
     status_map = {"ok": 0, "error": 0}
     try:
-        import subprocess
         result = subprocess.run(
             ["/Users/fhjtech/.nvm/versions/node/v24.13.1/bin/openclaw", "cron", "list"],
             capture_output=True, text=True, timeout=15
         )
-        # Parse the Status column dynamically by finding the "Status" header,
-        # then extracting the field at that column position. Old code used fixed
-        # byte offsets [117:125] which silently misparsed if output format changed.
-        header_col = None
+        # Parse Status column using regex. Old byte-offset approach failed because
+        # openclaw cron list output pads columns with spaces, but data rows don't
+        # pad values to fixed byte positions — "running" is shorter than "error",
+        # causing byte-offset extraction to grab wrong fields from short rows.
+        import re
+        status_col = None
         for line in result.stdout.split('\n'):
-            if header_col is None:
-                # First find the Status column index
+            if status_col is None:
                 idx = line.find("Status")
                 if idx != -1:
-                    header_col = idx
+                    status_col = idx
                 continue
-            if not line.strip() or len(line) <= header_col:
+            if not line.strip():
                 continue
-            # Extract status value from the column position
-            status = line[header_col:].strip().split(None, 1)[0].lower()
+            # Extract: status value = word(s) at/near the Status column offset
+            # More robust: grab the word after "Status" header or use regex on full line
+            m = re.search(r'\b(running|error|ok)\b', line)
+            if not m:
+                continue
+            status = m.group(1).lower()
             if status == "error":
                 status_map["error"] += 1
             elif status == "ok":
@@ -117,7 +123,6 @@ def check_cron_health() -> dict:
 def check_api_usage() -> dict:
     issues = []
     try:
-        import subprocess
         result = subprocess.run(
             ["/Users/fhjtech/.nvm/versions/node/v24.13.1/bin/openclaw", "cron", "list"],
             capture_output=True, text=True, timeout=10
@@ -125,9 +130,9 @@ def check_api_usage() -> dict:
         # 检查minimax-usage-monitor状态
         if "minimax" in result.stdout.lower() and "error" in result.stdout.lower():
             issues.append("MiniMax usage monitor可能异常，建议手动检查")
-    except:
-        pass
-    return {"module": "api_usage", "status": "ok" if not issues else "warning", "issues": issues}
+    except Exception as e:
+        issues.append(f"API检查异常: {type(e).__name__}: {e}")
+    return {"module": "api_usage", "status": "warning" if issues else "ok", "issues": issues}
 
 # 主动检测4：技能协同分析（检查最近安装的技能是否有协同可能）
 def check_skill_synergy() -> dict:

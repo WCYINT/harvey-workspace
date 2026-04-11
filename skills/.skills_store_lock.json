@@ -1,65 +1,53 @@
 {
   "version": 1,
   "skills": {
-    "google-tasks": {
-      "name": "Google Tasks",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=google-tasks",
+    "zoho-crm": {
+      "name": "Zoho CRM",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=zoho-crm",
+      "source": "skillhub",
+      "version": "1.0.4"
+    },
+    "ppt-maker": {
+      "name": "AI PPT Generator",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=ppt-maker",
+      "source": "skillhub",
+      "version": "1.0.3"
+    },
+    "cloudflare-toolkit": {
+      "name": "Cloudflare",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=cloudflare-toolkit",
+      "source": "skillhub",
+      "version": "1.5.0"
+    },
+    "github-analyzer": {
+      "name": "GitHub 项目分析助手",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=github-analyzer",
       "source": "skillhub",
       "version": "1.0.0"
     },
-    "quiver": {
-      "name": "Quiver Quantitative",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=quiver",
+    "slack-api": {
+      "name": "Slack",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=slack-api",
       "source": "skillhub",
-      "version": "1.0.1"
+      "version": "1.0.8"
     },
-    "team-up": {
-      "name": "Team Up",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=team-up",
+    "openbotauth": {
+      "name": "OpenBotAuth",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=openbotauth",
       "source": "skillhub",
-      "version": "1.0.0"
+      "version": "0.1.1"
     },
-    "authorize": {
-      "name": "Authorize.net Agentic Payments - Add agentic cards and wallets to your stack",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=authorize",
+    "claude-code-mastery": {
+      "name": "Claude Code Mastery",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=claude-code-mastery",
       "source": "skillhub",
-      "version": "1.0.0"
+      "version": "1.4.3"
     },
-    "ai-engineer": {
-      "name": "AI Engineer",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=ai-engineer",
+    "awiki-agent-did-message": {
+      "name": "awiki-agent-did-message",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=awiki-agent-did-message",
       "source": "skillhub",
-      "version": "1.0.0"
-    },
-    "makefile-build": {
-      "name": "Makefile & Build",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=makefile-build",
-      "source": "skillhub",
-      "version": "1.0.0"
-    },
-    "gen-image": {
-      "name": "AI图片生成",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=gen-image",
-      "source": "skillhub",
-      "version": "1.0.0"
-    },
-    "baidu-scholar-search": {
-      "name": "baidu scholar search",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=baidu-scholar-search",
-      "source": "skillhub",
-      "version": "1.0.0"
-    },
-    "daily-review-ritual": {
-      "name": "Daily Review Ritual",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=daily-review-ritual",
-      "source": "skillhub",
-      "version": "1.0.0"
-    },
-    "de-ai-ify": {
-      "name": "De-AI-ify",
-      "zip_url": "https://lightmake.site/api/v1/download?slug=de-ai-ify",
-      "source": "skillhub",
-      "version": "1.0.0"
+      "version": "1.1.0"
     }
   }
 }

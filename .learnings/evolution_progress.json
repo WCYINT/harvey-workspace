@@ -1,6 +1,6 @@
 {
-  "day": 17,
-  "hour": 7,
+  "day": 29,
+  "hour": 4,
   "skills": 0,
   "completed_tasks": [
     {
@@ -4726,6 +4726,2895 @@
       "mode": "day",
       "tasks": [
         "Learnings"
+      ]
+    },
+    {
+      "time": "2026-04-04T12:06:15.397391+08:00",
+      "mode": "day",
+      "tasks": [
+        "Report"
+      ]
+    },
+    {
+      "time": "2026-04-04T13:02:22.110086+08:00",
+      "mode": "day",
+      "tasks": [
+        "TestAll"
+      ]
+    },
+    {
+      "time": "2026-04-04T14:03:02.902974+08:00",
+      "mode": "day",
+      "tasks": [
+        "Learn"
+      ]
+    },
+    {
+      "time": "2026-04-04T15:02:39.474567+08:00",
+      "mode": "day",
+      "tasks": [
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-04T16:03:25.767154+08:00",
+      "mode": "day",
+      "tasks": [
+        "Benchmark"
+      ]
+    },
+    {
+      "time": "2026-04-04T17:02:46.070183+08:00",
+      "mode": "day",
+      "tasks": [
+        "Test"
+      ]
+    },
+    {
+      "time": "2026-04-04T18:03:09.310827+08:00",
+      "mode": "day",
+      "tasks": [
+        "Learnings"
+      ]
+    },
+    {
+      "time": "2026-04-04T19:03:27.439157+08:00",
+      "mode": "day",
+      "tasks": [
+        "Report"
+      ]
+    },
+    {
+      "time": "2026-04-04T20:04:00.001162+08:00",
+      "mode": "day",
+      "tasks": [
+        "TestAll"
+      ]
+    },
+    {
+      "time": "2026-04-05T00:40:19.261857+08:00",
+      "mode": "night",
+      "tasks": [
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll"
+      ]
+    },
+    {
+      "time": "2026-04-05T03:25:47.843526+08:00",
+      "mode": "night",
+      "tasks": [
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark"
+      ]
+    },
+    {
+      "time": "2026-04-05T03:30:57.554371+08:00",
+      "mode": "night",
+      "tasks": [
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark"
+      ]
+    },
+    {
+      "time": "2026-04-05T04:01:45.433721+08:00",
+      "mode": "night",
+      "tasks": [
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test"
+      ]
+    },
+    {
+      "time": "2026-04-05T04:03:51.411665+08:00",
+      "mode": "night",
+      "tasks": [
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test"
+      ]
+    },
+    {
+      "time": "2026-04-05T04:31:06.549310+08:00",
+      "mode": "night",
+      "tasks": [
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test"
+      ]
+    },
+    {
+      "time": "2026-04-05T04:45:42.426812+08:00",
+      "mode": "night",
+      "tasks": [
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test"
+      ]
+    },
+    {
+      "time": "2026-04-05T05:01:12.751397+08:00",
+      "mode": "night",
+      "tasks": [
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings"
+      ]
+    },
+    {
+      "time": "2026-04-05T05:03:26.678177+08:00",
+      "mode": "night",
+      "tasks": [
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings"
+      ]
+    },
+    {
+      "time": "2026-04-05T05:15:55.912633+08:00",
+      "mode": "night",
+      "tasks": [
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings"
+      ]
+    },
+    {
+      "time": "2026-04-05T05:31:54.957056+08:00",
+      "mode": "night",
+      "tasks": [
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings"
+      ]
+    },
+    {
+      "time": "2026-04-05T05:45:42.302098+08:00",
+      "mode": "night",
+      "tasks": [
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings"
+      ]
+    },
+    {
+      "time": "2026-04-05T06:01:40.723682+08:00",
+      "mode": "night",
+      "tasks": [
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report"
+      ]
+    },
+    {
+      "time": "2026-04-05T06:03:10.385537+08:00",
+      "mode": "night",
+      "tasks": [
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report"
+      ]
+    },
+    {
+      "time": "2026-04-05T06:15:37.889759+08:00",
+      "mode": "night",
+      "tasks": [
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report"
+      ]
+    },
+    {
+      "time": "2026-04-05T06:45:38.391238+08:00",
+      "mode": "night",
+      "tasks": [
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report"
+      ]
+    },
+    {
+      "time": "2026-04-05T07:01:08.779347+08:00",
+      "mode": "night",
+      "tasks": [
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll"
+      ]
+    },
+    {
+      "time": "2026-04-05T07:03:39.497094+08:00",
+      "mode": "night",
+      "tasks": [
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll"
+      ]
+    },
+    {
+      "time": "2026-04-05T07:15:44.832366+08:00",
+      "mode": "night",
+      "tasks": [
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll"
+      ]
+    },
+    {
+      "time": "2026-04-05T07:31:09.294531+08:00",
+      "mode": "night",
+      "tasks": [
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll"
+      ]
+    },
+    {
+      "time": "2026-04-05T07:45:51.658700+08:00",
+      "mode": "night",
+      "tasks": [
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll"
+      ]
+    },
+    {
+      "time": "2026-04-05T08:03:47.570868+08:00",
+      "mode": "day",
+      "tasks": [
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-05T10:03:15.380395+08:00",
+      "mode": "day",
+      "tasks": [
+        "Test"
+      ]
+    },
+    {
+      "time": "2026-04-05T11:03:00.439433+08:00",
+      "mode": "day",
+      "tasks": [
+        "Learnings"
+      ]
+    },
+    {
+      "time": "2026-04-05T12:04:24.740138+08:00",
+      "mode": "day",
+      "tasks": [
+        "Report"
+      ]
+    },
+    {
+      "time": "2026-04-05T12:04:37.477346+08:00",
+      "mode": "day",
+      "tasks": [
+        "Report"
+      ]
+    },
+    {
+      "time": "2026-04-05T13:03:18.514481+08:00",
+      "mode": "day",
+      "tasks": [
+        "TestAll"
+      ]
+    },
+    {
+      "time": "2026-04-05T17:02:02.674126+08:00",
+      "mode": "day",
+      "tasks": [
+        "Test"
+      ]
+    },
+    {
+      "time": "2026-04-05T23:03:38.190984+08:00",
+      "mode": "night",
+      "tasks": [
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-06T09:03:02.122068+08:00",
+      "mode": "day",
+      "tasks": [
+        "Benchmark"
+      ]
+    },
+    {
+      "time": "2026-04-06T10:02:55.942138+08:00",
+      "mode": "day",
+      "tasks": [
+        "Test"
+      ]
+    },
+    {
+      "time": "2026-04-06T11:03:09.067185+08:00",
+      "mode": "day",
+      "tasks": [
+        "Learnings"
+      ]
+    },
+    {
+      "time": "2026-04-06T12:02:00.374552+08:00",
+      "mode": "day",
+      "tasks": [
+        "Report"
+      ]
+    },
+    {
+      "time": "2026-04-06T13:02:20.836723+08:00",
+      "mode": "day",
+      "tasks": [
+        "TestAll"
+      ]
+    },
+    {
+      "time": "2026-04-06T14:03:08.988755+08:00",
+      "mode": "day",
+      "tasks": [
+        "Learn"
+      ]
+    },
+    {
+      "time": "2026-04-06T15:02:49.476834+08:00",
+      "mode": "day",
+      "tasks": [
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-06T16:03:15.802680+08:00",
+      "mode": "day",
+      "tasks": [
+        "Benchmark"
+      ]
+    },
+    {
+      "time": "2026-04-08T10:05:13.713315+08:00",
+      "mode": "day",
+      "tasks": [
+        "Test"
+      ]
+    },
+    {
+      "time": "2026-04-08T11:02:47.908573+08:00",
+      "mode": "day",
+      "tasks": [
+        "Learnings"
+      ]
+    },
+    {
+      "time": "2026-04-08T12:03:11.645008+08:00",
+      "mode": "day",
+      "tasks": [
+        "Report"
+      ]
+    },
+    {
+      "time": "2026-04-08T13:03:11.354077+08:00",
+      "mode": "day",
+      "tasks": [
+        "TestAll"
+      ]
+    },
+    {
+      "time": "2026-04-08T16:03:38.246005+08:00",
+      "mode": "day",
+      "tasks": [
+        "Benchmark"
+      ]
+    },
+    {
+      "time": "2026-04-08T17:35:10.623955+08:00",
+      "mode": "day",
+      "tasks": [
+        "Test"
+      ]
+    },
+    {
+      "time": "2026-04-08T18:02:36.984962+08:00",
+      "mode": "day",
+      "tasks": [
+        "Learnings"
+      ]
+    },
+    {
+      "time": "2026-04-08T18:20:15.090814+08:00",
+      "mode": "day",
+      "tasks": [
+        "Learnings"
+      ]
+    },
+    {
+      "time": "2026-04-08T18:50:19.926270+08:00",
+      "mode": "day",
+      "tasks": [
+        "Learnings"
+      ]
+    },
+    {
+      "time": "2026-04-08T19:00:19.551397+08:00",
+      "mode": "day",
+      "tasks": [
+        "Report"
+      ]
+    },
+    {
+      "time": "2026-04-08T19:10:12.658586+08:00",
+      "mode": "day",
+      "tasks": [
+        "Report"
+      ]
+    },
+    {
+      "time": "2026-04-08T19:20:16.984314+08:00",
+      "mode": "day",
+      "tasks": [
+        "Report"
+      ]
+    },
+    {
+      "time": "2026-04-08T19:30:16.924178+08:00",
+      "mode": "day",
+      "tasks": [
+        "Report"
+      ]
+    },
+    {
+      "time": "2026-04-08T19:44:18.648653+08:00",
+      "mode": "day",
+      "tasks": [
+        "Report"
+      ]
+    },
+    {
+      "time": "2026-04-08T19:50:22.568639+08:00",
+      "mode": "day",
+      "tasks": [
+        "Report"
+      ]
+    },
+    {
+      "time": "2026-04-08T20:00:29.765949+08:00",
+      "mode": "day",
+      "tasks": [
+        "TestAll"
+      ]
+    },
+    {
+      "time": "2026-04-08T20:11:03.250903+08:00",
+      "mode": "day",
+      "tasks": [
+        "TestAll"
+      ]
+    },
+    {
+      "time": "2026-04-08T20:15:24.385005+08:00",
+      "mode": "day",
+      "tasks": [
+        "TestAll"
+      ]
+    },
+    {
+      "time": "2026-04-08T20:20:21.931674+08:00",
+      "mode": "day",
+      "tasks": [
+        "TestAll"
+      ]
+    },
+    {
+      "time": "2026-04-08T20:25:26.180657+08:00",
+      "mode": "day",
+      "tasks": [
+        "TestAll"
+      ]
+    },
+    {
+      "time": "2026-04-08T20:32:07.627577+08:00",
+      "mode": "day",
+      "tasks": [
+        "TestAll"
+      ]
+    },
+    {
+      "time": "2026-04-08T20:35:24.221356+08:00",
+      "mode": "day",
+      "tasks": [
+        "TestAll"
+      ]
+    },
+    {
+      "time": "2026-04-08T20:40:40.225427+08:00",
+      "mode": "day",
+      "tasks": [
+        "TestAll"
+      ]
+    },
+    {
+      "time": "2026-04-08T20:46:55.763154+08:00",
+      "mode": "day",
+      "tasks": [
+        "TestAll"
+      ]
+    },
+    {
+      "time": "2026-04-08T20:50:25.855161+08:00",
+      "mode": "day",
+      "tasks": [
+        "TestAll"
+      ]
+    },
+    {
+      "time": "2026-04-08T20:55:24.154106+08:00",
+      "mode": "day",
+      "tasks": [
+        "TestAll"
+      ]
+    },
+    {
+      "time": "2026-04-08T21:00:21.434356+08:00",
+      "mode": "day",
+      "tasks": [
+        "Learn"
+      ]
+    },
+    {
+      "time": "2026-04-08T21:05:18.827353+08:00",
+      "mode": "day",
+      "tasks": [
+        "Learn"
+      ]
+    },
+    {
+      "time": "2026-04-08T21:10:16.681850+08:00",
+      "mode": "day",
+      "tasks": [
+        "Learn"
+      ]
+    },
+    {
+      "time": "2026-04-08T21:15:18.190410+08:00",
+      "mode": "day",
+      "tasks": [
+        "Learn"
+      ]
+    },
+    {
+      "time": "2026-04-08T21:20:43.171640+08:00",
+      "mode": "day",
+      "tasks": [
+        "Learn"
+      ]
+    },
+    {
+      "time": "2026-04-08T21:25:19.062416+08:00",
+      "mode": "day",
+      "tasks": [
+        "Learn"
+      ]
+    },
+    {
+      "time": "2026-04-08T21:30:19.298669+08:00",
+      "mode": "day",
+      "tasks": [
+        "Learn"
+      ]
+    },
+    {
+      "time": "2026-04-08T21:40:16.516329+08:00",
+      "mode": "day",
+      "tasks": [
+        "Learn"
+      ]
+    },
+    {
+      "time": "2026-04-08T21:45:18.136514+08:00",
+      "mode": "day",
+      "tasks": [
+        "Learn"
+      ]
+    },
+    {
+      "time": "2026-04-08T21:50:17.229310+08:00",
+      "mode": "day",
+      "tasks": [
+        "Learn"
+      ]
+    },
+    {
+      "time": "2026-04-08T21:55:33.838945+08:00",
+      "mode": "day",
+      "tasks": [
+        "Learn"
+      ]
+    },
+    {
+      "time": "2026-04-08T22:00:18.240549+08:00",
+      "mode": "day",
+      "tasks": [
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-08T22:05:19.185582+08:00",
+      "mode": "day",
+      "tasks": [
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-08T22:10:21.513474+08:00",
+      "mode": "day",
+      "tasks": [
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-08T22:15:20.703350+08:00",
+      "mode": "day",
+      "tasks": [
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-08T22:20:18.802230+08:00",
+      "mode": "day",
+      "tasks": [
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-08T22:25:16.996812+08:00",
+      "mode": "day",
+      "tasks": [
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-08T22:30:20.515647+08:00",
+      "mode": "day",
+      "tasks": [
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-08T22:35:46.849291+08:00",
+      "mode": "day",
+      "tasks": [
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-08T22:40:20.283087+08:00",
+      "mode": "day",
+      "tasks": [
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-08T22:45:20.237869+08:00",
+      "mode": "day",
+      "tasks": [
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-08T22:50:18.341557+08:00",
+      "mode": "day",
+      "tasks": [
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-08T22:55:19.880904+08:00",
+      "mode": "day",
+      "tasks": [
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-08T23:00:33.998273+08:00",
+      "mode": "night",
+      "tasks": [
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-08T23:05:33.734516+08:00",
+      "mode": "night",
+      "tasks": [
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-08T23:10:26.671000+08:00",
+      "mode": "night",
+      "tasks": [
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-08T23:15:26.176922+08:00",
+      "mode": "night",
+      "tasks": [
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-08T23:20:32.077979+08:00",
+      "mode": "night",
+      "tasks": [
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-08T23:25:27.537693+08:00",
+      "mode": "night",
+      "tasks": [
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-08T23:30:32.081789+08:00",
+      "mode": "night",
+      "tasks": [
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-08T23:35:28.724156+08:00",
+      "mode": "night",
+      "tasks": [
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-08T23:40:31.491120+08:00",
+      "mode": "night",
+      "tasks": [
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-08T23:45:33.735848+08:00",
+      "mode": "night",
+      "tasks": [
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-08T23:50:31.794939+08:00",
+      "mode": "night",
+      "tasks": [
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-08T23:55:26.683425+08:00",
+      "mode": "night",
+      "tasks": [
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-09T00:00:35.840952+08:00",
+      "mode": "night",
+      "tasks": [
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll"
+      ]
+    },
+    {
+      "time": "2026-04-09T00:05:31.301908+08:00",
+      "mode": "night",
+      "tasks": [
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll"
+      ]
+    },
+    {
+      "time": "2026-04-09T00:10:29.585875+08:00",
+      "mode": "night",
+      "tasks": [
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll"
+      ]
+    },
+    {
+      "time": "2026-04-09T00:15:31.234437+08:00",
+      "mode": "night",
+      "tasks": [
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll"
+      ]
+    },
+    {
+      "time": "2026-04-09T00:20:33.060443+08:00",
+      "mode": "night",
+      "tasks": [
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll"
+      ]
+    },
+    {
+      "time": "2026-04-09T00:25:28.342433+08:00",
+      "mode": "night",
+      "tasks": [
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll"
+      ]
+    },
+    {
+      "time": "2026-04-09T00:30:29.535732+08:00",
+      "mode": "night",
+      "tasks": [
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll"
+      ]
+    },
+    {
+      "time": "2026-04-09T00:35:36.500853+08:00",
+      "mode": "night",
+      "tasks": [
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll"
+      ]
+    },
+    {
+      "time": "2026-04-09T00:40:30.033891+08:00",
+      "mode": "night",
+      "tasks": [
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll"
+      ]
+    },
+    {
+      "time": "2026-04-09T00:45:31.487237+08:00",
+      "mode": "night",
+      "tasks": [
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll"
+      ]
+    },
+    {
+      "time": "2026-04-09T00:50:30.833391+08:00",
+      "mode": "night",
+      "tasks": [
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll"
+      ]
+    },
+    {
+      "time": "2026-04-09T00:55:25.311925+08:00",
+      "mode": "night",
+      "tasks": [
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll"
+      ]
+    },
+    {
+      "time": "2026-04-09T01:00:37.612013+08:00",
+      "mode": "night",
+      "tasks": [
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn"
+      ]
+    },
+    {
+      "time": "2026-04-09T01:05:26.362138+08:00",
+      "mode": "night",
+      "tasks": [
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn"
+      ]
+    },
+    {
+      "time": "2026-04-09T01:10:25.740996+08:00",
+      "mode": "night",
+      "tasks": [
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn"
+      ]
+    },
+    {
+      "time": "2026-04-09T01:15:27.747425+08:00",
+      "mode": "night",
+      "tasks": [
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn"
+      ]
+    },
+    {
+      "time": "2026-04-09T01:20:26.694657+08:00",
+      "mode": "night",
+      "tasks": [
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn"
+      ]
+    },
+    {
+      "time": "2026-04-09T01:25:25.922059+08:00",
+      "mode": "night",
+      "tasks": [
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn"
+      ]
+    },
+    {
+      "time": "2026-04-09T01:30:29.690658+08:00",
+      "mode": "night",
+      "tasks": [
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn"
+      ]
+    },
+    {
+      "time": "2026-04-09T01:36:03.027486+08:00",
+      "mode": "night",
+      "tasks": [
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn"
+      ]
+    },
+    {
+      "time": "2026-04-09T01:40:33.574327+08:00",
+      "mode": "night",
+      "tasks": [
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn"
+      ]
+    },
+    {
+      "time": "2026-04-09T01:46:20.768201+08:00",
+      "mode": "night",
+      "tasks": [
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn"
+      ]
+    },
+    {
+      "time": "2026-04-09T01:50:26.040347+08:00",
+      "mode": "night",
+      "tasks": [
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn"
+      ]
+    },
+    {
+      "time": "2026-04-09T01:55:26.864840+08:00",
+      "mode": "night",
+      "tasks": [
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn"
+      ]
+    },
+    {
+      "time": "2026-04-09T02:00:31.178188+08:00",
+      "mode": "night",
+      "tasks": [
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-09T02:05:24.458247+08:00",
+      "mode": "night",
+      "tasks": [
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-09T02:10:24.279342+08:00",
+      "mode": "night",
+      "tasks": [
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-09T02:15:23.889006+08:00",
+      "mode": "night",
+      "tasks": [
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-09T02:20:26.616646+08:00",
+      "mode": "night",
+      "tasks": [
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-09T02:25:27.445123+08:00",
+      "mode": "night",
+      "tasks": [
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-09T02:30:32.391953+08:00",
+      "mode": "night",
+      "tasks": [
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-09T02:35:26.097788+08:00",
+      "mode": "night",
+      "tasks": [
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-09T02:40:27.264346+08:00",
+      "mode": "night",
+      "tasks": [
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-09T02:47:50.751113+08:00",
+      "mode": "night",
+      "tasks": [
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-09T02:50:26.658926+08:00",
+      "mode": "night",
+      "tasks": [
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-09T02:55:27.781427+08:00",
+      "mode": "night",
+      "tasks": [
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-09T03:00:28.933231+08:00",
+      "mode": "night",
+      "tasks": [
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark"
+      ]
+    },
+    {
+      "time": "2026-04-09T03:10:06.409260+08:00",
+      "mode": "night",
+      "tasks": [
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark"
+      ]
+    },
+    {
+      "time": "2026-04-09T03:16:09.145338+08:00",
+      "mode": "night",
+      "tasks": [
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark"
+      ]
+    },
+    {
+      "time": "2026-04-09T03:20:44.272136+08:00",
+      "mode": "night",
+      "tasks": [
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark"
+      ]
+    },
+    {
+      "time": "2026-04-09T03:25:44.257275+08:00",
+      "mode": "night",
+      "tasks": [
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark"
+      ]
+    },
+    {
+      "time": "2026-04-09T03:31:00.750530+08:00",
+      "mode": "night",
+      "tasks": [
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark"
+      ]
+    },
+    {
+      "time": "2026-04-09T03:36:46.236861+08:00",
+      "mode": "night",
+      "tasks": [
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark"
+      ]
+    },
+    {
+      "time": "2026-04-09T03:41:02.136292+08:00",
+      "mode": "night",
+      "tasks": [
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark"
+      ]
+    },
+    {
+      "time": "2026-04-09T03:46:02.759204+08:00",
+      "mode": "night",
+      "tasks": [
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark"
+      ]
+    },
+    {
+      "time": "2026-04-09T03:50:37.097547+08:00",
+      "mode": "night",
+      "tasks": [
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark"
+      ]
+    },
+    {
+      "time": "2026-04-09T03:55:25.167524+08:00",
+      "mode": "night",
+      "tasks": [
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark"
+      ]
+    },
+    {
+      "time": "2026-04-09T04:00:33.181769+08:00",
+      "mode": "night",
+      "tasks": [
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test"
+      ]
+    },
+    {
+      "time": "2026-04-09T04:05:28.902082+08:00",
+      "mode": "night",
+      "tasks": [
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test"
+      ]
+    },
+    {
+      "time": "2026-04-09T04:10:26.112043+08:00",
+      "mode": "night",
+      "tasks": [
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test"
+      ]
+    },
+    {
+      "time": "2026-04-09T04:15:26.349911+08:00",
+      "mode": "night",
+      "tasks": [
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test"
+      ]
+    },
+    {
+      "time": "2026-04-09T04:20:24.799314+08:00",
+      "mode": "night",
+      "tasks": [
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test"
+      ]
+    },
+    {
+      "time": "2026-04-09T04:25:28.612936+08:00",
+      "mode": "night",
+      "tasks": [
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test"
+      ]
+    },
+    {
+      "time": "2026-04-09T04:31:27.405229+08:00",
+      "mode": "night",
+      "tasks": [
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test"
+      ]
+    },
+    {
+      "time": "2026-04-09T04:36:30.997843+08:00",
+      "mode": "night",
+      "tasks": [
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test"
+      ]
+    },
+    {
+      "time": "2026-04-09T04:41:04.396834+08:00",
+      "mode": "night",
+      "tasks": [
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test"
+      ]
+    },
+    {
+      "time": "2026-04-09T04:47:46.341532+08:00",
+      "mode": "night",
+      "tasks": [
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test"
+      ]
+    },
+    {
+      "time": "2026-04-09T04:51:29.556657+08:00",
+      "mode": "night",
+      "tasks": [
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test"
+      ]
+    },
+    {
+      "time": "2026-04-09T04:55:48.067644+08:00",
+      "mode": "night",
+      "tasks": [
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test"
+      ]
+    },
+    {
+      "time": "2026-04-09T05:01:05.166333+08:00",
+      "mode": "night",
+      "tasks": [
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings"
+      ]
+    },
+    {
+      "time": "2026-04-09T05:05:24.639376+08:00",
+      "mode": "night",
+      "tasks": [
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings"
+      ]
+    },
+    {
+      "time": "2026-04-09T05:10:26.150560+08:00",
+      "mode": "night",
+      "tasks": [
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings"
+      ]
+    },
+    {
+      "time": "2026-04-09T05:15:26.186588+08:00",
+      "mode": "night",
+      "tasks": [
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings"
+      ]
+    },
+    {
+      "time": "2026-04-09T05:20:26.606930+08:00",
+      "mode": "night",
+      "tasks": [
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings"
+      ]
+    },
+    {
+      "time": "2026-04-09T05:25:24.041409+08:00",
+      "mode": "night",
+      "tasks": [
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings"
+      ]
+    },
+    {
+      "time": "2026-04-09T05:30:27.070370+08:00",
+      "mode": "night",
+      "tasks": [
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings"
+      ]
+    },
+    {
+      "time": "2026-04-09T05:35:24.526248+08:00",
+      "mode": "night",
+      "tasks": [
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings"
+      ]
+    },
+    {
+      "time": "2026-04-09T05:40:26.513462+08:00",
+      "mode": "night",
+      "tasks": [
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings"
+      ]
+    },
+    {
+      "time": "2026-04-09T05:45:25.486546+08:00",
+      "mode": "night",
+      "tasks": [
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings"
+      ]
+    },
+    {
+      "time": "2026-04-09T05:50:28.357210+08:00",
+      "mode": "night",
+      "tasks": [
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings"
+      ]
+    },
+    {
+      "time": "2026-04-09T05:55:24.914546+08:00",
+      "mode": "night",
+      "tasks": [
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings"
+      ]
+    },
+    {
+      "time": "2026-04-09T06:00:33.248824+08:00",
+      "mode": "night",
+      "tasks": [
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report"
+      ]
+    },
+    {
+      "time": "2026-04-09T06:05:25.065526+08:00",
+      "mode": "night",
+      "tasks": [
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report"
+      ]
+    },
+    {
+      "time": "2026-04-09T06:10:25.093564+08:00",
+      "mode": "night",
+      "tasks": [
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report"
+      ]
+    },
+    {
+      "time": "2026-04-09T06:15:28.017844+08:00",
+      "mode": "night",
+      "tasks": [
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report"
+      ]
+    },
+    {
+      "time": "2026-04-09T06:20:25.765334+08:00",
+      "mode": "night",
+      "tasks": [
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report"
+      ]
+    },
+    {
+      "time": "2026-04-09T06:25:29.779686+08:00",
+      "mode": "night",
+      "tasks": [
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report"
+      ]
+    },
+    {
+      "time": "2026-04-09T06:30:32.709009+08:00",
+      "mode": "night",
+      "tasks": [
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report"
+      ]
+    },
+    {
+      "time": "2026-04-09T06:35:40.689938+08:00",
+      "mode": "night",
+      "tasks": [
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report"
+      ]
+    },
+    {
+      "time": "2026-04-09T06:42:03.163672+08:00",
+      "mode": "night",
+      "tasks": [
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report"
+      ]
+    },
+    {
+      "time": "2026-04-09T06:45:25.072409+08:00",
+      "mode": "night",
+      "tasks": [
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report"
+      ]
+    },
+    {
+      "time": "2026-04-09T06:50:29.748947+08:00",
+      "mode": "night",
+      "tasks": [
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report"
+      ]
+    },
+    {
+      "time": "2026-04-09T06:55:28.866689+08:00",
+      "mode": "night",
+      "tasks": [
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report"
+      ]
+    },
+    {
+      "time": "2026-04-09T07:00:33.983443+08:00",
+      "mode": "night",
+      "tasks": [
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll"
+      ]
+    },
+    {
+      "time": "2026-04-09T07:05:27.895230+08:00",
+      "mode": "night",
+      "tasks": [
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll"
+      ]
+    },
+    {
+      "time": "2026-04-09T07:10:28.489337+08:00",
+      "mode": "night",
+      "tasks": [
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll"
+      ]
+    },
+    {
+      "time": "2026-04-09T07:15:29.744040+08:00",
+      "mode": "night",
+      "tasks": [
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll"
+      ]
+    },
+    {
+      "time": "2026-04-09T07:20:30.671606+08:00",
+      "mode": "night",
+      "tasks": [
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll"
+      ]
+    },
+    {
+      "time": "2026-04-09T07:25:27.124055+08:00",
+      "mode": "night",
+      "tasks": [
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll"
+      ]
+    },
+    {
+      "time": "2026-04-09T07:30:31.671906+08:00",
+      "mode": "night",
+      "tasks": [
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll"
+      ]
+    },
+    {
+      "time": "2026-04-09T07:35:48.431415+08:00",
+      "mode": "night",
+      "tasks": [
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll"
+      ]
+    },
+    {
+      "time": "2026-04-09T07:40:26.621021+08:00",
+      "mode": "night",
+      "tasks": [
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll"
+      ]
+    },
+    {
+      "time": "2026-04-09T07:45:28.029787+08:00",
+      "mode": "night",
+      "tasks": [
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll"
+      ]
+    },
+    {
+      "time": "2026-04-09T07:50:31.142192+08:00",
+      "mode": "night",
+      "tasks": [
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll"
+      ]
+    },
+    {
+      "time": "2026-04-09T07:55:29.092008+08:00",
+      "mode": "night",
+      "tasks": [
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll"
+      ]
+    },
+    {
+      "time": "2026-04-09T08:00:21.009343+08:00",
+      "mode": "day",
+      "tasks": [
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-09T08:05:14.994778+08:00",
+      "mode": "day",
+      "tasks": [
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-09T08:10:15.909725+08:00",
+      "mode": "day",
+      "tasks": [
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-09T08:15:13.102054+08:00",
+      "mode": "day",
+      "tasks": [
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-09T08:20:15.866242+08:00",
+      "mode": "day",
+      "tasks": [
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-09T08:25:13.305171+08:00",
+      "mode": "day",
+      "tasks": [
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-09T08:30:16.139815+08:00",
+      "mode": "day",
+      "tasks": [
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-09T08:35:43.246579+08:00",
+      "mode": "day",
+      "tasks": [
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-09T08:40:18.316553+08:00",
+      "mode": "day",
+      "tasks": [
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-09T08:45:12.837436+08:00",
+      "mode": "day",
+      "tasks": [
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-09T08:50:17.675422+08:00",
+      "mode": "day",
+      "tasks": [
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-09T08:55:16.308668+08:00",
+      "mode": "day",
+      "tasks": [
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-09T09:00:38.050700+08:00",
+      "mode": "day",
+      "tasks": [
+        "Benchmark"
+      ]
+    },
+    {
+      "time": "2026-04-09T09:05:40.445994+08:00",
+      "mode": "day",
+      "tasks": [
+        "Benchmark"
+      ]
+    },
+    {
+      "time": "2026-04-09T09:10:27.851552+08:00",
+      "mode": "day",
+      "tasks": [
+        "Benchmark"
+      ]
+    },
+    {
+      "time": "2026-04-09T09:15:27.697425+08:00",
+      "mode": "day",
+      "tasks": [
+        "Benchmark"
+      ]
+    },
+    {
+      "time": "2026-04-09T09:20:22.274409+08:00",
+      "mode": "day",
+      "tasks": [
+        "Benchmark"
+      ]
+    },
+    {
+      "time": "2026-04-09T09:25:21.994642+08:00",
+      "mode": "day",
+      "tasks": [
+        "Benchmark"
+      ]
+    },
+    {
+      "time": "2026-04-09T10:03:26.123298+08:00",
+      "mode": "day",
+      "tasks": [
+        "Test"
+      ]
+    },
+    {
+      "time": "2026-04-09T10:05:21.205402+08:00",
+      "mode": "day",
+      "tasks": [
+        "Test"
+      ]
+    },
+    {
+      "time": "2026-04-09T10:10:21.928966+08:00",
+      "mode": "day",
+      "tasks": [
+        "Test"
+      ]
+    },
+    {
+      "time": "2026-04-09T10:15:16.943056+08:00",
+      "mode": "day",
+      "tasks": [
+        "Test"
+      ]
+    },
+    {
+      "time": "2026-04-09T10:20:22.902946+08:00",
+      "mode": "day",
+      "tasks": [
+        "Test"
+      ]
+    },
+    {
+      "time": "2026-04-09T10:25:32.851639+08:00",
+      "mode": "day",
+      "tasks": [
+        "Test"
+      ]
+    },
+    {
+      "time": "2026-04-09T10:30:22.167952+08:00",
+      "mode": "day",
+      "tasks": [
+        "Test"
+      ]
+    },
+    {
+      "time": "2026-04-09T10:35:20.863601+08:00",
+      "mode": "day",
+      "tasks": [
+        "Test"
+      ]
+    },
+    {
+      "time": "2026-04-09T10:40:14.985893+08:00",
+      "mode": "day",
+      "tasks": [
+        "Test"
+      ]
+    },
+    {
+      "time": "2026-04-09T10:45:20.694866+08:00",
+      "mode": "day",
+      "tasks": [
+        "Test"
+      ]
+    },
+    {
+      "time": "2026-04-09T10:50:16.636668+08:00",
+      "mode": "day",
+      "tasks": [
+        "Test"
+      ]
+    },
+    {
+      "time": "2026-04-09T10:55:40.825004+08:00",
+      "mode": "day",
+      "tasks": [
+        "Test"
+      ]
+    },
+    {
+      "time": "2026-04-09T11:00:14.911795+08:00",
+      "mode": "day",
+      "tasks": [
+        "Learnings"
+      ]
+    },
+    {
+      "time": "2026-04-09T11:05:20.248707+08:00",
+      "mode": "day",
+      "tasks": [
+        "Learnings"
+      ]
+    },
+    {
+      "time": "2026-04-09T11:10:22.546377+08:00",
+      "mode": "day",
+      "tasks": [
+        "Learnings"
+      ]
+    },
+    {
+      "time": "2026-04-09T11:15:14.649680+08:00",
+      "mode": "day",
+      "tasks": [
+        "Learnings"
+      ]
+    },
+    {
+      "time": "2026-04-09T11:20:19.038827+08:00",
+      "mode": "day",
+      "tasks": [
+        "Learnings"
+      ]
+    },
+    {
+      "time": "2026-04-09T11:25:17.948079+08:00",
+      "mode": "day",
+      "tasks": [
+        "Learnings"
+      ]
+    },
+    {
+      "time": "2026-04-09T11:30:17.288661+08:00",
+      "mode": "day",
+      "tasks": [
+        "Learnings"
+      ]
+    },
+    {
+      "time": "2026-04-09T11:35:19.368743+08:00",
+      "mode": "day",
+      "tasks": [
+        "Learnings"
+      ]
+    },
+    {
+      "time": "2026-04-09T11:40:22.277213+08:00",
+      "mode": "day",
+      "tasks": [
+        "Learnings"
+      ]
+    },
+    {
+      "time": "2026-04-09T11:45:58.003607+08:00",
+      "mode": "day",
+      "tasks": [
+        "Learnings"
+      ]
+    },
+    {
+      "time": "2026-04-09T11:50:53.745891+08:00",
+      "mode": "day",
+      "tasks": [
+        "Learnings"
+      ]
+    },
+    {
+      "time": "2026-04-09T11:55:23.561150+08:00",
+      "mode": "day",
+      "tasks": [
+        "Learnings"
+      ]
+    },
+    {
+      "time": "2026-04-09T12:00:17.515476+08:00",
+      "mode": "day",
+      "tasks": [
+        "Report"
+      ]
+    },
+    {
+      "time": "2026-04-09T12:05:20.647864+08:00",
+      "mode": "day",
+      "tasks": [
+        "Report"
+      ]
+    },
+    {
+      "time": "2026-04-09T12:10:25.322891+08:00",
+      "mode": "day",
+      "tasks": [
+        "Report"
+      ]
+    },
+    {
+      "time": "2026-04-09T12:15:13.553107+08:00",
+      "mode": "day",
+      "tasks": [
+        "Report"
+      ]
+    },
+    {
+      "time": "2026-04-09T12:30:50.234235+08:00",
+      "mode": "day",
+      "tasks": [
+        "Report"
+      ]
+    },
+    {
+      "time": "2026-04-09T12:37:37.461547+08:00",
+      "mode": "day",
+      "tasks": [
+        "Report"
+      ]
+    },
+    {
+      "time": "2026-04-09T12:40:14.190985+08:00",
+      "mode": "day",
+      "tasks": [
+        "Report"
+      ]
+    },
+    {
+      "time": "2026-04-09T12:45:19.541263+08:00",
+      "mode": "day",
+      "tasks": [
+        "Report"
+      ]
+    },
+    {
+      "time": "2026-04-10T23:01:41.801512+08:00",
+      "mode": "night",
+      "tasks": [
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-10T23:03:43.173339+08:00",
+      "mode": "night",
+      "tasks": [
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-10T23:16:04.663278+08:00",
+      "mode": "night",
+      "tasks": [
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-10T23:32:46.792603+08:00",
+      "mode": "night",
+      "tasks": [
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-10T23:45:37.401749+08:00",
+      "mode": "night",
+      "tasks": [
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-11T00:05:00.001085+08:00",
+      "mode": "night",
+      "tasks": [
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll"
+      ]
+    },
+    {
+      "time": "2026-04-11T00:07:47.377095+08:00",
+      "mode": "night",
+      "tasks": [
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll"
+      ]
+    },
+    {
+      "time": "2026-04-11T00:27:42.142496+08:00",
+      "mode": "night",
+      "tasks": [
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll"
+      ]
+    },
+    {
+      "time": "2026-04-11T00:30:58.588707+08:00",
+      "mode": "night",
+      "tasks": [
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll"
+      ]
+    },
+    {
+      "time": "2026-04-11T00:45:39.076221+08:00",
+      "mode": "night",
+      "tasks": [
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll"
+      ]
+    },
+    {
+      "time": "2026-04-11T01:02:00.072474+08:00",
+      "mode": "night",
+      "tasks": [
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn"
+      ]
+    },
+    {
+      "time": "2026-04-11T01:14:31.297683+08:00",
+      "mode": "night",
+      "tasks": [
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn"
+      ]
+    },
+    {
+      "time": "2026-04-11T01:15:35.034420+08:00",
+      "mode": "night",
+      "tasks": [
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn"
+      ]
+    },
+    {
+      "time": "2026-04-11T01:30:50.806958+08:00",
+      "mode": "night",
+      "tasks": [
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn"
+      ]
+    },
+    {
+      "time": "2026-04-11T01:32:26.079566+08:00",
+      "mode": "night",
+      "tasks": [
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn"
+      ]
+    },
+    {
+      "time": "2026-04-11T01:58:32.939750+08:00",
+      "mode": "night",
+      "tasks": [
+        "Refactor",
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn"
+      ]
+    },
+    {
+      "time": "2026-04-11T02:01:00.541802+08:00",
+      "mode": "night",
+      "tasks": [
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-11T02:02:25.262783+08:00",
+      "mode": "night",
+      "tasks": [
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-11T02:15:40.045883+08:00",
+      "mode": "night",
+      "tasks": [
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-11T02:30:55.077935+08:00",
+      "mode": "night",
+      "tasks": [
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-11T02:46:16.323674+08:00",
+      "mode": "night",
+      "tasks": [
+        "Benchmark",
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor"
+      ]
+    },
+    {
+      "time": "2026-04-11T03:01:03.906038+08:00",
+      "mode": "night",
+      "tasks": [
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark"
+      ]
+    },
+    {
+      "time": "2026-04-11T03:02:25.445227+08:00",
+      "mode": "night",
+      "tasks": [
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark"
+      ]
+    },
+    {
+      "time": "2026-04-11T03:15:41.797266+08:00",
+      "mode": "night",
+      "tasks": [
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark"
+      ]
+    },
+    {
+      "time": "2026-04-11T03:31:36.717178+08:00",
+      "mode": "night",
+      "tasks": [
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark"
+      ]
+    },
+    {
+      "time": "2026-04-11T03:45:40.165660+08:00",
+      "mode": "night",
+      "tasks": [
+        "Test",
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark"
+      ]
+    },
+    {
+      "time": "2026-04-11T04:00:53.038116+08:00",
+      "mode": "night",
+      "tasks": [
+        "Learnings",
+        "Report",
+        "TestAll",
+        "Learn",
+        "Refactor",
+        "Benchmark",
+        "Test"
       ]
     }
   ],

@@ -83,8 +83,11 @@ def count_turns_on_topic(session_file, keywords) -> int:
                 
                 if has_kw:
                     if sender == 'user':
-                        # 不要在看到 user 时重置——如果前一条也是 user 消息（连续用户输入），
-                        # 计数器保持（等 assistant 回应时再累加）。只有 assistant 回应后才 +1。
+                        # Bug fix: 用户再次发送相同关键词 = 又一轮追问，+1
+                        # 原逻辑仅在 assistant 回应后 +1，导致用户连续追问时被漏计
+                        if last_sender == 'user':
+                            consecutive_turns += 1
+                            max_consecutive = max(max_consecutive, consecutive_turns)
                         last_sender = sender
                     elif sender == 'assistant' and last_sender == 'user':
                         # assistant 完成了一个完整 round (user->assistant)，+1

@@ -384,7 +384,7 @@ def learn_openclaw() -> dict:
     return result
 
 # ── 读取新安装技能 ─────────────────────────────
-def get_new_skills() -> None:
+def get_new_skills() -> list:
     try:
         with open(LOG_MARKER, 'r') as f:
             summary = json.load(f)
@@ -392,7 +392,7 @@ def get_new_skills() -> None:
         if summary.get("date") == today_str:
             return summary.get("skills", [])
     except:
-        pass
+        pass  # Fall through to SKILLS_DB if LOG_MARKER unavailable
     try:
         with open(SKILLS_DB, 'r') as f:
             data = json.load(f)

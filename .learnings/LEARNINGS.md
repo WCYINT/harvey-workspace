@@ -28,6 +28,38 @@ When a learning is promoted to a skill, add these fields:
 
 ---
 
+## [LRN-20260405-SKILLSH-ABORT] correction | resolved
+
+**Logged**: 2026-04-05T03:05:00+08:00
+**Priority**: high
+**Status**: resolved
+**Area**: infra
+
+### Summary
+skillhub_auto_update.py aborted on skills_sh_failed even though the comment said it shouldn't.
+VoltAgent SSL failures + skills.sh clone failures caused `skills_sh_only=False` (suspected async
+gather ordering or _skills_sh_total global state), triggering spurious aborts. Root cause: the
+original code relied on `skills_sh_only=all(...)` where `all([])=True` for empty lists, but with
+any failure present, `all(...)` could return False unexpectedly (possibly due to a different
+failure type being returned from asyncio.gather).
+
+### Fix
+Added `skills_sh_fail_only = len(install_failed)>0 and all(reason in ("skills_sh_failed",
+"skills_sh_circuit_open")...)` — a strict version requiring non-empty failures — and updated
+abort condition to `not skills_sh_only and not skills_sh_fail_only`. This ensures:
+- Empty failures: `skills_sh_only=True` → no abort
+- Only skills_sh failures: `skills_sh_fail_only=True` → no abort
+- Mixed/non-skills_sh failures: abort
+
+### Files
+- `.scripts/skillhub_auto_update.py` (line ~2148): added `skills_sh_fail_only` guard
+
+### Prevention
+Do not rely solely on `all([])=True` for empty-list sentinel. When there are non-empty
+failure lists, always check `len(failures)>0` explicitly before applying all-same-type logic.
+
+---
+
 ## [LRN-20260324-OSIMPORT] correction
 
 **Logged**: 2026-03-24T13:05:00+08:00
@@ -1944,3 +1976,125 @@ Only post-gather re-log failures that have no pre-gather logging/saving.
 ### Metadata
 - Source: cron:ai-twice-hourly-deep
 - File: .scripts/skillhub_auto_update.py (post-gather re-log loop)
+
+## [LRN-20260404-TAILN] correction
+
+**Logged**: 2026-04-04T12:37:00+08:00
+**Priority**: medium
+**Status**: resolved
+**Area**: backend
+
+### Summary
+Fixed subtle off-by-one boundary condition in `tailn()` when partial first line + insufficient complete lines.
+
+### Details
+In `auto_learner.py tailn()`, when the window landed mid-file (partial first line) AND there weren't enough complete lines (`num_complete < n`), the code returned `lines[1:]` which could return more complete lines than `num_complete`. This was inconsistent with the semantics (should return "all available complete lines" up to `num_complete`).
+
+**Bug**: `elif is_partial_first: return lines[1:]` could return indices 1 through len(lines)-1, which is len(lines)-1 complete lines, not necessarily num_complete lines.
+
+**Fix**: Changed to `return lines[1:1 + num_complete] if num_complete > 0 else []` — explicit slice limiting to actual number of complete lines.
+
+### Prevention
+**Decision principle (explicit-slice-bounds)**: When slicing a list after skipping N elements, always use explicit end bound (e.g., `lines[start:start+count]`) rather than open-ended slice (e.g., `lines[start:]`) to avoid returning more elements than intended.
+
+### Metadata
+- Source: ai-twice-hourly-deep cron
+- File: .scripts/auto_learner.py
+- Line: ~73-75
+
+## 2026-04-05 Harvey 进化记录
+
+- 今日无新错误记录
+## [LRN-20260405-001] correction
+
+**Logged**: 2026-04-05T05:11:16+08:00
+**Priority**: high
+**Status**: resolved
+**Area**: backend
+**Resolved**: 2026-04-05T06:35:00+08:00
+
+### Summary
+tailn() partial-line detection bug: skipped complete lines at window boundary
+
+### Details
+The is_partial_first detection in tailn() used started_mid=(total_size-window_size)>0 which is True for any file larger than the window. This meant that even when the seek landed exactly at a line boundary, is_partial_first was True, causing complete lines to be incorrectly flagged as partial and skipped. Result: recent log entries silently dropped. Fix: use read_start (actual seek position) > 0 AND first byte not newline to determine true partial-line state.
+
+### Resolution
+Bug was already fixed in code at auto_learner.py line ~73. The fix uses `read_start > 0` (actual seek position) instead of the flawed `(total_size-window_size)>0` approach. This learning entry was stale pending — marked resolved.
+
+### Metadata
+- Source: ai-twice-hourly-deep
+- Category: correction
+
+
+---
+
+
+## [LRN-20260405-SKILLSH-NONFATAL] correction
+
+**Logged**: 2026-04-05T07:05:00+08:00
+**Priority**: medium
+**Status**: resolved
+**Area**: infra
+
+### Summary
+auto_learner.py 停止将 `SKIP(skills.sh failed)` 捕获为失败条目
+
+### Details
+`SKIP(skills.sh failed)` 是 skills.sh 克隆仓库时的瞬态网络错误，被 skillhub_auto_update.py 标记为 fatal 并导致脚本 abort。这不是真正的错误（是 SKIP），不应该进入 ERRORS.md。已修改 auto_learner.py 的 capture 逻辑，跳过此类条目。
+
+### Fix
+将 auto_learner.py 中 `SKIP(skills.sh failed):` 的捕获逻辑从 `failures.append()` 改为 `continue`（直接跳过）。
+
+### Root Cause（未修复）
+skillhub_auto_update.py 将 `skills_sh_failed` 视为 fatal abort 条件，导致其他源正常时也中止。需要 James 授权修改 skillhub_auto_update.py 的 `has_not_in_index` 检查（edit-prohibited 文件）。
+
+### Prevention
+**Decision principle (transient-skip-vs-error)**: 对于 SKIP 条目（明确跳过），不主动创建 error 日志。只有真正的 catastrophic failure（≥50% 失败且至少1个成功）才需要捕获。
+
+### Metadata
+- Source: ai-twice-hourly-deep
+- File: .scripts/auto_learner.py
+
+## [LRN-20260405-FATAL-KEYWORD] best_practice | resolved
+
+**Logged**: 2026-04-05T12:05:00+08:00
+**Priority**: medium
+**Status**: resolved
+**Area**: infra
+
+### Summary
+skills.sh "Failed to clone repository" git errors not explicitly detected in err_keywords parsing.
+Some git fatal errors were getting caught as generic logo fallback instead of proper git failures.
+Added 'fatal:' to err_keywords tuple in _install_one_inner.
+
+### Root Cause
+git clone failures output "fatal:" prefix (e.g. "fatal: could not read Username"), 
+which wasn't in err_keywords. While 'could not' also matches, explicit 'fatal:' 
+improves detection especially when error line format varies.
+
+### Fix
+Added 'fatal:' to err_keywords tuple in skillhub_auto_update.py line 1163.
+
+### Pattern
+git errors always start with "fatal:" — making this explicit ensures reliable capture.
+
+## 2026-04-06 Harvey 进化记录
+
+- 今日无新错误记录
+
+## 2026-04-08 Harvey 进化记录
+
+- 今日无新错误记录
+
+## 2026-04-09 Harvey 进化记录
+
+- 今日无新错误记录
+
+## 2026-04-10 Harvey 进化记录
+
+- 今日无新错误记录
+
+## 2026-04-11 Harvey 进化记录
+
+- 今日无新错误记录

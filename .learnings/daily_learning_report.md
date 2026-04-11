@@ -2,14 +2,14 @@
 <html><head><meta charset="utf-8"></head>
 <body style="font-family:Arial,sans-serif;max-width:900px;margin:0 auto;padding:20px">
     <h1>📊 Harvey 每日汇报</h1>
-    <p><b>时间：</b>2026-04-04 11:30 (北京时间)</p>
+    <p><b>时间：</b>2026-04-11 11:32 (北京时间)</p>
     <hr>
     
         <h2>📦 技能更新</h2>
-        <p>今日新安装：<b>2</b> 个 | 技能库总数：<b>3102</b></p>
+        <p>今日新安装：<b>12</b> 个 | 技能库总数：<b>3403</b></p>
         <table border="1" cellpadding="6" cellspacing="0" style="border-collapse:collapse;width:100%">
             <tr style="background:#f0f0f0"><th>技能</th><th>来源</th><th>描述</th></tr>
-            <tr><td><code>de-ai-ify</code></td><td>skillhub</td><td>De-AI-ify</td></tr><tr><td><code>daily-review-ritual</code></td><td>skillhub</td><td>Daily Review Ritual</td></tr>
+            <tr><td><code>ppt-maker</code></td><td>skillhub</td><td>AI PPT Generator</td></tr><tr><td><code>agency-senior-developer</code></td><td>clawhub</td><td>Senior Developer  (2.924)</td></tr><tr><td><code>emergency-rescue</code></td><td>skillhub</td><td>Emergency Rescue Kit</td></tr><tr><td><code>infra-monitoring</code></td><td>clawhub</td><td>Infra Monitoring  (0.231)</td></tr><tr><td><code>wechat-article-reader</code></td><td>skillhub</td><td>微信公众号文章导出</td></tr><tr><td><code>slack-api</code></td><td>skillhub</td><td>Slack</td></tr><tr><td><code>kokoro-tts</code></td><td>skillhub</td><td>Kokoro TTS</td></tr><tr><td><code>aws-infra</code></td><td>skillhub</td><td>AWS Infra</td></tr><tr><td><code>openbotauth</code></td><td>skillhub</td><td>OpenBotAuth</td></tr><tr><td><code>zoho-crm</code></td><td>skillhub</td><td>Zoho CRM</td></tr><tr><td><code>reddit</code></td><td>skillhub</td><td>Reddit</td></tr><tr><td><code>cloudflare-toolkit</code></td><td>skillhub</td><td>Cloudflare</td></tr>
         </table>
     <hr>
     
@@ -19,7 +19,7 @@
     <h3>最新文章</h3>
     <ul><li>暂无</li></ul>
     <h3>GitHub 活动</h3>
-    <ul><li style='font-family:monospace;font-size:13px'>2026-04-04 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-04-04 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-04-04 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-04-04 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-04-04 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-04-04 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-04-04 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-04-04 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-04-04 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-04-04 PushEvent: openclaw/openclaw</li></ul>
+    <ul><li style='font-family:monospace;font-size:13px'>2026-04-11 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-04-11 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-04-11 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-04-11 ReleaseEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-04-11 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-04-11 PushEvent: 100yenadmin/openclaw-1</li><li style='font-family:monospace;font-size:13px'>2026-04-11 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-04-11 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-04-11 PushEvent: openclaw/openclaw</li><li style='font-family:monospace;font-size:13px'>2026-04-11 PushEvent: openclaw/openclaw</li></ul>
     <h3>💡 关键心得</h3>
     <p>Peter 是 iOS 开发出身（PSPDFKit 作者），后转型 AI 工具专家并加入 OpenAI 做 Agent 开发。
        他的职业路径：从 Swift 专家 → AI Agent 开发者 → 行业影响者。
@@ -33,10 +33,11 @@
     <h3>最新动态</h3>
     <ul><li>暂无</li></ul>
     <h3>最新 Release</h3>
-    <ul><li><b>v2026.4.2</b>: openclaw 2026.4.2 — <a href='https://github.com/openclaw/openclaw/releases/tag/v2026.4.2'>查看</a><br><pre style='font-size:12px'>
-### Breaking
+    <ul><li><b>v2026.4.10</b>: openclaw 2026.4.10 — <a href='https://github.com/openclaw/openclaw/releases/tag/v2026.4.10'>查看</a><br><pre style='font-size:12px'>## 2026.4.10
 
-- Plugins/xAI: move `x_search` settings from the legacy core `tools.web.x_search.*` path to the plugin-owned `plugins.entries.xai.config.xSearch.*` path, standardize `x_search` auth on </pre></li></ul>
+### Changes
+
+- Models/Codex: add the bundled Codex provider and plugin-owned app-server harness so `codex/gpt-*` models use Codex-managed auth, native threads, model discovery, and compa</pre></li></ul>
     <hr>
     
     <h2>📋 下一步计划</h2>
